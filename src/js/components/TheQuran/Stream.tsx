@@ -20,7 +20,7 @@ export function Stream({surah, stream}: StreamProps) {
 
   useEffect(() => {
     const el: HTMLElement = document.querySelector("ul.stream");
-    el.scroll({top: el.offsetHeight, behavior: "smooth"});
+    el.scroll({top: el.offsetHeight * stream.length, behavior: "smooth"});
   }, [stream]);
 
   return (
