@@ -6,22 +6,23 @@ import { Stream } from "components/TheQuran/Stream";
 import classNames from "classnames";
 
 function TheSurahPage() {
-  const [loading, surah] = useSurah("en", 1);
+  const { surahIsLoaded, surah } = useSurah("en", 1);
   const [stream, setStream] = useState([]);
   const [theme , setTheme] = useState("moon");
+  const streamIsLoaded = !!stream.length;
 
   useEffect(() => {
-    if (surah) {
-      setStream([surah.ayat[stream.length]])
+    if (surahIsLoaded) {
+      setStream([surah.ayat[stream.length]]);
     }
-  }, [surah]);
+  }, [surahIsLoaded]);
 
   return (
     <div className={classNames(theme, "theme")}>
       <div className="flex-image">
         <div className="image"></div>
       </div>
-      {stream.length &&
+      {streamIsLoaded &&
         <div className="flex-row">
           <span></span>
           <select name="theme" value={theme} onChange={(e) => setTheme(e.target.value)}>
@@ -36,7 +37,7 @@ function TheSurahPage() {
           />
         </div>
       }
-      {stream.length && <Stream surah={surah} stream={stream}/>}
+      {streamIsLoaded && <Stream surah={surah} stream={stream}/>}
     </div>
   );
 }
