@@ -35,16 +35,19 @@ function TheSurahPage({locale, surahId}: PageProps) {
             <option value="moon">The Moon 🌛</option>
             <option value="leaf">The Leaf 🌿</option>
           </select>
-          <Timer
-            surah={surah}
-            ayah={surah.ayat[stream.length - 1]}
-            setStream={setStream}
-            stream={stream}
-          />
+          <span></span>
         </div>
       }
       {streamIsLoaded && <AboutSurah surah={surah}/>}
       {streamIsLoaded && <Stream surah={surah} stream={stream}/>}
+      {streamIsLoaded && stream.length < surah.numberOfAyah &&
+        <Timer
+          surah={surah}
+          ayah={surah.ayat[stream.length - 1]}
+          setStream={setStream}
+          stream={stream}
+        />
+      }
     </div>
   );
 }

@@ -21,8 +21,8 @@ export function Timer({surah, ayah, stream, setStream}: TimerProps) {
     }
   }, [ms]);
   return (
-    <span className="timer">
+    <div className="timer">
       {(ms / 1000).toFixed(1)}
-    </span>
+    </div>
   );
 }
