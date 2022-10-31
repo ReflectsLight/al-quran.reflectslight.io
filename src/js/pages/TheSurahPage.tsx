@@ -5,8 +5,13 @@ import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
 import classNames from "classnames";
 
-function TheSurahPage() {
-  const { surahIsLoaded, surah } = useSurah("en", 1);
+type PageProps = {
+  locale: string,
+  surahId: number
+}
+
+function TheSurahPage({locale, surahId}: PageProps) {
+  const { surahIsLoaded, surah } = useSurah(locale, surahId);
   const [stream, setStream] = useState([]);
   const [theme , setTheme] = useState("moon");
   const streamIsLoaded = !!stream.length;
@@ -42,5 +47,6 @@ function TheSurahPage() {
   );
 }
 
+const [locale, surahId] = location.pathname.split('/').filter((e) => e);
 const root = ReactDOM.createRoot(document.querySelector(".surah"));
-root.render(<TheSurahPage/>);
+root.render(<TheSurahPage locale={locale} surahId={parseInt(surahId)}/>);

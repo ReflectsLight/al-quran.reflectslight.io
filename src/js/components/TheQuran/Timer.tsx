@@ -15,7 +15,7 @@ export function Timer({surah, ayah, stream, setStream}: TimerProps) {
     if (stream.length === surah.ayat.length) {
       return;
     } else if (ms <= 0) {
-      setStream([...stream, surah.ayat[ayah.num]]);
+      setStream([...stream, surah.ayat[ayah.id]]);
     } else {
       setTimeout(() => setMs(ms - 100), 100);
     }

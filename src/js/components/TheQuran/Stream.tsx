@@ -9,10 +9,11 @@ type StreamProps = {
 
 export function Stream({surah, stream}: StreamProps) {
   const endOfStream = stream.length === surah.ayat.length;
+  const surahInfo = surah.getInfo();
   const ayat = stream.map((ayah: Ayah) => {
     return (
-      <li key={ayah.num} className="ayah fade">
-        <span>Surah 1, Ayah {ayah.num}</span>
+      <li key={ayah.id} className="ayah fade">
+        <span>Surah {surahInfo.id}, Ayah {ayah.id}</span>
         <p>{ayah.text}</p>
       </li>
     );
