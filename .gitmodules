@@ -1,0 +1,3 @@
+[submodule "TheQuran"]
+	path = TheQuran
+	url = https://github.com/reflectedlight/quran-pull.git
