@@ -1,0 +1,28 @@
+.surah .leaf.theme {
+  --green: #606850;
+  --black: #333333;
+  --white: #FFF;
+
+  color: var(--black);
+
+  .flex-image {
+    .image {
+      background-image: url("/images/leaf.svg");
+      background-size: cover;
+    }
+  }
+
+  li.ayah {
+    span:first-child {
+      color: var(--green);
+      background-color: var(--white);
+    }
+    p {
+    }
+  }
+
+  .timer {
+    background-color: var(--green);
+    color: var(--white);
+  }
+}

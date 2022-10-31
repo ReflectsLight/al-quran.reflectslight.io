@@ -1,0 +1,35 @@
+.surah .moon.theme {
+  --blue: #C4DCF0;
+  --heavy-yellow: #ECB200;
+  --light-red: #FFAF7A
+  --black: #333333;
+
+  color: var(--black);
+
+  .flex-image {
+    .image {
+      background-image: url("/images/moon.svg");
+      background-size: cover;
+    }
+  }
+
+  li.ayah {
+    span:first-child {
+      color: var(--heavy-yellow);
+      -webkit-text-stroke: 1px var(--black);
+    }
+    p {
+    }
+  }
+
+  .timer {
+    color: #FFF;
+    font-weight: bold;
+    background-color: var(--heavy-yellow);
+  }
+
+  .about-surah {
+    color: var(--heavy-yellow);
+    font-weight: bold;
+  }
+}

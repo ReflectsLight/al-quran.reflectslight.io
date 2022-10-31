@@ -1,0 +1,94 @@
+@import "fonts";
+
+body {
+  font-family: "Kanit Regular";
+}
+
+.surah .theme {
+  margin: 0 auto;
+  width: 450px;
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+      width: 30px;
+    }
+
+    select {
+      padding: 3px;
+      border-radius: 10px;
+      outline: none;
+      text-align: center;
+    }
+  }
+
+  .timer {
+    margin: 0 auto;
+    font-size: 75%;
+    font-family: "Roboto Mono Regular";
+    text-align: center;
+    width: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 3px;
+  }
+
+  .flex-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0 25px 0;
+
+    .image {
+      height: 78px;
+      width: 78px;
+    }
+  }
+
+  .about-surah {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  ul.stream {
+    clear: both;
+    list-style-type: none;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+
+    li.ayah {
+      span:first-child {
+        display: block;
+        font-weight: bold;
+      }
+      p {
+        margin: 3px 0 10px 0
+      }
+    }
+  }
+
+  ul.stream.scroll-y {
+    overflow-y: auto;
+  }
+}
+
+@keyframes FadeIn {
+  0% { opacity: 0;}
+  25% { opacity: 0.25; }
+  50% { opacity: 0.5; }
+  75% { opacity: 0.75 }
+  100% { opacity: 1; }
+}
+
+.fade {
+  animation: FadeIn 1s;
+}
+
+@import "themes/moon";
+@import "themes/leaf";
