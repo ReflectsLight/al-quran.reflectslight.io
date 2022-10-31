@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import useSurah from "hooks/useSurah";
 import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
+import { AboutSurah } from "components/TheQuran/AboutSurah";
 import classNames from "classnames";
 
 type PageProps = {
@@ -42,6 +43,7 @@ function TheSurahPage({locale, surahId}: PageProps) {
           />
         </div>
       }
+      {streamIsLoaded && <AboutSurah surah={surah}/>}
       {streamIsLoaded && <Stream surah={surah} stream={stream}/>}
     </div>
   );

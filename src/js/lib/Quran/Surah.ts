@@ -1,4 +1,4 @@
-type SurahInfo = {
+type SurahDetails = {
   id: string,
   place_of_revelation: string,
   transliterated_name: string,
@@ -11,10 +11,10 @@ export type Ayah = {id: number, text: string, readingTime: number};
 export type Ayat = Array<Ayah>;
 
 export class Surah {
-  #details: SurahInfo;
+  #details: SurahDetails;
   ayat: Ayat;
 
-  static fromJSON(details: SurahInfo, ayat: Array<[number, string]>): Surah {
+  static fromJSON(details: SurahDetails, ayat: Array<[number, string]>): Surah {
     return new Surah(
       details,
       ayat.map(([id, text]) => {
@@ -26,19 +26,32 @@ export class Surah {
     );
   }
 
-  constructor(details: SurahInfo, ayat: Ayat) {
+  constructor(details: SurahDetails, ayat: Ayat) {
     this.#details = details;
     this.ayat = ayat;
   }
 
-  getInfo() {
-    return {
-      id: this.#details.id,
-      placeOfRevelation: this.#details.place_of_revelation,
-      transliteratedName: this.#details.transliterated_name,
-      translatedName: this.#details.translated_name,
-      ayahCount: this.#details.verse_count,
-      arabicCodePoints: this.#details.codepoints
-    }
+  get id() {
+    return this.#details.id;
+  }
+
+  get name() {
+    return String.fromCodePoint(...this.#details.codepoints)
+  }
+
+  get transliteratedName() {
+    return this.#details.transliterated_name;
+  }
+
+  get translatedName() {
+    return this.#details.translated_name;
+  }
+
+  get placeOfRevelation() {
+    return this.#details.place_of_revelation;
+  }
+
+  get numberOfAyah() {
+    return this.#details.verse_count;
   }
 }
