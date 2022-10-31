@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+LOCALES = %w[ar en]
+
+##
+# /<locale>/<surahno>/index.html
+compile "/surah.html" do
+  1.upto(114) do |surahno|
+    LOCALES.each { write(File.join("/", _1, surahno.to_s, "index.html")) }
+  end
+end
+
+##
+# /<locale>/<surahno>/surah.json
+1.upto(114) do |surahno|
+  LOCALES.each { passthrough "/#{_1}/#{surahno}/surah.json" }
+end
+
+##
+# /js/main.js
+compile "/js/pages/TheSurahPage.tsx" do
+  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  write "/js/pages/surah.js"
+end
+
+##
+# CSS
+compile("/css/_*.scss") { write(nil) }
+compile "/css/*.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
+  write item.identifier.without_ext + ".css"
+end
+
+##
+# Fonts
+compile "/fonts/*" do
+  write(item.identifier.to_s)
+end
+
+##
+# Images
+compile "/images/*" do
+  write(item.identifier.to_s)
+end
+
+compile("/**/*") { write(nil) }
+layout('**/*', :erb)
