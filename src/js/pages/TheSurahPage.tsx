@@ -4,7 +4,9 @@ import useSurah from "hooks/useSurah";
 import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
 import { AboutSurah } from "components/TheQuran/AboutSurah";
+import { ThemeSelect } from "components/TheQuran/ThemeSelect";
 import classNames from "classnames";
+import { get as getCookie } from "es-cookie";
 
 type PageProps = {
   locale: string,
@@ -14,7 +16,7 @@ type PageProps = {
 function TheSurahPage({locale, surahId}: PageProps) {
   const { surahIsLoaded, surah } = useSurah(locale, surahId);
   const [stream, setStream] = useState([]);
-  const [theme , setTheme] = useState("moon");
+  const [theme , setTheme] = useState(getCookie("theme") || "moon");
   const streamIsLoaded = !!stream.length;
 
   useEffect(() => {
@@ -34,10 +36,7 @@ function TheSurahPage({locale, surahId}: PageProps) {
       {streamIsLoaded &&
         <div className="flex-row">
           <span></span>
-          <select name="theme" value={theme} onChange={(e) => setTheme(e.target.value)}>
-            <option value="moon">The Moon 🌛</option>
-            <option value="leaf">The Leaf 🌿</option>
-          </select>
+          <ThemeSelect theme={theme} setTheme={setTheme}/>
           <span></span>
         </div>
       }
