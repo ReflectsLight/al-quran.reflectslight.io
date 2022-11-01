@@ -19,6 +19,9 @@ function TheSurahPage({locale, surahId}: PageProps) {
 
   useEffect(() => {
     if (surahIsLoaded) {
+      document.title = ["Al-Quran:",
+                        surah.transliteratedName,
+                        `(${surah.translatedName})`].join(" ");
       setStream([surah.ayat[stream.length]]);
     }
   }, [surahIsLoaded]);
