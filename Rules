@@ -50,4 +50,4 @@ compile "/images/*" do
 end
 
 compile("/**/*") { write(nil) }
-layout('**/*', :erb)
+layout("**/*", :erb)
