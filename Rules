@@ -11,6 +11,10 @@ compile "/surah.html" do
   end
 end
 
+compile "/index.html" do
+  write("/index.html")
+end
+
 ##
 # /<locale>/<surahno>/surah.json
 1.upto(114) do |surahno|
@@ -18,7 +22,7 @@ end
 end
 
 ##
-# /js/main.js
+# /js/pages/surah.js
 compile "/js/pages/TheSurahPage.tsx" do
   filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
   write "/js/pages/surah.js"
