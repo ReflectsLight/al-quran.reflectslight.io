@@ -6,7 +6,7 @@ export default function (locale: string, surahId: number) {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`/json/${locale}/${surahId}.json`);
+      const res = await fetch(`/${locale}/${surahId}/surah.json`);
       const json = await res.json();
       setSurah(Quran.Surah.fromJSON(json.shift(), json));
     })();

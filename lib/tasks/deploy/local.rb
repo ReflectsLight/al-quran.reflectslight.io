@@ -12,9 +12,11 @@ class Tasks::Deploy::Local
   def call
     src, dest = settings.src, settings.dest
     user, group = settings.user, settings.group
+    doas "root", "/bin/rm", "-rf", File.join(dest, "*")
     doas "root", "/bin/cp", "-r", src, dest
     doas "root", "/usr/sbin/chown", "-R", [user, group].join(":"), dest
-    doas "root", "/bin/chmod", "-R", "go-rwx", dest
+    doas "root", "/bin/chmod", "-R", "og-rwx", dest
+    doas "root", "/bin/chmod", "-R", "u+rwX", dest
   end
 
   def to_proc
