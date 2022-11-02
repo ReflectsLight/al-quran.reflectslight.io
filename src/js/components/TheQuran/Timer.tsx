@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Quran, Surah, Ayah, Ayat } from "lib/Quran";
+import React, { useEffect, useState } from 'react';
+import { Surah, Ayah, Ayat } from 'lib/Quran';
 
-type TimerProps = {
-  surah: Surah,
-  ayah: Ayah,
-  stream: Ayat,
+interface TimerProps {
+  surah: Surah
+  ayah: Ayah
+  stream: Ayat
   setStream: (stream: Ayat) => void
-};
+}
 
-export function Timer({surah, ayah, stream, setStream}: TimerProps) {
+export function Timer ({ surah, ayah, stream, setStream }: TimerProps) {
   const [ms, setMs] = useState(ayah.readTimeMs);
   useEffect(() => setMs(ayah.readTimeMs), [ayah]);
   useEffect(() => {
@@ -21,7 +21,7 @@ export function Timer({surah, ayah, stream, setStream}: TimerProps) {
     }
   }, [ms]);
   return (
-    <div className="timer">
+    <div className='timer'>
       {(ms / 1000).toFixed(1)}
     </div>
   );
