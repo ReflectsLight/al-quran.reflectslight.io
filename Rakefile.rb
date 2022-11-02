@@ -14,4 +14,14 @@ namespace :deploy do
   end
 end
 
+namespace :linter do
+  task :ruby do
+    sh "bundle exec rubocop lib/ src/"
+  end
+
+  task :typescript do
+    sh "npm run eslint"
+  end
+end
+task lint: ["linter:ruby", "linter:typescript"]
 task default: "deploy:local"
