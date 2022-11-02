@@ -9,6 +9,7 @@ namespace :nanoc do
     sh "nanoc co"
   end
 end
+task build: "nanoc:compile"
 
 namespace :deploy do
   task local: ["nanoc:compile"] do
