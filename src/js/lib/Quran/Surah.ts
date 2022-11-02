@@ -7,7 +7,7 @@ type SurahDetails = {
   slug: string,
   codepoints: Array<number>
 }
-export type Ayah = {id: number, text: string, readingTime: number};
+export type Ayah = {id: number, text: string, readTimeMs: number};
 export type Ayat = Array<Ayah>;
 
 export class Surah {
@@ -20,7 +20,7 @@ export class Surah {
       ayat.map(([id, text]) => {
         return {
           id, text,
-          readingTime: text.split(" ").length * 500,
+          readTimeMs: text.split(" ").length * 500,
         }
       })
     );

@@ -9,8 +9,8 @@ type TimerProps = {
 };
 
 export function Timer({surah, ayah, stream, setStream}: TimerProps) {
-  const [ms, setMs] = useState(ayah.readingTime);
-  useEffect(() => setMs(ayah.readingTime), [ayah]);
+  const [ms, setMs] = useState(ayah.readTimeMs);
+  useEffect(() => setMs(ayah.readTimeMs), [ayah]);
   useEffect(() => {
     if (stream.length === surah.ayat.length) {
       return;
