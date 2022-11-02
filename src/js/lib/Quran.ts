@@ -1,5 +1,5 @@
-import { Surah, Ayah, Ayat } from "./Quran/Surah";
+import { Surah, Ayah, Ayat } from './Quran/Surah';
 const Quran = {
-  Surah: Surah
+  Surah
 };
 export { Quran, Surah, Ayah, Ayat };

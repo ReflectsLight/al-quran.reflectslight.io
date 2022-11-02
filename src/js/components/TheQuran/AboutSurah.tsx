@@ -1,9 +1,9 @@
-import React from "react";
-import { Surah } from "lib/Quran";
+import React from 'react';
+import { Surah } from 'lib/Quran';
 
-export function AboutSurah({surah}: {surah: Surah}) {
+export function AboutSurah ({ surah }: { surah: Surah }) {
   return (
-    <div className="about-surah">
+    <div className='about-surah'>
       <span>
         {surah.translatedName}
       </span>
