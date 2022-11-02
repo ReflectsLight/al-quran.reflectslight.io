@@ -8,6 +8,10 @@ body {
   margin: 0 auto;
   width: 450px;
 
+  @media screen and (max-width: 450px) {
+    width: 350px;
+  }
+
   .flex-row {
     display: flex;
     flex-direction: row;
