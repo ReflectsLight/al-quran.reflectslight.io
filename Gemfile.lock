@@ -18,6 +18,7 @@ GEM
     ddmetrics (1.0.1)
     ddplugin (1.0.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -130,6 +131,7 @@ PLATFORMS
   x86_64-freebsd-13
 
 DEPENDENCIES
+  dotenv
   nanoc (~> 4.12)
   nanoc-live (~> 1.0)
   paint

@@ -2,4 +2,5 @@
 
 module Tasks::Deploy
   require_relative "deploy/local"
+  require_relative "deploy/remote"
 end

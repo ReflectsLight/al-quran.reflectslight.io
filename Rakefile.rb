@@ -15,6 +15,12 @@ namespace :deploy do
   task local: ["nanoc:compile"] do
     Deploy::Local.call
   end
+
+  task remote: ["nanoc:compile"] do
+    require "dotenv"
+    Dotenv.load
+    Deploy::Remote.call
+  end
 end
 
 namespace :linter do
