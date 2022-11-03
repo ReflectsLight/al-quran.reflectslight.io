@@ -11,6 +11,12 @@ namespace :nanoc do
 end
 task build: "nanoc:compile"
 
+task server: ["nanoc:compile"] do
+  Dir.chdir(File.join(Dir.getwd, "build", "al-quran")) do
+    sh "ruby -S bundle exec adsf"
+  end
+end
+
 namespace :deploy do
   task local: ["nanoc:compile"] do
     Deploy::Local.call

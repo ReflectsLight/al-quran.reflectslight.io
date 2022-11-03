@@ -71,6 +71,7 @@ GEM
       listen (~> 3.0)
       nanoc-cli (~> 4.11, >= 4.11.14)
       nanoc-core (~> 4.11, >= 4.11.14)
+    nio4r (2.5.8)
     paint (2.3.0)
     parallel (1.22.1)
     parser (3.1.2.1)
@@ -80,6 +81,8 @@ GEM
     psych (4.0.6)
       stringio
     public_suffix (5.0.0)
+    puma (6.0.0)
+      nio4r (~> 2.0)
     rack (2.2.4)
     rack-livereload (0.3.17)
       rack
@@ -131,10 +134,12 @@ PLATFORMS
   x86_64-freebsd-13
 
 DEPENDENCIES
+  adsf
   dotenv
   nanoc (~> 4.12)
   nanoc-live (~> 1.0)
   paint
+  puma
   rainpress (~> 1.0)
   ryo.rb
   sass
