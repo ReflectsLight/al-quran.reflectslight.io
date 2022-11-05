@@ -54,6 +54,8 @@ function TheSurahPage ({ locale, surahId }: PageProps) {
   );
 }
 
-const [locale, surahId] = location.pathname.split('/').filter((e) => e);
-const root = ReactDOM.createRoot(document.querySelector('.surah'));
-root.render(<TheSurahPage locale={locale} surahId={parseInt(surahId)} />);
+const el = document.querySelector('.surah');
+const locale = el.getAttribute('data-locale');
+const surahId = parseInt(el.getAttribute('data-surah-id'));
+const root = ReactDOM.createRoot(el);
+root.render(<TheSurahPage locale={locale} surahId={surahId} />);
