@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script class="surah-id-to-slug" type="application/json">
+      <%= File.read(File.join(Dir.getwd, "src", "slugs.json")) %>
+    </script>
+    <script type="text/javascript">
+      (function() {
+        var parts = location.pathname
+                            .split("/")
+                            .filter(function(s) { return s.length })
+                            .slice(-2);
+        var el = document.querySelector(".surah-id-to-slug");
+        var locale = parts[0];
+        var surahId = parts[1];
+        var slugs = JSON.parse(el.innerText);
+        location.href = location.replace(["", locale, slugs[surahId]].join("/"));
+      })();
+    </script>
+  </body>
+</html>
