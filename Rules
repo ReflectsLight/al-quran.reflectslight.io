@@ -23,7 +23,7 @@ end
 
 ##
 # /<locale>/<surahno>/index.html
-compile "/slug_redirect.html.erb" do
+compile "/html/slug_redirect.html.erb" do
   filter :erb
   1.upto(114) do |surahno|
     LOCALES.each { write(File.join("/", _1, surahno.to_s, "index.html")) }
@@ -34,7 +34,7 @@ end
 # /<locale>/surah_slug>/index.html
 Ryo.each(SURAH_ID_TO_SLUG) do |surah_id, slug|
   LOCALES.each do |locale|
-    compile "/surah.html", rep: "#{locale}/#{slug}" do
+    compile "/html/surah.html", rep: "#{locale}/#{slug}" do
       filter :erb, locals: {locale: locale, surah_id: surah_id}
       write "/#{locale}/#{slug}/index.html"
     end
