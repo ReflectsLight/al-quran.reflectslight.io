@@ -17,7 +17,7 @@
         var locale = parts[0];
         var surahId = parts[1];
         var slugs = JSON.parse(el.innerText);
-        location.href = location.replace(["", locale, slugs[surahId]].join("/"));
+        location.replace(["", locale, slugs[surahId]].join("/"));
       })();
     </script>
   </body>
