@@ -53,6 +53,13 @@ compile "/js/pages/TheSurahPage.tsx" do
 end
 
 ##
+# /js/pages/redirect-to-random-surah.js
+compile "/js/pages/redirect-to-random-surah.ts" do
+  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  write "/js/pages/redirect-to-random-surah.js"
+end
+
+##
 # CSS
 compile("/css/_*.scss") { write(nil) }
 compile "/css/*.scss" do
