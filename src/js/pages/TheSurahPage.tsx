@@ -31,7 +31,7 @@ function TheSurahPage ({ locale, surahId }: PageProps) {
   }, [surahIsLoaded]);
 
   return (
-    <div className={classNames(theme, 'theme')}>
+    <div className={classNames(theme, locale, 'theme')}>
       <div className='flex-image'>
         <div className='image' />
       </div>
