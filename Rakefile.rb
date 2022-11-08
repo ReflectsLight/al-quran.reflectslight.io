@@ -1,12 +1,18 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+require "ryo"
 require_relative "lib/tasks"
 include Tasks
 
 namespace :nanoc do
   task :compile do
     sh "nanoc co"
+  end
+
+  task :clean do
+    build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
+    sh "rm -rf #{build_dir}"
   end
 end
 task build: "nanoc:compile"
@@ -22,7 +28,7 @@ namespace :deploy do
     Deploy::Local.call
   end
 
-  task remote: ["nanoc:compile"] do
+  task remote: ["nanoc:clean", "nanoc:compile"] do
     require "dotenv"
     Dotenv.load
     Deploy::Remote.call
