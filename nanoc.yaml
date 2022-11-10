@@ -15,7 +15,7 @@ output_dir: build/al-quran/
 
 data_sources:
   - type: filesystem
-    encoding: utf-8
+    encoding: UTF-8
     content_dir: src/
     layouts_dir: src/layouts
 
