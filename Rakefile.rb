@@ -24,14 +24,23 @@ task server: ["nanoc:compile"] do
 end
 
 namespace :deploy do
-  task local: ["nanoc:compile"] do
+  task local: ["env:development", "nanoc:compile"] do
     Deploy::Local.call
   end
 
-  task remote: ["nanoc:clean", "nanoc:compile"] do
+  task remote: ["env:production", "nanoc:clean", "nanoc:compile"] do
+    Deploy::Remote.call
+  end
+end
+
+namespace :env do
+  task :production do
     require "dotenv"
     Dotenv.load
-    Deploy::Remote.call
+  end
+
+  task :development do
+    ENV["NODE_ENV"] ||= "development"
   end
 end
 

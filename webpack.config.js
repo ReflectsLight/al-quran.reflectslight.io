@@ -1,7 +1,8 @@
 const path = require('path');
+const process = require('process');
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV || "development",
   experiments: {
     asyncWebAssembly: true
   },
