@@ -50,6 +50,8 @@ end
 compile "/js/pages/TheSurahPage.tsx" do
   filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
   write "/js/pages/surah.js"
+  filter :gzip_text
+  write "/js/pages/surah.js.gz"
 end
 
 ##
@@ -79,12 +81,16 @@ end
 # Fonts
 compile "/fonts/*" do
   write(item.identifier.to_s)
+  filter :gzip_binary
+  write("#{item.identifier}.gz")
 end
 
 ##
 # Images
-compile "/images/*" do
+compile "/images/*.svg" do
   write(item.identifier.to_s)
+  filter :gzip_binary
+  write("#{item.identifier}.gz")
 end
 
 compile("/**/*") { write(nil) }
