@@ -1,0 +1,8 @@
+node_modules
+# Ignore artifacts:
+build
+tmp
+.idea
+coverage
+src/ar
+src/en

@@ -131,6 +131,7 @@ GEM
     zeitwerk (2.6.1)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-freebsd-13
 
 DEPENDENCIES
