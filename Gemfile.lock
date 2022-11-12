@@ -139,7 +139,7 @@ DEPENDENCIES
   adsf
   dotenv
   nanoc (~> 4.12)
-  nanoc-gunzip.rb (= 0.1.2)
+  nanoc-gunzip.rb (~> 0.1)
   nanoc-live (~> 1.0)
   paint
   puma
