@@ -20,8 +20,12 @@ end
 ##
 # /<locale>/<surahno>/surah.json
 # Provides the JSON for a given surah no
-1.upto(114) do |surahno|
-  LOCALES.each { passthrough "/#{_1}/#{surahno}/surah.json" }
+compile "/*/*/surah.json" do
+  write(item.identifier.to_s)
+  if File.size(item.raw_filename) > (1024 * 10)
+    filter :gzip_text
+    write("#{item.identifier}.gz")
+  end
 end
 
 ##
