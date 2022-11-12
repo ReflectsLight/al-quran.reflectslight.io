@@ -5,11 +5,10 @@ export default function (locale: string, surahId: number) {
   const [surah, setSurah] = useState(null);
 
   useEffect(() => {
-    (async () => {
-      const res = await fetch(`/${locale}/${surahId}/surah.json`);
-      const json = await res.json();
-      setSurah(Quran.Surah.fromJSON(json.shift(), json));
-    })();
+    const path = `/${locale}/${surahId}/surah.json`;
+    const text = document.querySelector<HTMLElement>(`script[src="${path}"]`).innerText;
+    const json = JSON.parse(text);
+    setSurah(Quran.Surah.fromJSON(json.shift(), json));
   }, []);
 
   return {

@@ -59,6 +59,11 @@ compile "/js/pages/TheSurahPage.tsx" do
   write "/js/pages/surah.js.gz"
 end
 
+compile "/js/pages/TheSurahPage/package.ts" do
+  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  write "/js/pages/TheSurahPage/package.js"
+end
+
 ##
 # /js/pages/redirect-to-random-surah.js
 compile "/js/pages/redirect-to-random-surah.ts" do
