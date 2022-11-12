@@ -2,11 +2,49 @@
 <html lang="<%= locale %>">
   <head>
     <title>Al-Quran: Loading</title>
-    <link rel="stylesheet" href="/css/surah.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html {
+          height: 100%;
+      }
+      body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+      .webpackage.loader {
+          height: 100%;
+      }
+
+      .webpackage.loader div:first-child {
+          width: 200px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          top: 250px;
+      }
+
+      .webpackage.loader progress {
+          width: 100%;
+      }
+
+      .webpackage.loader .percentage {
+          font-family: monospace;
+          text-align: center;
+          width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <div class="surah" data-locale="<%= locale %>" data-surah-id="<%= surah_id %>"></div>
-    <script src="/js/pages/surah.js"></script>
+    <div class="webpackage loader">
+      <div>
+        <progress value="0" max="100"></progress>
+        <span class="percentage">Loading...</span>
+      </div>
+    </div>
+    <div class="surah" data-locale="<%= locale %>" data-surah-id="<%= surah_id %>">
+    </div>
+    <script src="/js/pages/TheSurahPage/package.js"></script>
   </body>
 </html>
