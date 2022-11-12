@@ -66,6 +66,7 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
+    nanoc-gunzip.rb (0.1.2)
     nanoc-live (1.0.0)
       adsf-live (~> 1.4)
       listen (~> 3.0)
@@ -138,6 +139,7 @@ DEPENDENCIES
   adsf
   dotenv
   nanoc (~> 4.12)
+  nanoc-gunzip.rb (= 0.1.2)
   nanoc-live (~> 1.0)
   paint
   puma

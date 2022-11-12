@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 require "ryo"
+require "nanoc-gunzip"
 
 LOCALES = %w[ar en]
 SURAH_ID_TO_SLUG = Ryo.from(
