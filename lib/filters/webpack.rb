@@ -11,7 +11,7 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
   always_outdated
 
   def run(content, options = {})
-    file, dir = temp!(content, extname(item.identifier.to_s))
+    file, dir = temp!(content, File.extname(item.identifier.to_s))
     basename = basename_for(item.identifier.to_s)
     webpack(file.path, basename)
     File.read(File.join(dir, basename))
@@ -24,13 +24,9 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
   private
 
   def basename_for(path)
-    File.basename path.sub(/#{Regexp.escape(extname(path))}\z/) {
-      EXTNAMES.include?(extname(path)) ? ".js" : nil
+    File.basename path.sub(/#{Regexp.escape(File.extname(path))}\z/) {
+      EXTNAMES.include?(File.extname(path)) ? ".js" : nil
     }
-  end
-
-  def extname(path)
-    File.extname(path)
   end
 
   def webpack(path, basename)
