@@ -53,7 +53,7 @@ end
 ##
 # /js/pages/surah.js
 compile "/js/pages/TheSurahPage.tsx" do
-  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  filter :webpack
   write "/js/pages/surah.js"
   filter :gzip_text
   write "/js/pages/surah.js.gz"
@@ -62,14 +62,14 @@ end
 ##
 # /js/pages/redirect-to-random-surah.js
 compile "/js/pages/redirect-to-random-surah.ts" do
-  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  filter :webpack
   write "/js/pages/redirect-to-random-surah.js"
 end
 
 ##
 # /js/pages/redirect-to-surah-slug.js
 compile "/js/pages/redirect-to-surah-slug.ts" do
-  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  filter :webpack
   write "/js/pages/redirect-to-surah-slug.js"
 end
 
