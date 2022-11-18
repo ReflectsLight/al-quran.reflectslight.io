@@ -60,7 +60,7 @@ compile "/js/pages/TheSurahPage.tsx" do
 end
 
 compile "/js/pages/TheSurahPage/package.ts" do
-  filter :webpack, exe: "./node_modules/webpack/bin/webpack.js"
+  filter :webpack
   write "/js/pages/TheSurahPage/package.js"
 end
 
