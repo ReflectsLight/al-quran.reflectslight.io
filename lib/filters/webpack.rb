@@ -25,7 +25,7 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
       File.read(file.path).tap { file.tap(&:unlink).close }
     else
       file.tap(&:unlink).close
-      exit!
+      exit!($?.exitstatus)
     end
   end
 
