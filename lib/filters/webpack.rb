@@ -3,7 +3,6 @@
 ##
 # Compiles a JavaScript / TypeScript asset with webpack.
 class Nanoc::Filter::Webpack < Nanoc::Filter
-  EXTNAMES = [".jsx", ".js", ".tsx", ".ts"]
   include FileUtils
 
   identifier :webpack
@@ -11,39 +10,30 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
   always_outdated
 
   def run(content, options = {})
-    file, dir = temp!(content, File.extname(item.identifier.to_s))
-    basename = basename_for(item.identifier.to_s)
-    webpack(file.path, basename)
-    File.read(File.join(dir, basename))
-        .tap {
-          file.tap(&:unlink).close
-          rm_rf(dir)
-        }
+    webpack(temp_file(content))
   end
 
   private
 
-  def basename_for(path)
-    File.basename path.sub(/#{Regexp.escape(File.extname(path))}\z/) {
-      EXTNAMES.include?(File.extname(path)) ? ".js" : nil
-    }
-  end
-
-  def webpack(path, basename)
+  def webpack(file)
     system "node",
            "./node_modules/webpack/bin/webpack.js",
-           "--entry", path,
-           "--output-path", File.dirname(path),
-           "--output-filename", basename
-    exit! unless $?.success?
+           "--entry", File.join("./src", item.identifier.to_s),
+           "--output-path", File.dirname(file.path),
+           "--output-filename", File.basename(file.path)
+    if $?.success?
+      File.read(file.path).tap { file.tap(&:unlink).close }
+    else
+      file.tap(&:unlink).close
+      exit!
+    end
   end
 
-  def temp!(content, extname)
+  def temp_file(content)
     dir = File.join(Dir.getwd, "tmp", "webpack")
-    rm_rf(dir)
-    mkdir_p(dir)
-    file = Tempfile.new(["webpack", extname], dir)
+    mkdir_p(dir) unless Dir.exist?(dir)
+    file = Tempfile.new(File.basename(item.identifier.to_s), dir)
     file.write(content)
-    [file.tap(&:flush), dir]
+    file.tap(&:flush)
   end
 end
