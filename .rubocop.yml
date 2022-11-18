@@ -22,5 +22,7 @@ Style/FrozenStringLiteralComment:
 # Disabled cops (lib-specific)
 Layout/MultilineMethodCallIndentation:
   Enabled: false
+Layout/ArgumentAlignment:
+  Enabled: false
 Style/TrivialAccessors:
   Enabled: false

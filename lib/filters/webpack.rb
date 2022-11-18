@@ -13,7 +13,7 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
   def run(content, options = {})
     file, dir = temp!(content, extname(item.identifier.to_s))
     basename = basename_for(item.identifier.to_s)
-    run_webpack(options.dup.delete(:exe) || "webpack", file.path, basename)
+    webpack(file.path, basename)
     File.read(File.join(dir, basename))
         .tap {
           file.tap(&:unlink).close
@@ -33,12 +33,12 @@ class Nanoc::Filter::Webpack < Nanoc::Filter
     File.extname(path)
   end
 
-  def run_webpack(webpack_bin, path, basename)
+  def webpack(path, basename)
     system "node",
-      webpack_bin,
-      "--entry", path,
-      "--output-path", File.dirname(path),
-      "--output-filename", basename
+           "./node_modules/webpack/bin/webpack.js",
+           "--entry", path,
+           "--output-path", File.dirname(path),
+           "--output-filename", basename
     exit! unless $?.success?
   end
 
