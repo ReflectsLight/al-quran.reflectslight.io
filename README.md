@@ -42,6 +42,11 @@ The above command will call `rake build`, and afterwards start a web server runn
 on `http://localhost:3000`.
 
 
+## Authors
+
+* Gyen Abu Bakar [@gyenabubakar](https://github.com/gyenabubakar)
+* 0x1eef [@0x1eef](https://github.com/0x1eef)
+
 ## License
 
 This software is released into the Public Domain.
