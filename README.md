@@ -1,7 +1,9 @@
 ## About
 
 This repository contains the source for a statically compiled website that can be
-used to read The Qur'an. The website can be seen live at
+used to read The Qur'an.
+<br>
+The website can be seen live at 
 [https://al-quran.reflectslight.io](https://al-quran.reflectslight.io).
 
 ## Build the website
@@ -23,7 +25,7 @@ $ npm i
 ```
 
 After the dependencies have been installed, the website can be built. <br>
-The build will generate the `./build/al-quran` directory.
+The build will generate the `./build/al-quran` directory:
 
 ```
 $ ruby -S rake build
