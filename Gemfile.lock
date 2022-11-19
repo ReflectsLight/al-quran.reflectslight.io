@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/0x1eef/nanoc-webpack.rb
+  revision: 8d821be4f7d45abaaf79aa9d7656590d158f6d3f
+  specs:
+    nanoc-webpack.rb (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -141,6 +147,7 @@ DEPENDENCIES
   nanoc (~> 4.12)
   nanoc-gunzip.rb (~> 0.1)
   nanoc-live (~> 1.0)
+  nanoc-webpack.rb (~> 0.1)!
   paint
   puma
   rainpress (~> 1.0)
