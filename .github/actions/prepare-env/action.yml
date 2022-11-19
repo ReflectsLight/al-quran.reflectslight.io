@@ -1,0 +1,21 @@
+name: Prepare environment
+
+runs:
+  using: composite
+  steps:
+  - name: Setup Ruby
+    uses: ruby/setup-ruby@v1
+    with:
+      ruby-version: 3.1
+      bundler-cache: true
+  - name: Setup NodeJS
+    uses: actions/setup-node@v2
+    with:
+      node-version: 16
+      cache: npm
+  - name: Setup packages
+    shell: bash
+    run: |
+      ruby -S bundle install
+      npm install
+    
