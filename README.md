@@ -1,6 +1,6 @@
 ## About
 
-This repository contains the source for a statically compiled website that can be
+This repository contains the source code for a static website that can be
 used to read The Qur'an.
 <br>
 The website can be seen live at 
