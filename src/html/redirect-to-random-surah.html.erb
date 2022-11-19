@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script class="surah-id-to-slug" type="application/json">
+      <%= File.read(File.join(Dir.getwd, "src", "slugs.json")) %>
+    </script>
+    <script src="/js/pages/redirect-to-random-surah.js"></script>
+  </body>
+</html>
