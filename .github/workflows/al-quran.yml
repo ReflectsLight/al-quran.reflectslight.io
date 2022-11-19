@@ -1,0 +1,29 @@
+name: Al-Quran
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone
+      uses: actions/checkout@v2
+    - name: Prepare environment
+      uses: './.github/actions/prepare-env'
+    - name: eslint
+      run: ruby -S rake linter:typescript
+    - name: rubocop
+      run: ruby -S rake linter:ruby
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone
+      uses: actions/checkout@v2
+    - name: Prepare environment
+      uses: './.github/actions/prepare-env'
+    - name: nanoc
+      run: ruby -S rake build
