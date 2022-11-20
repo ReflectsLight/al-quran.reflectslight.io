@@ -82,11 +82,10 @@ end
 
 ##
 # CSS
-compile("/css/_*.scss") { write(nil) }
-compile "/css/*.scss" do
+compile "/css/surah.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write item.identifier.without_ext + ".css"
+  write("/css/surah.css")
 end
 
 ##
