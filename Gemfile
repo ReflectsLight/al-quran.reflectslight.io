@@ -6,15 +6,19 @@ gem "nanoc-live", "~> 1.0"
 gem "nanoc-gunzip.rb", "~> 0.1"
 gem "nanoc-webpack.rb", "~> 0.1"
 gem "rainpress", "~> 1.0"
-gem "sass"
-gem "standardrb"
-gem "ryo.rb"
-gem "paint"
-gem "dotenv"
-gem "adsf"
-gem "puma"
+gem "sass", "~> 3.7"
+gem "standard", "~> 1.16"
+gem "ryo.rb", "~> 0.3"
+gem "paint", "~> 2.3"
+gem "dotenv", "~> 2.8"
+gem "adsf", "~> 1.4"
+gem "puma", "~> 6.0"
 
-require 'rbconfig'
-if RbConfig::CONFIG['target_os'] =~ /(?i-mx:bsd|dragonfly)/
-  gem 'rb-kqueue', '>= 0.2'
+##
+# Listen gem
+require "rbconfig"
+gem "listen", "~> 3.0"
+case RbConfig::CONFIG["target_os"]
+when /(?i-mx:bsd|dragonfly)/ # BSD
+  gem "rb-kqueue", "~> 0.2"
 end
