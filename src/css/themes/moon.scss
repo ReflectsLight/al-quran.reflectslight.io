@@ -1,10 +1,6 @@
 .surah .moon.theme {
-  --blue: #C4DCF0;
-  --heavy-yellow: #ECB200;
-  --light-red: #FFAF7A
-  --black: #333333;
-
-  color: var(--black);
+  $gold: darken(#ECB200, 5%);
+  $white: #FFF;
 
   .flex-image {
     .image {
@@ -13,24 +9,22 @@
     }
   }
 
-  li.ayah {
-    span:first-child {
-      color: var(--heavy-yellow);
-      -webkit-text-stroke: 1px var(--black);
-    }
-    p {
+  ul.stream {
+    li.ayah {
+      span:first-child {
+        color: $gold;
+      }
+      p { }
     }
   }
 
   .timer {
-    color: #FFF;
-    font-weight: bold;
-    background-color: var(--heavy-yellow);
+    color: $white;
+    background-color: lighten($gold, 5%);
   }
 
   .about-surah {
-    color: var(--heavy-yellow);
-    font-weight: bold;
+    color: $gold;
   }
 }
 

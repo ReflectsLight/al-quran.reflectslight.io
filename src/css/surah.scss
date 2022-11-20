@@ -1,7 +1,11 @@
 @import "fonts";
+:root {
+  --black: #454545;
 
+}
 body {
   font-family: "Kanit Regular";
+  color: var(--black);
 }
 
 .surah .theme {
@@ -32,7 +36,7 @@ body {
 
   .timer {
     margin: 0 auto;
-    font-size: 75%;
+    font-size: 65%;
     font-family: "Roboto Mono Regular";
     text-align: center;
     width: 30px;
@@ -58,6 +62,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-weight: 500;
   }
 
   ul.stream {
@@ -70,7 +75,7 @@ body {
     li.ayah {
       span:first-child {
         display: block;
-        font-weight: bold;
+        font-weight: 500;
       }
       p {
         margin: 3px 0 10px 0

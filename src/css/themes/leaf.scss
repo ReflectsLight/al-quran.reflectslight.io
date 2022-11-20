@@ -1,9 +1,6 @@
 .surah .leaf.theme {
-  --green: #606850;
-  --black: #333333;
-  --white: #FFF;
-
-  color: var(--black);
+  $green: #606850;
+  $white: #FFF;
 
   .flex-image {
     .image {
@@ -12,23 +9,25 @@
     }
   }
 
-  li.ayah {
-    span:first-child {
-      color: var(--green);
-      background-color: var(--white);
-    }
-    p {
+  ul.stream {
+    li.ayah {
+      span:first-child {
+        color: $green;
+        background-color: $white;
+        font-weight: 500;
+      }
+      p {
+      }
     }
   }
 
   .about-surah {
-    color: var(--green);
-    font-weight: bold;
+    color: $green;
   }
 
   .timer {
-    background-color: var(--green);
-    color: var(--white);
+    background-color: $green;
+    color: $white;
   }
 }
 
