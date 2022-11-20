@@ -31,7 +31,7 @@ namespace :watch do
   desc "Watch for changes (server task)"
   task :server do
     Listen.to(File.join(Dir.getwd, "src")) do
-      Rake::Task["build"].invoke
+      Bundler.with_unbundled_env { sh "rake build" }
     end.start
     Rake::Task["server"].invoke
   end
@@ -40,7 +40,7 @@ namespace :watch do
     desc "Watch for changes (deploy:local task)"
     task :local do
       Listen.to(File.join(Dir.getwd, "src")) do
-        Rake::Task["deploy:local"].invoke
+        Bundler.with_unbundled_env { sh "rake deploy:local" }
       end.start
       sleep
     end
