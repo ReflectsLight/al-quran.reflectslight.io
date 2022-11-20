@@ -11,7 +11,7 @@
 
   ul.stream {
     li.ayah {
-      span:first-child {
+      span.surah-id.ayah-id {
         color: $gold;
       }
       p { }
