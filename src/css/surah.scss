@@ -72,7 +72,7 @@ body {
     overflow: hidden;
 
     li.ayah {
-      span:first-child {
+      span.surah-id.ayah-id {
         display: block;
         font-weight: 500;
       }

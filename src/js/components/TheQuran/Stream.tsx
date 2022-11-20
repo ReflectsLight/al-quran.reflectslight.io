@@ -12,7 +12,7 @@ export function Stream({ surah, stream }: StreamProps) {
   const ayat = stream.map((ayah: Ayah) => {
     return (
       <li key={ayah.id} className="ayah fade">
-        <span>
+        <span className="surah-id ayah-id">
           Surah {surah.id}, Ayah {ayah.id}
         </span>
         <p>{ayah.text}</p>
