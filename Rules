@@ -55,7 +55,7 @@ end
 ##
 # /js/pages/surah.js
 compile "/js/pages/TheSurahPage.tsx" do
-  filter :webpack
+  filter :webpack, depend_on: "/js/{lib,components,hooks}/**/*.{ts,tsx,js}"
   write "/js/pages/surah.js"
   filter :gzip_text
   write "/js/pages/surah.js.gz"
