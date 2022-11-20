@@ -1,11 +1,10 @@
 @import "fonts";
-:root {
-  --black: #454545;
 
-}
+$black: #454545;
+
 body {
   font-family: "Kanit Regular";
-  color: var(--black);
+  color: $black;
 }
 
 .surah .theme {
