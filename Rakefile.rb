@@ -9,7 +9,7 @@ include Tasks
 namespace :nanoc do
   desc "Compile the website"
   task :compile do
-    sh "nanoc co"
+    sh "ruby -S bundle exec nanoc co"
   end
 
   desc "Delete the build directory"

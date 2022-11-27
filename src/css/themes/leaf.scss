@@ -9,6 +9,16 @@
     }
   }
 
+  .flex-row select {
+    background-color: transparent;
+    color: $green;
+    border: none;
+  }
+
+  .about-surah {
+    color: $green;
+  }
+
   ul.stream {
     li.ayah {
       span.surah-id.ayah-id {
@@ -16,10 +26,6 @@
       }
       p { }
     }
-  }
-
-  .about-surah {
-    color: $green;
   }
 
   .timer {
