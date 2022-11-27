@@ -6,6 +6,7 @@ import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
 import { AboutSurah } from "components/TheQuran/AboutSurah";
 import { ThemeSelect } from "components/TheQuran/ThemeSelect";
+import { LanguageSelect } from "components/TheQuran/LanguageSelect";
 import { Locale, Surah } from "lib/Quran";
 
 interface PageProps {
@@ -37,9 +38,8 @@ function TheSurahPage({ locale, surahId }: PageProps) {
       </a>
       {readyToRender && (
         <div className="flex-row">
-          <span />
           <ThemeSelect theme={theme} setTheme={setTheme} />
-          <span />
+          <LanguageSelect locale={locale} surah={surah}/>
         </div>
       )}
       {readyToRender && <AboutSurah locale={locale} surah={surah}/>}
