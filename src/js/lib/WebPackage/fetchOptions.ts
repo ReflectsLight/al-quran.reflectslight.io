@@ -1,11 +1,8 @@
-const getReloadEntry = () => PerformanceNavigationTiming | undefined {
-  return performance
-         .getEntriesByType("navigation")
-         .filter((e) => e.entryType === "navigation")
-         .find((e) e.type === "reload") as PerformanceNavigationTiming | undefined;
-}
+const getNavigationEntries = (): PerformanceNavigationTiming[] =>  {
+  return performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
+};
 
 export function fetchOptions(): RequestInit {
-  const reloadEntry = getReloadEntry();
-  return reloadEntry ? {cache: "reload"} : {};
+  const pageHasRefreshed = getNavigationEntries().some((e) => e.type === "reload");
+  return pageHasRefreshed ? {cache: "reload"} : {};
 }
