@@ -77,4 +77,8 @@ export class Surah {
   get numberOfAyah() {
     return this.#details.verse_count;
   }
+
+  get slug() {
+    return this.#details.slug;
+  }
 }
