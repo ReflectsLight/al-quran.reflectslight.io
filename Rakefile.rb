@@ -49,25 +49,37 @@ end
 
 namespace :deploy do
   desc "Deploy to a local web server (eg nginx)"
-  task local: ["env:development", "nanoc:compile"] do
+  task local: ["env:set-development-vars", "nanoc:compile"] do
     Deploy::Local.call
   end
 
   desc "Deploy to production"
-  task remote: ["env:production", "nanoc:clean", "nanoc:compile"] do
+  task remote: ["env:verify-production-branch",
+                "env:set-production-vars",
+                "nanoc:clean",
+                "nanoc:compile"] do
     Deploy::Remote.call
   end
 end
 
 namespace :env do
+  desc "Verify the production branch is being used"
+  task :'verify-production-branch' do
+    git_branch = `git branch --show-current`.chomp
+    if git_branch != "production"
+      warn "This task can only be run on the 'production' branch."
+      exit(1)
+    end
+  end
+
   desc "Set environment variables for the production environment"
-  task :production do
+  task :'set-production-vars' do
     require "dotenv"
     Dotenv.load
   end
 
   desc "Set environment variables for the development environment"
-  task :development do
+  task :'set-development-vars' do
     ENV["NODE_ENV"] ||= "development"
   end
 end
