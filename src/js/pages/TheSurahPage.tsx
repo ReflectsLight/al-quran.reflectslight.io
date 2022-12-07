@@ -32,9 +32,9 @@ function TheSurahPage({ locale, surahId }: PageProps) {
 
   return (
     <div className={classNames(theme, "theme")}>
-      <div className="flex-image">
+      <a href="/" className="flex-image">
         <div className="image" />
-      </div>
+      </a>
       {streamIsLoaded && (
         <div className="flex-row">
           <span />
