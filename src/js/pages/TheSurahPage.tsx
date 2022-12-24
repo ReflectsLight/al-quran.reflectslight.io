@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import useSurah from "hooks/useSurah";
+import classNames from "classnames";
+import { get as getCookie } from "es-cookie";
 import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
 import { AboutSurah } from "components/TheQuran/AboutSurah";
 import { ThemeSelect } from "components/TheQuran/ThemeSelect";
-import classNames from "classnames";
-import { get as getCookie } from "es-cookie";
+import { Locale } from "lib/Quran";
+import useSurah from "hooks/useSurah";
+
 
 interface PageProps {
-  locale: string;
+  locale: Locale;
   surahId: number;
 }
 
@@ -17,7 +19,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
   const { surahIsLoaded, surah } = useSurah(locale, surahId);
   const [stream, setStream] = useState([]);
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
-  const streamIsLoaded = !(stream.length === 0);
+  const readyToRender = stream.length > 0;
 
   useEffect(() => {
     if (surahIsLoaded) {
@@ -35,21 +37,22 @@ function TheSurahPage({ locale, surahId }: PageProps) {
       <a href="/" className="flex-image">
         <div className="image" />
       </a>
-      {streamIsLoaded && (
+      {readyToRender && (
         <div className="flex-row">
           <span />
           <ThemeSelect theme={theme} setTheme={setTheme} />
           <span />
         </div>
       )}
-      {streamIsLoaded && <AboutSurah locale={locale} surah={surah} />}
-      {streamIsLoaded && <Stream surah={surah} stream={stream} />}
-      {streamIsLoaded && stream.length < surah.numberOfAyah && (
+      {readyToRender && <AboutSurah locale={locale} surah={surah}/>}
+      {readyToRender && <Stream surah={surah} stream={stream} locale={locale}/>}
+      {readyToRender && stream.length < surah.numberOfAyah && (
         <Timer
           surah={surah}
           ayah={surah.ayat[stream.length - 1]}
           setStream={setStream}
           stream={stream}
+          locale={locale}
         />
       )}
     </div>
@@ -57,7 +60,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
 }
 
 const el = document.querySelector(".surah");
-const locale = el.getAttribute("data-locale");
+const locale = el.getAttribute("data-locale") as Locale;
 const surahId = parseInt(el.getAttribute("data-surah-id"));
 const root = ReactDOM.createRoot(el);
 root.render(<TheSurahPage locale={locale} surahId={surahId} />);
