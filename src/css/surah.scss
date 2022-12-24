@@ -77,10 +77,19 @@ body {
   ul.stream {
     clear: both;
     list-style-type: none;
-    height: 65%;
-    max-height: 400px;
+    height: 400px;
     padding: 0;
     overflow: hidden;
+
+    /* Height of 595px, or less */
+    @media screen and (max-height: 595px) {
+      height: 310px;
+    }
+
+    /* Height of 625px, or less */
+    @media screen and (max-height: 625px) {
+      height: 350px;
+    }
 
     li.ayah {
       span.surah-id.ayah-id {
