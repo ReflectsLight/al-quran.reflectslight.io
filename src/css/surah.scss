@@ -81,14 +81,14 @@ body {
     padding: 0;
     overflow: hidden;
 
-    /* Height of 595px, or less */
-    @media screen and (max-height: 595px) {
-      height: 310px;
-    }
-
     /* Height of 625px, or less */
     @media screen and (max-height: 625px) {
       height: 350px;
+    }
+
+    /* Height of 595px, or less */
+    @media screen and (max-height: 595px) {
+      height: 330px;
     }
 
     li.ayah {
