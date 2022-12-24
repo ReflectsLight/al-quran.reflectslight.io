@@ -4,6 +4,7 @@ import WebPackage from "lib/WebPackage";
   const parent: HTMLElement = document.querySelector(".webpackage.loader");
   const progressBar: HTMLProgressElement = parent.querySelector("progress");
   const progressNumber: HTMLSpanElement = parent.querySelector(".percentage");
+  const inlineStyle: HTMLStyleElement = document.querySelector("style.webpackage");
   const { locale, surahId } = document.querySelector<HTMLElement>(".surah").dataset;
 
   WebPackage({
@@ -21,6 +22,7 @@ import WebPackage from "lib/WebPackage";
     }
   }).fetch()
     .then((pkg) => {
+      inlineStyle.remove();
       parent.remove();
       pkg.fonts.forEach((f) => document.fonts.add(f));
       pkg.stylesheets.forEach((s) => document.head.appendChild(s));
