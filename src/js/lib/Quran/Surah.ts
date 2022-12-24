@@ -9,12 +9,17 @@ interface SurahDetails {
 }
 
 export interface Ayah {
-  id: number;
+  id: IDObject,
   text: string;
   readTimeMs: number;
 }
 
 export type Ayat = Ayah[];
+
+interface IDObject {
+  number: number,
+  localeKey: string[]
+}
 
 export class Surah {
   #details: SurahDetails;
@@ -25,7 +30,10 @@ export class Surah {
       details,
       ayat.map(([id, text]) => {
         return {
-          id,
+          id: {
+            number: id,
+            localeKey: String(id).split("")
+          },
           text,
           readTimeMs: text.split(" ").length * 500,
         };
@@ -38,8 +46,11 @@ export class Surah {
     this.ayat = ayat;
   }
 
-  get id() {
-    return this.#details.id;
+  get id(): IDObject {
+    return {
+      number: Number(this.#details.id),
+      localeKey: this.#details.id.split("")
+    };
   }
 
   get name() {

@@ -1,5 +1,4 @@
 import { Surah, Ayah, Ayat } from './Quran/Surah';
-const Quran = {
-  Surah
-};
-export { Quran, Surah, Ayah, Ayat };
+type Locale = "ar" | "en";
+const Quran = { Surah };
+export { Quran, Surah, Ayah, Ayat, Locale };

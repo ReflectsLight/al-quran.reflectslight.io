@@ -1,28 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { Surah, Ayah, Ayat } from 'lib/Quran';
+import { Surah, Ayah, Ayat, Locale } from 'lib/Quran';
+import { numberToDecimal } from "lib/i18n";
 
 interface TimerProps {
   surah: Surah
   ayah: Ayah
+  locale: Locale
   stream: Ayat
   setStream: (stream: Ayat) => void
 }
 
-export function Timer ({ surah, ayah, stream, setStream }: TimerProps) {
+export function Timer ({ surah, ayah, stream, setStream, locale }: TimerProps) {
   const [ms, setMs] = useState(ayah.readTimeMs);
   useEffect(() => setMs(ayah.readTimeMs), [ayah]);
   useEffect(() => {
     if (stream.length === surah.ayat.length) {
       return;
     } else if (ms <= 0) {
-      setStream([...stream, surah.ayat[ayah.id]]);
+      setStream([...stream, surah.ayat[ayah.id.number]]);
     } else {
       setTimeout(() => setMs(ms - 100), 100);
     }
   }, [ms]);
   return (
     <div className='timer'>
-      {(ms / 1000).toFixed(1)}
+      {numberToDecimal(ms / 1000, locale)}
     </div>
   );
 }
