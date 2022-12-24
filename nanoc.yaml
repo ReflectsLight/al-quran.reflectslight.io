@@ -24,4 +24,4 @@ deploy:
     user: www
     group: www
     src: build/al-quran/.
-    dest: /var/www/htdocs/al-quran.0x1eef.test/
+    dest: /var/www/htdocs/al-quran.reflectslight.local/
