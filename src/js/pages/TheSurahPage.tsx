@@ -31,7 +31,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
   }, [surahIsLoaded]);
 
   return (
-    <div className={classNames(theme, "theme")}>
+    <div className={classNames(theme, "theme", locale)}>
       <a href="/" className="flex-image">
         <div className="image" />
       </a>
@@ -42,7 +42,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
           <span />
         </div>
       )}
-      {streamIsLoaded && <AboutSurah surah={surah} />}
+      {streamIsLoaded && <AboutSurah locale={locale} surah={surah} />}
       {streamIsLoaded && <Stream surah={surah} stream={stream} />}
       {streamIsLoaded && stream.length < surah.numberOfAyah && (
         <Timer

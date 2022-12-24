@@ -1,11 +1,17 @@
 import React from 'react';
 import { Surah } from 'lib/Quran';
 
-export function AboutSurah ({ surah }: { surah: Surah }) {
+interface Props {
+  surah: Surah
+  locale: string
+}
+
+export function AboutSurah (props: Props) {
+  const { surah, locale } = props;
   return (
     <div className='about-surah'>
-      <span>
-        {surah.translatedName}
+      <span lang={locale}>
+        {locale === "ar" ? surah.name : surah.translatedName}
       </span>
       <span>
         {surah.transliteratedName}
