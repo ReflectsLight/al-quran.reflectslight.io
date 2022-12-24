@@ -2,14 +2,20 @@
 
 $black: #454545;
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Kanit Regular";
   color: $black;
+  height: inherit;
 }
 
 .surah .theme {
   margin: 0 auto;
   width: 450px;
+  height: inherit;
 
   @media screen and (max-width: 450px) {
     width: 350px;
@@ -67,7 +73,8 @@ body {
   ul.stream {
     clear: both;
     list-style-type: none;
-    height: 400px;
+    height: 90%;
+    max-height: 400px;
     padding: 0;
     overflow: hidden;
 
