@@ -28,6 +28,11 @@ export class Surah {
   #details: SurahDetails;
   ayat: Ayat;
 
+  static fromDOMNode(locale: Locale, node: HTMLScriptElement) {
+    const json = JSON.parse(node.innerText);
+    return Surah.fromJSON(locale, json.shift(), json);
+  }
+
   static fromJSON(locale: Locale, details: SurahDetails, ayat: Array<[number, string]>): Surah {
     return new Surah(
       details,
