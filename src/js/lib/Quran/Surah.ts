@@ -1,3 +1,8 @@
+import { Locale } from "lib/Quran";
+import { DelayBaseLine, DelayPerWord } from "lib/i18n";
+
+export type Ayat = Ayah[];
+
 interface SurahDetails {
   id: string;
   place_of_revelation: string;
@@ -14,8 +19,6 @@ export interface Ayah {
   readTimeMs: number;
 }
 
-export type Ayat = Ayah[];
-
 interface IDObject {
   number: number,
   localeKey: string[]
@@ -25,17 +28,14 @@ export class Surah {
   #details: SurahDetails;
   ayat: Ayat;
 
-  static fromJSON(details: SurahDetails, ayat: Array<[number, string]>): Surah {
+  static fromJSON(locale: Locale, details: SurahDetails, ayat: Array<[number, string]>): Surah {
     return new Surah(
       details,
       ayat.map(([id, text]) => {
         return {
-          id: {
-            number: id,
-            localeKey: String(id).split("")
-          },
+          id: { number: id, localeKey: String(id).split("") },
           text,
-          readTimeMs: text.split(" ").length * 500,
+          readTimeMs: DelayBaseLine + (text.split(" ").length * DelayPerWord[locale]),
         };
       }),
     );
