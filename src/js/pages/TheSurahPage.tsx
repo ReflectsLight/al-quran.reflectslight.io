@@ -6,9 +6,7 @@ import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
 import { AboutSurah } from "components/TheQuran/AboutSurah";
 import { ThemeSelect } from "components/TheQuran/ThemeSelect";
-import { Locale } from "lib/Quran";
-import useSurah from "hooks/useSurah";
-
+import { Locale, Surah } from "lib/Quran";
 
 interface PageProps {
   locale: Locale;
@@ -16,21 +14,21 @@ interface PageProps {
 }
 
 function TheSurahPage({ locale, surahId }: PageProps) {
-  const { surahIsLoaded, surah } = useSurah(locale, surahId);
+  const path = `/${locale}/${surahId}/surah.json`;
+  const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
+  const surah = Surah.fromDOMNode(locale, node);
   const [stream, setStream] = useState([]);
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
   const readyToRender = stream.length > 0;
 
   useEffect(() => {
-    if (surahIsLoaded) {
-      document.title = [
-        "Al-Quran:",
-        surah.transliteratedName,
-        `(${surah.translatedName})`,
-      ].join(" ");
-      setStream([surah.ayat[stream.length]]);
-    }
-  }, [surahIsLoaded]);
+    document.title = [
+      "Al-Quran:",
+      surah.transliteratedName,
+      `(${surah.translatedName})`,
+    ].join(" ");
+    setStream([surah.ayat[stream.length]]);
+  }, []);
 
   return (
     <div className={classNames(theme, "theme", locale)}>
