@@ -32,6 +32,21 @@ const sTable: Record<Locale, Record<Strings, string>> = {
   }
 };
 
+/**
+ * The read time baseline - as a number milliseconds -
+ * that all Ayah share, regardless of locale.
+ */
+export const DelayBaseLine = 2000;
+
+/**
+ * The read time for each word in an Ayah,
+ * relative to the active locale.
+ */
+export const DelayPerWord: Record<Locale, number> = {
+  en: 500,
+  ar: 750
+};
+
 export function numbers (locale: Locale) {
   return function(keys: string | string[]): string {
     const table = nTable[locale];
