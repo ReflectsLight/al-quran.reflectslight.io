@@ -30,6 +30,7 @@ end
 namespace :watch do
   desc "Watch for changes (server task)"
   task :server do
+    Bundler.with_unbundled_env { sh "rake build" }
     Listen.to(File.join(Dir.getwd, "src")) do
       Bundler.with_unbundled_env { sh "rake build" }
     end.start
@@ -39,6 +40,7 @@ namespace :watch do
   namespace :deploy do
     desc "Watch for changes (deploy:local task)"
     task :local do
+      Bundler.with_unbundled_env { sh "rake deploy:local" }
       Listen.to(File.join(Dir.getwd, "src")) do
         Bundler.with_unbundled_env { sh "rake deploy:local" }
       end.start
