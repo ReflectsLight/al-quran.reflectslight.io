@@ -29,16 +29,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    span {
-      width: 60px;
-    }
+    direction: ltr;
 
     select {
-      padding: 3px;
+      padding: 3px 0 3px 0;
       outline: none;
-      text-align: center;
       direction: ltr;
+    }
+
+    select:first-child {
+      text-align: left;
+    }
+
+    select:last-child {
+      text-align: right;
     }
   }
 
