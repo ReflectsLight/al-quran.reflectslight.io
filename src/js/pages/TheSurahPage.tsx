@@ -39,7 +39,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
       {readyToRender && (
         <div className="flex-row">
           <ThemeSelect theme={theme} setTheme={setTheme} />
-          <LanguageSelect locale={locale} surah={surah}/>
+          <LanguageSelect locale={locale} surah={surah} />
         </div>
       )}
       {readyToRender && <AboutSurah locale={locale} surah={surah}/>}
