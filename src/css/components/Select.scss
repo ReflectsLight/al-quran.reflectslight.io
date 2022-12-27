@@ -1,0 +1,28 @@
+.react-select {
+  height: 20px;
+  z-index: 0;
+}
+
+.react-select span.active-option {
+  cursor: pointer;
+}
+
+.react-select ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  list-style-type: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 7px;
+}
+
+.react-select ul li {
+  display: block;
+  width: 100px;
+  padding: 2px;
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(#CCCCCC, 15%);
+  }
+}

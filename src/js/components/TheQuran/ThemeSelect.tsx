@@ -1,4 +1,5 @@
 import React from 'react';
+import { Select, SelectOption } from "components/Select";
 import { set as setCookie } from 'es-cookie';
 
 interface Props {
@@ -7,18 +8,15 @@ interface Props {
 }
 
 export function ThemeSelect ({ setTheme, theme }: Props) {
-  const onThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setCookie('theme', e.target.value, { domain: location.host, expires: 365 });
-    setTheme(e.target.value);
+  const onThemeChange = (o: SelectOption) => {
+    setCookie('theme', o.value, { domain: location.host, expires: 365 });
+    setTheme(o.value);
   };
 
   return (
-    <select
-      name="theme"
-      value={theme}
-      onChange={onThemeChange}>
+    <Select value={theme} onChange={onThemeChange}>
       <option value='moon'>🌛</option>
       <option value='leaf'>🌿</option>
-    </select>
+    </Select>
   );
 }
