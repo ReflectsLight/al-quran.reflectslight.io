@@ -35,6 +35,13 @@ body {
       padding: 3px 0 3px 0;
       outline: none;
       direction: ltr;
+      appearance: none;
+      width: 69px;
+      text-align: right;
+
+      option:hover, option:focus-within, option:focus {
+        background: none;
+      }
     }
 
     select:first-child {
@@ -75,6 +82,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     font-weight: 500;
+    font-family: "Kanit Regular";
   }
 
   ul.stream {
