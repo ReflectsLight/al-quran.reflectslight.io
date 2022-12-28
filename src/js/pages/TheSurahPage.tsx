@@ -18,9 +18,9 @@ interface PageProps {
 function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
-  const surah = Surah.fromDOMNode(locale, node);
   const [stream, setStream] = useState([]);
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
+  const [surah] = useState<Surah>(Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
 
   useEffect(() => {

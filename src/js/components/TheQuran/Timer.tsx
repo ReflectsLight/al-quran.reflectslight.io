@@ -12,7 +12,7 @@ interface TimerProps {
 
 export function Timer ({ surah, ayah, stream, setStream, locale }: TimerProps) {
   const [ms, setMs] = useState(ayah.readTimeMs);
-  useEffect(() => setMs(ayah.readTimeMs), [ayah]);
+  useEffect(() => setMs(ayah.readTimeMs), [ayah.id]);
   useEffect(() => {
     if (stream.length === surah.ayat.length) {
       return;
