@@ -35,8 +35,7 @@ const createOption = (e: ChangeEvent, children: JSX.Element[]): SelectOption => 
   };
 };
 
-export function Select(props: Props) {
-  const { children, className, value, onChange } = props;
+export function Select({ value, children, onChange, className }: Props) {
   const [open, setOpen] = useState<boolean>(false);
   const [activeOption, setActiveOption] = useState<string | null>(findOption(value, children));
   const openSelect = (e: React.MouseEvent<HTMLSpanElement>) => {

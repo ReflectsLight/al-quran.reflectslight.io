@@ -66,6 +66,6 @@ export function numberToDecimal(number: number, locale: Locale): string {
   const s = strings(locale);
   const n = numbers(locale);
   return decimal.split('.')
-         .map((num: Digit) => n(num))
-         .join(s('decimal'));
+                .map((num: Digit) => n(num))
+                .join(` ${s('decimal')} `);
 }

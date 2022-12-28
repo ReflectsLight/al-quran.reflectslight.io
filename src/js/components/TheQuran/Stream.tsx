@@ -10,12 +10,13 @@ interface Props {
   locale: Locale
   slice: Slice
   endOfStream: boolean
+  isPaused: boolean
 }
 
-export function Stream({ surah, stream, locale, slice, endOfStream }: Props) {
+export function Stream({ surah, stream, locale, slice, endOfStream, isPaused }: Props) {
   const n = numbers(locale);
   const s = strings(locale);
-  const className = classNames('stream', { 'scroll-y': endOfStream });
+  const className = classNames('stream', { 'scroll-y': endOfStream || isPaused });
   const ayat = stream.map((ayah: Ayah) => {
     return (
       <li key={ayah.id.number} className="ayah fade">

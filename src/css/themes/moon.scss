@@ -24,9 +24,13 @@
     }
   }
 
-  .timer {
+  .surah-row .timer {
     color: $white;
-    background-color: lighten($gold, 5%);
+    background: $gold;
+  }
+
+  .surah-row .container.shape {
+    background: $gold;
   }
 }
 

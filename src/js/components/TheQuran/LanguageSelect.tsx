@@ -6,13 +6,15 @@ interface Props {
   locale: string
   surah: Surah
   stream: Ayah[]
+  isPaused: boolean
 }
 
-export function LanguageSelect(props: Props) {
-  const { locale, surah, stream } = props;
+export function LanguageSelect({ locale, surah, stream, isPaused }: Props) {
   const changeLanguage = (o: SelectOption) => {
     const locale = o.value;
-    location.replace(`/${locale}/${surah.slug}/?ayah=${stream.length}`);
+    location.replace(
+      `/${locale}/${surah.slug}/?ayah=${stream.length}&paused=${isPaused ? 't' : 'f'}`
+    );
   };
 
   return (

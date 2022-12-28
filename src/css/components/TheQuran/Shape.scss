@@ -1,0 +1,38 @@
+.shape-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background: #606850;
+  cursor: pointer;
+
+}
+
+.shape-box .play-shape {
+  position: relative;
+  left: 1px;
+  width: 12px;
+  height: 12px;
+  background: #FFF;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.shape-box .pause-shape {
+  width: 3px;
+  height: 12px;
+  background: #FFF;
+  clip-path: stroke-box;
+
+  &:first-child {
+    position: relative;
+    right: 2px;
+  }
+
+  &:last-child {
+    position: relative;
+    left: 1.5px;
+  }
+}
