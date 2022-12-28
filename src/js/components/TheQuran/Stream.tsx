@@ -7,12 +7,14 @@ interface StreamProps {
   surah: Surah;
   stream: Ayat;
   locale: Locale;
+  ayahId: number;
 }
 
-export function Stream({ surah, stream, locale }: StreamProps) {
+export function Stream({ surah, stream, locale, ayahId }: StreamProps) {
   const n = numbers(locale);
   const s = strings(locale);
   const endOfStream = stream.length === surah.ayat.length;
+  const className = classNames("stream", { "scroll-y": endOfStream });
   const ayat = stream.map((ayah: Ayah) => {
     return (
       <li key={ayah.id.number} className="ayah fade">
@@ -29,15 +31,17 @@ export function Stream({ surah, stream, locale }: StreamProps) {
   });
 
   useEffect(() => {
-    const el: HTMLElement = document.querySelector("ul.stream");
-    el.scroll({
-      top: el.scrollHeight,
-      behavior: "smooth",
-    });
+    const ul: HTMLElement = document.querySelector("ul.stream");
+    if (ayahId === stream.length) {
+      const li: HTMLLIElement = ul.querySelector("li:last-child");
+      li.scrollIntoView();
+    } else {
+      ul.scroll({ top: ul.scrollHeight, behavior: "smooth" });
+    }
   }, [stream]);
 
   return (
-    <ul className={classNames("stream", { "scroll-y": endOfStream })}>
+    <ul lang={locale} className={className}>
       {ayat}
     </ul>
   );

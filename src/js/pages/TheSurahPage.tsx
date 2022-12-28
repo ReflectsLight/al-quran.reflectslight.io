@@ -12,9 +12,10 @@ import { Locale, Surah } from "lib/Quran";
 interface PageProps {
   locale: Locale;
   surahId: number;
+  ayahId: number
 }
 
-function TheSurahPage({ locale, surahId }: PageProps) {
+function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
   const surah = Surah.fromDOMNode(locale, node);
@@ -28,7 +29,11 @@ function TheSurahPage({ locale, surahId }: PageProps) {
       surah.transliteratedName,
       `(${surah.translatedName})`,
     ].join(" ");
-    setStream([surah.ayat[stream.length]]);
+    if (ayahId === 1) {
+      setStream([surah.ayat[stream.length]]);
+    } else {
+      setStream(surah.ayat.slice(0, ayahId));
+    }
   }, []);
 
   return (
@@ -39,11 +44,17 @@ function TheSurahPage({ locale, surahId }: PageProps) {
       {readyToRender && (
         <div className="flex-row">
           <ThemeSelect theme={theme} setTheme={setTheme} />
-          <LanguageSelect locale={locale} surah={surah} />
+          <LanguageSelect locale={locale} surah={surah} stream={stream} />
         </div>
       )}
       {readyToRender && <AboutSurah locale={locale} surah={surah}/>}
-      {readyToRender && <Stream surah={surah} stream={stream} locale={locale}/>}
+      {readyToRender &&
+        <Stream
+          ayahId={ayahId}
+          surah={surah}
+          stream={stream}
+          locale={locale}/>
+      }
       {readyToRender && stream.length < surah.numberOfAyah && (
         <Timer
           surah={surah}
@@ -60,5 +71,7 @@ function TheSurahPage({ locale, surahId }: PageProps) {
 const el = document.querySelector(".surah");
 const locale = el.getAttribute("data-locale") as Locale;
 const surahId = parseInt(el.getAttribute("data-surah-id"));
+const params = new URLSearchParams(location.search);
+const ayahId = parseInt(params.get('ayah') || '1');
 const root = ReactDOM.createRoot(el);
-root.render(<TheSurahPage locale={locale} surahId={surahId} />);
+root.render(<TheSurahPage locale={locale} surahId={surahId} ayahId={ayahId}/>);
