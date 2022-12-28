@@ -1,17 +1,18 @@
 import React from "react";
 import { Select, SelectOption } from "components/Select";
-import { Surah } from "lib/Quran";
+import { Surah, Ayah } from "lib/Quran";
 
 interface Props {
   locale: string,
-  surah: Surah
+  surah: Surah,
+  stream: Ayah[]
 }
 
 export function LanguageSelect(props: Props) {
-  const { locale, surah } = props;
+  const { locale, surah, stream } = props;
   const changeLanguage = (o: SelectOption) => {
     const locale = o.value;
-    location.replace(`/${locale}/${surah.slug}/`);
+    location.replace(`/${locale}/${surah.slug}/?ayah=${stream.length}`);
   };
 
   return (

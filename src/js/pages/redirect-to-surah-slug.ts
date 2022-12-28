@@ -5,5 +5,6 @@
     .slice(-2);
   const el: HTMLElement = document.querySelector('.surah-id-to-slug');
   const slugs = JSON.parse(el.innerText);
-  location.replace(['', locale, slugs[surahId]].join('/'));
+  const path = ['', locale, slugs[surahId]].join('/');
+  location.replace([path, location.search].join(''));
 })();
