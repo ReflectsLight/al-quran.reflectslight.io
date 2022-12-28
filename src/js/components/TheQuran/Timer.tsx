@@ -7,19 +7,22 @@ interface Props {
   locale: Locale
   stream: Ayat
   setStream: (stream: Ayat) => void
+  isPaused: boolean
 }
 
-export function Timer ({ surah, stream, setStream, locale }: Props) {
+export function Timer ({ surah, stream, setStream, locale, isPaused }: Props) {
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
   useEffect(() => setMs(ayah.readTimeMs), [ayah.id]);
   useEffect(() => {
-    if (ms <= 0) {
+    if (isPaused) {
+      return;
+    } else if (ms <= 0) {
       setStream([...stream, surah.ayat[ayah.id.number]]);
     } else {
       setTimeout(() => setMs(ms - 100), 100);
     }
-  }, [ms]);
+  }, [ms, isPaused]);
   return (
     <div className='timer'>
       {numberToDecimal(ms / 1000, locale)}
