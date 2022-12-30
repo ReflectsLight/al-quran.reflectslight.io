@@ -1,30 +1,26 @@
-.surah .leaf.theme {
+.root-box .surah.theme.leaf {
   $green: #606850;
   $white: #FFF;
 
-  .flex-image {
-    .image {
-      background-image: url("/images/leaf.svg");
-      background-size: cover;
-    }
+  .image-box .image {
+    background-image: url("/images/leaf.svg");
+    background-size: cover;
   }
 
-  .flex-row .react-select {
+  .surah-row.theme-language .react-select {
     background-color: transparent;
     color: $green;
   }
 
-  .about-surah {
+  .surah-row.surah-details {
     color: $green;
   }
 
-  ul.stream {
-    li.ayah {
-      span.surah-id.ayah-id {
-        color: $green;
-      }
-      p { }
+  ul.stream li.ayah {
+    span.surah-id.ayah-id {
+      color: $green;
     }
+    p { }
   }
 
   .timer {
@@ -33,7 +29,7 @@
   }
 }
 
-.surah .leaf.theme.ar {
+.root-box .surah.theme.leaf.ar {
   direction: rtl;
   font-family: "Vazirmatn Regular";
 }

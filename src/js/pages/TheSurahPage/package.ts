@@ -5,7 +5,7 @@ import WebPackage from "lib/WebPackage";
   const progressBar: HTMLProgressElement = parent.querySelector("progress");
   const progressNumber: HTMLSpanElement = parent.querySelector(".percentage");
   const inlineStyle: HTMLStyleElement = document.querySelector("style.webpackage");
-  const { locale, surahId } = document.querySelector<HTMLElement>(".surah").dataset;
+  const { locale, surahId } = document.querySelector<HTMLElement>(".root-box").dataset;
 
   WebPackage({
     scripts: ["/js/pages/surah.js"],
