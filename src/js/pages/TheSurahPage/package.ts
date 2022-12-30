@@ -14,6 +14,7 @@ import WebPackage from "lib/WebPackage";
     others: [`/${locale}/${surahId}/surah.json`],
     fonts: [
       ["Kanit Regular", "url(/fonts/kanit-regular.ttf)"],
+      ["Vazirmatn Regular", "url(/fonts/vazirmatn-regular.ttf)"],
       ["Roboto Mono Regular", "url(/fonts/roboto-mono-regular.ttf)"]
     ],
     onprogress: (percent: number) => {
