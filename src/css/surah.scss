@@ -13,49 +13,20 @@ body {
   height: 85%;
 }
 
-.surah {
-  height: 100%;
-}
-
-.surah .theme {
-  margin: 0 auto;
-  width: 450px;
+.root-box {
   height: 100%;
 
-  @media screen and (max-width: 450px) {
-    width: 350px;
-  }
+  .surah {
+    margin: 0 auto;
+    width: 450px;
+    height: 100%;
 
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    direction: ltr;
-
-    .react-select.language {
-      text-align: right;
-
-      li:first-child {
-        font-family: "Vazirmatn Regular";
-      }
-      li:last-child {
-        font-family: "Kanit Regular";
-      }
+    @media screen and (max-width: 450px) {
+      width: 350px;
     }
   }
 
-  .timer {
-    margin: 0 auto;
-    font-size: 65%;
-    font-family: "Roboto Mono Regular";
-    text-align: center;
-    width: 30px;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 3px;
-  }
-
-  .flex-image {
+  .surah .image-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,16 +38,28 @@ body {
     }
   }
 
-  .about-surah {
-    margin-top: 10px;
+  .surah .surah-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-weight: 500;
-    font-family: "Kanit Regular";
+    direction: ltr;
   }
 
-  ul.stream {
+  .surah .surah-row.theme-language {
+    .react-select.language {
+      text-align: right;
+
+      li:first-child { font-family: "Vazirmatn Regular"; }
+      li:last-child { font-family: "Kanit Regular"; }
+    }
+  }
+
+  .surah .surah-row.surah-details {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .surah ul.stream {
     clear: both;
     list-style-type: none;
     height: 400px;
@@ -92,33 +75,46 @@ body {
     @media screen and (max-height: 595px) {
       height: 330px;
     }
+  }
 
-    li.ayah {
-      span.surah-id.ayah-id {
-        display: block;
-        font-weight: 500;
-      }
-      p {
-        margin: 3px 0 10px 0
-      }
+  .surah ul.stream.scroll-y {
+    overflow-y: auto;
+  }
+
+  .surah ul.stream li.ayah {
+    span.surah-id.ayah-id {
+      display: block;
+      font-weight: 500;
+    }
+    p {
+      margin: 3px 0 10px 0
     }
   }
 
-  ul.stream.scroll-y {
-    overflow-y: auto;
+  .surah ul.stream li.ayah.fade {
+    @keyframes FadeIn {
+      0% { opacity: 0;}
+      25% { opacity: 0.25; }
+      50% { opacity: 0.5; }
+      75% { opacity: 0.75 }
+      100% { opacity: 1; }
+    }
+    animation: FadeIn 1s;
   }
-}
 
-@keyframes FadeIn {
-  0% { opacity: 0;}
-  25% { opacity: 0.25; }
-  50% { opacity: 0.5; }
-  75% { opacity: 0.75 }
-  100% { opacity: 1; }
-}
-
-.fade {
-  animation: FadeIn 1s;
+  .surah .timer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 65%;
+    font-family: "Roboto Mono Regular";
+    text-align: center;
+    width: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 3px;
+  }
 }
 
 @import "themes/moon";

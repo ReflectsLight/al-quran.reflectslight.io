@@ -1,19 +1,17 @@
-.surah .moon.theme {
+.root-box .surah.theme.moon {
   $gold: darken(#ECB200, 5%);
   $white: #FFF;
 
-  .flex-image {
-    .image {
-      background-image: url("/images/moon.svg");
-      background-size: cover;
-    }
+  .image-box .image {
+    background-image: url("/images/moon.svg");
+    background-size: cover;
   }
 
-  .flex-row .react-select {
+  .surah-row.theme-language .react-select {
     color: $gold;
   }
 
-  .about-surah {
+  .surah-row.surah-details {
     color: $gold;
   }
 
@@ -32,7 +30,7 @@
   }
 }
 
-.surah .moon.theme.ar {
+.root-box .surah.theme.moon.ar {
   direction: rtl;
   font-family: "Vazirmatn Regular";
 }

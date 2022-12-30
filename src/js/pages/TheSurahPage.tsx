@@ -4,7 +4,6 @@ import classNames from "classnames";
 import { get as getCookie } from "es-cookie";
 import { Timer } from "components/TheQuran/Timer";
 import { Stream } from "components/TheQuran/Stream";
-import { AboutSurah } from "components/TheQuran/AboutSurah";
 import { ThemeSelect } from "components/TheQuran/ThemeSelect";
 import { LanguageSelect } from "components/TheQuran/LanguageSelect";
 import { Locale, Surah } from "lib/Quran";
@@ -12,7 +11,7 @@ import { Locale, Surah } from "lib/Quran";
 interface PageProps {
   locale: Locale;
   surahId: number;
-  ayahId: number
+  ayahId: number;
 }
 
 function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
@@ -22,12 +21,13 @@ function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
   const [surah] = useState<Surah>(Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
+  const surahName = locale === "ar" ? surah.name : surah.translatedName;
 
   useEffect(() => {
     document.title = [
       "Al-Quran:",
       surah.transliteratedName,
-      `(${surah.translatedName})`,
+      `(${surah.translatedName})`
     ].join(" ");
     if (ayahId === 1) {
       setStream([surah.ayat[stream.length]]);
@@ -37,17 +37,22 @@ function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
   }, []);
 
   return (
-    <div className={classNames(theme, "theme", locale)}>
-      <a href="/" className="flex-image">
-        <div className="image" />
-      </a>
+    <div className={classNames("surah", "theme", theme, locale)}>
+      <div className="image-box">
+        <a href="/" className="image"/>
+      </div>
       {readyToRender && (
-        <div className="flex-row">
+        <div className="surah-row theme-language">
           <ThemeSelect theme={theme} setTheme={setTheme} />
           <LanguageSelect locale={locale} surah={surah} stream={stream} />
         </div>
       )}
-      {readyToRender && <AboutSurah locale={locale} surah={surah}/>}
+      {readyToRender && (
+        <div className='surah-row surah-details'>
+          <span lang={locale}>{surahName}</span>
+          <span>{surah.transliteratedName}</span>
+        </div>
+      )}
       {readyToRender &&
         <Stream
           ayahId={ayahId}
@@ -68,10 +73,14 @@ function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
   );
 }
 
-const el = document.querySelector(".surah");
-const locale = el.getAttribute("data-locale") as Locale;
-const surahId = parseInt(el.getAttribute("data-surah-id"));
-const params = new URLSearchParams(location.search);
-const ayahId = parseInt(params.get('ayah') || '1');
-const root = ReactDOM.createRoot(el);
-root.render(<TheSurahPage locale={locale} surahId={surahId} ayahId={ayahId}/>);
+(function() {
+  const rootBox: HTMLElement = document.querySelector(".root-box");
+  const locale = rootBox.getAttribute("data-locale") as Locale;
+  const surahId = parseInt(rootBox.getAttribute("data-surah-id"));
+  const params = new URLSearchParams(location.search);
+  const ayahId = parseInt(params.get('ayah') || '1');
+
+  ReactDOM
+    .createRoot(rootBox)
+    .render(<TheSurahPage locale={locale} surahId={surahId} ayahId={ayahId}/>);
+})();
