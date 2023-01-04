@@ -1,7 +1,7 @@
 ## About
 
 This repository contains the source code for a static website that can be
-used to read The Qur'an.
+used to read The Quran.
 <br>
 The website can be seen live at 
 [https://al-quran.reflectslight.io](https://al-quran.reflectslight.io).
@@ -32,7 +32,7 @@ $ ruby -S rake build
 ```
 
 
-## Run the website locally
+## Run the website
 
 The website can be run on `http://localhost:3000` with the following command:
 
