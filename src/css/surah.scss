@@ -19,7 +19,7 @@ body {
 
   .surah {
     margin: 0 auto;
-    width: 450px;
+    width: 470px;
     height: 100%;
 
     @media screen and (max-width: 450px) {
@@ -81,6 +81,7 @@ body {
 
   .surah ul.stream.scroll-y {
     overflow-y: auto;
+    li.ayah p { width: 98%; }
   }
 
   .surah ul.stream li.ayah {
