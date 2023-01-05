@@ -74,7 +74,6 @@ function TheSurahPage({ locale, surahId, slice }: Props) {
       {readyToRender && !endOfStream && (
         <Timer
           surah={surah}
-          ayah={stream[stream.length - 1]}
           setStream={setStream}
           stream={stream}
           locale={locale}
