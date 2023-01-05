@@ -4,23 +4,23 @@ import { DelayBaseLine, DelayPerWord } from "lib/i18n";
 export type Ayat = Ayah[];
 
 interface SurahDetails {
-  id: string;
-  place_of_revelation: string;
-  transliterated_name: string;
-  translated_name: string;
-  verse_count: number;
-  slug: string;
-  codepoints: number[];
+  id: string
+  place_of_revelation: string
+  transliterated_name: string
+  translated_name: string
+  verse_count: number
+  slug: string
+  codepoints: number[]
 }
 
 export interface Ayah {
-  id: IDObject,
-  text: string;
-  readTimeMs: number;
+  id: IDObject
+  text: string
+  readTimeMs: number
 }
 
 interface IDObject {
-  number: number,
+  number: number
   localeKey: string[]
 }
 

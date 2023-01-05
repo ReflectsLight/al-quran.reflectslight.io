@@ -4,13 +4,13 @@ import classnames from "classnames";
 export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {target: HTMLLIElement};
 
 export interface SelectOption {
-  innerText: string,
-  value: string,
+  innerText: string
+  value: string
   reactEvent: ChangeEvent
 }
 
 interface Props {
-  value: string,
+  value: string
   children: JSX.Element[]
   onChange: (e: SelectOption) => void
   className?: string

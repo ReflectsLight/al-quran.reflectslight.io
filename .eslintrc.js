@@ -4,6 +4,7 @@ module.exports = {
     project: "./tsconfig.json",
   },
   rules: {
+    "@typescript-eslint/member-delimiter-style": 2,
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/no-extra-semi": "error",
     "@typescript-eslint/explicit-function-return-type": 0,

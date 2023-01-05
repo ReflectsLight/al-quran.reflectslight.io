@@ -3,8 +3,8 @@ import { Select, SelectOption } from "components/Select";
 import { Surah, Ayah } from "lib/Quran";
 
 interface Props {
-  locale: string,
-  surah: Surah,
+  locale: string
+  surah: Surah
   stream: Ayah[]
 }
 

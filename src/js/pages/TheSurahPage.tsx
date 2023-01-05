@@ -9,9 +9,9 @@ import { LanguageSelect } from "components/TheQuran/LanguageSelect";
 import { Locale, Surah } from "lib/Quran";
 
 interface Props {
-  locale: Locale;
-  surahId: number;
-  ayahId: number;
+  locale: Locale
+  surahId: number
+  ayahId: number
 }
 
 function TheSurahPage({ locale, surahId, ayahId }: Props) {

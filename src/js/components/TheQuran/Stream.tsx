@@ -4,10 +4,10 @@ import { numbers, strings } from "lib/i18n";
 import classNames from "classnames";
 
 interface Props {
-  surah: Surah;
-  stream: Ayat;
-  locale: Locale;
-  ayahId: number;
+  surah: Surah
+  stream: Ayat
+  locale: Locale
+  ayahId: number
 }
 
 export function Stream({ surah, stream, locale, ayahId }: Props) {
