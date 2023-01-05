@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  linter:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - name: Clone
@@ -15,9 +15,9 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: eslint
-      run: ruby -S rake linter:typescript
+      run: ruby -S rake lint:eslint
     - name: rubocop
-      run: ruby -S rake linter:ruby
+      run: ruby -S rake lint:rubocop
   build:
     runs-on: ubuntu-latest
     steps:
