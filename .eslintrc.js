@@ -14,6 +14,7 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": 0,
     "@typescript-eslint/promise-function-async": 0,
     "@typescript-eslint/no-misused-promises": ["error", {"checksConditionals": false}],
+    "@typescript-eslint/no-redeclare": 0,
     "no-return-assign": 0,
     "no-useless-return": 0,
     "quotes": 2

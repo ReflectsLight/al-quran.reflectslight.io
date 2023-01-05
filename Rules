@@ -57,6 +57,7 @@ end
 compile "/js/pages/TheSurahPage.tsx" do
   filter :webpack, depend_on: [
     "/js/components/*.{ts,tsx}",
+    "/js/lib/*.ts",
     "/js/{lib,components,hooks}/[!WebPackage]**/*.{ts,tsx,js}"
   ]
   write "/js/pages/surah.js"
