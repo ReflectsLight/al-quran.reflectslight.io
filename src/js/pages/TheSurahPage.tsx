@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
-import classNames from "classnames";
-import { get as getCookie } from "es-cookie";
-import { Timer } from "components/TheQuran/Timer";
-import { Stream } from "components/TheQuran/Stream";
-import { ThemeSelect } from "components/TheQuran/ThemeSelect";
-import { LanguageSelect } from "components/TheQuran/LanguageSelect";
-import { Locale, Surah } from "lib/Quran";
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+import classNames from 'classnames';
+import { get as getCookie } from 'es-cookie';
+import { Timer } from 'components/TheQuran/Timer';
+import { Stream } from 'components/TheQuran/Stream';
+import { ThemeSelect } from 'components/TheQuran/ThemeSelect';
+import { LanguageSelect } from 'components/TheQuran/LanguageSelect';
+import { Locale, Surah } from 'lib/Quran';
 
 interface Props {
   locale: Locale
@@ -18,17 +18,17 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
   const [stream, setStream] = useState([]);
-  const [theme, setTheme] = useState(getCookie("theme") || "moon");
+  const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [surah] = useState<Surah>(Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
-  const surahName = locale === "ar" ? surah.name : surah.translatedName;
+  const surahName = locale === 'ar' ? surah.name : surah.translatedName;
 
   useEffect(() => {
     document.title = [
-      "Al-Quran:",
+      'Al-Quran:',
       surah.transliteratedName,
       `(${surah.translatedName})`
-    ].join(" ");
+    ].join(' ');
     if (ayahId === 1) {
       setStream([surah.ayat[stream.length]]);
     } else {
@@ -37,7 +37,7 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
   }, []);
 
   return (
-    <div className={classNames("surah", "theme", theme, locale)}>
+    <div className={classNames('surah', 'theme', theme, locale)}>
       <div className="image-box">
         <a href="/" className="image"/>
       </div>
@@ -74,9 +74,9 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
 }
 
 (function() {
-  const rootBox: HTMLElement = document.querySelector(".root-box");
-  const locale = rootBox.getAttribute("data-locale") as Locale;
-  const surahId = parseInt(rootBox.getAttribute("data-surah-id"));
+  const rootBox: HTMLElement = document.querySelector('.root-box');
+  const locale = rootBox.getAttribute('data-locale') as Locale;
+  const surahId = parseInt(rootBox.getAttribute('data-surah-id'));
   const params = new URLSearchParams(location.search);
   const ayahId = parseInt(params.get('ayah') || '1');
 

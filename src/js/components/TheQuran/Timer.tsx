@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Surah, Ayah, Ayat, Locale } from 'lib/Quran';
-import { numberToDecimal } from "lib/i18n";
+import { numberToDecimal } from 'lib/i18n';
 
 interface Props {
   surah: Surah

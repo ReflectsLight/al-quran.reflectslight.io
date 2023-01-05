@@ -16,5 +16,6 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": ["error", {"checksConditionals": false}],
     "no-return-assign": 0,
     "no-useless-return": 0,
+    "quotes": 2
   },
 };

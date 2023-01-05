@@ -1,4 +1,4 @@
-import { ReporterFunction } from "./types";
+import { ReporterFunction } from './types';
 
 export default function(
   images: string[] | undefined,
@@ -7,7 +7,7 @@ export default function(
   return Promise.all(
     (images || []).map((src) => {
       return new Promise<HTMLElement>((resolve, reject) => {
-        const el = document.createElement("img");
+        const el = document.createElement('img');
         el.onload = () => resolve(el);
         el.onerror = reject;
         el.src = src;

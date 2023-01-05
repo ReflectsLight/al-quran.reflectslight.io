@@ -3,12 +3,12 @@ import {
   PackageSpec,
   Package,
   ReporterFunction,
-} from "./WebPackage/types";
-import FontLoader from "./WebPackage/FontLoader";
-import ImageLoader from "./WebPackage/ImageLoader";
-import CSSLoader from "./WebPackage/CSSLoader";
-import ScriptLoader from "./WebPackage/ScriptLoader";
-import OtherLoader from "./WebPackage/OtherLoader";
+} from './WebPackage/types';
+import FontLoader from './WebPackage/FontLoader';
+import ImageLoader from './WebPackage/ImageLoader';
+import CSSLoader from './WebPackage/CSSLoader';
+import ScriptLoader from './WebPackage/ScriptLoader';
+import OtherLoader from './WebPackage/OtherLoader';
 
 export default function (pkgspec: PackageSpec): WebPackage {
   const self: WebPackage = Object.create(null);

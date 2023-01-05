@@ -1,5 +1,5 @@
-import { Locale } from "lib/Quran";
-import { DelayBaseLine, DelayPerWord } from "lib/i18n";
+import { Locale } from 'lib/Quran';
+import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
 export type Ayat = Ayah[];
 
@@ -38,9 +38,9 @@ export class Surah {
       details,
       ayat.map(([id, text]) => {
         return {
-          id: { number: id, localeKey: String(id).split("") },
+          id: { number: id, localeKey: String(id).split('') },
           text,
-          readTimeMs: DelayBaseLine + (text.split(" ").length * DelayPerWord[locale]),
+          readTimeMs: DelayBaseLine + (text.split(' ').length * DelayPerWord[locale]),
         };
       }),
     );
@@ -54,7 +54,7 @@ export class Surah {
   get id(): IDObject {
     return {
       number: Number(this.#details.id),
-      localeKey: this.#details.id.split("")
+      localeKey: this.#details.id.split('')
     };
   }
 

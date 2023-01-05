@@ -1,4 +1,4 @@
-import { ReporterFunction } from "./types";
+import { ReporterFunction } from './types';
 
 export default function(
   fonts: Array<[string, string]> | undefined,

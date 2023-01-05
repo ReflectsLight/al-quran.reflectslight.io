@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, SelectOption } from "components/Select";
+import { Select, SelectOption } from 'components/Select';
 import { set as setCookie } from 'es-cookie';
 
 interface Props {

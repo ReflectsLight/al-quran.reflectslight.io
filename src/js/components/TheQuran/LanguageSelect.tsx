@@ -1,6 +1,6 @@
-import React from "react";
-import { Select, SelectOption } from "components/Select";
-import { Surah, Ayah } from "lib/Quran";
+import React from 'react';
+import { Select, SelectOption } from 'components/Select';
+import { Surah, Ayah } from 'lib/Quran';
 
 interface Props {
   locale: string

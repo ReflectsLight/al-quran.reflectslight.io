@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import classnames from "classnames";
+import React, { useState, useEffect } from 'react';
+import classnames from 'classnames';
 
 export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {target: HTMLLIElement};
 
@@ -53,11 +53,11 @@ export function Select(props: Props) {
   };
 
   useEffect(() => {
-    document.body.addEventListener("click", () => setOpen(false));
+    document.body.addEventListener('click', () => setOpen(false));
   }, []);
 
   return (
-    <div className={classnames("react-select", className)}>
+    <div className={classnames('react-select', className)}>
       <span className="active-option" onClick={openSelect}>
         {activeOption}
       </span>
