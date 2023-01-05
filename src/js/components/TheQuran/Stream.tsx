@@ -1,7 +1,7 @@
 import { Surah, Ayat, Ayah, Locale } from 'lib/Quran';
 import React, { useEffect } from 'react';
 import { numbers, strings } from 'lib/i18n';
-import { Slice } from 'lib/slice';
+import { Slice } from 'lib/Quran/slice';
 import classNames from 'classnames';
 
 interface Props {
