@@ -1,19 +1,20 @@
 import { Surah, Ayat, Ayah, Locale } from 'lib/Quran';
 import React, { useEffect } from 'react';
 import { numbers, strings } from 'lib/i18n';
+import { Slice } from 'lib/slice';
 import classNames from 'classnames';
 
 interface Props {
   surah: Surah
   stream: Ayat
   locale: Locale
-  ayahId: number
+  slice: Slice
+  endOfStream: boolean
 }
 
-export function Stream({ surah, stream, locale, ayahId }: Props) {
+export function Stream({ surah, stream, locale, slice, endOfStream }: Props) {
   const n = numbers(locale);
   const s = strings(locale);
-  const endOfStream = stream.length === surah.ayat.length;
   const className = classNames('stream', { 'scroll-y': endOfStream });
   const ayat = stream.map((ayah: Ayah) => {
     return (
@@ -32,7 +33,7 @@ export function Stream({ surah, stream, locale, ayahId }: Props) {
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector('ul.stream');
-    if (ayahId === stream.length) {
+    if (slice.coversOneAyah) {
       const li: HTMLLIElement = ul.querySelector('li:last-child');
       li.scrollIntoView();
     } else {
