@@ -86,15 +86,22 @@ namespace :env do
   end
 end
 
-namespace :linter do
-  desc "Run the Ruby linter"
-  task :ruby do
+namespace :lint do
+  desc "Run rubocop (Ruby)"
+  task :rubocop do
     sh "bundle exec rubocop lib/ src/"
   end
 
-  desc "Run the TypeScript linter"
-  task :typescript do
+  desc "Run eslint (TypeScript)"
+  task :eslint do
     sh "npm run eslint"
+  end
+
+  namespace :eslint do
+    desc "Run eslint with the --fix option (TypeScript)"
+    task :fix do
+      sh "npm run eslint-autofix"
+    end
   end
 end
 task lint: ["linter:ruby", "linter:typescript"]
