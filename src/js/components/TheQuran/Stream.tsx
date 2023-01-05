@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 import { numbers, strings } from "lib/i18n";
 import classNames from "classnames";
 
-interface StreamProps {
+interface Props {
   surah: Surah;
   stream: Ayat;
   locale: Locale;
   ayahId: number;
 }
 
-export function Stream({ surah, stream, locale, ayahId }: StreamProps) {
+export function Stream({ surah, stream, locale, ayahId }: Props) {
   const n = numbers(locale);
   const s = strings(locale);
   const endOfStream = stream.length === surah.ayat.length;

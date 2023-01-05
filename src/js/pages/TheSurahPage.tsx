@@ -8,13 +8,13 @@ import { ThemeSelect } from "components/TheQuran/ThemeSelect";
 import { LanguageSelect } from "components/TheQuran/LanguageSelect";
 import { Locale, Surah } from "lib/Quran";
 
-interface PageProps {
+interface Props {
   locale: Locale;
   surahId: number;
   ayahId: number;
 }
 
-function TheSurahPage({ locale, surahId, ayahId }: PageProps) {
+function TheSurahPage({ locale, surahId, ayahId }: Props) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
   const [stream, setStream] = useState([]);
