@@ -7,14 +7,15 @@ import { Stream } from 'components/TheQuran/Stream';
 import { ThemeSelect } from 'components/TheQuran/ThemeSelect';
 import { LanguageSelect } from 'components/TheQuran/LanguageSelect';
 import { Locale, Surah } from 'lib/Quran';
+import { Slice } from 'lib/slice';
 
 interface Props {
   locale: Locale
   surahId: number
-  ayahId: number
+  slice: Slice
 }
 
-function TheSurahPage({ locale, surahId, ayahId }: Props) {
+function TheSurahPage({ locale, surahId, slice }: Props) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
   const [stream, setStream] = useState([]);
@@ -22,6 +23,14 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
   const [surah] = useState<Surah>(Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
   const surahName = locale === 'ar' ? surah.name : surah.translatedName;
+  const endOfStream = (function() {
+    if (slice.coversOneSurah) {
+      return stream.length === surah.ayat.length;
+    } else {
+      return stream.length === slice.length;
+    }
+  })();
+
 
   useEffect(() => {
     document.title = [
@@ -29,10 +38,10 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
       surah.transliteratedName,
       `(${surah.translatedName})`
     ].join(' ');
-    if (ayahId === 1) {
-      setStream([surah.ayat[stream.length]]);
+    if (slice.coversOneAyah) {
+      setStream([...surah.ayat.slice(0, slice.end)]);
     } else {
-      setStream(surah.ayat.slice(0, ayahId));
+      setStream([surah.ayat[slice.begin-1]]);
     }
   }, []);
 
@@ -55,15 +64,17 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
       )}
       {readyToRender &&
         <Stream
-          ayahId={ayahId}
+          slice={slice}
           surah={surah}
           stream={stream}
-          locale={locale}/>
+          locale={locale}
+          endOfStream={endOfStream}
+        />
       }
-      {readyToRender && stream.length < surah.numberOfAyah && (
+      {readyToRender && !endOfStream && (
         <Timer
           surah={surah}
-          ayah={surah.ayat[stream.length - 1]}
+          ayah={stream[stream.length - 1]}
           setStream={setStream}
           stream={stream}
           locale={locale}
@@ -73,14 +84,21 @@ function TheSurahPage({ locale, surahId, ayahId }: Props) {
   );
 }
 
+
 (function() {
   const rootBox: HTMLElement = document.querySelector('.root-box');
   const locale = rootBox.getAttribute('data-locale') as Locale;
   const surahId = parseInt(rootBox.getAttribute('data-surah-id'));
   const params = new URLSearchParams(location.search);
-  const ayahId = parseInt(params.get('ayah') || '1');
+  const slice = Slice.fromParam(params.get('ayah'));
 
   ReactDOM
     .createRoot(rootBox)
-    .render(<TheSurahPage locale={locale} surahId={surahId} ayahId={ayahId}/>);
+    .render(
+      <TheSurahPage
+        locale={locale}
+        surahId={surahId}
+        slice={slice}
+      />
+    );
 })();
