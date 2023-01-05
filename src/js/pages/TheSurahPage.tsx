@@ -7,7 +7,7 @@ import { Stream } from 'components/TheQuran/Stream';
 import { ThemeSelect } from 'components/TheQuran/ThemeSelect';
 import { LanguageSelect } from 'components/TheQuran/LanguageSelect';
 import { Locale, Surah } from 'lib/Quran';
-import { Slice } from 'lib/slice';
+import { Slice } from 'lib/Quran/slice';
 
 interface Props {
   locale: Locale
