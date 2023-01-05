@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "eslint": "node ./node_modules/eslint/bin/eslint.js src/",
-    "eslint-autofix": "node ./node_modules/eslint/bin/eslint.js --fix src/"
+    "eslint": "node ./node_modules/eslint/bin/eslint.js src/js/",
+    "eslint-autofix": "node ./node_modules/eslint/bin/eslint.js --fix src/js/"
   },
   "devDependencies": {
     "@types/css-font-loading-module": "^0.0.7",
