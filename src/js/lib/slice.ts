@@ -24,8 +24,9 @@ Slice.fromParam = function(param: string | null): Slice {
   if (!param) {
     return Slice(1, 286);
   }
-  const [, begin, end] = param.match(digitsRange);
-  if (begin && end) {
+  const match = param.match(digitsRange);
+  if (match) {
+    const [, begin, end] = match;
     return Slice(parseInt(begin), parseInt(end));
   } else if (digits.test(param)) {
     return Slice(parseInt(param), parseInt(param));
