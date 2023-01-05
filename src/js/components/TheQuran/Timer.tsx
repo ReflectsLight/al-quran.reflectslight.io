@@ -9,7 +9,7 @@ interface Props {
   setStream: (stream: Ayat) => void
 }
 
-export function Timer ({ surah, stream, setStream, locale, slice }: Props) {
+export function Timer ({ surah, stream, setStream, locale }: Props) {
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
   useEffect(() => setMs(ayah.readTimeMs), [ayah.id]);
