@@ -5,6 +5,7 @@ export interface Slice {
   coversOneAyah: boolean
   coversOneSurah: boolean
   coversSubsetOfSurah: boolean
+  toParam: () => string | null
 }
 
 export function Slice(begin: number, end: number): Slice {
@@ -16,6 +17,16 @@ export function Slice(begin: number, end: number): Slice {
   self.coversOneSurah = begin === 1 && end === 286;
   self.coversSubsetOfSurah = begin >= 1 && end < 286;
   self.length = end - (begin - 1);
+
+  self.toParam = () => {
+    if (self.coversOneAyah) {
+      return `${self.begin}`;
+    } else if(self.coversSubsetOfSurah) {
+      return `${self.begin}..${self.end}`;
+    } else {
+      return null;
+    }
+  };
 
   return self;
 }

@@ -8,7 +8,7 @@ import { ThemeSelect } from 'components/TheQuran/ThemeSelect';
 import { LanguageSelect } from 'components/TheQuran/LanguageSelect';
 import { PlayShape, PauseShape } from 'components/TheQuran/Shape';
 import { Locale, Surah } from 'lib/Quran';
-import { Slice } from 'lib/Quran/slice';
+import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
   locale: Locale
@@ -60,6 +60,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
             surah={surah}
             stream={stream}
             isPaused={isPaused}
+            slice={slice}
           />
         </div>
       )}
