@@ -1,20 +1,25 @@
 import React from 'react';
 import { Select, SelectOption } from 'components/Select';
-import { Surah, Ayah } from 'lib/Quran';
+import { Surah, Ayat } from 'lib/Quran';
+import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
   locale: string
   surah: Surah
   stream: Ayah[]
   isPaused: boolean
+  slice: Slice
 }
 
-export function LanguageSelect({ locale, surah, stream, isPaused }: Props) {
+export function LanguageSelect({ locale, surah, stream, isPaused, slice }: Props) {
   const changeLanguage = (o: SelectOption) => {
     const locale = o.value;
-    location.replace(
-      `/${locale}/${surah.slug}/?ayah=${stream.length}&paused=${isPaused ? 't' : 'f'}`
-    );
+    const params = [
+      ['ayah', slice.toParam() || stream.length],
+      ['paused', isPaused ? 't' : null]
+    ];
+    const query = params.filter(([, v]) => v).flatMap(([k,v]) => `${k}=${v}`).join('&');
+    location.replace(`/${locale}/${surah.slug}/?${query}`);
   };
 
   return (
