@@ -24,13 +24,12 @@ function TheSurahPage({ locale, surahId, slice }: Props) {
   const readyToRender = stream.length > 0;
   const surahName = locale === 'ar' ? surah.name : surah.translatedName;
   const endOfStream = (function() {
-    if (slice.coversOneSurah) {
+    if (slice.coversOneAyah || slice.coversOneSurah) {
       return stream.length === surah.ayat.length;
-    } else {
+    } else if (slice.coversSubsetOfSurah) {
       return stream.length === slice.length;
     }
   })();
-
 
   useEffect(() => {
     document.title = [
