@@ -4,6 +4,7 @@ export interface Slice {
   length: number
   coversOneAyah: boolean
   coversOneSurah: boolean
+  coversSubsetOfSurah: boolean
 }
 
 export function Slice(begin: number, end: number): Slice {
@@ -13,6 +14,7 @@ export function Slice(begin: number, end: number): Slice {
   self.end = end;
   self.coversOneAyah = begin === end;
   self.coversOneSurah = begin === 1 && end === 286;
+  self.coversSubsetOfSurah = begin >= 1 && end < 286;
   self.length = end - (begin - 1);
 
   return self;
