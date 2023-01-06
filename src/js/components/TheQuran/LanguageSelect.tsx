@@ -6,7 +6,7 @@ import { Slice } from 'lib/Quran/Slice';
 interface Props {
   locale: string
   surah: Surah
-  stream: Ayah[]
+  stream: Ayat
   isPaused: boolean
   slice: Slice
 }
