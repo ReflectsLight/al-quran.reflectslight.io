@@ -13,10 +13,12 @@ SURAH_ID_TO_SLUG = Ryo.from(
 
 ##
 # Root path (/)
+# Locale path (/en/, /ar/)
 # Redirects to a random surah no
-compile "/html/redirect-to-random-surah.html.erb" do
+compile "/html/RandomRedirect.html.erb" do
   filter(:erb)
   write("/index.html")
+  LOCALES.each { write "/#{_1}/index.html" }
 end
 
 ##
@@ -67,10 +69,10 @@ compile "/js/pages/TheSurahPage/package.ts" do
 end
 
 ##
-# /js/pages/redirect-to-random-surah.js
-compile "/js/pages/redirect-to-random-surah.ts" do
+# /js/pages/RandomRedirect.js
+compile "/js/pages/RandomRedirect.ts" do
   filter :webpack
-  write "/js/pages/redirect-to-random-surah.js"
+  write "/js/pages/RandomRedirect.js"
 end
 
 ##
