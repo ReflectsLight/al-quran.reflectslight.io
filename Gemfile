@@ -14,7 +14,7 @@ gem "puma", "~> 6.0"
 ##
 # nanoc filters
 gem "nanoc-gunzip.rb", github: "0x1eef/nanoc-gunzip.rb", tag: "v0.1.2"
-gem "nanoc-webpack.rb", github: "0x1eef/nanoc-webpack.rb", tag: "v0.1.3"
+gem "nanoc-webpack.rb", github: "0x1eef/nanoc-webpack.rb", tag: "v0.1.5"
 gem "rainpress", "~> 1.0"
 gem "sass", "~> 3.7"
 
