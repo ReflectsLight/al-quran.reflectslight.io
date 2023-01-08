@@ -47,7 +47,7 @@ function TheSurahPage({ locale, surahId, slice }: Props) {
   return (
     <div className={classNames('surah', 'theme', theme, locale)}>
       <div className="image-box">
-        <a href="/" className="image"/>
+        <a href={'/' + locale} className="image"/>
       </div>
       {readyToRender && (
         <div className="surah-row theme-language">
