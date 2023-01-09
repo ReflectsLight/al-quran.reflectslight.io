@@ -9,7 +9,7 @@ export default function(
     (scripts || []).map((src) => {
       return fetch(src, fetchOptions())
             .then((res) => res.text())
-            .then((text) => Object.assign(document.createElement('script'), {type: 'application/javascript', text}))
+            .then((text) => Object.assign(document.createElement('script'), { type: 'application/javascript', text }))
             .then((el) => reporter(el));
     })
   );

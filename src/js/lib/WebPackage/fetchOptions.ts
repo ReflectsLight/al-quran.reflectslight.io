@@ -4,5 +4,5 @@ const getNavigationEntries = (): PerformanceNavigationTiming[] =>  {
 
 export function fetchOptions(): RequestInit {
   const pageHasRefreshed = getNavigationEntries().some((e) => e.type === 'reload');
-  return pageHasRefreshed ? {cache: 'reload'} : {};
+  return pageHasRefreshed ? { cache: 'reload' } : {};
 }
