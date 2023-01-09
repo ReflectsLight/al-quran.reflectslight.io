@@ -12,7 +12,7 @@ import OtherLoader from './WebPackage/OtherLoader';
 
 export default function (pkgspec: PackageSpec): WebPackage {
   const self: WebPackage = Object.create(null);
-  const pkg: Package = {fonts: [], images: [], stylesheets: [], scripts: [], others: []};
+  const pkg: Package = { fonts: [], images: [], stylesheets: [], scripts: [], others: [] };
   const { fonts, images, stylesheets, scripts, others, onprogress } = pkgspec;
   const total = [...fonts, ...images, ...stylesheets, ...scripts].length;
 

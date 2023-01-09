@@ -17,6 +17,7 @@ module.exports = {
     "@typescript-eslint/no-redeclare": 0,
     "no-return-assign": 0,
     "no-useless-return": 0,
-    "quotes": 2
+    "quotes": 2,
+    "object-curly-spacing": 2
   },
 };
