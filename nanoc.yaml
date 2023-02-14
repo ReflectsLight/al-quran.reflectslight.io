@@ -25,3 +25,4 @@ deploy:
     group: www
     src: build/al-quran/.
     dest: /var/www/htdocs/al-quran.reflectslight.local/
+    logs_dir: /var/www/logs/al-quran.reflectslight.local/

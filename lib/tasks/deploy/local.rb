@@ -12,6 +12,9 @@ class Tasks::Deploy::Local
   def call
     src, dest = settings.src, settings.dest
     user, group = settings.user, settings.group
+    logs_dir = settings.logs_dir
+    doas "root", "/bin/mkdir", "-p", logs_dir
+    doas "root", "/bin/mkdir", "-p", dest
     doas "root", "/bin/rm", "-rf", File.join(dest, "*")
     doas "root", "/bin/cp", "-r", src, dest
     doas "root", "/usr/sbin/chown", "-R", [user, group].join(":"), dest
