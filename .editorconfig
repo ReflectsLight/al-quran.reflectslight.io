@@ -1,0 +1,17 @@
+##
+# Ruby
+[*.rb]
+indent_style = space
+indent_size = 2
+
+##
+# TypeScript, JavaScript
+[{*.js,*.ts,*.tsx}]
+indent_style = space
+indent_size = 2
+
+##
+# SCSS
+[*.scss]
+indent_style = space
+indent_size = 2
