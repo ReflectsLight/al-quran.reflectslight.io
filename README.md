@@ -7,7 +7,7 @@ Built with a static website generator.
 The website can be seen live at
 [https://al-quran.reflectslight.io](https://al-quran.reflectslight.io).
 
-## Website stack
+## Stack
 
 The main components of the website's stack are:
 
