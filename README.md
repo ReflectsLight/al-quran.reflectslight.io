@@ -1,9 +1,10 @@
 ## About
 
-This repository contains the source code for a static website that can be
-used to read The Quran.
+A static website for reading The Quran.
 <br>
-The website can be seen live at 
+Built with a static website compiler / static website generator.
+<br>
+The website can be seen live at
 [https://al-quran.reflectslight.io](https://al-quran.reflectslight.io).
 
 ## Build the website
@@ -48,4 +49,7 @@ $ ruby -S rake server
 
 ## License
 
-This software is released into the Public Domain.
+[BSD Zero Clause](https://choosealicense.com/licenses/0bsd/).
+<br>
+See [LICENSE](./LICENSE).
+
