@@ -26,7 +26,8 @@ class Tasks::Deploy::Remote
       "rsync",
       "--delete",
       "-rvah",
-      "--chmod=Du=rwx,Fu=rw",
+      "--chmod=Fu=rw,Fg=r,Du=rwx,Dg=rx",
+      "--rsync-path='/home/0x1eef/rsync.sh'",
       @build_dir, "#{@user}@#{@hostname}:#{@path}"
     )
     if $?.success?
