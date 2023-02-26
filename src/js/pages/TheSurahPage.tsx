@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
-import { Timer } from 'components/TheQuran/Timer';
-import { Stream } from 'components/TheQuran/Stream';
-import { ThemeSelect } from 'components/TheQuran/ThemeSelect';
-import { LanguageSelect } from 'components/TheQuran/LanguageSelect';
-import { PlayShape, PauseShape } from 'components/TheQuran/Shape';
+import { Timer } from 'components/TheSurahPage/Timer';
+import { Stream } from 'components/TheSurahPage/Stream';
+import { ThemeSelect } from 'components/TheSurahPage/ThemeSelect';
+import { LanguageSelect } from 'components/TheSurahPage/LanguageSelect';
+import { PlayShape, PauseShape } from 'components/TheSurahPage/Shape';
 import { Locale, Surah } from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
 
@@ -43,14 +43,14 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
     if (slice.coversOneAyah) {
       setStream([...surah.ayat.slice(0, slice.end)]);
     } else {
-      setStream([surah.ayat[slice.begin-1]]);
+      setStream([surah.ayat[slice.begin - 1]]);
     }
   }, []);
 
   return (
     <div className={classNames('surah', 'theme', theme, locale)}>
       <div className="image-box">
-        <a href={'/' + locale} className="image"/>
+        <a href={'/' + locale} className="image" />
       </div>
       {readyToRender && (
         <div className="surah-row theme-language">
@@ -81,18 +81,18 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
         />
       }
       <div className="surah-row">
-        { readyToRender && isPaused && !endOfStream &&
-          <PlayShape onClick={() => setIsPaused(false)}/> }
-        { readyToRender && !isPaused && !endOfStream &&
-          <PauseShape onClick={() => setIsPaused(true)}/> }
-        { readyToRender && !endOfStream &&
+        {readyToRender && isPaused && !endOfStream &&
+          <PlayShape onClick={() => setIsPaused(false)} />}
+        {readyToRender && !isPaused && !endOfStream &&
+          <PauseShape onClick={() => setIsPaused(true)} />}
+        {readyToRender && !endOfStream &&
           <Timer
             surah={surah}
             setStream={setStream}
             stream={stream}
             locale={locale}
             isPaused={isPaused}
-          /> }
+          />}
       </div>
     </div>
   );
