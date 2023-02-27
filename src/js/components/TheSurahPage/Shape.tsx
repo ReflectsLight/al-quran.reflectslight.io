@@ -6,7 +6,7 @@ interface Props {
 
 export function PlayShape({ onClick }: Props) {
   return (
-    <div className="shape-box" onClick={onClick}>
+    <div className="shape" onClick={onClick}>
       <div className="play-shape" />
     </div>
   );
@@ -14,7 +14,7 @@ export function PlayShape({ onClick }: Props) {
 
 export function PauseShape({ onClick }: Props) {
   return (
-    <div className="shape-box" onClick={onClick}>
+    <div className="shape" onClick={onClick}>
       <div className="pause-shape" />
       <div className="pause-shape" />
     </div>

@@ -1,4 +1,4 @@
-.shape-box {
+.shape {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@
 
 }
 
-.shape-box .play-shape {
+.shape .play-shape {
   position: relative;
   left: 1px;
   width: 12px;
@@ -20,7 +20,7 @@
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-.shape-box .pause-shape {
+.shape .pause-shape {
   width: 3px;
   height: 12px;
   background: #FFF;

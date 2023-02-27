@@ -55,17 +55,23 @@ Ryo.each(SURAH_ID_TO_SLUG) do |surah_id, slug|
 end
 
 ##
-# /js/pages/surah.js
+# TheSurahPage
 compile "/js/pages/TheSurahPage.tsx" do
   filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
-  write "/js/pages/surah.js"
+  write "/js/pages/TheSurahPage.js"
   filter :gzip_text
-  write "/js/pages/surah.js.gz"
+  write "/js/pages/TheSurahPage.js.gz"
 end
 
 compile "/js/pages/TheSurahPage/package.ts" do
   filter :webpack, depend_on: "/js/lib/WebPackage"
   write "/js/pages/TheSurahPage/package.js"
+end
+
+compile "/css/pages/TheSurahPage.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
+  write("/css/pages/TheSurahPage.css")
 end
 
 ##
@@ -84,11 +90,6 @@ end
 
 ##
 # CSS
-compile "/css/surah.scss" do
-  filter :sass, syntax: :scss, style: :compact
-  filter :rainpress
-  write("/css/surah.css")
-end
 
 ##
 # Fonts
