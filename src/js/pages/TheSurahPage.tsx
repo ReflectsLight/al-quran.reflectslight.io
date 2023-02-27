@@ -53,7 +53,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
         <a href={'/' + locale} className="image" />
       </div>
       {readyToRender && (
-        <div className="row theme-and-language">
+        <div className="row dropdown-row">
           <ThemeSelect theme={theme} setTheme={setTheme} />
           <LanguageSelect
             locale={locale}
