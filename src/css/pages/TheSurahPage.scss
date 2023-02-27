@@ -1,6 +1,6 @@
-@import "fonts";
-@import "components/Select";
-@import "components/TheSurahPage/Shape";
+@import "../fonts";
+@import "../components/Select";
+@import "../components/TheSurahPage/Shape";
 
 $black: #454545;
 
@@ -14,10 +14,10 @@ body {
   height: 85%;
 }
 
-.root-box {
+.root {
   height: 100%;
 
-  .surah {
+  .content {
     margin: 0 auto;
     width: 470px;
     height: 100%;
@@ -27,7 +27,7 @@ body {
     }
   }
 
-  .surah .image-box {
+  .content .header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,14 +39,14 @@ body {
     }
   }
 
-  .surah .surah-row {
+  .content .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     direction: ltr;
   }
 
-  .surah .surah-row.theme-language {
+  .content .row.theme-and-language {
     .react-select.language {
       text-align: right;
 
@@ -55,13 +55,13 @@ body {
     }
   }
 
-  .surah .surah-row.surah-details {
+  .content .row.details {
     direction: rtl;
     margin-top: 10px;
     font-weight: 500;
   }
 
-  .surah ul.stream {
+  .content ul.stream {
     clear: both;
     list-style-type: none;
     height: 400px;
@@ -79,12 +79,12 @@ body {
     }
   }
 
-  .surah ul.stream.scroll-y {
+  .content ul.stream.scroll-y {
     overflow-y: auto;
     li.ayah p { width: 98%; }
   }
 
-  .surah ul.stream li.ayah {
+  .content ul.stream li.ayah {
     span.surah-id.ayah-id {
       display: block;
       font-weight: 500;
@@ -94,7 +94,7 @@ body {
     }
   }
 
-  .surah ul.stream li.ayah.fade {
+  .content ul.stream li.ayah.fade {
     @keyframes FadeIn {
       0% { opacity: 0;}
       25% { opacity: 0.25; }
@@ -105,7 +105,7 @@ body {
     animation: FadeIn 1s;
   }
 
-  .surah .timer {
+  .content .timer {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -121,11 +121,11 @@ body {
     top: 4px;
   }
 
-  .surah.ar .timer {
+  .content.ar .timer {
     position: relative;
     top: 2px;
   }
 }
 
-@import "themes/moon";
-@import "themes/leaf";
+@import "../themes/moon";
+@import "../themes/leaf";

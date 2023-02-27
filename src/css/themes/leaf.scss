@@ -1,18 +1,18 @@
-.root-box .surah.theme.leaf {
+.root .content.theme.leaf {
   $green: #606850;
   $white: #FFF;
 
-  .image-box .image {
+  .header .image {
     background-image: url("/images/leaf.svg");
     background-size: cover;
   }
 
-  .surah-row.theme-language .react-select {
+  .row.theme-and-language .react-select {
     background-color: transparent;
     color: $green;
   }
 
-  .surah-row.surah-details {
+  .row.details {
     color: $green;
   }
 
@@ -29,7 +29,7 @@
   }
 }
 
-.root-box .surah.theme.leaf.ar {
+.root .content.theme.leaf.ar {
   direction: rtl;
   font-family: "Vazirmatn Regular";
 }

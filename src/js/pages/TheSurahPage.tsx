@@ -48,12 +48,12 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   }, []);
 
   return (
-    <div className={classNames('surah', 'theme', theme, locale)}>
-      <div className="image-box">
+    <div className={classNames('content', 'theme', theme, locale)}>
+      <div className="header">
         <a href={'/' + locale} className="image" />
       </div>
       {readyToRender && (
-        <div className="surah-row theme-language">
+        <div className="row theme-and-language">
           <ThemeSelect theme={theme} setTheme={setTheme} />
           <LanguageSelect
             locale={locale}
@@ -65,7 +65,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
         </div>
       )}
       {readyToRender && (
-        <div className="surah-row surah-details">
+        <div className="row details">
           <span lang={locale}>{surahName}</span>
           <span>{surah.transliteratedName}</span>
         </div>
@@ -80,7 +80,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
           isPaused={isPaused}
         />
       }
-      <div className="surah-row">
+      <div className="row">
         {readyToRender && isPaused && !endOfStream &&
           <PlayShape onClick={() => setIsPaused(false)} />}
         {readyToRender && !isPaused && !endOfStream &&
@@ -101,15 +101,15 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
 
 (function() {
   const toBoolean = (str: string | null): boolean => ['1', 't', 'true', 'yes'].includes(str);
-  const rootBox: HTMLElement = document.querySelector('.root-box');
-  const locale = rootBox.getAttribute('data-locale') as Locale;
-  const surahId = parseInt(rootBox.getAttribute('data-surah-id'));
+  const root: HTMLElement = document.querySelector('.root');
+  const locale = root.getAttribute('data-locale') as Locale;
+  const surahId = parseInt(root.getAttribute('data-surah-id'));
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));
   const paused = toBoolean(params.get('paused'));
 
   ReactDOM
-    .createRoot(rootBox)
+    .createRoot(root)
     .render(
       <TheSurahPage
         locale={locale}
