@@ -1,0 +1,46 @@
+$black: #454545;
+
+html {
+  height: 100%;
+}
+
+html body {
+  font-family: "Kanit Regular";
+  color: $black;
+  height: 85%;
+}
+
+body .root {
+  height: 100%;
+}
+
+body .root .content {
+  margin: 0 auto;
+  width: 470px;
+  height: 100%;
+
+  @media screen and (max-width: 450px) {
+    width: 350px;
+  }
+}
+
+body .root .content .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0 25px 0;
+
+  .image {
+    height: 78px;
+    width: 78px;
+  }
+}
+
+body .root .content .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  direction: ltr;
+}
+
+@import "fonts";

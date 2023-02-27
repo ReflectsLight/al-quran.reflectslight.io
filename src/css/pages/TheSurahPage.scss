@@ -1,90 +1,40 @@
-@import "../fonts";
+@import "../layout";
 @import "../components/Select";
 @import "../components/TheSurahPage/Shape";
 
-$black: #454545;
+.content .row.theme-and-language {
+  .react-select.language {
+    text-align: right;
 
-html {
-  height: 100%;
+    li:first-child { font-family: "Vazirmatn Regular"; }
+    li:last-child { font-family: "Kanit Regular"; }
+  }
 }
 
-body {
-  font-family: "Kanit Regular";
-  color: $black;
-  height: 85%;
+.content .row.details {
+  direction: rtl;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-.root {
-  height: 100%;
+.content ul.stream {
+  clear: both;
+  list-style-type: none;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
 
-  .content {
-    margin: 0 auto;
-    width: 470px;
-    height: 100%;
-
-    @media screen and (max-width: 450px) {
-      width: 350px;
-    }
+  /* Height of 625px, or less */
+  @media screen and (max-height: 625px) {
+    height: 350px;
   }
 
-  .content .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25px 0 25px 0;
-
-    .image {
-      height: 78px;
-      width: 78px;
-    }
+  /* Height of 595px, or less */
+  @media screen and (max-height: 595px) {
+    height: 330px;
   }
 
-  .content .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    direction: ltr;
-  }
-
-  .content .row.theme-and-language {
-    .react-select.language {
-      text-align: right;
-
-      li:first-child { font-family: "Vazirmatn Regular"; }
-      li:last-child { font-family: "Kanit Regular"; }
-    }
-  }
-
-  .content .row.details {
-    direction: rtl;
-    margin-top: 10px;
-    font-weight: 500;
-  }
-
-  .content ul.stream {
-    clear: both;
-    list-style-type: none;
-    height: 400px;
-    padding: 0;
-    overflow: hidden;
-
-    /* Height of 625px, or less */
-    @media screen and (max-height: 625px) {
-      height: 350px;
-    }
-
-    /* Height of 595px, or less */
-    @media screen and (max-height: 595px) {
-      height: 330px;
-    }
-  }
-
-  .content ul.stream.scroll-y {
-    overflow-y: auto;
-    li.ayah p { width: 98%; }
-  }
-
-  .content ul.stream li.ayah {
+  li.ayah {
     span.surah-id.ayah-id {
       display: block;
       font-weight: 500;
@@ -94,7 +44,7 @@ body {
     }
   }
 
-  .content ul.stream li.ayah.fade {
+  li.ayah.fade {
     @keyframes FadeIn {
       0% { opacity: 0;}
       25% { opacity: 0.25; }
@@ -104,27 +54,32 @@ body {
     }
     animation: FadeIn 1s;
   }
+}
 
-  .content .timer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 65%;
-    font-family: "Kanit Regular";
-    text-align: center;
-    width: 32px;
-    height: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 2px;
-    position: relative;
-    top: 4px;
-  }
+.content ul.stream.scroll-y {
+  overflow-y: auto;
+  li.ayah p { width: 98%; }
+}
 
-  .content.ar .timer {
-    position: relative;
-    top: 2px;
-  }
+.content .timer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 65%;
+  font-family: "Kanit Regular";
+  text-align: center;
+  width: 32px;
+  height: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 2px;
+  position: relative;
+  top: 4px;
+}
+
+.content.ar .timer {
+  position: relative;
+  top: 2px;
 }
 
 @import "../themes/moon";
