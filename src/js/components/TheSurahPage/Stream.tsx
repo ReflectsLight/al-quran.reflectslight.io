@@ -19,13 +19,13 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused }: 
   const className = classNames('stream', { 'scroll-y': endOfStream || isPaused });
   const ayat = stream.map((ayah: Quran.Ayah) => {
     return (
-      <li key={ayah.id.number} className="ayah fade">
+      <li key={ayah.id} className="ayah fade">
         <span className="surah-id ayah-id">
           {s('surah')}{' '}
-          {n(surah.id.localeKey)}
+          {n(surah.id)}
           {s('comma')}{' '}
           {s('ayah')}{' '}
-          {n(ayah.id.localeKey)}
+          {n(ayah.id)}
         </span>
         <p>{ayah.text}</p>
       </li>

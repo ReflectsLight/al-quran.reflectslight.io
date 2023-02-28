@@ -18,7 +18,7 @@ export function Timer ({ surah, stream, setStream, locale, isPaused }: Props) {
     if (isPaused) {
       return;
     } else if (ms <= 0) {
-      setStream([...stream, surah.ayat[ayah.id.number]]);
+      setStream([...stream, surah.ayat[ayah.id]]);
     } else {
       setTimeout(() => setMs(ms - 100), 100);
     }
