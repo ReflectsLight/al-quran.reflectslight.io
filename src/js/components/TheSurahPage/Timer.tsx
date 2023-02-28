@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Surah, Ayat, Locale } from 'lib/Quran';
+import * as Quran from 'lib/Quran';
 import { numberToDecimal } from 'lib/i18n';
 
 interface Props {
-  surah: Surah
-  locale: Locale
-  stream: Ayat
-  setStream: (stream: Ayat) => void
+  surah: Quran.Surah
+  locale: Quran.Locale
+  stream: Quran.Ayat
+  setStream: (stream: Quran.Ayat) => void
   isPaused: boolean
 }
 

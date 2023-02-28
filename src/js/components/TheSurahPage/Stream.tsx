@@ -1,13 +1,13 @@
-import { Surah, Ayat, Ayah, Locale } from 'lib/Quran';
+import * as Quran from 'lib/Quran';
 import React, { useEffect } from 'react';
 import { numbers, strings } from 'lib/i18n';
 import { Slice } from 'lib/Quran/Slice';
 import classNames from 'classnames';
 
 interface Props {
-  surah: Surah
-  stream: Ayat
-  locale: Locale
+  surah: Quran.Surah
+  stream: Quran.Ayat
+  locale: Quran.Locale
   slice: Slice
   endOfStream: boolean
   isPaused: boolean
@@ -17,7 +17,7 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused }: 
   const n = numbers(locale);
   const s = strings(locale);
   const className = classNames('stream', { 'scroll-y': endOfStream || isPaused });
-  const ayat = stream.map((ayah: Ayah) => {
+  const ayat = stream.map((ayah: Quran.Ayah) => {
     return (
       <li key={ayah.id.number} className="ayah fade">
         <span className="surah-id ayah-id">
