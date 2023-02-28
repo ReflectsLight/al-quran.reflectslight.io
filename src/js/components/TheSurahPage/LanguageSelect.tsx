@@ -5,25 +5,12 @@ import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
   locale: string
-  surah: Quran.Surah
-  stream: Quran.Ayat
-  isPaused: boolean
-  slice: Slice
+  onChange: (o: SelectOption) => void
 }
 
-export function LanguageSelect({ locale, surah, stream, isPaused, slice }: Props) {
-  const changeLanguage = (o: SelectOption) => {
-    const locale = o.value;
-    const params = [
-      ['ayah', slice.toParam() || stream.length],
-      ['paused', isPaused ? 't' : null]
-    ];
-    const query = params.filter(([, v]) => v).flatMap(([k,v]) => `${k}=${v}`).join('&');
-    location.replace(`/${locale}/${surah.slug}/?${query}`);
-  };
-
+export function LanguageSelect({ locale, onChange }: Props) {
   return (
-    <Select value={locale} className="language" onChange={changeLanguage}>
+    <Select value={locale} className="language" onChange={onChange}>
       <option value="ar">عربي</option>
       <option value="en">English</option>
     </Select>

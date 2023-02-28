@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
 import { Timer } from 'components/TheSurahPage/Timer';
 import { Stream } from 'components/TheSurahPage/Stream';
+import { SelectOption } from 'components/Select';
 import { ThemeSelect } from 'components/TheSurahPage/ThemeSelect';
 import { LanguageSelect } from 'components/TheSurahPage/LanguageSelect';
 import { PlayShape, PauseShape } from 'components/TheSurahPage/Shape';
@@ -26,6 +27,15 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
   const surahName = locale === 'ar' ? surah.name : surah.translatedName;
+  const onLanguageChange = (o: SelectOption) => {
+    const locale = o.value;
+    const params = [
+      ['ayah', slice.toParam() || stream.length],
+      ['paused', isPaused ? 't' : null]
+    ];
+    const query = params.filter(([, v]) => v).flatMap(([k,v]) => `${k}=${v}`).join('&');
+    location.replace(`/${locale}/${surah.slug}/?${query}`);
+  };
   const endOfStream = (function() {
     if (slice.coversOneAyah || slice.coversOneSurah) {
       return stream.length === surah.ayat.length;
@@ -55,13 +65,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
       {readyToRender && (
         <div className="row dropdown-row">
           <ThemeSelect theme={theme} setTheme={setTheme} />
-          <LanguageSelect
-            locale={locale}
-            surah={surah}
-            stream={stream}
-            isPaused={isPaused}
-            slice={slice}
-          />
+          <LanguageSelect locale={locale} onChange={onLanguageChange} />
         </div>
       )}
       {readyToRender && (
