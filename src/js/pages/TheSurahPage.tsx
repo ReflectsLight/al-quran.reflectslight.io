@@ -7,11 +7,11 @@ import { Stream } from 'components/TheSurahPage/Stream';
 import { ThemeSelect } from 'components/TheSurahPage/ThemeSelect';
 import { LanguageSelect } from 'components/TheSurahPage/LanguageSelect';
 import { PlayShape, PauseShape } from 'components/TheSurahPage/Shape';
-import { Locale, Surah } from 'lib/Quran';
+import * as Quran from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
-  locale: Locale
+  locale: Quran.Locale
   surahId: number
   slice: Slice
   paused: boolean
@@ -23,7 +23,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   const [stream, setStream] = useState([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
-  const [surah] = useState<Surah>(Surah.fromDOMNode(locale, node));
+  const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
   const surahName = locale === 'ar' ? surah.name : surah.translatedName;
   const endOfStream = (function() {
@@ -102,7 +102,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
 (function() {
   const toBoolean = (str: string | null): boolean => ['1', 't', 'true', 'yes'].includes(str);
   const root: HTMLElement = document.querySelector('.root');
-  const locale = root.getAttribute('data-locale') as Locale;
+  const locale = root.getAttribute('data-locale') as Quran.Locale;
   const surahId = parseInt(root.getAttribute('data-surah-id'));
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));

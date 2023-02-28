@@ -1,12 +1,12 @@
 import React from 'react';
 import { Select, SelectOption } from 'components/Select';
-import { Surah, Ayat } from 'lib/Quran';
+import * as Quran from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
   locale: string
-  surah: Surah
-  stream: Ayat
+  surah: Quran.Surah
+  stream: Quran.Ayat
   isPaused: boolean
   slice: Slice
 }
