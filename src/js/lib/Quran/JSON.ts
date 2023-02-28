@@ -1,4 +1,4 @@
-type Surah = {
+interface Surah {
   id: string
   place_of_revelation: string
   transliterated_name: string

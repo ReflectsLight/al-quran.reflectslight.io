@@ -33,7 +33,7 @@ export const DelayPerWord: Record<Locale, number> = {
 
 export function numbers (locale: Locale) {
   return function(number: number): string {
-    return Number(number).toLocaleString(locale)
+    return Number(number).toLocaleString(locale);
   };
 }
 
@@ -45,7 +45,7 @@ export function strings (locale: Locale) {
 }
 
 export function numberToDecimal(number: number, locale: Locale): string {
-  return number.toLocaleString(locale, {maximumFractionDigits: 1})
+  return number.toLocaleString(locale, { maximumFractionDigits: 1 })
                .split(/([^\d])/)
-               .join(" ")
+               .join(' ');
 }
