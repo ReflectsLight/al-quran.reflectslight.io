@@ -1,11 +1,6 @@
 import * as Quran from 'lib/Quran';
 import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
-export interface IDObject {
-  number: number
-  localeKey: string[]
-}
-
 export class Surah {
   #surah: Quran.JSON.Surah;
   ayat: Quran.Ayat;
@@ -20,7 +15,7 @@ export class Surah {
       surah,
       ayat.map(([id, text]) => {
         return {
-          id: { number: id, localeKey: String(id).split('') },
+          id: Number(id),
           text,
           readTimeMs: DelayBaseLine + (text.split(' ').length * DelayPerWord[locale]),
         };
@@ -33,11 +28,8 @@ export class Surah {
     this.ayat = ayat;
   }
 
-  get id(): IDObject {
-    return {
-      number: Number(this.#surah.id),
-      localeKey: this.#surah.id.split('')
-    };
+  get id(): number {
+    return Number(this.#surah.id);
   }
 
   get name() {
