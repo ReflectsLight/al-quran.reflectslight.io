@@ -1,7 +1,5 @@
 import React from 'react';
 import { Select, SelectOption } from 'components/Select';
-import * as Quran from 'lib/Quran';
-import { Slice } from 'lib/Quran/Slice';
 
 interface Props {
   locale: string
