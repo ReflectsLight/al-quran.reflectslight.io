@@ -1,0 +1,16 @@
+.root .content.theme.moon {
+  @import "colors";
+
+  .header .image {
+    background-image: url("/images/moon.svg");
+    background-size: cover;
+  }
+
+  .row.title {
+    color: $gold;
+  }
+
+  .row.dropdown-row .react-select {
+    color: $gold;
+  }
+}

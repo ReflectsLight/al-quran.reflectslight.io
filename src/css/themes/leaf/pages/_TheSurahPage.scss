@@ -1,0 +1,19 @@
+.root .content.theme.leaf {
+  @import "../colors";
+
+  .row.details {
+    color: $green;
+  }
+
+  ul.body.stream li.ayah {
+    span.surah-id.ayah-id {
+      color: $green;
+    }
+    p { }
+  }
+
+  .timer {
+    background-color: $green;
+    color: $white;
+  }
+}

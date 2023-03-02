@@ -1,0 +1,16 @@
+.root .content.theme.leaf {
+  @import "../colors";
+
+  ul.body.index a {
+    &:active, &:link, &:visited {
+      color: $green;
+    }
+
+    .surah.id {
+      background: $green;
+      color: $white;
+      border-radius: 5px;
+      padding: 3px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+##
+# Contains rules that are related to TheSurahIndex in one
+# way or another.
+
+compile "/surahs.json" do
+  write "/surahs.json"
+end
+
+locales.each do |locale|
+  compile "/html/TheSurahIndex.html.erb", rep: "/#{locale}/TheSurahIndex" do
+    filter :erb, locals: {locale:}
+    write  "/#{locale}/index.html"
+  end
+end
+
+compile "/js/pages/TheSurahIndex.tsx" do
+  filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
+  write "/js/pages/TheSurahIndex.js"
+  filter :gzip_text
+  write "/js/pages/TheSurahIndex.js.gz"
+end
+
+compile "/js/pages/TheSurahIndex/package.ts" do
+  filter :webpack, depend_on: "/js/lib/WebPackage"
+  write "/js/pages/TheSurahIndex/package.js"
+end
+
+compile "/css/pages/TheSurahIndex.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
+  write("/css/pages/TheSurahIndex.css")
+end

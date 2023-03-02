@@ -1,14 +1,16 @@
 import { Locale } from 'lib/Quran';
-type Strings = 'decimal' | 'surah' | 'ayah' | 'comma';
+type Strings = 'decimal' | 'surah' | 'ayah' | 'comma' | 'TheNobleQuran';
 
 const sTable: Record<Locale, Record<Strings, string>> = {
   en: {
+    TheNobleQuran: 'The Noble Quran',
     decimal: '.',
     surah: 'Surah',
     ayah: 'Ayah',
     comma: ','
   },
   ar: {
+    TheNobleQuran: '\u{627}\u{644}\u{642}\u{631}\u{622}\u{646}\u{20}\u{627}\u{644}\u{643}\u{631}\u{64a}\u{645}',
     decimal: '\u{066B}',
     surah: '\u{633}\u{648}\u{631}\u{629}',
     ayah: '\u{622}\u{64a}\u{629}',

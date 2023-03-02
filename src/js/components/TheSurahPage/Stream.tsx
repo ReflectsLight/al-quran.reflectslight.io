@@ -16,7 +16,7 @@ interface Props {
 export function Stream({ surah, stream, locale, slice, endOfStream, isPaused }: Props) {
   const n = numbers(locale);
   const s = strings(locale);
-  const className = classNames('stream', { 'scroll-y': endOfStream || isPaused });
+  const className = classNames('body', 'stream', { 'scroll-y': endOfStream || isPaused });
   const ayat = stream.map((ayah: Quran.Ayah) => {
     return (
       <li key={ayah.id} className="ayah fade">

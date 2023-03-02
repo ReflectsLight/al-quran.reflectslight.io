@@ -1,33 +1,6 @@
-.root .content.theme.leaf {
-  $green: #606850;
-  $white: #FFF;
-
-  .header .image {
-    background-image: url("/images/leaf.svg");
-    background-size: cover;
-  }
-
-  .row.dropdown-row .react-select {
-    background-color: transparent;
-    color: $green;
-  }
-
-  .row.details {
-    color: $green;
-  }
-
-  ul.stream li.ayah {
-    span.surah-id.ayah-id {
-      color: $green;
-    }
-    p { }
-  }
-
-  .timer {
-    background-color: $green;
-    color: $white;
-  }
-}
+@import "leaf/layout";
+@import "leaf/pages/TheSurahIndex";
+@import "leaf/pages/TheSurahPage";
 
 .root .content.theme.leaf.ar {
   direction: rtl;

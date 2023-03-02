@@ -5,11 +5,12 @@ import { get as getCookie } from 'es-cookie';
 import { Timer } from 'components/TheSurahPage/Timer';
 import { Stream } from 'components/TheSurahPage/Stream';
 import { SelectOption } from 'components/Select';
-import { ThemeSelect } from 'components/TheSurahPage/ThemeSelect';
-import { LanguageSelect } from 'components/TheSurahPage/LanguageSelect';
+import { ThemeSelect } from 'components/ThemeSelect';
+import { LanguageSelect } from 'components/LanguageSelect';
 import { PlayShape, PauseShape } from 'components/TheSurahPage/Shape';
 import * as Quran from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
+import { strings } from 'lib/i18n';
 
 interface Props {
   locale: Quran.Locale
@@ -27,6 +28,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
   const surahName = locale === 'ar' ? surah.name : surah.translatedName;
+  const s = strings(locale);
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
     const params = [
@@ -63,10 +65,13 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
         <a href={'/' + locale} className="image" />
       </div>
       {readyToRender && (
-        <div className="row dropdown-row">
-          <ThemeSelect theme={theme} setTheme={setTheme} />
-          <LanguageSelect locale={locale} onChange={onLanguageChange} />
-        </div>
+        <>
+          <div className="row title">{s('TheNobleQuran')}</div>
+          <div className="row dropdown-row">
+            <ThemeSelect theme={theme} setTheme={setTheme} />
+            <LanguageSelect locale={locale} onChange={onLanguageChange} />
+          </div>
+        </>
       )}
       {readyToRender && (
         <div className="row details">
