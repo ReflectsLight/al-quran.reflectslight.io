@@ -4,108 +4,36 @@ require "ryo"
 require "nanoc-gunzip"
 require "nanoc-webpack"
 
-LOCALES = %w[ar en]
-SURAH_ID_TO_SLUG = Ryo.from(
+locales = %w[ar en]
+surah_id_to_name = Ryo.from(
   JSON.parse(
     File.read(File.join(Dir.getwd, "src", "slugs.json"))
   )
 )
 
-##
-# Root path (/)
-# Locale path (/en/, /ar/)
-# Redirects to a random surah no
-compile "/html/RandomRedirect.html.erb" do
-  filter(:erb)
-  write("/index.html")
-  LOCALES.each { write "/#{_1}/index.html" }
-end
-
-##
-# /<locale>/<surahno>/surah.json
-# Provides the JSON for a given surah no
-compile "/*/*/surah.json" do
-  write(item.identifier.to_s)
-  if File.size(item.raw_filename) > (1024 * 10)
-    filter :gzip_text
-    write("#{item.identifier}.gz")
-  end
-end
-
-##
-# /<locale>/<surahno>/index.html
-# Redirects to a slug URL (eg /en/al-fatihah/)
-compile "/html/redirect-to-surah-slug.html.erb" do
-  filter(:erb)
-  1.upto(114) do |surahno|
-    LOCALES.each { write(File.join("/", _1, surahno.to_s, "index.html")) }
-  end
-end
-
-##
-# /<locale>/surah_slug>/index.html
-# For reading a given surah
-Ryo.each(SURAH_ID_TO_SLUG) do |surah_id, slug|
-  LOCALES.each do |locale|
-    compile "/html/TheSurahPage.html.erb", rep: "/#{locale}/#{slug}/index.html" do
-      filter :erb, locals: {locale: locale, surah_id: surah_id}
-      write "/#{locale}/#{slug}/index.html"
+def require_rules(rules, locals = {}, target = binding)
+  locals.each { target.local_variable_set(_1, _2) }
+  path = File.join(Dir.getwd, rules)
+  target.eval(
+    if File.readable?(path)
+      File.read(path)
+    elsif File.readable?("#{path}.rb")
+      File.read("#{path}.rb")
+    elsif File.readable?("#{path}.rules")
+      File.read("#{path}.rules")
+    else
+      raise LoadError, "#{path} is not readable"
     end
-  end
+  )
 end
 
 ##
-# TheSurahPage
-compile "/js/pages/TheSurahPage.tsx" do
-  filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
-  write "/js/pages/TheSurahPage.js"
-  filter :gzip_text
-  write "/js/pages/TheSurahPage.js.gz"
-end
-
-compile "/js/pages/TheSurahPage/package.ts" do
-  filter :webpack, depend_on: "/js/lib/WebPackage"
-  write "/js/pages/TheSurahPage/package.js"
-end
-
-compile "/css/pages/TheSurahPage.scss" do
-  filter :sass, syntax: :scss, style: :compact
-  filter :rainpress
-  write("/css/pages/TheSurahPage.css")
-end
+# Require rules
+require_rules "rules/pages/RandomRedirect", {locales:, surah_id_to_name:}
+require_rules "rules/pages/TheSurahPage", {locales:, surah_id_to_name:}
+require_rules "rules/assets"
 
 ##
-# /js/pages/RandomRedirect.js
-compile "/js/pages/RandomRedirect.ts" do
-  filter :webpack
-  write "/js/pages/RandomRedirect.js"
-end
-
-##
-# /js/pages/redirect-to-surah-slug.js
-compile "/js/pages/redirect-to-surah-slug.ts" do
-  filter :webpack
-  write "/js/pages/redirect-to-surah-slug.js"
-end
-
-##
-# CSS
-
-##
-# Fonts
-compile "/fonts/*" do
-  write(item.identifier.to_s)
-  filter :gzip_binary
-  write("#{item.identifier}.gz")
-end
-
-##
-# Images
-compile "/images/*.svg" do
-  write(item.identifier.to_s)
-  filter :gzip_binary
-  write("#{item.identifier}.gz")
-end
-
+# Default rules
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)

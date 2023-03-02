@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+##
+# Contains rules that are related to assets (eg images, fonts, etc)
+
+##
+# Fonts
+compile "/fonts/*" do
+  write(item.identifier.to_s)
+  filter :gzip_binary
+  write("#{item.identifier}.gz")
+end
+
+##
+# Images
+compile "/images/*.svg" do
+  write(item.identifier.to_s)
+  filter :gzip_binary
+  write("#{item.identifier}.gz")
+end
