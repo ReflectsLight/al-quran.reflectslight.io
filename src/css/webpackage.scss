@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.webpackage.loader {
+  height: 100%;
+}
+
+.webpackage.loader div:first-child {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 250px;
+}
+
+.webpackage.loader progress {
+  width: 100%;
+}
+
+.webpackage.loader .percentage {
+  font-family: monospace;
+  text-align: center;
+  width: 100%;
+}
