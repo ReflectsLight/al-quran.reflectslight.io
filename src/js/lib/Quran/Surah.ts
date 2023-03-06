@@ -43,7 +43,7 @@ export class Surah {
     return this.#surah.transliterated_name;
   }
 
-  get translatedName() {
+  get localizedName() {
     if (this.locale === 'ar') {
       return this.name;
     } else {

@@ -27,7 +27,6 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
-  const surahName = locale === 'ar' ? surah.name : surah.translatedName;
   const s = strings(locale);
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
@@ -50,7 +49,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
     document.title = [
       'Al-Quran:',
       surah.transliteratedName,
-      `(${surah.translatedName})`
+      `(${surah.localizedName})`
     ].join(' ');
     if (slice.coversOneAyah) {
       setStream([...surah.ayat.slice(0, slice.end)]);
@@ -75,7 +74,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
       )}
       {readyToRender && (
         <div className="row details">
-          <span lang={locale}>{surahName}</span>
+          <span lang={locale}>{surah.localizedName}</span>
           <span>{surah.transliteratedName}</span>
         </div>
       )}
