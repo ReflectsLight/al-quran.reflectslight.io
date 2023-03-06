@@ -75,7 +75,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
       {readyToRender && (
         <div className="row details">
           <span lang={locale}>{surah.localizedName}</span>
-          <span>{surah.transliteratedName}</span>
+          <span lang="en">{surah.transliteratedName}</span>
         </div>
       )}
       {readyToRender &&
