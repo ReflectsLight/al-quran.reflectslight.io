@@ -29,11 +29,12 @@ end
 
 ##
 # Require rules
+require_rules "rules/assets"
 require_rules "rules/pages/RandomRedirect", {locales:, surah_id_to_name:}
 require_rules "rules/pages/TheSurahPage", {locales:, surah_id_to_name:}
-require_rules "rules/assets"
+require_rules "rules/pages/TheSurahIndex", {locales:}
 
 ##
-# Default rules
+# Defaults
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)

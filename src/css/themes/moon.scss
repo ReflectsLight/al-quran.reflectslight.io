@@ -1,38 +1,6 @@
-.root .content.theme.moon {
-  $gold: darken(#ECB200, 5%);
-  $white: #FFF;
-
-  .header .image {
-    background-image: url("/images/moon.svg");
-    background-size: cover;
-  }
-
-  .row.dropdown-row .react-select {
-    color: $gold;
-  }
-
-  .row.details {
-    color: $gold;
-  }
-
-  ul.stream {
-    li.ayah {
-      span.surah-id.ayah-id {
-        color: $gold;
-      }
-      p { }
-    }
-  }
-
-  .row .timer {
-    color: $white;
-    background: $gold;
-  }
-
-  .row .shape {
-    background: $gold;
-  }
-}
+@import "moon/layout";
+@import "moon/pages/TheSurahIndex";
+@import "moon/pages/TheSurahPage";
 
 .root .content.theme.moon.ar {
   direction: rtl;

@@ -1,5 +1,9 @@
 $black: #454545;
 
+[lang="en"] {
+  font-family: "Kanit Regular";
+}
+
 html {
   height: 100%;
 }
@@ -41,6 +45,42 @@ body .root .content .row {
   flex-direction: row;
   justify-content: space-between;
   direction: ltr;
+}
+
+body .root .content .row.title {
+  display: flex;
+  place-content: center;
+  width: 100%;
+}
+
+body .root .content .row.dropdown-row {
+  .react-select.language {
+    text-align: right;
+    li:first-child { font-family: "Vazirmatn Regular"; }
+    li:last-child { font-family: "Kanit Regular"; }
+  }
+}
+
+body .root .content ul.body {
+  clear: both;
+  list-style-type: none;
+  height: 400px;
+  padding: 0;
+  overflow: hidden;
+
+  /* Height of 625px, or less */
+  @media screen and (max-height: 625px) {
+    height: 350px;
+  }
+
+  /* Height of 595px, or less */
+  @media screen and (max-height: 595px) {
+    height: 330px;
+  }
+}
+
+body .root .content ul.body.scroll-y {
+  overflow-y: auto;
 }
 
 @import "fonts";

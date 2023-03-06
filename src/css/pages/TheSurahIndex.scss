@@ -1,0 +1,55 @@
+@import "../layout";
+@import "../components/Select";
+@import "../themes/moon";
+@import "../themes/leaf";
+
+ul.body.index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 470px;
+
+  li.surah {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  li.surah a {
+    display: flex;
+    width: 100%;
+
+    &:visited, &:active, &:link {
+      text-decoration: none;
+    }
+  }
+
+  li.surah a .surah.id {
+    text-align: center;
+    width: 25px;
+  }
+
+  li.surah a .surah.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 210px;
+  }
+
+  li.surah a .surah.name.transliterated {
+    align-items: end;
+    width: 200px;
+  }
+}
+
+.root .content.theme.en {
+  ul.body.index a .surah.id {
+    margin-right: 5px;
+  }
+}
+
+.root .content.theme.ar {
+  ul.body.index a .surah.id {
+    margin-left: 8px;
+  }
+}

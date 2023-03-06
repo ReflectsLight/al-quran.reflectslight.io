@@ -1,7 +1,15 @@
 #!/usr/bin/env ruby
 
 ##
-# Contains rules that are related to assets (eg images, fonts, etc)
+# Contains rules that are related to assets (eg images, fonts, general CSS, etc)
+
+##
+# WebPackage CSS
+compile "/css/webpackage.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
+  write "/css/webpackge.css"
+end
 
 ##
 # Fonts

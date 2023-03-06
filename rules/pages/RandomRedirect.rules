@@ -7,7 +7,6 @@
 compile "/html/RandomRedirect.html.erb" do
   filter(:erb)
   write("/index.html")
-  locales.each { write "/#{_1}/index.html" }
 end
 
 compile "/html/redirect-to-surah-slug.html.erb" do

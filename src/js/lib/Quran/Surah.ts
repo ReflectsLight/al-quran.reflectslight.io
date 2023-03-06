@@ -2,6 +2,7 @@ import * as Quran from 'lib/Quran';
 import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
 export class Surah {
+  locale: Quran.Locale;
   #surah: Quran.JSON.Surah;
   ayat: Quran.Ayat;
 
@@ -10,8 +11,9 @@ export class Surah {
     return Surah.fromJSON(locale, json.shift(), json);
   }
 
-  static fromJSON(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.JSON.Ayat) {
+  static fromJSON(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.JSON.Ayat = []) {
     return new Surah(
+      locale,
       surah,
       ayat.map(([id, text]) => {
         return {
@@ -23,7 +25,8 @@ export class Surah {
     );
   }
 
-  constructor(surah: Quran.JSON.Surah, ayat: Quran.Ayat) {
+  constructor(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.Ayat) {
+    this.locale = locale;
     this.#surah = surah;
     this.ayat = ayat;
   }
@@ -40,8 +43,12 @@ export class Surah {
     return this.#surah.transliterated_name;
   }
 
-  get translatedName() {
-    return this.#surah.translated_name;
+  get localizedName() {
+    if (this.locale === 'ar') {
+      return this.name;
+    } else {
+      return this.#surah.translated_name;
+    }
   }
 
   get placeOfRevelation() {
@@ -49,7 +56,7 @@ export class Surah {
   }
 
   get numberOfAyah() {
-    return this.#surah.verse_count;
+    return this.#surah.ayahs;
   }
 
   get slug() {

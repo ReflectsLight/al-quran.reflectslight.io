@@ -1,0 +1,26 @@
+.root .content.theme.moon {
+  @import "../colors";
+
+  .row.details {
+    color: $gold;
+  }
+
+  ul.body.stream {
+    li.ayah {
+      /* TODO "surah.id", "ayah.id" */
+      span.surah-id.ayah-id {
+        color: $gold;
+      }
+      p { }
+    }
+  }
+
+  .row .timer {
+    color: $white;
+    background: $gold;
+  }
+
+  .row .shape {
+    background: $gold;
+  }
+}

@@ -1,0 +1,17 @@
+.root .content.theme.leaf {
+  @import "colors";
+
+  .header .image {
+    background-image: url("/images/leaf.svg");
+    background-size: cover;
+  }
+
+  .row.title {
+    color: $green;
+  }
+
+  .row.dropdown-row .react-select {
+    background-color: transparent;
+    color: $green;
+  }
+}
