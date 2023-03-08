@@ -15,6 +15,7 @@ compile "/js/surah/index/redirect.ts" do
 end
 
 compile "/surahs.json" do
+  filter(:minify_json)
   write "/surahs.json"
 end
 
