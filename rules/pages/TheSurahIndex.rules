@@ -4,6 +4,16 @@
 # Contains rules that are related to TheSurahIndex in one
 # way or another.
 
+compile "/html/surah/index/redirect.html.erb" do
+  filter(:erb)
+  write("/index.html")
+end
+
+compile "/js/surah/index/redirect.ts" do
+  filter(:webpack)
+  write("/js/surah/index/redirect.js")
+end
+
 compile "/surahs.json" do
   write "/surahs.json"
 end

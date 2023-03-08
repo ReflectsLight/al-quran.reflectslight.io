@@ -4,11 +4,6 @@
 # Contains rules that are related to RandomRedirect.html.erb
 # in one way or another
 
-compile "/html/RandomRedirect.html.erb" do
-  filter(:erb)
-  write("/index.html")
-end
-
 compile "/html/redirect-to-surah-slug.html.erb" do
   filter(:erb)
   1.upto(114) do |surahno|
