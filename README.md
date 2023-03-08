@@ -1,32 +1,8 @@
-## About
+<p align="center">
+  <a href="https://al-quran.reflectslight.io">https://al-quran.reflectslight.io</a>
+</p>
 
-A static website for reading The Quran.
-<br>
-Built with a static website generator.
-<br>
-The website can be seen live at
-[https://al-quran.reflectslight.io](https://al-quran.reflectslight.io).
-
-## Stack
-
-The main components of the website's stack are:
-
-- Ruby v3.1.2+ <br>
-  The static site generator [nanoc](https://nanoc.app) is written in [Ruby](https://www.ruby-lang.org).
-- NodeJS v16.16.0+  <br>
-  The website uses [NodeJS](https://nodejs.org) for [webpack](https://webpack.js.org/).
-- TypeScript, React, and SCSS.
-
-Follow [guides/localsetup.md](guides/localsetup.md) to setup the website on your computer.
-
-## Authors
-
-* Gyen Abu Bakar [@gyenabubakar](https://github.com/gyenabubakar)
-* 0x1eef [@0x1eef](https://github.com/0x1eef)
-
-## License
-
-[BSD Zero Clause](https://choosealicense.com/licenses/0bsd/).
-<br>
-See [LICENSE](./LICENSE).
-
+This git repository holds the source code of a statically generated website
+for reading The Quran. The website is composed purely of HTML, CSS, JavaScript
+and other static assets that require no more than a web server that can host
+them.
