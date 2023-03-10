@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-
-##
+#
 # Rules for a redirect from /<locale>/random/ to a
 # random surah (eg /en/random/ -> /en/al-kahf/)
 

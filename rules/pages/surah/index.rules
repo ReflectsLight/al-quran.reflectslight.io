@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-
-##
+#
 # Rules for the surah index available at /<locale>/,
 # (eg /en/) and its dependencies.
 

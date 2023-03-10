@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-
-##
+#
 # Rules for a redirect from a surah id to
 # a surah name (eg /en/1/ -> /en/al-fatihah/)
 
