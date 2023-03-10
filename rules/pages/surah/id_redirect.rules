@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+1.upto(114) do |id|
+  locales.each do |locale|
+    compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{id}" do
+      filter(:erb)
+      write("/#{locale}/#{id}/index.html")
+    end
+  end
+end
+
+compile "/js/pages/surah/id_redirect.ts" do
+  filter(:webpack)
+  write("/js/pages/surah/id_redirect.js")
+end
