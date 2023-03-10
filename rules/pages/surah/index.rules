@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-#
-# Rules for the surah index available at /<locale>/,
-# (eg /en/) and its dependencies.
+# Rules for the surah index available at /<locale>/ (eg /en/) and its
+# dependencies.
 
 locales.each do |locale|
   compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
@@ -11,7 +10,9 @@ locales.each do |locale|
 end
 
 compile "/js/pages/surah/index.tsx" do
-  filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
+  filter :webpack, depend_on: ["/js/components",
+                               "/js/lib/[!WebPackage]/",
+                               "/js/hooks"]
   write "/js/pages/surah/index.js"
   filter :gzip_text
   write "/js/pages/surah/index.js.gz"

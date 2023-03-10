@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-#
-# Rules for a redirect from /<locale>/random/ to a
-# random surah (eg /en/random/ -> /en/al-kahf/)
+# Rules for a redirect from /<locale>/random/ to a random surah
+# (eg /en/random/ -> /en/al-kahf/)
 
 locales.each do |locale|
   compile "/html/pages/surah/random.html.erb", rep: "random/#{locale}" do

@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-#
-# Rules for the surah stream available at /<locale>/<name>/
-# (eg /ar/al-fatihah/) and its dependencies.
+# Rules for the surah stream available at /<locale>/<name>/ (eg /ar/al-fatihah/)
+# and its dependencies.
 
 compile "/*/*/surah.json" do
   write(item.identifier.to_s)

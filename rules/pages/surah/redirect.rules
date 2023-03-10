@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-#
-# Rules for a redirect from the root path to the surah index
-# for a given locale (eg / -> /en/)
+# Rules for a redirect from the root path to the surah index for a given locale
+# (eg / -> /en/)
 
 compile "/html/pages/surah/redirect.html.erb" do
   filter(:erb)
