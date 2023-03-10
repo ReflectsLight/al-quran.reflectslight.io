@@ -18,4 +18,14 @@
       border: 1px solid $blue;
     }
   }
+
+  .row.surah.choose-random {
+    &:active, &:link, &:visited {
+      color: $blue;
+      text-decoration: none;
+    }
+    &:hover {
+      font-weight: bold;
+    }
+  }
 }

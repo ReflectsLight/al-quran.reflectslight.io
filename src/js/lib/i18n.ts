@@ -1,9 +1,11 @@
 import { Locale } from 'lib/Quran';
-type Strings = 'decimal' | 'surah' | 'ayah' | 'comma' | 'TheNobleQuran';
+type Strings = 'decimal' | 'surah' | 'ayah' | 'comma' |
+               'TheNobleQuran' | 'ChooseRandomChapter';
 
 const sTable: Record<Locale, Record<Strings, string>> = {
   en: {
     TheNobleQuran: 'The Noble Quran',
+    ChooseRandomChapter: 'Choose a random chapter',
     decimal: '.',
     surah: 'Surah',
     ayah: 'Ayah',
@@ -11,6 +13,7 @@ const sTable: Record<Locale, Record<Strings, string>> = {
   },
   ar: {
     TheNobleQuran: '\u{627}\u{644}\u{642}\u{631}\u{622}\u{646}\u{20}\u{627}\u{644}\u{643}\u{631}\u{64a}\u{645}',
+    ChooseRandomChapter: '\u{627}\u{62e}\u{62a}\u{631}\u{20}\u{633}\u{648}\u{631}\u{629}\u{20}\u{639}\u{634}\u{648}\u{627}\u{626}\u{64a}\u{629}',
     decimal: '\u{066B}',
     surah: '\u{633}\u{648}\u{631}\u{629}',
     ayah: '\u{622}\u{64a}\u{629}',
