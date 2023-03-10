@@ -36,6 +36,11 @@ require_rules "rules/pages/surah/index", {locales:}
 require_rules "rules/pages/surah/redirect"
 require_rules "rules/pages/surah/id_redirect", {locales:}
 
+compile "/i18n.json" do
+  filter(:minify_json)
+  write("/i18n.json")
+end
+
 ##
 # Defaults
 compile("/**/*") { write(nil) }
