@@ -1,6 +1,6 @@
 @import "leaf/layout";
-@import "leaf/pages/TheSurahIndex";
-@import "leaf/pages/TheSurahPage";
+@import "leaf/pages/surah/index";
+@import "leaf/pages/surah/stream";
 
 .root .content.theme.leaf.ar {
   direction: rtl;

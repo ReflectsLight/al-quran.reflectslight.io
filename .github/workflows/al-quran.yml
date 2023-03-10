@@ -26,4 +26,6 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: nanoc
-      run: ruby -S rake build
+      run:
+        - source .env.sample
+        - ruby -S rake build

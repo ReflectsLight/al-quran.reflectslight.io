@@ -1,6 +1,6 @@
-@import "../layout";
-@import "../components/Select";
-@import "../components/TheSurahPage/Shape";
+@import "layout";
+@import "components/Select";
+@import "components/Shape";
 
 .content .row.details {
   direction: rtl;
@@ -56,5 +56,5 @@
   top: 2px;
 }
 
-@import "../themes/moon";
-@import "../themes/leaf";
+@import "themes/moon";
+@import "themes/leaf";

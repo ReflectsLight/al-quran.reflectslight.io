@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
-import { Timer } from 'components/TheSurahPage/Timer';
-import { Stream } from 'components/TheSurahPage/Stream';
+import { Timer } from 'components/Timer';
+import { Stream } from 'components/Stream';
 import { SelectOption } from 'components/Select';
 import { ThemeSelect } from 'components/ThemeSelect';
 import { LanguageSelect } from 'components/LanguageSelect';
-import { PlayShape, PauseShape } from 'components/TheSurahPage/Shape';
+import { PlayShape, PauseShape } from 'components/Shape';
 import * as Quran from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
 import { strings } from 'lib/i18n';
@@ -19,7 +19,7 @@ interface Props {
   paused: boolean
 }
 
-function TheSurahPage({ locale, surahId, slice, paused }: Props) {
+function SurahStream({ locale, surahId, slice, paused }: Props) {
   const path = `/${locale}/${surahId}/surah.json`;
   const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
   const [stream, setStream] = useState([]);
@@ -119,7 +119,7 @@ function TheSurahPage({ locale, surahId, slice, paused }: Props) {
   ReactDOM
     .createRoot(root)
     .render(
-      <TheSurahPage
+      <SurahStream
         locale={locale}
         surahId={surahId}
         slice={slice}

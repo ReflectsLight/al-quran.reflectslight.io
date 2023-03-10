@@ -5,12 +5,13 @@ import WebPackage from 'lib/WebPackage';
   const progressBar: HTMLProgressElement = parent.querySelector('progress');
   const progressNumber: HTMLSpanElement = parent.querySelector('.percentage');
   const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage');
+  const { locale, surahId } = document.querySelector<HTMLElement>('.root').dataset;
 
   WebPackage({
-    scripts: ['/js/pages/TheSurahIndex.js'],
-    others: ['/surahs.json'],
-    stylesheets: ['/css/pages/TheSurahIndex.css'],
+    scripts: ['/js/pages/surah/stream.js'],
+    stylesheets: ['/css/pages/surah/stream.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
+    others: [`/${locale}/${surahId}/surah.json`],
     fonts: [
       ['Kanit Regular', 'url(/fonts/kanit-regular.ttf)'],
       ['Vazirmatn Regular', 'url(/fonts/vazirmatn-regular.ttf)'],

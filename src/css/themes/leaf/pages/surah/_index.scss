@@ -1,5 +1,5 @@
 .root .content.theme.leaf {
-  @import "../colors";
+  @import "themes/leaf/colors";
 
   ul.body.index a {
     &:active, &:link, &:visited {

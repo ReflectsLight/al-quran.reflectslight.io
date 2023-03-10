@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+##
+# Rules for a redirect from /<locale>/random/ to a
+# random surah (eg /en/random/ -> /en/al-kahf/)
+
+locales.each do |locale|
+  compile "/html/pages/surah/random.html.erb", rep: "random/#{locale}" do
+    filter(:erb)
+    write("/#{locale}/random/index.html")
+  end
+end
+
+compile "/js/pages/surah/random.ts" do
+  filter :webpack
+  write "/js/pages/surah/random.js"
+end
