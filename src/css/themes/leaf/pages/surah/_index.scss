@@ -13,4 +13,14 @@
       padding: 3px;
     }
   }
+
+  .row.surah.choose-random {
+    &:active, &:link, &:visited {
+      color: $green;
+      text-decoration: none;
+    }
+    &:hover {
+      font-weight: bold;
+    }
+  }
 }

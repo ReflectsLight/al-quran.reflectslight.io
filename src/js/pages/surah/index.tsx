@@ -38,13 +38,22 @@ function SurahIndex({ locale, surahs }: Props) {
         {surahs.map((surah, key) => (
           <li className="surah" key={key}>
             <a href={`/${locale}/${surah.slug}`}>
-              <div className="surah id">{surah.id.toLocaleString(locale)}</div>
-              <div className="surah name">{surah.localizedName}</div>
-              <div className="surah name transliterated" lang="en">{surah.transliteratedName}</div>
+              <div className="surah id">
+                {surah.id.toLocaleString(locale)}
+              </div>
+              <div className="surah name">
+                {surah.localizedName}
+              </div>
+              <div className="surah name transliterated" lang="en">
+                {surah.transliteratedName}
+              </div>
             </a>
           </li>
         ))}
       </ul>
+      <a href={`/${locale}/random`} className="row surah choose-random">
+        {s('ChooseRandomChapter')}
+      </a>
     </div>
   );
 }

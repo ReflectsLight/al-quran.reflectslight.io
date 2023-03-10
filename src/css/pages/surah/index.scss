@@ -46,6 +46,11 @@ ul.body.index {
   }
 }
 
+.root .content .row.surah.choose-random {
+  display: flex;
+  place-content: center;
+}
+
 .root .content.theme.en {
   ul.body.index a .surah.id {
     margin-right: 5px;
