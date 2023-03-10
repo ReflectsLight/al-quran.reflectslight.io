@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+
+##
 # Rules for the surah stream available at /<locale>/<name>/ (eg /ar/al-fatihah/)
 # and its dependencies.
 
