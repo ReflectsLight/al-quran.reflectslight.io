@@ -33,7 +33,7 @@ export function i18n(json: string): TFunction {
   };
 }
 
-export function numberToDecimal(number: number, locale: Quran.Locale): string {
+export function formatNumber(number: number, locale: Quran.Locale): string {
   return number.toLocaleString(locale, { maximumFractionDigits: 1 })
                .split(/([^\d])/)
                .join(' ');
