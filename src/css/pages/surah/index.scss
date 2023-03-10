@@ -7,7 +7,7 @@ ul.body.index {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 470px;
+  width: 100%;
 
   li.surah {
     display: flex;
@@ -39,6 +39,10 @@ ul.body.index {
   li.surah a .surah.name.transliterated {
     align-items: end;
     width: 200px;
+
+    @media screen and (max-width: $max-width) {
+      display: none;
+    }
   }
 }
 
