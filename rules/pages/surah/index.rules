@@ -11,16 +11,6 @@ locales.each do |locale|
   end
 end
 
-compile "/html/pages/surah/index/redirect.html.erb" do
-  filter(:erb)
-  write("/index.html")
-end
-
-compile "/js/pages/surah/index/redirect.ts" do
-  filter(:webpack)
-  write("/js/pages/surah/index/redirect.js")
-end
-
 compile "/js/pages/surah/index.tsx" do
   filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
   write "/js/pages/surah/index.js"

@@ -33,6 +33,7 @@ require_rules "rules/assets"
 require_rules "rules/pages/RandomRedirect", {locales:, surah_id_to_name:}
 require_rules "rules/pages/TheSurahPage", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/index", {locales:}
+require_rules "rules/pages/surah/redirect"
 
 ##
 # Defaults
