@@ -13,7 +13,7 @@ interface Props {
   surahs: Quran.Surah[]
 }
 
-function TheSurahIndex({ locale, surahs }: Props) {
+function SurahIndex({ locale, surahs }: Props) {
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const s = strings(locale);
   const onLanguageChange = (o: SelectOption) => {
@@ -62,6 +62,6 @@ function TheSurahIndex({ locale, surahs }: Props) {
   ReactDOM
     .createRoot(root)
     .render(
-      <TheSurahIndex locale={locale} surahs={surahs} />
+      <SurahIndex locale={locale} surahs={surahs} />
     );
 })();

@@ -7,9 +7,9 @@ import WebPackage from 'lib/WebPackage';
   const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage');
 
   WebPackage({
-    scripts: ['/js/pages/TheSurahIndex.js'],
+    scripts: ['/js/pages/surah/index.js'],
+    stylesheets: ['/css/pages/surah/index.css'],
     others: ['/surahs.json'],
-    stylesheets: ['/css/pages/TheSurahIndex.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
     fonts: [
       ['Kanit Regular', 'url(/fonts/kanit-regular.ttf)'],

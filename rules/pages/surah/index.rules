@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+##
+# The surah index (available at /en, /ar, etc) and
+# its dependencies.
+
+locales.each do |locale|
+  compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
+    filter :erb, locals: {locale:}
+    write  "/#{locale}/index.html"
+  end
+end
+
+compile "/html/pages/surah/index/redirect.html.erb" do
+  filter(:erb)
+  write("/index.html")
+end
+
+compile "/js/pages/surah/index/redirect.ts" do
+  filter(:webpack)
+  write("/js/pages/surah/index/redirect.js")
+end
+
+compile "/js/pages/surah/index.tsx" do
+  filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
+  write "/js/pages/surah/index.js"
+  filter :gzip_text
+  write "/js/pages/surah/index.js.gz"
+end
+
+compile "/js/pages/surah/index/loader.ts" do
+  filter :webpack, depend_on: "/js/lib/WebPackage"
+  write "/js/pages/surah/index/loader.js"
+end
+
+compile "/css/pages/surah/index.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
+  write("/css/pages/surah/index.css")
+end
+
+compile "/surahs.json" do
+  filter(:minify_json)
+  write "/surahs.json"
+end
