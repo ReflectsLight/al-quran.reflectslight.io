@@ -8,8 +8,8 @@ import WebPackage from 'lib/WebPackage';
   const { locale, surahId } = document.querySelector<HTMLElement>('.root').dataset;
 
   WebPackage({
-    scripts: ['/js/pages/TheSurahPage.js'],
-    stylesheets: ['/css/pages/TheSurahPage.css'],
+    scripts: ['/js/pages/surah/stream.js'],
+    stylesheets: ['/css/pages/surah/stream.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
     others: [`/${locale}/${surahId}/surah.json`],
     fonts: [
