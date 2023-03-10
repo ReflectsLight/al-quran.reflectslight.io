@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+##
+# Rules for a redirect from a surah id to
+# a surah name (eg /en/1/ -> /en/al-fatihah/)
+
 1.upto(114) do |id|
   locales.each do |locale|
     compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{id}" do

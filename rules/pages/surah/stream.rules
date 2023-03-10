@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 ##
-# Contains rules that are related to TheSurahPage.html.erb in one
-# way or another
+# Rules for the surah stream available at /<locale>/<name>/
+# (eg /ar/al-fatihah/) and its dependencies.
 
 compile "/*/*/surah.json" do
   write(item.identifier.to_s)

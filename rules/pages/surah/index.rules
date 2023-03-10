@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 ##
-# The surah index (available at /en, /ar, etc) and
-# its dependencies.
+# Rules for the surah index available at /<locale>/,
+# (eg /en/) and its dependencies.
 
 locales.each do |locale|
   compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
