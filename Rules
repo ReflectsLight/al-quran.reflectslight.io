@@ -38,7 +38,7 @@ require_rules "rules/pages/surah/redirect"
 require_rules "rules/pages/surah/id_redirect", {locales:}
 
 ##
-# Inline JSON rules
+# Inline CSS / JSON rules
 compile "/i18n.json" do
   filter(:minify_json)
   write(nil)
@@ -51,6 +51,12 @@ end
 
 compile "/slugs.json" do
   filter(:minify_json)
+  write(nil)
+end
+
+compile "/css/webpackage.scss" do
+  filter :sass, syntax: :scss, style: :compact
+  filter :rainpress
   write(nil)
 end
 
