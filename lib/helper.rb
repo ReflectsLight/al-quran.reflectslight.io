@@ -7,5 +7,11 @@ module Helper
     "#{items[path].compiled_content}" \
     "</script>"
   end
+
+  def inline_css(path)
+    "<style>" \
+    "#{items[path].compiled_content}" \
+    "</style>"
+  end
 end
 use_helper Helper
