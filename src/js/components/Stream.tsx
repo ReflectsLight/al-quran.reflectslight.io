@@ -33,9 +33,9 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused }: 
   });
 
   useEffect(() => {
-    const ul: HTMLElement = document.querySelector('ul.stream');
+    const ul: HTMLElement = document.querySelector('ul.stream')!;
     if (slice.coversOneAyah) {
-      const li: HTMLLIElement = ul.querySelector('li:last-child');
+      const li: HTMLLIElement = ul.querySelector('li:last-child')!;
       li.scrollIntoView();
     } else {
       ul.scroll({ top: ul.scrollHeight, behavior: 'smooth' });

@@ -27,7 +27,7 @@ const findOption = (value: string, children: JSX.Element[]) => {
 
 const createOption = (e: ChangeEvent, children: JSX.Element[]): SelectOption => {
   const { target } = e;
-  const value = target.getAttribute('data-value');
+  const value = target.getAttribute('data-value')!;
   return {
     innerText: findOption(value, children),
     value,

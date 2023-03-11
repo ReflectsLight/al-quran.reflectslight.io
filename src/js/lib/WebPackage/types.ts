@@ -11,13 +11,12 @@ export interface Package {
 }
 
 export interface PackageSpec {
-  scripts?: string[]
-  stylesheets?: string[]
-  images?: string[]
-  fonts?: Array<[string, string]>
-  others?: string[]
+  scripts: string[]
+  stylesheets: string[]
+  images: string[]
+  fonts: Array<[string, string]>
+  others: string[]
   onprogress?: (percent: number) => any
 }
 
 export type PackageItem = HTMLElement | FontFace;
-export type ReporterFunction = (el: PackageItem) => PackageItem;

@@ -1,11 +1,11 @@
 import WebPackage from 'lib/WebPackage';
 
 (function() {
-  const parent: HTMLElement = document.querySelector('.webpackage.loader');
-  const progressBar: HTMLProgressElement = parent.querySelector('progress');
-  const progressNumber: HTMLSpanElement = parent.querySelector('.percentage');
-  const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage');
-  const { locale, surahId } = document.querySelector<HTMLElement>('.root').dataset;
+  const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
+  const progressBar: HTMLProgressElement = parent.querySelector('progress')!;
+  const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
+  const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage')!;
+  const { locale, surahId } = document.querySelector<HTMLElement>('.root')!.dataset;
 
   WebPackage({
     scripts: ['/js/pages/surah/stream.js'],
