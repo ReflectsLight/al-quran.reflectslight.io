@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <% locales.each do |locale| %>
+  <url>
+    <loc>https://al-quran.reflectslight.io/<%= locale %>/</loc>
+    <% locales.each do |locale| %>
+    <xhtml:link
+      rel="alternate"
+      hreflang="<%= locale %>"
+      href="https://al-quran.reflectslight.io/<%= locale %>/"/>
+    <% end %>
+  </url>
+ <% Ryo.each(surah_id_to_name) do |_id, name| %>
+  <url>
+    <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= name %>/</loc>
+    <% locales.each do |locale| %>
+    <xhtml:link
+      rel="alternate"
+      hreflang="<%= locale %>"
+      href="https://al-quran.reflectslight.io/<%= locale %>/<%= name %>/"/>
+    <% end %>
+  </url>
+ <% end %>
+ <% end %>
+</urlset>

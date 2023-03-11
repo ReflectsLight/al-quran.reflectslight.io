@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Al-Quran: redirect</title>
+    <link rel="canonical" href="<%= redirect_url %>">
+    <meta http-equiv="refresh" content="0; url=<%= redirect_url %>">
   </head>
   <body>
-    <%= inline_json('/slugs.json') %>
-    <script src="/js/pages/surah/id_redirect.js"></script>
   </body>
 </html>

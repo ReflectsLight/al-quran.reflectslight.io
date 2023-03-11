@@ -35,7 +35,7 @@ require_rules "rules/pages/surah/random", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/stream", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/index", {locales:}
 require_rules "rules/pages/surah/redirect"
-require_rules "rules/pages/surah/id_redirect", {locales:}
+require_rules "rules/pages/surah/id_redirect", {locales:, surah_id_to_name:}
 
 ##
 # Inline CSS / JSON rules
@@ -58,6 +58,14 @@ compile "/css/webpackage.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
   write(nil)
+end
+
+##
+# /sitemap.xml
+compile "/sitemap.xml.erb" do
+  filter(:erb, locals: {locales:, surah_id_to_name:})
+  filter(:strip)
+  write("/sitemap.xml")
 end
 
 ##
