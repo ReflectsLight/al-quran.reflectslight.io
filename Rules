@@ -61,6 +61,14 @@ compile "/css/webpackage.scss" do
 end
 
 ##
+# /sitemap.xml
+compile "/sitemap.xml.erb" do
+  filter(:erb, locals: {locales:, surah_id_to_name:})
+  filter(:strip)
+  write("/sitemap.xml")
+end
+
+##
 # Defaults
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)
