@@ -4,7 +4,7 @@ import WebPackage from 'lib/WebPackage';
   const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
   const progressBar: HTMLProgressElement = parent.querySelector('progress')!;
   const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
-  const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage')!;
+  const inlineStyle: HTMLStyleElement = document.querySelector('.css.webpackage')!;
 
   WebPackage({
     scripts: ['/js/pages/surah/index.js'],

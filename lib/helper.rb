@@ -9,7 +9,8 @@ module Helper
   end
 
   def inline_css(path)
-    "<style>" \
+    class_name = File.basename(path, File.extname(path))
+    "<style class='css #{class_name}'>" \
     "#{items[path].compiled_content}" \
     "</style>"
   end
