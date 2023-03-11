@@ -13,16 +13,15 @@ import { Slice } from 'lib/Quran/Slice';
 import { strings } from 'lib/i18n';
 
 interface Props {
+  node: HTMLScriptElement
   locale: Quran.Locale
   surahId: number
   slice: Slice
   paused: boolean
 }
 
-function SurahStream({ locale, surahId, slice, paused }: Props) {
-  const path = `/${locale}/${surahId}/surah.json`;
-  const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`);
-  const [stream, setStream] = useState([]);
+function SurahStream({ node, locale, surahId, slice, paused }: Props) {
+  const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
@@ -42,6 +41,8 @@ function SurahStream({ locale, surahId, slice, paused }: Props) {
       return stream.length === surah.ayat.length;
     } else if (slice.coversSubsetOfSurah) {
       return stream.length === slice.length;
+    } else {
+      return false;
     }
   })();
 
@@ -108,10 +109,12 @@ function SurahStream({ locale, surahId, slice, paused }: Props) {
 
 
 (function() {
-  const toBoolean = (str: string | null): boolean => ['1', 't', 'true', 'yes'].includes(str);
-  const root: HTMLElement = document.querySelector('.root');
+  const root: HTMLElement = document.querySelector('.root')!;
   const locale = root.getAttribute('data-locale') as Quran.Locale;
-  const surahId = parseInt(root.getAttribute('data-surah-id'));
+  const surahId = parseInt(root.getAttribute('data-surah-id')!);
+  const path = `/${locale}/${surahId}/surah.json`;
+  const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`)!;
+  const toBoolean = (str: string | null): boolean => str !== null && ['1', 't', 'true', 'yes'].includes(str);
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));
   const paused = toBoolean(params.get('paused'));
@@ -120,6 +123,7 @@ function SurahStream({ locale, surahId, slice, paused }: Props) {
     .createRoot(root)
     .render(
       <SurahStream
+        node={node}
         locale={locale}
         surahId={surahId}
         slice={slice}

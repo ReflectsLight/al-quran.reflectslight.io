@@ -60,9 +60,9 @@ function SurahIndex({ locale, surahs }: Props) {
 
 
 (function() {
-  const root: HTMLElement = document.querySelector('.root');
+  const root: HTMLElement = document.querySelector('.root')!;
   const locale = root.getAttribute('data-locale') as Quran.Locale;
-  const script: HTMLScriptElement = document.querySelector('script[src="/surahs.json"]');
+  const script: HTMLScriptElement = document.querySelector('script[src="/surahs.json"]')!;
   const surahs: Quran.Surah[] = JSON.parse(script.innerText)
                                     .map((el: Quran.JSON.Surah) => {
                                       return Quran.Surah.fromJSON(locale, el);

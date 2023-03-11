@@ -1,10 +1,10 @@
 import WebPackage from 'lib/WebPackage';
 
 (function() {
-  const parent: HTMLElement = document.querySelector('.webpackage.loader');
-  const progressBar: HTMLProgressElement = parent.querySelector('progress');
-  const progressNumber: HTMLSpanElement = parent.querySelector('.percentage');
-  const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage');
+  const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
+  const progressBar: HTMLProgressElement = parent.querySelector('progress')!;
+  const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
+  const inlineStyle: HTMLStyleElement = document.querySelector('style.webpackage')!;
 
   WebPackage({
     scripts: ['/js/pages/surah/index.js'],
