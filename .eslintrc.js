@@ -13,6 +13,7 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": 0,
     "@typescript-eslint/restrict-template-expressions": 0,
     "@typescript-eslint/promise-function-async": 0,
+    "@typescript-eslint/consistent-type-definitions": 0,
     "@typescript-eslint/no-misused-promises": ["error", {"checksConditionals": false}],
     "@typescript-eslint/no-redeclare": 0,
     "@typescript-eslint/no-non-null-assertion": 0,

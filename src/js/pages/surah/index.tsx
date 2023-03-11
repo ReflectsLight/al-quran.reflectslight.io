@@ -6,16 +6,16 @@ import * as Quran from 'lib/Quran';
 import { SelectOption } from 'components/Select';
 import { ThemeSelect } from 'components/ThemeSelect';
 import { LanguageSelect } from 'components/LanguageSelect';
-import { strings } from 'lib/i18n';
+import { i18n, TFunction } from 'lib/i18n';
 
 interface Props {
   locale: Quran.Locale
   surahs: Quran.Surah[]
+  t: TFunction
 }
 
-function SurahIndex({ locale, surahs }: Props) {
+function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
-  const s = strings(locale);
   const onLanguageChange = (o: SelectOption) => {
     document.location.replace(`/${o.value}/`);
   };
@@ -29,7 +29,7 @@ function SurahIndex({ locale, surahs }: Props) {
       <div className="header">
         <a href={'/' + locale} className="image" />
       </div>
-      <div className="row title">{s('TheNobleQuran')}</div>
+      <div className="row title">{t(locale, 'TheNobleQuran')}</div>
       <div className="row dropdown-row">
         <ThemeSelect theme={theme} setTheme={setTheme} />
         <LanguageSelect locale={locale} onChange={onLanguageChange} />
@@ -52,7 +52,7 @@ function SurahIndex({ locale, surahs }: Props) {
         ))}
       </ul>
       <a href={`/${locale}/random`} className="row surah choose-random">
-        {s('ChooseRandomChapter')}
+        {t(locale, 'ChooseRandomChapter')}
       </a>
     </div>
   );
@@ -62,7 +62,8 @@ function SurahIndex({ locale, surahs }: Props) {
 (function() {
   const root: HTMLElement = document.querySelector('.root')!;
   const locale = root.getAttribute('data-locale') as Quran.Locale;
-  const script: HTMLScriptElement = document.querySelector('script[src="/surahs.json"]')!;
+  const script: HTMLScriptElement = document.querySelector('.json.surahs')!;
+  const t = i18n(document.querySelector<HTMLElement>('.json.i18n')!.innerText);
   const surahs: Quran.Surah[] = JSON.parse(script.innerText)
                                     .map((el: Quran.JSON.Surah) => {
                                       return Quran.Surah.fromJSON(locale, el);
@@ -71,6 +72,6 @@ function SurahIndex({ locale, surahs }: Props) {
   ReactDOM
     .createRoot(root)
     .render(
-      <SurahIndex locale={locale} surahs={surahs} />
+      <SurahIndex locale={locale} surahs={surahs} t={t} />
     );
 })();

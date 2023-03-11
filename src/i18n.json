@@ -1,0 +1,16 @@
+{
+  "en": {
+    "TheNobleQuran": "The Noble Quran",
+    "ChooseRandomChapter": "Choose a random chapter",
+    "surah": "Surah",
+    "ayah": "Ayah",
+    "comma": ","
+  },
+  "ar": {
+    "TheNobleQuran": "القرآن الكريم",
+    "ChooseRandomChapter": "اختر سورة عشوائية",
+    "surah": "سورة",
+    "ayah": "آية",
+    "comma": "،"
+  }
+}

@@ -1,25 +1,4 @@
-import { Locale } from 'lib/Quran';
-type Strings = 'decimal' | 'surah' | 'ayah' | 'comma' |
-               'TheNobleQuran' | 'ChooseRandomChapter';
-
-const sTable: Record<Locale, Record<Strings, string>> = {
-  en: {
-    TheNobleQuran: 'The Noble Quran',
-    ChooseRandomChapter: 'Choose a random chapter',
-    decimal: '.',
-    surah: 'Surah',
-    ayah: 'Ayah',
-    comma: ','
-  },
-  ar: {
-    TheNobleQuran: '\u{627}\u{644}\u{642}\u{631}\u{622}\u{646}\u{20}\u{627}\u{644}\u{643}\u{631}\u{64a}\u{645}',
-    ChooseRandomChapter: '\u{627}\u{62e}\u{62a}\u{631}\u{20}\u{633}\u{648}\u{631}\u{629}\u{20}\u{639}\u{634}\u{648}\u{627}\u{626}\u{64a}\u{629}',
-    decimal: '\u{066B}',
-    surah: '\u{633}\u{648}\u{631}\u{629}',
-    ayah: '\u{622}\u{64a}\u{629}',
-    comma: '\u{60c}'
-  }
-};
+import * as Quran from 'lib/Quran';
 
 /**
  * The read time baseline - as a number milliseconds -
@@ -31,25 +10,30 @@ export const DelayBaseLine = 2000;
  * The read time for each word in an Ayah,
  * relative to the active locale.
  */
-export const DelayPerWord: Record<Locale, number> = {
+export const DelayPerWord: Record<Quran.Locale, number> = {
   en: 500,
   ar: 750
 };
 
-export function numbers (locale: Locale) {
-  return function(number: number): string {
-    return Number(number).toLocaleString(locale);
+type PhraseMap<T> = {
+  [key: string]: undefined | string | PhraseMap<T>
+};
+
+export type TFunction = (locale: Quran.Locale, key: string) => string;
+
+export function i18n(json: string): TFunction {
+  const phrases: PhraseMap<string> = JSON.parse(json);
+  return function (locale: Quran.Locale, key: string) {
+    const path = key.split('.');
+    const phrase = path.reduce(
+      (o, k) => typeof(o) === 'object' ? o[k] : o,
+      phrases[locale]
+    );
+    return typeof phrase === 'string' ? phrase : key;
   };
 }
 
-export function strings (locale: Locale) {
-  return function(key: Strings): string {
-    const table = sTable[locale];
-    return table[key];
-  };
-}
-
-export function numberToDecimal(number: number, locale: Locale): string {
+export function formatNumber(number: number, locale: Quran.Locale): string {
   return number.toLocaleString(locale, { maximumFractionDigits: 1 })
                .split(/([^\d])/)
                .join(' ');

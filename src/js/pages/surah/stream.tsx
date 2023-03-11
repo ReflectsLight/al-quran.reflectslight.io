@@ -10,23 +10,22 @@ import { LanguageSelect } from 'components/LanguageSelect';
 import { PlayShape, PauseShape } from 'components/Shape';
 import * as Quran from 'lib/Quran';
 import { Slice } from 'lib/Quran/Slice';
-import { strings } from 'lib/i18n';
+import { i18n, TFunction } from 'lib/i18n';
 
 interface Props {
   node: HTMLScriptElement
   locale: Quran.Locale
-  surahId: number
   slice: Slice
   paused: boolean
+  t: TFunction
 }
 
-function SurahStream({ node, locale, surahId, slice, paused }: Props) {
+function SurahStream({ node, locale, slice, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
-  const s = strings(locale);
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
     const params = [
@@ -66,7 +65,7 @@ function SurahStream({ node, locale, surahId, slice, paused }: Props) {
       </div>
       {readyToRender && (
         <>
-          <div className="row title">{s('TheNobleQuran')}</div>
+          <div className="row title">{t(locale, 'TheNobleQuran')}</div>
           <div className="row dropdown-row">
             <ThemeSelect theme={theme} setTheme={setTheme} />
             <LanguageSelect locale={locale} onChange={onLanguageChange} />
@@ -87,6 +86,7 @@ function SurahStream({ node, locale, surahId, slice, paused }: Props) {
           locale={locale}
           endOfStream={endOfStream}
           isPaused={isPaused}
+          t={t}
         />
       }
       <div className="row">
@@ -118,6 +118,7 @@ function SurahStream({ node, locale, surahId, slice, paused }: Props) {
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));
   const paused = toBoolean(params.get('paused'));
+  const t = i18n(document.querySelector<HTMLElement>('.json.i18n')!.innerText);
 
   ReactDOM
     .createRoot(root)
@@ -125,9 +126,9 @@ function SurahStream({ node, locale, surahId, slice, paused }: Props) {
       <SurahStream
         node={node}
         locale={locale}
-        surahId={surahId}
         slice={slice}
         paused={paused}
+        t={t}
       />
     );
 })();

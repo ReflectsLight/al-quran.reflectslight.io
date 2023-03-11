@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
+
 require "ryo"
 require "nanoc-gunzip"
 require "nanoc-webpack"
@@ -35,6 +36,23 @@ require_rules "rules/pages/surah/stream", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/index", {locales:}
 require_rules "rules/pages/surah/redirect"
 require_rules "rules/pages/surah/id_redirect", {locales:}
+
+##
+# Inline JSON rules
+compile "/i18n.json" do
+  filter(:minify_json)
+  write(nil)
+end
+
+compile "/surahs.json" do
+  filter(:minify_json)
+  write(nil)
+end
+
+compile "/slugs.json" do
+  filter(:minify_json)
+  write(nil)
+end
 
 ##
 # Defaults

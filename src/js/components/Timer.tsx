@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as Quran from 'lib/Quran';
-import { numberToDecimal } from 'lib/i18n';
+import { formatNumber } from 'lib/i18n';
 
 interface Props {
   surah: Quran.Surah
@@ -25,7 +25,7 @@ export function Timer ({ surah, stream, setStream, locale, isPaused }: Props) {
   }, [ms, isPaused]);
   return (
     <div className='timer'>
-      {numberToDecimal(ms / 1000, locale)}
+      {formatNumber(ms / 1000, locale)}
     </div>
   );
 }

@@ -13,6 +13,8 @@
       </div>
     </div>
     <div class="root" data-locale="<%= locale %>"></div>
+    <%= inline_json("/i18n.json") %>
+    <%= inline_json("/surahs.json") %>
     <script src="/js/pages/surah/index/loader.js"></script>
   </body>
 </html>

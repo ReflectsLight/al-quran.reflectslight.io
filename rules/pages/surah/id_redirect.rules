@@ -6,7 +6,7 @@
 
 1.upto(114) do |id|
   locales.each do |locale|
-    compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{id}" do
+    compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{locale}/#{id}" do
       filter(:erb)
       write("/#{locale}/#{id}/index.html")
     end
