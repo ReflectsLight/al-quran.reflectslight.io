@@ -2,7 +2,6 @@ import {
   WebPackage,
   PackageSpec,
   Package,
-  ReporterFunction,
 } from './WebPackage/types';
 import FontLoader from './WebPackage/FontLoader';
 import ImageLoader from './WebPackage/ImageLoader';
@@ -13,11 +12,11 @@ import OtherLoader from './WebPackage/OtherLoader';
 export default function (pkgspec: PackageSpec): WebPackage {
   const self: WebPackage = Object.create(null);
   const pkg: Package = { fonts: [], images: [], stylesheets: [], scripts: [], others: [] };
-  const { fonts, images, stylesheets, scripts, others, onprogress } = pkgspec;
-  const total = [...fonts, ...images, ...stylesheets, ...scripts].length;
+  const { fonts, images, stylesheets, scripts, others, onprogress } = Object.assign({}, pkg, pkgspec);
+  const total = [...fonts, ...images, ...stylesheets, ...scripts, ...others].length;
 
   let index = 0;
-  const reporter: ReporterFunction = (el) => {
+  const reporter = <T>(el: T) => {
     index++;
     if (onprogress && index <= total) {
       onprogress(100 * (index / total));

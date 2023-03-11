@@ -1,8 +1,6 @@
-import { ReporterFunction } from './types';
-
 export default function(
   images: string[] | undefined,
-  reporter: ReporterFunction
+  reporter: <T>(f: T) => T
 ) {
   return Promise.all(
     (images || []).map((src) => {
@@ -11,7 +9,7 @@ export default function(
         el.onload = () => resolve(el);
         el.onerror = reject;
         el.src = src;
-      }).then((el) => reporter(el));
+      }).then((el) => reporter<HTMLElement>(el));
     })
   );
 }
