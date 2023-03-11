@@ -19,3 +19,7 @@ compile "/images/*.svg" do
   filter :gzip_binary
   write("#{item.identifier}.gz")
 end
+
+compile "/favicon.png" do
+  write(item.identifier.to_s)
+end
