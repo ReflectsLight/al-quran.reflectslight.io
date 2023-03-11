@@ -3,8 +3,8 @@ import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
 export class Surah {
   locale: Quran.Locale;
-  #surah: Quran.JSON.Surah;
   ayat: Quran.Ayat;
+  #surah: Quran.JSON.Surah;
 
   static fromDOMNode(locale: Quran.Locale, node: HTMLScriptElement) {
     const json = JSON.parse(node.innerText);
@@ -12,23 +12,22 @@ export class Surah {
   }
 
   static fromJSON(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.JSON.Ayat = []) {
-    return new Surah(
-      locale,
-      surah,
-      ayat.map(([id, text]) => {
-        return {
-          id: Number(id),
-          text,
-          readTimeMs: DelayBaseLine + (text.split(' ').length * DelayPerWord[locale]),
-        };
-      }),
-    );
+    return new Surah(locale, surah, this.mapFromJSON(locale, ayat));
+  }
+
+  static mapFromJSON(locale: Quran.Locale, ayat: Quran.JSON.Ayat) {
+    return ayat.map(([id, text]) => {
+      return {
+        id: Number(id), text,
+        readTimeMs: DelayBaseLine + (text.split(' ').length * DelayPerWord[locale])
+      }
+    });
   }
 
   constructor(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.Ayat) {
     this.locale = locale;
-    this.#surah = surah;
     this.ayat = ayat;
+    this.#surah = surah;
   }
 
   get id(): number {
