@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
@@ -19,10 +19,6 @@ function SurahIndex({ locale, surahs, t }: Props) {
   const onLanguageChange = (o: SelectOption) => {
     document.location.replace(`/${o.value}/`);
   };
-
-  useEffect(() => {
-    document.title = 'Al-Quran: index';
-  }, []);
 
   return (
     <div className={classNames('content', 'theme', theme, locale)}>
