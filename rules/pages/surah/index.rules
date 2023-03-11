@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 ##
 # Rules for the surah index available at /<locale>/ (eg /en/) and its
@@ -7,7 +8,7 @@
 locales.each do |locale|
   compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
     filter :erb, locals: {locale:}
-    write  "/#{locale}/index.html"
+    write "/#{locale}/index.html"
   end
 end
 

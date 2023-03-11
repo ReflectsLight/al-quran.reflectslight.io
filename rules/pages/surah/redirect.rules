@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 ##
 # Rules for a redirect from the root path to the surah index for a given locale

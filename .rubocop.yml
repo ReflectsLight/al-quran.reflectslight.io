@@ -1,28 +1,34 @@
 ##
 # Defaults
 AllCops:
-  TargetRubyVersion: 3.1
-
-##
-# Plugins
-require:
-  - standard
+  TargetRubyVersion: 3.2
+  Include:
+    - Rakefile.rb
+    - rules/*.rules
+    - rules/**/**/*.rules
+    - lib/*.rb
+    - lib/**/*.rb
+    - lib/**/**.rb
 
 ##
 # Defaults: standard-rb
+require:
+  - standard
 inherit_gem:
   standard: config/base.yml
 
 ##
-# Extra cops
+# Extra
 Style/FrozenStringLiteralComment:
   Enabled: true
 
 ##
-# Disabled cops (lib-specific)
+# Disabled
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 Layout/ArgumentAlignment:
+  Enabled: false
+Layout/ArrayAlignment:
   Enabled: false
 Style/TrivialAccessors:
   Enabled: false

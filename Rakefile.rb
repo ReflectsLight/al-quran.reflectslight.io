@@ -66,7 +66,7 @@ end
 
 namespace :env do
   desc "Verify the production branch is being used"
-  task :'verify-production-branch' do
+  task :"verify-production-branch" do
     git_branch = `git branch --show-current`.chomp
     if git_branch != "production"
       warn "This task can only be run on the 'production' branch."
@@ -75,13 +75,13 @@ namespace :env do
   end
 
   desc "Set environment variables for the production environment"
-  task :'set-production-vars' do
+  task :"set-production-vars" do
     require "dotenv"
     Dotenv.load
   end
 
   desc "Set environment variables for the development environment"
-  task :'set-development-vars' do
+  task :"set-development-vars" do
     ENV["NODE_ENV"] ||= "development"
   end
 end
