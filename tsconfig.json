@@ -8,6 +8,7 @@
         "dom"
     ],
     "noImplicitAny": true,
+    "strict": true,
     "module": "es6",
     "target": "es6",
     "jsx": "react",
