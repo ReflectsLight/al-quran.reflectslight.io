@@ -5,7 +5,9 @@ export default function(
 
   return Promise.all(
     (fonts || []).map(async (font) => {
-      return new FontFace(...font).load().then((font) => reporter<FontFace>(font));
+      return await new FontFace(...font)
+                      .load()
+                      .then((font) => reporter<FontFace>(font));
     })
   );
 }
