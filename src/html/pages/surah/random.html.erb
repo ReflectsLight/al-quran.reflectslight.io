@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Al-Quran: Redirect</title>
+    <title>Al-Quran: random redirect</title>
   </head>
   <body>
-    <script class="surah-id-to-slug" type="application/json">
-      <%= File.read(File.join(Dir.getwd, "src", "slugs.json")) %>
-    </script>
+    <%= inline_json("/slugs.json") %>
     <script src="/js/pages/surah/random.js"></script>
   </body>
 </html>
