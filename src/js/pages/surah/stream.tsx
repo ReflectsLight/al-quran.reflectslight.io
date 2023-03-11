@@ -118,7 +118,7 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));
   const paused = toBoolean(params.get('paused'));
-  const t = i18n(document.querySelector<HTMLElement>('.i18n')!.innerText);
+  const t = i18n(document.querySelector<HTMLElement>('.json.i18n')!.innerText);
 
   ReactDOM
     .createRoot(root)

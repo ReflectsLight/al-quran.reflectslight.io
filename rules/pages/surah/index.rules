@@ -30,8 +30,3 @@ compile "/css/pages/surah/index.scss" do
   filter :rainpress
   write("/css/pages/surah/index.css")
 end
-
-compile "/surahs.json" do
-  filter(:minify_json)
-  write "/surahs.json"
-end
