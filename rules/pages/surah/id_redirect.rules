@@ -8,13 +8,10 @@
 1.upto(114) do |id|
   locales.each do |locale|
     compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{locale}/#{id}" do
-      filter(:erb, locals: {locale:, surah_name: surah_id_to_name[id]})
+      surah_name = surah_id_to_name[id]
+      redirect_url = "https://al-quran.reflectslight.io/#{locale}/#{surah_name}/"
+      filter(:erb, {locals: {redirect_url:}})
       write("/#{locale}/#{id}/index.html")
     end
   end
-end
-
-compile "/js/pages/surah/id_redirect.ts" do
-  filter(:webpack)
-  write("/js/pages/surah/id_redirect.js")
 end

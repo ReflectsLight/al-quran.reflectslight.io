@@ -2,12 +2,9 @@
 <html>
   <head>
     <title>Al-Quran: redirect</title>
-    <link
-      rel="canonical"
-      href="https://al-quran.reflectslight.io/<%= locale %>/<%= surah_name %>/">
+    <link rel="canonical" href="<%= redirect_url %>">
+    <meta http-equiv="refresh" content="0; url=<%= redirect_url %>">
   </head>
   <body>
-    <%= inline_json('/slugs.json') %>
-    <script src="/js/pages/surah/id_redirect.js"></script>
   </body>
 </html>
