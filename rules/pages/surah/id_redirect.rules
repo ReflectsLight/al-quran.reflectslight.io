@@ -8,7 +8,7 @@
 1.upto(114) do |id|
   locales.each do |locale|
     compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{locale}/#{id}" do
-      filter(:erb)
+      filter(:erb, locals: {locale:, surah_name: surah_id_to_name[id]})
       write("/#{locale}/#{id}/index.html")
     end
   end

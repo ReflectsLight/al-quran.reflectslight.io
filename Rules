@@ -35,7 +35,7 @@ require_rules "rules/pages/surah/random", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/stream", {locales:, surah_id_to_name:}
 require_rules "rules/pages/surah/index", {locales:}
 require_rules "rules/pages/surah/redirect"
-require_rules "rules/pages/surah/id_redirect", {locales:}
+require_rules "rules/pages/surah/id_redirect", {locales:, surah_id_to_name:}
 
 ##
 # Inline CSS / JSON rules
