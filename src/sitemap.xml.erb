@@ -11,14 +11,14 @@
       href="https://al-quran.reflectslight.io/<%= locale %>/"/>
     <% end %>
   </url>
- <% Ryo.each(surah_id_to_name) do |_id, name| %>
+ <% Ryo.each(slugs) do |_id, slug| %>
   <url>
-    <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= name %>/</loc>
+    <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= slug %>/</loc>
     <% locales.each do |locale| %>
     <xhtml:link
       rel="alternate"
       hreflang="<%= locale %>"
-      href="https://al-quran.reflectslight.io/<%= locale %>/<%= name %>/"/>
+      href="https://al-quran.reflectslight.io/<%= locale %>/<%= slug %>/"/>
     <% end %>
   </url>
  <% end %>
