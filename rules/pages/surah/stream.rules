@@ -13,7 +13,7 @@ compile "/*/*/surah.json" do
   end
 end
 
-Ryo.each(surah_id_to_name) do |surah_id, slug|
+Ryo.each(slugs) do |surah_id, slug|
   locales.each do |locale|
     compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
       name = i18n[locale].surahs.names[surah_id.to_i - 1]
