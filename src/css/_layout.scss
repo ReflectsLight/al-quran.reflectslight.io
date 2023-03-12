@@ -67,7 +67,7 @@ body .root .content ul.body {
   list-style-type: none;
   height: 400px;
   padding: 0;
-  overflow: hidden;
+  scrollbar-gutter: stable both-edges;
 
   /* Height of 625px, or less */
   @media screen and (max-height: 625px) {
@@ -78,8 +78,4 @@ body .root .content ul.body {
   @media screen and (max-height: 595px) {
     height: 310px;
   }
-}
-
-body .root .content ul.body.scroll-y {
-  overflow-y: auto;
 }

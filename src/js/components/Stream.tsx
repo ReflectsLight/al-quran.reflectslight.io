@@ -15,7 +15,11 @@ interface Props {
 }
 
 export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t }: Props) {
-  const className = classNames('body', 'stream', { 'scroll-y': endOfStream || isPaused });
+  const className = classNames('body', 'stream');
+  const style: React.CSSProperties = endOfStream || isPaused ?
+                                     { 'overflowY': 'auto' } :
+                                     { 'overflowY': 'hidden' };
+
   const ayat = stream.map((ayah: Quran.Ayah) => {
     return (
       <li key={ayah.id} className="ayah fade">
@@ -42,7 +46,7 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t 
   }, [stream]);
 
   return (
-    <ul lang={locale} className={className}>
+    <ul lang={locale} className={className} style={style}>
       {ayat}
     </ul>
   );
