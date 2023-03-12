@@ -4,7 +4,6 @@ require "bundler/setup"
 require "ryo"
 require "listen"
 require_relative "lib/tasks"
-include Tasks
 
 namespace :nanoc do
   desc "Compile the website"
@@ -52,7 +51,7 @@ end
 namespace :deploy do
   desc "Deploy to a local web server (eg nginx)"
   task local: ["env:set-development-vars", "nanoc:compile"] do
-    Deploy::Local.call
+    Tasks::Deploy::Local.call
   end
 
   desc "Deploy to production"
@@ -60,7 +59,7 @@ namespace :deploy do
                 "env:set-production-vars",
                 "nanoc:clean",
                 "nanoc:compile"] do
-    Deploy::Remote.call
+    Tasks::Deploy::Remote.call
   end
 end
 
