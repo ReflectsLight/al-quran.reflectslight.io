@@ -10,7 +10,8 @@
     compile "/html/pages/surah/id_redirect.html.erb", rep: "redirect_id/#{locale}/#{id}" do
       surah_name = surah_id_to_name[id]
       redirect_url = "https://al-quran.reflectslight.io/#{locale}/#{surah_name}/"
-      filter(:erb, {locals: {redirect_url:}})
+      title = i18n[locale].TheNobleQuran
+      filter(:erb, {locals: {title:, redirect_url:, locale:}})
       write("/#{locale}/#{id}/index.html")
     end
   end

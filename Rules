@@ -11,6 +11,11 @@ surah_id_to_name = Ryo.from(
     File.read(File.join(Dir.getwd, "src", "slugs.json"))
   )
 )
+i18n = Ryo.from(
+  JSON.parse(
+    File.read(File.join(Dir.getwd, "src", "i18n.json"))
+  )
+)
 
 def require_rules(rules, locals = {}, target = binding)
   locals.each { target.local_variable_set(_1, _2) }
@@ -31,11 +36,11 @@ end
 ##
 # Require rules
 require_rules "rules/assets"
-require_rules "rules/pages/surah/random", {locales:, surah_id_to_name:}
-require_rules "rules/pages/surah/stream", {locales:, surah_id_to_name:}
-require_rules "rules/pages/surah/index", {locales:}
 require_rules "rules/pages/surah/redirect"
-require_rules "rules/pages/surah/id_redirect", {locales:, surah_id_to_name:}
+require_rules "rules/pages/surah/stream", {locales:, i18n:, surah_id_to_name:}
+require_rules "rules/pages/surah/index", {locales:, i18n:}
+require_rules "rules/pages/surah/random", {locales:, i18n:,surah_id_to_name:}
+require_rules "rules/pages/surah/id_redirect", {locales:, i18n:,surah_id_to_name:}
 
 ##
 # Inline CSS / JSON rules

@@ -7,7 +7,8 @@
 
 locales.each do |locale|
   compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
-    filter :erb, locals: {locale:}
+    title = i18n[locale].TheNobleQuran
+    filter(:erb, locals: {locale:, title:})
     write "/#{locale}/index.html"
   end
 end

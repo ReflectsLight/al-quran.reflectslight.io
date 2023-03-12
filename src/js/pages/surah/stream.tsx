@@ -46,11 +46,6 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
   })();
 
   useEffect(() => {
-    document.title = [
-      'Al-Quran:',
-      surah.transliteratedName,
-      `(${surah.localizedName})`
-    ].join(' ');
     if (slice.coversOneAyah) {
       setStream([...surah.ayat.slice(0, slice.end)]);
     } else {
