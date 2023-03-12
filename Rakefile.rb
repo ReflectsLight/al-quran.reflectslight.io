@@ -89,7 +89,7 @@ end
 namespace :lint do
   desc "Run rubocop (Ruby)"
   task :rubocop do
-    sh "bundle exec rubocop lib/ src/"
+    sh "bundle exec rubocop"
   end
 
   desc "Run eslint (TypeScript)"

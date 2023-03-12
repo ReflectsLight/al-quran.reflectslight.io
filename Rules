@@ -39,8 +39,8 @@ require_rules "rules/assets"
 require_rules "rules/pages/surah/redirect"
 require_rules "rules/pages/surah/stream", {locales:, i18n:, slugs:}
 require_rules "rules/pages/surah/index", {locales:, i18n:}
-require_rules "rules/pages/surah/random", {locales:, i18n:,slugs:}
-require_rules "rules/pages/surah/id_redirect", {locales:, i18n:,slugs:}
+require_rules "rules/pages/surah/random", {locales:, i18n:, slugs:}
+require_rules "rules/pages/surah/id_redirect", {locales:, i18n:, slugs:}
 
 ##
 # Inline CSS / JSON rules
