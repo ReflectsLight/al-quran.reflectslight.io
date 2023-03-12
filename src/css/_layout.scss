@@ -1,5 +1,5 @@
 $black: #454545;
-$max-width: 470px;
+$max-width: 475px;
 
 [lang="en"] {
   font-family: "Kanit Regular";
@@ -67,7 +67,6 @@ body .root .content ul.body {
   list-style-type: none;
   height: 400px;
   padding: 0;
-  scrollbar-gutter: stable both-edges;
 
   /* Height of 625px, or less */
   @media screen and (max-height: 625px) {

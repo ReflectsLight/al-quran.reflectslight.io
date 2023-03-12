@@ -9,6 +9,8 @@
 }
 
 .content ul.body.stream {
+  scrollbar-gutter: stable;
+
   li.ayah {
     span.surah-id.ayah-id {
       display: block;
@@ -32,7 +34,7 @@
 }
 
 .content ul.body.stream {
-  li.ayah p { width: 99%; }
+  li.ayah p { width: 100%; }
 }
 
 .content .timer {
