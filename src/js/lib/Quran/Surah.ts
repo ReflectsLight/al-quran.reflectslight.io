@@ -1,5 +1,4 @@
 import * as Quran from 'lib/Quran';
-import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
 export class Surah {
   locale: Quran.Locale;
@@ -16,12 +15,7 @@ export class Surah {
   }
 
   static mapFromJSON(locale: Quran.Locale, ayat: Quran.JSON.Ayat) {
-    return ayat.map(([id, text]) => {
-      return {
-        id: Number(id), text,
-        readTimeMs: DelayBaseLine + (text.split(' ').length * DelayPerWord[locale])
-      }
-    });
+    return ayat.map((ayah) => Quran.Ayah.fromJSON(locale, ayah));
   }
 
   constructor(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.Ayat) {
