@@ -26,10 +26,17 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node));
   const readyToRender = stream.length > 0;
+  const getAyahParam = (slice: Slice, stream: Quran.Ayat) => {
+    if(slice.coversSubsetOfSurah) {
+      return `${slice.begin}..${slice.end}`;
+    } else {
+      return stream.length;
+    }
+  };
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
     const params = [
-      ['ayah', slice.toParam() || stream.length],
+      ['ayah', getAyahParam(slice, stream)],
       ['paused', isPaused ? 't' : null]
     ];
     const query = params.filter(([, v]) => v).flatMap(([k,v]) => `${k}=${v}`).join('&');
@@ -39,7 +46,7 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
     if (slice.coversOneAyah || slice.coversOneSurah) {
       return stream.length === surah.ayat.length;
     } else if (slice.coversSubsetOfSurah) {
-      return stream.length === slice.length;
+      return stream.length === slice.subsetLength;
     } else {
       return false;
     }
@@ -47,7 +54,7 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
 
   useEffect(() => {
     if (slice.coversOneAyah) {
-      setStream([...surah.ayat.slice(0, slice.end)]);
+      setStream([...surah.ayat.slice(0, slice.begin)]);
     } else {
       setStream([surah.ayat[slice.begin - 1]]);
     }
