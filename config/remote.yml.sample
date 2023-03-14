@@ -1,0 +1,14 @@
+rc:
+  hostname: <hostname>
+pf:
+  iface: <interface>
+  pass:
+    in:
+      - from: any
+        to: <rc.hostname>
+        proto: tcp
+        port: 80
+    out:
+      - to: <trusted_host>
+        proto: <protocol>
+        port: <port>
