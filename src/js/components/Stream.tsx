@@ -1,6 +1,6 @@
 import * as Quran from 'lib/Quran';
 import React, { useEffect } from 'react';
-import { TFunction } from 'lib/i18n';
+import { formatNumber, TFunction } from 'lib/i18n';
 import { Slice } from 'lib/Quran/Slice';
 import classNames from 'classnames';
 
@@ -25,10 +25,10 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t 
       <li key={ayah.id} className="ayah fade">
         <span className="surah-id ayah-id">
           {t(locale, 'surah')}{' '}
-          {surah.id.toLocaleString(locale)}
+          {formatNumber(surah.id, locale)}
           {t(locale, 'comma')}{' '}
           {t(locale, 'ayah')}{' '}
-          {ayah.id.toLocaleString(locale)}
+          {formatNumber(ayah.id, locale)}
         </span>
         <p>{ayah.text}</p>
       </li>

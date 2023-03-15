@@ -6,7 +6,7 @@ import * as Quran from 'lib/Quran';
 import { SelectOption } from 'components/Select';
 import { ThemeSelect } from 'components/ThemeSelect';
 import { LanguageSelect } from 'components/LanguageSelect';
-import { i18n, TFunction } from 'lib/i18n';
+import { i18n, formatNumber, TFunction } from 'lib/i18n';
 
 interface Props {
   locale: Quran.Locale
@@ -35,7 +35,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
           <li className="surah" key={key}>
             <a href={`/${locale}/${surah.slug}`}>
               <div className="surah id">
-                {surah.id.toLocaleString(locale)}
+                {formatNumber(surah.id, locale)}
               </div>
               <div className="surah name">
                 {surah.localizedName}
