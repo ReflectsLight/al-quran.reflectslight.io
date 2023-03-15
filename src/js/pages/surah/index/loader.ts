@@ -10,6 +10,7 @@ import WebPackage from 'lib/WebPackage';
     scripts: ['/js/pages/surah/index.js'],
     stylesheets: ['/css/pages/surah/index.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
+    others: [],
     fonts: [
       ['Kanit Regular', 'url(/fonts/kanit-regular.ttf)'],
       ['Vazirmatn Regular', 'url(/fonts/vazirmatn-regular.ttf)'],
