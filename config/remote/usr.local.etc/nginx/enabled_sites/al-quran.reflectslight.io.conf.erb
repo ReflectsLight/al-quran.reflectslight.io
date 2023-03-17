@@ -1,0 +1,19 @@
+server {
+  server_name <%= rc.hostname %>;
+  listen 80;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  gzip_static on;
+  server_name <%= rc.hostname %>;
+  listen 443 ssl;
+  ssl_certificate <%= nginx.ssl.cert %>;
+  ssl_certificate_key <%= nginx.ssl.cert_key %>;
+  error_log <%= nginx.logs.errors %> info;
+  access_log <%= nginx.logs.access %> combined;
+  add_header Strict-Transport-Security "max-age=31536000" always;
+  location / {
+    root <%= nginx.root %>;
+  }
+}
