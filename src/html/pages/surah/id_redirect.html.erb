@@ -4,8 +4,19 @@
     <title><%= title %></title>
     <link rel="canonical" href="<%= redirect_url %>">
     <link rel="icon" href="/favicon.png">
-    <meta http-equiv="refresh" content="0; url=<%= redirect_url %>">
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=<%= redirect_url %>">
+    </noscript>
   </head>
   <body>
+    <script>
+      (function() {
+        var el = document.createElement("meta");
+        var url = "<%= redirect_url %>" + document.location.search;
+        el.setAttribute("http-equiv", "refresh");
+        el.setAttribute("content", "0; url=" + url);
+        document.head.append(el);
+      })();
+    </script>
   </body>
 </html>
