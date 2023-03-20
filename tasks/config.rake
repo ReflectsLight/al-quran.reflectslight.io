@@ -34,7 +34,7 @@ end
 task "config:build:nginx", :env do |task, args|
   options = read_options.call(**args)
   context = ERBContext.with_locals(options)
-  glob = File.join("config", args[:env], "usr.local.etc", "**", "*.conf.erb")
+  glob = File.join("config", "generic", "usr.local.etc", "**", "*.conf.erb")
   Dir.glob(glob).each do |file|
     dest = File.join(File.dirname(file), File.basename(file, ".erb"))
     File.binwrite dest,

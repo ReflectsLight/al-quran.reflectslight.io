@@ -1,0 +1,21 @@
+##
+# hostname
+rc:
+  hostname: <hostname>
+
+##
+# nginx
+nginx:
+  root: <path>
+  user: <username>
+  worker:
+    process_count: <x>
+    conn_count: <y>
+  logs:
+    errors: <path>
+    access: <path>
+  ##
+  # optional
+  ssl:
+    cert: <path>
+    cert_key: <path>
