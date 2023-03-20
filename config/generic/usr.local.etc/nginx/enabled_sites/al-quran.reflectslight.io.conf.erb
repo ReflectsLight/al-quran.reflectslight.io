@@ -22,6 +22,6 @@ server {
   ssl_certificate <%= nginx.ssl.cert %>;
   ssl_certificate_key <%= nginx.ssl.cert_key %>;
   <% else %>
-  listen 80;
+  listen 127.0.0.1:80;
   <% end %>
 }
