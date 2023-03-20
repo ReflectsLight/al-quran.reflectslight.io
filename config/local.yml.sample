@@ -17,5 +17,5 @@ nginx:
   ##
   # optional
   ssl:
-    cert: <path>
-    cert_key: <path>
+    cert:
+    cert_key:

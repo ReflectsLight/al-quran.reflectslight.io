@@ -12,34 +12,54 @@ read_options = ->(env:) do
   Ryo.from(YAML.load_file(path))
 end
 
+get_build_dir = -> (env:) do
+  path = File.join("./build", env)
+  mkdir_p(path) unless Dir.exist?(path)
+  path
+end
+
+build_files = -> (env:, base:, glob:) do
+  options = read_options.call(env:)
+  build_dir = get_build_dir.call(env:)
+  context = ERBContext.with_locals(options)
+  Dir.glob(glob, base:).each do |file|
+    erbf = File.join(base, file)
+    path = File.join(build_dir, File.dirname(file))
+    dest = File.join(path, File.basename(file, ".erb"))
+    mkdir_p(path)
+    File.binwrite dest,
+                  ERB.new(File.binread(erbf), trim_mode: "-").result(context)
+    print "View #{dest} [y/n]:"
+    system("cat #{dest} | less") if $stdin.gets.chomp == "y"
+  end
+end
+
 task "config:build", :env do |task, args|
-  Rake::Task["config:build:etc"].invoke(args[:env])
-  Rake::Task["config:build:nginx"].invoke(args[:env])
+  env = args[:env]
+  case env
+  when "remote"
+    Rake::Task["config:build:etc"].invoke(env)
+  when "local"
+  else
+    warn "env should be 'remote', or 'local', got: #{env}"
+  end
+  Rake::Task["config:build:nginx"].invoke(env)
 end
 
 task "config:build:etc", :env do |task, args|
-  options = read_options.call(**args)
-  context = ERBContext.with_locals(options)
-  glob = File.join("config", args[:env], "etc", "*.conf.erb")
-  etc_files = Dir.glob(glob)
-  etc_files.each do |file|
-    dest = File.join(File.dirname(file), File.basename(file, ".erb"))
-    File.binwrite dest,
-                  ERB.new(File.binread(file), trim_mode: "-").result(context)
-    print "View #{dest} [y/n]:"
-    system("cat #{dest} | less") if $stdin.gets.chomp == "y"
-  end
+  env = args[:env]
+  build_files.call(
+    env:,
+    base: "config/#{env}",
+    glob: "etc/*.conf.erb"
+  )
 end
 
 task "config:build:nginx", :env do |task, args|
-  options = read_options.call(**args)
-  context = ERBContext.with_locals(options)
-  glob = File.join("config", "generic", "usr.local.etc", "**", "*.conf.erb")
-  Dir.glob(glob).each do |file|
-    dest = File.join(File.dirname(file), File.basename(file, ".erb"))
-    File.binwrite dest,
-                  ERB.new(File.binread(file), trim_mode: "-").result(context)
-    print "View #{dest} [y/n]:"
-    system("cat #{dest} | less") if $stdin.gets.chomp == "y"
-  end
+  env = args[:env]
+  build_files.call(
+    env:,
+    base: "config/generic",
+    glob: "usr.local.etc/**/*.conf.erb"
+  )
 end

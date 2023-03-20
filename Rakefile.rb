@@ -4,6 +4,7 @@ require "bundler/setup"
 require "ryo"
 require "listen"
 require_relative "lib/tasks"
+load "tasks/config.rake"
 
 namespace :nanoc do
   desc "Compile the website"
