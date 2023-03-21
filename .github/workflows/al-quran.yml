@@ -18,9 +18,9 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: eslint
-      run: rake lint:eslint
+      run: bundle exec rake lint:eslint
     - name: rubocop
-      run: rake lint:rubocop
+      run: bundle exec rake lint:rubocop
   build:
     runs-on: ubuntu-latest
     steps:
@@ -29,4 +29,4 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: nanoc
-      run: rake build
+      run: bundle exec rake build
