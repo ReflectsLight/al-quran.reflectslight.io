@@ -1,6 +1,7 @@
 build/
 tmp/
 node_modules/
+.bundle/
 *.log
 .env
 .idea

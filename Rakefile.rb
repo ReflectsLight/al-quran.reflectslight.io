@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-require "bundler/setup"
 require "ryo"
 require "listen"
 require_relative "lib/tasks"
-load "tasks/config.rake"
+
+load "tasks/config/build.rake"
+load "tasks/config/install.rake"
 
 namespace :nanoc do
   desc "Compile the website"

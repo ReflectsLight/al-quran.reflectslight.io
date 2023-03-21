@@ -5,7 +5,7 @@ require "bundler/setup"
 require "erb"
 require "ryo"
 require "yaml"
-require_relative "../tasks.lib/erb_context"
+require_relative "../../tasks.lib/erb_context"
 
 read_options = ->(env:) do
   path = File.join(Dir.getwd, "config", "#{env}.yml")
@@ -34,6 +34,7 @@ build_files = -> (env:, base:, glob:) do
   end
 end
 
+desc "Build configuration files"
 task "config:build", :env do |task, args|
   env = args[:env]
   case env
@@ -46,6 +47,7 @@ task "config:build", :env do |task, args|
   Rake::Task["config:build:nginx"].invoke(env)
 end
 
+desc "Build /etc configuration files"
 task "config:build:etc", :env do |task, args|
   env = args[:env]
   build_files.call(
@@ -55,6 +57,7 @@ task "config:build:etc", :env do |task, args|
   )
 end
 
+desc "Build nginx configuration files"
 task "config:build:nginx", :env do |task, args|
   env = args[:env]
   build_files.call(
