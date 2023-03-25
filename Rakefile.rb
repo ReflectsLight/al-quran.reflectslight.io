@@ -2,8 +2,6 @@
 
 require "ryo"
 require "listen"
-require_relative "lib/tasks"
-ENV["SASS_PATH"] = "./src/css/"
 
 load "tasks/config/build.rake"
 load "tasks/config/install.rake"
@@ -12,6 +10,7 @@ load "tasks/deploy.rake"
 namespace :nanoc do
   desc "Compile the website"
   task :compile do
+    ENV["SASS_PATH"] = "./src/css/"
     sh "bundle exec nanoc co"
   end
 
