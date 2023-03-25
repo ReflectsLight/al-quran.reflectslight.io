@@ -41,38 +41,6 @@ namespace :watch do
   end
 end
 
-namespace :deploy do
-  desc "Deploy to production"
-  task remote: ["env:verify-production-branch",
-                "env:set-production-vars",
-                "nanoc:clean",
-                "nanoc:compile"] do
-    Tasks::Deploy::Remote.call
-  end
-end
-
-namespace :env do
-  desc "Verify the production branch is being used"
-  task :"verify-production-branch" do
-    git_branch = `git branch --show-current`.chomp
-    if git_branch != "production"
-      warn "This task can only be run on the 'production' branch."
-      exit(1)
-    end
-  end
-
-  desc "Set environment variables for the production environment"
-  task :"set-production-vars" do
-    require "dotenv"
-    Dotenv.load
-  end
-
-  desc "Set environment variables for the development environment"
-  task :"set-development-vars" do
-    ENV["NODE_ENV"] ||= "development"
-  end
-end
-
 namespace :lint do
   desc "Run rubocop (Ruby)"
   task :rubocop do

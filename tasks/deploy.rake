@@ -7,12 +7,16 @@ read_options = ->(env:) do
 end
 
 desc "Deploy the website"
-task "deploy", [:env] => %i[nanoc:compile] do |task, args|
+task "deploy", [:env] do |task, args|
   env = args[:env]
   case env
   when "remote"
-    # TODO
+    ENV["NODE_ENV"] = "production"
+    Rake::Task["nanoc:clean"].invoke
+    Rake::Task["nanoc:compile"].invoke
+    Rake::Task["deploy:remote"].invoke
   when "local"
+    Rake::Task["nanoc:compile"].invoke
     if Process.euid != 0
       sh "doas -u root bundle exec rake deploy:local"
       exit $?.exitstatus
@@ -33,4 +37,20 @@ task "deploy:local" do
   sh "chown -R #{chown} #{dest_dir}"
   sh "chmod -R og-rwx #{dest_dir}"
   sh "chmod -R u+rwX #{dest_dir}"
+end
+
+task "deploy:remote" do
+  git_branch = `git branch --show-current`.chomp
+  options = read_options.call(env: "remote")
+  if git_branch != "production"
+    warn "This task can only be run on the 'production' branch."
+    exit(1)
+  end
+  print "Wait...", "\n"
+  sh(
+    "rsync", "--delete", "-rvah",
+    "--chmod=Fu=rw,Fg=r,Du=rwx,Dg=rx",
+    "--rsync-path='/home/0x1eef/rsync.sh'",
+    "build/al-quran", options.deploy.uri
+  )
 end

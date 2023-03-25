@@ -4,6 +4,11 @@ rc:
   hostname: <hostname>
 
 ##
+# deploy
+deploy:
+  uri: user@hostname:/path/
+
+##
 # nginx
 nginx:
   root: <path>
