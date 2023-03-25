@@ -4,19 +4,21 @@
   </a>
 </p>
 
-This git repository holds the source code of a statically generated website
-for reading The Quran. The website is composed purely of HTML, CSS, JavaScript
-and other static assets that require no more than a web server that can host
-them.
+This git repository contains the source code of a statically compiled
+website for reading The Quran. After the website is compiled, it consists
+of HTML, CSS, JavaScript and other static assets that can be hosted on a
+regular web server. The repository is optimized for nginx, and (Free|Open)BSD
+as a deployment target. The source code is a mixture of Ruby, TypeScript, and
+JavaScript with React being the main player on the frontend.
 
 <p align="center">
   <strong>Open Source</strong>
 </p>
 
-The source code of this repository is released under the terms of the GNU
-Public License (GPL). There's no restrictions placed on the right to modify,
-copy, redistribute and host the website on a web server / domain of your own
-so long  as it is within accordance with the GPL. See
+The source code is released under the terms of the GNU Public License (GPL).
+No restrictions are placed on the right to modify, copy, redistribute or host
+the website on a web server / domain of your own as long as it is done in
+accordance with the GPL. See
 [LICENSE](./LICENSE)
 for a copy of the license, and see
 [TLDRLegal](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3)
@@ -26,7 +28,7 @@ for a short summary of the GPL.
   <strong>Credits</strong>
 </p>
 
-There is credit due to a number of graphic artists whose work is used by
+Credit due to a number of graphic artists whose work is used by
 this project, and with thanks I credit the following graphic files to their
 respective authors:
 
