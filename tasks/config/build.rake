@@ -41,6 +41,7 @@ task "config:build", :env do |task, args|
   when "remote"
     Rake::Task["config:build:etc"].invoke(env)
   when "local"
+    # no-op
   else
     warn "env should be 'remote', or 'local', got: #{env}"
   end

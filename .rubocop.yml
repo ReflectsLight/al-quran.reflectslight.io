@@ -32,5 +32,7 @@ Layout/ArgumentAlignment:
   Enabled: false
 Layout/ArrayAlignment:
   Enabled: false
+Layout/ExtraSpacing:
+  Enabled: false
 Style/TrivialAccessors:
   Enabled: false

@@ -3,14 +3,16 @@
 require "ryo"
 require "listen"
 require_relative "lib/tasks"
+ENV["SASS_PATH"] = "./src/css/"
 
 load "tasks/config/build.rake"
 load "tasks/config/install.rake"
+load "tasks/deploy.rake"
 
 namespace :nanoc do
   desc "Compile the website"
   task :compile do
-    sh "ruby -S bundle exec nanoc co"
+    sh "bundle exec nanoc co"
   end
 
   desc "Delete the build directory"
@@ -24,7 +26,7 @@ task build: "nanoc:compile"
 desc "Start a Ruby web server on localhost"
 task server: ["nanoc:compile"] do
   Dir.chdir(File.join(Dir.getwd, "build", "al-quran")) do
-    sh "ruby -S bundle exec adsf"
+    sh "bundle exec adsf"
   end
 end
 
@@ -37,25 +39,9 @@ namespace :watch do
     end.start
     Rake::Task["server"].invoke
   end
-
-  namespace :deploy do
-    desc "Watch for changes (deploy:local task)"
-    task :local do
-      Bundler.with_unbundled_env { Process.wait spawn("rake deploy:local") }
-      Listen.to(File.join(Dir.getwd, "src")) do
-        Bundler.with_unbundled_env { sh "rake deploy:local" }
-      end.start
-      sleep
-    end
-  end
 end
 
 namespace :deploy do
-  desc "Deploy to a local web server (eg nginx)"
-  task local: ["env:set-development-vars", "nanoc:compile"] do
-    Tasks::Deploy::Local.call
-  end
-
   desc "Deploy to production"
   task remote: ["env:verify-production-branch",
                 "env:set-production-vars",
