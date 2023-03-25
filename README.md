@@ -28,7 +28,7 @@ for a short summary of the GPL.
   <strong>Credits</strong>
 </p>
 
-Credit due to a number of graphic artists whose work is used by
+Credit is due to a number of graphic artists whose work is used by
 this project, and with thanks I credit the following graphic files to their
 respective authors:
 
