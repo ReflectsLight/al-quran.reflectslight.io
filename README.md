@@ -9,7 +9,7 @@ website for reading The Quran. After the website is compiled, it consists
 of HTML, CSS, JavaScript and other static assets that can be hosted on a
 regular web server. The repository is optimized for nginx, and (Free|Open)BSD
 as a deployment target. The source code is a mixture of Ruby, TypeScript, and
-JavaScript with React being the main player on the frontend.
+JavaScript with React being the driving force on the frontend.
 
 <p align="center">
   <strong>Open Source</strong>
