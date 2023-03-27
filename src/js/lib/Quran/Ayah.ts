@@ -1,5 +1,4 @@
 import * as Quran from 'lib/Quran';
-import { DelayBaseLine, DelayPerWord } from 'lib/i18n';
 
 export type Ayah = {
   id: number
@@ -7,16 +6,14 @@ export type Ayah = {
   readTimeMs: number
 };
 
-export function Ayah(ayah: Ayah): Ayah {
+export function Ayah(ayah: Quran.JSON.Ayah): Ayah {
   const self = Object.create(null);
-  self.id = ayah.id;
-  self.text = ayah.text;
-  self.readTimeMs = ayah.readTimeMs;
+  self.id = ayah[0];
+  self.text = ayah[1];
+  self.readTimeMs = 0;
   return self;
 }
 
-Ayah.fromJSON = (locale: Quran.Locale, ayah: Quran.JSON.Ayah): Ayah => {
-  const [ id, text ] = ayah;
-  const readTimeMs = DelayBaseLine + (text.split(' ').length * DelayPerWord[locale]);
-  return Ayah({ id: Number(id), text, readTimeMs });
+Ayah.fromJSON = (ayah: Quran.JSON.Ayah): Ayah => {
+  return Ayah(ayah);
 };

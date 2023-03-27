@@ -60,6 +60,9 @@ First and foremost, Alhamdulillah.
   * [/src/images/leaf.svg](/src/images/leaf.svg)
     by
     [Fasil](https://freeicons.io/profile/722).
+  * [RefreshShape](/src/js/components/Shape.tsx)
+    by
+    [Muhammad Haq](https://freeicons.io/profile/823).
 
 * Thanks to the following translators:
   * English (The Clear Quran) by Dr. Mustafa Khattab
