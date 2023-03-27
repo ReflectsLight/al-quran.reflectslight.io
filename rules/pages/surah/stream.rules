@@ -25,7 +25,9 @@ Ryo.each(slugs) do |surah_id, slug|
 end
 
 compile "/js/pages/surah/stream.tsx" do
-  filter :webpack, depend_on: ["/js/components", "/js/lib/[!WebPackage]/", "/js/hooks"]
+  filter :webpack,
+         depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
+         reject: proc { _1.include?('WebPackage') }
   write "/js/pages/surah/stream.js"
   filter :gzip_text
   write "/js/pages/surah/stream.js.gz"

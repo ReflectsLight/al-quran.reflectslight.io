@@ -7,10 +7,10 @@ GIT
 
 GIT
   remote: https://github.com/0x1eef/nanoc-webpack.rb.git
-  revision: be0f625e3e1862b7cb6f1698074a9109abb26137
-  tag: v0.1.5
+  revision: 5c0630138fa8188c37ed85d3708d59ca85d50921
+  tag: v0.2.0
   specs:
-    nanoc-webpack.rb (0.1.5)
+    nanoc-webpack.rb (0.2.0)
 
 GIT
   remote: https://github.com/0x1eef/ryo.rb.git
