@@ -25,6 +25,34 @@ for a copy of the license, and see
 for a short summary of the GPL.
 
 <p align="center">
+  <strong>Local install</strong>
+</p>
+
+_Clone repository_
+
+    git clone https://github.com/ReflectsLight/al-quran.git
+    cd al-quran
+
+_Run dependency check_
+
+The `bin/run-dependency-check` script will check that the required
+dependencies are available: Ruby, NodeJS, nginx, et cetera.
+
+    $ ./bin/run-dependency-check
+
+Assuming it was a success:
+
+    found: ruby
+    found: bundle
+    found: node
+    found: npm
+    found: nginx
+    found: doas
+
+Otherwise, the dependencies that are missing will be listed. All
+dependencies should be found before proceeding to the next step.
+
+<p align="center">
   <strong>Credits</strong>
 </p>
 
