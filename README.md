@@ -52,6 +52,13 @@ Assuming it was a success:
 Otherwise, the dependencies that are missing will be listed. All
 dependencies should be found before proceeding to the next step.
 
+__3) Install packages__
+
+At this step we're ready to install Ruby, and NodeJS packages:
+
+    $ npm install
+    $ bundle install --path=.bundle/
+
 <p align="center">
   <strong>Credits</strong>
 </p>
