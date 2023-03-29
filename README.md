@@ -28,12 +28,12 @@ for a short summary of the GPL.
   <strong>Local install</strong>
 </p>
 
-_Clone repository_
+__1) Clone repository__
 
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-_Run dependency check_
+__2) Run dependency check__
 
 The `bin/run-dependency-check` script will check that the required
 dependencies are available: Ruby, NodeJS, nginx, et cetera.
