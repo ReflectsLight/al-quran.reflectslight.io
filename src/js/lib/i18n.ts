@@ -1,20 +1,5 @@
 import * as Quran from 'lib/Quran';
 
-/**
- * The read time baseline - as a number milliseconds -
- * that all Ayah share, regardless of locale.
- */
-export const DelayBaseLine = 2000;
-
-/**
- * The read time for each word in an Ayah,
- * relative to the active locale.
- */
-export const DelayPerWord: Record<Quran.Locale, number> = {
-  en: 500,
-  ar: 750
-};
-
 type PhraseMap<T> = {
   [key: string]: undefined | string | PhraseMap<T>
 };

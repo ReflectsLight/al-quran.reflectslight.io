@@ -11,7 +11,7 @@ import WebPackage from 'lib/WebPackage';
     scripts: ['/js/pages/surah/stream.js'],
     stylesheets: ['/css/pages/surah/stream.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
-    others: [`/${locale}/${surahId}/surah.json`],
+    others: [`/${locale}/${surahId}/surah.json`, `/time_slots/${surahId}.json`],
     fonts: [
       ['Kanit Regular', 'url(/fonts/kanit-regular.ttf)'],
       ['Vazirmatn Regular', 'url(/fonts/vazirmatn-regular.ttf)'],

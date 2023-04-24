@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.png">
+  </head>
+  <body>
+    <div class="webpackage loader">
+      <div>
+        <progress value="0" max="100"></progress>
+        <span class="percentage">Loading...</span>
+      </div>
+    </div>
+    <div class="root" data-locale="<%= locale %>"></div>
+    <script src="/js/index/loader.js"></script>
+    <%- inline("surahs.json", "json") %>
+    <%- inline("i18n.json", "json") %>
+    <%- inline("webpackage.css", "css") %>
+  </body>
+</html>

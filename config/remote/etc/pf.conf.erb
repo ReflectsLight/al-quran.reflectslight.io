@@ -1,8 +1,0 @@
-set skip on lo0
-block all
-<% pf.pass.in.each do |rule| -%>
-pass in on <%= pf.iface %> <%= pf_in(rule) %>
-<% end -%>
-<% pf.pass.out.each do |rule| -%>
-pass out on <%= pf.iface %> <%= pf_out(rule) %>
-<% end -%>

@@ -1,5 +1,5 @@
 .root .content.theme.moon {
-  @import "themes/moon/colors";
+  @import "~/themes/moon/colors";
 
   .row.details {
     color: $gold;
@@ -22,5 +22,16 @@
 
   .row .shape {
     background: $gold;
+  }
+
+  .row svg g {
+    polygon {
+      stroke: $gold;
+      stroke-width: 5;
+    }
+    path {
+      stroke: $gold;
+      stroke-width: 5;
+    }
   }
 }

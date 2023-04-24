@@ -1,5 +1,5 @@
 .root .content.theme.leaf {
-  @import "themes/leaf/colors";
+  @import "~/themes/leaf/colors";
 
   .row.details {
     color: $green;
@@ -15,5 +15,16 @@
   .timer {
     background-color: $green;
     color: $white;
+  }
+
+  .row svg g {
+    polygon {
+      stroke: $green;
+      stroke-width: 5;
+    }
+    path {
+      stroke: $green;
+      stroke-width: 5;
+    }
   }
 }

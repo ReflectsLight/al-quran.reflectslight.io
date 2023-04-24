@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
-import * as Quran from 'lib/Quran';
-import { SelectOption } from 'components/Select';
-import { ThemeSelect } from 'components/ThemeSelect';
-import { LanguageSelect } from 'components/LanguageSelect';
-import { i18n, formatNumber, TFunction } from 'lib/i18n';
+import * as Quran from '@/lib/Quran';
+import { SelectOption } from '@/components/Select';
+import { ThemeSelect } from '@/components/ThemeSelect';
+import { LanguageSelect } from '@/components/LanguageSelect';
+import { i18n, formatNumber, TFunction } from '@/lib/i18n';
 
 interface Props {
   locale: Quran.Locale

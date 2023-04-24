@@ -1,5 +1,5 @@
 import * as Quran from 'lib/Quran';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { formatNumber, TFunction } from 'lib/i18n';
 import { Slice } from 'lib/Quran/Slice';
 import classNames from 'classnames';
@@ -11,15 +11,17 @@ interface Props {
   slice: Slice
   endOfStream: boolean
   isPaused: boolean
+  soundOn: boolean
+  setSoundOn: (v: boolean) => void
   t: TFunction
 }
 
-export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t }: Props) {
+export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, setSoundOn, soundOn, t }: Props) {
   const className = classNames('body', 'stream');
   const style: React.CSSProperties = endOfStream || isPaused ?
                                      { 'overflowY': 'auto' } :
                                      { 'overflowY': 'hidden' };
-
+  const audioRef = useRef<HTMLAudioElement>(null);
   const ayat = stream.map((ayah: Quran.Ayah) => {
     return (
       <li key={ayah.id} className="ayah fade">
@@ -31,9 +33,11 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t 
           {formatNumber(ayah.id, locale)}
         </span>
         <p>{ayah.text}</p>
+        <audio ref={audioRef} src={`/audio/${surah.id}/${ayah.id}.mp3`} />
       </li>
     );
   });
+
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector('ul.stream')!;
@@ -44,6 +48,18 @@ export function Stream({ surah, stream, locale, slice, endOfStream, isPaused, t 
       ul.scroll({ top: ul.scrollHeight, behavior: 'smooth' });
     }
   }, [stream]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) {
+      return;
+    } else if (isPaused || !soundOn) {
+      audio.pause();
+    } else if (soundOn) {
+      audio.play()
+           .catch(() => setSoundOn(false));
+    }
+  }, [stream, isPaused, soundOn]);
 
   return (
     <ul lang={locale} className={className} style={style}>

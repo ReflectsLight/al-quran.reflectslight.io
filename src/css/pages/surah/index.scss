@@ -1,7 +1,7 @@
-@import "layout";
-@import "components/Select";
-@import "themes/moon";
-@import "themes/leaf";
+@import "~/layout";
+@import "~/components/Select";
+@import "~/themes/moon";
+@import "~/themes/leaf";
 
 ul.body.index {
   display: flex;
