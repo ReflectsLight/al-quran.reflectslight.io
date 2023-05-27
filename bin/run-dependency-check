@@ -1,18 +1,18 @@
 #!/bin/sh
 
-require_dep() {
+find_dep() {
     dep=$1
-    which -s $dep
+    which $dep > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo found: $dep
     else
-        echo $dep is required, but not installed
+        echo error: $dep is required, but not installed
     fi
 }
 
-require_dep ruby
-require_dep bundle
-require_dep node
-require_dep npm
-require_dep nginx
-require_dep doas
+find_dep ruby
+find_dep bundle
+find_dep node
+find_dep npm
+find_dep nginx
+find_dep doas
