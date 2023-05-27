@@ -1,20 +1,22 @@
 {
-  "name": "bookm",
+  "name": "al-quran.reflectslight.io",
   "version": "0.1.0",
-  "description": "Bookmark manager",
+  "description": "A website for studying The Quran",
   "scripts": {
-    "build": "./node_modules/vite/bin/vite.js build"
+    "build": "npm exec vite build",
+    "build-watch": "npm exec vite build -- -w",
+    "serve": "npm exec static-server build/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0x1eef/bookm.js.git"
+    "url": "git+https://github.com/ReflectsLight/al-quran.reflectslight.io"
   },
   "author": "0x1eef",
-  "license": "MIT",
+  "license": "GPL",
   "bugs": {
-    "url": "https://github.com/0x1eef/bookm.js/issues"
+    "url": "https://github.com/ReflectsLight/al-quran.reflectslight.io/issues"
   },
-  "homepage": "https://github.com/0x1eef/bookm.js#readme",
+  "homepage": "https://github.com/ReflectsLight/al-quran.reflectslight.io#readme",
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
@@ -30,9 +32,10 @@
     "react-dom": "^18.2.0",
     "sass": "^1.62.0",
     "semistandard": "^16.0.1",
+    "static-server": "^2.2.1",
     "typescript": "^4.8.3",
     "vite": "^4.3.1",
-    "vite-plugin-html": "file:../../0x1eef/vite-plugin-html/packages/core",
+    "vite-plugin-ejs": "github:0x1eef/vite-plugin-ejs#v0.4.0",
     "vite-plugin-sass": "^0.1.0"
   }
 }

@@ -1,39 +1,24 @@
 import path from 'path';
-import fs from 'fs';
+import fs, { readFileSync } from 'fs';
 import { defineConfig } from 'vite';
-import { createHtmlPlugin } from 'vite-plugin-html';
+import ejs from 'vite-plugin-ejs';
+
 import react from '@vitejs/plugin-react';
-import iife from './vite/plugins/iife';
+import iife from './src/js/compiler/plugins/iife';
+import TFunction from "./src/js/compiler/lib/tfunction";
 
 const indexes = Array.from({ length: 114 }, (_, i) => i + 1);
 const locales = ["en", "ar"];
-const inline = (p, format) => {
-  try {
-    const extName  = path.extname(p).slice(1, format.length+1)
-    const fileName = path.basename(p, path.extname(p))
-    const fileBody = fs.readFileSync(path.join("public", p))
-    switch(format) {
-      case 'json':
-        return `<script class='${fileName} ${extName}'`+
-               `type='application/${extName}'>` + fileBody + '</script>';
-      case 'css':
-        return `<style class='${fileName} ${extName}'>${fileBody}</style>`;
-      default:
-        throw new Error(`unknown format: ${format}`);
-    }
-  } catch(error) {
-    console.error(error)
-    process.exit()
-  }
-}
+const publicDir = path.join(process.cwd(), "public");
+const outDir = path.join(process.cwd(), "build");
 
 export default defineConfig({
   mode: 'production',
   watch: true,
   root: path.join(process.cwd(), 'src'),
-  publicDir: '../public',
+  publicDir,
   build: {
-    outDir: '../build',
+    outDir,
     assetsDir: '',
     emptyOutDir: true,
     cssCodeSplit: true,
@@ -41,7 +26,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'index': 'src/js/pages/surah/index.tsx',
-        'index/loader': 'src/js/pages/surah/index/loader.ts',
+        'loaders/SurahIndex': 'src/js/runtime/loaders/SurahIndex.ts',
         'index.scss': 'src/css/pages/surah/index.scss',
         'webpackage.scss': 'src/css/webpackage.scss'
       },
@@ -61,27 +46,35 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    ...createHtmlPlugin({
-      pages: [
+    ejs({
+      targets: [
         ...locales.map((locale) => {
           return {
-            input: 'html/index.ejs',
-            output: `${locale}/index.html`,
-            injectOptions: {data: { inline, title: 'hello', locale }},
+            src: 'html/SurahIndex.html.ejs',
+            dest: `${locale}/index.html`,
+            variables: {
+              locale, path, publicDir,
+              read: (path) => readFileSync(path).toString(),
+              t: TFunction(locale)
+            },
           }
         }),
         ...indexes.flatMap((index) => {
           return locales.map((locale) => {
             return {
-              input: 'html/index.ejs',
-              output: `${locale}/${index}/index.html`,
-              injectOptions: {data: { inline, title: 'foo', locale}}
+              src: 'html/SurahIndex.html.ejs',
+              dest: `${locale}/${index}/index.html`,
+              variables: {
+                locale, path, publicDir,
+                read: (path) => readFileSync(path).toString(),
+                t: TFunction(locale)
+              },
             }
           })
         })
       ],
     }),
-    iife()
+    iife(),
   ],
   css: {
     preprocessorOptions: {

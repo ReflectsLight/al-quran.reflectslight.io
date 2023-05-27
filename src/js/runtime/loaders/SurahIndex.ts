@@ -20,12 +20,12 @@ import WebPackage from '@/lib/WebPackage';
     }
   }).fetch()
     .then((pkg) => {
-      const inlineStyle: HTMLStyleElement = document.querySelector('.css.webpackage')!;
+      const inlineStyle: HTMLStyleElement = document.querySelector('.webpackage.loader')!;
       inlineStyle.remove();
       parent.remove();
       pkg.fonts.forEach((f) => document.fonts.add(f));
       pkg.stylesheets.forEach((s) => document.head.appendChild(s));
       pkg.others.forEach((o) => document.body.appendChild(o));
-      pkg.scripts.forEach((s) => { console.log({s}); document.body.appendChild(s)});
+      pkg.scripts.forEach((s) => document.body.appendChild(s));
     });
 })();

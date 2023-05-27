@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+  <head>
+    <title><%= t("TheNobleQuran") %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.png">
+  </head>
+  <body>
+    <!-- React root node -->
+    <div class="root" data-locale="<%= locale %>">
+    </div>
+
+    <!-- Loader -->
+    <div class="webpackage loader">
+      <div>
+        <progress value="0" max="100"></progress>
+        <span class="percentage">Loading...</span>
+      </div>
+    </div>
+    <style><%- read(path.join(publicDir, "css", "webpackage.css")) %></style>
+    <script src="/js/loaders/SurahIndex.js"></script>
+
+    <!-- Translations -->
+    <script
+      data-id="surah-data"
+      type="application/json">
+      <%- read(path.join(publicDir, "i18n", "surahs.json")) %>
+    </script>
+    <script
+      data-id="tfunction-data"
+      type="application/json">
+      <%- read(path.join(publicDir, "i18n", locale + ".json")) %>
+    </script>
+  </body>
+</html>
