@@ -28,17 +28,17 @@ for a short summary of the GPL.
   <strong>Local install</strong>
 </p>
 
-__1) Clone repository__
+__1. Clone repository__
 
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-__2) Run dependency check__
+__2. Run dependency check__
 
-The `bin/run-dependency-check` script will check that the required
+The `bin/check-dependencies` script will check that the required
 dependencies are available: Ruby, NodeJS, nginx, et cetera.
 
-    $ ./bin/run-dependency-check
+    $ ./bin/check-dependencies
 
 Assuming it was a success:
 
@@ -52,7 +52,7 @@ Assuming it was a success:
 Otherwise, the dependencies that are missing will be listed. All
 dependencies should be found before proceeding to the next step.
 
-__3) Install packages__
+__3. Install packages__
 
 At this step we're ready to install Ruby, and NodeJS packages:
 
