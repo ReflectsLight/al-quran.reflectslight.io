@@ -27,7 +27,7 @@ end
 compile "/js/pages/surah/stream.tsx" do
   filter :webpack,
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
-         reject: proc { _1.include?('WebPackage') }
+         reject: proc { _1.include?("WebPackage") }
   write "/js/pages/surah/stream.js"
   filter :gzip_text
   write "/js/pages/surah/stream.js.gz"
