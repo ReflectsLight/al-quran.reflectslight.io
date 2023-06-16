@@ -161,6 +161,7 @@ GEM
 PLATFORMS
   amd64-freebsd-14
   x86_64-linux
+  x86_64-openbsd
 
 DEPENDENCIES
   adsf (~> 1.4)

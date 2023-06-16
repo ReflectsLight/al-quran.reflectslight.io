@@ -33,7 +33,7 @@ __1. Clone repository__
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-__2. Run dependency check__
+__2. Check dependencies__
 
 The `bin/check-dependencies` script will check that the required
 dependencies are available: Ruby, NodeJS, nginx, et cetera.
