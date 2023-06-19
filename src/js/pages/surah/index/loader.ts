@@ -1,4 +1,5 @@
-import WebPackage from 'lib/WebPackage';
+import Packet from 'packet';
+import type { PacketTarget } from 'packet';
 
 (function() {
   const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
@@ -6,7 +7,7 @@ import WebPackage from 'lib/WebPackage';
   const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
   const inlineStyle: HTMLStyleElement = document.querySelector('.css.webpackage')!;
 
-  WebPackage({
+  Packet({
     scripts: ['/js/pages/surah/index.js'],
     stylesheets: ['/css/pages/surah/index.css'],
     images: ['/images/moon.svg', '/images/leaf.svg'],
@@ -21,7 +22,7 @@ import WebPackage from 'lib/WebPackage';
       progressNumber.innerText = `${percent.toFixed(0)}%`;
     }
   }).fetch()
-    .then((pkg) => {
+    .then((pkg: PacketTarget) => {
       inlineStyle.remove();
       parent.remove();
       pkg.fonts.forEach((f) => document.fonts.add(f));

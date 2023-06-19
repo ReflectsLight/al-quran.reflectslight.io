@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-       "*": ["src/js/*"]
-    },
-    "lib": [
-        "dom"
-    ],
-    "noImplicitAny": true,
     "strict": true,
-    "module": "es6",
-    "target": "es6",
-    "jsx": "react",
-    "allowJs": true,
+    "strictNullChecks": false,
+    "module": "commonjs",
+    "target": "ES2020",
+    "noImplicitAny": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "jsx": "react",
+    "allowJs": true,
+    "lib": [ "ES2020", "DOM" ],
+
+    "baseUrl": "src/",
+    "paths": { "*": ["js/*"] },
   }
 }
