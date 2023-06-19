@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "ESNEXT",
+    "target": "ES2020",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+
+    "baseUrl": "src/",
+    "paths": {  "*": ["*"] },
+
+    "outDir": "dist",
+    "declaration": true,
+  }
+}

@@ -3,9 +3,6 @@ const process = require('process');
 
 module.exports = {
   mode: process.env.NODE_ENV || "development",
-  experiments: {
-    asyncWebAssembly: true
-  },
   resolve: {
     roots: [path.resolve('src/js'), path.resolve('node_modules')],
     modules: [path.resolve('src/js'), path.resolve('node_modules')],
