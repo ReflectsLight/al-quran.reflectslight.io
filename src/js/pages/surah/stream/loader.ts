@@ -1,4 +1,4 @@
-import packet, { item } from 'packet';
+import postman, { item } from 'postman';
 
 (function() {
   const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
@@ -7,7 +7,7 @@ import packet, { item } from 'packet';
   const inlineStyle: HTMLStyleElement = document.querySelector('.css.webpackage')!;
   const { locale, surahId } = document.querySelector<HTMLElement>('.root')!.dataset;
 
-  packet(
+  postman(
     item.script('/js/pages/surah/stream.js'),
     item.css('/css/pages/surah/strean.css'),
     item.image('/images/moon,svg'),

@@ -1,6 +1,6 @@
 ## About
 
-Packet is a JavaScript library that can download the dependencies
+Postman is a JavaScript library that can download the dependencies
 of a web page, and afterwards display the web page with all of its
 dependencies in-place, ready to use. 
 
@@ -11,7 +11,7 @@ as plain-text.
 ## Examples
 
 ```typescript
-import packet, { item } from "packet";
+import postman, { item } from "postman";
 packet(
   item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
   item.script("/js/app.js"),
