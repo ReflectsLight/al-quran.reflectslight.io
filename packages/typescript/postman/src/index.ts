@@ -26,6 +26,8 @@ function parseArgs(args: Args): [Items, Function] {
   return [items, callback];
 }
 
+export { item };
+
 export default function (...args: Args) {
   const self: Postman = Object.create(null);
   const result: Package = { fonts: [], images: [], css: [], scripts: [], json: [] };
@@ -72,5 +74,3 @@ export default function (...args: Args) {
 
   return self;
 }
-
-export { item };
