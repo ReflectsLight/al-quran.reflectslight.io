@@ -20,6 +20,7 @@ module.exports = {
     "no-return-assign": 0,
     "no-useless-return": 0,
     "quotes": 2,
-    "object-curly-spacing": 2
+    "object-curly-spacing": 2,
+    "n/no-callback-literal": 0,
   },
 };
