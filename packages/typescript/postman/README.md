@@ -10,6 +10,22 @@ as plain-text. <br>
 
 ## Examples
 
+**/index.html**
+
+```html
+<!DOCTYPE html>
+<head>
+  <title>Example page</title>
+  <script type="module" src="/postman.js"></script>
+</head>
+<body>
+  <h1> Loading ... <span class="percent"></span></h1>
+</body>
+</html>
+```
+
+**/postman.js**
+
 ```typescript
 import postman, { item } from "postman";
 packet(
@@ -18,13 +34,15 @@ packet(
   item.image("/images/app.png"),
   item.css("/css/app.css"),
   item.progress((percent) => {
-    console.log(`${percent}%`)
-  })
+    const span = document.querySelector("h1 .percent");
+    span.innerText = `${percent}%`;
 ).fetch()
  .then((pkg) => {
+    const h1 = document.querySelector("h1");
     pkg.fonts.forEach((font) => documents.fonts.add(font));
     pkg.scripts.forEach((script) => document.body.appendChild(script));
     pkg.css.forEach((css) => document.head.appendChild(css));
+    h1.innerText = "Done";
  })
 ```
 
