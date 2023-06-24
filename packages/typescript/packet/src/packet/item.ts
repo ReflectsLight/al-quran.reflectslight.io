@@ -58,7 +58,7 @@ export default {
     }
   },
 
-  progress(fn: () => void): () => void {
+  progress(fn: (percent: number) => void): (percent: number) => void {
     return fn;
   }
 };

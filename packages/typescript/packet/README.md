@@ -2,9 +2,11 @@
 
 Packet is a JavaScript library that can download the dependencies
 of a web page, and afterwards display the web page with all of its
-dependencies in-place, ready to use. A dependency could be a font,
-an image, a script, a stylesheet, or another resource that can be
-downloaded with `window.fetch`.
+dependencies in-place, ready to use. 
+
+An example of a dependency could be a font, an image, a script, 
+a stylesheet, a JSON blob, and other formats can be downloaded 
+as plain-text.
 
 ## Examples
 
