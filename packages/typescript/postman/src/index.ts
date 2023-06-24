@@ -2,7 +2,8 @@ import type { Item, FontItem } from './postman/item';
 import item from './postman/item';
 import request from './postman/request';
 
-type Packet = { fetch: () => Promise<Package> };
+type Postman = { fetch: () => Promise<Package> };
+type Args = Array<Item | FontItem | Function>
 type Items = Array<Item | FontItem>;
 type Package = {
   fonts: FontFace[]
@@ -12,12 +13,7 @@ type Package = {
   json: HTMLElement[]
 };
 
-export default function (...args: Array<Item | FontItem | Function>) {
-  const self: Packet = Object.create(null);
-  const result: Package = { fonts: [], images: [], css: [], scripts: [], json: [] };
-
-  /* This chunk of code separates "args" into */
-  /* an items array, and a callback function. */
+function parseArgs(args: Args): [Items, Function] {
   const items: Items = [];
   let callback: Function | null = null;
   args.forEach((item) => {
@@ -27,10 +23,15 @@ export default function (...args: Array<Item | FontItem | Function>) {
       items.push(item);
     }
   });
+  return [items, callback];
+}
+
+export default function (...args: Args) {
+  const self: Postman = Object.create(null);
+  const result: Package = { fonts: [], images: [], css: [], scripts: [], json: [] };
+  const [items, callback] = parseArgs(args);
   items.sort((i1, i2) => i1.priority >= i2.priority ? 1 : -1);
 
-  /* This chunk of code dispatches the callback */
-  /* function assigned above (might be null). */
   let index = 0;
   const onProgress = <T>(el: T) => {
     if (callback) {
