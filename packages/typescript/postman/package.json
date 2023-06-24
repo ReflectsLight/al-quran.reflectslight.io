@@ -1,5 +1,5 @@
 {
-  "name": "packet",
+  "name": "postman",
   "version": "0.1.0",
   "description": "Download a web page's dependencies before the page loads.",
   "main": "dist/index.js",

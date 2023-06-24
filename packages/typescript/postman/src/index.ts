@@ -1,6 +1,6 @@
-import type { Item, FontItem } from './packet/item';
-import item from './packet/item';
-import request from './packet/request';
+import type { Item, FontItem } from './postman/item';
+import item from './postman/item';
+import request from './postman/request';
 
 type Packet = { fetch: () => Promise<Package> };
 type Items = Array<Item | FontItem>;
