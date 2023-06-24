@@ -1,12 +1,12 @@
 ## About
 
-Postman is a JavaScript library that can download the dependencies
-of a web page, and afterwards display the web page with all of its
-dependencies in-place, ready to use. 
+Postman is a JavaScript library that can download the dependencies <br>
+of a web page, and afterwards display the web page with all of its <br>
+dependencies in-place, ready to use. <br>
 
-An example of a dependency could be a font, an image, a script, 
-a stylesheet, a JSON blob, and other formats can be downloaded 
-as plain-text.
+An example of a dependency could be a font, an image, a script, <br> 
+a stylesheet, a JSON blob, and other formats can be downloaded <br>
+as plain-text. <br>
 
 ## Examples
 
