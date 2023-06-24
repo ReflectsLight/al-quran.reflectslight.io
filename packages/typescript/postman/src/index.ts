@@ -15,7 +15,7 @@ type Package = {
 
 function parseArgs(args: Args): [Items, Function] {
   const items: Items = [];
-  let callback: Function | null = null;
+  let callback: Function = (n: number) => n
   args.forEach((item) => {
     if (typeof item === 'function') {
       callback = item;
@@ -36,11 +36,9 @@ export default function (...args: Args) {
 
   let index = 0;
   const onProgress = <T>(el: T) => {
-    if (callback) {
-      index++;
-      if (index <= items.length) {
-        callback(100 * (index / items.length));
-      }
+    index++;
+    if (index <= items.length) {
+      callback(100 * (index / items.length));
     }
     return el;
   };
