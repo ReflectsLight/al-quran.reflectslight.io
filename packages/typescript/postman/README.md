@@ -43,7 +43,8 @@ postman(
   item.progress((percent) => {
     const span = document.querySelector("h1 .percent");
     span.innerText = `${percent}%`;
-  })).fetch()
+  })
+).fetch()
  .then((pkg) => {
     const h1 = document.querySelector("h1");
     pkg.fonts.forEach((font) => documents.fonts.add(font));
