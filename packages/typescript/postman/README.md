@@ -12,11 +12,10 @@ as plain-text. <br>
 
 ### Progress bar
 
-The following example demonstrates how postman can be used to download
-fonts, images, scripts, and stylesheets. The progress of the download is
-reported in `span.percent`. When the download is complete the text 
-"Done" will replace the progress tracked in `span.percent`:
-
+The following example demonstrates how postman can be used to download <br>
+fonts, images, scripts, and stylesheets. The progress of the download is <br>
+reported in `span.percent`. When the download is complete the text <br>
+"Done" will replace the progress tracked in `span.percent`: <br>
 
 **/index.html**
 
