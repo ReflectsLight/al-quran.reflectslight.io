@@ -5,7 +5,7 @@ of a web page, and afterwards display the web page with all of its <br>
 dependencies in-place, ready to use. <br>
 
 An example of a dependency could be a font, an image, a script, <br> 
-a stylesheet, a JSON blob, and other formats can be downloaded <br>
+a stylesheet, and a JSON blob, Other formats can be downloaded <br>
 as plain-text. <br>
 
 ## Examples
