@@ -35,7 +35,7 @@ reported in `span.percent`. When the download is complete the text <br>
 
 ```typescript
 import postman, { item } from "postman";
-packet(
+postman(
   item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
   item.script("/js/app.js"),
   item.image("/images/app.png"),
