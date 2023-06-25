@@ -2,9 +2,6 @@
 
 require "ryo"
 require "listen"
-
-load "tasks/config/build.rake"
-load "tasks/config/install.rake"
 load "tasks/deploy.rake"
 
 namespace :nanoc do
