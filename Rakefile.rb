@@ -58,5 +58,5 @@ namespace :lint do
     end
   end
 end
-task lint: ["linter:ruby", "linter:typescript"]
+task lint: ["lint:rubocop", "lint:eslint"]
 task default: "deploy:local"
