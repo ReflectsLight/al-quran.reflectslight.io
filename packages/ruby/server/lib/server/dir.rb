@@ -20,7 +20,11 @@ class Server::Dir
 
   def read(path)
     body = File.binread(path)
-    [{"Content-Length" => body.bytesize}, body.each_line]
+    [
+      {"content-type" => Rack::Mime.mime_type(File.extname(path)),
+       "content-length" => body.bytesize},
+      body.each_line
+    ]
   end
 
   def local_path(req_path)
@@ -29,6 +33,6 @@ class Server::Dir
   end
 
   def not_found
-    [404, {"Content-Type" => "text/plain"}, ["The requested URL was not found"]]
+    [404, {"content-type" => "text/plain"}, ["The requested URL was not found"]]
   end
 end
