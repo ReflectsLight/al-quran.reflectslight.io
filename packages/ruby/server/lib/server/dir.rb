@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class Server::Dir
+  MIME_TYPES = {
+    ".ttf" => "font/ttf"
+  }.freeze
+
   def initialize(root)
     @root = File.realpath(root)
   end
@@ -24,8 +28,9 @@ class Server::Dir
 
   def read(path)
     body = File.binread(path)
+    extn = File.extname(path)
     [
-      {"content-type" => Rack::Mime.mime_type(File.extname(path)),
+      {"content-type" => MIME_TYPES[extn] || Rack::Mime.mime_type(extn),
        "content-length" => body.bytesize},
       body.each_line
     ]

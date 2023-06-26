@@ -11,6 +11,14 @@ class ServerDirTest < Test::Unit::TestCase
     assert_equal bytesize("./test/fakeweb/index.html"), last_response.content_length
   end
 
+  def test_ttf_font
+    get "/fonts/roboto-mono-regular.ttf"
+    assert_equal 200, last_response.status
+    assert_equal "font/ttf", last_response.content_type
+    assert_equal bytesize("./test/fakeweb/fonts/roboto-mono-regular.ttf"),
+                 last_response.content_length
+  end
+
   def test_permission_denied
     File.chmod 0, "./test/fakeweb/permission_denied.html"
     get "/permission_denied.html"
