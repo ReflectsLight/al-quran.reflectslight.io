@@ -19,6 +19,14 @@ class ServerDirTest < Test::Unit::TestCase
                  last_response.content_length
   end
 
+  def test_js_file
+    get "/js/index.js"
+    assert_equal 200, last_response.status
+    assert_equal "application/javascript", last_response.content_type
+    assert_equal bytesize("./test/fakeweb/js/index.js"),
+                 last_response.content_length
+  end
+
   def test_permission_denied
     File.chmod 0, "./test/fakeweb/permission_denied.html"
     get "/permission_denied.html"
