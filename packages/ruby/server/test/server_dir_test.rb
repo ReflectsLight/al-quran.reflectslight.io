@@ -22,6 +22,14 @@ class ServerDirTest < Test::Unit::TestCase
     File.chmod 0440, "./test/fakeweb/permission_denied.html"
   end
 
+  def test_page_not_found
+    get "/foobarbaz"
+    assert_equal 404, last_response.status
+    assert_equal "text/plain", last_response.content_type
+    assert_equal "The requested URL was not found".bytesize, last_response.content_length
+    assert_equal "The requested URL was not found", last_response.body
+  end
+
   private
 
   def app
