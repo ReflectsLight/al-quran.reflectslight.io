@@ -10,8 +10,12 @@ class Server::Dir
     headers = Rack::Headers.new(env)
     h, body = read(local_path(req.path))
     [200, headers.merge!(h), body]
+  rescue Errno::EPERM, Errno::EACCES
+    body = "Permission denied"
+    [403, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
   rescue Errno::ENOENT
-    not_found
+    body = "The requested URL was not found"
+    [404, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
   end
 
   private
@@ -30,9 +34,5 @@ class Server::Dir
   def local_path(req_path)
     lpath = File.join root, File.expand_path(req_path)
     File.directory?(lpath) ? File.join(lpath, "index.html") : lpath
-  end
-
-  def not_found
-    [404, {"content-type" => "text/plain"}, ["The requested URL was not found"]]
   end
 end

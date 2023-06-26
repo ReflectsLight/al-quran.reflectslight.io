@@ -11,6 +11,17 @@ class ServerDirTest < Test::Unit::TestCase
     assert_equal bytesize("./test/fakeweb/index.html"), last_response.content_length
   end
 
+  def test_permission_denied
+    File.chmod 0, "./test/fakeweb/permission_denied.html"
+    get "/permission_denied.html"
+    assert_equal 403, last_response.status
+    assert_equal "text/plain", last_response.content_type
+    assert_equal "Permission denied".bytesize, last_response.content_length
+    assert_equal "Permission denied", last_response.body
+  ensure
+    File.chmod 0440, "./test/fakeweb/permission_denied.html"
+  end
+
   private
 
   def app
