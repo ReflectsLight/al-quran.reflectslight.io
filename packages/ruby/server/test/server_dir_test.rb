@@ -35,6 +35,14 @@ class ServerDirTest < Test::Unit::TestCase
                  last_response.content_length
   end
 
+  def test_json_file
+    get "/json/1.json"
+    assert_equal 200, last_response.status
+    assert_equal "application/json", last_response.content_type
+    assert_equal bytesize("./test/fakeweb/json/1.json"),
+                 last_response.content_length
+  end
+
   def test_permission_denied
     File.chmod 0, "./test/fakeweb/permission_denied.html"
     get "/permission_denied.html"
