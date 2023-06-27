@@ -43,6 +43,17 @@ class ServerDirTest < Test::Unit::TestCase
                  last_response.content_length
   end
 
+  def test_internal_server_error
+    def app.read(path) raise RuntimeError, "test" end
+    get "/"
+    assert_equal 500, last_response.status
+    assert_equal "text/plain", last_response.content_type
+    assert_equal "Internal server error (RuntimeError)".bytesize,
+                 last_response.content_length
+    assert_equal "Internal server error (RuntimeError)",
+                 last_response.body
+  end
+
   def test_permission_denied
     File.chmod 0, "./test/webroot/permission_denied.html"
     get "/permission_denied.html"

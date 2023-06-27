@@ -20,6 +20,9 @@ class Server::Dir
   rescue Errno::ENOENT
     body = "The requested URL was not found"
     [404, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
+  rescue => ex
+    body = "Internal server error (#{ex.class})"
+    [500, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
   end
 
   private
