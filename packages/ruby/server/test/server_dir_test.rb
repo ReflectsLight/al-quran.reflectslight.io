@@ -27,6 +27,14 @@ class ServerDirTest < Test::Unit::TestCase
                  last_response.content_length
   end
 
+  def test_png_file
+    get "/images/0x1eef.png"
+    assert_equal 200, last_response.status
+    assert_equal "image/png", last_response.content_type
+    assert_equal bytesize("./test/fakeweb/images/0x1eef.png"),
+                 last_response.content_length
+  end
+
   def test_permission_denied
     File.chmod 0, "./test/fakeweb/permission_denied.html"
     get "/permission_denied.html"
