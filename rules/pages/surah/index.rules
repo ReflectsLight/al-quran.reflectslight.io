@@ -18,7 +18,7 @@ compile "/js/pages/surah/index.tsx" do
                                "/js/lib/[!WebPackage]/",
                                "/js/hooks"]
   write "/js/pages/surah/index.js"
-  filter :gzip_text
+  filter :gzip
   write "/js/pages/surah/index.js.gz"
 end
 

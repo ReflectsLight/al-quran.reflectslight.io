@@ -8,7 +8,7 @@
 compile "/*/*/surah.json" do
   write(item.identifier.to_s)
   if File.size(item.raw_filename) > (1024 * 10)
-    filter :gzip_text
+    filter :gzip
     write("#{item.identifier}.gz")
   end
 end
@@ -29,7 +29,7 @@ compile "/js/pages/surah/stream.tsx" do
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
          reject: proc { _1.include?("WebPackage") }
   write "/js/pages/surah/stream.js"
-  filter :gzip_text
+  filter :gzip
   write "/js/pages/surah/stream.js.gz"
 end
 

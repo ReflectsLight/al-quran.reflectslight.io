@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "ryo"
-require "nanoc-gunzip"
+require "nanoc-gzip"
 require "nanoc-webpack"
 
 locales = %w[ar en]

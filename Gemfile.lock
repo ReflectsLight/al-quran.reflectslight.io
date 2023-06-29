@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/0x1eef/nanoc-gzip.rb.git
-  revision: 2e4df94c9759e3a7a7da92a0ad9b645c7ebe2660
-  tag: v0.2.0
+  revision: 3bb1719ad11d983a25945c1017df76aa2f6b8540
+  tag: v0.2.1
   specs:
-    nanoc-gzip.rb (0.2.0)
+    nanoc-gzip.rb (0.2.1)
       json (= 2.6.1)
       nanoc (~> 4.12)
       racc (= 1.6.0)

@@ -7,7 +7,7 @@ gem "nanoc", "~> 4.12"
 
 ##
 # nanoc filters
-gem "nanoc-gzip.rb", github: "0x1eef/nanoc-gzip.rb", tag: "v0.2.0"
+gem "nanoc-gzip.rb", github: "0x1eef/nanoc-gzip.rb", tag: "v0.2.1"
 gem "nanoc-webpack.rb", github: "0x1eef/nanoc-webpack.rb", tag: "v0.2.0"
 gem "rainpress", "~> 1.0"
 gem "sass", "~> 3.7"
