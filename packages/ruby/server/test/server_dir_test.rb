@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "setup"
 require "rack/test"
 
@@ -44,7 +46,7 @@ class ServerDirTest < Test::Unit::TestCase
   end
 
   def test_internal_server_error
-    def app.read(path) raise RuntimeError, "test" end
+    def app.finish(request) raise "test" end
     get "/"
     assert_equal 500, last_response.status
     assert_equal "text/plain", last_response.content_type
@@ -62,7 +64,7 @@ class ServerDirTest < Test::Unit::TestCase
     assert_equal "Permission denied".bytesize, last_response.content_length
     assert_equal "Permission denied", last_response.body
   ensure
-    File.chmod 0440, "./test/webroot/permission_denied.html"
+    File.chmod 0o440, "./test/webroot/permission_denied.html"
   end
 
   def test_page_not_found

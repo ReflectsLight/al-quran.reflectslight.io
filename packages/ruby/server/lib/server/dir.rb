@@ -1,19 +1,17 @@
 # frozen_string_literal: true
 
+##
+# A rack application that serves the contents
+# of a directory over HTTP.
 class Server::Dir
-  MIME_TYPES = {
-    ".ttf" => "font/ttf"
-  }.freeze
+  prepend Server::Gzip
 
   def initialize(root)
     @root = File.realpath(root)
   end
 
   def call(env)
-    req = Rack::Request.new(env)
-    headers = Rack::Headers.new(env)
-    h, body = read(local_path(req.path))
-    [200, headers.merge!(h), body]
+    finish Rack::Request.new(env)
   rescue Errno::EPERM, Errno::EACCES
     body = "Permission denied"
     [403, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
@@ -29,18 +27,24 @@ class Server::Dir
 
   attr_reader :root
 
-  def read(path)
+  def finish(request)
+    path = find_path(request)
     body = File.binread(path)
     extn = File.extname(path)
     [
-      {"content-type" => MIME_TYPES[extn] || Rack::Mime.mime_type(extn),
+      200,
+      {"content-type" => mime_types[extn] || Rack::Mime.mime_type(extn),
        "content-length" => body.bytesize},
       body.each_line
     ]
   end
 
-  def local_path(req_path)
-    lpath = File.join root, File.expand_path(req_path)
-    File.directory?(lpath) ? File.join(lpath, "index.html") : lpath
+  def find_path(request)
+    path = File.join root, File.expand_path(request.path)
+    File.directory?(path) ? File.join(path, "index.html") : path
+  end
+
+  def mime_types
+    {".ttf" => "font/ttf"}.freeze
   end
 end

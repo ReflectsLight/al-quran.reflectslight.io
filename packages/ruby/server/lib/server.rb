@@ -3,6 +3,7 @@
 class Server
   require "rack"
   require_relative "server/puma"
+  require_relative "server/gzip"
   require_relative "server/dir"
 
   def self.app(path)

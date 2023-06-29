@@ -10,6 +10,15 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.summary = "A static file web server"
   gem.description = gem.summary
+
+  ##
+  # Default gems
+  # Pinned to specific versions for OpenBSD support
+  gem.add_runtime_dependency "json", "= 2.6.1"
+  gem.add_runtime_dependency "racc", "= 1.6.0"
+  gem.add_runtime_dependency "stringio", "= 3.0.1"
+  gem.add_runtime_dependency "set", "= 1.0.2"
+
   gem.add_runtime_dependency "puma", "~> 6.3"
   gem.add_runtime_dependency "rack", "~> 3.0"
   gem.add_development_dependency "standard", "~> 1.24"
