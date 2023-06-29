@@ -8,6 +8,7 @@ class Server::Dir
 
   def initialize(root)
     @root = File.realpath(root)
+    @mime_types = {".ttf" => "font/ttf"}.freeze
   end
 
   def call(env)
@@ -23,10 +24,6 @@ class Server::Dir
     [500, {"content-length" => body.bytesize, "content-type" => "text/plain"}, [body]]
   end
 
-  private
-
-  attr_reader :root
-
   def finish(request)
     path = find_path(request)
     body = File.binread(path)
@@ -39,12 +36,12 @@ class Server::Dir
     ]
   end
 
+  private
+
+  attr_reader :root, :mime_types
+
   def find_path(request)
     path = File.join root, File.expand_path(request.path)
     File.directory?(path) ? File.join(path, "index.html") : path
-  end
-
-  def mime_types
-    {".ttf" => "font/ttf"}.freeze
   end
 end
