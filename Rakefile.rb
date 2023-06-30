@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
+require "bundler/setup"
 require "ryo"
-require "listen"
-load "tasks/deploy.rake"
 
 namespace :nanoc do
   desc "Compile the website"
@@ -13,11 +12,17 @@ namespace :nanoc do
 
   desc "Delete the build directory"
   task :clean do
+    require "yaml"
     build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
     sh "rm -rf #{build_dir}"
   end
 end
+
+desc "Build the website"
 task build: "nanoc:compile"
+
+desc "Clean the build directory"
+task clean: "nanoc:clean"
 
 desc "Start a Ruby web server on localhost"
 task server: ["nanoc:compile"] do
