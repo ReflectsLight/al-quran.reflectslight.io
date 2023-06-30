@@ -2,6 +2,9 @@
 
 require "bundler/setup"
 require "ryo"
+require "yaml"
+
+build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
 
 namespace :nanoc do
   desc "Compile the website"
@@ -12,8 +15,6 @@ namespace :nanoc do
 
   desc "Delete the build directory"
   task :clean do
-    require "yaml"
-    build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
     sh "rm -rf #{build_dir}"
   end
 end
@@ -24,11 +25,13 @@ task build: "nanoc:compile"
 desc "Clean the build directory"
 task clean: "nanoc:clean"
 
-desc "Start a Ruby web server on localhost"
-task server: ["nanoc:compile"] do
-  Dir.chdir(File.join(Dir.getwd, "build", "al-quran")) do
-    sh "bundle exec adsf"
-  end
+desc "Serve the website on localhost"
+task :server do
+  require "server"
+  s = Server.for_dir(build_dir)
+  s.start(block: true)
+rescue Interrupt
+  s.stop
 end
 
 namespace :watch do

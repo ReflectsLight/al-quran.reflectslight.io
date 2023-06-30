@@ -23,9 +23,10 @@ class Server
     @server = Puma::Server.new(@app, @events, @options)
   end
 
-  def start
+  def start(block: false)
     @server.binder.parse(@options[:binds])
-    @server.run
+    thr = @server.run
+    block ? thr.join : thr
   end
 
   def stop
