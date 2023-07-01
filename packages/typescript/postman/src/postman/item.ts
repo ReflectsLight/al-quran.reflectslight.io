@@ -6,6 +6,7 @@ export type Item = {
   group: Group
   requestId: RequestID
   href: string
+  props?: Partial<HTMLElement>
 };
 
 export type FontItem = {
@@ -22,39 +23,39 @@ export default {
     };
   },
 
-  image(href: string): Item {
+  image(href: string, props?: Partial<HTMLElement>): Item {
     return {
       priority: 2,
       group: 'images',
       requestId: 'image',
-      href
+      href, props
     };
   },
 
-  css(href: string): Item {
+  css(href: string, props?: Partial<HTMLElement>): Item {
     return {
       priority: 3,
       group: 'css',
       requestId: 'css',
-      href
+      href, props
     };
   },
 
-  script(href: string): Item {
+  script(href: string, props?: Partial<HTMLElement>): Item {
     return {
       priority: 4,
       group: 'scripts',
       requestId: 'script',
-      href
+      href, props
     };
   },
 
-  json(href: string): Item {
+  json(href: string, props?: Partial<HTMLElement>): Item {
     return {
       priority: 5,
       group: 'json',
       requestId: 'json',
-      href
+      href, props
     }
   },
 

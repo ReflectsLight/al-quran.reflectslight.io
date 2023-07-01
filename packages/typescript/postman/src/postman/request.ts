@@ -47,6 +47,7 @@ export default {
     return fetch(href, fetchOptions())
       .then((res) => res.text())
       .then((text) => ({type: 'application/json', text}))
+      .then((props) => Object.assign(props, item.props || {}))
       .then((props) => Object.assign(document.createElement('script'), props));
   }
 };
