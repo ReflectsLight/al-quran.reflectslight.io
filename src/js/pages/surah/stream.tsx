@@ -115,7 +115,7 @@ function SurahStream({ node, locale, slice, paused, t }: Props) {
   const locale = root.getAttribute('data-locale') as Quran.Locale;
   const surahId = parseInt(root.getAttribute('data-surah-id')!);
   const path = `/${locale}/${surahId}/surah.json`;
-  const node: HTMLScriptElement = document.querySelector(`script[src="${path}"]`)!;
+  const node: HTMLScriptElement = document.querySelector('script.surah')!;
   const toBoolean = (str: string | null): boolean => str !== null && ['1', 't', 'true', 'yes'].includes(str);
   const params = new URLSearchParams(location.search);
   const slice = Slice.fromParam(params.get('ayah'));

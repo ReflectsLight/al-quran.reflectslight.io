@@ -10,7 +10,7 @@ import postman, { item } from 'postman';
     item.script('/js/pages/surah/index.js'),
     item.css('/css/pages/surah/index.css'),
     item.image('/images/moon.svg'),
-    item.image('/images/leaf/svg'),
+    item.image('/images/leaf.svg'),
     item.font('Kanit Regular', 'url(/fonts/kanit-regular.ttf)'),
     item.font('Vazirmatn Regular', 'url(/fonts/vazirmatn-regular.ttf)'),
     item.font('Roboto Mono Regular', 'url(/fonts/roboto-mono-regular.ttf)'),
