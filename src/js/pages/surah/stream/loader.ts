@@ -12,7 +12,7 @@ import postman, { item } from 'postman';
     item.css('/css/pages/surah/stream.css'),
     item.image('/images/moon.svg'),
     item.image('/images/leaf.svg'),
-    item.json(`/${locale}/${surahId}/surah.json`, {className: 'surah'}),
+    item.json(`/${locale}/${surahId}/surah.json`, { className: 'surah' }),
     item.font('Kanit Regular', 'url(/fonts/kanit-regular.ttf)'),
     item.font('Vazirmatn Regular', 'url(/fonts/vazirmatn-regular.ttf)'),
     item.font('Roboto Mono Regular', 'url(/fonts/roboto-mono-regular.ttf)'),
