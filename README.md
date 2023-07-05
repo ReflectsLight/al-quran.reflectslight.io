@@ -1,7 +1,5 @@
 <p align="left">
-  <a href="https://al-quran.reflectslight.io">
-    https://al-quran.reflectslight.io
-  </a>
+  <strong>About</strong>
 </p>
 
 This repository contains the source code of
