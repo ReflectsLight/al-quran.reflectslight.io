@@ -4,68 +4,51 @@
   </a>
 </p>
 
-This git repository contains the source code of a statically compiled
-website for reading The Quran. After the website is compiled, it consists
-of HTML, CSS, JavaScript and other static assets that can be hosted on a
-regular web server. The repository is optimized for nginx, and (Free|Open)BSD
-as a deployment target. The source code is a mixture of Ruby, TypeScript, and
-JavaScript with React being the driving force on the frontend.
+This repository contains the source code of
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io),
+a static website for reading The Quran. After the
+website is built, the build directory consists
+of HTML, CSS, JavaScript and other static assets
+that can be hosted by a regular web server (eg
+nginx, apache, etc).
 
 <p align="center">
-  <strong>Open Source</strong>
+  <strong>The stack</strong>
 </p>
 
-The source code is released under the terms of the GNU Public License (GPL).
-No restrictions are placed on the right to modify, copy, redistribute or host
-the website on a web server / domain of your own as long as it is done in
-accordance with the GPL. See
-[LICENSE](./LICENSE)
-for a copy of the license, and see
-[TLDRLegal](https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3)
-for a short summary of the GPL.
+* Ruby 3.1, or later.
+* NodeJS v18.15, or later.
+* TypeScript
 
 <p align="center">
-  <strong>Local install</strong>
+  <strong>Local development</strong>
 </p>
 
-__1. Clone repository__
+__1. Clone__
 
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-__2. Check dependencies__
+__2. Install Ruby, and NodeJS packages__
 
-The `bin/check-dependencies` script will check that the required
-dependencies are available: Ruby, NodeJS, nginx, et cetera.
+    bundle install
+    npm i
 
-    $ ./bin/check-dependencies
+__3. Build website__
 
-Assuming it was a success:
+    rake build
 
-    found: ruby
-    found: bundle
-    found: node
-    found: npm
-    found: nginx
-    found: doas
+__4. Start server on localhost__
 
-Otherwise, the dependencies that are missing will be listed. All
-dependencies should be found before proceeding to the next step.
-
-__3. Install packages__
-
-At this step we're ready to install Ruby, and NodeJS packages:
-
-    $ npm install
-    $ bundle install --path=.bundle/
+    rake server
 
 <p align="center">
   <strong>Credits</strong>
 </p>
 
-Credit is due to a number of graphic artists whose work is used by
-this project, and with thanks I credit the following graphic files to their
-respective authors:
+Credit is due to the graphic artists whose art is used by
+the website, and with thanks I credit the following graphic
+files to their respective authors:
 
 * [/src/favicon.png](/src/favicon.png)
   by
@@ -77,8 +60,8 @@ respective authors:
   by
   [Fasil](https://freeicons.io/profile/722).
 
-Credit is due to the people who translated The Quran from Arabic to other
-languages, and with thanks I credit the following translations to their
-respective authors:
+Credit is due to the people who translated The Quran from
+Arabic to other languages, and with thanks I credit the
+following translations to their respective authors:
 
 * English (The Clear Quran) by Dr. Mustafa Khattab
