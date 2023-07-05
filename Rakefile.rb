@@ -34,17 +34,6 @@ rescue Interrupt
   s.stop
 end
 
-namespace :watch do
-  desc "Watch for changes (server task)"
-  task :server do
-    Bundler.with_unbundled_env { Process.wait spawn("rake build") }
-    Listen.to(File.join(Dir.getwd, "src")) do
-      Bundler.with_unbundled_env { sh "rake build" }
-    end.start
-    Rake::Task["server"].invoke
-  end
-end
-
 namespace :lint do
   desc "Run rubocop (Ruby)"
   task :rubocop do
@@ -64,4 +53,4 @@ namespace :lint do
   end
 end
 task lint: ["lint:rubocop", "lint:eslint"]
-task default: "deploy:local"
+task default: "build"
