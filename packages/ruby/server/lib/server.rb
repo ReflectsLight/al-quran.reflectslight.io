@@ -4,10 +4,12 @@ class Server
   require "rack"
   require_relative "server/puma"
   require_relative "server/gzip"
+  require_relative "server/etag"
   require_relative "server/dir"
 
   def self.app(path)
     Rack::Builder.app do
+      use Server::ETag
       run Server::Dir.new(path)
     end
   end

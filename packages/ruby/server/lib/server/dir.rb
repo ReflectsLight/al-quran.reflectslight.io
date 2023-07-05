@@ -32,7 +32,7 @@ class Server::Dir
       200,
       {"content-type" => mime_types[extn] || Rack::Mime.mime_type(extn),
        "content-length" => body.bytesize},
-      body.each_line
+      body.each_line.to_a
     ]
   end
 
