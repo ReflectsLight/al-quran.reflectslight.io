@@ -1,18 +1,18 @@
-<p align="center">
+<p align="left">
   <a href="https://al-quran.reflectslight.io">
     https://al-quran.reflectslight.io
   </a>
 </p>
 
 This repository contains the source code of
-[al-quran.reflectslight.io](https://al-quran.reflectslight.io),
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io), 
 a static website for reading The Quran. After the
 website is built, the build directory consists
 of HTML, CSS, JavaScript and other static assets
 that can be hosted by a regular web server (eg
 nginx, apache, etc).
 
-<p align="center">
+<p align="left">
   <strong>The stack</strong>
 </p>
 
@@ -20,7 +20,7 @@ nginx, apache, etc).
 * NodeJS v18.15, or later.
 * TypeScript
 
-<p align="center">
+<p align="left">
   <strong>Local development</strong>
 </p>
 
@@ -42,7 +42,7 @@ __4. Start server on localhost__
 
     rake server
 
-<p align="center">
+<p align="left">
   <strong>Credits</strong>
 </p>
 
