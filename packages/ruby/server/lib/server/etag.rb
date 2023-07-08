@@ -8,9 +8,9 @@ class Server::ETag < Rack::ETag
   end
 
   def call(env)
-    headers = ETAGS[env["REQUEST_PATH"]] || {}
-    if headers["etag"] && headers["etag"] == env["HTTP_IF_NONE_MATCH"]
-      [304, headers, [""]]
+    h = ETAGS[env["REQUEST_PATH"]] || {}
+    if h["etag"] && h["etag"] == env["HTTP_IF_NONE_MATCH"]
+      [304, h, [""]]
     else
       status, headers, body = super(env)
       ETAGS[env["REQUEST_PATH"]] = headers
