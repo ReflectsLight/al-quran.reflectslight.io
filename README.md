@@ -3,7 +3,7 @@
 </p>
 
 This repository contains the source code of
-[al-quran.reflectslight.io](https://al-quran.reflectslight.io),&nbsp;
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io),
 a static website for reading The Quran. After the
 website is built, the build directory consists
 of HTML, CSS, JavaScript and other static assets
