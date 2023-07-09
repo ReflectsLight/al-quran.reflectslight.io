@@ -3,7 +3,7 @@
 </p>
 
 This repository contains the source code of
-[al-quran.reflectslight.io](https://al-quran.reflectslight.io), 
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io),&nbsp;
 a static website for reading The Quran. After the
 website is built, the build directory consists
 of HTML, CSS, JavaScript and other static assets
@@ -34,7 +34,11 @@ __2. Install Ruby, and NodeJS packages__
 
 __3. Build website__
 
+    # Build once
     rake build
+
+    # Build whenever a change is detected
+    rake build:watch
 
 __4. Start server on localhost__
 
