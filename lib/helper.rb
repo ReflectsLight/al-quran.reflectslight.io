@@ -11,8 +11,13 @@ module Helper
   def inline_css(path)
     class_name = File.basename(path, File.extname(path))
     "<style class='css #{class_name}'>" \
-    "#{items[path].compiled_content}" \
+    "#{File.binread(File.join(build_dir, 'css', 'postman.css'))}" \
     "</style>"
+  end
+
+  def build_dir
+    nanoc = Ryo.from YAML.load_file(File.join(Dir.getwd, "nanoc.yaml"))
+    nanoc.output_dir
   end
 end
 use_helper Helper

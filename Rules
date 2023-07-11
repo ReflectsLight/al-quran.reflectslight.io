@@ -34,15 +34,6 @@ def require_rules(rules, locals = {}, target = binding)
 end
 
 ##
-# Require rules
-require_rules "rules/assets"
-require_rules "rules/pages/surah/redirect"
-require_rules "rules/pages/surah/stream", {locales:, i18n:, slugs:}
-require_rules "rules/pages/surah/index", {locales:, i18n:}
-require_rules "rules/pages/surah/random", {locales:, i18n:, slugs:}
-require_rules "rules/pages/surah/id_redirect", {locales:, i18n:, slugs:}
-
-##
 # Inline CSS / JSON rules
 compile "/i18n.json" do
   filter(:minify_json)
@@ -59,10 +50,10 @@ compile "/slugs.json" do
   write(nil)
 end
 
-compile "/css/webpackage.scss" do
+compile "/css/postman.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write(nil)
+  write("/css/postman.css")
 end
 
 ##
@@ -72,6 +63,15 @@ compile "/sitemap.xml.erb" do
   filter(:strip)
   write("/sitemap.xml")
 end
+
+##
+# Require rules
+require_rules "rules/assets"
+require_rules "rules/pages/surah/redirect"
+require_rules "rules/pages/surah/stream", {locales:, i18n:, slugs:}
+require_rules "rules/pages/surah/index", {locales:, i18n:}
+require_rules "rules/pages/surah/random", {locales:, i18n:, slugs:}
+require_rules "rules/pages/surah/id_redirect", {locales:, i18n:, slugs:}
 
 ##
 # Defaults
