@@ -9,4 +9,4 @@ node_modules/
 *.yml
 *.mp3
 *.sh
-*.node
+*.core
