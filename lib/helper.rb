@@ -11,7 +11,7 @@ module Helper
   def inline_css(path)
     class_name = File.basename(path, File.extname(path))
     "<style class='css #{class_name}'>" \
-    "#{File.binread(File.join(build_dir, 'css', 'postman.css'))}" \
+    "#{File.binread(File.join(build_dir, "css", "postman.css"))}" \
     "</style>"
   end
 
