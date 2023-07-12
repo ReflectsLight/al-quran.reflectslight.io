@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.png">
-    <%= inline_css('/css/webpackage.scss') %>
+    <%= inline_css('/css/postman.css') %>
   </head>
   <body>
     <div class="webpackage loader">
@@ -16,6 +16,7 @@
     </div>
     <div class="root" data-locale="<%= locale %>" data-surah-id="<%= surah_id %>"></div>
     <%= inline_json("/i18n.json") %>
+    <%= inline_json("/reciters.json") %>
     <script src="/js/pages/surah/stream/loader.js"></script>
   </body>
 </html>

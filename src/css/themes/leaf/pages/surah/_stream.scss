@@ -16,4 +16,15 @@
     background-color: $green;
     color: $white;
   }
+
+  .row svg g {
+    polygon {
+      stroke: $green;
+      stroke-width: 5;
+    }
+    path {
+      stroke: $green;
+      stroke-width: 5;
+    }
+  }
 }

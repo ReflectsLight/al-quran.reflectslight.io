@@ -23,4 +23,22 @@
   .row .shape {
     background: $gold;
   }
+
+  .row .shape.refresh {
+    height: 16px;
+    width: 16px;
+    background: unset;
+    fill: $gold;
+  }
+
+  .row svg g {
+    polygon {
+      stroke: $gold;
+      stroke-width: 5;
+    }
+    path {
+      stroke: $gold;
+      stroke-width: 5;
+    }
+  }
 }

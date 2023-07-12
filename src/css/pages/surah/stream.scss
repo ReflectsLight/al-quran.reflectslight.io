@@ -37,7 +37,7 @@
   li.ayah p { width: 100%; }
 }
 
-.content .timer {
+.content .row .timer {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -53,9 +53,19 @@
   top: 4px;
 }
 
-.content.ar .timer {
+.content.ar .row .timer {
   position: relative;
   top: 2px;
+}
+
+.content .row svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
 }
 
 @import "themes/moon";
