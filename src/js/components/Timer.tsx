@@ -34,7 +34,7 @@ export function Timer({
   }, [ayah.id, soundOn]);
 
   useEffect(() => {
-    if (isStalled || isPaused) {
+    if ((soundOn && isStalled) || isPaused) {
       return;
     } else if (ms <= 0) {
       setStream([...stream, surah.ayat[ayah.id]]);

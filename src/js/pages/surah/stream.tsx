@@ -87,23 +87,26 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (!audio) {
+    if (!readyToRender) {
       return;
     } else if (isPaused || !soundOn) {
       audio.pause();
     } else if (soundOn) {
-      audio.play().catch(() => setSoundOn(false));
+      audio.play();
     }
-  }, [stream, isPaused, soundOn]);
+  }, [readyToRender, stream, isPaused, soundOn]);
 
   useEffect(() => {
+    if (!readyToRender) {
+      return;
+    }
     const audio = audioRef.current;
     audio.addEventListener("ended", () => audio.setAttribute("src", src));
     audio.addEventListener("stalled", () => setIsStalled(true));
     audio.addEventListener("waiting", () => setIsStalled(true));
     audio.addEventListener("playing", () => setIsStalled(false));
     audio.addEventListener("play", () => setIsStalled(false));
-  }, []);
+  }, [readyToRender]);
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
@@ -162,7 +165,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
         )}
         {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
-      <audio src={src} ref={audioRef} />
+      {readyToRender && <audio src={src} ref={audioRef} />}
     </div>
   );
 }
