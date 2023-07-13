@@ -23,8 +23,10 @@ export function Stream({ reciter, surah, stream, locale, slice, endOfStream, isP
                                      { 'overflowY': 'auto' } :
                                      { 'overflowY': 'hidden' };
   const audioRef = useRef<HTMLAudioElement>(null);
+  const { url: baseUrl } = reciter;
+  const ayah = stream[stream.length-1];
+  const src = `${baseUrl}/${surah.id}/${ayah.id}.mp3`;
   const ayat = stream.map((ayah: Quran.Ayah) => {
-    const { url: baseUrl } = reciter;
     return (
       <li key={ayah.id} className="ayah fade">
         <span className="surah-id ayah-id">
@@ -35,11 +37,9 @@ export function Stream({ reciter, surah, stream, locale, slice, endOfStream, isP
           {formatNumber(ayah.id, locale)}
         </span>
         <p>{ayah.text}</p>
-        <audio autoPlay ref={audioRef} src={`${baseUrl}/${surah.id}/${ayah.id}.mp3`} />
       </li>
     );
   });
-
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector('ul.stream')!;
@@ -63,9 +63,19 @@ export function Stream({ reciter, surah, stream, locale, slice, endOfStream, isP
     }
   }, [stream, isPaused, soundOn]);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.addEventListener('ended', () => {
+        audio.setAttribute('src', src);
+      });
+    }
+  }, [audioRef.current]);
+
   return (
     <ul lang={locale} className={className} style={style}>
       {ayat}
+      <audio src={src} ref={audioRef} />
     </ul>
   );
 }
