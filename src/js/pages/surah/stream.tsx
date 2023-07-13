@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import classNames from 'classnames';
 import { get as getCookie } from 'es-cookie';
@@ -31,10 +31,15 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [soundOn, setSoundOn] = useState<boolean>(false);
+  const [isStalled, setIsStalled] = useState<boolean>(false);
   const [theme, setTheme] = useState(getCookie('theme') || 'moon');
   const [reciter] = useState<Quran.Reciter>(reciters[0]);
   const [surah] = useState<Quran.Surah>(Quran.Surah.fromDOMNode(locale, node, getTimeSlots(reciter)));
   const readyToRender = stream.length > 0;
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const { url: baseUrl } = reciter;
+  const ayah = stream[stream.length-1];
+  const src = `${baseUrl}/${surah.id}/${ayah?.id}.mp3`;
   const getAyahParam = (slice: Slice, stream: Quran.Ayat) => {
     if (slice.coversSubsetOfSurah) {
       return `${slice.begin}..${slice.end}`;
@@ -69,6 +74,27 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
     }
   }, [stream.length === 0]);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) {
+      return;
+    } else if (isPaused || !soundOn) {
+      audio.pause();
+    } else if (soundOn) {
+      audio.play()
+           .catch(() => setSoundOn(false));
+    }
+  }, [stream, isPaused, soundOn]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    audio.addEventListener('ended', () => audio.setAttribute('src', src));
+    audio.addEventListener('stalled', () => setIsStalled(true));
+    audio.addEventListener('waiting', () => setIsStalled(true));
+    audio.addEventListener('playing', () => setIsStalled(false));
+    audio.addEventListener('play', () => setIsStalled(false));
+  }, []);
+
   return (
     <div className={classNames('content', 'theme', theme, locale)}>
       <div className="header">
@@ -91,15 +117,12 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
       )}
       {readyToRender &&
        <Stream
-         reciter={reciter}
          slice={slice}
          surah={surah}
          stream={stream}
          locale={locale}
          endOfStream={endOfStream}
          isPaused={isPaused}
-         soundOn={soundOn}
-         setSoundOn={setSoundOn}
          t={t}
        />
       }
@@ -120,10 +143,12 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
            locale={locale}
            isPaused={isPaused}
            soundOn={soundOn}
+           isStalled={isStalled}
          />}
         {readyToRender && endOfStream &&
          <RefreshShape onClick={() => setStream([])} />}
       </div>
+      <audio src={src} ref={audioRef} />
     </div>
   );
 }

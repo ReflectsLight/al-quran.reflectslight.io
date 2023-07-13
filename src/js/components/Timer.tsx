@@ -9,28 +9,32 @@ interface Props {
   soundOn: boolean
   setStream: (stream: Quran.Ayat) => void
   isPaused: boolean
+  isStalled: boolean
 }
 
-export function Timer ({ surah, stream, soundOn, setStream, locale, isPaused }: Props) {
+export function Timer ({ surah, stream, isStalled, soundOn, setStream, locale, isPaused }: Props) {
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
   const [tid, setTid] = useState<ReturnType<typeof setTimeout>>();
+
   useEffect(() => {
     if (tid) {
       clearTimeout(tid);
       setTid(undefined);
     }
     setMs(ayah.readTimeMs);
-  }, [soundOn, ayah.id]);
+  }, [ayah.id, soundOn]);
+
   useEffect(() => {
-    if (isPaused) {
+    if (isStalled || isPaused) {
       return;
     } else if (ms <= 0) {
       setStream([...stream, surah.ayat[ayah.id]]);
     } else {
       setTid(setTimeout(() => setMs(ms - 100), 100));
     }
-  }, [ms, isPaused]);
+  }, [isStalled, isPaused, soundOn, ms]);
+
   return (
     <div className='timer'>
       {formatNumber(ms / 1000, locale)}
