@@ -21,6 +21,15 @@ jobs:
       run: bundle exec rake lint:eslint
     - name: rubocop
       run: bundle exec rake lint:rubocop
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone
+      uses: actions/checkout@v2
+    - name: Prepare environment
+      uses: './.github/actions/prepare-env'
+    - name: prettier
+      run: npm exec prettier -- --check src/js/
   build:
     runs-on: ubuntu-latest
     steps:

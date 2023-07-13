@@ -1,4 +1,4 @@
-import * as Quran from 'lib/Quran';
+import * as Quran from "lib/Quran";
 
 type TimeSlot = [number, number];
 type TimeSlots = [TimeSlot];
@@ -8,20 +8,28 @@ export class Surah {
   ayat: Quran.Ayat;
   #surah: Quran.JSON.Surah;
 
-  static fromDOMNode(locale: Quran.Locale, node: HTMLScriptElement, timeNode: HTMLScriptElement) {
+  static fromDOMNode(
+    locale: Quran.Locale,
+    node: HTMLScriptElement,
+    timeNode: HTMLScriptElement,
+  ) {
     const json = JSON.parse(node.innerText);
     const timeSlots: TimeSlots = JSON.parse(timeNode.innerText);
     const surah = Surah.fromJSON(locale, json.shift(), json);
-    surah.ayat.map((ayah, i) => ayah.readTimeMs = timeSlots[i][1] * 1000);
+    surah.ayat.map((ayah, i) => (ayah.readTimeMs = timeSlots[i][1] * 1000));
     return surah;
   }
 
-  static fromJSON(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.JSON.Ayat = []) {
+  static fromJSON(
+    locale: Quran.Locale,
+    surah: Quran.JSON.Surah,
+    ayat: Quran.JSON.Ayat = [],
+  ) {
     return new Surah(locale, surah, this.mapFromJSON(ayat));
   }
 
   static mapFromJSON(ayat: Quran.JSON.Ayat) {
-    return ayat.map((ayah) => Quran.Ayah.fromJSON(ayah));
+    return ayat.map(ayah => Quran.Ayah.fromJSON(ayah));
   }
 
   constructor(locale: Quran.Locale, surah: Quran.JSON.Surah, ayat: Quran.Ayat) {
@@ -43,7 +51,7 @@ export class Surah {
   }
 
   get localizedName() {
-    if (this.locale === 'ar') {
+    if (this.locale === "ar") {
       return this.name;
     } else {
       return this.#surah.translated_name;

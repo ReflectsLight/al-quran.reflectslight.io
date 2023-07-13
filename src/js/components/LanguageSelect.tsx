@@ -1,9 +1,9 @@
-import React from 'react';
-import { Select, SelectOption } from 'components/Select';
+import React from "react";
+import { Select, SelectOption } from "components/Select";
 
 interface Props {
-  locale: string
-  onChange: (o: SelectOption) => void
+  locale: string;
+  onChange: (o: SelectOption) => void;
 }
 
 export function LanguageSelect({ locale, onChange }: Props) {

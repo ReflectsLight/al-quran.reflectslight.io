@@ -3,7 +3,8 @@
   "workspaces": ["./packages/typescript/*"],
   "scripts": {
     "eslint": "node ./node_modules/eslint/bin/eslint.js src/js/",
-    "eslint-autofix": "node ./node_modules/eslint/bin/eslint.js --fix src/js/"
+    "eslint-autofix": "node ./node_modules/eslint/bin/eslint.js --fix src/js/",
+    "prettier-autofix": "npm exec prettier -- --write src/js/"
   },
   "dependencies": {
     "react": "^18.2.0",
