@@ -1,11 +1,11 @@
 interface Surah {
-  id: string
-  place_of_revelation: string
-  transliterated_name: string
-  translated_name: string
-  ayahs: number
-  slug: string
-  codepoints: number[]
+  id: string;
+  place_of_revelation: string;
+  transliterated_name: string;
+  translated_name: string;
+  ayahs: number;
+  slug: string;
+  codepoints: number[];
 }
 type Ayah = [number, string];
 type Ayat = Ayah[];

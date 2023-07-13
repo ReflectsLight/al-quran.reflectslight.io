@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import * as Quran from 'lib/Quran';
-import { formatNumber } from 'lib/i18n';
+import React, { useEffect, useState } from "react";
+import * as Quran from "lib/Quran";
+import { formatNumber } from "lib/i18n";
 
 interface Props {
-  surah: Quran.Surah
-  locale: Quran.Locale
-  stream: Quran.Ayat
-  soundOn: boolean
-  setStream: (stream: Quran.Ayat) => void
-  isPaused: boolean
-  isStalled: boolean
+  surah: Quran.Surah;
+  locale: Quran.Locale;
+  stream: Quran.Ayat;
+  soundOn: boolean;
+  setStream: (stream: Quran.Ayat) => void;
+  isPaused: boolean;
+  isStalled: boolean;
 }
 
-export function Timer ({ surah, stream, isStalled, soundOn, setStream, locale, isPaused }: Props) {
+export function Timer({
+  surah,
+  stream,
+  isStalled,
+  soundOn,
+  setStream,
+  locale,
+  isPaused,
+}: Props) {
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
   const [tid, setTid] = useState<ReturnType<typeof setTimeout>>();
@@ -35,9 +43,5 @@ export function Timer ({ surah, stream, isStalled, soundOn, setStream, locale, i
     }
   }, [isStalled, isPaused, soundOn, ms]);
 
-  return (
-    <div className='timer'>
-      {formatNumber(ms / 1000, locale)}
-    </div>
-  );
+  return <div className="timer">{formatNumber(ms / 1000, locale)}</div>;
 }

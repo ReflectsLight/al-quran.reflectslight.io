@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import classnames from 'classnames';
+import React, { useState, useEffect } from "react";
+import classnames from "classnames";
 
-export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {target: HTMLLIElement};
+export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {
+  target: HTMLLIElement;
+};
 
 export interface SelectOption {
-  innerText: string
-  value: string
-  reactEvent: ChangeEvent
+  innerText: string;
+  value: string;
+  reactEvent: ChangeEvent;
 }
 
 interface Props {
-  value: string
-  children: JSX.Element[]
-  onChange: (e: SelectOption) => void
-  className?: string
+  value: string;
+  children: JSX.Element[];
+  onChange: (e: SelectOption) => void;
+  className?: string;
 }
 
 const findOption = (value: string, children: JSX.Element[]) => {
-  const activeOption = children.find((o) => o.props.value === value);
+  const activeOption = children.find(o => o.props.value === value);
   if (activeOption) {
     return activeOption.props.children;
   } else {
@@ -25,19 +27,24 @@ const findOption = (value: string, children: JSX.Element[]) => {
   }
 };
 
-const createOption = (e: ChangeEvent, children: JSX.Element[]): SelectOption => {
+const createOption = (
+  e: ChangeEvent,
+  children: JSX.Element[],
+): SelectOption => {
   const { target } = e;
-  const value = target.getAttribute('data-value')!;
+  const value = target.getAttribute("data-value")!;
   return {
     innerText: findOption(value, children),
     value,
-    reactEvent: e
+    reactEvent: e,
   };
 };
 
 export function Select({ value, children, onChange, className }: Props) {
   const [open, setOpen] = useState<boolean>(false);
-  const [activeOption, setActiveOption] = useState<string | null>(findOption(value, children));
+  const [activeOption, setActiveOption] = useState<string | null>(
+    findOption(value, children),
+  );
   const openSelect = (e: React.MouseEvent<HTMLSpanElement>) => {
     e.stopPropagation();
     setOpen(true);
@@ -52,18 +59,22 @@ export function Select({ value, children, onChange, className }: Props) {
   };
 
   useEffect(() => {
-    document.body.addEventListener('click', () => setOpen(false));
+    document.body.addEventListener("click", () => setOpen(false));
   }, []);
 
   return (
-    <div className={classnames('react-select', className)}>
+    <div className={classnames("react-select", className)}>
       <span className="active-option" onClick={openSelect}>
         {activeOption}
       </span>
       <ul hidden={!open}>
         {children.map((option: JSX.Element, key: number) => {
           return (
-            <li key={key} data-value={option.props.value} onClick={selectOption}>
+            <li
+              key={key}
+              data-value={option.props.value}
+              onClick={selectOption}
+            >
               {option.props.children}
             </li>
           );

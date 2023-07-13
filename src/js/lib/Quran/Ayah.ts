@@ -1,9 +1,9 @@
-import * as Quran from 'lib/Quran';
+import * as Quran from "lib/Quran";
 
 export type Ayah = {
-  id: number
-  text: string
-  readTimeMs: number
+  id: number;
+  text: string;
+  readTimeMs: number;
 };
 
 export function Ayah(ayah: Quran.JSON.Ayah): Ayah {

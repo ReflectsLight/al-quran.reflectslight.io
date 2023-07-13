@@ -1,11 +1,11 @@
 export interface Slice {
-  begin: number
-  end: number | null
-  coversOneAyah: boolean
-  coversOneSurah: boolean
-  coversSubsetOfSurah: boolean
-  subsetLength: number
-  toParam: () => string | null
+  begin: number;
+  end: number | null;
+  coversOneAyah: boolean;
+  coversOneSurah: boolean;
+  coversSubsetOfSurah: boolean;
+  subsetLength: number;
+  toParam: () => string | null;
 }
 
 export function Slice(begin: number, end: number | null): Slice {
@@ -32,7 +32,7 @@ const getSubsetLength = (slice: Slice) => {
 
 const digitsRange = /^(\d{1,3})\.\.(\d{1,3})$/;
 const digits = /^\d{1,3}$/;
-Slice.fromParam = function(param: string | null): Slice {
+Slice.fromParam = function (param: string | null): Slice {
   if (!param) {
     return Slice(1, 286);
   }
