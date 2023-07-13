@@ -3,6 +3,7 @@
 require "bundler/setup"
 require "ryo"
 require "yaml"
+load "tasks/deploy.rake"
 
 build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
 

@@ -39,18 +39,20 @@ task "deploy:local" do
   sh "chmod -R u+rwX #{dest_dir}"
 end
 
-task "deploy:remote" do
+task "deploy:remote" => %i[nanoc:clean] do
   git_branch = `git branch --show-current`.chomp
-  options = read_options.call(env: "remote")
   if git_branch != "production"
     warn "This task can only be run on the 'production' branch."
     exit(1)
   end
   print "Wait...", "\n"
   sh(
-    "rsync", "--delete", "-rvah",
+    "rsync",
+    "--delete", "-rvah",
     "--chmod=Fu=rw,Fg=r,Du=rwx,Dg=rx",
     "--rsync-path='/home/0x1eef/rsync.sh'",
-    "build/al-quran", options.deploy.uri
+    "--exclude=audio/",
+    "build/al-quran/",
+    "0x1eef@al-quran.reflectslight.io:/mnt/www/al-quran.reflectslight.io/"
   )
 end
