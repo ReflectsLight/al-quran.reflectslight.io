@@ -87,26 +87,26 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (!readyToRender) {
+    if (!audio) {
       return;
-    } else if (isPaused || !soundOn) {
+    } else if (isPaused) {
       audio.pause();
-    } else if (soundOn) {
-      audio.play();
+    } else if (audio.paused) {
+      audio.play().catch(() => setSoundOn(false));
     }
-  }, [readyToRender, stream, isPaused, soundOn]);
+  }, [readyToRender, soundOn, isPaused, stream.length]);
 
   useEffect(() => {
-    if (!readyToRender) {
+    const audio = audioRef.current;
+    if (!audio) {
       return;
     }
-    const audio = audioRef.current;
     audio.addEventListener("ended", () => audio.setAttribute("src", src));
     audio.addEventListener("stalled", () => setIsStalled(true));
     audio.addEventListener("waiting", () => setIsStalled(true));
     audio.addEventListener("playing", () => setIsStalled(false));
     audio.addEventListener("play", () => setIsStalled(false));
-  }, [readyToRender]);
+  }, [readyToRender, soundOn]);
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
@@ -165,7 +165,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
         )}
         {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
-      {readyToRender && <audio src={src} ref={audioRef} />}
+      {readyToRender && soundOn && <audio src={src} ref={audioRef} />}
     </div>
   );
 }
