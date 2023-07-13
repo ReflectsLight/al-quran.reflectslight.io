@@ -31,8 +31,7 @@ export function Stream({
       <li key={ayah.id} className="ayah fade">
         <span className="surah-id ayah-id">
           {t(locale, "surah")} {formatNumber(surah.id, locale)}
-          {t(locale, "comma")} {t(locale, "ayah")}{" "}
-          {formatNumber(ayah.id, locale)}
+          {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(ayah.id, locale)}
         </span>
         <p>{ayah.text}</p>
       </li>

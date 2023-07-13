@@ -6,8 +6,7 @@ import * as Quran from "lib/Quran";
   const progressBar: HTMLProgressElement = parent.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = parent.querySelector(".percentage")!;
   const inlineStyle: HTMLStyleElement = document.querySelector(".css.postman")!;
-  const { locale, surahId } =
-    document.querySelector<HTMLElement>(".root")!.dataset;
+  const { locale, surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
   const reciters = JSON.parse(
     document.querySelector<HTMLElement>(".json.reciters")!.innerText,
   );

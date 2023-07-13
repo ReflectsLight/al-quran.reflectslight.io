@@ -61,7 +61,5 @@ function SurahIndex({ locale, surahs, t }: Props) {
     },
   );
 
-  ReactDOM.createRoot(root).render(
-    <SurahIndex locale={locale} surahs={surahs} t={t} />,
-  );
+  ReactDOM.createRoot(root).render(<SurahIndex locale={locale} surahs={surahs} t={t} />);
 })();

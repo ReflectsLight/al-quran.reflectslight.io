@@ -27,10 +27,7 @@ const findOption = (value: string, children: JSX.Element[]) => {
   }
 };
 
-const createOption = (
-  e: ChangeEvent,
-  children: JSX.Element[],
-): SelectOption => {
+const createOption = (e: ChangeEvent, children: JSX.Element[]): SelectOption => {
   const { target } = e;
   const value = target.getAttribute("data-value")!;
   return {
@@ -70,11 +67,7 @@ export function Select({ value, children, onChange, className }: Props) {
       <ul hidden={!open}>
         {children.map((option: JSX.Element, key: number) => {
           return (
-            <li
-              key={key}
-              data-value={option.props.value}
-              onClick={selectOption}
-            >
+            <li key={key} data-value={option.props.value} onClick={selectOption}>
               {option.props.children}
             </li>
           );

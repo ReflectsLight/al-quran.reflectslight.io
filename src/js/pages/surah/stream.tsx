@@ -136,12 +136,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
           t={t}
         />
       )}
-      <div
-        className={classNames(
-          { "justify-end": readyToRender && endOfStream },
-          "row",
-        )}
-      >
+      <div className={classNames({ "justify-end": readyToRender && endOfStream }, "row")}>
         {readyToRender && isPaused && !endOfStream && (
           <PlayShape onClick={() => setIsPaused(false)} />
         )}
@@ -165,9 +160,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
             isStalled={isStalled}
           />
         )}
-        {readyToRender && endOfStream && (
-          <RefreshShape onClick={() => setStream([])} />
-        )}
+        {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
       <audio src={src} ref={audioRef} />
     </div>
