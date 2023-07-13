@@ -1,10 +1,10 @@
 import postman, { item } from 'postman';
 
 (function() {
-  const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
+  const parent: HTMLElement = document.querySelector('.postman.loader')!;
   const progressBar: HTMLProgressElement = parent.querySelector('progress')!;
   const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
-  const inlineStyle: HTMLStyleElement = document.querySelector('.css.webpackage')!;
+  const inlineStyle: HTMLStyleElement = document.querySelector('.css.postman')!;
 
   postman(
     item.script('/js/pages/surah/index.js'),

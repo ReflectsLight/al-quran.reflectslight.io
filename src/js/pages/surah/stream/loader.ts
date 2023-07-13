@@ -2,7 +2,7 @@ import postman, { item } from 'postman';
 import * as Quran from 'lib/Quran';
 
 (function() {
-  const parent: HTMLElement = document.querySelector('.webpackage.loader')!;
+  const parent: HTMLElement = document.querySelector('.postman.loader')!;
   const progressBar: HTMLProgressElement = parent.querySelector('progress')!;
   const progressNumber: HTMLSpanElement = parent.querySelector('.percentage')!;
   const inlineStyle: HTMLStyleElement = document.querySelector('.css.postman')!;

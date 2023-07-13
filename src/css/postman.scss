@@ -8,11 +8,11 @@ body {
   padding: 0;
 }
 
-.webpackage.loader {
+.postman.loader {
   height: 100%;
 }
 
-.webpackage.loader div:first-child {
+.postman.loader div:first-child {
   width: 200px;
   margin: 0 auto;
   display: flex;
@@ -21,11 +21,11 @@ body {
   top: 250px;
 }
 
-.webpackage.loader progress {
+.postman.loader progress {
   width: 100%;
 }
 
-.webpackage.loader .percentage {
+.postman.loader .percentage {
   font-family: monospace;
   text-align: center;
   width: 100%;

@@ -35,7 +35,7 @@ export function Stream({ reciter, surah, stream, locale, slice, endOfStream, isP
           {formatNumber(ayah.id, locale)}
         </span>
         <p>{ayah.text}</p>
-        <audio ref={audioRef} src={`${baseUrl}/${surah.id}/${ayah.id}.mp3`} />
+        <audio autoPlay ref={audioRef} src={`${baseUrl}/${surah.id}/${ayah.id}.mp3`} />
       </li>
     );
   });
