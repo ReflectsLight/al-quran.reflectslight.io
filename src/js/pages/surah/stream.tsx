@@ -101,16 +101,20 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (!audio) {
-      return;
-    }
+    if (!audio) return;
     const onEnded = () => (audio.src = getAudioURL(reciter, surah, stream));
+    const isStalled = () => setIsStalled(true);
+    const unStalled = () => setIsStalled(false);
     audio.addEventListener("ended", onEnded);
-    audio.addEventListener("stalled", () => setIsStalled(true));
-    audio.addEventListener("waiting", () => setIsStalled(true));
-    audio.addEventListener("playing", () => setIsStalled(false));
-    audio.addEventListener("play", () => setIsStalled(false));
-    return () => audio.removeEventListener("ended", onEnded);
+    audio.addEventListener("stalled", isStalled);
+    audio.addEventListener("waiting", isStalled);
+    audio.addEventListener("playing", unStalled);
+    return () => {
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("stalled", isStalled);
+      audio.removeEventListener("waiting", isStalled);
+      audio.removeEventListener("playing", unStalled);
+    };
   }, [readyToRender, soundOn, stream.length]);
 
   return (
