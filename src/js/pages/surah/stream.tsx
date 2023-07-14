@@ -33,6 +33,12 @@ const getTimeSlots = (reciter: Quran.Reciter) => {
   return timeSlots;
 };
 
+const getAudioURL = (reciter: Quran.Reciter, surah: Quran.Surah, stream: Quran.Ayat) => {
+  const { url: baseUrl } = reciter;
+  const ayah = stream[stream.length - 1];
+  return `${baseUrl}/${surah.id}/${ayah?.id}.mp3`;
+};
+
 function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
@@ -45,9 +51,6 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   );
   const readyToRender = stream.length > 0;
   const audioRef = useRef<HTMLAudioElement>(null);
-  const { url: baseUrl } = reciter;
-  const ayah = stream[stream.length - 1];
-  const src = `${baseUrl}/${surah.id}/${ayah?.id}.mp3`;
   const getAyahParam = (slice: Slice, stream: Quran.Ayat) => {
     if (slice.coversSubsetOfSurah) {
       return `${slice.begin}..${slice.end}`;
@@ -101,12 +104,14 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
     if (!audio) {
       return;
     }
-    audio.addEventListener("ended", () => audio.setAttribute("src", src));
+    const onEnded = () => (audio.src = getAudioURL(reciter, surah, stream));
+    audio.addEventListener("ended", onEnded);
     audio.addEventListener("stalled", () => setIsStalled(true));
     audio.addEventListener("waiting", () => setIsStalled(true));
     audio.addEventListener("playing", () => setIsStalled(false));
     audio.addEventListener("play", () => setIsStalled(false));
-  }, [readyToRender, soundOn]);
+    return () => audio.removeEventListener("ended", onEnded);
+  }, [readyToRender, soundOn, stream.length]);
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
@@ -165,7 +170,9 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
         )}
         {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
-      {readyToRender && soundOn && <audio src={src} ref={audioRef} />}
+      {readyToRender && soundOn && (
+        <audio ref={audioRef} src={getAudioURL(reciter, surah, stream)} />
+      )}
     </div>
   );
 }
