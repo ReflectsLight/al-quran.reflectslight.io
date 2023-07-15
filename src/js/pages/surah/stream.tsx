@@ -97,7 +97,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
     } else if (audio.paused) {
       audio.play().catch(() => setSoundOn(false));
     }
-  }, [readyToRender, soundOn, isPaused, stream.length]);
+  }, [soundOn, isPaused, stream.length]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -115,7 +115,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
       audio.removeEventListener("waiting", isStalled);
       audio.removeEventListener("playing", unStalled);
     };
-  }, [readyToRender, soundOn, stream.length]);
+  }, [soundOn, stream.length]);
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
