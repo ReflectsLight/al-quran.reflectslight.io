@@ -27,7 +27,12 @@ export function Timer({
 
   useEffect(() => {
     setMs(ayah.readTimeMs);
-  }, [ayah.id, soundOn]);
+  }, [ayah.id]);
+
+  useEffect(() => {
+    if(!soundOn) return;
+    setMs(ayah.readTimeMs);
+  }, [soundOn]);
 
   useEffect(() => {
     if ((soundOn && isStalled) || isPaused) {
