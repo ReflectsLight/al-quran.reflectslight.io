@@ -30,7 +30,7 @@ export function Timer({
   }, [ayah.id]);
 
   useEffect(() => {
-    if(!soundOn) return;
+    if (!soundOn) return;
     setMs(ayah.readTimeMs);
   }, [soundOn]);
 
