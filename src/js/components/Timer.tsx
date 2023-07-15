@@ -26,21 +26,18 @@ export function Timer({
   const [tid, setTid] = useState<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
-    if (tid) {
-      clearTimeout(tid);
-      setTid(undefined);
-    }
     setMs(ayah.readTimeMs);
   }, [ayah.id, soundOn]);
 
   useEffect(() => {
     if ((soundOn && isStalled) || isPaused) {
-      return;
+      /* no-op */
     } else if (ms <= 0) {
       setStream([...stream, surah.ayat[ayah.id]]);
     } else {
       setTid(setTimeout(() => setMs(ms - 100), 100));
     }
+    return () => clearTimeout(tid);
   }, [isStalled, isPaused, soundOn, ms]);
 
   return <div className="timer">{formatNumber(ms / 1000, locale)}</div>;
