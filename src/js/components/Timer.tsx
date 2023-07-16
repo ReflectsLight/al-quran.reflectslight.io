@@ -23,7 +23,6 @@ export function Timer({
 }: Props) {
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
-  const [tid, setTid] = useState<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     setMs(ayah.readTimeMs);
@@ -40,9 +39,9 @@ export function Timer({
     } else if (ms <= 0) {
       setStream([...stream, surah.ayat[ayah.id]]);
     } else {
-      setTid(setTimeout(() => setMs(ms - 100), 100));
+      const tid = setTimeout(() => setMs(ms - 100), 100);
+      return () => clearTimeout(tid);
     }
-    return () => clearTimeout(tid);
   }, [isStalled, isPaused, soundOn, ms]);
 
   return <div className="timer">{formatNumber(ms / 1000, locale)}</div>;
