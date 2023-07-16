@@ -1,9 +1,12 @@
 {
   "name": "al-quran.reflectslight.io",
-  "workspaces": ["./packages/typescript/*"],
+  "workspaces": [
+    "./packages/typescript/*"
+  ],
   "scripts": {
     "eslint": "npm exec eslint -- --fix src/js/",
-    "prettier": "npm exec prettier -- --write src/js/"
+    "prettier": "npm exec prettier -- --write src/js/",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -22,6 +25,7 @@
     "ts-standard": "^12.0.1",
     "typescript": "^4.8.2",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "husky": "^8.0.0"
   }
 }
