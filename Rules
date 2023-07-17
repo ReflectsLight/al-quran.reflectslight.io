@@ -65,6 +65,12 @@ compile "/sitemap.xml.erb" do
 end
 
 ##
+# /robots.txt
+compile "/robots.txt" do
+  write("/robots.txt")
+end
+
+##
 # Require rules
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/pages/surah/redirect"
