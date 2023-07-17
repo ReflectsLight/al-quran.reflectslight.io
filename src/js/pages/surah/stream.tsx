@@ -102,7 +102,12 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    const onEnded = () => (audio.src = getAudioURL(reciter, surah, stream));
+    const onEnded = () => {
+      const src = getAudioURL(reciter, surah, stream);
+      if (src !== audio.src) {
+        audio.src = src;
+      }
+    };
     const isStalled = () => setIsStalled(true);
     const unStalled = () => setIsStalled(false);
     audio.addEventListener("ended", onEnded);
