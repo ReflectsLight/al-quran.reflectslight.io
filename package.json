@@ -1,16 +1,19 @@
 {
   "name": "al-quran.reflectslight.io",
-  "workspaces": ["./packages/typescript/*"],
+  "workspaces": [
+    "./packages/typescript/*"
+  ],
   "scripts": {
     "eslint": "npm exec eslint -- --fix src/js/",
-    "prettier": "npm exec prettier -- --write src/js/"
+    "prettier": "npm exec prettier -- --write src/js/",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
+    "es-cookie": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ts-loader": "^9.3.1",
-    "classnames": "^2.3.2",
-    "es-cookie": "^1.4.0"
+    "ts-loader": "^9.3.1"
   },
   "devDependencies": {
     "@types/css-font-loading-module": "^0.0.7",
@@ -18,6 +21,8 @@
     "@types/react-dom": "^18.0.6",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.0",
+    "is-ci": "^3.0.1",
     "prettier": "^2.7.1",
     "ts-standard": "^12.0.1",
     "typescript": "^4.8.2",
