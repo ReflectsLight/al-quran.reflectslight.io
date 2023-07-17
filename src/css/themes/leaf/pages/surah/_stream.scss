@@ -32,4 +32,8 @@
     background: unset;
     fill: $green;
   }
+
+  .row .loading div {
+    background: $green;
+  }
 }

@@ -134,3 +134,13 @@ export function RefreshShape({ onClick }: Props) {
     </svg>
   );
 }
+
+export function LoadingShape() {
+  return (
+    <div className="loading">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
+}

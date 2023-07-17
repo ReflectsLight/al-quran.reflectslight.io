@@ -42,7 +42,7 @@ export function Timer({
       const tid = setTimeout(() => setMs(ms - 100), 100);
       return () => clearTimeout(tid);
     }
-  }, [isStalled, isPaused, soundOn, ms]);
+  }, [soundOn, isStalled, isPaused, ms]);
 
   return <div className="timer">{formatNumber(ms / 1000, locale)}</div>;
 }

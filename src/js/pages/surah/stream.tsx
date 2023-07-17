@@ -13,6 +13,7 @@ import {
   SoundOnShape,
   SoundOffShape,
   RefreshShape,
+  LoadingShape,
 } from "components/Shape";
 import * as Quran from "lib/Quran";
 import { Slice } from "lib/Quran/Slice";
@@ -179,6 +180,11 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
         )}
         {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
+      {readyToRender && soundOn && isStalled && (
+        <div className="row justify-end">
+          <LoadingShape />
+        </div>
+      )}
       {readyToRender && soundOn && (
         <audio ref={audioRef} src={getAudioURL(reciter, surah, stream)} />
       )}
