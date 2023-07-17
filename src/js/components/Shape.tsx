@@ -138,9 +138,9 @@ export function RefreshShape({ onClick }: Props) {
 export function LoadingShape() {
   return (
     <div className="loading">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
     </div>
   );
 }
