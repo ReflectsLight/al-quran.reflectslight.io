@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="<%= locale %>">
   <head>
-    <title><%= title %></title>
+    <title><%= t(locale, "TheNobleQuran") %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="description" content="<%= t(locale, 'meta.index.description') %>">
     <link rel="icon" href="/favicon.png">
     <%= inline_css('/css/postman.scss') %>
   </head>

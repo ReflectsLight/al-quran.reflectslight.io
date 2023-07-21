@@ -16,9 +16,8 @@ end
 Ryo.each(slugs) do |surah_id, slug|
   locales.each do |locale|
     compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
-      name = i18n[locale].surahs.names[surah_id.to_i - 1]
-      title = "#{i18n[locale].TheNobleQuran}: #{name}"
-      filter(:erb, locals: {locale:, surah_id:, title:})
+      surah_name = i18n[locale].surahs.names[surah_id.to_i - 1]
+      filter(:erb, locals: {locale:, surah_id:, surah_name:})
       write "/#{locale}/#{slug}/index.html"
     end
   end
