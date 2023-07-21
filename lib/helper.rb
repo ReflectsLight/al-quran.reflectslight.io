@@ -22,7 +22,7 @@ module Helper
 
   def t(locale, key, locals = {})
     str = [locale, *key.split(".")].inject(i18n) { |h, k| h[k] }
-    str % locals
+    format(str, locals)
   end
 
   def i18n
