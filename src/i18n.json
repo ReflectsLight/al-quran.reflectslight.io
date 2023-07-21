@@ -136,7 +136,7 @@
     "comma": "،",
     "meta": {
       "index": {"description": "اقرأ واستمع إلى القرآن الكريم."},
-      "stream": {"description": "اقرأ واستمع إلى '%{surah_name}' من القرآن الكريم."}
+      "stream": {"description": "اقرأ واستمع إلى القرآن الكريم - '%{surah_name}'."}
     },
     "surahs": {
       "names": [
