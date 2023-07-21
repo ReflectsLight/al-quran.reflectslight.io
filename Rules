@@ -50,6 +50,11 @@ compile "/slugs.json" do
   write(nil)
 end
 
+compile "/reciters.json" do
+  filter(:minify_json)
+  write(nil)
+end
+
 compile "/css/postman.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
