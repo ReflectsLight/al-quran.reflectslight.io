@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="<%= locale %>">
   <head>
-    <title><%= title %></title>
+    <title> <%= t(locale, "TheNobleQuran") %>: <%= surah_name %> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="description" content="<%= t(locale, 'meta.stream.description', {surah_name:}) %>">
     <link rel="icon" href="/favicon.png">
     <%= inline_css('/css/postman.css') %>
   </head>

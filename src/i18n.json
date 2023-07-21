@@ -5,6 +5,10 @@
     "surah": "Surah",
     "ayah": "Ayah",
     "comma": ",",
+    "meta": {
+      "index": {"description": "Read and listen to The Noble Quran."},
+      "stream": {"description": "Read and listen to '%{surah_name}' from The Noble Quran."}
+    },
     "surahs": {
       "names": [
         "The Opener",
@@ -130,6 +134,10 @@
     "surah": "سورة",
     "ayah": "آية",
     "comma": "،",
+    "meta": {
+      "index": {"description": "اقرأ واستمع إلى القرآن الكريم."},
+      "stream": {"description": "اقرأ واستمع إلى '%{surah_name}' من القرآن الكريم."}
+    },
     "surahs": {
       "names": [
         "الفاتحة",
