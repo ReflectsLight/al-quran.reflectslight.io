@@ -44,5 +44,9 @@ export function Timer({
     }
   }, [soundOn, isStalled, isPaused, ms]);
 
-  return <div className="timer">{formatNumber(ms / 1000, locale)}</div>;
+  return (
+    <div className="timer">
+      {ms / 1000 <= 0 ? formatNumber(0, locale) : formatNumber(ms / 1000, locale)}
+    </div>
+  );
 }
