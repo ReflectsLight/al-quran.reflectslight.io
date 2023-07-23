@@ -11,7 +11,7 @@ desc "Deploy the website"
 task "deploy" => %i[deploy:env nanoc:clean nanoc:compile] do
   git_branch = `git branch --show-current`.chomp
   if git_branch != "production"
-    warn "This task can only be run on the 'production' branch."
+    warn "This task must be run on the 'production' branch."
     exit(1)
   end
   print "Wait...", "\n"
