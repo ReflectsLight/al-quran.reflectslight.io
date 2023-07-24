@@ -53,11 +53,6 @@
   top: 4px;
 }
 
-.content.ar .row .timer {
-  position: relative;
-  top: 2px;
-}
-
 .content .row svg {
   width: 30px;
   height: 30px;
@@ -71,6 +66,24 @@
 
 .justify-end {
   justify-content: flex-end !important;
+}
+
+body .root .content.theme.ar {
+  .row.details  {
+    place-content: flex-end;
+    span[lang="en"] {
+      display: none;
+    }
+  }
+
+  ul.body.stream .ayah p {
+    margin-top: 10px;
+  }
+
+  .row .timer {
+    position: relative;
+    top: 2px;
+  }
 }
 
 @import "themes/moon";
