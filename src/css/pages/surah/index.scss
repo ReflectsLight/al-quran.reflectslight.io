@@ -47,19 +47,23 @@ ul.body.index {
   }
 }
 
-.root .content .row.surah.choose-random {
+body .root .content .row.surah.choose-random {
   display: flex;
   place-content: center;
 }
 
-.root .content.theme.en {
+body .root .content.theme.en {
   ul.body.index a .surah.id {
     margin-right: 5px;
   }
 }
 
-.root .content.theme.ar {
-  ul.body.index a .surah.id {
-    margin-left: 8px;
+body .root .content.theme.ar {
+  ul.body.index {
+    a .surah.id {
+      width: 35px;
+      padding: 1px;
+      margin-left: 8px;
+    }
   }
 }
