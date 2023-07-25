@@ -18,9 +18,9 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: eslint
-      run: npm run eslint
+      run: npm exec eslint -- src/js/
     - name: rubocop
-      run: bundle exec rake linter:rubocop
+      run: bundle exec rubocop
   prettier:
     runs-on: ubuntu-latest
     steps:
@@ -29,7 +29,7 @@ jobs:
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
     - name: prettier
-      run: npm run prettier
+      run: npm exec prettier -- --check src/js/
   build:
     runs-on: ubuntu-latest
     steps:
