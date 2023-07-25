@@ -4,11 +4,12 @@ AllCops:
   TargetRubyVersion: 3.2
   Include:
     - Rakefile.rb
-    - rules/*.rules
-    - rules/**/**/*.rules
-    - lib/*.rb
-    - lib/**/*.rb
-    - lib/**/**.rb
+    - tasks/*.rake
+    - nanoc/rules/*.rules
+    - nanoc/rules/**/**/*.rules
+    - nanoc/lib/*.rb
+    - nanoc/lib/**/*.rb
+    - nanoc/lib/**/**.rb
 
 ##
 # Defaults: standard-rb
@@ -18,7 +19,7 @@ inherit_gem:
   standard: config/base.yml
 
 ##
-# Extra
+# Enabled
 Style/FrozenStringLiteralComment:
   Enabled: true
 Layout/SpaceInsideHashLiteralBraces:

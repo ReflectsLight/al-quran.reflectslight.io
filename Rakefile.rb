@@ -3,10 +3,13 @@
 require "bundler/setup"
 require "ryo"
 require "yaml"
+
+##
+# Rake tasks
 load "tasks/deploy.rake"
+load "tasks/linter.rake"
 
 build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
-
 namespace :nanoc do
   task :compile do
     ENV["SASS_PATH"] = "./src/css/"
@@ -43,24 +46,4 @@ task :server do
 rescue Interrupt
   s.stop
 end
-
-namespace :lint do
-  desc "Run rubocop (Ruby)"
-  task :rubocop do
-    sh "bundle exec rubocop"
-  end
-
-  desc "Run eslint (TypeScript)"
-  task :eslint do
-    sh "npm run eslint"
-  end
-
-  namespace :eslint do
-    desc "Run eslint with the --fix option (TypeScript)"
-    task :fix do
-      sh "npm run eslint-autofix"
-    end
-  end
-end
-task lint: ["lint:rubocop", "lint:eslint"]
 task default: "build"
