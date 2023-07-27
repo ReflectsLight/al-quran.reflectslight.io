@@ -13,6 +13,7 @@ load "tasks/nanoc.rake"
 desc "Serve the website on localhost"
 task :server do
   require "server"
+  build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
   s = Server.for_dir(build_dir)
   s.start(block: true)
 rescue Interrupt
