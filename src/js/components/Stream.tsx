@@ -1,28 +1,18 @@
 import * as Quran from "lib/Quran";
 import React, { useEffect } from "react";
 import { formatNumber, TFunction } from "lib/i18n";
-import { Slice } from "lib/Quran/Slice";
 import classNames from "classnames";
 
 interface Props {
   surah: Quran.Surah;
   stream: Quran.Ayat;
   locale: Quran.Locale;
-  slice: Slice;
   endOfStream: boolean;
   isPaused: boolean;
   t: TFunction;
 }
 
-export function Stream({
-  surah,
-  stream,
-  locale,
-  slice,
-  endOfStream,
-  isPaused,
-  t,
-}: Props) {
+export function Stream({ surah, stream, locale, endOfStream, isPaused, t }: Props) {
   const className = classNames("body", "stream");
   const style: React.CSSProperties =
     endOfStream || isPaused ? { overflowY: "auto" } : { overflowY: "hidden" };
@@ -40,12 +30,7 @@ export function Stream({
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector("ul.stream")!;
-    if (slice.coversOneAyah) {
-      const li: HTMLLIElement = ul.querySelector("li:last-child")!;
-      li.scrollIntoView();
-    } else {
-      ul.scroll({ top: ul.scrollHeight, behavior: "smooth" });
-    }
+    ul.scroll({ top: ul.scrollHeight, behavior: "smooth" });
   }, [stream]);
 
   return (
