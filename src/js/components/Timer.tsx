@@ -8,6 +8,7 @@ interface Props {
   stream: Quran.Ayat;
   soundOn: boolean;
   setStream: (stream: Quran.Ayat) => void;
+  setEndOfStream: (v: boolean) => void;
   isPaused: boolean;
   isStalled: boolean;
 }
@@ -18,10 +19,12 @@ export function Timer({
   isStalled,
   soundOn,
   setStream,
+  setEndOfStream,
   locale,
   isPaused,
 }: Props) {
   const ayah = stream[stream.length - 1];
+  const lastAyah = surah.ayat[surah.ayat.length - 1];
   const [ms, setMs] = useState(ayah.readTimeMs);
 
   useEffect(() => {
@@ -37,7 +40,11 @@ export function Timer({
     if ((soundOn && isStalled) || isPaused) {
       /* no-op */
     } else if (ms <= 0) {
-      setStream([...stream, surah.ayat[ayah.id]]);
+      if (lastAyah.id === ayah.id) {
+        setEndOfStream(true);
+      } else {
+        setStream([...stream, surah.ayat[ayah.id]]);
+      }
     } else {
       const tid = setTimeout(() => setMs(ms - 100), 100);
       return () => clearTimeout(tid);
