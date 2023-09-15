@@ -16,14 +16,12 @@ import {
   LoadingShape,
 } from "components/Shape";
 import * as Quran from "lib/Quran";
-import { Slice } from "lib/Quran/Slice";
 import { i18n, TFunction } from "lib/i18n";
 
 interface Props {
   node: HTMLScriptElement;
   reciters: Quran.Reciter[];
   locale: Quran.Locale;
-  slice: Slice;
   paused: boolean;
   t: TFunction;
 }
@@ -40,7 +38,7 @@ const getAudioURL = (reciter: Quran.Reciter, surah: Quran.Surah, stream: Quran.A
   return `${baseUrl}/${surah.id}/${ayah?.id}.mp3`;
 };
 
-function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
+function SurahStream({ node, reciters, locale, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [soundOn, setSoundOn] = useState<boolean>(false);
@@ -53,19 +51,9 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   );
   const readyToRender = stream.length > 0;
   const audioRef = useRef<HTMLAudioElement>(null);
-  const getAyahParam = (slice: Slice, stream: Quran.Ayat) => {
-    if (slice.coversSubsetOfSurah) {
-      return `${slice.begin}..${slice.end}`;
-    } else {
-      return stream.length;
-    }
-  };
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
-    const params = [
-      ["ayah", getAyahParam(slice, stream)],
-      ["paused", isPaused ? "t" : null],
-    ];
+    const params = [["paused", isPaused ? "t" : null]];
     const query = params
       .filter(([, v]) => v)
       .flatMap(([k, v]) => `${k}=${v}`)
@@ -74,11 +62,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   };
 
   useEffect(() => {
-    if (slice.coversOneAyah) {
-      setStream([...surah.ayat.slice(0, slice.begin)]);
-    } else {
-      setStream([surah.ayat[slice.begin - 1]]);
-    }
+    setStream([surah.ayat[0]]);
   }, [stream.length === 0]);
 
   useEffect(() => {
@@ -137,7 +121,6 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
       )}
       {readyToRender && (
         <Stream
-          slice={slice}
           surah={surah}
           stream={stream}
           locale={locale}
@@ -192,7 +175,6 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   const toBoolean = (str: string | null): boolean =>
     str !== null && ["1", "t", "true", "yes"].includes(str);
   const params = new URLSearchParams(location.search);
-  const slice = Slice.fromParam(params.get("ayah"));
   const paused = toBoolean(params.get("paused"));
   const reciters = JSON.parse(
     document.querySelector<HTMLElement>(".json.reciters")!.innerText,
@@ -200,13 +182,6 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   const t = i18n(document.querySelector<HTMLElement>(".json.i18n")!.innerText);
 
   ReactDOM.createRoot(root).render(
-    <SurahStream
-      reciters={reciters}
-      node={node}
-      locale={locale}
-      slice={slice}
-      paused={paused}
-      t={t}
-    />,
+    <SurahStream reciters={reciters} node={node} locale={locale} paused={paused} t={t} />,
   );
 })();
