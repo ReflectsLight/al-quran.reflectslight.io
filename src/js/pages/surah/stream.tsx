@@ -45,6 +45,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [soundOn, setSoundOn] = useState<boolean>(false);
   const [isStalled, setIsStalled] = useState<boolean>(false);
+  const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
   const [reciter] = useState<Quran.Reciter>(reciters[0]);
   const [surah] = useState<Quran.Surah>(
@@ -71,15 +72,6 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
       .join("&");
     location.replace(`/${locale}/${surah.slug}/?${query}`);
   };
-  const endOfStream = (function () {
-    if (slice.coversOneAyah || slice.coversOneSurah) {
-      return stream.length === surah.ayat.length;
-    } else if (slice.coversSubsetOfSurah) {
-      return stream.length === slice.subsetLength;
-    } else {
-      return false;
-    }
-  })();
 
   useEffect(() => {
     if (slice.coversOneAyah) {
@@ -171,6 +163,7 @@ function SurahStream({ node, reciters, locale, slice, paused, t }: Props) {
           <Timer
             surah={surah}
             setStream={setStream}
+            setEndOfStream={setEndOfStream}
             stream={stream}
             locale={locale}
             isPaused={isPaused}
