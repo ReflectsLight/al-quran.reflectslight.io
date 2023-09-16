@@ -62,6 +62,7 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
   };
 
   useEffect(() => {
+    setEndOfStream(false);
     setStream([surah.ayat[0]]);
   }, [stream.length === 0]);
 
