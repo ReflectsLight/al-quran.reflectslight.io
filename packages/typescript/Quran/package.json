@@ -1,0 +1,21 @@
+{
+  "name": "Quran",
+  "version": "0.1.0",
+  "description": "A library that provides an interface to The Holy Quran",
+  "main": "dist/index.js",
+  "types": ["dist/index.d.ts"],
+  "scripts": {
+    "build": "npm exec tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReflectsLight/al-quran.reflectslight.io.git"
+  },
+  "author": "0x1eef",
+  "license": "0BSDL",
+  "devDependencies": {
+    "@types/node": "^16.18",
+    "typescript": "^4.5"
+  }
+}
