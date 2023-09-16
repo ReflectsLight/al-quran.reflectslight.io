@@ -5,7 +5,3 @@ The library assumes the source of data will be provided by the
 [ReflectsLight/quran-json](https://github.com/ReflectsLight/quran-json) <br>
 repository - a separate project that provides the contents of The Quran in <br>
 the JSON format, and in multiple languages.
-
-
-
-
