@@ -10,7 +10,7 @@ the JSON format, and in multiple languages.
 
 "Quran" is structured as a typical TypeScript project, and
 [ReflectsLight/quran-json](https://github.com/ReflectsLight/quran-json) <br>
-is included as a git submodule for the purposes of development and testing <br>.
+is included as a git submodule for the purposes of development and testing.
 
 A Git submodule is essentially a reference to a specific commit in <br>
 another git repository. Submodules can be used to clone and track changes <br>
