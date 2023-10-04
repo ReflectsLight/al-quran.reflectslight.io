@@ -7,7 +7,7 @@
     "comma": ",",
     "meta": {
       "index": {"description": "Read and listen to The Noble Quran."},
-      "stream": {"description": "Read and listen to '%{surah_name}' from The Noble Quran."}
+      "stream": {"description": "Read and listen to The Noble Quran."}
     },
     "surahs": {
       "names": [
@@ -135,8 +135,8 @@
     "ayah": "آية",
     "comma": "،",
     "meta": {
-      "index": {"description": "اقرأ واستمع إلى القرآن الكريم."},
-      "stream": {"description": "اقرأ واستمع إلى القرآن الكريم - '%{surah_name}'."}
+      "index": {"description": "اقرأ واستمع إلى القرآن الكريم"},
+      "stream": {"description": "اقرأ واستمع إلى القرآن الكريم"}
     },
     "surahs": {
       "names": [

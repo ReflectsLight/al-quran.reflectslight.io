@@ -23,3 +23,7 @@ end
 compile "/favicon.png" do
   write(item.identifier.to_s)
 end
+
+compile "/images/opengraph/*.png" do
+  write(item.identifier.to_s)
+end
