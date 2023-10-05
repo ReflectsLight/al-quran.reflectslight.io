@@ -14,12 +14,23 @@ compile "/*/*/surah.json" do
 end
 
 Ryo.each(slugs) do |id, slug|
+  writer = ->(locale, identifier:) do
+    name = i18n[locale].surahs.names[id.to_i - 1]
+    context = Ryo.from(
+      filename: "stream.html.erb",
+      locale:,
+      locales:,
+      surah: {id:, name:, slug:}
+    )
+    filter(:erb, locals: {context:})
+    write "/#{locale}/#{identifier}/index.html"
+  end
   locales.each do |locale|
     compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
-      name = i18n[locale].surahs.names[id.to_i - 1]
-      context = Ryo.from(filename: "stream.html.erb", locale:, surah: {id:, name:, slug:})
-      filter(:erb, locals: {context:})
-      write "/#{locale}/#{slug}/index.html"
+      instance_exec(locale, identifier: slug, &writer)
+    end
+    compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{id}/index.html" do
+      instance_exec(locale, identifier: id, &writer)
     end
   end
 end
