@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(context.locale, 'meta.stream.description') %>">
+    <link
+      rel="canonical"
+      hreflang="<%= context.locale %>"
+      href="/<%= context.locale %>/<%= context.surah.slug %>/"
+    />
+    <% context.locales.each do |locale| %>
+    <link
+        rel="alternate"
+        type="text/html"
+        hreflang="<%= locale %>"
+        href="/<%= locale %>/<%= context.surah.slug %>/"
+      />
+    <% end -%>
     <%= opengraph(context) %>
     <link rel="icon" href="/favicon.png">
   </head>
