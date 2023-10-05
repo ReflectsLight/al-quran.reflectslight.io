@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 use_helper Module.new {
   require_relative "helper"
   include Helper
@@ -9,10 +11,10 @@ use_helper Module.new {
   def local_assigns(context)
     case context.filename
     when "stream.html.erb"
-      { title: t(context.locale, "TheNobleQuran"),
-        description: t(context.locale, "meta.stream.description"),
-        url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
-        image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png" }
+      {title: t(context.locale, "TheNobleQuran"),
+       description: t(context.locale, "meta.stream.description"),
+       url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
+       image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png"}
     end
   end
 }

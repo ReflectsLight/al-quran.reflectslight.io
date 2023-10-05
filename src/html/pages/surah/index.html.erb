@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>">
+<html lang="<%= context.locale %>">
   <head>
-    <title><%= t(locale, "TheNobleQuran") %></title>
+    <title><%= t(context.locale, "TheNobleQuran") %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="<%= t(locale, 'meta.index.description') %>">
+    <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
     <link rel="icon" href="/favicon.png">
     <%= inline_css('/css/postman.scss') %>
   </head>
@@ -15,7 +15,7 @@
         <span class="percentage">Loading...</span>
       </div>
     </div>
-    <div class="root" data-locale="<%= locale %>"></div>
+    <div class="root" data-locale="<%= context.locale %>"></div>
     <%= inline_json("/i18n.json") %>
     <%= inline_json("/surahs.json") %>
     <script src="/js/pages/surah/index/loader.js"></script>
