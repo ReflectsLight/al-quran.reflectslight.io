@@ -2,18 +2,17 @@ use_helper Module.new {
   require_relative "helper"
   include Helper
 
-  def opengraph(locale, basename, options = {})
-    erb "opengraph.html.erb", local_assigns(locale, basename, options)
+  def opengraph(context)
+    erb "opengraph.html.erb", local_assigns(context)
   end
 
-  def local_assigns(locale, basename, options)
-    case basename
+  def local_assigns(context)
+    case context.filename
     when "stream.html.erb"
-      surah_id = options[:surah_id]
-      { title: t(locale, "TheNobleQuran"),
-        description: t(locale, "meta.stream.description"),
-        url: "https://al-quran.reflectslight.io/#{locale}/#{surah_id}/",
-        image: "https://al-quran.reflectslight.io/images/opengraph/#{surah_id}.png" }
+      { title: t(context.locale, "TheNobleQuran"),
+        description: t(context.locale, "meta.stream.description"),
+        url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
+        image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png" }
     end
   end
 }

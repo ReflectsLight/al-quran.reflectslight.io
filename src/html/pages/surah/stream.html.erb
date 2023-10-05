@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>">
+<html lang="<%= context.locale %>">
   <head>
-    <title> <%= t(locale, "TheNobleQuran") %>: <%= surah_name %> </title>
+    <title> <%= t(context.locale, 'TheNobleQuran') %>: <%= context.surah.name %> </title>
     <%= inline_css('/css/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="<%= t(locale, 'meta.stream.description') %>">
-    <%= opengraph(locale, "stream.html.erb", {surah_id:}) %>
+    <meta name="description" content="<%= t(context.locale, 'meta.stream.description') %>">
+    <%= opengraph(context) %>
     <link rel="icon" href="/favicon.png">
   </head>
   <body>
@@ -16,7 +16,10 @@
         <span class="percentage">Loading...</span>
       </div>
     </div>
-    <div class="root" data-locale="<%= locale %>" data-surah-id="<%= surah_id %>"></div>
+    <div class="root"
+         data-locale="<%= context.locale %>"
+         data-surah-id="<%= context.surah.id %>">
+    </div>
     <%= inline_json("/i18n.json") %>
     <%= inline_json("/reciters.json") %>
     <script src="/js/pages/surah/stream/loader.js"></script>
