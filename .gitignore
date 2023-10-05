@@ -2,6 +2,7 @@ build/
 tmp/
 node_modules/
 .localgems/
+.dev/
 *.log
 .env
 .idea
