@@ -33,7 +33,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
       <ul className="body index scroll-y">
         {surahs.map((surah, key) => (
           <li className="surah" key={key}>
-            <a href={`/${locale}/${surah.slug}`}>
+            <a href={`/${locale}/${surah.slug}/`}>
               <div className="surah id">{formatNumber(surah.id, locale)}</div>
               <div className="surah name">{surah.localizedName}</div>
               <div className="surah name transliterated" lang="en">
