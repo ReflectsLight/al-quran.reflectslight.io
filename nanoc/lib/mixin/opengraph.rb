@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-use_helper Module.new {
-  require_relative "helper"
-  include Helper
-
+module Mixin::OpenGraph
   def opengraph(context)
     erb "opengraph.html.erb", local_assigns(context)
   end
@@ -17,4 +14,4 @@ use_helper Module.new {
        image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png"}
     end
   end
-}
+end
