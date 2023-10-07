@@ -23,6 +23,7 @@ Ryo.each(slugs) do |id, slug|
       surah: {id:, name:, slug:}
     )
     filter(:erb, locals: {context:})
+    filter(:tidy)
     write "/#{locale}/#{identifier}/index.html"
   end
   locales.each do |locale|
