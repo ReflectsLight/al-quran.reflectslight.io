@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mixin::Inline
   def inline_json(path)
     class_name = File.basename(path, File.extname(path))
