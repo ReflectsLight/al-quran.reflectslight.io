@@ -14,9 +14,14 @@ nginx, apache, etc).
   <strong>The stack</strong>
 </p>
 
+The following languages and tools have to be installed before
+the website can be built:
+
 * Ruby 3.1, or later.
 * NodeJS v18.15, or later.
-* TypeScript
+* [tidy-html5](https://github.com/htacg/tidy-html5) <br>
+  There is a good chance there's a package available for
+  tidy-html5 on your operating system of choice.
 
 <p align="left">
   <strong>Local development</strong>
@@ -27,7 +32,7 @@ __1. Clone__
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-__2. Install Ruby, and NodeJS packages__
+__2. Install Ruby, NodeJS packages__
 
     bundle install
     npm i
