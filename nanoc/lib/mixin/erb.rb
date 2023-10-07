@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mixin::ERB
   def erb(path, local_assigns = {})
     erb = File.binread File.join(Dir.getwd, "src", "html", path)
