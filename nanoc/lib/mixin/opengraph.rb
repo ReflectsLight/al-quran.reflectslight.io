@@ -2,7 +2,7 @@
 
 module Mixin::OpenGraph
   def opengraph(context)
-    erb "opengraph.html.erb", local_assigns(context)
+    erb "partials/opengraph.html.erb", local_assigns(context)
   end
 
   def local_assigns(context)
