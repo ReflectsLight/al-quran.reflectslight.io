@@ -1,6 +1,4 @@
-<p align="left">
-  <strong>About</strong>
-</p>
+## About
 
 This repository contains the source code of
 [al-quran.reflectslight.io](https://al-quran.reflectslight.io),
@@ -10,9 +8,7 @@ of HTML, CSS, JavaScript and other static assets
 that can be hosted by a regular web server (eg
 nginx, apache, etc).
 
-<p align="left">
-  <strong>The stack</strong>
-</p>
+## Stack
 
 The following languages and tools have to be installed before
 the website can be built:
@@ -23,9 +19,7 @@ the website can be built:
   There is a good chance there's a package available for
   tidy-html5 on your operating system of choice.
 
-<p align="left">
-  <strong>Local development</strong>
-</p>
+## Local development
 
 __1. Clone__
 
@@ -49,9 +43,7 @@ __4. Start server on localhost__
 
     rake server
 
-<p align="left">
-  <strong>Thanks</strong>
-</p>
+## Thanks
 
 First and foremost, Alhamdulillah.
 
