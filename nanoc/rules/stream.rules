@@ -27,31 +27,31 @@ Ryo.each(slugs) do |id, slug|
     write "/#{locale}/#{identifier}/index.html"
   end
   locales.each do |locale|
-    compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
+    compile "/html/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
       instance_exec(locale, identifier: slug, &writer)
     end
-    compile "/html/pages/surah/stream.html.erb", rep: "/#{locale}/#{id}/index.html" do
+    compile "/html/stream.html.erb", rep: "/#{locale}/#{id}/index.html" do
       instance_exec(locale, identifier: id, &writer)
     end
   end
 end
 
-compile "/js/pages/surah/stream.tsx" do
+compile "/js/pages/SurahStream.tsx" do
   filter :webpack,
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
          reject: proc { _1.include?("WebPackage") }
-  write "/js/pages/surah/stream.js"
+  write "/js/pages/surah-stream.js"
   filter :gzip
-  write "/js/pages/surah/stream.js.gz"
+  write "/js/pages/surah-stream.js.gz"
 end
 
-compile "/js/pages/surah/stream/loader.ts" do
+compile "/js/loaders/SurahStreamLoader.ts" do
   filter :webpack, depend_on: "/js/lib/WebPackage"
-  write "/js/pages/surah/stream/loader.js"
+  write "/js/loaders/surah-stream-loader.js"
 end
 
-compile "/css/pages/surah/stream.scss" do
+compile "/css/pages/SurahStream.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/pages/surah/stream.css")
+  write("/css/pages/surah-stream.css")
 end

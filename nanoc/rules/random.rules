@@ -6,14 +6,14 @@
 # (eg /en/random/ -> /en/al-kahf/)
 
 locales.each do |locale|
-  compile "/html/pages/surah/random.html.erb", rep: "random/#{locale}" do
+  compile "/html/random.html.erb", rep: "random/#{locale}" do
     title = i18n[locale].TheNobleQuran
     filter(:erb, locals: {locale:, title:})
     write("/#{locale}/random/index.html")
   end
 end
 
-compile "/js/pages/surah/random.ts" do
-  filter :webpack
-  write "/js/pages/surah/random.js"
+compile "/js/pages/Random.ts" do
+  filter(:webpack)
+  write("/js/pages/random.js")
 end

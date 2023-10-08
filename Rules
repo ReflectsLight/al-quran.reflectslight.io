@@ -78,10 +78,10 @@ end
 ##
 # Require rules
 require_rules "nanoc/rules/assets"
-require_rules "nanoc/rules/pages/surah/redirect"
-require_rules "nanoc/rules/pages/surah/stream", {locales:, i18n:, slugs:}
-require_rules "nanoc/rules/pages/surah/index", {locales:, i18n:}
-require_rules "nanoc/rules/pages/surah/random", {locales:, i18n:, slugs:}
+require_rules "nanoc/rules/redirect"
+require_rules "nanoc/rules/random", {locales:, i18n:, slugs:}
+require_rules "nanoc/rules/stream", {locales:, i18n:, slugs:}
+require_rules "nanoc/rules/index", {locales:, i18n:}
 
 ##
 # Defaults
