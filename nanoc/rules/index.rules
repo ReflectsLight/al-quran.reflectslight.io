@@ -6,7 +6,7 @@
 # dependencies.
 
 locales.each do |locale|
-  compile "/html/pages/surah/index.html.erb", rep: "/#{locale}/surah/index" do
+  compile "/html/index.html.erb", rep: "/#{locale}/surah/index" do
     context = Ryo.from(locale:)
     filter(:erb, locals: {context:})
     filter(:tidy)
@@ -14,22 +14,22 @@ locales.each do |locale|
   end
 end
 
-compile "/js/pages/surah/index.tsx" do
+compile "/js/pages/SurahIndex.tsx" do
   filter :webpack, depend_on: ["/js/components",
                                "/js/lib/[!WebPackage]/",
                                "/js/hooks"]
-  write "/js/pages/surah/index.js"
+  write "/js/pages/surah-index.js"
   filter :gzip
-  write "/js/pages/surah/index.js.gz"
+  write "/js/pages/surah-index.js.gz"
 end
 
-compile "/js/pages/surah/index/loader.ts" do
+compile "/js/loaders/SurahIndexLoader.ts" do
   filter :webpack, depend_on: "/js/lib/WebPackage"
-  write "/js/pages/surah/index/loader.js"
+  write "/js/loaders/surah-index-loader.js"
 end
 
-compile "/css/pages/surah/index.scss" do
+compile "/css/pages/SurahIndex.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/pages/surah/index.css")
+  write("/css/pages/surah-index.css")
 end

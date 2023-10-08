@@ -1,7 +1,5 @@
 @import "layout";
 @import "components/Select";
-@import "themes/moon";
-@import "themes/leaf";
 
 ul.body.index {
   display: flex;
@@ -67,3 +65,6 @@ body .root .content.theme.ar {
     }
   }
 }
+
+@import "themes/moon";
+@import "themes/leaf";
