@@ -1,15 +1,5 @@
 import type { Item, FontItem } from './item';
 
-const fetchOptions = (): RequestInit => {
-  const getNavigationEntries = (): PerformanceNavigationTiming[] =>  {
-    return performance
-           .getEntriesByType('navigation') as PerformanceNavigationTiming[];
-  };
-  const pageHasRefreshed = getNavigationEntries()
-                           .some((e) => e.type === 'reload');
-  return pageHasRefreshed ? { cache: 'reload' } : {};
-};
-
 export default {
   font(item: FontItem): Promise<FontFace>  {
     const { fontFamily, href } = item;
@@ -18,7 +8,7 @@ export default {
 
   script(item: Item): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href, fetchOptions())
+    return fetch(href)
       .then((res) => res.text())
       .then((text) => ({ type: 'application/javascript', text }))
       .then((props) => Object.assign(document.createElement('script'), props));
@@ -26,7 +16,7 @@ export default {
 
   css(item: Item): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href, fetchOptions())
+    return fetch(href)
       .then((res) => res.text())
       .then((text) => ({ innerText: text }))
       .then((props) => Object.assign(document.createElement('style'), props));
@@ -44,7 +34,7 @@ export default {
 
   json(item: Item): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href, fetchOptions())
+    return fetch(href)
       .then((res) => res.text())
       .then((text) => ({type: 'application/json', text}))
       .then((props) => Object.assign(props, item.props || {}))
