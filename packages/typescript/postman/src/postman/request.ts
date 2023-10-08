@@ -6,17 +6,17 @@ export default {
     return new FontFace(fontFamily, href).load();
   },
 
-  script(item: Item): Promise<HTMLElement> {
+  script(item: Item, options: RequestInit = {}): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href)
+    return fetch(href, options)
       .then((res) => res.text())
       .then((text) => ({ type: 'application/javascript', text }))
       .then((props) => Object.assign(document.createElement('script'), props));
   },
 
-  css(item: Item): Promise<HTMLElement> {
+  css(item: Item, options: RequestInit = {}): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href)
+    return fetch(href, options)
       .then((res) => res.text())
       .then((text) => ({ innerText: text }))
       .then((props) => Object.assign(document.createElement('style'), props));
@@ -32,9 +32,9 @@ export default {
     });
   },
 
-  json(item: Item): Promise<HTMLElement> {
+  json(item: Item, options: RequestInit = {}): Promise<HTMLElement> {
     const { href } = item;
-    return fetch(href)
+    return fetch(href, options)
       .then((res) => res.text())
       .then((text) => ({type: 'application/json', text}))
       .then((props) => Object.assign(props, item.props || {}))
