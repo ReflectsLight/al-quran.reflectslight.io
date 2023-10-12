@@ -12,9 +12,14 @@
   scrollbar-gutter: stable;
 
   li.ayah {
-    span.surah-id.ayah-id {
-      display: block;
+    span.title {
+      display: flex;
+      align-items: center;
       font-weight: 500;
+    }
+    span.title .svg.sound-on, span.title .svg.sound-off {
+      cursor: pointer;
+      width: 24px;
     }
     p {
       margin: 3px 0 10px 0

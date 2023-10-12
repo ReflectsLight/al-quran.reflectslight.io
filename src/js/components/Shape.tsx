@@ -23,7 +23,7 @@ export function PauseShape({ onClick }: Props) {
 
 export function SoundOnShape({ onClick }: Props) {
   return (
-    <svg viewBox="0 0 100 100" className="svg sound-on" onClick={onClick}>
+    <svg viewBox="0 -18 100 100" className="svg sound-on" onClick={onClick}>
       <g>
         <polygon
           fill="none"
@@ -54,7 +54,7 @@ export function SoundOnShape({ onClick }: Props) {
 
 export function SoundOffShape({ onClick }: Props) {
   return (
-    <svg viewBox="0 0 100 100" className="svg sound-off" onClick={onClick}>
+    <svg viewBox="0 -18 100 100" className="svg sound-off" onClick={onClick}>
       <g>
         <polygon
           fill="none"

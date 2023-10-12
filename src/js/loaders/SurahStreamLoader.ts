@@ -1,4 +1,5 @@
 import postman, { item } from "postman";
+import url from "url";
 import * as Quran from "lib/Quran";
 
 (function () {
@@ -7,8 +8,8 @@ import * as Quran from "lib/Quran";
   const progressNumber: HTMLSpanElement = parent.querySelector(".percentage")!;
   const inlineStyle: HTMLStyleElement = document.querySelector(".css.postman")!;
   const { locale, surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
-  const reciters = JSON.parse(
-    document.querySelector<HTMLElement>(".json.reciters")!.innerText,
+  const recitations = JSON.parse(
+    document.querySelector<HTMLElement>(".json.recitations")!.innerText,
   );
 
   postman(
@@ -20,10 +21,10 @@ import * as Quran from "lib/Quran";
     item.font("Vazirmatn Regular", "url(/fonts/vazirmatn-regular.ttf)"),
     item.font("Roboto Mono Regular", "url(/fonts/roboto-mono-regular.ttf)"),
     item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
-    ...reciters.map((reciter: Quran.Reciter) => {
-      const { url: baseUrl } = reciter;
-      return item.json(`${baseUrl}/time_slots/${surahId}.json`, {
-        className: `reciter time-slots ${reciter.id}`,
+    ...recitations.map((recitation: Quran.Recitation) => {
+      const ts = [url.format(recitation.url), "time_slots", `${surahId}.json`].join("/");
+      return item.json(ts, {
+        className: `recitation time-slots ${recitation.id}`,
       });
     }),
     item.progress((percent: number) => {
