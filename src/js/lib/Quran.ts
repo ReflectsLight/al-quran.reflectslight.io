@@ -4,6 +4,17 @@ import { Surah } from "lib/Quran/Surah";
 
 type Locale = "ar" | "en";
 type Ayat = Ayah[];
-type Reciter = { id: string; name: string; nationality: string; url: string };
+type Recitation = {
+  id: string;
+  author: {
+    name: string;
+    nationality: string;
+  };
+  url: {
+    protocol: string;
+    hostname: string;
+    pathname: string;
+  };
+};
 
-export { Surah, Ayah, Ayat, Reciter, Locale, JSON };
+export { Surah, Ayah, Ayat, Recitation, Locale, JSON };

@@ -7,8 +7,7 @@
 
   ul.body.stream {
     li.ayah {
-      /* TODO "surah.id", "ayah.id" */
-      span.surah-id.ayah-id {
+      span.title {
         color: $gold;
       }
       p { }
@@ -29,18 +28,14 @@
     fill: $gold;
   }
 
-  .row svg g {
-    polygon {
-      stroke: $gold;
-      stroke-width: 5;
-    }
-    path {
-      stroke: $gold;
-      stroke-width: 5;
-    }
-  }
-
   .row .loading div {
     background: $gold;
+  }
+
+  .svg.sound-on, .svg.sound-off {
+    polygon {
+      fill: $blue;
+      stroke-width: 2;
+    }
   }
 }

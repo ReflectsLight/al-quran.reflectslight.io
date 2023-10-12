@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
 import { get as getCookie } from "es-cookie";
@@ -7,50 +7,38 @@ import { Stream } from "components/Stream";
 import { SelectOption } from "components/Select";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
-import {
-  PlayShape,
-  PauseShape,
-  SoundOnShape,
-  SoundOffShape,
-  RefreshShape,
-  LoadingShape,
-} from "components/Shape";
+import { AudioControl } from "components/AudioControl";
+import { PlayShape, PauseShape, RefreshShape, LoadingShape } from "components/Shape";
 import * as Quran from "lib/Quran";
 import { i18n, TFunction } from "lib/i18n";
 
 interface Props {
   node: HTMLScriptElement;
-  reciters: Quran.Reciter[];
+  recitations: Quran.Recitation[];
   locale: Quran.Locale;
   paused: boolean;
   t: TFunction;
 }
 
-const getTimeSlots = (reciter: Quran.Reciter) => {
-  const selector = `script.reciter.time-slots.${reciter.id}`;
+const getTimeSlots = (recitation: Quran.Recitation) => {
+  const selector = `script.recitation.time-slots.${recitation.id}`;
   const timeSlots: HTMLScriptElement = document.querySelector(selector)!;
   return timeSlots;
 };
 
-const getAudioURL = (reciter: Quran.Reciter, surah: Quran.Surah, stream: Quran.Ayat) => {
-  const { url: baseUrl } = reciter;
-  const ayah = stream[stream.length - 1];
-  return `${baseUrl}/${surah.id}/${ayah?.id}.mp3`;
-};
-
-function SurahStream({ node, reciters, locale, paused, t }: Props) {
+function SurahStream({ node, recitations, locale, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [soundOn, setSoundOn] = useState<boolean>(false);
   const [isStalled, setIsStalled] = useState<boolean>(false);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useState(getCookie("theme") || "moon");
-  const [reciter] = useState<Quran.Reciter>(reciters[0]);
+  const [recitation] = useState<Quran.Recitation>(recitations[0]);
   const [surah] = useState<Quran.Surah>(
-    Quran.Surah.fromDOMNode(locale, node, getTimeSlots(reciter)),
+    Quran.Surah.fromDOMNode(locale, node, getTimeSlots(recitation)),
   );
   const readyToRender = stream.length > 0;
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const ayah = stream[stream.length - 1];
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
     const params = [["paused", isPaused ? "t" : null]];
@@ -65,40 +53,6 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
     setEndOfStream(false);
     setStream([surah.ayat[0]]);
   }, [stream.length === 0]);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) {
-      return;
-    } else if (isPaused) {
-      audio.pause();
-    } else if (audio.paused) {
-      audio.play().catch(() => setSoundOn(false));
-    }
-  }, [soundOn, isPaused, stream.length]);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    const onEnded = () => {
-      const src = getAudioURL(reciter, surah, stream);
-      if (src !== audio.src) {
-        audio.src = src;
-      }
-    };
-    const isStalled = () => setIsStalled(true);
-    const unStalled = () => setIsStalled(false);
-    audio.addEventListener("ended", onEnded);
-    audio.addEventListener("stalled", isStalled);
-    audio.addEventListener("waiting", isStalled);
-    audio.addEventListener("playing", unStalled);
-    return () => {
-      audio.removeEventListener("ended", onEnded);
-      audio.removeEventListener("stalled", isStalled);
-      audio.removeEventListener("waiting", isStalled);
-      audio.removeEventListener("playing", unStalled);
-    };
-  }, [soundOn, stream.length]);
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
@@ -122,6 +76,7 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
       )}
       {readyToRender && (
         <Stream
+          recitation={recitation}
           surah={surah}
           stream={stream}
           locale={locale}
@@ -137,11 +92,16 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
         {readyToRender && !isPaused && !endOfStream && (
           <PauseShape onClick={() => setIsPaused(true)} />
         )}
-        {readyToRender && !endOfStream && soundOn && (
-          <SoundOnShape onClick={() => setSoundOn(false)} />
-        )}
-        {readyToRender && !endOfStream && !soundOn && (
-          <SoundOffShape onClick={() => setSoundOn(true)} />
+        {readyToRender && !endOfStream && (
+          <AudioControl
+            recitation={recitation}
+            surah={surah}
+            ayah={ayah}
+            onPlay={() => setSoundOn(true)}
+            onPause={() => setSoundOn(false)}
+            onPlaying={() => setIsStalled(false)}
+            onStall={() => setIsStalled(true)}
+          />
         )}
         {readyToRender && !endOfStream && (
           <Timer
@@ -162,9 +122,6 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
           <LoadingShape />
         </div>
       )}
-      {readyToRender && soundOn && (
-        <audio ref={audioRef} src={getAudioURL(reciter, surah, stream)} />
-      )}
     </div>
   );
 }
@@ -177,12 +134,18 @@ function SurahStream({ node, reciters, locale, paused, t }: Props) {
     str !== null && ["1", "t", "true", "yes"].includes(str);
   const params = new URLSearchParams(location.search);
   const paused = toBoolean(params.get("paused"));
-  const reciters = JSON.parse(
-    document.querySelector<HTMLElement>(".json.reciters")!.innerText,
+  const recitations = JSON.parse(
+    document.querySelector<HTMLElement>(".json.recitations")!.innerText,
   );
   const t = i18n(document.querySelector<HTMLElement>(".json.i18n")!.innerText);
 
   ReactDOM.createRoot(root).render(
-    <SurahStream reciters={reciters} node={node} locale={locale} paused={paused} t={t} />,
+    <SurahStream
+      recitations={recitations}
+      node={node}
+      locale={locale}
+      paused={paused}
+      t={t}
+    />,
   );
 })();
