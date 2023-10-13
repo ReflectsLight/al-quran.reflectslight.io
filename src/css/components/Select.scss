@@ -21,6 +21,7 @@
   display: block;
   width: 100px;
   padding: 2px;
+  font-weight: normal;
   &:hover {
     cursor: pointer;
     background-color: lighten(#CCCCCC, 15%);

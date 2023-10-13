@@ -9,7 +9,6 @@
     span.title {
       color: $green;
     }
-    p { }
   }
 
   .timer {
@@ -31,5 +30,12 @@
       fill: $green;
       stroke-width: 2;
     }
+  }
+}
+
+.root .content.theme.leaf.ar {
+  @import "themes/leaf/colors";
+
+  ul.body.stream {
   }
 }
