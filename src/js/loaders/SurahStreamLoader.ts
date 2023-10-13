@@ -39,6 +39,6 @@ import * as Quran from "lib/Quran";
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
       pkg.json.forEach(o => document.body.appendChild(o));
-      pkg.scripts.forEach(s => document.body.appendChild(s));
+      pkg.scripts.forEach(s => document.body.removeChild(document.body.appendChild(s)));
     });
 })();
