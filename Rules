@@ -50,7 +50,7 @@ compile "/slugs.json" do
   write(nil)
 end
 
-compile "/reciters.json" do
+compile "/recitations.json" do
   filter(:minify_json)
   write(nil)
 end
