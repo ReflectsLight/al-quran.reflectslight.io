@@ -56,12 +56,11 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
-      <div className="header">
-        <a href={"/" + locale} className="image" />
-      </div>
       {readyToRender && (
         <>
-          <div className="row title">{t(locale, "TheNobleQuran")}</div>
+          <a href={`/${locale}/`} className="row title">
+            {t(locale, "TheNobleQuran")}
+          </a>
           <div className="row dropdown-row">
             <ThemeSelect theme={theme} setTheme={setTheme} />
             <LanguageSelect locale={locale} onChange={onLanguageChange} />
@@ -85,7 +84,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           t={t}
         />
       )}
-      <div className={classNames({ "justify-end": readyToRender && endOfStream }, "row")}>
+      <div className={classNames({ "justify-end": endOfStream }, "row", "footer")}>
         {readyToRender && isPaused && !endOfStream && (
           <PlayShape onClick={() => setIsPaused(false)} />
         )}
@@ -118,7 +117,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
         {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
       </div>
       {readyToRender && soundOn && isStalled && (
-        <div className="row justify-end">
+        <div className="row spinner justify-end">
           <LoadingShape />
         </div>
       )}

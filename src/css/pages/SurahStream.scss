@@ -15,13 +15,15 @@
     span.title {
       display: flex;
       align-items: center;
-      font-weight: 500;
     }
-    span.title .svg.sound-on, span.title .svg.sound-off {
+    .svg.sound-on, .svg.sound-off {
       cursor: pointer;
+      height: 24px;
       width: 24px;
+      g { transform: translate(0px, 18px); }
     }
     p {
+      width: 100%;
       margin: 3px 0 10px 0
     }
   }
@@ -38,42 +40,43 @@
   }
 }
 
-.content ul.body.stream {
-  li.ayah p { width: 100%; }
-}
+.content .row.footer {
+  .timer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 65%;
+    font-family: "Kanit Regular";
+    text-align: center;
+    width: 40px;
+    height: 32px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
 
-.content .row .timer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 65%;
-  font-family: "Kanit Regular";
-  text-align: center;
-  width: 32px;
-  height: 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 2px;
-  position: relative;
-  top: 4px;
-}
+  .shape {
+    width: 40px;
+    height: 32px;
+  }
 
-.content .row svg {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
+  .svg.sound-on, .svg.sound-off {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    g { transform: translate(16px, 16px); }
+  }
 
-.content .row .shape.refresh {
-  height: 16px;
-  width: 16px;
+  .shape.refresh {
+    height: 16px;
+    width: 16px;
+  }
 }
 
 .justify-end {
   justify-content: flex-end !important;
 }
 
-body .root .content.theme.ar {
+.content.theme.ar {
   .row.details  {
     place-content: flex-end;
     span[lang="en"] {
@@ -81,13 +84,22 @@ body .root .content.theme.ar {
     }
   }
 
-  ul.body.stream .ayah p {
-    margin-top: 10px;
+  ul.body.stream {
+    li.ayah {
+      p {
+        font-size: larger;
+        font-weight: normal;
+      }
+    }
   }
 
-  .row .timer {
+  .row.footer .timer {
     position: relative;
     top: 2px;
+  }
+
+  .svg.sound-on, .svg.sound-off {
+    transform: rotate(180deg);
   }
 }
 

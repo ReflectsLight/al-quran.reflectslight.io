@@ -23,7 +23,12 @@ export function PauseShape({ onClick }: Props) {
 
 export function SoundOnShape({ onClick }: Props) {
   return (
-    <svg viewBox="0 -18 100 100" className="svg sound-on" onClick={onClick}>
+    <svg
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
+      className="svg sound-off"
+      onClick={onClick}
+    >
       <g>
         <polygon
           fill="none"
@@ -31,7 +36,7 @@ export function SoundOnShape({ onClick }: Props) {
           strokeWidth="2"
           strokeMiterlimit="10"
           points="3,32 3,20 15,20 33,2 33,32 33,62 15,44
-        3,44    "
+          3,44    "
         />
         <path
           fill="none"
@@ -54,7 +59,12 @@ export function SoundOnShape({ onClick }: Props) {
 
 export function SoundOffShape({ onClick }: Props) {
   return (
-    <svg viewBox="0 -18 100 100" className="svg sound-off" onClick={onClick}>
+    <svg
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid meet"
+      className="svg sound-off"
+      onClick={onClick}
+    >
       <g>
         <polygon
           fill="none"

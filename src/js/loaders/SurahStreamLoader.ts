@@ -15,11 +15,8 @@ import * as Quran from "lib/Quran";
   postman(
     item.script("/js/pages/surah-stream.js"),
     item.css("/css/pages/surah-stream.css"),
-    item.image("/images/moon.svg"),
-    item.image("/images/leaf.svg"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    item.font("Vazirmatn Regular", "url(/fonts/vazirmatn-regular.ttf)"),
-    item.font("Roboto Mono Regular", "url(/fonts/roboto-mono-regular.ttf)"),
+    item.font("Noto Sans Arabic Regular", "url(/fonts/notosansarabic-regular.ttf"),
     item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
       const ts = [url.format(recitation.url), "time_slots", `${surahId}.json`].join("/");
