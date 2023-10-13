@@ -31,8 +31,7 @@ export function AudioControl({
   const recover = () => {
     if (!soundOn) return;
     onStall();
-    audio.play()
-         .catch(() => setTimeout(recover, 1000));
+    audio.play().catch(() => setTimeout(recover, 1000));
   };
 
   useEffect(() => {
