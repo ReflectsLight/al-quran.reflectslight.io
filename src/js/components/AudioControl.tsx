@@ -28,10 +28,16 @@ export function AudioControl({
   const audio = useMemo(() => new Audio(), []);
   const turnOnSound = () => setSoundOn(true);
   const turnOffSound = () => setSoundOn(false);
+  const recover = () => {
+    if (!soundOn) return;
+    onStall();
+    audio.play()
+         .catch(() => setTimeout(recover, 1000));
+  };
 
   useEffect(() => {
     audio.addEventListener("ended", () => onEnd(turnOffSound));
-    audio.addEventListener("stalled", onStall);
+    audio.addEventListener("stalled", recover);
     audio.addEventListener("waiting", onStall);
     audio.addEventListener("play", onPlay);
     audio.addEventListener("playing", onPlaying);
