@@ -1,5 +1,5 @@
 $black: #454545;
-$max-width: 475px;
+$max-width: 728px;
 
 [lang="en"] {
   font-family: "Kanit Regular";
@@ -26,7 +26,8 @@ body .root {
 
 body .root .content {
   margin: 0 auto;
-  width: $max-width;
+  width: 80%;
+  max-width: $max-width;
   height: 100%;
 
   @media screen and (max-width: $max-width) {
@@ -59,7 +60,7 @@ body .root .content .row.dropdown-row {
 body .root .content ul.body {
   clear: both;
   list-style-type: none;
-  height: 400px;
+  height: 90%;
   padding: 0;
 
   /* Height of 625px, or less */

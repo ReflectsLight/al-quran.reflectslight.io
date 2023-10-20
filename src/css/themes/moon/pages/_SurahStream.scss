@@ -1,41 +1,21 @@
 .root .content.theme.moon {
   @import "themes/moon/colors";
+  @import "themes/moon/components/Icon";
 
   .row.details {
-    color: $gold;
+    color: $gold-primary;
+  }
+
+  .row.footer .timer {
+    color: $blue-primary;
   }
 
   ul.body.stream {
     li.ayah {
       span.title {
-        color: $gold;
+        color: $gold-primary;
       }
       p { }
-    }
-  }
-
-  .row .timer {
-    color: $white;
-    background: $gold;
-  }
-
-  .row .shape {
-    background: $gold;
-  }
-
-  .row .shape.refresh {
-    background: unset;
-    fill: $gold;
-  }
-
-  .row .loading div {
-    background: $gold;
-  }
-
-  .svg.sound-on, .svg.sound-off {
-    polygon {
-      fill: $blue;
-      stroke-width: 2;
     }
   }
 }

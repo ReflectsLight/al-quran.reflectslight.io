@@ -8,7 +8,7 @@ import { SelectOption } from "components/Select";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { AudioControl } from "components/AudioControl";
-import { PlayShape, PauseShape, RefreshShape, LoadingShape } from "components/Shape";
+import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "components/Icon";
 import * as Quran from "lib/Quran";
 import { i18n, TFunction } from "lib/i18n";
 
@@ -86,10 +86,10 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
       )}
       <div className={classNames({ "justify-end": endOfStream }, "row", "footer")}>
         {readyToRender && isPaused && !endOfStream && (
-          <PlayShape onClick={() => setIsPaused(false)} />
+          <PlayIcon onClick={() => setIsPaused(false)} />
         )}
         {readyToRender && !isPaused && !endOfStream && (
-          <PauseShape onClick={() => setIsPaused(true)} />
+          <PauseIcon onClick={() => setIsPaused(true)} />
         )}
         {readyToRender && !endOfStream && (
           <AudioControl
@@ -114,11 +114,11 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
             isStalled={isStalled}
           />
         )}
-        {readyToRender && endOfStream && <RefreshShape onClick={() => setStream([])} />}
+        {readyToRender && endOfStream && <RefreshIcon onClick={() => setStream([])} />}
       </div>
       {readyToRender && soundOn && isStalled && (
         <div className="row spinner justify-end">
-          <LoadingShape />
+          <StalledIcon />
         </div>
       )}
     </div>
