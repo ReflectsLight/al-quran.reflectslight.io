@@ -7,21 +7,21 @@
 
   ul.body.index a {
     &:active, &:link, &:visited {
-      color: $blue;
+      color: $blue-primary;
     }
 
     .surah.id {
-      background: $gold-light;
-      color: $white;
+      background: $gold-secondary;
+      color: $white-primary;
       border-radius: 5px;
       padding: 3px;
-      border: 1px solid $blue;
+      border: 1px solid $blue-primary;
     }
   }
 
   .row.surah.choose-random {
     &:active, &:link, &:visited {
-      color: $blue;
+      color: $blue-primary;
       text-decoration: none;
     }
     &:hover {

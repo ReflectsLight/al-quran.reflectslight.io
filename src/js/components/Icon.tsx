@@ -4,29 +4,33 @@ interface Props {
   onClick: () => void;
 }
 
-export function PlayShape({ onClick }: Props) {
+export function PlayIcon({ onClick }: Props) {
   return (
-    <div className="shape" onClick={onClick}>
-      <div className="play-shape" />
-    </div>
+    <svg className="play icon" onClick={onClick} viewBox="0 0 48 48">
+      <g>
+        <path d="M10,6 L38,24 L10,42 Z" />
+      </g>
+    </svg>
   );
 }
 
-export function PauseShape({ onClick }: Props) {
+export function PauseIcon({ onClick }: Props) {
   return (
-    <div className="shape" onClick={onClick}>
-      <div className="pause-shape" />
-      <div className="pause-shape" />
-    </div>
+    <svg className="icon pause" onClick={onClick} viewBox="0 0 48 48">
+      <g>
+        <rect x="7" y="6" />
+        <rect x="28" y="6" />
+      </g>
+    </svg>
   );
 }
 
-export function SoundOnShape({ onClick }: Props) {
+export function SoundOnIcon({ onClick }: Props) {
   return (
     <svg
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid meet"
-      className="svg sound-off"
+      className="sound-on icon"
       onClick={onClick}
     >
       <g>
@@ -57,12 +61,12 @@ export function SoundOnShape({ onClick }: Props) {
   );
 }
 
-export function SoundOffShape({ onClick }: Props) {
+export function SoundOffIcon({ onClick }: Props) {
   return (
     <svg
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid meet"
-      className="svg sound-off"
+      className="sound-off icon"
       onClick={onClick}
     >
       <g>
@@ -99,11 +103,11 @@ export function SoundOffShape({ onClick }: Props) {
   );
 }
 
-export function RefreshShape({ onClick }: Props) {
+export function RefreshIcon({ onClick }: Props) {
   return (
     <svg
       onClick={onClick}
-      className="shape refresh"
+      className="refresh icon"
       x="0px"
       y="0px"
       width="438.542px"
@@ -145,9 +149,9 @@ export function RefreshShape({ onClick }: Props) {
   );
 }
 
-export function LoadingShape() {
+export function StalledIcon() {
   return (
-    <div className="loading">
+    <div className="stalled icon">
       <div />
       <div />
       <div />

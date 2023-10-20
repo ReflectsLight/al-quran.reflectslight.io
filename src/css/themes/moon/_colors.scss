@@ -1,4 +1,4 @@
-$gold: #ECB200;
-$gold-light: lighten($gold, 10%);
-$blue :darken(#e4eff8, 35%);
-$white: #FFF;
+$gold-primary: #ECB200;
+$gold-secondary: lighten($gold-primary, 5%);
+$blue-primary: darken(#e4eff8, 35%);
+$white-primary: #FFF;

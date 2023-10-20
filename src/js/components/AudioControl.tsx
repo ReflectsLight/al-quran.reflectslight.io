@@ -1,7 +1,7 @@
 import url from "url";
 import * as Quran from "lib/Quran";
 import React, { useEffect, useMemo, useState } from "react";
-import { SoundOnShape, SoundOffShape } from "components/Shape";
+import { SoundOnIcon, SoundOffIcon } from "components/Icon";
 
 type Props = {
   recitation: Quran.Recitation;
@@ -54,8 +54,8 @@ export function AudioControl({
 
   return (
     <>
-      {soundOn && <SoundOnShape onClick={turnOffSound} />}
-      {!soundOn && <SoundOffShape onClick={turnOnSound} />}
+      {soundOn && <SoundOnIcon onClick={turnOffSound} />}
+      {!soundOn && <SoundOffIcon onClick={turnOnSound} />}
     </>
   );
 }

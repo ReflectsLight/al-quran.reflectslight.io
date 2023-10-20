@@ -1,6 +1,6 @@
 @import "layout";
 @import "components/Select";
-@import "components/Shape";
+@import "components/Icon";
 
 .content .row.details {
   direction: rtl;
@@ -41,34 +41,18 @@
 }
 
 .content .row.footer {
+  height: 32px;
+  align-items: flex-end;
+
   .timer {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 65%;
+    justify-content: flex-end;
+    width: 40px;
+
+    font-size: 80%;
     font-family: "Kanit Regular";
     text-align: center;
-    width: 40px;
-    height: 32px;
     font-weight: bold;
-    border-radius: 5px;
-  }
-
-  .shape {
-    width: 40px;
-    height: 32px;
-  }
-
-  .svg.sound-on, .svg.sound-off {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    g { transform: translate(16px, 16px); }
-  }
-
-  .shape.refresh {
-    height: 16px;
-    width: 16px;
   }
 }
 
@@ -96,10 +80,6 @@
   .row.footer .timer {
     position: relative;
     top: 2px;
-  }
-
-  .svg.sound-on, .svg.sound-off {
-    transform: rotate(180deg);
   }
 }
 
