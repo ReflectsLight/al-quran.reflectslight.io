@@ -7,7 +7,6 @@ $max-width: 728px;
 
 [lang="ar"] {
   font-family: "Noto Sans Arabic Regular";
-  font-weight: bold;
 }
 
 html {
@@ -47,6 +46,7 @@ body .root .content .row.title {
   place-content: center;
   text-decoration: none;
   width: 100%;
+  font-size: large;
 }
 
 body .root .content .row.dropdown-row {

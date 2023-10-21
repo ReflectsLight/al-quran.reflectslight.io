@@ -1,5 +1,6 @@
 .root .content.theme.leaf {
   @import "themes/leaf/colors";
+  @import "themes/leaf/components/Icon";
 
   .row.details {
     color: $green;
@@ -12,8 +13,7 @@
   }
 
   .timer {
-    background-color: $green;
-    color: $white-primary;
+    color: $green;
   }
 
   .row .shape.refresh {
@@ -21,11 +21,11 @@
     fill: $green;
   }
 
-  .row .loading div {
+  .stalled.icon {
     background: $green;
   }
 
-  .svg.sound-on, .svg.sound-off {
+  .sound-on.icon, .svg.sound-off.icon {
     polygon {
       fill: $green;
       stroke-width: 2;
