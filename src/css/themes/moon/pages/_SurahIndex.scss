@@ -5,17 +5,13 @@
     justify-content: center;
   }
 
-  ul.body.index a {
+  ul.body.index li.surah a {
     &:active, &:link, &:visited {
       color: $blue-primary;
     }
 
-    .surah.id {
-      background: $gold-secondary;
-      color: $white-primary;
-      border-radius: 5px;
-      padding: 3px;
-      border: 1px solid $blue-primary;
+    div:first-child .id {
+      color: $gold-secondary;
     }
   }
 

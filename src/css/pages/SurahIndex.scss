@@ -9,38 +9,57 @@ ul.body.index {
   overflow: auto;
 
   li.surah {
-    display: flex;
     width: 100%;
     margin-bottom: 10px;
   }
 
   li.surah a {
     display: flex;
+    justify-content: space-between;
     width: 100%;
 
     &:visited, &:active, &:link {
       text-decoration: none;
     }
-  }
 
-  li.surah a .surah.id {
-    text-align: center;
-    width: 25px;
-  }
+    div:first-child {
+      display: flex;
+      flex-direction: row;
+      height: 32px;
 
-  li.surah a .surah.name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 210px;
-  }
+      span {
+        display: flex;
+        align-items: center;
+      }
 
-  li.surah a .surah.name.transliterated {
-    align-items: end;
-    width: 200px;
+      span.id {
+        flex-direction: row;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        font-weight: bold;
+      }
 
-    @media screen and (max-width: $max-width) {
-      display: none;
+      span.name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: unset;
+        width: 210px;
+        font-weight: normal;
+      }
+    }
+
+    .transliterated {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+      font-weight: normal;
+      @media screen and (max-width: $max-width) {
+        display: none;
+      }
     }
   }
 }
@@ -51,19 +70,29 @@ body .root .content .row.surah.choose-random {
 }
 
 body .root .content.theme.en {
-  ul.body.index a .surah.id {
-    margin-right: 5px;
+  ul.body.index li.surah {
+    a div:first-child .id {
+      margin-right: 5px;
+    }
   }
 }
 
 body .root .content.theme.ar {
+  font-size: larger;
   ul.body.index {
-    a .surah.id {
-      width: 35px;
-      padding: 1px;
-      margin-left: 8px;
+    li.surah {
+      a div:first-child .id {
+        width: 40px;
+        margin-left: 8px;
+      }
+      a div:first-child .name {
+        font-size: large;
+      }
+      .transliterated { display: none; }
     }
+
   }
+
 }
 
 @import "themes/moon";

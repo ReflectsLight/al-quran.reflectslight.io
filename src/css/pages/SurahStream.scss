@@ -46,6 +46,8 @@
 
   .timer {
     display: flex;
+    position: relative;
+    left: 8px;
     justify-content: flex-end;
     width: 40px;
 
@@ -75,11 +77,6 @@
         font-weight: normal;
       }
     }
-  }
-
-  .row.footer .timer {
-    position: relative;
-    top: 2px;
   }
 }
 
