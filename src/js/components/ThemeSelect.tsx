@@ -14,7 +14,7 @@ export function ThemeSelect({ setTheme, theme }: Props) {
   };
 
   return (
-    <Select value={theme} onChange={onThemeChange}>
+    <Select className="theme" value={theme} onChange={onThemeChange}>
       <option value="moon">🌛</option>
       <option value="leaf">🌿</option>
     </Select>

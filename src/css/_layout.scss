@@ -1,12 +1,12 @@
 $black: #454545;
 $max-width: 728px;
 
-[lang="en"] {
+html[lang="en"] {
   font-family: "Kanit Regular";
 }
 
-[lang="ar"] {
-  font-family: "Noto Sans Arabic Regular";
+html[lang="ar"] {
+  font-family: "Amiri Quran Regular";
 }
 
 html {
@@ -14,7 +14,6 @@ html {
 }
 
 html body {
-  font-family: "Kanit Regular";
   color: $black;
   height: 85%;
 }
@@ -32,51 +31,57 @@ body .root .content {
   @media screen and (max-width: $max-width) {
     width: 350px;
   }
-}
 
-body .root .content .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  direction: ltr;
-}
+  a.title {
+    display: flex;
+    place-content: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: large;
+  }
 
-body .root .content .row.title {
-  display: flex;
-  place-content: center;
-  text-decoration: none;
-  width: 100%;
-  font-size: large;
+  ul.body {
+    clear: both;
+    list-style-type: none;
+    height: 90%;
+    padding: 0;
+
+    /* Height of 625px, or less */
+    @media screen and (max-height: 625px) {
+      height: 330px;
+    }
+
+    /* Height of 595px, or less */
+    @media screen and (max-height: 595px) {
+      height: 310px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    direction: ltr;
+  }
+
+  .row.dropdown-row {
+    align-items: flex-end;
+    line-height: 30px;
+
+    .react-select.theme {
+      width: 35px;
+    }
+
+    .react-select.language {
+      width: 70px;
+      text-align: right;
+      li { font-family: "Kanit Regular"; }
+    }
+  }
 }
 
 body .root .content.ar {
   a.title {
-    font-family: "Amiri Quran Regular";
     font-size: xx-large;
-  }
-}
-
-body .root .content .row.dropdown-row {
-  .react-select.language {
-    text-align: right;
-    li:first-child { font-family: "Noto Sans Arabic Regular"; }
-    li:last-child { font-family: "Kanit Regular"; }
-  }
-}
-
-body .root .content ul.body {
-  clear: both;
-  list-style-type: none;
-  height: 90%;
-  padding: 0;
-
-  /* Height of 625px, or less */
-  @media screen and (max-height: 625px) {
-    height: 330px;
-  }
-
-  /* Height of 595px, or less */
-  @media screen and (max-height: 595px) {
-    height: 310px;
   }
 }

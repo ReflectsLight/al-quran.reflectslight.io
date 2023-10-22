@@ -21,8 +21,5 @@ export function i18n(json: string): TFunction {
 export function formatNumber(number: number, locale: Quran.Locale): string {
   const numLocale = locale === "ar" ? "ar-SA" : locale;
   const options = { maximumFractionDigits: 1 };
-  return new Intl.NumberFormat(numLocale, options)
-    .format(number)
-    .split(/([^\d])/)
-    .join(" ");
+  return new Intl.NumberFormat(numLocale, options).format(number);
 }

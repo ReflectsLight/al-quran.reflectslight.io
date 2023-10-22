@@ -12,10 +12,21 @@
 
   ul.body.stream {
     li.ayah {
-      span.title {
+      span.title span {
         color: $gold-primary;
       }
       p { }
+    }
+  }
+}
+
+.root .content.theme.moon.ar {
+  @import "themes/moon/colors";
+
+  .row.dropdown-row {
+    line-height: 30px;
+    span.surah-name {
+      color: lighten($gold-primary, 25%);
     }
   }
 }
