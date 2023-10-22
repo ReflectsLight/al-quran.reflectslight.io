@@ -47,13 +47,13 @@
   .timer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 32px;
+    align-items: flex-end;
+    height: 24px;
     width: 40px;
     font-family: "Kanit Regular";
-    font-size: 80%;
     text-align: center;
     font-weight: bold;
+    font-size: large;
   }
 }
 
@@ -96,7 +96,7 @@
         font-size: x-large;
         font-weight: normal;
         line-height: 30px;
-        margin: 15px 0 10px 0;
+        margin: 5px 0 25px 0;
       }
     }
   }
