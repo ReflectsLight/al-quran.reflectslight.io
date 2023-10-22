@@ -78,7 +78,7 @@
 .content.theme {
   .footer .sound-on.icon, .footer .sound-off.icon {
     width: 32px;
-    height: 30px;
+    height: 32px;
     g { transform: translate(32px,30px); }
   }
 }
@@ -96,6 +96,6 @@
 
   .footer .sound-on.icon, .footer .sound-off.icon {
     transform: rotate(180deg);
-    g {transform: translate(32px,3px); }
+    g {transform: translate(32px, 0); }
   }
 }
