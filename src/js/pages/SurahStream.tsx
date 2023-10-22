@@ -5,7 +5,6 @@ import classNames from "classnames";
 import { useTheme } from "hooks/useTheme";
 import { Timer } from "components/Timer";
 import { Stream } from "components/Stream";
-import { SelectOption } from "components/Select";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { AudioControl } from "components/AudioControl";
@@ -41,15 +40,6 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
   const hasCompactLayout = ["ar"].includes(locale);
-  const onLanguageChange = (o: SelectOption) => {
-    const locale = o.value;
-    const params = [["paused", isPaused ? "t" : null]];
-    const query = params
-      .filter(([, v]) => v)
-      .flatMap(([k, v]) => `${k}=${v}`)
-      .join("&");
-    location.replace(`/${locale}/${surah.slug}/?${query}`);
-  };
 
   useEffect(() => {
     setEndOfStream(false);
@@ -68,7 +58,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
             {hasCompactLayout && (
               <span className="surah-name">{surah.localizedName}</span>
             )}
-            <LanguageSelect locale={locale} onChange={onLanguageChange} />
+            <LanguageSelect locale={locale} path={surah.slug} />
           </div>
         </>
       )}

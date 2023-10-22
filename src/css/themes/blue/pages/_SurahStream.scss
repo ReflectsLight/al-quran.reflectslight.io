@@ -1,6 +1,6 @@
-.root .content.theme.moon {
-  @import "themes/moon/colors";
-  @import "themes/moon/components/Icon";
+.root .content.theme.blue {
+  @import "themes/blue/colors";
+  @import "themes/blue/components/Icon";
 
   .row.details {
     color: $gold-primary;
@@ -20,8 +20,8 @@
   }
 }
 
-.root .content.theme.moon.ar {
-  @import "themes/moon/colors";
+.root .content.theme.blue.ar {
+  @import "themes/blue/colors";
 
   .row.dropdown-row {
     line-height: 30px;
