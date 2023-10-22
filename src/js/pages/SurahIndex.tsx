@@ -4,7 +4,6 @@ import classNames from "classnames";
 
 import * as Quran from "lib/Quran";
 import { useTheme } from "hooks/useTheme";
-import { SelectOption } from "components/Select";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { i18n, formatNumber, TFunction } from "lib/i18n";
@@ -17,9 +16,6 @@ interface Props {
 
 function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
-  const onLanguageChange = (o: SelectOption) => {
-    document.location.replace(`/${o.value}/`);
-  };
 
   return (
     <div className={classNames("content", "theme", theme, locale)}>
@@ -28,7 +24,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
       </a>
       <div className="row dropdown-row">
         <ThemeSelect theme={theme} setTheme={setTheme} />
-        <LanguageSelect locale={locale} onChange={onLanguageChange} />
+        <LanguageSelect locale={locale} />
       </div>
       <ul className="body index scroll-y">
         {surahs.map((surah, key) => (

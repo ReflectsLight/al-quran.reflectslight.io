@@ -1,10 +1,5 @@
-.root .content.theme.leaf {
+.root .content.theme.green {
   @import "colors";
-
-  .header .image {
-    background-image: url("/images/leaf.svg");
-    background-size: cover;
-  }
 
   .row.title {
     color: $green;

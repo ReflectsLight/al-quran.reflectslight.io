@@ -1,5 +1,5 @@
 import React from "react";
-import { Select, SelectOption } from "components/Select";
+import { Select } from "components/Select";
 
 interface Props {
   setTheme: (theme: string) => void;
@@ -11,14 +11,10 @@ export function ThemeSelect({ setTheme, theme }: Props) {
     <Select
       className="theme"
       value={theme}
-      onChange={(o: SelectOption) => setTheme(o.value)}
+      onChange={(o: JSX.Element) => setTheme(o.props.value)}
     >
-      <option value="blue">
-        <span className="blue" />
-      </option>
-      <option value="green">
-        <span className="green" />
-      </option>
+      <option className="blue" value="blue" />
+      <option className="green" value="green" />
     </Select>
   );
 }

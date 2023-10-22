@@ -6,13 +6,7 @@ const THEMES: Theme[] = ["blue", "green"];
 const DEFAULT_THEME = "blue";
 
 export function useTheme(): [Theme, (t: string) => void] {
-  const [theme, setTheme] = useState<Theme | null>(null);
-  const cookie = getCookie("theme");
-
-  useEffect(() => {
-    const _theme = THEMES.find((theme: Theme) => cookie === theme);
-    setTheme(_theme || DEFAULT_THEME);
-  }, []);
+  const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
 
   function _setTheme(newTheme: string) {
     const matchedTheme = THEMES.find((theme: Theme) => newTheme === theme);
@@ -21,6 +15,12 @@ export function useTheme(): [Theme, (t: string) => void] {
       setTheme(matchedTheme);
     }
   }
+
+  useEffect(() => {
+    const cookie = getCookie("theme");
+    const _theme = THEMES.find((theme: Theme) => cookie === theme);
+    _setTheme(_theme || DEFAULT_THEME);
+  }, []);
 
   return [theme, _setTheme];
 }

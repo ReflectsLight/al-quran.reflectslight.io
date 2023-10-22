@@ -5,43 +5,20 @@ export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {
   target: HTMLLIElement;
 };
 
-export interface SelectOption {
-  innerText: string;
-  value: string;
-  reactEvent: ChangeEvent;
-}
-
 interface Props {
   value: string;
   children: JSX.Element[];
-  onChange: (e: SelectOption) => void;
+  onChange: (e: JSX.Element) => void;
   className?: string;
 }
 
-const findOption = (value: string, children: JSX.Element[]) => {
-  const activeOption = children.find(o => o.props.value === value);
-  if (activeOption) {
-    return activeOption.props.children;
-  } else {
-    return null;
-  }
-};
-
-const createOption = (e: ChangeEvent, children: JSX.Element[]): SelectOption => {
-  const { target } = e;
-  const value = target.getAttribute("data-value")!;
-  return {
-    innerText: findOption(value, children),
-    value,
-    reactEvent: e,
-  };
+const find = (option: string, options: JSX.Element[]) => {
+  return options.find(o => o.props.value === option);
 };
 
 export function Select({ value, children, onChange, className }: Props) {
   const [open, setOpen] = useState<boolean>(false);
-  const [activeOption, setActiveOption] = useState<string | null>(
-    findOption(value, children),
-  );
+  const [activeOption, setActiveOption] = useState<JSX.Element>(find(value, children));
   const openSelect = (e: React.MouseEvent<HTMLSpanElement>) => {
     e.stopPropagation();
     setOpen(true);
@@ -49,9 +26,9 @@ export function Select({ value, children, onChange, className }: Props) {
   const selectOption = (e: ChangeEvent) => {
     e.stopPropagation();
     const target: HTMLLIElement = e.target;
-    const option = createOption(e, children);
+    const option = find(String(target.value), children);
     onChange(option);
-    setActiveOption(target.innerText);
+    setActiveOption(option);
     setOpen(false);
   };
 
@@ -61,15 +38,19 @@ export function Select({ value, children, onChange, className }: Props) {
 
   return (
     <div className={classnames("react-select", className)}>
-      <span className="active-option" onClick={openSelect}>
-        {activeOption}
-      </span>
+      <span
+        className={classnames("active-option", activeOption.props.value)}
+        onClick={openSelect}
+       />
       <ul hidden={!open}>
         {children.map((option: JSX.Element, key: number) => {
           return (
-            <li key={key} data-value={option.props.value} onClick={selectOption}>
-              {option.props.children}
-            </li>
+            <li
+              key={key}
+              data-value={option.props.value}
+              className={option.props.value}
+              onClick={selectOption}
+             />
           );
         })}
       </ul>

@@ -1,14 +1,21 @@
 import React from "react";
-import { Select, SelectOption } from "components/Select";
+import { Select } from "components/Select";
 
 interface Props {
   locale: string;
-  onChange: (o: SelectOption) => void;
+  path?: string;
 }
 
-export function LanguageSelect({ locale, onChange }: Props) {
+export function LanguageSelect({ locale, path = "" }: Props) {
   return (
-    <Select value={locale} className="language" onChange={onChange}>
+    <Select
+      value={locale}
+      className="language"
+      onChange={(el: JSX.Element) => {
+        const locale = el.props.value;
+        location.replace([locale, path].join("/"));
+      }}
+    >
       <option value="ar">عربي</option>
       <option value="en">English</option>
     </Select>
