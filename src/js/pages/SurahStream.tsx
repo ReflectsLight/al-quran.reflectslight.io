@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
-import { get as getCookie } from "es-cookie";
+
+import { useTheme } from "hooks/useTheme";
 import { Timer } from "components/Timer";
 import { Stream } from "components/Stream";
 import { SelectOption } from "components/Select";
@@ -32,7 +33,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   const [soundOn, setSoundOn] = useState<boolean>(false);
   const [isStalled, setIsStalled] = useState<boolean>(false);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
-  const [theme, setTheme] = useState(getCookie("theme") || "moon");
+  const [theme, setTheme] = useTheme();
   const [recitation] = useState<Quran.Recitation>(recitations[0]);
   const [surah] = useState<Quran.Surah>(
     Quran.Surah.fromDOMNode(locale, node, getTimeSlots(recitation)),

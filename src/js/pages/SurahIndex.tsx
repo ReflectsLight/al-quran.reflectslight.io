@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
-import { get as getCookie } from "es-cookie";
+
 import * as Quran from "lib/Quran";
+import { useTheme } from "hooks/useTheme";
 import { SelectOption } from "components/Select";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
@@ -15,7 +16,7 @@ interface Props {
 }
 
 function SurahIndex({ locale, surahs, t }: Props) {
-  const [theme, setTheme] = useState(getCookie("theme") || "moon");
+  const [theme, setTheme] = useTheme();
   const onLanguageChange = (o: SelectOption) => {
     document.location.replace(`/${o.value}/`);
   };
