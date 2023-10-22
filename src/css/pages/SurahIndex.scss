@@ -1,73 +1,74 @@
 @import "layout";
 @import "components/Select";
 
-ul.body.index {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  overflow: auto;
-
-  li.surah {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  li.surah a {
+body .root .content.theme {
+  ul.body.index {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
+    overflow: auto;
 
-    &:visited, &:active, &:link {
-      text-decoration: none;
+    li.surah {
+      width: 100%;
+      margin-bottom: 10px;
     }
 
-    div:first-child {
+    li.surah a {
       display: flex;
-      flex-direction: row;
-      height: 32px;
+      justify-content: space-between;
+      width: 100%;
 
-      span {
+      &:visited, &:active, &:link {
+        text-decoration: none;
+      }
+
+      div:first-child {
         display: flex;
-        align-items: center;
-      }
-
-      span.id {
         flex-direction: row;
-        justify-content: center;
-        width: 32px;
         height: 32px;
-        text-align: center;
-        font-weight: bold;
+
+        span {
+          display: flex;
+          align-items: center;
+        }
+
+        span.id {
+          flex-direction: row;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        span.name {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-weight: normal;
+        }
       }
 
-      span.name {
+      .transliterated {
         display: flex;
         flex-direction: column;
+        align-items: end;
         justify-content: center;
-        align-items: unset;
-        width: 210px;
         font-weight: normal;
-      }
-    }
-
-    .transliterated {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      justify-content: center;
-      font-weight: normal;
-      @media screen and (max-width: $max-width) {
-        display: none;
+        @media screen and (max-width: $max-width) {
+          display: none;
+        }
       }
     }
   }
+
+  .row.surah.choose-random {
+    display: flex;
+    place-content: center;
+  }
 }
 
-body .root .content .row.surah.choose-random {
-  display: flex;
-  place-content: center;
-}
 
 body .root .content.theme.en {
   ul.body.index li.surah {
@@ -79,20 +80,24 @@ body .root .content.theme.en {
 
 body .root .content.theme.ar {
   font-size: larger;
+
   ul.body.index {
     li.surah {
       a div:first-child .id {
-        width: 40px;
+        width: 55px;
         margin-left: 8px;
       }
-      a div:first-child .name {
-        font-size: large;
+      a div:first-child .id, a div:first-child .name {
+        font-size: larger;
       }
       .transliterated { display: none; }
     }
-
   }
 
+  .row.surah.choose-random {
+    font-family: "Handjet Regular";
+    font-size: x-large;
+  }
 }
 
 @import "themes/moon";

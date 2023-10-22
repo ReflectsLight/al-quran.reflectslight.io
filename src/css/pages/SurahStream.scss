@@ -46,13 +46,12 @@
 
   .timer {
     display: flex;
-    position: relative;
-    left: 8px;
+    flex-direction: column;
     justify-content: flex-end;
+    height: 32px;
     width: 40px;
-
-    font-size: 80%;
     font-family: "Kanit Regular";
+    font-size: 80%;
     text-align: center;
     font-weight: bold;
   }
@@ -62,19 +61,42 @@
   justify-content: flex-end !important;
 }
 
+.content.theme.en {}
+
 .content.theme.ar {
   .row.details  {
+    display: none;
     place-content: flex-end;
-    span[lang="en"] {
-      display: none;
+  }
+
+  .row.dropdown-row {
+    span.surah-name {
+      position: relative;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 180px;
+      font-size: xx-large;
+      align-items: center;
+      line-height: 30px;
+      height: 30px;
     }
+  }
+
+  .row.details {
+    display: none;
   }
 
   ul.body.stream {
     li.ayah {
-      p {
+      span.title {
         font-size: larger;
+      }
+      p {
+        font-size: x-large;
         font-weight: normal;
+        line-height: 30px;
+        margin: 15px 0 10px 0;
       }
     }
   }

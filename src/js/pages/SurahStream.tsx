@@ -39,6 +39,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   );
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
+  const hasCompactLayout = ["ar"].includes(locale);
   const onLanguageChange = (o: SelectOption) => {
     const locale = o.value;
     const params = [["paused", isPaused ? "t" : null]];
@@ -63,11 +64,14 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           </a>
           <div className="row dropdown-row">
             <ThemeSelect theme={theme} setTheme={setTheme} />
+            {hasCompactLayout && (
+              <span className="surah-name">{surah.localizedName}</span>
+            )}
             <LanguageSelect locale={locale} onChange={onLanguageChange} />
           </div>
         </>
       )}
-      {readyToRender && (
+      {readyToRender && !hasCompactLayout && (
         <div className="row details">
           <span lang={locale}>{surah.localizedName}</span>
           <span lang="en">{surah.transliteratedName}</span>

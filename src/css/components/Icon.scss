@@ -29,7 +29,7 @@
 .stalled.icon {
   display: inline-block;
   position: relative;
-  left: -26px;
+  left: -42px;
   height: 4px;
 
   div {
@@ -86,9 +86,10 @@
 .content.theme.ar {
   ul.stream span.title {
     .sound-on.icon, .sound-off.icon {
+      height: 30px;
       transform: rotate(180deg);
       g {
-        transform: translate(0px, 10px);
+        transform: translate(0px, -15px);
       }
     }
   }
