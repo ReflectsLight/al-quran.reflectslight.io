@@ -64,28 +64,21 @@
 .content.theme.en {}
 
 .content.theme.ar {
-  .row.details  {
-    display: none;
-    place-content: flex-end;
-  }
-
-  .row.dropdown-row {
-    span.surah-name {
-      position: relative;
-      left: 20px;
-      top: 12px;
+  .row.details {
+    justify-content: flex-end;
+    .localized-name {
       display: flex;
       flex-direction: column;
       width: 180px;
-      font-size: xx-large;
-      align-items: center;
+      font-size: x-large;
+      align-items: flex-end;
       line-height: 30px;
       height: 30px;
+      margin-top: 10px;
     }
-  }
-
-  .row.details {
-    display: none;
+    .transliterated-name {
+      display: none;
+    }
   }
 
   ul.body.stream {
