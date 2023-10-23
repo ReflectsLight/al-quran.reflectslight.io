@@ -23,4 +23,10 @@
   .react-select.theme {
     ul li.blue { display: none; }
   }
+
+  .react-select.language ul {
+    li {
+      color: $blue1;
+    }
+  }
 }
