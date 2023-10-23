@@ -1,24 +1,32 @@
-.footer {
-  .play.icon {
-    background: unset;
-    g path {
-      fill: $green1;
-      stroke: $green1;
-      stroke-width: 3px;
-    }
-  }
+.content.theme.green {
+  @import "themes/green/colors";
 
-  .pause.icon {
-    background: unset;
-    g rect {
-      fill: $green1;
-      stroke: $green1;
-      stroke-width: 1px;
+  .footer {
+    .play.icon {
+      background: unset;
+      g path {
+        fill: $green1;
+        stroke: $green1;
+        stroke-width: 3px;
+      }
     }
-  }
 
-  .refresh.icon {
-    background: unset;
-    fill: $green1;
+    .pause.icon {
+      background: unset;
+      g rect {
+        fill: $green1;
+        stroke: $green1;
+        stroke-width: 1px;
+      }
+    }
+
+    .refresh.icon {
+      background: unset;
+      fill: $green1;
+    }
+
+    .stalled.icon {
+      div { background: $green1; }
+    }
   }
 }
