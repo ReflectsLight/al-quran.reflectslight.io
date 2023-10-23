@@ -2,19 +2,23 @@ import React from "react";
 import { Select } from "components/Select";
 
 interface Props {
-  setTheme: (theme: string) => void;
   theme: string;
+  setTheme: (theme: string) => void;
 }
 
-export function ThemeSelect({ setTheme, theme }: Props) {
+export function ThemeSelect({ theme, setTheme }: Props) {
   return (
     <Select
-      className="theme"
       value={theme}
+      className="theme"
       onChange={(o: JSX.Element) => setTheme(o.props.value)}
     >
-      <option className="blue" value="blue" />
-      <option className="green" value="green" />
+      <option className="blue" value="blue">
+        <span className="circle" />
+      </option>
+      <option className="green" value="green">
+        <span className="circle" />
+      </option>
     </Select>
   );
 }
