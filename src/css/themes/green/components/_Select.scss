@@ -1,0 +1,17 @@
+.content.theme {
+  @import "themes/green/colors";
+  .react-select.theme {
+    .selected-option.green .circle {
+      background: $green;
+    }
+    ul li.green .circle {
+      background: $green;
+    }
+  }
+}
+
+.content.theme.green {
+  .react-select.theme {
+    ul li.green { display: none; }
+  }
+}

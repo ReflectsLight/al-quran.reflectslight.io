@@ -1,27 +1,59 @@
 .react-select {
   height: 20px;
   z-index: 0;
+
+  .selected-option { cursor: pointer; }
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    list-style-type: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+  }
+
+ ul li {
+   height: 100%;
+   width: 100%;
+   display: block;
+   font-weight: normal;
+   &:hover {
+     cursor: pointer;
+     background-color: lighten(#CCCCCC, 15%);
+   }
+ }
 }
 
-.react-select span.active-option {
-  cursor: pointer;
-}
+.react-select.theme {
+  display: flex;
+  flex-direction: column;
 
-.react-select ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background: #FFF;
-  list-style-type: none;
-  border: 1px solid #CCCCCC;
-  border-radius: 7px;
-}
+  .selected-option {
+    .circle {
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+    }
+  }
 
-.react-select ul li {
-  display: block;
-  font-weight: normal;
-  &:hover {
-    cursor: pointer;
-    background-color: lighten(#CCCCCC, 15%);
+  ul {
+    border: none;
+    height: 50px;
+    width: 50px;
+  }
+
+  ul li {
+    display: flex;
+    height: 25px;
+    .circle {
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      margin: 5px 0 5px 0;
+    }
   }
 }

@@ -1,0 +1,17 @@
+.content.theme {
+  @import "themes/blue/colors";
+  .react-select.theme {
+    .selected-option.blue .circle {
+      background: $blue-primary;
+    }
+    ul li.blue .circle {
+      background: $blue-primary;
+    }
+  }
+}
+
+.content.theme.blue {
+  .react-select.theme {
+    ul li.blue { display: none; }
+  }
+}

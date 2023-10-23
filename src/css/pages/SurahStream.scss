@@ -61,20 +61,6 @@
   justify-content: flex-end !important;
 }
 
-.content.theme {
-  .row.dropdown-row  {
-    .react-select.theme {
-      cursor: pointer;
-      ul li.blue {
-        display: block;
-        width: 16px;
-        height: 16px;
-        background: #000;
-      }
-    }
-  }
-}
-
 .content.theme.en {}
 
 .content.theme.ar {

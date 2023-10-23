@@ -13,7 +13,7 @@ export function LanguageSelect({ locale, path = "" }: Props) {
       className="language"
       onChange={(el: JSX.Element) => {
         const locale = el.props.value;
-        location.replace([locale, path].join("/"));
+        location.replace(`/${locale}/${path}`);
       }}
     >
       <option value="ar">عربي</option>
