@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
 
@@ -16,9 +16,17 @@ interface Props {
 
 function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
+  const ref = useRef<HTMLDivElement>();
+
+  useEffect(() => {
+    if (ref.current) {
+      const div = ref.current;
+      div.classList.remove("invisible");
+    }
+  }, []);
 
   return (
-    <div className={classNames("content", "theme", theme, locale)}>
+    <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
       <a href={`/${locale}/`} className="row title">
         {t(locale, "TheNobleQuran")}
       </a>
