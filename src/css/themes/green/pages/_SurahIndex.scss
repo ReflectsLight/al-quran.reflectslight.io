@@ -3,12 +3,12 @@
 
   ul.body.index a {
     &:active, &:link, &:visited {
-      color: $green;
+      color: $green1;
     }
 
     .surah.id {
-      background: $green;
-      color: $white-primary;
+      background: $green1;
+      color: $white;
       border-radius: 5px;
       padding: 3px;
     }
@@ -16,7 +16,7 @@
 
   .row.surah.choose-random {
     &:active, &:link, &:visited {
-      color: $green;
+      color: $green1;
       text-decoration: none;
     }
     &:hover {
