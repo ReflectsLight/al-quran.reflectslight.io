@@ -1,29 +1,68 @@
-.react-select {
-  height: 20px;
-  z-index: 0;
+.root .content.theme {
+  .react-select {
+    height: 20px;
+    z-index: 0;
 
-  .selected-option { cursor: pointer; }
+    .selected-option { cursor: pointer; }
 
-  ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    background: #FFF;
-    list-style-type: none;
-    border: 1px solid #CCCCCC;
-    border-radius: 7px;
+    ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      background: #FFF;
+      list-style-type: none;
+    }
+
+    ul li {
+      height: 100%;
+      width: 100%;
+      display: block;
+      font-weight: normal;
+      cursor: pointer;
+    }
   }
 
- ul li {
-   height: 100%;
-   width: 100%;
-   display: block;
-   font-weight: normal;
-   &:hover {
-     cursor: pointer;
-     background-color: lighten(#CCCCCC, 15%);
-   }
- }
+  .react-select.language {
+    .selected-option.ar {
+      font-size: large;
+    }
+
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: medium;
+        min-height: 35px;
+      }
+
+      li.en {
+        font-family: "Kanit Regular";
+        font-weight: normal;
+      }
+
+      li.ar {
+        display: flex;
+        align-items: flex-start;
+        justify-content: end;
+        line-height: 10px;
+        font-family: "Amiri Quran Regular";
+        font-size: large;
+      }
+    }
+  }
+}
+
+.content.theme.en {
+  .react-select.language {
+    ul li.en { display: none; }
+  }
+}
+
+.content.theme.ar {
+  .react-select.language {
+    ul li.ar { display: none; }
+  }
 }
 
 .react-select.theme {
