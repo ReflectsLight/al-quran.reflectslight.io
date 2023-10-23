@@ -23,7 +23,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
       const div = ref.current;
       div.classList.remove("invisible");
     }
-  }, []);
+  }, [ref.current, theme]);
 
   return (
     <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
