@@ -34,13 +34,4 @@
 
 .root .content.theme.green.ar {
   @import "themes/green/colors";
-
-  .row.dropdown-row {
-    .surah-name {
-      color: lighten($green1, 15%);
-    }
-  }
-
-  ul.body.stream {
-  }
 }

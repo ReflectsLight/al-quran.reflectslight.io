@@ -39,7 +39,6 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   );
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
-  const hasCompactLayout = ["ar"].includes(locale);
   const ref = useRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -63,17 +62,18 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           </a>
           <div className="row dropdown-row">
             <ThemeSelect theme={theme} setTheme={setTheme} />
-            {hasCompactLayout && (
-              <span className="surah-name">{surah.localizedName}</span>
-            )}
             <LanguageSelect locale={locale} path={surah.slug} />
           </div>
         </>
       )}
-      {readyToRender && !hasCompactLayout && (
+      {readyToRender && (
         <div className="row details">
-          <span lang={locale}>{surah.localizedName}</span>
-          <span lang="en">{surah.transliteratedName}</span>
+          <span className="localized-name" lang={locale}>
+            {surah.localizedName}
+          </span>
+          <span className="transliterated-name" lang="en">
+            {surah.transliteratedName}
+          </span>
         </div>
       )}
       {readyToRender && (
