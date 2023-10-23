@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
 
@@ -40,6 +40,14 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
   const hasCompactLayout = ["ar"].includes(locale);
+  const ref = useRef<HTMLDivElement>();
+
+  useEffect(() => {
+    if (ref.current) {
+      const div = ref.current;
+      div.classList.remove("invisible");
+    }
+  }, []);
 
   useEffect(() => {
     setEndOfStream(false);
@@ -47,7 +55,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   }, [stream.length === 0]);
 
   return (
-    <div className={classNames("content", "theme", theme, locale)}>
+    <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
       {readyToRender && (
         <>
           <a href={`/${locale}/`} className="row title">

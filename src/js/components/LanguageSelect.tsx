@@ -20,6 +20,8 @@ export function LanguageSelect({ locale, path = "" }: Props) {
             return `${path}/`;
           }
         })();
+        const content = document.querySelector(".content.theme");
+        content.classList.add("invisible");
         location.replace(`/${locale}/${newPath}`);
       }}
     >
