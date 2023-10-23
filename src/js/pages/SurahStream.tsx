@@ -47,7 +47,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
       const div = ref.current;
       div.classList.remove("invisible");
     }
-  }, []);
+  }, [ref.current, theme]);
 
   useEffect(() => {
     setEndOfStream(false);
