@@ -1,5 +1,6 @@
 .content.theme {
   @import "themes/blue/colors";
+
   .react-select.theme {
     .selected-option.blue .circle {
       background: $blue1;
@@ -11,6 +12,14 @@
 }
 
 .content.theme.blue {
+  @import "themes/blue/colors";
+
+  .react-select.language {
+    .selected-option {
+      color: $blue1;
+    }
+  }
+
   .react-select.theme {
     ul li.blue { display: none; }
   }
