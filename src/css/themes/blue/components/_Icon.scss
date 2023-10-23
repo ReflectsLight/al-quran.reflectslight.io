@@ -22,15 +22,15 @@
       fill: $blue1;
     }
 
-    .stalled.icon {
-      div { background: $gold2; }
-    }
-
     .sound-on.icon, .sound-off.icon {
       polygon {
         fill: $blue1;
         stroke-width: 2;
       }
     }
+  }
+
+  .stalled.icon {
+    div { background: $gold2; }
   }
 }
