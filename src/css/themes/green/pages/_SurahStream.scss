@@ -3,31 +3,31 @@
   @import "themes/green/components/Icon";
 
   .row.details {
-    color: $green;
+    color: $green1;
   }
 
   ul.body.stream li.ayah {
     span.title span:first-child {
-      color: $green;
+      color: $green1;
     }
   }
 
   .timer {
-    color: $green;
+    color: $green1;
   }
 
   .row .shape.refresh {
     background: unset;
-    fill: $green;
+    fill: $green1;
   }
 
   .stalled.icon {
-    background: $green;
+    background: $green1;
   }
 
   .sound-on.icon, .svg.sound-off.icon {
     polygon {
-      fill: $green;
+      fill: $green1;
       stroke-width: 2;
     }
   }
@@ -38,7 +38,7 @@
 
   .row.dropdown-row {
     .surah-name {
-      color: lighten($green, 15%);
+      color: lighten($green1, 15%);
     }
   }
 

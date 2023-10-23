@@ -1,31 +1,31 @@
 
 .play.icon {
-  fill: $blue-primary;
-  stroke: darken($blue-primary, 40%);
+  fill: $blue1;
+  stroke: darken($blue1, 40%);
   stroke-width: 2px;
 }
 
 .pause.icon {
   background: unset;
   rect {
-    fill: $blue-primary;
-    stroke: darken($blue-primary, 40%);
+    fill: $blue1;
+    stroke: darken($blue1, 40%);
     stroke-width: 1px;
   }
 }
 
 .refresh.icon {
   background: unset;
-  fill: $blue-primary;
+  fill: $blue1;
 }
 
 .stalled.icon {
-  div { background: $gold-secondary; }
+  div { background: $gold2; }
 }
 
 .sound-on.icon, .sound-off.icon {
   polygon {
-    fill: $blue-primary;
+    fill: $blue1;
     stroke-width: 2;
   }
 }

@@ -7,17 +7,17 @@
 
   ul.body.index li.surah a {
     &:active, &:link, &:visited {
-      color: $blue-primary;
+      color: $blue1;
     }
 
     div:first-child .id {
-      color: $gold-secondary;
+      color: $gold2;
     }
   }
 
   .row.surah.choose-random {
     &:active, &:link, &:visited {
-      color: $blue-primary;
+      color: $blue1;
       text-decoration: none;
     }
     &:hover {

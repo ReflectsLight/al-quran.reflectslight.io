@@ -2,8 +2,8 @@
   .play.icon {
     background: unset;
     g path {
-      fill: $green;
-      stroke: $green;
+      fill: $green1;
+      stroke: $green1;
       stroke-width: 3px;
     }
   }
@@ -11,14 +11,14 @@
   .pause.icon {
     background: unset;
     g rect {
-      fill: $green;
-      stroke: $green;
+      fill: $green1;
+      stroke: $green1;
       stroke-width: 1px;
     }
   }
 
   .refresh.icon {
     background: unset;
-    fill: $green;
+    fill: $green1;
   }
 }
