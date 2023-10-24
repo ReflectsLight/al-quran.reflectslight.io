@@ -11,7 +11,7 @@
     }
 
     div:first-child {
-      .id { color: $gold1; }
+      .id { color: $gold2; }
     }
   }
 
@@ -30,11 +30,13 @@
   @import "themes/blue/colors";
 
   ul.body.index  {
-    li.surah:nth-of-type(odd) {
-      div:first-child .name { color: $gold1; }
-    }
-    li.surah:nth-of-type(even) {
-      div:first-child .name { color: $blue1; }
+    li.surah a {
+      div:first-child .id {
+        color: $gold2;
+      }
+      div:first-child .name {
+        color: $blue1;
+      }
     }
   }
 }

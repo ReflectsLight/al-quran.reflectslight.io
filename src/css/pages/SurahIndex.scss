@@ -82,12 +82,15 @@ body .root .content.theme.ar {
   font-size: larger;
 
   ul.body.index {
-    li.surah {
-      a div:first-child .id {
+    li.surah a {
+      div:first-child .id {
+        position: relative;
+        top: 7px;
+        font-family: "Kanit Regular";
+        font-size: large;
         width: 55px;
-        margin-left: 8px;
       }
-      a div:first-child .id, a div:first-child .name {
+      div:first-child .name {
         font-size: larger;
       }
       .transliterated { display: none; }
