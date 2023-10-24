@@ -75,15 +75,24 @@
   }
 }
 
-.content.theme {
-  .footer .sound-on.icon, .footer .sound-off.icon {
-    width: 32px;
-    height: 32px;
-    g { transform: translate(32px,30px); }
+.root .content.theme {
+  .footer {
+    .sound-on.icon, .sound-off.icon {
+      width: 32px;
+      height: 32px;
+      g { transform: translate(32px,30px); }
+    }
+
+    .play.icon {
+      g { transform: translate(-16px, 0); }
+    }
+    .pause.icon {
+      g { transform: translate(-14px, 0); }
+    }
   }
 }
 
-.content.theme.ar {
+.root .content.theme.ar {
   ul.stream span.title {
     .sound-on.icon, .sound-off.icon {
       height: 30px;
