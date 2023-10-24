@@ -51,13 +51,7 @@ First and foremost, Alhamdulillah.
   * [/src/favicon.png](/src/favicon.png)
     by
     [Aficons](https://freeicons.io/profile/9247).
-  * [/src/images/moon.svg](/src/images/moon.svg)
-    by
-    [Aficons](https://freeicons.io/profile/9247).
-  * [/src/images/leaf.svg](/src/images/leaf.svg)
-    by
-    [Fasil](https://freeicons.io/profile/722).
-  * [RefreshShape](/src/js/components/Shape.tsx)
+  * [RefreshIcon](/src/js/components/Icon.tsx)
     by
     [Muhammad Haq](https://freeicons.io/profile/823).
 
