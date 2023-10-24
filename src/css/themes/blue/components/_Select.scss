@@ -30,3 +30,13 @@
     }
   }
 }
+
+.content.theme.blue.ar {
+  @import "themes/blue/colors";
+
+  .row.details {
+    .localized-name {
+      color: $blue1;
+    }
+  }
+}
