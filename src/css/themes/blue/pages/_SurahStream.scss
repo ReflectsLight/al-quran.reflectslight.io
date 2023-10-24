@@ -1,10 +1,6 @@
 .root .content.theme.blue {
   @import "themes/blue/colors";
 
-  .row.details {
-    color: $gold1;
-  }
-
   .row.footer .timer {
     color: $blue1;
   }
@@ -21,4 +17,10 @@
 
 .root .content.theme.blue.ar {
   @import "themes/blue/colors";
+
+  .row.details {
+    .localized-name {
+      color: $gold1;
+    }
+  }
 }

@@ -10,8 +10,8 @@
       color: $blue1;
     }
 
-    div:first-child .id {
-      color: $gold2;
+    div:first-child {
+      .id { color: $gold1; }
     }
   }
 
@@ -22,6 +22,19 @@
     }
     &:hover {
       font-weight: bold;
+    }
+  }
+}
+
+.root .content.theme.blue.ar {
+  @import "themes/blue/colors";
+
+  ul.body.index  {
+    li.surah:nth-of-type(odd) {
+      div:first-child .name { color: $gold1; }
+    }
+    li.surah:nth-of-type(even) {
+      div:first-child .name { color: $blue1; }
     }
   }
 }
