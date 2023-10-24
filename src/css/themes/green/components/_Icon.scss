@@ -3,7 +3,6 @@
 
   ul.body.stream li, .footer {
     .play.icon {
-      background: unset;
       g path {
         fill: $green1;
         stroke: $green1;
@@ -12,7 +11,6 @@
     }
 
     .pause.icon {
-      background: unset;
       g rect {
         fill: $green1;
         stroke: $green1;
@@ -21,7 +19,6 @@
     }
 
     .refresh.icon {
-      background: unset;
       fill: $green1;
     }
 
