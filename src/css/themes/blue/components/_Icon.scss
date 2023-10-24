@@ -1,7 +1,7 @@
 .content.theme.blue {
   @import "themes/blue/colors";
 
-  .footer {
+  ul.body.stream li, .footer {
     .play.icon {
       fill: $blue1;
       stroke: darken($blue1, 40%);
@@ -11,7 +11,6 @@
     .pause.icon {
       background: unset;
       rect {
-        fill: $blue1;
         stroke: darken($blue1, 40%);
         stroke-width: 1px;
       }

@@ -1,7 +1,7 @@
 .content.theme.green {
   @import "themes/green/colors";
 
-  .footer {
+  ul.body.stream li, .footer {
     .play.icon {
       background: unset;
       g path {
@@ -23,6 +23,12 @@
     .refresh.icon {
       background: unset;
       fill: $green1;
+    }
+
+    .sound-on.icon, .sound-off.icon {
+      g polygon {
+        fill: $green1;
+      }
     }
   }
 
