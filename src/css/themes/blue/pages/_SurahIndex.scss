@@ -10,7 +10,7 @@
     }
 
     div:first-child {
-      .id { color: $gold2; }
+      .id { color: $gold1; }
     }
   }
 
@@ -28,7 +28,7 @@
 .root .content.theme.blue.en {
   @import "themes/blue/colors";
   .row.details span {
-    color: $gold2;
+    color: $gold1;
   }
 }
 
@@ -37,7 +37,7 @@
   ul.body.index  {
     li.surah a {
       div:first-child .id {
-        color: $gold2;
+        color: $gold1;
       }
       div:first-child .name {
         color: $blue1;
