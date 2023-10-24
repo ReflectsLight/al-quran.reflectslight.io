@@ -2,11 +2,10 @@
 
 This repository contains the source code of
 [al-quran.reflectslight.io](https://al-quran.reflectslight.io),
-a static website for reading The Quran. After the
-website is built, the build directory consists
-of HTML, CSS, JavaScript and other static assets
-that can be hosted by a regular web server (eg
-nginx, apache, etc).
+a static website for reading (and listening to) The Noble Quran.
+After the website is built, the build directory consists of HTML,
+CSS, JavaScript and other static assets that can be hosted by a
+regular web server (eg nginx, apache, etc).
 
 ## Stack
 
