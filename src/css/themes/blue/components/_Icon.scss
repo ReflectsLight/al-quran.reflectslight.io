@@ -9,7 +9,6 @@
     }
 
     .pause.icon {
-      background: unset;
       rect {
         fill: $blue1;
         stroke: darken($blue1, 40%);
@@ -18,7 +17,6 @@
     }
 
     .refresh.icon {
-      background: unset;
       fill: $blue1;
     }
 
