@@ -6,7 +6,10 @@
     height: 20px;
     z-index: 1;
 
-    .selected-option { cursor: pointer; }
+    .selected-option {
+      z-index: 2;
+      cursor: pointer;
+    }
 
     ul {
       position: relative;
@@ -54,7 +57,6 @@
         display: flex;
         align-items: flex-start;
         justify-content: end;
-        line-height: 10px;
         font-family: "Amiri Quran Regular";
         font-size: large;
       }
@@ -65,7 +67,7 @@
 .content.theme.en {
   .react-select.language {
     ul {
-      top: 62px;
+      top: 52px;
       li.en { display: none; }
     }
   }

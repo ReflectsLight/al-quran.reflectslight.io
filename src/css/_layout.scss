@@ -37,9 +37,9 @@ body .root .content {
     align-items: center;
     flex-direction: column;
     font-size: xx-large;
+    margin: 0;
 
     a {
-      line-height: 38px;
       text-decoration: none;
     }
   }
@@ -82,8 +82,8 @@ body .root .content {
 }
 
 body .root .content.ar {
-  a.title {
-    font-size: xx-large;
+  .row.details {
+    height: 35px;
   }
 }
 
