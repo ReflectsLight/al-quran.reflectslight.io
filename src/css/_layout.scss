@@ -32,13 +32,16 @@ body .root .content {
     width: 350px;
   }
 
-  a.title {
+  h1 {
     display: flex;
-    place-content: center;
-    text-decoration: none;
-    width: 100%;
-    font-size: large;
-    line-height: 38px;
+    align-items: center;
+    flex-direction: column;
+    font-size: xx-large;
+
+    a {
+      line-height: 38px;
+      text-decoration: none;
+    }
   }
 
   ul.body {
@@ -66,9 +69,6 @@ body .root .content {
   }
 
   .row.dropdown-row {
-    align-items: flex-end;
-    line-height: 30px;
-
     .react-select.theme {
       width: 35px;
     }

@@ -1,9 +1,7 @@
 .root .content.theme.green {
   @import "colors";
 
-  .row.title {
-    color: $green1;
-  }
+  h1 , h1 a { color: $green1; }
 
   .row.dropdown-row .react-select {
     background-color: transparent;

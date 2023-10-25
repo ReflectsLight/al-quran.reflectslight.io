@@ -1,5 +1,8 @@
 .root .content.theme {
   .react-select {
+    display: flex;
+    flex-direction: column;
+
     height: 20px;
     z-index: 1;
 
@@ -23,6 +26,11 @@
   }
 
   .react-select.language {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
     .selected-option.ar {
       font-size: large;
     }
@@ -34,6 +42,7 @@
         justify-content: flex-end;
         font-size: medium;
         min-height: 35px;
+        min-width: 125px;
       }
 
       li.en {
@@ -55,20 +64,23 @@
 
 .content.theme.en {
   .react-select.language {
-    ul li.en { display: none; }
+    ul {
+      top: 62px;
+      li.en { display: none; }
+    }
   }
 }
 
 .content.theme.ar {
   .react-select.language {
-    ul li.ar { display: none; }
+    ul {
+      top: 75px;
+      li.ar { display: none; }
+    }
   }
 }
 
 .react-select.theme {
-  display: flex;
-  flex-direction: column;
-
   .selected-option {
     .circle {
       display: block;

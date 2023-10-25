@@ -1,9 +1,7 @@
 .root .content.theme.blue {
   @import "colors";
 
-  .row.title {
-    color: $blue1;
-  }
+  h1 , h1 a { color: $blue1; }
 
   .row.dropdown-row .react-select {
     color: $gold1;
