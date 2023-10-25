@@ -28,9 +28,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
   return (
     <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
       <h1>
-        <a href={`/${locale}/`}>
-          {t(locale, "TheNobleQuran")}
-        </a>
+        <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
       </h1>
       <div className="row dropdown-row">
         <ThemeSelect theme={theme} setTheme={setTheme} />
