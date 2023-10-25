@@ -38,6 +38,7 @@ body .root .content {
     flex-direction: column;
     font-size: xx-large;
     margin: 0;
+    line-height: 1.5;
 
     a {
       text-decoration: none;
@@ -78,6 +79,12 @@ body .root .content {
       text-align: right;
       li { font-family: "Kanit Regular"; }
     }
+  }
+}
+
+body .root .content.en {
+  h1 {
+    font-size: x-large;
   }
 }
 
