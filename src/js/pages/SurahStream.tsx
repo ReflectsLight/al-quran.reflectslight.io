@@ -57,7 +57,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
     <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
       {readyToRender && (
         <>
-          <h1>
+          <h1 role="banner">
             <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
           </h1>
           <div className="row dropdown-row">
