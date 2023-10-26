@@ -2,12 +2,6 @@
 @import "components/Select";
 @import "components/Icon";
 
-.content .row.details {
-  direction: rtl;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
 .content ul.body.stream {
   scrollbar-gutter: stable;
 
@@ -24,7 +18,7 @@
     }
     p {
       width: 100%;
-      margin: 3px 0 10px 0
+      margin: 0;
     }
   }
 
@@ -40,10 +34,7 @@
   }
 }
 
-.content .row.footer {
-  height: 32px;
-  align-items: flex-end;
-
+.content footer {
   .timer {
     display: flex;
     flex-direction: column;
@@ -61,7 +52,15 @@
   justify-content: flex-end !important;
 }
 
-.content.theme.en {}
+.content.theme.en {
+  ul.body.stream {
+    li.ayah {
+      p {
+        min-height: 35px;
+      }
+    }
+  }
+}
 
 .content.theme.ar {
   .row.details {
@@ -83,11 +82,12 @@
       span.title {
         font-size: x-large;
         height: 0;
+        min-height: 50px;
       }
       p {
         font-size: x-large;
         font-weight: normal;
-        margin: 16px 0 30px 0;
+        min-height: 70px;
       }
     }
   }

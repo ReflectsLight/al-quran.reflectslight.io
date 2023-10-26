@@ -11,7 +11,6 @@ body .root .content.theme {
 
     li.surah {
       width: 100%;
-      margin-bottom: 10px;
     }
 
     li.surah a {
@@ -72,9 +71,6 @@ body .root .content.theme {
 
 body .root .content.theme.en {
   ul.body.index li.surah {
-    a div:first-child .id {
-      margin-right: 5px;
-    }
   }
 }
 

@@ -76,7 +76,7 @@
 }
 
 .root .content.theme {
-  .footer {
+  footer {
     .sound-on.icon, .sound-off.icon {
       width: 32px;
       height: 32px;
@@ -103,7 +103,7 @@
     }
   }
 
-  .footer .sound-on.icon, .footer .sound-off.icon {
+  footer .sound-on.icon, footer .sound-off.icon {
     transform: rotate(180deg);
     g {transform: translate(32px, 0); }
   }

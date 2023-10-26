@@ -87,7 +87,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           t={t}
         />
       )}
-      <div className={classNames({ "justify-end": endOfStream }, "row", "footer")}>
+      <footer>
         {readyToRender && isPaused && !endOfStream && (
           <PlayIcon onClick={() => setIsPaused(false)} />
         )}
@@ -118,7 +118,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           />
         )}
         {readyToRender && endOfStream && <RefreshIcon onClick={() => setStream([])} />}
-      </div>
+      </footer>
       {readyToRender && soundOn && isStalled && (
         <div className="row spinner justify-end">
           <StalledIcon />

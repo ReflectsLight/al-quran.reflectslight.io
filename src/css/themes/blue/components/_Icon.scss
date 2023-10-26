@@ -1,7 +1,7 @@
 .content.theme.blue {
   @import "themes/blue/colors";
 
-  ul.body.stream li, .footer {
+  ul.body.stream li, footer {
     .play.icon {
       fill: $blue1;
       stroke: darken($blue1, 40%);

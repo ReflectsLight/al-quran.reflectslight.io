@@ -1,7 +1,7 @@
 .content.theme.green {
   @import "themes/green/colors";
 
-  ul.body.stream li, .footer {
+  ul.body.stream li, footer {
     .play.icon {
       g path {
         fill: $green1;

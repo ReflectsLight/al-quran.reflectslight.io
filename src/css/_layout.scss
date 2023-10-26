@@ -15,7 +15,7 @@ html {
 
 html body {
   color: $black;
-  height: 85%;
+  height: 100%;
 }
 
 body .root {
@@ -24,9 +24,13 @@ body .root {
 
 body .root .content {
   margin: 0 auto;
+  height: 100%;
   width: 80%;
   max-width: $max-width;
-  height: 90%;
+
+  .row.details {
+    height: 30px;
+  }
 
   @media screen and (max-width: $max-width) {
     width: 350px;
@@ -48,21 +52,20 @@ body .root .content {
   ul.body {
     clear: both;
     list-style-type: none;
-    height: 90%;
     padding: 0;
-
-    /* Height of 625px, or less */
-    @media screen and (max-height: 625px) {
-      height: 330px;
-    }
-
-    /* Height of 595px, or less */
-    @media screen and (max-height: 595px) {
-      height: 310px;
-    }
+    margin: 0;
+    overflow: auto;
+    height: 80%;
   }
 
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
   .row {
+    height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -89,8 +92,8 @@ body .root .content.en {
 }
 
 body .root .content.ar {
-  .row.details {
-    height: 35px;
+  footer {
+    flex-direction: row-reverse;
   }
 }
 
