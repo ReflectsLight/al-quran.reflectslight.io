@@ -16,6 +16,7 @@ html {
 html body {
   color: $black;
   height: 100%;
+  margin: 0;
 }
 
 body .root {
@@ -92,6 +93,9 @@ body .root .content.en {
 }
 
 body .root .content.ar {
+  ul.body {
+    height: 78%;
+  }
   footer {
     flex-direction: row-reverse;
   }
