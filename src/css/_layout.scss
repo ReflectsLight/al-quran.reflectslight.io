@@ -26,15 +26,11 @@ body .root {
 body .root .content {
   margin: 0 auto;
   height: 100%;
-  width: 80%;
+  width: 90%;
   max-width: $max-width;
 
   .row.details {
     height: 30px;
-  }
-
-  @media screen and (max-width: $max-width) {
-    width: 350px;
   }
 
   h1 {

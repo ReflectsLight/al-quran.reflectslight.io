@@ -4,12 +4,6 @@
 
 body .root .content.theme {
   ul.body.index {
-    overflow: auto;
-
-    li.surah {
-      width: 100%;
-    }
-
     li.surah a {
       display: flex;
       justify-content: space-between;
