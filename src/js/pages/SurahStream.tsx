@@ -118,10 +118,8 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           />
         )}
         {readyToRender && endOfStream && <RefreshIcon onClick={() => setStream([])} />}
-        <div className="br"></div>
-        {readyToRender && soundOn && isStalled && (
-          <StalledIcon />
-        )}
+        <div className="br" />
+        {readyToRender && soundOn && isStalled && <StalledIcon />}
       </footer>
     </div>
   );
