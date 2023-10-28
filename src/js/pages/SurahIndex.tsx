@@ -53,7 +53,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
       </ul>
       <footer>
         <a href={`/${locale}/random/`}>
-          <RightArrow/>
+          <RightArrow />
           <span>{t(locale, "ChooseRandomChapter")}</span>
         </a>
       </footer>
