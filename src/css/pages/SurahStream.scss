@@ -2,59 +2,59 @@
 @import "components/Select";
 @import "components/Icon";
 
-.content ul.body.stream {
-  scrollbar-gutter: stable;
+.root .content.theme {
+  ul.body.stream {
+    height: 73%;
+    padding: 0 0 35px 0;
+    scrollbar-gutter: stable;
 
-  li.ayah {
-    span.title {
+    li.ayah {
+      span.title {
+        display: flex;
+        align-items: center;
+      }
+      .svg.sound-on, .svg.sound-off {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        g { transform: translate(0px, 18px); }
+      }
+      p {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    li.ayah.fade {
+      @keyframes FadeIn {
+        0% { opacity: 0;}
+        25% { opacity: 0.25; }
+        50% { opacity: 0.5; }
+        75% { opacity: 0.75 }
+        100% { opacity: 1; }
+      }
+      animation: FadeIn 1s;
+    }
+  }
+
+  footer {
+    .timer {
       display: flex;
-      align-items: center;
-    }
-    .svg.sound-on, .svg.sound-off {
-      cursor: pointer;
+      flex-direction: column;
+      align-items: flex-end;
       height: 24px;
-      width: 24px;
-      g { transform: translate(0px, 18px); }
+      width: 40px;
+      font-family: "Kanit Regular";
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
     }
-    p {
-      width: 100%;
-      margin: 0;
-    }
-  }
-
-  li.ayah.fade {
-    @keyframes FadeIn {
-      0% { opacity: 0;}
-      25% { opacity: 0.25; }
-      50% { opacity: 0.5; }
-      75% { opacity: 0.75 }
-      100% { opacity: 1; }
-    }
-    animation: FadeIn 1s;
-  }
-}
-
-.content footer {
-  .timer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 24px;
-    width: 40px;
-    font-family: "Kanit Regular";
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
   }
 }
 
 .content.theme.en {
   ul.body.stream {
-    li.ayah {
-      p {
-        min-height: 35px;
-      }
-    }
+    li { padding: 10px 0 0 0; }
   }
 }
 
@@ -78,14 +78,17 @@
       span.title {
         font-size: x-large;
         height: 0;
-        min-height: 50px;
+        padding: 35px 0 25px 0;
       }
       p {
         font-size: x-large;
         font-weight: normal;
-        min-height: 70px;
       }
     }
+  }
+
+  footer .timer {
+    align-items: flex-start;
   }
 }
 
