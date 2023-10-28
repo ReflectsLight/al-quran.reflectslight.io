@@ -54,7 +54,10 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   }, [stream.length === 0]);
 
   return (
-    <article ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
+    <article
+      ref={ref}
+      className={classNames("invisible", "content", "theme", theme, locale)}
+    >
       {readyToRender && (
         <>
           <header>

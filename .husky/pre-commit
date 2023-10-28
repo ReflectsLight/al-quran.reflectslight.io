@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 
 pattern=".ts|.tsx|.js$"
-git diff --cached --name-only | grep -q -E -e "${pattern}"
-
+files=$(git --no-pager diff --cached --name-only | grep -E -e "${pattern}")
 if [ "$?" = "0" ]; then
-  npm run prettier || exit 1
-  npm run eslint || exit 1
+  npm run prettier -- "${files}" || exit 1
+  npm run eslint -- "${files}" || exit 1
+  git add "${files}"
+  exit 0
 else
   exit 0
 fi
