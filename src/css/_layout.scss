@@ -61,10 +61,16 @@ body .root .content {
 
   footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+
+    .br {
+      width: 100%;
+    }
   }
+
   .row {
     height: 30px;
     display: flex;
