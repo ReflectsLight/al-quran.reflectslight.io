@@ -54,7 +54,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   }, [stream.length === 0]);
 
   return (
-    <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
+    <article ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
       {readyToRender && (
         <>
           <header>
@@ -123,7 +123,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
         <div className="br" />
         {readyToRender && soundOn && isStalled && <StalledIcon />}
       </footer>
-    </div>
+    </article>
   );
 }
 
