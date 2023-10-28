@@ -11,6 +11,13 @@ namespace :nanoc do
     sh "rm -rf #{build_dir}"
   end
 
+  task :clean_css do
+    cssdir = File.join(build_dir, "css")
+    if Dir.exist?(cssdir)
+      sh "rm -rf #{cssdir}"
+    end
+  end
+
   task watch: [:compile] do
     require "listen"
     Listen.to File.join(Dir.getwd, "src"), force_polling: true do
@@ -21,7 +28,8 @@ namespace :nanoc do
 end
 
 desc "Build the website"
-task build: "nanoc:compile"
+task build: ["nanoc:clean_css", "nanoc:compile"]
+
 
 desc "Trigger a build when src/ is modified"
 task "build:watch" => "nanoc:watch"
