@@ -6,6 +6,7 @@
 # (eg / -> /en/)
 
 compile "/html/redirect.html.erb" do
+  filter(:tidy)
   filter(:erb)
   write("/index.html")
 end
