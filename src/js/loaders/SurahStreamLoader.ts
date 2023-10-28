@@ -7,7 +7,8 @@ import * as Quran from "lib/Quran";
   const progressBar: HTMLProgressElement = parent.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = parent.querySelector(".percentage")!;
   const inlineStyle: HTMLStyleElement = document.querySelector(".css.postman")!;
-  const { locale, surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+  const { locale, surahId } =
+    document.querySelector<HTMLElement>(".root")!.dataset;
   const recitations = JSON.parse(
     document.querySelector<HTMLElement>(".json.recitations")!.innerText,
   );
@@ -19,7 +20,11 @@ import * as Quran from "lib/Quran";
     item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf"),
     item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
-      const ts = [url.format(recitation.url), "time_slots", `${surahId}.json`].join("/");
+      const ts = [
+        url.format(recitation.url),
+        "time_slots",
+        `${surahId}.json`,
+      ].join("/");
       return item.json(ts, {
         className: `recitation time-slots ${recitation.id}`,
       });
@@ -36,6 +41,8 @@ import * as Quran from "lib/Quran";
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
       pkg.json.forEach(o => document.body.appendChild(o));
-      pkg.scripts.forEach(s => document.body.removeChild(document.body.appendChild(s)));
+      pkg.scripts.forEach(s =>
+        document.body.removeChild(document.body.appendChild(s)),
+      );
     });
 })();

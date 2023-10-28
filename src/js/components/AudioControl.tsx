@@ -44,7 +44,9 @@ export function AudioControl({
 
   useEffect(() => {
     if (soundOn) {
-      audio.src = [url.format(recitation.url), surah.id, `${ayah.id}.mp3`].join("/");
+      audio.src = [url.format(recitation.url), surah.id, `${ayah.id}.mp3`].join(
+        "/",
+      );
       audio.play();
     } else {
       audio.pause();

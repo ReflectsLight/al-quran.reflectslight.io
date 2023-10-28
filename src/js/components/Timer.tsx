@@ -53,7 +53,9 @@ export function Timer({
 
   return (
     <div className="timer">
-      {ms / 1000 <= 0 ? formatNumber(0, locale) : formatNumber(ms / 1000, locale)}
+      {ms / 1000 <= 0
+        ? formatNumber(0, locale)
+        : formatNumber(ms / 1000, locale)}
     </div>
   );
 }

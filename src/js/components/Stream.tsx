@@ -40,7 +40,8 @@ export function Stream({
           )}
           <span>
             {t(locale, "surah")} {formatNumber(surah.id, locale)}
-            {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(ayah.id, locale)}
+            {t(locale, "comma")} {t(locale, "ayah")}{" "}
+            {formatNumber(ayah.id, locale)}
           </span>
         </span>
         <p>{ayah.text}</p>

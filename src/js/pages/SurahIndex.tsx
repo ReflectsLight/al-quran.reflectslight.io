@@ -27,7 +27,10 @@ function SurahIndex({ locale, surahs, t }: Props) {
   }, [ref.current, theme]);
 
   return (
-    <div ref={ref} className={classNames("invisible", "content", "theme", theme, locale)}>
+    <div
+      ref={ref}
+      className={classNames("invisible", "content", "theme", theme, locale)}
+    >
       <header>
         <h1>
           <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
@@ -74,5 +77,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
     },
   );
 
-  ReactDOM.createRoot(root).render(<SurahIndex locale={locale} surahs={surahs} t={t} />);
+  ReactDOM.createRoot(root).render(
+    <SurahIndex locale={locale} surahs={surahs} t={t} />,
+  );
 })();
