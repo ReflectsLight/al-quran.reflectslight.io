@@ -7,6 +7,7 @@ import { useTheme } from "hooks/useTheme";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { i18n, formatNumber, TFunction } from "lib/i18n";
+import { RightArrow } from "components/Icon";
 
 interface Props {
   locale: Quran.Locale;
@@ -50,9 +51,12 @@ function SurahIndex({ locale, surahs, t }: Props) {
           </li>
         ))}
       </ul>
-      <a href={`/${locale}/random`} className="row surah choose-random">
-        {t(locale, "ChooseRandomChapter")}
-      </a>
+      <footer>
+        <a href={`/${locale}/random/`}>
+          <RightArrow/>
+          <span>{t(locale, "ChooseRandomChapter")}</span>
+        </a>
+      </footer>
     </div>
   );
 }

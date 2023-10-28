@@ -11,13 +11,15 @@
     }
   }
 
-  .row.surah.choose-random {
-    &:active, &:link, &:visited {
-      color: $blue1;
-      text-decoration: none;
-    }
-    &:hover {
-      font-weight: bold;
+  footer {
+    a {
+      &:active, &:link, &:visited {
+        color: $blue1;
+        text-decoration: none;
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }

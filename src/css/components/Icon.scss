@@ -26,6 +26,11 @@
   height: 16px;
 }
 
+.right-arrow.icon {
+  height: 16px;
+  width: 16px;
+}
+
 .stalled.icon {
   display: inline-block;
   position: relative;
@@ -103,8 +108,13 @@
     }
   }
 
-  footer .sound-on.icon, footer .sound-off.icon {
-    transform: rotate(180deg);
-    g {transform: translate(32px, 0); }
+  footer {
+    .sound-on.icon, .sound-off.icon {
+      transform: rotate(180deg);
+      g {transform: translate(32px, 0); }
+    }
+    .right-arrow.icon {
+      transform: rotate(180deg);
+    }
   }
 }

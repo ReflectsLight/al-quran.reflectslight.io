@@ -26,6 +26,11 @@
         stroke-width: 2;
       }
     }
+    .right-arrow.icon {
+      g {
+        fill: $blue1;
+      }
+    }
   }
 
   .stalled.icon {

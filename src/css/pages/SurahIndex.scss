@@ -1,12 +1,9 @@
 @import "layout";
 @import "components/Select";
+@import "components/Icon";
 
 body .root .content.theme {
   ul.body.index {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
     overflow: auto;
 
     li.surah {
@@ -16,7 +13,7 @@ body .root .content.theme {
     li.surah a {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      min-height: 45px;
 
       &:visited, &:active, &:link {
         text-decoration: none;
@@ -62,9 +59,17 @@ body .root .content.theme {
     }
   }
 
-  .row.surah.choose-random {
-    display: flex;
-    place-content: center;
+  footer {
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+
+      span {
+        padding: 0 0 0 7px;
+      }
+    }
   }
 }
 
@@ -78,6 +83,7 @@ body .root .content.theme.ar {
   font-size: larger;
 
   ul.body.index {
+    height: 70%;
     li.surah a {
       div:first-child .id {
         position: relative;
@@ -93,9 +99,12 @@ body .root .content.theme.ar {
     }
   }
 
-  .row.surah.choose-random {
-    font-family: "Handjet Regular";
-    font-size: x-large;
+  footer {
+    height: 40px;
+    font-family: "Mada Regular";
+    a span {
+      padding: 0 7px 0 0;
+    }
   }
 }
 

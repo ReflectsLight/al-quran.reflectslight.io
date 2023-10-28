@@ -10,7 +10,7 @@ import postman, { item } from "postman";
     item.script("/js/pages/surah-index.js"),
     item.css("/css/pages/surah-index.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    item.font("Handjet Regular", "url(/fonts/handjet-regular.ttf"),
+    item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf"),
     item.progress((percent: number) => {
       progressBar.value = percent;

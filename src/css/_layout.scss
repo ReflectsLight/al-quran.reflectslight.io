@@ -56,7 +56,8 @@ body .root .content {
     padding: 0;
     margin: 0;
     overflow: auto;
-    height: 80%;
+    height: 73%;
+    padding: 0 0 35px 0;
   }
 
   footer {
@@ -99,9 +100,6 @@ body .root .content.en {
 }
 
 body .root .content.ar {
-  ul.body {
-    height: 78%;
-  }
   footer {
     flex-direction: row-reverse;
   }
