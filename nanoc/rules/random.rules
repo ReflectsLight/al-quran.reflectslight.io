@@ -7,8 +7,8 @@
 
 locales.each do |locale|
   compile "/html/random.html.erb", rep: "random/#{locale}" do
-    title = i18n[locale].TheNobleQuran
-    filter(:erb, locals: {locale:, title:})
+    context = Ryo.from({locale:})
+    filter(:erb, locals: {context:})
     write("/#{locale}/random/index.html")
   end
 end

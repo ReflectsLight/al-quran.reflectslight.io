@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= context.locale %>">
   <head>
-    <title><%= title %></title>
+    <title><%= t(context.locale, "TheNobleQuran") %></title>
   </head>
   <body>
     <%= inline_json("/slugs.json") %>
