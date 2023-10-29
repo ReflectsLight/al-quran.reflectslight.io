@@ -43,7 +43,7 @@ body .root .content.theme {
       }
     }
 
-    div {
+    nav {
       display: flex;
       justify-content: space-between;
       min-height: 35px;
@@ -96,7 +96,7 @@ body .root .content.en {
 
 body .root .content.ar {
   header {
-    div {
+    nav, div {
       direction: ltr;
       .localized-name {
         display: flex;

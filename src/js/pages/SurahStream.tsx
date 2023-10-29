@@ -63,10 +63,10 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           <h1>
             <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
           </h1>
-          <div>
+          <nav>
             <ThemeSelect theme={theme} setTheme={setTheme} />
             <LanguageSelect locale={locale} path={surah.slug} />
-          </div>
+          </nav>
           <div>
             <span className="localized-name" lang={locale}>
               {surah.localizedName}

@@ -35,10 +35,10 @@ function SurahIndex({ locale, surahs, t }: Props) {
         <h1>
           <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
         </h1>
-        <div>
+        <nav>
           <ThemeSelect theme={theme} setTheme={setTheme} />
           <LanguageSelect locale={locale} />
-        </div>
+        </nav>
       </header>
       <ul className="body index scroll-y">
         {surahs.map((surah, key) => (
