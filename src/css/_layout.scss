@@ -23,26 +23,45 @@ body .root {
   height: 100%;
 }
 
-body .root .content {
+body .root .content.theme {
   margin: 0 auto;
   height: 100%;
-  width: 90%;
+  width: 85%;
   max-width: $max-width;
 
-  .row.details {
-    height: 30px;
-  }
+  header {
+    h1 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: xx-large;
+      margin: 0;
+      line-height: 1.5;
 
-  h1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: xx-large;
-    margin: 0;
-    line-height: 1.5;
+      a {
+        text-decoration: none;
+      }
+    }
 
-    a {
-      text-decoration: none;
+    div {
+      display: flex;
+      justify-content: space-between;
+      min-height: 35px;
+
+      .react-select {
+        display: flex;
+        justify-content: center;
+      }
+
+      .react-select.theme {
+        min-width: 35px;
+      }
+
+      .react-select.language {
+        min-width: 70px;
+        text-align: right;
+        li { font-family: "Kanit Regular"; }
+      }
     }
   }
 
@@ -53,7 +72,7 @@ body .root .content {
     margin: 0;
     overflow: auto;
     height: 73%;
-    padding: 0 0 35px 0;
+    padding: 0 0 30px 0;
   }
 
   footer {
@@ -67,26 +86,6 @@ body .root .content {
       width: 100%;
     }
   }
-
-  .row {
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    direction: ltr;
-  }
-
-  .row.dropdown-row {
-    .react-select.theme {
-      width: 35px;
-    }
-
-    .react-select.language {
-      width: 70px;
-      text-align: right;
-      li { font-family: "Kanit Regular"; }
-    }
-  }
 }
 
 body .root .content.en {
@@ -96,6 +95,22 @@ body .root .content.en {
 }
 
 body .root .content.ar {
+  header {
+    div {
+      direction: ltr;
+      .localized-name {
+        display: flex;
+        font-size: x-large;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+      }
+      .transliterated-name {
+        display: none;
+      }
+    }
+  }
+
   footer {
     flex-direction: row-reverse;
   }

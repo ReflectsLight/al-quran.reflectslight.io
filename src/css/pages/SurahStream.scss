@@ -57,36 +57,32 @@
 }
 
 .content.theme.ar {
-  .row.details {
-    justify-content: flex-end;
-    .localized-name {
-      display: flex;
-      width: 180px;
-      font-size: x-large;
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-    .transliterated-name {
-      display: none;
-    }
-  }
+  header { }
 
   ul.body.stream {
+    li.ayah:first-child {
+      span.title {
+        padding: 15px 0 20px 0;
+      }
+    }
     li.ayah {
       span.title {
         font-size: x-large;
         height: 0;
-        padding: 35px 0 25px 0;
+        padding: 35px 0 20px 0;
       }
       p {
         font-size: x-large;
         font-weight: normal;
       }
     }
+    padding: 0;
   }
 
-  footer .timer {
-    align-items: flex-start;
+  footer {
+    .timer {
+      align-items: flex-start;
+    }
   }
 }
 

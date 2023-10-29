@@ -26,8 +26,10 @@
 
 .root .content.theme.blue.en {
   @import "themes/blue/colors";
-  .row.details span {
-    color: $gold1;
+  header {
+    div {
+      color: $gold1;
+    }
   }
 }
 

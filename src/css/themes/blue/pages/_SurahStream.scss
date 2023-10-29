@@ -1,10 +1,6 @@
 .root .content.theme.blue {
   @import "themes/blue/colors";
 
-  footer .timer {
-    color: $blue1;
-  }
-
   ul.body.stream {
     li.ayah {
       span.title span {
@@ -13,14 +9,22 @@
       p { }
     }
   }
+
+  footer {
+    .timer {
+      color: $blue1;
+    }
+  }
 }
 
 .root .content.theme.blue.ar {
   @import "themes/blue/colors";
 
-  .row.details {
-    .localized-name {
-      color: $blue1;
+  header {
+    div {
+      .localized-name {
+        color: $blue1;
+      }
     }
   }
 }

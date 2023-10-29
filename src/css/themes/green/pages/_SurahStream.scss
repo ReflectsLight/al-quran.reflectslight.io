@@ -1,23 +1,22 @@
 .root .content.theme.green {
   @import "themes/green/colors";
 
-  .row.details {
+  header {
+    h1, h1 a { color: $green1; }
     color: $green1;
   }
 
-  ul.body.stream li.ayah {
-    span.title span:first-child {
+  ul.body.stream {
+    li.ayah {
       color: $green1;
+      p { color: $black; }
     }
   }
 
-  .timer {
-    color: $green1;
-  }
-
-  .row .shape.refresh {
-    background: unset;
-    fill: $green1;
+  footer {
+    .timer {
+      color: $green1;
+    }
   }
 
   .sound-on.icon, .svg.sound-off.icon {

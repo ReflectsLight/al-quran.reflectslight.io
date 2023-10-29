@@ -12,17 +12,16 @@
     }
 
     ul {
-      position: relative;
       margin: 0;
       padding: 0;
-      background: #FFF;
+      height: 0;
+      background: #fff;
       list-style-type: none;
     }
 
     ul li {
       height: 100%;
       width: 100%;
-      display: block;
       font-weight: normal;
       cursor: pointer;
     }
@@ -32,17 +31,17 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column-reverse;
-    justify-content: flex-start;
 
     .selected-option.ar {
       font-size: large;
     }
 
     ul {
+      height: 0;
       li {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         font-size: medium;
         min-height: 35px;
         min-width: 125px;
@@ -75,7 +74,7 @@
 
     ul {
       border: none;
-      height: 50px;
+      height: 0;
       width: 50px;
     }
 
@@ -96,8 +95,10 @@
 .content.theme.en {
   .react-select.language {
     ul {
-      top: 52px;
-      li.en { display: none; }
+      li.en {
+        display: flex;
+        visibility: hidden;
+      }
     }
   }
 }
@@ -105,9 +106,13 @@
 .content.theme.ar {
   .react-select.language {
     ul {
-      top: 75px;
-      li.ar { display: none; }
+      li {
+        justify-content: flex-end;
+      }
+      li.ar {
+        display: flex;
+        visibility: hidden;
+      }
     }
   }
 }
-

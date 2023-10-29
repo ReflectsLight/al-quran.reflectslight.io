@@ -21,21 +21,13 @@
   }
 
   .react-select.theme {
-    ul li.blue { display: none; }
+    ul li.blue {
+      display: none;
+    }
   }
 
   .react-select.language ul {
     li {
-      color: $blue1;
-    }
-  }
-}
-
-.content.theme.blue.ar {
-  @import "themes/blue/colors";
-
-  .row.details {
-    .localized-name {
       color: $blue1;
     }
   }

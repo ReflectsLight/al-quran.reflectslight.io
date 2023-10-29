@@ -59,27 +59,23 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
       className={classNames("invisible", "content", "theme", theme, locale)}
     >
       {readyToRender && (
-        <>
-          <header>
-            <h1>
-              <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
-            </h1>
-          </header>
-          <div className="row dropdown-row">
+        <header>
+          <h1>
+            <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
+          </h1>
+          <div>
             <ThemeSelect theme={theme} setTheme={setTheme} />
             <LanguageSelect locale={locale} path={surah.slug} />
           </div>
-        </>
-      )}
-      {readyToRender && (
-        <div className="row details">
-          <span className="localized-name" lang={locale}>
-            {surah.localizedName}
-          </span>
-          <span className="transliterated-name" lang="en">
-            {surah.transliteratedName}
-          </span>
-        </div>
+          <div>
+            <span className="localized-name" lang={locale}>
+              {surah.localizedName}
+            </span>
+            <span className="transliterated-name" lang="en">
+              {surah.transliteratedName}
+            </span>
+          </div>
+        </header>
       )}
       {readyToRender && (
         <Stream
