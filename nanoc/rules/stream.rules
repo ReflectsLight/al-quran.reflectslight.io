@@ -40,9 +40,9 @@ compile "/js/pages/SurahStream.tsx" do
   filter :webpack,
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
          reject: proc { _1.include?("WebPackage") }
-  write "/js/pages/surah-stream.js"
+  write "/js/surah-stream.js"
   filter :gzip
-  write "/js/pages/surah-stream.js.gz"
+  write "/js/surah-stream.js.gz"
 end
 
 compile "/js/loaders/SurahStreamLoader.ts" do
@@ -53,5 +53,5 @@ end
 compile "/css/pages/SurahStream.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/pages/surah-stream.css")
+  write("/css/surah-stream.css")
 end

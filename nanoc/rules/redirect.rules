@@ -13,5 +13,5 @@ end
 
 compile "/js/pages/Redirect.ts" do
   filter(:webpack)
-  write("/js/pages/redirect.js")
+  write("/js/redirect.js")
 end

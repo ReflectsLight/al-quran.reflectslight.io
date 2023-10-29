@@ -7,8 +7,8 @@ import postman, { item } from "postman";
   const inlineStyle: HTMLStyleElement = document.querySelector(".css.postman")!;
 
   postman(
-    item.script("/js/pages/surah-index.js"),
-    item.css("/css/pages/surah-index.css"),
+    item.script("/js/surah-index.js"),
+    item.css("/css/surah-index.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf"),

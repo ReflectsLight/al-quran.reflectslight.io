@@ -16,5 +16,5 @@ end
 
 compile "/js/pages/Random.ts" do
   filter(:webpack)
-  write("/js/pages/random.js")
+  write("/js/random.js")
 end

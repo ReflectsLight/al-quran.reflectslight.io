@@ -18,9 +18,9 @@ compile "/js/pages/SurahIndex.tsx" do
   filter :webpack, depend_on: ["/js/components",
                                "/js/lib/[!WebPackage]/",
                                "/js/hooks"]
-  write "/js/pages/surah-index.js"
+  write "/js/surah-index.js"
   filter :gzip
-  write "/js/pages/surah-index.js.gz"
+  write "/js/surah-index.js.gz"
 end
 
 compile "/js/loaders/SurahIndexLoader.ts" do
@@ -31,5 +31,5 @@ end
 compile "/css/pages/SurahIndex.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/pages/surah-index.css")
+  write("/css/surah-index.css")
 end
