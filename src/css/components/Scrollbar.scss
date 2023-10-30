@@ -1,0 +1,11 @@
+.content.theme {
+  ul.body {
+    scrollbar-width: thin;
+
+    /* Chrome, Edge and Safari */
+    &::-webkit-scrollbar {
+      height: 10px;
+      width: 15px;
+    }
+  }
+}

@@ -4,10 +4,9 @@
     flex-direction: column;
 
     height: 20px;
-    z-index: 1;
+    z-index: 3;
 
     .selected-option {
-      z-index: 2;
       cursor: pointer;
     }
 
@@ -24,13 +23,12 @@
       width: 100%;
       font-weight: normal;
       cursor: pointer;
+      background: #fff;
     }
   }
 
   .react-select.language {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column-reverse;
+    align-items: flex-start;
 
     .selected-option.ar {
       font-size: large;
@@ -43,7 +41,7 @@
         align-items: center;
         justify-content: center;
         font-size: medium;
-        min-height: 35px;
+        height: 30px;
         min-width: 125px;
       }
 
@@ -54,7 +52,7 @@
 
       li.ar {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: end;
         font-family: "Amiri Quran Regular";
         font-size: large;
@@ -96,8 +94,7 @@
   .react-select.language {
     ul {
       li.en {
-        display: flex;
-        visibility: hidden;
+        display: none;
       }
     }
   }
@@ -105,13 +102,16 @@
 
 .content.theme.ar {
   .react-select.language {
+    .selected-option {
+      line-height: 0;
+    }
     ul {
       li {
+        align-items: center;
         justify-content: flex-end;
       }
       li.ar {
-        display: flex;
-        visibility: hidden;
+        display: none;
       }
     }
   }

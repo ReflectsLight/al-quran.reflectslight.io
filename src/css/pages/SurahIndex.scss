@@ -1,8 +1,13 @@
 @import "layout";
 @import "components/Select";
 @import "components/Icon";
+@import "components/Scrollbar";
 
 body .root .content.theme {
+  header {
+    height: 12vh;
+  }
+
   ul.body.index {
     li.surah a {
       display: flex;

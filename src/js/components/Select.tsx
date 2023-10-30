@@ -36,7 +36,7 @@ export function Select({ value, children, onChange, className }: Props) {
       >
         {selectedOption.props.children}
       </span>
-
+      <div className="br" />
       <ul hidden={!open}>
         {children.map((option: JSX.Element, key: number) => {
           return (

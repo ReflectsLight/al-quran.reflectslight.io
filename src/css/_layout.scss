@@ -1,5 +1,5 @@
 $black: #454545;
-$max-width: 856px;
+$max-width: 1024px;
 
 html[lang="en"] {
   font-family: "Kanit Regular";
@@ -43,24 +43,32 @@ body .root .content.theme {
       }
     }
 
-    nav {
+    nav, div {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      min-height: 35px;
+    }
 
-      .react-select {
+    nav {
+     .react-select {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
       }
-
       .react-select.theme {
-        min-width: 35px;
+        justify-content: flex-start;
       }
-
       .react-select.language {
+        justify-content: flex-end;
         min-width: 70px;
         text-align: right;
-        li { font-family: "Kanit Regular"; }
+        ul li {
+          align-items: flex-start;
+          font-family: "Kanit Regular";
+        }
+      }
+      .br {
+        width: 100%;
       }
     }
   }
@@ -91,6 +99,10 @@ body .root .content.theme {
 body .root .content.en {
   h1 {
     font-size: x-large;
+  }
+  header {
+    nav, div {
+    }
   }
 }
 

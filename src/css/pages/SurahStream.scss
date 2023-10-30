@@ -1,6 +1,7 @@
 @import "layout";
 @import "components/Select";
 @import "components/Icon";
+@import "components/Scrollbar";
 
 .root .content.theme {
   ul.body.stream {
@@ -51,6 +52,11 @@
 }
 
 .content.theme.en {
+  header {
+    nav {
+      height: 4vh;
+    }
+  }
   ul.body.stream {
     li { padding: 10px 0 0 0; }
   }
