@@ -3,14 +3,14 @@
 
   header {
     div {
-      .localized-name, .transliterated-name { color: $gold2; }
+      .localized-name, .transliterated-name { color: $gold1; }
     }
   }
 
   ul.body.stream {
     li.ayah {
       span.title span {
-        color: $gold2;
+        color: $gold1;
       }
       p { }
     }
@@ -29,7 +29,7 @@
   header {
     div {
       .localized-name {
-        color: $blue1;
+        color: $gold1;
       }
     }
   }
