@@ -1,10 +1,16 @@
 .root .content.theme.blue {
   @import "themes/blue/colors";
 
+  header {
+    div {
+      .localized-name, .transliterated-name { color: $gold2; }
+    }
+  }
+
   ul.body.stream {
     li.ayah {
       span.title span {
-        color: $gold1;
+        color: $gold2;
       }
       p { }
     }

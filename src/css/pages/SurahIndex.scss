@@ -34,7 +34,8 @@ body .root .content.theme {
           width: 32px;
           height: 32px;
           text-align: center;
-          font-weight: bold;
+          font-weight: bolder;
+          font-size: large;
         }
 
         span.name {
@@ -82,16 +83,22 @@ body .root .content.theme.ar {
   font-size: larger;
 
   ul.body.index {
-    li.surah a {
-      div:first-child .id {
-        font-family: "Kanit Regular";
-        font-size: large;
-        width: 55px;
+    li.surah {
+      min-height: 65px;
+      a {
+        div:first-child {
+          .id {
+            font-size: x-large;
+            font-family: "Kanit Regular";
+            width: 55px;
+            height: 52px;
+          }
+          .name {
+            font-size: xx-large;
+          }
+        }
+        .transliterated { display: none; }
       }
-      div:first-child .name {
-        font-size: larger;
-      }
-      .transliterated { display: none; }
     }
   }
 

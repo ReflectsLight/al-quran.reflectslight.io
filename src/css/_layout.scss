@@ -146,6 +146,13 @@ body .root .content.ar {
       .transliterated-name {
         display: none;
       }
+      .react-select.language {
+        .selected-option.ar {
+          font-size: x-large;
+          position: relative;
+          bottom: 3px;
+        }
+      }
     }
   }
 
