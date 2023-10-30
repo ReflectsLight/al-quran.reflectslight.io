@@ -79,7 +79,8 @@
     ul li {
       display: flex;
       height: 20px;
-      align-items: end;
+      align-items: flex-end;
+      justify-content: flex-end;
       .circle {
         display: block;
         width: 16px;

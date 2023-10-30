@@ -36,8 +36,8 @@ function SurahIndex({ locale, surahs, t }: Props) {
           <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
         </h1>
         <nav>
-          <ThemeSelect theme={theme} setTheme={setTheme} />
           <LanguageSelect locale={locale} />
+          <ThemeSelect theme={theme} setTheme={setTheme} />
         </nav>
       </header>
       <ul className="body index scroll-y">

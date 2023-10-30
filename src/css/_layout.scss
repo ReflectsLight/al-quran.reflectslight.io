@@ -56,15 +56,31 @@ body .root .content.theme {
         align-items: center;
       }
       .react-select.theme {
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
       .react-select.language {
-        justify-content: flex-end;
-        min-width: 70px;
+        justify-content: flex-start;
+        min-width: 50px;
         text-align: right;
-        ul li {
-          align-items: flex-start;
-          font-family: "Kanit Regular";
+        ul {
+          position:relative;
+          top: 15px;
+          li {
+            align-items: center;
+            font-family: "Kanit Regular";
+            span {
+              display: flex;
+              height: 100%;
+              align-items: center;
+              padding-right: 7px;
+            }
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          li.en {
+            font-size: medium;
+          }
         }
       }
       .br {
@@ -102,6 +118,16 @@ body .root .content.en {
   }
   header {
     nav, div {
+      .react-select.language {
+        ul {
+          position: relative;
+          top: 5px;
+          li.ar span {
+            position: relative;
+            bottom: 8px;
+          }
+        }
+      }
     }
   }
 }

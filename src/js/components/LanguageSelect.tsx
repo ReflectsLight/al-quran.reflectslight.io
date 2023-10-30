@@ -25,8 +25,12 @@ export function LanguageSelect({ locale, path = "" }: Props) {
         location.replace(`/${locale}/${newPath}`);
       }}
     >
-      <option value="ar">عربي</option>
-      <option value="en">English</option>
+      <option value="ar">
+        <span>عربي</span>
+      </option>
+      <option value="en">
+        <span>English</span>
+      </option>
     </Select>
   );
 }
