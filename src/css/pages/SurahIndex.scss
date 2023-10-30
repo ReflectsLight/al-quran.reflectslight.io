@@ -6,6 +6,11 @@
 body .root .content.theme {
   header {
     height: 115px;
+    .react-select.language {
+      ul li {
+        border-radius: 15px;
+      }
+    }
   }
 
   ul.body.index {
@@ -84,17 +89,17 @@ body .root .content.theme.ar {
 
   ul.body.index {
     li.surah {
-      min-height: 65px;
+      min-height: 55px;
       a {
         div:first-child {
           .id {
             font-size: x-large;
             font-family: "Kanit Regular";
             width: 55px;
-            height: 52px;
+            height: 47px;
           }
           .name {
-            font-size: xx-large;
+            font-size: x-large;
           }
         }
         .transliterated { display: none; }

@@ -1,13 +1,17 @@
 .root .content.theme.blue {
   @import "themes/blue/colors";
 
-  ul.body.index li.surah a {
-    &:active, &:link, &:visited {
-      color: $blue1;
-    }
+  ul.body.index {
+    li.surah a {
+      &:active, &:link, &:visited {
+        color: $blue1;
+      }
 
-    div:first-child {
-      .id { color: $gold1; }
+      div:first-child {
+        .id {
+          color: $gold1;
+        }
+      }
     }
   }
 
