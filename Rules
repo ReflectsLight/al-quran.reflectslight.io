@@ -4,6 +4,7 @@
 require "ryo"
 require "nanoc-gzip"
 require "nanoc-webpack"
+require "nanoc-tidy"
 
 locales = %w[ar en]
 slugs = Ryo.from(
