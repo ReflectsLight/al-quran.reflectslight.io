@@ -92,6 +92,7 @@ body .root .content.theme.ar {
     li.surah {
       min-height: 55px;
       a {
+        align-items: unset;
         div:first-child {
           .id {
             font-size: x-large;
