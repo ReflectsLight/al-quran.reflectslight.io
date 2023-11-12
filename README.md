@@ -47,9 +47,6 @@ __4. Start server on localhost__
 First and foremost, Alhamdulillah.
 
 * Thanks to the following graphic artists:
-  * [/src/favicon.png](/src/favicon.png)
-    by
-    [Aficons](https://freeicons.io/profile/9247).
   * [RefreshIcon](/src/js/components/Icon.tsx)
     by
     [Muhammad Haq](https://freeicons.io/profile/823).
