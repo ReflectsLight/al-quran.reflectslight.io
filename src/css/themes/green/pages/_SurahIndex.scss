@@ -5,6 +5,11 @@
     &:active, &:link, &:visited {
       color: $green1;
     }
+
+    &:hover {
+      background: $green1;
+      color: $white;
+    }
   }
 
   footer a {
