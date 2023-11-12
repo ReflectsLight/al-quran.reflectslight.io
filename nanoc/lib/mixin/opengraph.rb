@@ -12,6 +12,11 @@ module Mixin::OpenGraph
        description: t(context.locale, "meta.stream.description"),
        url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
        image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png"}
+    when "index.html.erb"
+      {title: t(context.locale, "TheNobleQuran"),
+       description: t(context.locale, "meta.index.description"),
+       url: "https://al-quran.reflectslight.io/#{context.locale}/",
+       image: "https://al-quran.reflectslight.io/images/opengraph/quran.png"}
     end
   end
 end

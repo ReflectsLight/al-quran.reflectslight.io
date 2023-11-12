@@ -7,7 +7,7 @@
 
 locales.each do |locale|
   compile "/html/index.html.erb", rep: "/#{locale}/surah/index" do
-    context = Ryo.from(locale:)
+    context = Ryo.from(filename: "index.html.erb", locale:)
     filter(:erb, locals: {context:})
     filter(:tidy)
     write "/#{locale}/index.html"
