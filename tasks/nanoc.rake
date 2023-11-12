@@ -30,7 +30,6 @@ end
 desc "Build the website"
 task build: ["nanoc:clean_css", "nanoc:compile"]
 
-
 desc "Trigger a build when src/ is modified"
 task "build:watch" => "nanoc:watch"
 
