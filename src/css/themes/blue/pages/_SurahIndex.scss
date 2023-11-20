@@ -7,8 +7,10 @@
         color: $blue1;
       }
 
-      &:hover {
-        background: lighten($blue1, 38%);
+      @media (hover: hover) {
+        &:hover {
+          background: lighten($blue1, 38%);
+        }
       }
 
       div:first-child {

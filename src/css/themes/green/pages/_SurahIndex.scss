@@ -6,9 +6,11 @@
       color: $green1;
     }
 
-    &:hover {
-      background: $green1;
-      color: $white;
+    @media (hover: hover) {
+      &:hover {
+        background: $green1;
+        color: $white;
+      }
     }
   }
 
