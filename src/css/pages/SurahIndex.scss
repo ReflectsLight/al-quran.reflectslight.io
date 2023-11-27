@@ -5,7 +5,6 @@
 
 body .root .content.theme {
   header {
-    height: 115px;
     .react-select.language {
       ul li {
         border-radius: 15px;
@@ -17,47 +16,30 @@ body .root .content.theme {
     li.surah a {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      border-radius: 10px;
       min-height: 45px;
+      width: 98%;
 
       &:visited, &:active, &:link {
         text-decoration: none;
       }
 
-      div:first-child {
-        display: flex;
-        flex-direction: row;
-        height: 32px;
-
-        span {
-          display: flex;
-          align-items: center;
-        }
-
-        span.id {
-          flex-direction: row;
-          justify-content: center;
-          width: 45px;
-          height: 32px;
-          text-align: center;
-          font-weight: bolder;
-          font-size: large;
-        }
-
-        span.name {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          font-weight: normal;
-        }
+      span.id {
+        width: 45px;
+        font-weight: bolder;
+        font-size: large;
+        text-align: center;
       }
 
-      .transliterated {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: center;
+      span.name {
         font-weight: normal;
+      }
+
+      span.transliterated {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        padding: 0 10px 0 0;
         @media screen and (max-width: $max-width) {
           display: none;
         }
@@ -90,27 +72,20 @@ body .root .content.theme.ar {
 
   ul.body.index {
     li.surah {
-      min-height: 55px;
       a {
-        align-items: unset;
-        div:first-child {
-          .id {
-            font-size: x-large;
-            font-family: "Kanit Regular";
-            width: 55px;
-            height: 47px;
-          }
-          .name {
-            font-size: x-large;
-          }
+        font-family: "Mada Regular";
+        span.id {
+          font-size: x-large;
         }
-        .transliterated { display: none; }
+        span.name {
+          font-size: x-large;
+        }
+        span.transliterated { display: none; }
       }
     }
   }
 
   footer {
-    height: 40px;
     font-family: "Mada Regular";
     a span {
       padding: 0 7px 0 0;

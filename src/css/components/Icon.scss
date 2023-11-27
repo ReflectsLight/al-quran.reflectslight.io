@@ -101,10 +101,7 @@
   ul.stream span.title {
     .sound-on.icon, .sound-off.icon {
       height: 40px;
-      transform: rotate(180deg);
-      g {
-        transform: translate(0px, -28px);
-      }
+      transform: rotate(180deg) translate(0, 3px);
     }
   }
 

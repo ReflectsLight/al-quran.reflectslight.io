@@ -1,6 +1,10 @@
 $black: #454545;
 $max-width: 1024px;
 
+* {
+  line-height: 1.5;
+}
+
 html[lang="en"] {
   font-family: "Kanit Regular";
 }
@@ -27,6 +31,7 @@ body .root .content.theme {
   margin: 0 auto;
   height: 100%;
   width: 85%;
+  height: 80%;
   max-width: $max-width;
 
   header {
@@ -37,7 +42,7 @@ body .root .content.theme {
       flex-direction: column;
       font-size: xx-large;
       margin: 0;
-      line-height: 1.5;
+      height: 75px;
       a {
         text-decoration: none;
       }
@@ -50,6 +55,7 @@ body .root .content.theme {
     }
 
     nav {
+      height: 40px;
      .react-select {
         display: flex;
         flex-direction: row;
@@ -59,12 +65,11 @@ body .root .content.theme {
         justify-content: flex-end;
       }
       .react-select.language {
-        justify-content: flex-start;
         min-width: 50px;
         text-align: right;
         ul {
           position:relative;
-          top: 15px;
+          right: 82px;
           li {
             align-items: center;
             font-family: "Kanit Regular";
@@ -95,8 +100,8 @@ body .root .content.theme {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: auto;
-    height: 73%;
+    overflow: scroll;
+    height: 100%;
   }
 
   footer {
@@ -132,21 +137,14 @@ body .root .content.en {
   }
 }
 
-body .root .content.ar {
+body .root .content.theme.ar {
   header {
     nav, div {
       direction: ltr;
-      .localized-name {
-        display: flex;
-        font-size: x-large;
-        justify-content: flex-end;
-        align-items: flex-end;
-        width: 100%;
-      }
-      .transliterated-name {
-        display: none;
-      }
       .react-select.language {
+        ul {
+          top: 15px;
+        }
         .selected-option.ar {
           font-size: x-large;
           position: relative;

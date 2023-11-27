@@ -13,10 +13,8 @@
         }
       }
 
-      div:first-child {
-        .id {
-          color: $gold1;
-        }
+      span.id {
+        color: $gold1;
       }
     }
   }
@@ -47,10 +45,10 @@
   @import "themes/blue/colors";
   ul.body.index  {
     li.surah a {
-      div:first-child .id {
+      span.id {
         color: $gold1;
       }
-      div:first-child .name {
+      span.name {
         color: $blue1;
       }
     }

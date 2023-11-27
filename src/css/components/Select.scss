@@ -28,7 +28,8 @@
   }
 
   .react-select.language {
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
 
     .selected-option.ar {
       font-size: large;
@@ -103,9 +104,6 @@
 
 .content.theme.ar {
   .react-select.language {
-    .selected-option {
-      line-height: 0;
-    }
     ul {
       li {
         align-items: center;

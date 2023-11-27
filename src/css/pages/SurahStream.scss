@@ -3,11 +3,14 @@
 @import "components/Icon";
 @import "components/Scrollbar";
 
-.root .content.theme {
+body .root .content.theme {
+  height: 75%;
+
   ul.body.stream {
     scrollbar-gutter: stable;
 
     li.ayah {
+      padding: 10px 0 10px 0;
       span.title {
         display: flex;
         align-items: center;
@@ -57,27 +60,38 @@
       height: 30px;
     }
   }
-  ul.body.stream {
-    li { padding: 10px 0 0 0; }
-  }
 }
 
-.content.theme.ar {
-  header { }
+body .root .content.theme.ar {
+  header {
+    nav, div {
+      .localized-name {
+        display: flex;
+        font-size: x-large;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        line-height: 1;
+      }
+      .transliterated-name {
+        display: none;
+      }
+    }
+  }
 
   ul.body.stream {
     li.ayah:first-child {
-      span.title {
-        padding: 15px 0 20px 0;
-      }
+      padding: 35px 0 10px 0;
     }
     li.ayah {
+      padding: 20px 0 10px 0;
       span.title {
-        font-size: x-large;
+        font-size: larger;
         height: 0;
-        padding: 35px 0 20px 0;
+        font-family: "Mada Regular";
       }
       p {
+        line-height: 3;
         font-size: x-large;
         font-weight: normal;
       }
