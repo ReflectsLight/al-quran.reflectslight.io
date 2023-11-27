@@ -19,8 +19,9 @@ gem "server.rb", path: "./packages/ruby/server"
 
 ##
 # Everything else
-gem "ryo.rb", "~> 0.3", github: "0x1eef/ryo.rb", tag: "v0.3.0"
-gem "test-cmd.rb", "~> 0.3", github: "0x1eef/test-cmd.rb", tag: "v0.3.0"
+gem "ryo.rb", github: "0x1eef/ryo.rb", tag: "v0.3.0"
+gem "test-cmd.rb", github: "0x1eef/test-cmd.rb", tag: "v0.3.0"
+gem "lockf.rb", github: "0x1eef/lockf.rb", tag: "v0.12.0"
 gem "standard", "~> 1.24"
 gem "paint", "~> 2.3"
 gem "dotenv", "~> 2.8"
