@@ -50,9 +50,10 @@ namespace :nanoc do
     sleep
   rescue Interrupt
     warn "SIGINT: exit"
+    exit
+  ensure
     warn "[build] Release lock..."
     lockf.release
-    exit
   end
 end
 
