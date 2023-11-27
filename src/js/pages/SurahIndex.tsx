@@ -44,14 +44,11 @@ function SurahIndex({ locale, surahs, t }: Props) {
         {surahs.map((surah, key) => (
           <li className="surah" key={key}>
             <a href={`/${locale}/${surah.slug}/`}>
-              <div>
-                <span className="id">{formatNumber(surah.id, locale)}</span>
-                <span className="name">{surah.localizedName}</span>
-              </div>
-
-              <div className="transliterated" lang="en">
+              <span className="id">{formatNumber(surah.id, locale)}</span>
+              <span className="name">{surah.localizedName}</span>
+              <span className="transliterated" lang="en">
                 {surah.transliteratedName}
-              </div>
+              </span>
             </a>
           </li>
         ))}
