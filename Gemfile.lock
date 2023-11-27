@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/0x1eef/lockf.rb.git
+  revision: fd79284a8d3af8562654742a23b39288a0e4e24f
+  tag: v0.12.0
+  specs:
+    lockf.rb (0.12.0)
+
+GIT
   remote: https://github.com/0x1eef/nanoc-gzip.rb.git
   revision: 3bb1719ad11d983a25945c1017df76aa2f6b8540
   tag: v0.2.1
@@ -172,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv (~> 2.8)
   listen (~> 3.0)
+  lockf.rb!
   memoize (~> 1.3)
   nanoc (~> 4.12)
   nanoc-gzip.rb!
@@ -180,11 +188,11 @@ DEPENDENCIES
   paint (~> 2.3)
   rainpress (~> 1.0)
   rake
-  ryo.rb (~> 0.3)!
+  ryo.rb!
   sass (~> 3.7)
   server.rb!
   standard (~> 1.24)
-  test-cmd.rb (~> 0.3)!
+  test-cmd.rb!
 
 BUNDLED WITH
    2.4.10
