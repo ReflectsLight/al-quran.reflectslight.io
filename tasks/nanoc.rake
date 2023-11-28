@@ -41,8 +41,6 @@ namespace :nanoc do
   end
 
   task watch: %w[build] do
-    warn "[build] Acquire lock..."
-    lockf.lock
     require "listen"
     Listen.to File.join(Dir.getwd, "src"), force_polling: true do
       sh "rake build"
@@ -51,9 +49,6 @@ namespace :nanoc do
   rescue Interrupt
     warn "SIGINT: exit"
     exit
-  ensure
-    warn "[build] Release lock..."
-    lockf.release
   end
 end
 
