@@ -8,7 +8,7 @@ FileUtils.touch(lockp)
 lockf = LockFile.new(lockp)
 
 namespace :nanoc do
-  task :compile do
+  task compile: %w[clean:css] do
     warn "[build] Acquire lock..."
     lockf.lock
     ENV["SASS_PATH"] = "./src/css/"
@@ -30,7 +30,7 @@ namespace :nanoc do
     lockf.release
   end
 
-  task :clean_css do
+  task "clean:css" do
     warn "[build] Acquire lock..."
     lockf.lock
     cssdir = File.join(build_dir, "css")
@@ -40,7 +40,7 @@ namespace :nanoc do
     lockf.release
   end
 
-  task watch: ['build'] do
+  task watch: %w[build] do
     warn "[build] Acquire lock..."
     lockf.lock
     require "listen"
@@ -58,7 +58,7 @@ namespace :nanoc do
 end
 
 desc "Build the website"
-task build: ["nanoc:compile"]
+task build: %w[nanoc:compile]
 
 desc "Trigger a build when src/ is modified"
 task "build:watch" => "nanoc:watch"
