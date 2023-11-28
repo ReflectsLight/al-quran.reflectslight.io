@@ -1,5 +1,4 @@
 import postman, { item } from "postman";
-import url from "url";
 import * as Quran from "lib/Quran";
 
 (function () {
@@ -20,12 +19,10 @@ import * as Quran from "lib/Quran";
     item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf"),
     item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
-      const ts = [
-        url.format(recitation.url),
-        "time_slots",
-        `${surahId}.json`,
-      ].join("/");
-      return item.json(ts, {
+      const path = ["/durations", `${recitation.id}`, `${surahId}.json`].join(
+        "/",
+      );
+      return item.json(path, {
         className: `recitation time-slots ${recitation.id}`,
       });
     }),
