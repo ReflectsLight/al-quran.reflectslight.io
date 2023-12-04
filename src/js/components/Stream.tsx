@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import * as Quran from "lib/Quran";
 import { AudioControl } from "components/AudioControl";
 import { formatNumber, TFunction } from "lib/i18n";
@@ -26,37 +26,43 @@ export function Stream({
   const className = classNames("body", "stream");
   const style: React.CSSProperties =
     endOfStream || isPaused ? { overflowY: "auto" } : { overflowY: "hidden" };
-  const ayat = stream.map((ayah: Quran.Ayah) => {
-    return (
-      <li key={ayah.id} className="ayah fade">
-        <span className="title">
-          {(isPaused || endOfStream) && (
-            <AudioControl
-              recitation={recitation}
-              surah={surah}
-              ayah={ayah}
-              onEnd={turnOffSound => turnOffSound()}
-            />
-          )}
-          <span>
-            {t(locale, "surah")} {formatNumber(surah.id, locale)}
-            {t(locale, "comma")} {t(locale, "ayah")}{" "}
-            {formatNumber(ayah.id, locale)}
+  const ul = useRef<HTMLUListElement>();
+  const ayat = useMemo<JSX.Element[]>(() => {
+    return stream.map((ayah: Quran.Ayah) => {
+      return (
+        <li key={ayah.id} className="ayah fade">
+          <span className="title">
+            {(isPaused || endOfStream) && (
+              <AudioControl
+                recitation={recitation}
+                surah={surah}
+                ayah={ayah}
+                onEnd={turnOffSound => turnOffSound()}
+              />
+            )}
+            <span>
+              {t(locale, "surah")} {formatNumber(surah.id, locale)}
+              {t(locale, "comma")} {t(locale, "ayah")}{" "}
+              {formatNumber(ayah.id, locale)}
+            </span>
           </span>
-        </span>
-        <p>{ayah.text}</p>
-      </li>
-    );
-  });
-
-  useEffect(() => {
-    const ul: HTMLElement = document.querySelector("ul.stream")!;
-    const top = ul.offsetHeight + ul.scrollTop;
-    ul.scrollBy({ behavior: "smooth", top });
+          <p>{ayah.text}</p>
+        </li>
+      );
+    });
   }, [stream.length]);
 
+  useEffect(() => {
+    const el = ul.current;
+    if (el) {
+      const top = el.scrollHeight + el.scrollTop;
+      el.scrollTo({ behavior: "smooth", top });
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [ul.current, stream.length]);
+
   return (
-    <ul lang={locale} className={className} style={style}>
+    <ul lang={locale} className={className} style={style} ref={ul}>
       {ayat}
     </ul>
   );
