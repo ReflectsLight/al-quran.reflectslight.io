@@ -51,8 +51,9 @@ export function Stream({
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector("ul.stream")!;
-    ul.scroll({ top: ul.scrollHeight, behavior: "smooth" });
-  }, [stream]);
+    const top = ul.scrollHeight;
+    ul.scrollBy({ behavior: "smooth", top });
+  }, [stream.length]);
 
   return (
     <ul lang={locale} className={className} style={style}>
