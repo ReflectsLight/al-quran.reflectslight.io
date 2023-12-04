@@ -18,7 +18,7 @@ interface Props {
   Provides a number that increments the value of the 'top'
   parameter given to scrollBy() during auto-scroll. This
   variable came from the scroll height provided by iOS being
-  less than expected.
+  slightly less than expected.
 */
 const OFFSET = 100;
 
