@@ -4,13 +4,11 @@
 @import "components/Scrollbar";
 
 body .root .content.theme {
-  height: 75%;
-  @media (max-device-height: 667px) {
-    height: 70%;
-  }
-  @media (min-device-height: 1024px) {
-    height: 80%;
-  }
+  height: 80%;
+  @media (max-device-height: 1024px) { height: 75%; }
+  @media (max-height: 800px) { height: 70%; }
+  @media (max-height: 700px) { height: 65%; }
+  @media (max-height: 600px) { height: 60%; }
 
   ul.body.stream {
     scrollbar-gutter: stable;
