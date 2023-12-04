@@ -4,6 +4,7 @@ require "fileutils"
 require "lockf"
 build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
 lockp = File.join Dir.getwd, "tmp", "build.lock"
+FileUtils.mkdir_p File.dirname(lockp)
 FileUtils.touch(lockp)
 lockf = LockFile.new(lockp)
 
