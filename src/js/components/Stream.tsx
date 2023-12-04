@@ -14,14 +14,6 @@ interface Props {
   t: TFunction;
 }
 
-/*
-  Provides a number that increments the value of the 'top'
-  parameter given to scrollBy() during auto-scroll. This
-  variable came from the scroll height provided by iOS being
-  slightly less than expected.
-*/
-const OFFSET = 100;
-
 export function Stream({
   recitation,
   surah,
