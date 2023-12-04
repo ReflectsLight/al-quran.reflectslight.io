@@ -5,19 +5,13 @@
 .play.icon, .pause.icon {
   width: 32px;
   height: 22px;
-  g {
-    transform: translate(2px, 0);
-  }
 }
 
-.pause.icon g {
-  rect {
+.pause.icon {
+  g rect {
     width: 15px;
     height: 40px;
     fill: #FFF;
-  }
-  rect:first-child {
-    transform: translate(-3px, 0);
   }
 }
 
