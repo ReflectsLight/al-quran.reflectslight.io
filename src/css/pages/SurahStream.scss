@@ -50,8 +50,12 @@ body .root .content.theme {
 
   ul.body.stream.playing {
     overflow-y: auto;
-    &::-webkit-scrollbar {
-      display: none;
+    ::-webkit-scrollbar-track:hover,
+    ::-webkit-scrollbar-track:active,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #FFF;
     }
   }
 
