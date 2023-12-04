@@ -51,7 +51,7 @@ export function Stream({
 
   useEffect(() => {
     const ul: HTMLElement = document.querySelector("ul.stream")!;
-    const top = ul.scrollHeight;
+    const top = ul.offsetHeight + ul.scrollTop;
     ul.scrollBy({ behavior: "smooth", top });
   }, [stream.length]);
 
