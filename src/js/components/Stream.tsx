@@ -61,7 +61,6 @@ export function Stream({
     if (el) {
       const top = 1024 + el.scrollHeight + el.scrollTop;
       el.scrollBy({ behavior: "smooth", top });
-      el.scrollIntoView({ behavior: "smooth" });
     }
   }, [stream.length]);
 
