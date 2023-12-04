@@ -14,7 +14,6 @@ body .root .content.theme {
 
   ul.body.stream {
     scrollbar-gutter: stable;
-
     li.ayah {
       padding: 10px 0 10px 0;
       span.title {
@@ -42,6 +41,17 @@ body .root .content.theme {
         100% { opacity: 1; }
       }
       animation: FadeIn 1s;
+    }
+  }
+
+  ul.body.stream.stopped {
+    overflow-y: auto;
+  }
+
+  ul.body.stream.playing {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 

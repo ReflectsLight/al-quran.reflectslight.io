@@ -24,12 +24,11 @@ export function Stream({
   t,
 }: Props) {
   const className = classNames("body", "stream");
-  const style: React.CSSProperties =
-    endOfStream || isPaused ? { overflowY: "auto" } : { overflowY: "hidden" };
+  const playState = endOfStream || isPaused ? "stopped" : "playing";
   const ref = useRef<HTMLUListElement>();
   const ul = useMemo<JSX.Element>(() => {
     return (
-      <ul lang={locale} className={className} style={style} ref={ref}>
+      <ul lang={locale} className={classNames(className, playState)} ref={ref}>
         {stream.map((ayah: Quran.Ayah) => {
           return (
             <li key={ayah.id} className="ayah fade">
@@ -54,13 +53,13 @@ export function Stream({
         })}
       </ul>
     );
-  }, [stream.length]);
+  }, [stream.length, isPaused]);
 
   useEffect(() => {
     const el = ref.current;
     if (el) {
-      const top = 1024 + el.scrollHeight + el.scrollTop;
-      el.scrollBy({ behavior: "smooth", top });
+      const top = el.scrollHeight;
+      el.scrollTo({ behavior: "smooth", top });
     }
   }, [stream.length]);
 
