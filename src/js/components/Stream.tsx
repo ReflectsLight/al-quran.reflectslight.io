@@ -26,44 +26,44 @@ export function Stream({
   const className = classNames("body", "stream");
   const style: React.CSSProperties =
     endOfStream || isPaused ? { overflowY: "auto" } : { overflowY: "hidden" };
-  const ul = useRef<HTMLUListElement>();
-  const ayat = useMemo<JSX.Element[]>(() => {
-    return stream.map((ayah: Quran.Ayah) => {
-      return (
-        <li key={ayah.id} className="ayah fade">
-          <span className="title">
-            {(isPaused || endOfStream) && (
-              <AudioControl
-                recitation={recitation}
-                surah={surah}
-                ayah={ayah}
-                onEnd={turnOffSound => turnOffSound()}
-              />
-            )}
-            <span>
-              {t(locale, "surah")} {formatNumber(surah.id, locale)}
-              {t(locale, "comma")} {t(locale, "ayah")}{" "}
-              {formatNumber(ayah.id, locale)}
-            </span>
-          </span>
-          <p>{ayah.text}</p>
-        </li>
-      );
-    });
+  const ref = useRef<HTMLUListElement>();
+  const ul = useMemo<JSX.Element>(() => {
+    return (
+      <ul lang={locale} className={className} style={style} ref={ref}>
+        {stream.map((ayah: Quran.Ayah) => {
+          return (
+            <li key={ayah.id} className="ayah fade">
+              <span className="title">
+                {(isPaused || endOfStream) && (
+                  <AudioControl
+                    recitation={recitation}
+                    surah={surah}
+                    ayah={ayah}
+                    onEnd={turnOffSound => turnOffSound()}
+                  />
+                )}
+                <span>
+                  {t(locale, "surah")} {formatNumber(surah.id, locale)}
+                  {t(locale, "comma")} {t(locale, "ayah")}{" "}
+                  {formatNumber(ayah.id, locale)}
+                </span>
+              </span>
+              <p>{ayah.text}</p>
+            </li>
+          );
+        })}
+      </ul>
+    );
   }, [stream.length]);
 
   useEffect(() => {
-    const el = ul.current;
+    const el = ref.current;
     if (el) {
-      const top = el.scrollHeight + el.scrollTop;
-      el.scrollTo({ behavior: "smooth", top });
+      const top = 1024 + el.scrollHeight + el.scrollTop;
+      el.scrollBy({ behavior: "smooth", top });
       el.scrollIntoView({ behavior: "smooth" });
     }
-  }, [ul.current, stream.length]);
+  }, [stream.length]);
 
-  return (
-    <ul lang={locale} className={className} style={style} ref={ul}>
-      {ayat}
-    </ul>
-  );
+  return ul;
 }
