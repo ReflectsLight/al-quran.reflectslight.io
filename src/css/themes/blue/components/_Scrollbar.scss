@@ -1,7 +1,7 @@
 .content.theme.blue {
   ul.body {
     @import "themes/blue/colors";
-    scrollbar-color: $blue1;
+    scrollbar-color: $primary-color;
 
     ::-webkit-scrollbar-track {
       border-radius: 5px;
@@ -9,16 +9,16 @@
     }
 
     ::-webkit-scrollbar-track:hover {
-      background-color: lighten($blue1, 35%);
+      background-color: lighten($primary-color, 35%);
     }
 
     ::-webkit-scrollbar-track:active {
-      background-color: lighten($blue1, 35%);
+      background-color: lighten($primary-color, 35%);
     }
 
     ::-webkit-scrollbar-thumb {
       border-radius: 5px;
-      background-color: $blue1;
+      background-color: $primary-color;
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -26,7 +26,7 @@
     }
 
     ::-webkit-scrollbar-thumb:active {
-      background-color: $blue1;
+      background-color: $primary-color;
     }
   }
 }

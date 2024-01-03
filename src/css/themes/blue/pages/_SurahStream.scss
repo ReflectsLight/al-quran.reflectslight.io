@@ -3,14 +3,14 @@
 
   header {
     div {
-      .localized-name, .transliterated-name { color: $gold1; }
+      .localized-name, .transliterated-name { color: $primary-dark-color; }
     }
   }
 
   ul.body.stream {
     li.ayah {
       span.title span {
-        color: $gold1;
+        color: $primary-dark-color;
       }
       p { }
     }
@@ -18,7 +18,7 @@
 
   footer {
     .timer {
-      color: $blue1;
+      color: $primary-color;
     }
   }
 }
@@ -29,7 +29,7 @@
   header {
     div {
       .localized-name {
-        color: $gold1;
+        color: $primary-color;
       }
     }
   }

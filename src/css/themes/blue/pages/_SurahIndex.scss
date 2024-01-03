@@ -4,17 +4,17 @@
   ul.body.index {
     li.surah a {
       &:active, &:link, &:visited {
-        color: $blue1;
+        color: $primary-color;
       }
 
       @media (hover: hover) {
         &:hover {
-          background: lighten($blue1, 38%);
+          background: lighten($primary-color, 38%);
         }
       }
 
       span.id {
-        color: $gold1;
+        color: $primary-dark-color;
       }
     }
   }
@@ -22,7 +22,7 @@
   footer {
     a {
       &:active, &:link, &:visited {
-        color: $blue1;
+        color: $primary-color;
         text-decoration: none;
       }
       &:hover {
@@ -36,7 +36,7 @@
   @import "themes/blue/colors";
   header {
     div {
-      color: $gold1;
+      color: $primary-dark-color;
     }
   }
 }
@@ -46,10 +46,10 @@
   ul.body.index  {
     li.surah a {
       span.id {
-        color: $gold1;
+        color: $primary-dark-color;
       }
       span.name {
-        color: $blue1;
+        color: $primary-color;
       }
     }
   }
