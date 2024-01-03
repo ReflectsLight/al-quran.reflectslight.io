@@ -6,6 +6,19 @@
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
     <link rel="icon" href="/favicon.svg">
+    <link
+      rel="canonical"
+      hreflang="<%= context.locale %>"
+      href="https://al-quran.reflectslight.io/<%= context.locale %>/"
+    />
+    <% context.locales.each do |locale| %>
+    <link
+      rel="alternate"
+      type="text/html"
+      hreflang="<%= locale %>"
+      href="https://al-quran.reflectslight.io/<%= locale %>/"
+     />
+    <% end %>
     <%= inline_css('/css/postman.scss') %>
     <%= opengraph(context) %>
   </head>

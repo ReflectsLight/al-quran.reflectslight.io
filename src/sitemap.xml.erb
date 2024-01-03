@@ -4,22 +4,14 @@
   <% locales.each do |locale| %>
   <url>
     <loc>https://al-quran.reflectslight.io/<%= locale %>/</loc>
-    <% locales.each do |locale| %>
-    <xhtml:link
-      rel="alternate"
-      hreflang="<%= locale %>"
-      href="https://al-quran.reflectslight.io/<%= locale %>/"/>
-    <% end %>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
  <% Ryo.each(slugs) do |_id, slug| %>
   <url>
     <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= slug %>/</loc>
-    <% locales.each do |locale| %>
-    <xhtml:link
-      rel="alternate"
-      hreflang="<%= locale %>"
-      href="https://al-quran.reflectslight.io/<%= locale %>/<%= slug %>/"/>
-    <% end %>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
   </url>
  <% end %>
  <% end %>
