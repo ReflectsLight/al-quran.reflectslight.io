@@ -3,10 +3,10 @@
 
   .react-select.theme {
     .selected-option.blue .circle {
-      background: $blue1;
+      background: $primary-color;
     }
     ul li.blue .circle {
-      background: $blue1;
+      background: $primary-color;
     }
   }
 }
@@ -16,7 +16,7 @@
 
   .react-select.language {
     .selected-option {
-      color: $blue1;
+      color: $primary-color;
     }
   }
 
@@ -28,7 +28,7 @@
 
   .react-select.language ul {
     li {
-      color: $blue1;
+      color: $primary-color;
     }
   }
 }

@@ -2,15 +2,15 @@
   @import "colors";
 
   header {
-    h1 , h1 a { color: $blue1; }
+    h1 , h1 a { color: $primary-color; }
     nav .react-select {
-      color: $gold1;
+      color: $primary-dark-color;
     }
     nav .react-select.language {
       ul li {
-        background: $blue1;
+        background: $primary-color;
         color: $white;
-        border: 3px solid lighten($gold1, 5%);
+        border: 3px solid lighten($primary-dark-color, 5%);
       }
     }
   }

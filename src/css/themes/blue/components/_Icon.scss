@@ -3,37 +3,37 @@
 
   ul.body.stream li, footer {
     .play.icon {
-      fill: $blue1;
-      stroke: darken($blue1, 40%);
+      fill: $primary-color;
+      stroke: $primary-dark-color;
       stroke-width: 2px;
     }
 
     .pause.icon {
       rect {
-        fill: $blue1;
-        stroke: darken($blue1, 40%);
+        fill: $primary-color;
+        stroke: $primary-dark-color;
         stroke-width: 1px;
       }
     }
 
     .refresh.icon {
-      fill: $blue1;
+      fill: $primary-color;
     }
 
     .sound-on.icon, .sound-off.icon {
       polygon {
-        fill: $blue1;
+        fill: $primary-color;
         stroke-width: 2;
       }
     }
     .right-arrow.icon {
       g {
-        fill: $gold1;
+        fill: $primary-dark-color;
       }
     }
   }
 
   .stalled.icon {
-    div { background: $gold1; }
+    div { background: $primary-dark-color; }
   }
 }
