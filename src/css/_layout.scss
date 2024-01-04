@@ -139,6 +139,9 @@ body .root .content.en {
   ul.body {
     font-size: large;
   }
+  footer {
+    font-size: large;
+  }
 }
 
 body .root .content.theme.ar {
@@ -160,6 +163,7 @@ body .root .content.theme.ar {
   }
 
   footer {
+    font-size: large;
     flex-direction: row-reverse;
   }
 }
