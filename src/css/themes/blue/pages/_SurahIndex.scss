@@ -29,6 +29,12 @@
         font-weight: bold;
       }
     }
+    input {
+      border: 1px solid $primary-color;
+      &:focus {
+        outline-color: $primary-color;
+      }
+    }
   }
 }
 

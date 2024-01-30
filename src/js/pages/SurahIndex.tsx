@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import classNames from "classnames";
 
@@ -8,6 +8,7 @@ import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { i18n, formatNumber, TFunction } from "lib/i18n";
 import { RightArrow } from "components/Icon";
+import { SurahIndexFilter } from "components/SurahIndexFilter";
 
 interface Props {
   locale: Quran.Locale;
@@ -17,6 +18,7 @@ interface Props {
 
 function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
+  const [index, setIndex] = useState<Quran.Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -41,7 +43,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
         </nav>
       </header>
       <ul className="body index scroll-y">
-        {surahs.map((surah, key) => (
+        {index.map((surah, key) => (
           <li className="surah" key={key}>
             <a href={`/${locale}/${surah.slug}/`}>
               <span className="id">{formatNumber(surah.id, locale)}</span>
@@ -58,6 +60,12 @@ function SurahIndex({ locale, surahs, t }: Props) {
           <RightArrow />
           <span>{t(locale, "ChooseRandomChapter")}</span>
         </a>
+        <SurahIndexFilter
+          t={t}
+          locale={locale}
+          surahs={surahs}
+          setIndex={setIndex}
+        />
       </footer>
     </div>
   );

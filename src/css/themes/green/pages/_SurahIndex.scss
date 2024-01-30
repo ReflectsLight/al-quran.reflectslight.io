@@ -14,13 +14,21 @@
     }
   }
 
-  footer a {
-    &:active, &:link, &:visited {
-      color: $green1;
-      text-decoration: none;
+  footer {
+    a {
+      &:active, &:link, &:visited {
+        color: $green1;
+        text-decoration: none;
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
-    &:hover {
-      font-weight: bold;
+    input {
+      border: 1px solid $green1;
+      &:focus {
+        outline-color: $green1;
+      }
     }
   }
 }
