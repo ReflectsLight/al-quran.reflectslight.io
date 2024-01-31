@@ -62,15 +62,31 @@ body .root .content.theme {
       flex-direction: row;
       align-items: center;
       width: 100%;
-
       span {
         padding: 0 0 0 7px;
       }
     }
     input {
-      padding: 10px;
+      padding: 7.5px;
       border-radius: 10px;
       border: 1px solid #000;
+    }
+    @media (max-device-width: 500px) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      a {
+        place-content: center;
+        width: 100%;
+      }
+      input {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: unset;
+      }
+      .right-arrow.icon {
+        display: none;
+      }
     }
   }
 }
