@@ -116,7 +116,10 @@ body .root .content.theme.ar {
   }
 
   footer {
-    flex-direction: unset;
+    flex-direction: row;
+    @media (max-device-width: 500px) {
+      flex-direction: column-reverse;
+    }
     font-family: "Mada Regular";
     a span {
       padding: 0 7px 0 0;
