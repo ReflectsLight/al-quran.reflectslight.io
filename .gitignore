@@ -1,7 +1,7 @@
 build/
 tmp/
 node_modules/
-.localgems/
+.gems/
 .dev/
 *.log
 .env
