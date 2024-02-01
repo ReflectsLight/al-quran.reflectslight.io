@@ -5,6 +5,7 @@
     "surah": "Surah",
     "ayah": "Ayah",
     "comma": ",",
+    "of": "of",
     "filter": "Filter",
     "meta": {
       "index": {"description": "Explore the chapters of The Noble Quran. Browse a list of chapters and choose a chapter you can read and listen to. Enhance your understanding of a sacred text."},
@@ -135,6 +136,7 @@
     "surah": "سورة",
     "ayah": "آية",
     "comma": "،",
+    "of": "من",
     "filter": "تصفية",
     "meta": {
       "index": {
