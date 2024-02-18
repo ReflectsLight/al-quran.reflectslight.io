@@ -3,7 +3,7 @@
 
 desc "Configure environment for deployment"
 task "deploy:env" do
-  ENV["NODE_ENV"] = "production"
+  ENV["buildenv"] = "production"
   print "Set $NODE_ENV to 'production'", "\n"
 end
 
