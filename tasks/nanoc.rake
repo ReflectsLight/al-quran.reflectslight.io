@@ -12,11 +12,13 @@ namespace :nanoc do
 
   desc "Produce the build/ directory"
   task :build, [:buildenv] do |t, args|
+
     Dir.chdir(cwd) do
       buildenv = args.buildenv || ENV["buildenv"] || "development"
+      sass_path = File.join(cwd, "src", "css")
       sh "rm -rf build/css/"
       Bundler.with_unbundled_env {
-        sh "buildenv=#{buildenv} bundle exec nanoc co"
+        sh "SASS_PATH=#{sass_path} buildenv=#{buildenv} bundle exec nanoc co"
       }
     end
   end
