@@ -14,11 +14,11 @@ gem "rainpress", "~> 1.0"
 gem "sass", "~> 3.7"
 
 ##
-# Ruby web server
+# Web server
 gem "server.rb", path: "./packages/ruby/server"
 
 ##
-# Everything else
+# Other
 gem "ryo.rb"
 gem "test-cmd.rb"
 gem "lockf.rb"

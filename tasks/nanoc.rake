@@ -1,63 +1,38 @@
-# frozen_string_literal: true
-
-require "fileutils"
-require "lockf"
-build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
-lockp = File.join Dir.getwd, "tmp", "build.lock"
-FileUtils.mkdir_p File.dirname(lockp)
-FileUtils.touch(lockp)
-lockf = LockFile.new(lockp)
-
 namespace :nanoc do
-  task compile: %w[clean:css] do
-    warn "[build] Acquire lock..."
-    lockf.lock
-    ENV["SASS_PATH"] = "./src/css/"
-    sh "bundle exec nanoc co"
-  rescue Interrupt
-    warn "SIGINT: exit"
-    exit
-  ensure
-    warn "[build] Release lock..."
-    lockf.release
-  end
+  require "bundler/setup"
+  cwd = File.realpath File.join(__dir__, "..")
 
+  desc "Clean the build/ directory"
   task :clean do
-    warn "[build] Acquire lock..."
-    lockf.lock
-    sh "rm -rf #{build_dir}"
-  ensure
-    warn "[build] Release lock..."
-    lockf.release
+    Dir.chdir(cwd) do
+      sh "rm -rf node_modules/.cache/"
+      sh "rm -rf build"
+    end
   end
 
-  task "clean:css" do
-    warn "[build] Acquire lock..."
-    lockf.lock
-    cssdir = File.join(build_dir, "css")
-    sh "rm -rf #{cssdir}" if Dir.exist?(cssdir)
-  ensure
-    warn "[build] Release lock..."
-    lockf.release
+  desc "Produce the build/ directory"
+  task :build, [:buildenv] do |t, args|
+    Dir.chdir(cwd) do
+      buildenv = args.buildenv || ENV["buildenv"] || "development"
+      sh "rm -rf build/css/"
+      Bundler.with_unbundled_env {
+        sh "buildenv=#{buildenv} bundle exec nanoc co"
+      }
+    end
   end
 
-  task watch: %w[build] do
-    require "listen"
-    Listen.to File.join(Dir.getwd, "src"), force_polling: true do
-      sh "rake build"
-    end.start
-    sleep
+  desc "Produce the build/ directory on-demand"
+  task watch: ['nanoc:build'] do
+    Dir.chdir(cwd) do
+      require "listen"
+      path = File.join(Dir.getwd, "src")
+      Listen.to(path) do
+        Bundler.with_unbundled_env { sh "rake nanoc:build" }
+      end.start
+      sleep
+    end
   rescue Interrupt
     warn "SIGINT: exit"
     exit
   end
 end
-
-desc "Build the website"
-task build: %w[nanoc:compile]
-
-desc "Trigger a build when src/ is modified"
-task "build:watch" => "nanoc:watch"
-
-desc "Clean the build directory"
-task clean: "nanoc:clean"

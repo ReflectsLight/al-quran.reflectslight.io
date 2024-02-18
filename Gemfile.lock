@@ -2,12 +2,8 @@ PATH
   remote: packages/ruby/server
   specs:
     server.rb (0.1.0)
-      json (= 2.6.1)
       puma (~> 6.3)
-      racc (= 1.6.0)
       rack (~> 3.0)
-      set (= 1.0.2)
-      stringio (= 3.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -26,7 +22,7 @@ GEM
     immutable-ruby (0.1.0)
       concurrent-ruby (~> 1.1)
       sorted_set (~> 1.0)
-    json (2.6.1)
+    json (2.7.1)
     json_schema (0.21.0)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
@@ -69,14 +65,10 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
-    nanoc-gzip.rb (0.2.2)
-      json (= 2.6.1)
+    nanoc-gzip.rb (0.2.3)
       nanoc (~> 4.12)
-      racc (= 1.6.0)
-      set (= 1.0.2)
-      stringio (= 3.0.1)
     nanoc-tidy.rb (0.2.2)
-    nanoc-webpack.rb (0.5.5)
+    nanoc-webpack.rb (0.5.6)
       ryo.rb (~> 0.4)
     nio4r (2.7.0)
     paint (2.3.0)
@@ -91,7 +83,7 @@ GEM
     public_suffix (5.0.4)
     puma (6.4.2)
       nio4r (~> 2.0)
-    racc (1.6.0)
+    racc (1.7.3)
     rack (3.0.9)
     rainbow (3.1.1)
     rainpress (1.0.1)
@@ -102,11 +94,11 @@ GEM
     rbtree (0.4.6)
     regexp_parser (2.9.0)
     rexml (3.2.6)
-    rubocop (1.59.0)
+    rubocop (1.60.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
-      parser (>= 3.2.2.4)
+      parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
@@ -125,15 +117,15 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    set (1.0.2)
+    set (1.1.0)
     slow_enumerator_tools (1.1.0)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
-    standard (1.33.0)
+    standard (1.34.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
-      rubocop (~> 1.59.0)
+      rubocop (~> 1.60)
       standard-custom (~> 1.0.0)
       standard-performance (~> 1.3)
     standard-custom (1.0.2)
@@ -142,7 +134,7 @@ GEM
     standard-performance (1.3.1)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.20.2)
-    stringio (3.0.1)
+    stringio (3.1.0)
     test-cmd.rb (0.5.2)
     tty-color (0.6.0)
     tty-command (0.10.1)
@@ -150,10 +142,11 @@ GEM
     tty-platform (0.3.0)
     tty-which (0.5.0)
     unicode-display_width (2.5.0)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.13)
 
 PLATFORMS
-  x86_64-openbsd
+  amd64-freebsd-14
+  ruby
 
 DEPENDENCIES
   dotenv (~> 2.8)
@@ -174,4 +167,4 @@ DEPENDENCIES
   test-cmd.rb
 
 BUNDLED WITH
-   2.4.19
+   2.5.3

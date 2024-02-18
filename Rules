@@ -18,6 +18,11 @@ i18n = Ryo.from(
   )
 )
 
+buildenv = ENV["buildenv"] || "development"
+Nanoc::Webpack.default_options.merge!(
+  "--config" => "webpack.#{buildenv}.js"
+)
+
 def require_rules(rules, locals = {}, target = binding)
   locals.each { target.local_variable_set(_1, _2) }
   path = File.join(Dir.getwd, rules)
