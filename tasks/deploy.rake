@@ -8,7 +8,7 @@ task "deploy:env" do
 end
 
 desc "Deploy the website"
-task "deploy" => %i[deploy:env nanoc:clean nanoc:compile] do
+task "deploy" => %i[deploy:env nanoc:clean nanoc:build] do
   git_branch = `git branch --show-current`.chomp
   if git_branch != "production"
     warn "This task must be run on the 'production' branch."
