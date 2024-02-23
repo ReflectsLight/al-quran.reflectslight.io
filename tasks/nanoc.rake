@@ -16,7 +16,7 @@ namespace :nanoc do
     Dir.chdir(cwd) do
       buildenv = args.buildenv || ENV["buildenv"] || "development"
       sass_path = File.join(cwd, "src", "css")
-      sh "rm -rf build/css/"
+      sh "rm -rf build/al-quran/css/"
       Bundler.with_unbundled_env {
         sh "SASS_PATH=#{sass_path} buildenv=#{buildenv} bundle exec nanoc co"
       }
