@@ -1,5 +1,6 @@
 .root .content.theme.blue {
   @import "themes/blue/colors";
+  @import "breakpoints";
 
   ul.body.index {
     li.surah a {
@@ -20,6 +21,9 @@
   }
 
   footer {
+    @media (max-width: $breakpoint-sm) {
+      border-top: 1px solid $primary-color;
+    }
     a {
       &:active, &:link, &:visited {
         color: $primary-color;

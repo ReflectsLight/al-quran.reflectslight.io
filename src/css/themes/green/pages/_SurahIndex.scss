@@ -1,4 +1,5 @@
 .root .content.theme.green {
+  @import "breakpoints";
   @import "themes/green/colors";
 
   ul.body.index a {
@@ -15,6 +16,10 @@
   }
 
   footer {
+    @media (max-width: $breakpoint-sm) {
+      border-top: 1px solid $green1;
+    }
+
     a {
       &:active, &:link, &:visited {
         color: $green1;

@@ -27,6 +27,11 @@ export function SurahIndexFilter({ t, locale, setIndex, surahs }: Props) {
   };
 
   return (
-    <input type="text" placeholder={t(locale, "filter")} onChange={onInput} />
+    <input
+      className="surah-index-filter"
+      type="text"
+      placeholder={t(locale, "filter")}
+      onChange={onInput}
+    />
   );
 }

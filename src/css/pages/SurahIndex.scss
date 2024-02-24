@@ -3,6 +3,7 @@
 @import "components/Icon";
 
 body .root .content.theme {
+  @import "breakpoints";
   height: 75%;
   @media (max-device-height: 700px) {
     height: 65%;
@@ -10,7 +11,9 @@ body .root .content.theme {
   @media (min-device-height: 1024px) {
     height: 80%;
   }
-
+  @media (max-width: $breakpoint-sm) {
+    height: 75%;
+  }
   header {
     .react-select.language {
       ul li {
@@ -70,7 +73,7 @@ body .root .content.theme {
       border-radius: 10px;
       border: 1px solid #000;
     }
-    @media (max-device-width: 500px) {
+    @media (max-width: $breakpoint-sm) {
       flex-wrap: wrap;
       flex-direction: column-reverse;
       align-items: flex-start;
@@ -83,7 +86,7 @@ body .root .content.theme {
         width: 100%;
         max-width: unset;
       }
-      .right-arrow.icon {
+      .right-arrow.icon, .surah-index-filter {
         display: none;
       }
     }
@@ -97,6 +100,7 @@ body .root .content.theme.en {
 }
 
 body .root .content.theme.ar {
+  @import "breakpoints";
   font-size: larger;
 
   ul.body.index {
@@ -116,7 +120,7 @@ body .root .content.theme.ar {
 
   footer {
     flex-direction: row;
-    @media (max-device-width: 500px) {
+    @media (max-width: $breakpoint-sm) {
       flex-direction: column-reverse;
     }
     font-family: "Mada Regular";
