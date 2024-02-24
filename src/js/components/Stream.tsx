@@ -23,8 +23,7 @@ export function Stream({
   isPaused,
   t,
 }: Props) {
-  const className =
-    endOfStream || isPaused ? ["stopped", "scroll-y"] : ["playing"];
+  const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const ref = useRef<HTMLUListElement>();
   const ul = useMemo<JSX.Element>(() => {
     return (
