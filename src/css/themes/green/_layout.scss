@@ -1,5 +1,6 @@
 .root .content.theme.green {
   @import "colors";
+  scrollbar-color: $green1 #FFF;
 
   header {
     h1 , h1 a { color: $green1; }

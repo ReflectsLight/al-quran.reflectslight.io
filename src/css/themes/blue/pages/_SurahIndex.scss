@@ -9,7 +9,7 @@
 
       @media (hover: hover) {
         &:hover {
-          background: lighten($primary-color, 38%);
+          background: $accent-color;
         }
       }
 

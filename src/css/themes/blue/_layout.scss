@@ -1,5 +1,6 @@
 .root .content.theme.blue {
   @import "colors";
+  scrollbar-color: $primary-color $accent-color;
 
   header {
     h1 , h1 a { color: $primary-color; }

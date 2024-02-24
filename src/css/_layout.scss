@@ -100,7 +100,6 @@ body .root .content.theme {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: scroll;
     height: 100%;
   }
 
@@ -110,10 +109,15 @@ body .root .content.theme {
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
+    margin-top: 15px;
 
     .br {
       width: 100%;
     }
+  }
+
+  .scroll-y {
+    overflow-y: scroll;
   }
 }
 
