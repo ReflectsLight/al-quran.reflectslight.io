@@ -23,12 +23,16 @@ export function Stream({
   isPaused,
   t,
 }: Props) {
-  const className = classNames("body", "stream");
-  const playState = endOfStream || isPaused ? "stopped" : "playing";
+  const className =
+    endOfStream || isPaused ? ["stopped", "scroll-y"] : ["playing"];
   const ref = useRef<HTMLUListElement>();
   const ul = useMemo<JSX.Element>(() => {
     return (
-      <ul lang={locale} className={classNames(className, playState)} ref={ref}>
+      <ul
+        lang={locale}
+        className={classNames("body", "stream", ...className)}
+        ref={ref}
+      >
         {stream.map((ayah: Quran.Ayah) => {
           return (
             <li key={ayah.id} className="ayah fade">

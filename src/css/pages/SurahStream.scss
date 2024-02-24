@@ -14,6 +14,8 @@ body .root .content.theme {
 
   ul.body.stream {
     scrollbar-gutter: stable;
+    overflow: visible;
+
     li.ayah {
       padding: 10px 0 10px 0;
       span.title {
