@@ -22,6 +22,9 @@ buildenv = ENV["buildenv"] || "development"
 Nanoc::Webpack.default_options.merge!(
   "--config" => "webpack.#{buildenv}.js"
 )
+Nanoc::Tidy.default_options.merge!(
+  "-upper" => true
+)
 
 def require_rules(rules, locals = {}, target = binding)
   locals.each { target.local_variable_set(_1, _2) }
