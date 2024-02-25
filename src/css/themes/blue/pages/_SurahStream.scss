@@ -3,14 +3,14 @@
 
   header {
     div {
-      .localized-name, .transliterated-name { color: $primary-dark-color; }
+      .localized-name, .transliterated-name { color: $secondary-color; }
     }
   }
 
   ul.body.stream {
     li.ayah {
       span.title span {
-        color: $primary-dark-color;
+        color: $secondary-color;
       }
       p { }
     }

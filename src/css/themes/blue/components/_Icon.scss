@@ -4,14 +4,14 @@
   ul.body.stream li, footer {
     .play.icon {
       fill: $primary-color;
-      stroke: $primary-dark-color;
+      stroke: $secondary-color;
       stroke-width: 2px;
     }
 
     .pause.icon {
       rect {
         fill: $primary-color;
-        stroke: $primary-dark-color;
+        stroke: $secondary-color;
         stroke-width: 1px;
       }
     }
@@ -28,12 +28,12 @@
     }
     .right-arrow.icon {
       g {
-        fill: $primary-dark-color;
+        fill: $secondary-color;
       }
     }
   }
 
   .stalled.icon {
-    div { background: $primary-dark-color; }
+    div { background: $secondary-color; }
   }
 }

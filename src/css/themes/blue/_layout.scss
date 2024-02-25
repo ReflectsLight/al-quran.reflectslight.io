@@ -5,13 +5,13 @@
   header {
     h1 , h1 a { color: $primary-color; }
     nav .react-select {
-      color: $primary-dark-color;
+      color: $secondary-color;
     }
     nav .react-select.language {
       ul li {
         background: $primary-color;
         color: $white;
-        border: 3px solid lighten($primary-dark-color, 5%);
+        border: 3px solid $secondary-color;
       }
     }
   }

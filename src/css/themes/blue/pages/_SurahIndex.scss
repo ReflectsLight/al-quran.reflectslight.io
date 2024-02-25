@@ -15,7 +15,7 @@
       }
 
       span.id {
-        color: $primary-dark-color;
+        color: $secondary-color;
       }
     }
   }
@@ -46,7 +46,7 @@
   @import "themes/blue/colors";
   header {
     div {
-      color: $primary-dark-color;
+      color: $secondary-color;
     }
   }
 }
@@ -56,7 +56,7 @@
   ul.body.index  {
     li.surah a {
       span.id {
-        color: $primary-dark-color;
+        color: $secondary-color;
       }
       span.name {
         color: $primary-color;
