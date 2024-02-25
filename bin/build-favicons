@@ -7,5 +7,5 @@ for size in ${sizes}; do
           -resize ${size} \
           -background transparent \
           -extent ${size} \
-          src/favicon-${size}.png
+          png32:src/favicon-${size}.png
 done
