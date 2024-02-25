@@ -20,7 +20,7 @@ compile "/images/*.svg" do
   write("#{item.identifier}.gz")
 end
 
-compile "/favicon.svg" do
+compile "/favicon*.png" do
   write(item.identifier.to_s)
 end
 

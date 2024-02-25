@@ -2,7 +2,7 @@
 <html lang="<%= context.locale %>">
   <head>
     <title><%= t(context.locale, "TheNobleQuran") %></title>
-    <link rel="icon" href="/favicon.svg">
+    <%= erb("partials/favicon.html.erb") %>
   </head>
   <body>
     <%= inline_json("/slugs.json") %>
