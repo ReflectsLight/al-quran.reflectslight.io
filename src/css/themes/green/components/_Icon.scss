@@ -4,37 +4,37 @@
   ul.body.stream li, footer {
     .play.icon {
       g path {
-        fill: $green1;
-        stroke: $green1;
+        fill: $primary-color;
+        stroke: $primary-color;
         stroke-width: 3px;
       }
     }
 
     .pause.icon {
       g rect {
-        fill: $green1;
-        stroke: $green1;
+        fill: $primary-color;
+        stroke: $primary-color;
         stroke-width: 1px;
       }
     }
 
     .refresh.icon {
-      fill: $green1;
+      fill: $primary-color;
     }
 
     .sound-on.icon, .sound-off.icon {
       g polygon {
-        fill: $green1;
+        fill: $primary-color;
       }
     }
     .right-arrow.icon {
       g {
-        fill: $green1;
+        fill: $primary-color;
       }
     }
   }
 
   .stalled.icon {
-    div { background: $green1; }
+    div { background: $primary-color; }
   }
 }

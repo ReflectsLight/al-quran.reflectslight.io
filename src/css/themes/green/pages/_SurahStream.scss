@@ -2,26 +2,26 @@
   @import "themes/green/colors";
 
   header {
-    h1, h1 a { color: $green1; }
-    color: $green1;
+    h1, h1 a { color: $primary-color; }
+    color: $primary-color;
   }
 
   ul.body.stream {
     li.ayah {
-      color: $green1;
+      color: $primary-color;
       p { color: $black; }
     }
   }
 
   footer {
     .timer {
-      color: $green1;
+      color: $primary-color;
     }
   }
 
   .sound-on.icon, .svg.sound-off.icon {
     polygon {
-      fill: $green1;
+      fill: $primary-color;
       stroke-width: 2;
     }
   }

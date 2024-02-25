@@ -2,10 +2,10 @@
   @import "themes/green/colors";
   .react-select.theme {
     .selected-option.green .circle {
-      background: $green1;
+      background: $primary-color;
     }
     ul li.green .circle {
-      background: $green1;
+      background: $primary-color;
     }
   }
 }

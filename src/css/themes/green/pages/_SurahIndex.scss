@@ -4,25 +4,25 @@
 
   ul.body.index a {
     &:active, &:link, &:visited {
-      color: $green1;
+      color: $primary-color;
     }
 
     @media (hover: hover) {
       &:hover {
-        background: $green1;
-        color: $white;
+        background: $primary-color;
+        color: $accent-color;
       }
     }
   }
 
   footer {
     @media (max-width: $breakpoint-sm) {
-      border-top: 1px solid $green1;
+      border-top: 1px solid $primary-color;
     }
 
     a {
       &:active, &:link, &:visited {
-        color: $green1;
+        color: $primary-color;
         text-decoration: none;
       }
       &:hover {
@@ -30,9 +30,9 @@
       }
     }
     input {
-      border: 1px solid $green1;
+      border: 1px solid $primary-color;
       &:focus {
-        outline-color: $green1;
+        outline-color: $primary-color;
       }
     }
   }

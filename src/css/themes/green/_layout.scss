@@ -1,19 +1,19 @@
 .root .content.theme.green {
   @import "colors";
-  scrollbar-color: $green1 #FFF;
+  scrollbar-color: $primary-color $accent-color;
 
   header {
-    h1 , h1 a { color: $green1; }
+    h1 , h1 a { color: $primary-color; }
 
     nav .react-select {
       background-color: transparent;
-      color: $green1;
+      color: $primary-color;
     }
     nav .react-select.language {
       ul li {
-        background-color: $green1;
-        color: $white;
-        border: 3px solid darken($green1, 15%);
+        background-color: $primary-color;
+        color: $accent-color;
+        border: 3px solid $secondary-color;
         border-radius: 15px;
       }
     }
