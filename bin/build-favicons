@@ -1,12 +1,16 @@
 #!/bin/sh
-
 sizes="16x16 32x32 48x48 64x64 128x128 256x256"
 for size in ${sizes}; do
-  convert src/favicon.svg \
-          -gravity center \
-          -resize ${size} \
-          -background transparent \
-          -transparent white \
-          -extent ${size} \
-          png32:src/favicon-${size}.png
+    convert src/favicon.svg \
+        -resize ${size} \
+        -background none \
+        -fuzz 8% \
+        -mattecolor "#FFFFFF" \
+        -alpha set \
+        -channel RGBA \
+        -fill none \
+        -opaque white \
+        -gravity center \
+        -extent ${size} \
+        png32:src/favicon-${size}.png
 done
