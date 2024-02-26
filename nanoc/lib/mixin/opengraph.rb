@@ -9,7 +9,7 @@ module Mixin::OpenGraph
     case context.filename
     when "stream.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
-       description: t(context.locale, "meta.stream.description"),
+       description: t(context.locale, "meta.stream.description", surah_name: context.surah.name),
        url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
        image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png"}
     when "index.html.erb"
