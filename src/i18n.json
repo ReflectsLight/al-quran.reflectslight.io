@@ -8,8 +8,8 @@
     "of": "of",
     "filter": "Filter",
     "meta": {
-      "index": {"description": "Explore the chapters of The Noble Quran. Browse a list of chapters and choose a chapter you can read and listen to. Enhance your understanding of a sacred text."},
-      "stream": {"description": "Experience The Noble Quran. Read and listen to a single chapter with a verse streamed at regular intervals. Immerse yourself in a sacred text in a unique way."}
+      "index": {"description": "Explore the chapters of The Noble Quran. Browse a list of chapters and choose a chapter you can read and listen to."},
+      "stream": {"description": "Experience The Noble Quran. Read and listen to %{surah_name}."}
     },
     "surahs": {
       "names": [
@@ -140,10 +140,10 @@
     "filter": "تصفية",
     "meta": {
       "index": {
-        "description": "استكشف فصول القرآن الكريم. تصفح قائمة بالفصول واختر فصلاً يمكنك قراءته والاستماع إليه. قم بتعزيز فهمك لنص مقدس."
+        "description": "استكشاف سور القرآن الكريم. تصفح قائمة السور واختر سورة يمكنك قراءتها والاستماع إليها."
       },
       "stream": {
-        "description": "استمتع بالقرآن الكريم الشريف. اقرأ واستمع إلى فصل واحد مع تدفق آية على فترات منتظمة. انغمس في نص مقدس بطريقة فريدة."
+        "description": "تجربة القرآن الكريم. اقرأ واستمع إلى %{surah_name}."
       }
     },
     "surahs": {
