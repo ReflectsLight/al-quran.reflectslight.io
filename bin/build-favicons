@@ -6,6 +6,7 @@ for size in ${sizes}; do
           -gravity center \
           -resize ${size} \
           -background transparent \
+          -transparent white \
           -extent ${size} \
           png32:src/favicon-${size}.png
 done
