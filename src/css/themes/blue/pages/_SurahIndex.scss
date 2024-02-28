@@ -34,9 +34,9 @@
       }
     }
     input {
-      border: 1px solid $primary-color;
+      border: 1px solid $secondary-color;
       &:focus {
-        outline-color: $primary-color;
+        outline-color: $secondary-color;
       }
     }
   }

@@ -4,16 +4,6 @@
 
 body .root .content.theme {
   @import "breakpoints";
-  height: 75%;
-  @media (max-device-height: 700px) {
-    height: 65%;
-  }
-  @media (min-device-height: 1024px) {
-    height: 80%;
-  }
-  @media (max-width: $breakpoint-sm) {
-    height: 75%;
-  }
   header {
     .react-select.language {
       ul li {
@@ -24,33 +14,15 @@ body .root .content.theme {
 
   ul.body.index {
     li.surah a {
-      display: flex;
-      align-items: center;
       border-radius: 10px;
-      min-height: 45px;
       width: 98%;
 
       &:visited, &:active, &:link {
         text-decoration: none;
       }
 
-      span.id {
-        width: 45px;
-        font-weight: bolder;
-        font-size: large;
-        text-align: center;
-      }
-
-      span.name {
-        font-weight: normal;
-      }
-
       span.transliterated {
-        display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
-        padding: 0 10px 0 0;
-        @media screen and (max-width: $max-width) {
+        @media (max-width: $breakpoint-sm) {
           display: none;
         }
       }
@@ -58,35 +30,15 @@ body .root .content.theme {
   }
 
   footer {
-    flex-wrap: unset;
-    a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      span {
-        padding: 0 0 0 7px;
-      }
-    }
     input {
-      padding: 7.5px;
-      border-radius: 10px;
-      border: 1px solid #000;
+      border-radius: 5px;
     }
-    @media (max-width: $breakpoint-sm) {
-      flex-wrap: wrap;
-      flex-direction: column-reverse;
-      align-items: flex-start;
+    @media(max-width: $breakpoint-sm) {
       a {
-        place-content: center;
         width: 100%;
+        justify-content: center;
       }
-      input {
-        margin-bottom: 10px;
-        width: 100%;
-        max-width: unset;
-      }
-      .right-arrow.icon, .surah-index-filter {
+      .right-arrow, .surah-index-filter {
         display: none;
       }
     }
@@ -94,11 +46,12 @@ body .root .content.theme {
 }
 
 
+/* English-specific rules */
 body .root .content.theme.en {
-  ul.body.index li.surah {
-  }
+
 }
 
+/* Arabic-specific rules */
 body .root .content.theme.ar {
   @import "breakpoints";
   font-size: larger;
@@ -106,7 +59,6 @@ body .root .content.theme.ar {
   ul.body.index {
     li.surah {
       a {
-        font-family: "Mada Regular";
         span.id {
           font-size: x-large;
         }
@@ -117,18 +69,13 @@ body .root .content.theme.ar {
       }
     }
   }
-
   footer {
-    flex-direction: row;
-    @media (max-width: $breakpoint-sm) {
-      flex-direction: column-reverse;
-    }
-    font-family: "Mada Regular";
-    a span {
-      padding: 0 7px 0 0;
+    a {
+      flex-direction: row-reverse;
     }
   }
 }
 
 @import "themes/blue";
 @import "themes/green";
+@import "vendor/tail";

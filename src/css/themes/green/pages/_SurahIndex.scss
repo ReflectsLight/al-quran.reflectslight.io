@@ -11,6 +11,9 @@
       &:hover {
         background: $primary-color;
         color: $accent-color;
+        span:first-child {
+          color: $accent-color;
+        }
       }
     }
   }
@@ -23,7 +26,6 @@
     a {
       &:active, &:link, &:visited {
         color: $primary-color;
-        text-decoration: none;
       }
       &:hover {
         font-weight: bold;
