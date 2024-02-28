@@ -29,7 +29,10 @@ export function Stream({
     return (
       <ul
         lang={locale}
-        className={classNames("body", "stream", ...className)}
+        className={classNames(
+          "body stream scroll-y list-none p-0 h-5/6",
+          ...className,
+        )}
         ref={ref}
       >
         {stream.map((ayah: Quran.Ayah) => {
@@ -51,7 +54,7 @@ export function Stream({
                   {formatNumber(surah.ayat.length, locale)}
                 </span>
               </span>
-              <p>{ayah.text}</p>
+              <p className="m-0 mb-3">{ayah.text}</p>
             </li>
           );
         })}

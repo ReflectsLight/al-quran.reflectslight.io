@@ -28,14 +28,14 @@
 .stalled.icon {
   display: inline-block;
   position: relative;
-  left: -34px;
+  left: 30px;
   height: 4px;
 
   div {
     display: inline-block;
     position: absolute;
     left: 8px;
-    width: 6px;
+    width: 5px;
     animation: stalled 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
 
@@ -87,22 +87,6 @@
     }
     .pause.icon {
       g { transform: translate(-14px, 0); }
-    }
-  }
-}
-
-.root .content.theme.ar {
-  ul.stream span.title {
-    .sound-on.icon, .sound-off.icon {
-      height: 40px;
-      transform: rotate(180deg) translate(0, 3px);
-    }
-  }
-
-  footer {
-    .sound-on.icon, .sound-off.icon {
-      transform: rotate(180deg);
-      g {transform: translate(32px, 0); }
     }
   }
 }
