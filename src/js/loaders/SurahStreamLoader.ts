@@ -16,7 +16,6 @@ import * as Quran from "lib/Quran";
     item.script("/js/surah-stream.js"),
     item.css("/css/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf"),
     item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
       const path = ["/durations", `${recitation.id}`, `${surahId}.json`].join(
