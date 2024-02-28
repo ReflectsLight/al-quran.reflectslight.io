@@ -4,13 +4,6 @@
 
 body .root .content.theme {
   @import "breakpoints";
-  header {
-    .react-select.language {
-      ul li {
-        border-radius: 15px;
-      }
-    }
-  }
 
   ul.body.index {
     li.surah a {

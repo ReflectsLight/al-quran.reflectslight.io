@@ -69,7 +69,8 @@ body .root .content.en {
           top: 5px;
           li.ar span {
             position: relative;
-            bottom: 8px;
+            bottom: 3px;
+            right: 3px;
           }
         }
       }
@@ -92,6 +93,10 @@ body .root .content.theme.ar {
         ul {
           top: 15px;
           right: 55px;
+          li.en span {
+            position: relative;
+            right: 3px;
+          }
         }
         .selected-option.ar {
           font-size: x-large;

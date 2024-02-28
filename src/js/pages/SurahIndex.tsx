@@ -74,7 +74,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
           </li>
         ))}
       </ul>
-      <footer className="flex flex-row justify-between h-12">
+      <footer className="flex flex-row justify-between h-16">
         <a
           className="flex flex-row items-center no-underline"
           href={`/${locale}/random/`}
