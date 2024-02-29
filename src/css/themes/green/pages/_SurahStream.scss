@@ -1,5 +1,6 @@
 .root .content.theme.green {
   @import "themes/green/colors";
+  @import "breakpoints";
 
   header {
     h1, h1 a { color: $primary-color; }

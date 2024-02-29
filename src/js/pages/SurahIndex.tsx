@@ -32,7 +32,7 @@ function SurahIndex({ locale, surahs, t }: Props) {
     <div
       ref={ref}
       className={classNames(
-        "flex flex-col invisible h-full content theme",
+        "flex flex-col invisible h-full content surah-index theme",
         theme,
         locale,
       )}
