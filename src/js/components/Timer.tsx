@@ -55,7 +55,7 @@ export function Timer({
   }, [soundOn, isStalled, isPaused, ms]);
 
   return (
-    <div className="timer w-10 flex justify-end">
+    <div className="timer text-base w-10 flex justify-end">
       {ms / 1000 <= 0
         ? formatNumber(0, locale)
         : formatNumber(ms / 1000, locale)}
