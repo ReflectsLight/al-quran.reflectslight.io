@@ -114,7 +114,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           <PauseIcon onClick={() => setIsPaused(true)} />
         )}
         {readyToRender && !endOfStream && (
-          <div className="flex w-10 justify-end">
+          <div className="sound-box flex w-14 justify-end">
             <AudioControl
               recitation={recitation}
               surah={surah}
