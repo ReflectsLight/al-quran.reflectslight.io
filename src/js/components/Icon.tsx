@@ -151,7 +151,7 @@ export function RefreshIcon({ onClick }: Props) {
 
 export function StalledIcon() {
   return (
-    <div className="stalled icon flex justify-end w-16">
+    <div className="stalled icon flex justify-end w-10">
       <div />
       <div />
       <div />
