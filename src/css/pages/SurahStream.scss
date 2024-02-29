@@ -16,6 +16,12 @@ body .root .content.theme {
       animation: FadeIn 1s;
     }
   }
+
+  footer {
+    .sound-off.icon, .sound-on.icon {
+      transform: translate(0, 5px);
+    }
+  }
 }
 
 /* English-specific rules */

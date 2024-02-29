@@ -3,8 +3,8 @@
 }
 
 .play.icon, .pause.icon {
-  width: 32px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .pause.icon {
@@ -78,16 +78,8 @@
 .root .content.theme {
   footer {
     .sound-on.icon, .sound-off.icon {
-      width: 32px;
-      height: 32px;
-      g { transform: translate(32px,30px); }
-    }
-
-    .play.icon {
-      g { transform: translate(-16px, 0); }
-    }
-    .pause.icon {
-      g { transform: translate(-14px, 0); }
+      width: 28px;
+      height: 28px;
     }
   }
 }
