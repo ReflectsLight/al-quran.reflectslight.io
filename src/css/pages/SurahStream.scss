@@ -19,7 +19,7 @@ body .root .content.theme {
 
   footer {
     .sound-off.icon, .sound-on.icon {
-      transform: translate(0, 5px);
+      transform: translate(0, 7px);
     }
   }
 }
@@ -35,6 +35,8 @@ body .root .content.theme.en {
 
 /* Arabic-specific rules */
 body .root .content.theme.ar {
+  font-size: larger;
+
   header {
     .surah-name {
       flex-direction: row-reverse;
@@ -58,6 +60,9 @@ body .root .content.theme.ar {
 
   footer {
     .timer {
+      justify-content: flex-start;
+    }
+    .sound-box {
       justify-content: flex-start;
     }
   }
