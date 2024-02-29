@@ -12,3 +12,28 @@
     .selected-option { color: $primary-color; }
   }
 }
+
+.root .content.theme.green {
+  @import "green/colors";
+
+  .color-primary {
+    color: $primary-color;
+  }
+
+  .color-secondary {
+    color: $secondary-color;
+  }
+
+  .color-accent {
+    color: $accent-color;
+  }
+
+  .react-select.theme {
+    .selected-option {
+      .circle {
+        background: $primary-color;
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ html[lang="en"] {
 }
 
 html[lang="ar"] {
-  font-family: "Amiri Quran Regular";
+  font-family: "Mada Regular";
 }
 
 html {
@@ -29,98 +29,33 @@ body .root {
 
 body .root .content.theme {
   margin: 0 auto;
-  height: 100%;
   width: 85%;
-  height: 80%;
   max-width: $max-width;
 
   header {
-    h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: xx-large;
-      margin: 0;
-      height: 75px;
-      a {
-        text-decoration: none;
-      }
+    .br {
+      width: 100%;
     }
-
-    nav, div {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    nav {
-      height: 40px;
-     .react-select {
+    .react-select.theme {
+      .selected-option {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-      .react-select.theme {
         justify-content: flex-end;
       }
-      .react-select.language {
-        min-width: 50px;
-        text-align: right;
-        ul {
-          position:relative;
-          right: 75px;
-          li {
-            align-items: center;
-            font-family: "Kanit Regular";
-            border-radius: 15px;
-            span {
-              display: flex;
-              height: 100%;
-              align-items: center;
-              padding-right: 7px;
-            }
-            &:hover {
-              text-decoration: none;
-            }
-          }
-          li.en {
-            font-size: medium;
-          }
-        }
-      }
-      .br {
-        width: 100%;
-      }
     }
-  }
-
-  ul.body {
-    clear: both;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
   }
 
   footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 15px;
-
     .br {
       width: 100%;
     }
   }
 
   .scroll-y {
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
   }
 }
 
+/* English-specific rules */
 body .root .content.en {
   h1 {
     font-size: x-large;
@@ -134,7 +69,8 @@ body .root .content.en {
           top: 5px;
           li.ar span {
             position: relative;
-            bottom: 8px;
+            bottom: 3px;
+            right: 3px;
           }
         }
       }
@@ -148,6 +84,7 @@ body .root .content.en {
   }
 }
 
+/* Arabic-specific rules */
 body .root .content.theme.ar {
   header {
     nav, div {
@@ -156,6 +93,10 @@ body .root .content.theme.ar {
         ul {
           top: 15px;
           right: 55px;
+          li.en span {
+            position: relative;
+            right: 3px;
+          }
         }
         .selected-option.ar {
           font-size: x-large;

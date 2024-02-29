@@ -56,18 +56,29 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   return (
     <article
       ref={ref}
-      className={classNames("invisible", "content", "theme", theme, locale)}
+      className={classNames(
+        "flex flex-col invisible h-full content theme",
+        locale,
+        theme,
+      )}
     >
       {readyToRender && (
-        <header>
-          <h1>
-            <a href={`/${locale}/`}>{t(locale, "TheNobleQuran")}</a>
+        <header
+          className={classNames("flex flex-col", {
+            "h-24": locale !== "ar",
+            "h-26": locale === "ar",
+          })}
+        >
+          <h1 className="flex justify-center p-0 mt-2">
+            <a className="no-underline color-primary" href={`/${locale}/`}>
+              {t(locale, "TheNobleQuran")}
+            </a>
           </h1>
-          <nav>
+          <nav className="flex flex-row justify-between">
             <LanguageSelect locale={locale} path={surah.slug} />
             <ThemeSelect theme={theme} setTheme={setTheme} />
           </nav>
-          <div>
+          <div className="flex justify-between surah-name">
             <span className="localized-name" lang={locale}>
               {surah.localizedName}
             </span>
@@ -88,7 +99,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           t={t}
         />
       )}
-      <footer>
+      <footer className="flex justify-between items-center h-16">
         {readyToRender && isPaused && !endOfStream && (
           <PlayIcon onClick={() => setIsPaused(false)} />
         )}
@@ -96,17 +107,19 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           <PauseIcon onClick={() => setIsPaused(true)} />
         )}
         {readyToRender && !endOfStream && (
-          <AudioControl
-            recitation={recitation}
-            surah={surah}
-            ayah={ayah}
-            onPlay={() => setSoundOn(true)}
-            onPause={() => setSoundOn(false)}
-            onPlaying={() => setIsStalled(false)}
-            onStall={() => setIsStalled(true)}
-          />
+          <div className="flex w-14 justify-end">
+            <AudioControl
+              recitation={recitation}
+              surah={surah}
+              ayah={ayah}
+              onPlay={() => setSoundOn(true)}
+              onPause={() => setSoundOn(false)}
+              onPlaying={() => setIsStalled(false)}
+              onStall={() => setIsStalled(true)}
+            />
+          </div>
         )}
-        {readyToRender && !endOfStream && (
+        {readyToRender && !endOfStream && !isStalled && (
           <Timer
             surah={surah}
             setStream={setStream}
@@ -118,11 +131,10 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
             isStalled={isStalled}
           />
         )}
+        {readyToRender && soundOn && isStalled && <StalledIcon />}
         {readyToRender && endOfStream && (
           <RefreshIcon onClick={() => setStream([])} />
         )}
-        <div className="br" />
-        {readyToRender && soundOn && isStalled && <StalledIcon />}
       </footer>
     </article>
   );

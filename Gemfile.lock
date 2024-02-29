@@ -67,7 +67,7 @@ GEM
       nanoc-core (~> 4.11, >= 4.11.15)
     nanoc-gzip.rb (0.2.3)
       nanoc (~> 4.12)
-    nanoc-tidy.rb (0.3.0)
+    nanoc-tidy.rb (0.4.0)
     nanoc-webpack.rb (0.5.6)
       ryo.rb (~> 0.4)
     nio4r (2.7.0)

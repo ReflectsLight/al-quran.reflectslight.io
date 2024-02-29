@@ -3,37 +3,8 @@
 @import "components/Icon";
 
 body .root .content.theme {
-  height: 80%;
-  @media (max-device-height: 968px) { height: 75%; }
-  @media (max-height: 800px) { height: 70%; }
-  @media (max-height: 700px) { height: 65%; }
-  @media (max-height: 600px) { height: 60%; }
-  @media (max-height: 500px) { height: 55%; }
-  @media (max-height: 400px) { height: 45%; }
-  @media (max-height: 330px) { height: 35%; }
-
   ul.body.stream {
     scrollbar-gutter: stable;
-    overflow: hidden;
-
-    li.ayah {
-      padding: 10px 0 10px 0;
-      span.title {
-        display: flex;
-        align-items: center;
-      }
-      .svg.sound-on, .svg.sound-off {
-        cursor: pointer;
-        height: 24px;
-        width: 24px;
-        g { transform: translate(0px, 18px); }
-      }
-      p {
-        width: 100%;
-        margin: 0;
-      }
-    }
-
     li.ayah.fade {
       @keyframes FadeIn {
         0% { opacity: 0;}
@@ -47,39 +18,26 @@ body .root .content.theme {
   }
 
   footer {
-    .timer {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      height: 24px;
-      width: 40px;
-      font-family: "Kanit Regular";
-      text-align: center;
-      font-weight: bold;
-      font-size: large;
+    .sound-off.icon, .sound-on.icon {
+      transform: translate(0, 5px);
     }
   }
 }
 
-.content.theme.en {
-  header {
-    nav {
-      height: 30px;
+/* English-specific rules */
+body .root .content.theme.en {
+  ul.body.stream {
+    .sound-off.icon, .sound-on.icon {
+      transform: translate(0, 10px);
     }
   }
 }
 
+/* Arabic-specific rules */
 body .root .content.theme.ar {
   header {
-    nav, div {
-      .localized-name {
-        display: flex;
-        font-size: x-large;
-        justify-content: flex-end;
-        align-items: flex-end;
-        width: 100%;
-        line-height: 1;
-      }
+    .surah-name {
+      flex-direction: row-reverse;
       .transliterated-name {
         display: none;
       }
@@ -87,31 +45,24 @@ body .root .content.theme.ar {
   }
 
   ul.body.stream {
-    li.ayah:first-child {
-      padding: 35px 0 10px 0;
-    }
     li.ayah {
-      padding: 20px 0 10px 0;
-      span.title {
-        font-size: larger;
-        height: 0;
-        font-family: "Mada Regular";
+      .title {
+        display: block;
+        margin-bottom: 5px;
       }
-      p {
-        line-height: 3;
-        font-size: x-large;
-        font-weight: normal;
+      .sound-off.icon, .sound-on.icon {
+        transform: rotate(180deg) translate(0, -4px);
       }
     }
-    padding: 0;
   }
 
   footer {
     .timer {
-      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }
 
 @import "themes/blue";
 @import "themes/green";
+@import "vendor/tail";
