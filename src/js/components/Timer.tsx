@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import * as Quran from "lib/Quran";
 import { formatNumber } from "lib/i18n";
 
@@ -9,6 +9,8 @@ interface Props {
   soundOn: boolean;
   setStream: (stream: Quran.Ayat) => void;
   setEndOfStream: (v: boolean) => void;
+  ms: number | null;
+  setMs: (n: number) => void;
   isPaused: boolean;
   isStalled: boolean;
 }
@@ -22,10 +24,11 @@ export function Timer({
   setEndOfStream,
   locale,
   isPaused,
+  ms,
+  setMs,
 }: Props) {
   const ayah = stream[stream.length - 1];
   const lastAyah = surah.ayat[surah.ayat.length - 1];
-  const [ms, setMs] = useState(ayah.readTimeMs);
 
   useEffect(() => {
     setMs(ayah.readTimeMs);

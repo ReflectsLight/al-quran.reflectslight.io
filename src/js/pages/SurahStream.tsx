@@ -39,6 +39,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
   );
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
+  const [ms, setMs] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -52,6 +53,12 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
     setEndOfStream(false);
     setStream([surah.ayat[0]]);
   }, [stream.length === 0]);
+
+  useEffect(() => {
+    if (ayah) {
+      setMs(ayah.readTimeMs);
+    }
+  }, [ayah]);
 
   return (
     <article
@@ -107,7 +114,7 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
           <PauseIcon onClick={() => setIsPaused(true)} />
         )}
         {readyToRender && !endOfStream && (
-          <div className="flex w-14 justify-end">
+          <div className="flex w-10 justify-end">
             <AudioControl
               recitation={recitation}
               surah={surah}
@@ -129,6 +136,8 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
             isPaused={isPaused}
             soundOn={soundOn}
             isStalled={isStalled}
+            ms={ms}
+            setMs={setMs}
           />
         )}
         {readyToRender && soundOn && isStalled && <StalledIcon />}
