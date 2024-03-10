@@ -20,4 +20,4 @@ task :server, [:host, :port] do |_t, args|
 rescue Interrupt
   s.stop
 end
-task default: "build"
+task default: "nanoc:build"

@@ -28,6 +28,10 @@ compile "/images/opengraph/*.png" do
   write(item.identifier.to_s)
 end
 
+compile "/favicon.ico" do
+  write(item.identifier.to_s)
+end
+
 ##
 # JSON
 passthrough "/durations/*/*.json"
