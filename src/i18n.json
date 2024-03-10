@@ -140,7 +140,7 @@
     "filter": "تصفية",
     "meta": {
       "index": {
-        "index": {"description": ".استكشف فصول القرآن الكريم"}
+        "description": ".استكشف فصول القرآن الكريم"
       },
       "stream": {
         "description": ".%{surah_name} اقرأ واستمع إلى"
