@@ -9,6 +9,7 @@ require "yaml"
 load "rake/tasks/deploy.rake"
 load "rake/tasks/linter.rake"
 load "rake/tasks/nanoc.rake"
+load "rake/tasks/submodules.rake"
 
 desc "Serve the website on localhost"
 task :server, [:host, :port] do |_t, args|
