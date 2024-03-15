@@ -9,7 +9,7 @@ module Mixin::T
   end
 
   def i18n
-    path = File.join(Dir.getwd, "src", "i18n.json")
+    path = File.join(Dir.getwd, "src", "json", "i18n.json")
     json = File.binread(path)
     Ryo.from JSON.parse(json)
   end
