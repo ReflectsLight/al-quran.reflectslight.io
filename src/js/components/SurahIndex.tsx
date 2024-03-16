@@ -1,14 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
-import classNames from "classnames";
-
 import * as Quran from "lib/Quran";
+import React, { useRef, useState, useEffect } from "react";
 import { useTheme } from "hooks/useTheme";
 import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
-import { i18n, formatNumber, TFunction } from "lib/i18n";
+import { formatNumber, TFunction } from "lib/i18n";
 import { RightArrow } from "components/Icon";
 import { SurahIndexFilter } from "components/SurahIndexFilter";
+import classNames from "classnames";
 
 interface Props {
   locale: Quran.Locale;
@@ -16,7 +14,7 @@ interface Props {
   t: TFunction;
 }
 
-function SurahIndex({ locale, surahs, t }: Props) {
+export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Quran.Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>();
@@ -92,19 +90,3 @@ function SurahIndex({ locale, surahs, t }: Props) {
     </div>
   );
 }
-
-(function () {
-  const root: HTMLElement = document.querySelector(".root")!;
-  const locale = root.getAttribute("data-locale") as Quran.Locale;
-  const script: HTMLScriptElement = document.querySelector(".json.surahs")!;
-  const t = i18n(document.querySelector<HTMLElement>(".json.i18n")!.innerText);
-  const surahs: Quran.Surah[] = JSON.parse(script.innerText).map(
-    (el: Quran.JSON.Surah) => {
-      return Quran.Surah.fromJSON(locale, el);
-    },
-  );
-
-  ReactDOM.createRoot(root).render(
-    <SurahIndex locale={locale} surahs={surahs} t={t} />,
-  );
-})();
