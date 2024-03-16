@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 ##
-# Rules for a redirect from the root path to the surah index for a given locale
-# (eg / -> /en/)
+# Rules for a redirect from the root path to the surah index
+# for a given locale (eg / -> /en/).
 
 compile "/html/redirect.html.erb" do
   filter(:tidy)
@@ -11,7 +11,7 @@ compile "/html/redirect.html.erb" do
   write("/index.html")
 end
 
-compile "/js/pages/Redirect.ts" do
+compile "/js/main/redirect.ts" do
   filter(:webpack)
-  write("/js/redirect.js")
+  write("/js/main/redirect.js")
 end
