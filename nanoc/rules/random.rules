@@ -14,7 +14,7 @@ locales.each do |locale|
   end
 end
 
-compile "/js/pages/Random.ts" do
+compile "/js/main/random.ts" do
   filter(:webpack)
-  write("/js/random.js")
+  write("/js/main/random.js")
 end

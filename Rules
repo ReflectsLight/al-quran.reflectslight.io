@@ -9,12 +9,12 @@ require "nanoc-tidy"
 locales = %w[ar en]
 slugs = Ryo.from(
   JSON.parse(
-    File.read(File.join(Dir.getwd, "src", "slugs.json"))
+    File.read(File.join(Dir.getwd, "src", "json", "slugs.json"))
   )
 )
 i18n = Ryo.from(
   JSON.parse(
-    File.read(File.join(Dir.getwd, "src", "i18n.json"))
+    File.read(File.join(Dir.getwd, "src", "json", "i18n.json"))
   )
 )
 

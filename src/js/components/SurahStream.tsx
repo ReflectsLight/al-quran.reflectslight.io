@@ -1,7 +1,5 @@
+import * as Quran from "lib/Quran";
 import React, { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
-import classNames from "classnames";
-
 import { useTheme } from "hooks/useTheme";
 import { Timer } from "components/Timer";
 import { Stream } from "components/Stream";
@@ -9,8 +7,8 @@ import { ThemeSelect } from "components/ThemeSelect";
 import { LanguageSelect } from "components/LanguageSelect";
 import { AudioControl } from "components/AudioControl";
 import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "components/Icon";
-import * as Quran from "lib/Quran";
-import { i18n, TFunction } from "lib/i18n";
+import classNames from "classnames";
+import { TFunction } from "lib/i18n";
 
 interface Props {
   node: HTMLScriptElement;
@@ -26,7 +24,7 @@ const getTimeSlots = (recitation: Quran.Recitation) => {
   return timeSlots;
 };
 
-function SurahStream({ node, recitations, locale, paused, t }: Props) {
+export function SurahStream({ node, recitations, locale, paused, t }: Props) {
   const [stream, setStream] = useState<Quran.Ayat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(paused);
   const [soundOn, setSoundOn] = useState<boolean>(false);
@@ -148,27 +146,3 @@ function SurahStream({ node, recitations, locale, paused, t }: Props) {
     </article>
   );
 }
-
-(function () {
-  const root: HTMLElement = document.querySelector(".root")!;
-  const locale = root.getAttribute("data-locale") as Quran.Locale;
-  const node: HTMLScriptElement = document.querySelector("script.surah")!;
-  const toBoolean = (str: string | null): boolean =>
-    str !== null && ["1", "t", "true", "yes"].includes(str);
-  const params = new URLSearchParams(location.search);
-  const paused = toBoolean(params.get("paused"));
-  const recitations = JSON.parse(
-    document.querySelector<HTMLElement>(".json.recitations")!.innerText,
-  );
-  const t = i18n(document.querySelector<HTMLElement>(".json.i18n")!.innerText);
-
-  ReactDOM.createRoot(root).render(
-    <SurahStream
-      recitations={recitations}
-      node={node}
-      locale={locale}
-      paused={paused}
-      t={t}
-    />,
-  );
-})();

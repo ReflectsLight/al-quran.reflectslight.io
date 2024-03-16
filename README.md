@@ -1,11 +1,11 @@
 ## About
 
 This repository contains the source code of
-[al-quran.reflectslight.io](https://al-quran.reflectslight.io),
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io) -
 a static website for reading (and listening to) The Noble Quran.
 After the website is built, the build directory consists of HTML,
 CSS, JavaScript and other static assets that can be hosted by a
-regular web server (eg nginx, apache, etc).
+standard web server (eg nginx, apache, ...).
 
 ## Stack
 
@@ -18,28 +18,20 @@ the website can be built:
   There is a good chance there's a package available for
   tidy-html5 on your operating system of choice.
 
-## Local development
+## Development
 
-__1. Clone__
-
+    # Clone repository
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-__2. Install Ruby, NodeJS packages__
-
+    # Install Ruby, NodeJS packages
     bundle install
     npm i
 
-__3. Build website__
+    # Build website
+    rake nanoc:build
 
-    # Build once
-    rake build
-
-    # Build whenever a change is detected
-    rake build:watch
-
-__4. Start server on localhost__
-
+    # Start web server
     rake server
 
 ## Thanks
@@ -47,9 +39,14 @@ __4. Start server on localhost__
 First and foremost, Alhamdulillah.
 
 * Thanks to the following graphic artists:
-  * [RefreshIcon](/src/js/components/Icon.tsx)
-    by
-    [Muhammad Haq](https://freeicons.io/profile/823).
+    - [RefreshIcon](/src/js/components/Icon.tsx)
+      by
+      [Muhammad Haq](https://freeicons.io/profile/823).
 
 * Thanks to the following translators:
-  * English (The Clear Quran) by Dr. Mustafa Khattab
+    - English (The Clear Quran) by Dr. Mustafa Khattab
+
+## License
+
+The "source code" is released under the terms of the GPL. <br>
+See [./LICENSE](./LICENSE) for details.
