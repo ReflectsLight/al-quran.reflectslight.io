@@ -2,8 +2,7 @@
 # frozen_string_literal: true
 
 ##
-# Rules for the surah stream available at /<locale>/<name>/ (eg /ar/al-fatihah/)
-# and its dependencies.
+# Rules for the surah stream available at /<locale>/<name>/.
 
 compile "/*/*/surah.json" do
   write(item.identifier.to_s)
@@ -36,17 +35,17 @@ Ryo.each(slugs) do |id, slug|
   end
 end
 
-compile "/js/pages/SurahStream.tsx" do
+compile "/js/main/surah-stream.tsx" do
   filter :webpack,
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
          reject: proc { _1.include?("WebPackage") }
-  write "/js/surah-stream.js"
+  write "/js/main/surah-stream.js"
   filter :gzip
-  write "/js/surah-stream.js.gz"
+  write "/js/main/surah-stream.js.gz"
 end
 
 compile "/js/loaders/SurahStreamLoader.ts" do
-  filter :webpack, depend_on: "/js/lib/WebPackage"
+  filter :webpack
   write "/js/loaders/surah-stream-loader.js"
 end
 

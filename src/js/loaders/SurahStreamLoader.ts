@@ -13,7 +13,7 @@ import * as Quran from "lib/Quran";
   );
 
   postman(
-    item.script("/js/surah-stream.js"),
+    item.script("/js/main/surah-stream.js"),
     item.css("/css/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
