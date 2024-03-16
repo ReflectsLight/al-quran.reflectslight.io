@@ -15,6 +15,6 @@ locales.each do |locale|
 end
 
 compile "/js/main/random.ts" do
-  filter(:webpack)
+  filter(:webpack, depend_on: ["/js/lib/"])
   write("/js/main/random.js")
 end

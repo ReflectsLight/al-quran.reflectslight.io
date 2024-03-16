@@ -1,9 +1,8 @@
-import { Locale } from "lib/Locale";
-
 (function () {
-  const surahId: number = Math.ceil(Math.random() * 114);
-  const locale = Locale(window);
   const el: HTMLElement = document.querySelector(".json.slugs")!;
-  const slugs = JSON.parse(el.innerText);
-  location.replace(`/${locale.fromPath()}/${slugs[surahId]}`);
+  const surahId: number = Math.ceil(Math.random() * 114);
+  const titles = JSON.parse(el.innerText);
+  const title = titles[surahId];
+  const locale = location.pathname.slice(1, 3);
+  location.replace(["", locale, title, ""].join("/"));
 })();

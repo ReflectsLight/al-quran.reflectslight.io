@@ -12,6 +12,6 @@ compile "/html/redirect.html.erb" do
 end
 
 compile "/js/main/redirect.ts" do
-  filter(:webpack)
+  filter(:webpack, depend_on: ["/js/lib/"])
   write("/js/main/redirect.js")
 end
