@@ -1,5 +1,5 @@
 import postman, { item } from "postman";
-import * as Quran from "lib/Quran";
+import * as Quran from "~/lib/Quran";
 
 (function () {
   const parent: HTMLElement = document.querySelector(".postman.loader")!;

@@ -1,14 +1,19 @@
-import * as Quran from "lib/Quran";
 import React, { useState, useEffect, useRef } from "react";
-import { useTheme } from "hooks/useTheme";
-import { Timer } from "components/Timer";
-import { Stream } from "components/Stream";
-import { ThemeSelect } from "components/ThemeSelect";
-import { LanguageSelect } from "components/LanguageSelect";
-import { AudioControl } from "components/AudioControl";
-import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "components/Icon";
 import classNames from "classnames";
-import { TFunction } from "lib/i18n";
+import * as Quran from "~/lib/Quran";
+import { useTheme } from "~/hooks/useTheme";
+import { Timer } from "~/components/Timer";
+import { Stream } from "~/components/Stream";
+import { ThemeSelect } from "~/components/ThemeSelect";
+import { LanguageSelect } from "~/components/LanguageSelect";
+import { AudioControl } from "~/components/AudioControl";
+import {
+  PlayIcon,
+  PauseIcon,
+  RefreshIcon,
+  StalledIcon,
+} from "~/components/Icon";
+import { TFunction } from "~/lib/i18n";
 
 interface Props {
   node: HTMLScriptElement;

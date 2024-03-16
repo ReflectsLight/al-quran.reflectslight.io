@@ -1,4 +1,4 @@
-import * as Quran from "lib/Quran";
+import * as Quran from "~/lib/Quran";
 
 type TimeSlot = [number, number];
 type TimeSlots = [TimeSlot];

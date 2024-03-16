@@ -1,6 +1,7 @@
 import React from "react";
-import { Select } from "components/Select";
-import type { Theme } from "hooks/useTheme";
+import { Select } from "~/components/Select";
+import type { Theme } from "~/hooks/useTheme";
+
 interface Props {
   theme: string;
   setTheme: (theme: Theme) => void;

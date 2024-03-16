@@ -3,9 +3,12 @@ const process = require("process");
 
 module.exports = {
   resolve: {
-    roots: [path.resolve("src/js"), path.resolve("node_modules")],
-    modules: [path.resolve("src/js"), path.resolve("node_modules")],
-    extensions: [".js", ".ts", ".tsx"],
+    modules: [path.resolve(__dirname, "node_modules")],
+    alias: {
+      "@json": path.resolve(__dirname, "src/json"),
+      "~": path.resolve(__dirname, "src/js"),
+    },
+    extensions: [".js", ".ts", ".tsx", ".json"],
   },
   module: {
     rules: [

@@ -1,11 +1,11 @@
-import * as Quran from "lib/Quran";
 import React, { useRef, useState, useEffect } from "react";
-import { useTheme } from "hooks/useTheme";
-import { ThemeSelect } from "components/ThemeSelect";
-import { LanguageSelect } from "components/LanguageSelect";
-import { formatNumber, TFunction } from "lib/i18n";
-import { RightArrow } from "components/Icon";
-import { SurahIndexFilter } from "components/SurahIndexFilter";
+import * as Quran from "~/lib/Quran";
+import { useTheme } from "~/hooks/useTheme";
+import { ThemeSelect } from "~/components/ThemeSelect";
+import { LanguageSelect } from "~/components/LanguageSelect";
+import { formatNumber, TFunction } from "~/lib/i18n";
+import { RightArrow } from "~/components/Icon";
+import { SurahIndexFilter } from "~/components/SurahIndexFilter";
 import classNames from "classnames";
 
 interface Props {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import * as Quran from "lib/Quran";
-import { formatNumber } from "lib/i18n";
+import * as Quran from "~/lib/Quran";
+import { formatNumber } from "~/lib/i18n";
 
 interface Props {
   surah: Quran.Surah;

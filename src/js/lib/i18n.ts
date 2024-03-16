@@ -1,4 +1,4 @@
-import * as Quran from "lib/Quran";
+import * as Quran from "~/lib/Quran";
 
 type PhraseMap<T> = {
   [key: string]: undefined | string | PhraseMap<T>;
