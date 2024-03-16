@@ -5,7 +5,7 @@ This repository contains the source code of
 a static website for reading (and listening to) The Noble Quran.
 After the website is built, the build directory consists of HTML,
 CSS, JavaScript and other static assets that can be hosted by a
-regular web server (eg nginx, apache, etc).
+standard web server (eg nginx, apache, ...).
 
 ## Stack
 
@@ -29,7 +29,7 @@ the website can be built:
     npm i
 
     # Build website
-    rake build
+    rake nanoc:build
 
     # Start web server
     rake server
