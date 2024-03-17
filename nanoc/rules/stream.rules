@@ -12,22 +12,22 @@ compile "/*/*/surah.json" do
   end
 end
 
-Ryo.each(slugs) do |id, slug|
+Ryo.each(name_by_id) do |id, transliterated_name|
   writer = ->(locale, identifier:) do
     name = i18n[locale].surahs.names[id.to_i - 1]
     context = Ryo.from(
       filename: "stream.html.erb",
       locale:,
       locales:,
-      surah: {id:, name:, slug:}
+      surah: {id:, name:, transliterated_name:}
     )
     filter(:erb, locals: {context:})
     filter(:tidy)
     write "/#{locale}/#{identifier}/index.html"
   end
   locales.each do |locale|
-    compile "/html/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
-      instance_exec(locale, identifier: slug, &writer)
+    compile "/html/stream.html.erb", rep: "/#{locale}/#{transliterated_name}/index.html" do
+      instance_exec(locale, identifier: transliterated_name, &writer)
     end
     compile "/html/stream.html.erb", rep: "/#{locale}/#{id}/index.html" do
       instance_exec(locale, identifier: id, &writer)
@@ -37,8 +37,7 @@ end
 
 compile "/js/main/surah-stream.tsx" do
   filter :webpack,
-         depend_on: ["/js/components", "/js/lib/", "/js/hooks"],
-         reject: proc { _1.include?("WebPackage") }
+         depend_on: ["/js/components", "/js/lib/", "/js/hooks"]
   write "/js/main/surah-stream.js"
   filter :gzip
   write "/js/main/surah-stream.js.gz"

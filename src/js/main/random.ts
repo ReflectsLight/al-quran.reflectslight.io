@@ -1,5 +1,5 @@
 (function () {
-  const nameById = require("@json/slugs.json");
+  const nameById = require("@json/nameById.json");
   const surahId: number = Math.ceil(Math.random() * 114);
   const name = nameById[surahId];
   const locale = location.pathname.slice(1, 3);
