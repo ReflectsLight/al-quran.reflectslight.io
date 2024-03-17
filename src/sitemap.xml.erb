@@ -7,9 +7,9 @@
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
- <% Ryo.each(slugs) do |_id, slug| %>
+ <% Ryo.each(name_by_id) do |_id, transliterated_name| %>
   <url>
-    <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= slug %>/</loc>
+    <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= transliterated_name %>/</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>

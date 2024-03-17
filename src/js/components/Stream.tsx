@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import * as Quran from "lib/Quran";
-import { AudioControl } from "components/AudioControl";
-import { formatNumber, TFunction } from "lib/i18n";
+import * as Quran from "~/lib/Quran";
+import { AudioControl } from "~/components/AudioControl";
+import { formatNumber, TFunction } from "~/lib/i18n";
 import classNames from "classnames";
 
 interface Props {

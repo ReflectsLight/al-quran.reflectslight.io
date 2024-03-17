@@ -2,23 +2,19 @@
 # frozen_string_literal: true
 
 require "ryo"
+require "ryo/json"
 require "nanoc-gzip"
 require "nanoc-webpack"
 require "nanoc-tidy"
+require_relative "nanoc/lib/require_rules"
 
-locales = %w[ar en]
-slugs = Ryo.from(
-  JSON.parse(
-    File.read(File.join(Dir.getwd, "src", "json", "slugs.json"))
-  )
-)
-i18n = Ryo.from(
-  JSON.parse(
-    File.read(File.join(Dir.getwd, "src", "json", "i18n.json"))
-  )
-)
-
-buildenv = ENV["buildenv"] || "development"
+##
+# Common vars
+locales    = %w[ar en]
+json_dir   = File.join(Dir.getwd, "src", "json")
+name_by_id = Ryo.from_json_file("#{json_dir}/nameById.json")
+i18n       = Ryo.from_json_file("#{json_dir}/i18n.json")
+buildenv   = ENV["buildenv"] || "development"
 Nanoc::Webpack.default_options.merge!(
   "--config" => "webpack.#{buildenv}.js"
 )
@@ -26,44 +22,8 @@ Nanoc::Tidy.default_options.merge!(
   "-upper" => true
 )
 
-def require_rules(rules, locals = {}, target = binding)
-  locals.each { target.local_variable_set(_1, _2) }
-  path = File.join(Dir.getwd, rules)
-  target.eval(
-    if File.readable?(path)
-      File.read(path)
-    elsif File.readable?("#{path}.rb")
-      File.read("#{path}.rb")
-    elsif File.readable?("#{path}.rules")
-      File.read("#{path}.rules")
-    else
-      raise LoadError, "#{path} is not readable"
-    end
-  )
-end
-
 ##
-# Inline CSS / JSON rules
-compile "/i18n.json" do
-  filter(:minify_json)
-  write(nil)
-end
-
-compile "/surahs.json" do
-  filter(:minify_json)
-  write(nil)
-end
-
-compile "/slugs.json" do
-  filter(:minify_json)
-  write(nil)
-end
-
-compile "/recitations.json" do
-  filter(:minify_json)
-  write(nil)
-end
-
+# See packages/typescript/postman
 compile "/css/postman.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
@@ -73,7 +33,7 @@ end
 ##
 # /sitemap.xml
 compile "/sitemap.xml.erb" do
-  filter(:erb, locals: {locales:, slugs:})
+  filter(:erb, locals: {locales:, name_by_id:})
   filter(:strip)
   write("/sitemap.xml")
 end
@@ -88,8 +48,8 @@ end
 # Require rules
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect"
-require_rules "nanoc/rules/random", {locales:, i18n:, slugs:}
-require_rules "nanoc/rules/stream", {locales:, i18n:, slugs:}
+require_rules "nanoc/rules/random", {locales:}
+require_rules "nanoc/rules/stream", {locales:, i18n:, name_by_id:}
 require_rules "nanoc/rules/index", {locales:, i18n:}
 
 ##

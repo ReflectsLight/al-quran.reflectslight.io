@@ -1,9 +1,7 @@
-import { Locale } from "lib/Locale";
-
 (function () {
+  const nameById = require("@json/nameById.json");
   const surahId: number = Math.ceil(Math.random() * 114);
-  const locale = Locale(window);
-  const el: HTMLElement = document.querySelector(".json.slugs")!;
-  const slugs = JSON.parse(el.innerText);
-  location.replace(`/${locale.fromPath()}/${slugs[surahId]}`);
+  const name = nameById[surahId];
+  const locale = location.pathname.slice(1, 3);
+  location.replace(["", locale, name, ""].join("/"));
 })();

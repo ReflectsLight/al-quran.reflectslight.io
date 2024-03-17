@@ -1,6 +1,6 @@
 import React from "react";
-import { TFunction } from "lib/i18n";
-import * as Quran from "lib/Quran";
+import { TFunction } from "~/lib/i18n";
+import * as Quran from "~/lib/Quran";
 
 type Props = {
   t: TFunction;

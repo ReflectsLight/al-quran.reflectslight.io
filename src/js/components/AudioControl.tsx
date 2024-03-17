@@ -1,7 +1,7 @@
 import url from "url";
-import * as Quran from "lib/Quran";
+import * as Quran from "~/lib/Quran";
 import React, { useEffect, useMemo, useState } from "react";
-import { SoundOnIcon, SoundOffIcon } from "components/Icon";
+import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
 type Props = {
   recitation: Quran.Recitation;

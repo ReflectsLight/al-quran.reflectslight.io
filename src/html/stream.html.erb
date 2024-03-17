@@ -10,14 +10,14 @@
     <link
       rel="canonical"
       hreflang="<%= context.locale %>"
-      href="https://al-quran.reflectslight.io/<%= context.locale %>/<%= context.surah.slug %>/"
+      href="https://al-quran.reflectslight.io/<%= context.locale %>/<%= context.surah.transliterated_name %>/"
     />
     <% context.locales.each do |locale| %>
     <link
         rel="alternate"
         type="text/html"
         hreflang="<%= locale %>"
-        href="https://al-quran.reflectslight.io/<%= locale %>/<%= context.surah.slug %>/"
+        href="https://al-quran.reflectslight.io/<%= locale %>/<%= context.surah.transliterated_name %>/"
       />
     <% end %>
     <link rel="icon" href="/favicon.svg">

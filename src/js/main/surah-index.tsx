@@ -1,8 +1,8 @@
-import * as Quran from "lib/Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { i18n } from "lib/i18n";
-import { SurahIndex } from "components/SurahIndex";
+import * as Quran from "~/lib/Quran";
+import { i18n } from "~/lib/i18n";
+import { SurahIndex } from "~/components/SurahIndex";
 
 (function () {
   const root: HTMLElement = document.querySelector(".root")!;
