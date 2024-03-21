@@ -4,9 +4,9 @@
     "./packages/typescript/*"
   ],
   "scripts": {
+    "tsc": "tsc --noEmit",
     "eslint": "npm exec eslint -- --fix src/js/",
-    "prettier": "npm exec prettier -- --write src/js/",
-    "prepare": "is-ci || husky install"
+    "prettier": "npm exec prettier -- --write src/js/"
   },
   "dependencies": {
     "classnames": "^2.3.2",
@@ -19,8 +19,6 @@
     "@types/react-dom": "^18.0.6",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^8.0.0",
-    "is-ci": "^3.0.1",
     "prettier": "^2.7.1",
     "ts-loader": "^9.3.1",
     "ts-standard": "^12.0.1",
