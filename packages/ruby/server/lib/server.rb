@@ -17,10 +17,9 @@ class Server
   def self.for_dir(path, options = {})
     host = options.delete(:host) || "127.0.0.1"
     port = options.delete(:port) || 7777
+    unix = options.delete(:unix) || false
     new app(path), options.merge!(
-      binds: ["tcp://#{host}:#{port}"],
-      tcp_host: host,
-      tcp_port: port
+      binds: [unix ? "unix://#{unix}" : "tcp://#{host}:#{port}"]
     )
   end
 
@@ -45,7 +44,6 @@ class Server
 
   def default_options
     {
-      supported_http_methods: %w[GET HEAD],
       min_threads: 1,
       max_threads: 5,
       workers: 1
