@@ -21,7 +21,7 @@ task :server, [:protocol] do |_t, args|
       else
         {host: nanoc.server.tcp.host, port: nanoc.server.tcp.port}
       end
-  s = Server.for_dir(nanoc.output_dir, o)
+  s = Server.dir(nanoc.output_dir, o)
   s.start(block: true)
 rescue Interrupt
   s.stop
