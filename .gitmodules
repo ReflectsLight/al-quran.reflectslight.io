@@ -1,3 +1,6 @@
 [submodule "submodules/surah-name-glyphs"]
 	path = submodules/surah-name-glyphs
 	url = https://github.com/ReflectsLight/surah-name-glyphs
+[submodule "packages/ruby/server.rb"]
+	path = packages/ruby/server.rb
+	url = https://github.com/0x1eef/server.rb
