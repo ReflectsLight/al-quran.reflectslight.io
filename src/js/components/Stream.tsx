@@ -30,7 +30,7 @@ export function Stream({
       <ul
         lang={locale}
         className={classNames(
-          "body stream scroll-y list-none p-0 h-5/6",
+          "body stream scroll-y list-none p-0 m-0 mt-1 h-5/6",
           ...className,
         )}
         ref={ref}

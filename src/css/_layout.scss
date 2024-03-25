@@ -87,6 +87,9 @@ body .root .content.en {
 /* Arabic-specific rules */
 body .root .content.theme.ar {
   header {
+    h1 {
+      font-size: xx-large;
+    }
     nav, div {
       direction: ltr;
       .react-select.language {

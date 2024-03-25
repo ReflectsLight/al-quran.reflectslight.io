@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as Quran from "~/lib/Quran";
 import { useTheme } from "~/hooks/useTheme";
-import { ThemeSelect } from "~/components/ThemeSelect";
-import { LanguageSelect } from "~/components/LanguageSelect";
 import { formatNumber, TFunction } from "~/lib/i18n";
 import { RightArrow } from "~/components/Icon";
+import { Head } from "~/components/Head";
 import { SurahIndexFilter } from "~/components/SurahIndexFilter";
 import classNames from "classnames";
 
@@ -35,23 +34,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         locale,
       )}
     >
-      <header
-        className={classNames("flex flex-col", {
-          "h-20": locale !== "ar",
-          "h-22": locale === "ar",
-        })}
-      >
-        <h1 className="flex justify-center p-0 mt-2">
-          <a className="no-underline" href={`/${locale}/`}>
-            {t(locale, "TheNobleQuran")}
-          </a>
-        </h1>
-        <nav className="flex flex-row justify-between">
-          <LanguageSelect locale={locale} />
-          <ThemeSelect theme={theme} setTheme={setTheme} />
-        </nav>
-      </header>
-      <ul className="body index scroll-y list-none p-0 h-5/6">
+      <Head locale={locale} theme={theme} setTheme={setTheme} >
+        {t(locale, "TheNobleQuran")}
+      </Head>
+      <ul className="body index scroll-y list-none p-0 m-0 h-5/6">
         {index.map((surah, key) => (
           <li className="surah" key={key}>
             <a

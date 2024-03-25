@@ -4,9 +4,8 @@ import * as Quran from "~/lib/Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { Timer } from "~/components/Timer";
 import { Stream } from "~/components/Stream";
-import { ThemeSelect } from "~/components/ThemeSelect";
-import { LanguageSelect } from "~/components/LanguageSelect";
 import { AudioControl } from "~/components/AudioControl";
+import { Head } from "~/components/Head";
 import {
   PlayIcon,
   PauseIcon,
@@ -73,30 +72,9 @@ export function SurahStream({ node, recitations, locale, paused, t }: Props) {
       )}
     >
       {readyToRender && (
-        <header
-          className={classNames("flex flex-col", {
-            "h-24": locale !== "ar",
-            "h-26": locale === "ar",
-          })}
-        >
-          <h1 className="flex justify-center p-0 mt-2">
-            <a className="no-underline color-primary" href={`/${locale}/`}>
-              {t(locale, "TheNobleQuran")}
-            </a>
-          </h1>
-          <nav className="flex flex-row justify-between">
-            <LanguageSelect locale={locale} path={surah.slug} />
-            <ThemeSelect theme={theme} setTheme={setTheme} />
-          </nav>
-          <div className="flex justify-between surah-name">
-            <span className="localized-name" lang={locale}>
-              {surah.localizedName}
-            </span>
-            <span className="transliterated-name" lang="en">
-              {surah.transliteratedName}
-            </span>
-          </div>
-        </header>
+        <Head locale={locale} theme={theme} setTheme={setTheme}>
+          {t(locale, "TheNobleQuran")}
+        </Head>
       )}
       {readyToRender && (
         <Stream
