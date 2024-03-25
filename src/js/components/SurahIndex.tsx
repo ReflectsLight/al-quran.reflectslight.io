@@ -17,6 +17,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Quran.Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>();
+  const ltr = locale === "en";
 
   useEffect(() => {
     if (ref.current) {
@@ -63,8 +64,8 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           className="flex flex-row items-center no-underline"
           href={`/${locale}/random/`}
         >
-          <RightArrow />
-          <span className="pl-3">{t(locale, "ChooseRandomChapter")}</span>
+          {ltr && <RightArrow />}
+          <span className={classNames({"pl-3": ltr})}>{t(locale, "ChooseRandomChapter")}</span>
         </a>
         <SurahIndexFilter
           t={t}
