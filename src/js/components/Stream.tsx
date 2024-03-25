@@ -26,6 +26,8 @@ export function Stream({
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const ref = useRef<HTMLUListElement>();
   const ul = useMemo<JSX.Element>(() => {
+    const ltr = locale === "en";
+    const rtl = locale === "ar";
     return (
       <ul
         lang={locale}
@@ -37,8 +39,13 @@ export function Stream({
       >
         {stream.map((ayah: Quran.Ayah) => {
           return (
-            <li key={ayah.id} className="ayah fade">
-              <span className="title">
+            <li
+              key={ayah.id}
+              className={classNames("ayah fade", { "mb-6": rtl, "mb-4": ltr })}
+            >
+              <span
+                className={classNames("flex h-8 items-center", { "mb-2": rtl })}
+              >
                 {(isPaused || endOfStream) && (
                   <AudioControl
                     recitation={recitation}
@@ -54,7 +61,7 @@ export function Stream({
                   {formatNumber(surah.ayat.length, locale)}
                 </span>
               </span>
-              <p className="m-0 mb-3">{ayah.text}</p>
+              <p className="m-0">{ayah.text}</p>
             </li>
           );
         })}

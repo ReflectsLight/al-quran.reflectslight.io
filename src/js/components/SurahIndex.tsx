@@ -34,7 +34,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         locale,
       )}
     >
-      <Head locale={locale} theme={theme} setTheme={setTheme} >
+      <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
       <ul className="body index scroll-y list-none p-0 m-0 h-5/6">

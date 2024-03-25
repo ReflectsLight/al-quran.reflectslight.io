@@ -3,7 +3,7 @@ import { Select } from "~/components/Select";
 
 type Props = {
   locale: string;
-}
+};
 
 export function LanguageSelect({ locale }: Props) {
   return (
@@ -15,7 +15,7 @@ export function LanguageSelect({ locale }: Props) {
         const content = document.querySelector(".content.theme");
         const path = location.pathname.replace(
           new RegExp(`^/${locale}/`),
-          `/${newLocale}/`
+          `/${newLocale}/`,
         );
         content.classList.add("invisible");
         location.replace(path);
