@@ -67,7 +67,7 @@ export function Stream({
         })}
       </ul>
     );
-  }, [stream.length, isPaused]);
+  }, [stream.length, isPaused, endOfStream]);
 
   useEffect(() => {
     const el = ref.current;
