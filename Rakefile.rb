@@ -12,11 +12,16 @@ load "rake/tasks/nanoc.rake"
 load "rake/tasks/submodules.rake"
 
 desc "Serve the website on localhost"
-task :server, [:host, :port] do |_t, args|
+task :server, [:protocol] do |_t, args|
   require "server"
-  build_dir = Ryo.from(YAML.load_file("./nanoc.yaml")).output_dir
+  nanoc = Ryo.from(YAML.load_file("./nanoc.yaml"))
   h = args.to_h
-  s = Server.for_dir(build_dir, h.slice(:host,:port))
+  o = if h[:protocol] == 'unix'
+        {unix: nanoc.server.unix.path}
+      else
+        {host: nanoc.server.tcp.host, port: nanoc.server.tcp.port}
+      end
+  s = Server.dir(nanoc.output_dir, o)
   s.start(block: true)
 rescue Interrupt
   s.stop

@@ -2,7 +2,7 @@ $black: #454545;
 $max-width: 1024px;
 
 * {
-  line-height: 1.5;
+  line-height: 1;
 }
 
 html[lang="en"] {
@@ -87,6 +87,9 @@ body .root .content.en {
 /* Arabic-specific rules */
 body .root .content.theme.ar {
   header {
+    h1 {
+      font-size: xx-large;
+    }
     nav, div {
       direction: ltr;
       .react-select.language {

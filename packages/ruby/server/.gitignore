@@ -1,8 +1,0 @@
-build/
-tmp/
-node_modules/
-.bundle/
-*.log
-*.sh
-*.core
-Gemfile.lock

@@ -15,7 +15,7 @@ gem "sass", "~> 3.7"
 
 ##
 # Web server
-gem "server.rb", path: "./packages/ruby/server"
+gem "server.rb", path: "./packages/ruby/server.rb"
 
 ##
 # Other

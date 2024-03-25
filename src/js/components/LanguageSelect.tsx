@@ -1,28 +1,24 @@
 import React from "react";
 import { Select } from "~/components/Select";
 
-interface Props {
+type Props = {
   locale: string;
-  path?: string;
-}
+};
 
-export function LanguageSelect({ locale, path = "" }: Props) {
+export function LanguageSelect({ locale }: Props) {
   return (
     <Select
       value={locale}
       className="language"
       onChange={(el: JSX.Element) => {
-        const locale = el.props.value;
-        const newPath = (() => {
-          if (path.endsWith("/") || path.length === 0) {
-            return path;
-          } else {
-            return `${path}/`;
-          }
-        })();
+        const newLocale = el.props.value;
         const content = document.querySelector(".content.theme");
+        const path = location.pathname.replace(
+          new RegExp(`^/${locale}/`),
+          `/${newLocale}/`,
+        );
         content.classList.add("invisible");
-        location.replace(`/${locale}/${newPath}`);
+        location.replace(path);
       }}
     >
       <option value="ar">

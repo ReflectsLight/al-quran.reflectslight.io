@@ -19,3 +19,10 @@ data_sources:
     encoding: UTF-8
     content_dir: src/
     layouts_dir: src/layouts
+
+server:
+  unix:
+    path: /tmp/al-quran.reflectslight.io
+  tcp:
+    host: 127.0.0.1
+    port: 7777
