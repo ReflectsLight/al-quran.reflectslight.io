@@ -73,7 +73,7 @@ GEM
     nanoc-gzip.rb (0.2.3)
       nanoc (~> 4.12)
     nanoc-tidy.rb (0.4.0)
-    nanoc-webpack.rb (0.7.0)
+    nanoc-webpack.rb (0.10.0)
       ryo.rb (~> 0.5)
     nio4r (2.7.1)
     paint (2.3.0)
@@ -173,4 +173,4 @@ DEPENDENCIES
   test-cmd.rb
 
 BUNDLED WITH
-   2.5.3
+   2.5.9

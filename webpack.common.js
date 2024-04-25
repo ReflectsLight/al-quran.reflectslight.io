@@ -14,11 +14,12 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: [{
-          loader: "ts-loader",
-          options: {transpileOnly: true, onlyCompileBundledFiles: true}
-        }],
+        loader: 'esbuild-loader',
         exclude: /node_modules/,
+        options: {
+          loader: 'tsx',
+          target: 'es2015'
+        }
       },
     ],
   },

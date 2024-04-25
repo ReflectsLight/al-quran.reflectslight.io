@@ -15,9 +15,9 @@ json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json_file("#{json_dir}/nameById.json")
 i18n       = Ryo.from_json_file("#{json_dir}/i18n.json")
 buildenv   = ENV["buildenv"] || "development"
-Nanoc::Webpack.default_options.merge!(
-  "--config" => "webpack.#{buildenv}.js"
-)
+Nanoc::Webpack
+  .default_argv
+  .concat ["--config", "webpack.#{buildenv}.js"]
 Nanoc::Tidy.default_options.merge!(
   "-upper" => true
 )
