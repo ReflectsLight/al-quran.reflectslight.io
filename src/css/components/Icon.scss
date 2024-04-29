@@ -68,6 +68,8 @@
 
 .content.theme ul.stream span {
   .sound-on.icon, .sound-off.icon {
+    position: relative;
+    top: 2px;
     width: 24px;
     height: 24px;
   }
