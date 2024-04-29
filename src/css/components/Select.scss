@@ -29,21 +29,18 @@
 
   .react-select.language {
     flex-direction: column;
-    justify-content: flex-end;
-
-    .selected-option.ar {
-      font-size: large;
-    }
+    justify-content: flex-start;
 
     ul {
       height: 0;
       li {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         font-size: medium;
         height: 30px;
         min-width: 125px;
+        padding-left: 15px;
       }
 
       li.en {
@@ -54,7 +51,7 @@
       li.ar {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-start;
         font-size: large;
       }
     }
@@ -103,11 +100,11 @@
 
 .content.theme.ar {
   .react-select.language {
+    .selected-option span {
+      position: relative;
+      bottom: 8px;
+    }
     ul {
-      li {
-        align-items: center;
-        justify-content: flex-end;
-      }
       li.ar {
         display: none;
       }

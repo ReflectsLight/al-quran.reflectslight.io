@@ -42,6 +42,13 @@ body .root .content.theme {
         justify-content: flex-end;
       }
     }
+    .react-select.language {
+      ul {
+        position: relative;
+        top: 15px;
+        right: 0px;
+      }
+    }
   }
 
   footer {
@@ -63,15 +70,12 @@ body .root .content.en {
   header {
     nav, div {
       font-size: large;
-      .react-select.language {
-        ul {
+    }
+    .react-select.language {
+      ul {
+        li.ar span {
           position: relative;
-          top: 5px;
-          li.ar span {
-            position: relative;
-            bottom: 3px;
-            right: 3px;
-          }
+          bottom: 3px;
         }
       }
     }
@@ -94,18 +98,16 @@ body .root .content.theme.ar {
       direction: ltr;
       .react-select.language {
         ul {
-          top: 15px;
-          right: 55px;
-          li.en span {
-            position: relative;
-            right: 3px;
-          }
-        }
-        .selected-option.ar {
-          font-size: x-large;
           position: relative;
-          bottom: 3px;
+          top: 7.5px;
         }
+        li.en span {
+          position: relative;
+          right: 3px;
+        }
+      }
+      .selected-option {
+        font-size: x-large;
       }
     }
   }
