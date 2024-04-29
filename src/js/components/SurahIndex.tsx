@@ -20,8 +20,8 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const ltr = locale === "en";
 
   useEffect(() => {
+    const div = ref.current;
     if (ref.current) {
-      const div = ref.current;
       div.classList.remove("invisible");
     }
   }, [ref.current, theme]);
