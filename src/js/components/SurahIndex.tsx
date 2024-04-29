@@ -42,19 +42,28 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         {index.map((surah, key) => (
           <li className="surah" key={key}>
             <a
-              className="flex items-center h-10 color-primary no-underline"
+              className={classNames(
+                "flex items-center color-primary no-underline",
+                { "h-14": ltr, "h-10": !ltr },
+              )}
               href={`/${locale}/${surah.slug}/`}
             >
               <span className="color-secondary font-extrabold w-10 text-center">
                 {formatNumber(surah.id, locale)}
               </span>
               <span>{surah.localizedName}</span>
-              <span
-                className="flex justify-end grow pr-3 transliterated"
-                lang="en"
-              >
-                {surah.transliteratedName}
-              </span>
+              {ltr && (
+                <div className="flex justify-end grow pr-3">
+                  <div className="flex flex-col">
+                    <span className="transliterated" lang="en">
+                      {surah.transliteratedName}
+                    </span>
+                    <span className="ayat flex justify-end text-sm">
+                      {surah.numberOfAyah} {t(locale, "ayat")}
+                    </span>
+                  </div>
+                </div>
+              )}
             </a>
           </li>
         ))}
@@ -65,7 +74,9 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           href={`/${locale}/random/`}
         >
           {ltr && <RightArrow />}
-          <span className={classNames({"pl-3": ltr})}>{t(locale, "ChooseRandomChapter")}</span>
+          <span className={classNames({ "pl-3": ltr })}>
+            {t(locale, "ChooseRandomChapter")}
+          </span>
         </a>
         <SurahIndexFilter
           t={t}

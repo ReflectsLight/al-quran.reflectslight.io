@@ -14,8 +14,9 @@ body .root .content.theme {
         text-decoration: none;
       }
 
-      span.transliterated {
-        @media (max-width: $breakpoint-sm) {
+      @media (max-width: $breakpoint-sm) {
+        height: 45px;
+        span.transliterated, span.ayat {
           display: none;
         }
       }
