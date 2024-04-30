@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import classnames from "classnames";
+import classNames from "classnames";
 
 export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {
   target: HTMLLIElement;
@@ -30,7 +30,7 @@ export function Select({
   }, []);
 
   return (
-    <div className={classnames("react-select", className)}>
+    <div className={classNames("react-select", className)}>
       <span
         className="selected-option"
         onClick={e => [e.stopPropagation(), setOpen(true)]}
