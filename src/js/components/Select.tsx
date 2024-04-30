@@ -20,7 +20,7 @@ export function Select({
 }: Props) {
   const [open, setOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<JSX.Element>(
-    get(option, { within }),
+    query(option, { within }),
   );
   const close = () => setOpen(false);
 
@@ -51,7 +51,7 @@ export function Select({
                 const value =
                   target.getAttribute("data-value") ||
                   target.parentElement.getAttribute("data-value");
-                const option: JSX.Element = get(value, { within });
+                const option: JSX.Element = query(value, { within });
                 onChange(option);
                 setSelected(option);
                 setOpen(false);
@@ -66,7 +66,10 @@ export function Select({
   );
 }
 
-function get(option: string, options: { within: JSX.Element[] }): JSX.Element {
+function query(
+  option: string,
+  options: { within: JSX.Element[] },
+): JSX.Element {
   const { within } = options;
   return within.find(({ props: { value } }) => option === value);
 }
