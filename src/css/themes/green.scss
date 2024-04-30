@@ -3,7 +3,7 @@
 
   direction: rtl;
   .react-select.language {
-    .selected-option { color: $primary-color; }
+    .selected { color: $primary-color; }
   }
 }
 
@@ -23,7 +23,7 @@
   }
 
   .react-select.theme {
-    .selected-option {
+    .selected {
       .circle {
         background: $primary-color;
         border-radius: 10px;

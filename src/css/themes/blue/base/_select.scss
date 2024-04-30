@@ -2,7 +2,7 @@
   @import "themes/blue/base/colors";
 
   .react-select.theme {
-    .selected-option .circle {
+    .selected .circle {
       background: $primary-color;
     }
     ul li.blue .circle {
@@ -15,7 +15,7 @@
   @import "themes/blue/base/colors";
 
   .react-select.language {
-    .selected-option {
+    .selected {
       color: $primary-color;
     }
   }

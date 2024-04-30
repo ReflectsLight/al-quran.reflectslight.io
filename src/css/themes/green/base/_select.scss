@@ -1,7 +1,7 @@
 .content.theme {
   @import "themes/green/base/colors";
   .react-select.theme {
-    .selected-option.green .circle {
+    .selected.green .circle {
       background: $primary-color;
     }
     ul li.green .circle {

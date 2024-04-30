@@ -6,7 +6,7 @@
     height: 20px;
     z-index: 3;
 
-    .selected-option {
+    .selected {
       cursor: pointer;
     }
 
@@ -58,7 +58,7 @@
   }
 
   .react-select.theme {
-    .selected-option {
+    .selected {
       .circle {
         display: block;
         width: 16px;
@@ -100,7 +100,7 @@
 
 .content.theme.ar {
   .react-select.language {
-    .selected-option span {
+    .selected span {
       position: relative;
       bottom: 8px;
     }

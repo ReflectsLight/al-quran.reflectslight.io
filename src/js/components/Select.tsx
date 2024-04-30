@@ -28,7 +28,7 @@ export function Select({
   return (
     <div className={classNames("react-select", className)}>
       <span
-        className="selected-option"
+        className="selected"
         onClick={e => [e.stopPropagation(), setOpen(true)]}
       >
         {selected.props.children}

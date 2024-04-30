@@ -37,7 +37,7 @@ body .root .content.theme {
       width: 100%;
     }
     .react-select.theme {
-      .selected-option {
+      .selected {
         display: flex;
         justify-content: flex-end;
       }
@@ -106,7 +106,7 @@ body .root .content.theme.ar {
           right: 3px;
         }
       }
-      .selected-option {
+      .selected {
         font-size: x-large;
       }
     }
