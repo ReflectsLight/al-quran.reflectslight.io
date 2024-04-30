@@ -4,7 +4,7 @@ import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/i18n";
 import { RightArrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
-import { SurahIndexFilter } from "~/components/SurahIndexFilter";
+import { Filter } from "./Filter";
 import classNames from "classnames";
 
 interface Props {
@@ -78,7 +78,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
             {t(locale, "ChooseRandomChapter")}
           </span>
         </a>
-        <SurahIndexFilter
+        <Filter
           t={t}
           locale={locale}
           surahs={surahs}

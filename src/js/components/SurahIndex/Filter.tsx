@@ -9,7 +9,7 @@ type Props = {
   surahs: Quran.Surah[];
 };
 
-export function SurahIndexFilter({ t, locale, setIndex, surahs }: Props) {
+export function Filter({ t, locale, setIndex, surahs }: Props) {
   const onInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       target: { value },
