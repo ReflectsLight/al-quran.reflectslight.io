@@ -78,12 +78,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
             {t(locale, "ChooseRandomChapter")}
           </span>
         </a>
-        <Filter
-          t={t}
-          locale={locale}
-          surahs={surahs}
-          setIndex={setIndex}
-        />
+        <Filter t={t} locale={locale} surahs={surahs} setIndex={setIndex} />
       </footer>
     </div>
   );

@@ -19,9 +19,12 @@ import * as Quran from "~/lib/Quran";
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.json(`/json/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
-      const path = ["/json", "/durations", `${recitation.id}`, `${surahId}.json`].join(
-        "/",
-      );
+      const path = [
+        "/json",
+        "/durations",
+        `${recitation.id}`,
+        `${surahId}.json`,
+      ].join("/");
       return item.json(path, {
         className: `recitation time-slots ${recitation.id}`,
       });
