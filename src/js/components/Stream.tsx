@@ -1,21 +1,19 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import * as Quran from "~/lib/Quran";
+import { Surah, Ayah, TAyah, TAyat, TSurah, TLocale } from "Quran";
 import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/i18n";
 import classNames from "classnames";
 
 type Props = {
-  recitation: Quran.Recitation;
-  surah: Quran.Surah;
-  stream: Quran.Ayat;
-  locale: Quran.Locale;
+  surah: Surah<TSurah>;
+  stream: TAyat;
+  locale: TLocale;
   endOfStream: boolean;
   isPaused: boolean;
   t: TFunction;
 };
 
 export function Stream({
-  recitation,
   surah,
   stream,
   locale,
@@ -37,7 +35,7 @@ export function Stream({
         )}
         ref={ref}
       >
-        {stream.map((ayah: Quran.Ayah) => {
+        {stream.map((ayah: Ayah<TAyah>) => {
           return (
             <li
               key={ayah.id}
@@ -48,7 +46,6 @@ export function Stream({
               >
                 {(isPaused || endOfStream) && (
                   <AudioControl
-                    recitation={recitation}
                     surah={surah}
                     ayah={ayah}
                     onEnd={turnOffSound => turnOffSound()}
@@ -61,7 +58,7 @@ export function Stream({
                   {formatNumber(surah.ayat.length, locale)}
                 </span>
               </span>
-              <p className="m-0">{ayah.text}</p>
+              <p className="m-0">{ayah.body}</p>
             </li>
           );
         })}

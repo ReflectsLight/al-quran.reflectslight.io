@@ -1,12 +1,11 @@
 import url from "url";
-import * as Quran from "~/lib/Quran";
+import type { Surah, TSurah, Ayah, TAyah } from "Quran";
 import React, { useEffect, useMemo, useState } from "react";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
 type Props = {
-  recitation: Quran.Recitation;
-  surah: Quran.Surah;
-  ayah: Quran.Ayah;
+  surah: Surah<TSurah>;
+  ayah: Ayah<TAyah>;
   onStall?: (e?: Event) => void;
   onPlay?: (e?: Event) => void;
   onPlaying?: (e?: Event) => void;
@@ -15,7 +14,6 @@ type Props = {
 };
 
 export function AudioControl({
-  recitation,
   surah,
   ayah,
   onPlay = () => null,
@@ -43,10 +41,15 @@ export function AudioControl({
   }, []);
 
   useEffect(() => {
+    const src = [
+      "https://al-quran.reflectslight.io",
+      "audio",
+      "alafasy",
+      surah.id,
+      `${ayah.id}.mp3`,
+    ].join("/");
     if (soundOn) {
-      audio.src = [url.format(recitation.url), surah.id, `${ayah.id}.mp3`].join(
-        "/",
-      );
+      audio.src = src;
       audio.play();
     } else {
       audio.pause();

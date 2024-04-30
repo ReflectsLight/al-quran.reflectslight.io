@@ -1,5 +1,4 @@
 import postman, { item } from "postman";
-import * as Quran from "~/lib/Quran";
 
 (function () {
   const parent: HTMLElement = document.querySelector(".postman.loader")!;
@@ -8,9 +7,6 @@ import * as Quran from "~/lib/Quran";
   const inlineStyle: HTMLStyleElement = document.querySelector(".css.postman")!;
   const { locale, surahId } =
     document.querySelector<HTMLElement>(".root")!.dataset;
-  const recitations = JSON.parse(
-    document.querySelector<HTMLElement>(".json.recitations")!.innerText,
-  );
 
   postman(
     item.script("/js/main/surah-stream.js"),
@@ -18,17 +14,6 @@ import * as Quran from "~/lib/Quran";
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.json(`/json/${locale}/${surahId}/surah.json`, { className: "surah" }),
-    ...recitations.map((recitation: Quran.Recitation) => {
-      const path = [
-        "/json",
-        "/durations",
-        `${recitation.id}`,
-        `${surahId}.json`,
-      ].join("/");
-      return item.json(path, {
-        className: `recitation time-slots ${recitation.id}`,
-      });
-    }),
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = `${percent.toFixed(0)}%`;

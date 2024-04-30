@@ -1,5 +1,7 @@
 /build/
 /tmp/
+/packages/typescript/**/*.js
+/packages/typescript/**/dist/
 /rake/tasks/deploy.rake
 /.gems/
 /crash.log

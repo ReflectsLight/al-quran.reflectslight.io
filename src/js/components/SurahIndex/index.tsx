@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import * as Quran from "~/lib/Quran";
+import { TLocale, TSurah, Surah } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/i18n";
 import { RightArrow } from "~/components/Icon";
@@ -8,14 +8,14 @@ import { Filter } from "./Filter";
 import classNames from "classnames";
 
 type Props = {
-  locale: Quran.Locale;
-  surahs: Quran.Surah[];
+  locale: TLocale;
+  surahs: Surah<TSurah>[];
   t: TFunction;
 };
 
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
-  const [index, setIndex] = useState<Quran.Surah[]>(surahs);
+  const [index, setIndex] = useState<Surah<TSurah>[]>(surahs);
   const ref = useRef<HTMLDivElement>();
   const ltr = locale === "en";
 
@@ -46,17 +46,17 @@ export function SurahIndex({ locale, surahs, t }: Props) {
                 "flex items-center color-primary no-underline",
                 { "h-14": ltr, "h-10": !ltr },
               )}
-              href={`/${locale}/${surah.slug}/`}
+              href={`/${locale}/${surah.romanized.slug}/`}
             >
               <span className="color-secondary font-extrabold w-10 text-center">
                 {formatNumber(surah.id, locale)}
               </span>
-              <span>{surah.localizedName}</span>
+              <span>{surah.getName(locale)}</span>
               {ltr && (
                 <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
                     <span className="transliterated" lang="en">
-                      {surah.transliteratedName}
+                      {surah.romanized.name}
                     </span>
                     <span className="ayat flex justify-end text-sm">
                       {surah.numberOfAyah} {t(locale, "ayat")}

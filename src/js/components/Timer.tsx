@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import * as Quran from "~/lib/Quran";
+import { Surah, TSurah, TLocale, TAyat } from "Quran";
 import { formatNumber } from "~/lib/i18n";
 
 type Props = {
-  surah: Quran.Surah;
-  locale: Quran.Locale;
-  stream: Quran.Ayat;
+  surah: Surah<TSurah>;
+  locale: TLocale;
+  stream: TAyat;
   soundOn: boolean;
-  setStream: (stream: Quran.Ayat) => void;
+  setStream: (stream: TAyat) => void;
   setEndOfStream: (v: boolean) => void;
   ms: number | null;
   setMs: (n: number) => void;
@@ -31,12 +31,12 @@ export function Timer({
   const lastAyah = surah.ayat[surah.ayat.length - 1];
 
   useEffect(() => {
-    setMs(ayah.readTimeMs);
+    setMs(ayah.ms);
   }, [ayah.id]);
 
   useEffect(() => {
     if (!soundOn) return;
-    setMs(ayah.readTimeMs);
+    setMs(ayah.ms);
   }, [soundOn]);
 
   useEffect(() => {

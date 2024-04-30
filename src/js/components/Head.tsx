@@ -2,11 +2,11 @@ import React from "react";
 import type { ReactNode } from "react";
 import { ThemeSelect } from "~/components/ThemeSelect";
 import { LanguageSelect } from "~/components/LanguageSelect";
-import * as Quran from "~/lib/Quran";
+import type { TLocale } from "Quran";
 import { Theme } from "~/hooks/useTheme";
 
 type Props = {
-  locale: Quran.Locale;
+  locale: TLocale;
   theme: string;
   setTheme: (t: Theme) => void;
   children: ReactNode;

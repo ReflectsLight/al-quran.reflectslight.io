@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
-import * as Quran from "~/lib/Quran";
+import { Surah, TSurah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { Timer } from "~/components/Timer";
 import { Stream } from "~/components/Stream";
@@ -15,30 +15,18 @@ import {
 import { TFunction } from "~/lib/i18n";
 
 type Props = {
-  node: HTMLScriptElement;
-  recitations: Quran.Recitation[];
-  locale: Quran.Locale;
-  paused: boolean;
+  surah: Surah<TSurah>;
+  locale: TLocale;
   t: TFunction;
 };
 
-const getTimeSlots = (recitation: Quran.Recitation) => {
-  const selector = `script.recitation.time-slots.${recitation.id}`;
-  const timeSlots: HTMLScriptElement = document.querySelector(selector)!;
-  return timeSlots;
-};
-
-export function SurahStream({ node, recitations, locale, paused, t }: Props) {
-  const [stream, setStream] = useState<Quran.Ayat>([]);
-  const [isPaused, setIsPaused] = useState<boolean>(paused);
+export function SurahStream({ surah, locale, t }: Props) {
+  const [stream, setStream] = useState<TAyat>([]);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
   const [soundOn, setSoundOn] = useState<boolean>(false);
   const [isStalled, setIsStalled] = useState<boolean>(false);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
-  const [recitation] = useState<Quran.Recitation>(recitations[0]);
-  const [surah] = useState<Quran.Surah>(
-    Quran.Surah.fromDOMNode(locale, node, getTimeSlots(recitation)),
-  );
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState<number | null>(null);
@@ -58,7 +46,7 @@ export function SurahStream({ node, recitations, locale, paused, t }: Props) {
 
   useEffect(() => {
     if (ayah) {
-      setMs(ayah.readTimeMs);
+      setMs(ayah.ms);
     }
   }, [ayah]);
 
@@ -78,7 +66,6 @@ export function SurahStream({ node, recitations, locale, paused, t }: Props) {
       )}
       {readyToRender && (
         <Stream
-          recitation={recitation}
           surah={surah}
           stream={stream}
           locale={locale}
@@ -97,7 +84,6 @@ export function SurahStream({ node, recitations, locale, paused, t }: Props) {
         {readyToRender && !endOfStream && (
           <div className="sound-box flex w-14 justify-end">
             <AudioControl
-              recitation={recitation}
               surah={surah}
               ayah={ayah}
               onPlay={() => setSoundOn(true)}

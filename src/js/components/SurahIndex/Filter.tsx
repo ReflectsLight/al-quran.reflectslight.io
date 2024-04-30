@@ -1,12 +1,12 @@
 import React from "react";
 import { TFunction } from "~/lib/i18n";
-import * as Quran from "~/lib/Quran";
+import type { TLocale, TSurah, Surah } from "Quran";
 
 type Props = {
   t: TFunction;
-  locale: Quran.Locale;
-  setIndex: (k: Quran.Surah[]) => void;
-  surahs: Quran.Surah[];
+  locale: TLocale;
+  setIndex: (k: Surah<TSurah>[]) => void;
+  surahs: Surah<TSurah>[];
 };
 
 export function Filter({ t, locale, setIndex, surahs }: Props) {
@@ -20,7 +20,7 @@ export function Filter({ t, locale, setIndex, surahs }: Props) {
       const regexp = new RegExp(value, "i");
       const newIndex = surahs.filter(
         surah =>
-          regexp.test(surah.localizedName) || regexp.test(String(surah.id)),
+          regexp.test(surah.getName(locale)) || regexp.test(String(surah.id)),
       );
       setIndex(newIndex);
     }
