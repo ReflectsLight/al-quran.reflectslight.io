@@ -1,8 +1,3 @@
-@import "vendor/tail";
-@import "base/breakpoints";
-@import "base/icons";
-@import "base/select";
-
 $black: #454545;
 $max-width: 1024px;
 
@@ -126,3 +121,8 @@ body .root .content.theme.ar {
 .invisible {
   display: none !important;
 }
+
+@import "vendor/tail";
+@import "base/breakpoints";
+@import "base/icon";
+@import "base/select";
