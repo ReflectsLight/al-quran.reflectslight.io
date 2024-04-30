@@ -1,6 +1,6 @@
 .root .surah-index.content.theme.green {
-  @import "breakpoints";
-  @import "themes/green/colors";
+  @import "base/breakpoints";
+  @import "themes/green/base/colors";
 
   ul.body.index a {
     &:active, &:link, &:visited {

@@ -1,10 +1,8 @@
-@import "layout";
-@import "components/Select";
-@import "components/Icon";
+@import "base";
+@import "themes/blue";
+@import "themes/green";
 
 body .root .content.theme {
-  @import "breakpoints";
-
   ul.body.index {
     li.surah a {
       border-radius: 10px;
@@ -47,7 +45,7 @@ body .root .content.theme.en {
 
 /* Arabic-specific rules */
 body .root .content.theme.ar {
-  @import "breakpoints";
+  @import "base/breakpoints";
   font-size: larger;
 
   ul.body.index {
@@ -61,7 +59,3 @@ body .root .content.theme.ar {
     }
   }
 }
-
-@import "themes/blue";
-@import "themes/green";
-@import "vendor/tail";

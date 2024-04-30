@@ -48,8 +48,8 @@ compile "/js/loaders/SurahStreamLoader.ts" do
   write "/js/loaders/surah-stream-loader.js"
 end
 
-compile "/css/pages/SurahStream.scss" do
+compile "/css/main/SurahStream.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/surah-stream.css")
+  write("/css/main/surah-stream.css")
 end

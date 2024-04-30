@@ -1,6 +1,6 @@
 .root .content.theme.blue {
-  @import "themes/blue/colors";
-  @import "breakpoints";
+  @import "themes/blue/base/colors";
+  @import "base/breakpoints";
 
   header {
     div {
@@ -25,7 +25,7 @@
 }
 
 .root .content.theme.blue.ar {
-  @import "themes/blue/colors";
+  @import "themes/blue/base/colors";
 
   header {
     div {

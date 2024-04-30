@@ -1,15 +1,9 @@
-@import "blue/layout";
-@import "blue/pages/SurahIndex";
-@import "blue/pages/SurahStream";
-@import "blue/components/Select";
-@import "blue/components/Icon";
-
 .root .content.theme.blue.ar {
   direction: rtl;
 }
 
 .root .content.theme.blue {
-  @import "blue/colors";
+  @import "blue/base/colors";
 
   .color-primary {
     color: $primary-color;
@@ -32,3 +26,7 @@
     }
   }
 }
+
+@import "blue/base";
+@import "blue/main/SurahIndex";
+@import "blue/main/SurahStream";

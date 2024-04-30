@@ -27,8 +27,8 @@ compile "/js/loaders/SurahIndexLoader.ts" do
   write "/js/loaders/surah-index-loader.js"
 end
 
-compile "/css/pages/SurahIndex.scss" do
+compile "/css/main/SurahIndex.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/surah-index.css")
+  write("/css/main/surah-index.css")
 end

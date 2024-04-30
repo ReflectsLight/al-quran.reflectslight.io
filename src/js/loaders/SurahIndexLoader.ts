@@ -8,7 +8,7 @@ import postman, { item } from "postman";
 
   postman(
     item.script("/js/main/surah-index.js"),
-    item.css("/css/surah-index.css"),
+    item.css("/css/main/surah-index.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {

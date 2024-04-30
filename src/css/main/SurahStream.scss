@@ -1,6 +1,6 @@
-@import "layout";
-@import "components/Select";
-@import "components/Icon";
+@import "base";
+@import "themes/blue";
+@import "themes/green";
 
 body .root .content.theme {
   ul.body.stream {
@@ -70,7 +70,3 @@ body .root .content.theme.ar {
     }
   }
 }
-
-@import "themes/blue";
-@import "themes/green";
-@import "vendor/tail";

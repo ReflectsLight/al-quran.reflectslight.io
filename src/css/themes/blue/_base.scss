@@ -1,22 +1,21 @@
-.root .content.theme.green {
-  @import "colors";
+@import "base/icon";
+@import "base/select";
+
+.root .content.theme.blue {
+  @import "base/colors";
   scrollbar-color: $primary-color $accent-color;
 
   header {
     h1 , h1 a { color: $primary-color; }
-
     nav .react-select {
-      background-color: transparent;
-      color: $primary-color;
+      color: $secondary-color;
     }
     nav .react-select.language {
       ul li {
-        background-color: $primary-color;
-        color: $accent-color;
+        background: $primary-color;
+        color: $white;
         border: 3px solid $secondary-color;
-        border-radius: 15px;
       }
     }
   }
-
 }

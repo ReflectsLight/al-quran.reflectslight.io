@@ -1,5 +1,5 @@
 .content.theme {
-  @import "themes/blue/colors";
+  @import "themes/blue/base/colors";
 
   .react-select.theme {
     .selected-option .circle {
@@ -12,7 +12,7 @@
 }
 
 .content.theme.blue {
-  @import "themes/blue/colors";
+  @import "themes/blue/base/colors";
 
   .react-select.language {
     .selected-option {

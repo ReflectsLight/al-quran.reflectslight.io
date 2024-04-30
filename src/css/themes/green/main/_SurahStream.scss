@@ -1,6 +1,6 @@
 .root .content.theme.green {
-  @import "themes/green/colors";
-  @import "breakpoints";
+  @import "themes/green/base/colors";
+  @import "base/breakpoints";
 
   header {
     h1, h1 a { color: $primary-color; }
@@ -29,5 +29,5 @@
 }
 
 .root .content.theme.green.ar {
-  @import "themes/green/colors";
+  @import "themes/green/base/colors";
 }
