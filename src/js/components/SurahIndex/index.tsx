@@ -11,7 +11,7 @@ type Props = {
   locale: Quran.Locale;
   surahs: Quran.Surah[];
   t: TFunction;
-}
+};
 
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
