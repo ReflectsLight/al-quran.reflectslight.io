@@ -4,7 +4,7 @@ import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/i18n";
 import classNames from "classnames";
 
-interface Props {
+type Props = {
   recitation: Quran.Recitation;
   surah: Quran.Surah;
   stream: Quran.Ayat;
@@ -12,7 +12,7 @@ interface Props {
   endOfStream: boolean;
   isPaused: boolean;
   t: TFunction;
-}
+};
 
 export function Stream({
   recitation,

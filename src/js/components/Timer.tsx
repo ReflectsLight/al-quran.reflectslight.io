@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import * as Quran from "~/lib/Quran";
 import { formatNumber } from "~/lib/i18n";
 
-interface Props {
+type Props = {
   surah: Quran.Surah;
   locale: Quran.Locale;
   stream: Quran.Ayat;
@@ -13,7 +13,7 @@ interface Props {
   setMs: (n: number) => void;
   isPaused: boolean;
   isStalled: boolean;
-}
+};
 
 export function Timer({
   surah,

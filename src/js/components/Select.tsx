@@ -5,12 +5,12 @@ export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {
   target: HTMLLIElement;
 };
 
-interface Props {
+type Props = {
   value: string;
   children: JSX.Element[];
   onChange: (e: JSX.Element) => void;
   className?: string;
-}
+};
 
 const find = (option: string, options: JSX.Element[]) => {
   return options.find(o => o.props.value === option);

@@ -1,8 +1,8 @@
 import React from "react";
 
-interface Props {
+type Props = {
   onClick: () => void;
-}
+};
 
 export function PlayIcon({ onClick }: Props) {
   return (

@@ -14,13 +14,13 @@ import {
 } from "~/components/Icon";
 import { TFunction } from "~/lib/i18n";
 
-interface Props {
+type Props = {
   node: HTMLScriptElement;
   recitations: Quran.Recitation[];
   locale: Quran.Locale;
   paused: boolean;
   t: TFunction;
-}
+};
 
 const getTimeSlots = (recitation: Quran.Recitation) => {
   const selector = `script.recitation.time-slots.${recitation.id}`;

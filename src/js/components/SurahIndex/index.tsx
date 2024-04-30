@@ -7,7 +7,7 @@ import { Head } from "~/components/Head";
 import { Filter } from "./Filter";
 import classNames from "classnames";
 
-interface Props {
+type Props = {
   locale: Quran.Locale;
   surahs: Quran.Surah[];
   t: TFunction;
