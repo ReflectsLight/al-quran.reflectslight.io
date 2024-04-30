@@ -2,6 +2,7 @@
 <html lang="<%= context.locale %>">
   <head>
     <title><%= t(context.locale, "TheNobleQuran") %></title>
+    <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
@@ -19,7 +20,6 @@
       href="https://al-quran.reflectslight.io/<%= locale %>/"
      />
     <% end %>
-    <%= inline_css('/css/postman.scss') %>
     <%= opengraph(context) %>
   </head>
   <body>

@@ -27,10 +27,10 @@ Nanoc::Tidy
 
 ##
 # See packages/typescript/postman
-compile "/css/postman.scss" do
+compile "/css/vendor/postman.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
-  write("/css/postman.css")
+  write("/css/vendor/postman.css")
 end
 
 ##
