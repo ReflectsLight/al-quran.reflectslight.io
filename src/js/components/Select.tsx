@@ -12,14 +12,15 @@ type Props = {
   className?: string;
 };
 
-const find = (option: string, options: JSX.Element[]) => {
-  return options.find(o => o.props.value === option);
-};
-
-export function Select({ value, children, onChange, className }: Props) {
+export function Select({
+  value: option,
+  children: within,
+  onChange,
+  className,
+}: Props) {
   const [open, setOpen] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState<JSX.Element>(
-    find(value, children),
+  const [selected, setSelected] = useState<JSX.Element>(
+    get(option, { within }),
   );
   const close = () => setOpen(false);
 
@@ -34,11 +35,11 @@ export function Select({ value, children, onChange, className }: Props) {
         className="selected-option"
         onClick={e => [e.stopPropagation(), setOpen(true)]}
       >
-        {selectedOption.props.children}
+        {selected.props.children}
       </span>
       <div className="br" />
       <ul hidden={!open}>
-        {children.map((option: JSX.Element, key: number) => {
+        {within.map((option: JSX.Element, key: number) => {
           return (
             <li
               key={key}
@@ -50,9 +51,9 @@ export function Select({ value, children, onChange, className }: Props) {
                 const value =
                   target.getAttribute("data-value") ||
                   target.parentElement.getAttribute("data-value");
-                const option: JSX.Element = find(value, children);
+                const option: JSX.Element = get(value, { within });
                 onChange(option);
-                setSelectedOption(option);
+                setSelected(option);
                 setOpen(false);
               }}
             >
@@ -63,4 +64,9 @@ export function Select({ value, children, onChange, className }: Props) {
       </ul>
     </div>
   );
+}
+
+function get(option: string, options: { within: JSX.Element[] }): JSX.Element {
+  const { within } = options;
+  return within.find(({ props: { value } }) => option === value);
 }
