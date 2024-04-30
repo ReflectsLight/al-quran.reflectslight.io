@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 
-export type ChangeEvent = React.MouseEvent<HTMLLIElement> & {
-  target: HTMLLIElement;
-};
-
 type Props = {
   value: string;
   children: JSX.Element[];
@@ -45,9 +41,9 @@ export function Select({
               key={key}
               data-value={option.props.value}
               className={option.props.value}
-              onClick={(e: ChangeEvent) => {
+              onClick={(e: React.MouseEvent<HTMLLIElement>) => {
                 e.stopPropagation();
-                const { target } = e;
+                const target = e.target as HTMLLIElement;
                 const value =
                   target.getAttribute("data-value") ||
                   target.parentElement.getAttribute("data-value");
