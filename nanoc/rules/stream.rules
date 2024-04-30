@@ -4,7 +4,7 @@
 ##
 # Rules for the surah stream available at /<locale>/<name>/.
 
-compile "/*/*/surah.json" do
+compile "/json/*/*/surah.json" do
   write(item.identifier.to_s)
   if File.size(item.raw_filename) > (1024 * 10)
     filter :gzip

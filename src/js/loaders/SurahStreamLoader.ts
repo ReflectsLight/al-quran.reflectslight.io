@@ -17,9 +17,9 @@ import * as Quran from "~/lib/Quran";
     item.css("/css/main/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/${locale}/${surahId}/surah.json`, { className: "surah" }),
+    item.json(`/json/${locale}/${surahId}/surah.json`, { className: "surah" }),
     ...recitations.map((recitation: Quran.Recitation) => {
-      const path = ["/durations", `${recitation.id}`, `${surahId}.json`].join(
+      const path = ["/json", "/durations", `${recitation.id}`, `${surahId}.json`].join(
         "/",
       );
       return item.json(path, {
