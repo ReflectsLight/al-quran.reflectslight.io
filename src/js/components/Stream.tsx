@@ -5,18 +5,18 @@ import { formatNumber, TFunction } from "~/lib/t";
 import classNames from "classnames";
 
 type Props = {
+  locale: TLocale;
   surah: Surah;
   stream: TAyat;
-  locale: TLocale;
   endOfStream: boolean;
   isPaused: boolean;
   t: TFunction;
 };
 
 export function Stream({
+  locale,
   surah,
   stream,
-  locale,
   endOfStream,
   isPaused,
   t,
