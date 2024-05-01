@@ -9,8 +9,8 @@
     "of": "of",
     "filter": "Filter",
     "meta": {
-      "index": {"description": "Explore the chapters of The Noble Quran."},
-      "stream": {"description": "Read and listen to %{surah_name}."}
+      "index": {"description": "Explore the chapters of The Noble Quran"},
+      "stream": {"description": "Read and listen to %{surah_name}"}
     },
     "surahs": {
       "names": [
@@ -142,10 +142,10 @@
     "filter": "تصفية",
     "meta": {
       "index": {
-        "description": ".استكشف فصول القرآن الكريم"
+        "description": "استكشف فصول القرآن الكريم"
       },
       "stream": {
-        "description": ".%{surah_name} اقرأ واستمع إلى"
+        "description": "%{surah_name} اقرأ واستمع إلى"
       }
     },
     "surahs": {

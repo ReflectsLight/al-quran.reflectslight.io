@@ -12,25 +12,29 @@ compile "/json/*/*/surah.json" do
   end
 end
 
-Ryo.each(name_by_id) do |id, transliterated_name|
-  writer = ->(locale, identifier:) do
+Ryo.each(name_by_id) do |id, slug|
+  write_file = ->(locale, pathname:) do
     name = tdata[locale].surahs.names[id.to_i - 1]
     context = Ryo.from(
       filename: "stream.html.erb",
       locale:,
       locales:,
-      surah: {id:, name:, transliterated_name:}
+      surah: {id:, name:, slug:}
     )
-    filter(:erb, locals: {context:})
+    locals = {
+      locale: context.locale, locales: context.locales,
+      surah: context.surah, context:
+    }
+    filter(:erb, locals:)
     filter(:tidy)
-    write "/#{locale}/#{identifier}/index.html"
+    write "/#{locale}/#{pathname}/index.html"
   end
   locales.each do |locale|
-    compile "/html/stream.html.erb", rep: "/#{locale}/#{transliterated_name}/index.html" do
-      instance_exec(locale, identifier: transliterated_name, &writer)
+    compile "/html/stream.html.erb", rep: "/#{locale}/#{slug}/index.html" do
+      instance_exec(locale, pathname: slug, &write_file)
     end
     compile "/html/stream.html.erb", rep: "/#{locale}/#{id}/index.html" do
-      instance_exec(locale, identifier: id, &writer)
+      instance_exec(locale, pathname: id, &write_file)
     end
   end
 end

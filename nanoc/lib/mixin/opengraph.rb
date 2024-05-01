@@ -8,10 +8,11 @@ module Mixin::OpenGraph
   def local_assigns(context)
     case context.filename
     when "stream.html.erb"
+      surah = context.surah
       {title: t(context.locale, "TheNobleQuran"),
-       description: t(context.locale, "meta.stream.description", surah_name: context.surah.name),
-       url: "https://al-quran.reflectslight.io/#{context.locale}/#{context.surah.slug}/",
-       image: "https://al-quran.reflectslight.io/images/opengraph/#{context.surah.id}.png"}
+       description: t(context.locale, "meta.stream.description", surah_name: surah.name),
+       url: "https://al-quran.reflectslight.io/#{context.locale}/#{surah.slug}/",
+       image: "https://al-quran.reflectslight.io/images/opengraph/#{surah.id}.png"}
     when "index.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
