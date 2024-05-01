@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="<%= locale %>">
   <head>
-    <title><%= t(locale, "TheNobleQuran") %></title>
+    <title>
+      <% if locale == "ar" %>
+        <%= surah.name %> :<%= t(locale, "TheNobleQuran") %>
+      <% else>
+        <%= t(locale, "TheNobleQuran") %>: <%= surah.name %>
+      <% end %>
+    </title>
     <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
