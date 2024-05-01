@@ -45,11 +45,7 @@ export function Stream({
                 className={classNames("flex h-8 items-center", { "mb-2": rtl })}
               >
                 {(isPaused || endOfStream) && (
-                  <AudioControl
-                    surah={surah}
-                    ayah={ayah}
-                    onEnd={turnOffSound => turnOffSound()}
-                  />
+                  <AudioControl audio={new Audio()} surah={surah} ayah={ayah} />
                 )}
                 <span>
                   {t(locale, "surah")} {formatNumber(surah.id, locale)}

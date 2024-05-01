@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
 import { Surah, TSurah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
@@ -23,14 +23,14 @@ type Props = {
 export function SurahStream({ surah, locale, t }: Props) {
   const [stream, setStream] = useState<TAyat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(false);
-  const [soundOn, setSoundOn] = useState<boolean>(false);
-  const [isStalled, setIsStalled] = useState<boolean>(false);
+  const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
   const readyToRender = stream.length > 0;
   const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>();
+  const audio = useMemo(() => new Audio(), []);
 
   useEffect(() => {
     if (ref.current) {
@@ -84,16 +84,15 @@ export function SurahStream({ surah, locale, t }: Props) {
         {readyToRender && !endOfStream && (
           <div className="sound-box flex w-14 justify-end">
             <AudioControl
+              autoPlay={true}
+              audio={audio}
               surah={surah}
               ayah={ayah}
-              onPlay={() => setSoundOn(true)}
-              onPause={() => setSoundOn(false)}
-              onPlaying={() => setIsStalled(false)}
-              onStall={() => setIsStalled(true)}
+              onStatusChange={s => setAudioStatus(s)}
             />
           </div>
         )}
-        {readyToRender && !endOfStream && !isStalled && (
+        {readyToRender && !endOfStream && audioStatus !== "wait" && (
           <Timer
             surah={surah}
             setStream={setStream}
@@ -101,13 +100,12 @@ export function SurahStream({ surah, locale, t }: Props) {
             stream={stream}
             locale={locale}
             isPaused={isPaused}
-            soundOn={soundOn}
-            isStalled={isStalled}
+            isStalled={audioStatus === "wait"}
             ms={ms}
             setMs={setMs}
           />
         )}
-        {readyToRender && soundOn && isStalled && <StalledIcon />}
+        {readyToRender && audioStatus === "wait" && <StalledIcon />}
         {readyToRender && endOfStream && (
           <RefreshIcon onClick={() => setStream([])} />
         )}

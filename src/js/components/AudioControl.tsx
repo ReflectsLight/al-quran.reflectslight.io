@@ -3,64 +3,80 @@ import type { Surah, TSurah, Ayah, TAyah } from "Quran";
 import React, { useEffect, useMemo, useState } from "react";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
+type TAudioStatus = "play" | "pause" | "wait" | "end";
+
 type Props = {
+  autoPlay?: boolean;
+  onStatusChange?: (s: TAudioStatus) => void;
+  audio: HTMLAudioElement;
   surah: Surah<TSurah>;
   ayah: Ayah<TAyah>;
-  onStall?: (e?: Event) => void;
-  onPlay?: (e?: Event) => void;
-  onPlaying?: (e?: Event) => void;
-  onPause?: (e?: Event) => void;
-  onEnd?: (turnOffSound: () => void) => void;
 };
 
 export function AudioControl({
+  autoPlay = false,
+  onStatusChange = () => null,
+  audio,
   surah,
   ayah,
-  onPlay = () => null,
-  onPlaying = () => null,
-  onPause = () => null,
-  onStall = () => null,
-  onEnd = () => null,
 }: Props) {
-  const [soundOn, setSoundOn] = useState<boolean>(false);
-  const audio = useMemo(() => new Audio(), []);
-  const turnOnSound = () => setSoundOn(true);
-  const turnOffSound = () => setSoundOn(false);
-  const recover = () => {
-    if (!soundOn) return;
-    onStall();
-    audio.play().catch(() => setTimeout(recover, 50));
-  };
+  const [enabled, setEnabled] = useState<boolean>(false);
+  const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
+  const play = (audio: HTMLAudioElement) => audio.play().catch(() => null);
+  const pause = (audio: HTMLAudioElement) => audio.pause();
 
   useEffect(() => {
-    audio.addEventListener("ended", () => onEnd(turnOffSound));
-    audio.addEventListener("stalled", recover);
-    audio.addEventListener("waiting", onStall);
-    audio.addEventListener("play", onPlay);
-    audio.addEventListener("playing", onPlaying);
-  }, []);
-
-  useEffect(() => {
-    const src = [
-      "https://al-quran.reflectslight.io",
-      "audio",
-      "alafasy",
-      surah.id,
-      `${ayah.id}.mp3`,
-    ].join("/");
-    if (soundOn) {
-      audio.src = src;
-      audio.play();
-    } else {
-      audio.pause();
-      onPause();
+    if (audio) {
+      audio.src = [
+        "https://al-quran.reflectslight.io",
+        "audio",
+        "alafasy",
+        surah.id,
+        `${ayah.id}.mp3`,
+      ].join("/");
+      if (autoPlay) {
+        play(audio);
+      }
     }
-  }, [soundOn, ayah.id]);
+  }, [ayah.id]);
+
+  useEffect(() => {
+    if (audioStatus === "end") {
+      setEnabled(false);
+    }
+    onStatusChange(audioStatus);
+  }, [audioStatus]);
+
+  useEffect(() => {
+    if (!audio) return;
+    const onPlay = () => setAudioStatus("play");
+    const onPause = () => setAudioStatus("pause");
+    const onEnd = () => setAudioStatus("end");
+    const onWait = () => [setAudioStatus("wait"), play(audio)];
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("playing", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onEnd);
+    audio.addEventListener("stalled", onWait);
+    audio.addEventListener("waiting", onWait);
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("playing", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onEnd);
+      audio.removeEventListener("stalled", onWait);
+      audio.removeEventListener("waiting", onWait);
+    };
+  }, [ayah.id]);
 
   return (
     <>
-      {soundOn && <SoundOnIcon onClick={turnOffSound} />}
-      {!soundOn && <SoundOffIcon onClick={turnOnSound} />}
+      {enabled && (
+        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
+      )}
+      {!enabled && (
+        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
+      )}
     </>
   );
 }
