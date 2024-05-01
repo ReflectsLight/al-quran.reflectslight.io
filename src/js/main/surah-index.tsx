@@ -13,6 +13,11 @@ import { SurahIndex } from "~/components/SurahIndex";
     (e: TSurah) => new Surah(e),
   );
   ReactDOM.createRoot(root).render(
-    <SurahIndex appVersion={appVersion} locale={locale} surahs={surahs} t={t} />,
+    <SurahIndex
+      appVersion={appVersion}
+      locale={locale}
+      surahs={surahs}
+      t={t}
+    />,
   );
 })();

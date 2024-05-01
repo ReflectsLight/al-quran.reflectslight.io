@@ -32,7 +32,7 @@ export function Timer({
   }, [ayah?.id]);
 
   useEffect(() => {
-    if (!ayah) {
+    if (!ayah || !ms) {
       return;
     } else if (isStalled || isPaused) {
       /* no-op */
@@ -44,13 +44,16 @@ export function Timer({
     }
   }, [isStalled, isPaused, ms]);
 
+  if (isStalled) {
+    return null;
+  }
+
   return (
-    !isStalled && (
-      <div className="timer text-base w-10 flex justify-end">
-        {ms / 1000 <= 0
+    <div className="timer text-base w-10 flex justify-end">
+      {ms &&
+        (ms / 1000 <= 0
           ? formatNumber(locale, 0)
-          : formatNumber(locale, ms / 1000)}
-      </div>
-    )
+          : formatNumber(locale, ms / 1000))}
+    </div>
   );
 }

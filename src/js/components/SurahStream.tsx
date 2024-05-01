@@ -25,11 +25,11 @@ type Props = {
 export function SurahStream({ surah, locale, t }: Props) {
   const [stream, setStream] = useState<TAyat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(false);
-  const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
+  const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
   const [ms, setMs] = useState<number | null>(null);
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
   const ayah: Maybe<Ayah> = stream[stream.length - 1];

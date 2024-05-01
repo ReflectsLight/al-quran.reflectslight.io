@@ -22,7 +22,7 @@ export function Stream({
   t,
 }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
-  const ref = useRef<HTMLUListElement>();
+  const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
     const ltr = locale === "en";
     const rtl = locale === "ar";

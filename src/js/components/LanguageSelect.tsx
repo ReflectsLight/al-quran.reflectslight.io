@@ -17,7 +17,7 @@ export function LanguageSelect({ locale }: Props) {
           new RegExp(`^/${locale}/`),
           `/${newLocale}/`,
         );
-        content.classList.add("invisible");
+        content?.classList?.add("invisible");
         location.replace(path);
       }}
     >

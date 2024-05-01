@@ -17,12 +17,12 @@ type Props = {
 export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Surah[]>(surahs);
-  const ref = useRef<HTMLDivElement>();
+  const ref = useRef<HTMLDivElement>(null);
   const ltr = locale === "en";
 
   useEffect(() => {
     const div = ref.current;
-    if (ref.current) {
+    if (div) {
       div.classList.remove("invisible");
     }
   }, [ref.current, theme]);

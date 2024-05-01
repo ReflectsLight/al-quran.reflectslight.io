@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 
+type Maybe<T> = T | null | undefined;
+
 type Props = {
   value: string;
   children: JSX.Element[];
@@ -15,7 +17,7 @@ export function Select({
   className,
 }: Props) {
   const [open, setOpen] = useState<boolean>(false);
-  const [selected, setSelected] = useState<JSX.Element>(
+  const [selected, setSelected] = useState<Maybe<JSX.Element>>(
     query(option, { within }),
   );
   const close = () => setOpen(false);
@@ -31,7 +33,7 @@ export function Select({
         className="selected"
         onClick={e => [e.stopPropagation(), setOpen(true)]}
       >
-        {selected.props.children}
+        {selected?.props?.children}
       </span>
       <div className="br" />
       <ul hidden={!open}>
@@ -46,10 +48,12 @@ export function Select({
                 const target = e.target as HTMLLIElement;
                 const value =
                   target.getAttribute("data-value") ||
-                  target.parentElement.getAttribute("data-value");
-                const option: JSX.Element = query(value, { within });
-                onChange(option);
-                setSelected(option);
+                  target.parentElement?.getAttribute("data-value");
+                const option: Maybe<JSX.Element> = query(value, { within });
+                if (option) {
+                  onChange(option);
+                  setSelected(option);
+                }
                 setOpen(false);
               }}
             >
@@ -63,9 +67,12 @@ export function Select({
 }
 
 function query(
-  option: string,
+  option: Maybe<string>,
   options: { within: JSX.Element[] },
-): JSX.Element {
+): Maybe<JSX.Element> {
+  if (!option) {
+    return null;
+  }
   const { within } = options;
   return within.find(({ props: { value } }) => option === value);
 }

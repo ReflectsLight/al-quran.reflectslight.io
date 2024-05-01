@@ -22,7 +22,7 @@ export function AudioControl({
   onStatusChange = () => null,
 }: Props) {
   const [enabled, setEnabled] = useState<boolean>(false);
-  const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
+  const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const play = (audio: HTMLAudioElement) => audio.play().catch(() => null);
   const pause = (audio: HTMLAudioElement) => audio.pause();
 
@@ -69,22 +69,26 @@ export function AudioControl({
   }, [enabled, ayah?.id]);
 
   useEffect(() => {
-    onStatusChange(audioStatus, [
-      () => setEnabled(true),
-      () => setEnabled(false),
-    ]);
+    if (audioStatus) {
+      onStatusChange(audioStatus, [
+        () => setEnabled(true),
+        () => setEnabled(false),
+      ]);
+    }
   }, [audioStatus]);
 
+  if (hidden) {
+    return null;
+  }
+
   return (
-    !hidden && (
-      <>
-        {enabled && (
-          <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
-        )}
-        {!enabled && (
-          <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
-        )}
-      </>
-    )
+    <>
+      {enabled && (
+        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
+      )}
+      {!enabled && (
+        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
+      )}
+    </>
   );
 }
