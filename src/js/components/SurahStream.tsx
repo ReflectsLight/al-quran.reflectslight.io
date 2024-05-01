@@ -105,15 +105,23 @@ export function SurahStream({ surah, locale, t }: Props) {
           })}
         >
           <Timer
-            surah={surah}
-            setStream={setStream}
-            setEndOfStream={setEndOfStream}
-            stream={stream}
             locale={locale}
+            surah={surah}
+            ayah={ayah}
             isPaused={isPaused}
             isStalled={audioStatus === "wait"}
             ms={ms}
             setMs={setMs}
+            onComplete={(surah, ayah) => {
+              const layah = surah.ayat[surah.ayat.length - 1];
+              if (!layah || !ayah) {
+                return;
+              } else if (layah.id === ayah.id) {
+                setEndOfStream(true);
+              } else {
+                setStream([...stream, surah.ayat[ayah.id]]);
+              }
+            }}
           />
         </span>
         {audioStatus === "wait" && <StalledIcon />}

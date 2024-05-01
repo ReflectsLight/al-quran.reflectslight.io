@@ -5,49 +5,39 @@ import { formatNumber } from "~/lib/t";
 type Maybe<T> = T | null | undefined;
 
 type Props = {
-  surah: Surah;
   locale: TLocale;
-  stream: TAyat;
-  setStream: (stream: TAyat) => void;
-  setEndOfStream: (v: boolean) => void;
-  ms: number | null;
-  setMs: (n: number) => void;
+  surah: Surah;
+  ayah: Maybe<Ayah>;
   isPaused: boolean;
   isStalled: boolean;
+  ms: number | null;
+  setMs: (n: number) => void;
+  onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
 export function Timer({
-  surah,
-  stream,
-  isStalled,
-  setStream,
-  setEndOfStream,
   locale,
+  surah,
+  ayah,
+  isStalled,
   isPaused,
   ms,
   setMs,
+  onComplete,
 }: Props) {
-  const ayah: Maybe<Ayah> = stream[stream.length - 1];
-  const lastAyah: Maybe<Ayah> = surah.ayat[surah.ayat.length - 1];
+  useEffect(() => {
+    if (ayah) {
+      setMs(ayah.ms);
+    }
+  }, [ayah?.id]);
 
   useEffect(() => {
     if (!ayah) {
       return;
-    }
-    setMs(ayah.ms);
-  }, [ayah?.id]);
-
-  useEffect(() => {
-    if (!ayah || !lastAyah) {
-      return;
     } else if (isStalled || isPaused) {
       /* no-op */
     } else if (ms <= 0) {
-      if (lastAyah.id === ayah.id) {
-        setEndOfStream(true);
-      } else {
-        setStream([...stream, surah.ayat[ayah.id]]);
-      }
+      onComplete(surah, ayah);
     } else {
       const tid = setTimeout(() => setMs(ms - 100), 100);
       return () => clearTimeout(tid);
