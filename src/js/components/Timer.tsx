@@ -6,7 +6,6 @@ type Props = {
   surah: Surah<TSurah>;
   locale: TLocale;
   stream: TAyat;
-  soundOn: boolean;
   setStream: (stream: TAyat) => void;
   setEndOfStream: (v: boolean) => void;
   ms: number | null;
@@ -19,7 +18,6 @@ export function Timer({
   surah,
   stream,
   isStalled,
-  soundOn,
   setStream,
   setEndOfStream,
   locale,
@@ -35,12 +33,7 @@ export function Timer({
   }, [ayah.id]);
 
   useEffect(() => {
-    if (!soundOn) return;
-    setMs(ayah.ms);
-  }, [soundOn]);
-
-  useEffect(() => {
-    if ((soundOn && isStalled) || isPaused) {
+    if (isStalled || isPaused) {
       /* no-op */
     } else if (ms <= 0) {
       if (lastAyah.id === ayah.id) {
@@ -52,13 +45,15 @@ export function Timer({
       const tid = setTimeout(() => setMs(ms - 100), 100);
       return () => clearTimeout(tid);
     }
-  }, [soundOn, isStalled, isPaused, ms]);
+  }, [isStalled, isPaused, ms]);
 
   return (
-    <div className="timer text-base w-10 flex justify-end">
-      {ms / 1000 <= 0
-        ? formatNumber(0, locale)
-        : formatNumber(ms / 1000, locale)}
-    </div>
+    !isStalled && (
+      <div className="timer text-base w-10 flex justify-end">
+        {ms / 1000 <= 0
+          ? formatNumber(0, locale)
+          : formatNumber(ms / 1000, locale)}
+      </div>
+    )
   );
 }

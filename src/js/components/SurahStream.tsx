@@ -4,7 +4,7 @@ import { Surah, TSurah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { Timer } from "~/components/Timer";
 import { Stream } from "~/components/Stream";
-import { AudioControl } from "~/components/AudioControl";
+import { AudioControl, TAudioStatus } from "~/components/AudioControl";
 import { Head } from "~/components/Head";
 import {
   PlayIcon,
@@ -92,7 +92,7 @@ export function SurahStream({ surah, locale, t }: Props) {
             />
           </div>
         )}
-        {readyToRender && !endOfStream && audioStatus !== "wait" && (
+        {readyToRender && !endOfStream && (
           <Timer
             surah={surah}
             setStream={setStream}

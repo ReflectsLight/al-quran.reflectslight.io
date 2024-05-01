@@ -3,7 +3,7 @@ import type { Surah, TSurah, Ayah, TAyah } from "Quran";
 import React, { useEffect, useMemo, useState } from "react";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
-type TAudioStatus = "play" | "pause" | "wait" | "end";
+export type TAudioStatus = "play" | "pause" | "wait" | "end";
 
 type Props = {
   autoPlay?: boolean;
