@@ -49,7 +49,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               href={`/${locale}/${surah.romanized.slug}/`}
             >
               <span className="color-secondary font-extrabold w-10 text-center">
-                {formatNumber(surah.id, locale)}
+                {formatNumber(locale, surah.id)}
               </span>
               <span>{surah.getName(locale)}</span>
               {ltr && (
@@ -59,7 +59,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
                       {surah.romanized.name}
                     </span>
                     <span className="ayat flex justify-end text-sm">
-                      {surah.numberOfAyah} {t(locale, "ayat")}
+                      {formatNumber(locale, surah.numberOfAyah)} {t(locale, "ayat")}
                     </span>
                   </div>
                 </div>

@@ -56,10 +56,10 @@ export function Stream({
                   }}
                 />
                 <span>
-                  {t(locale, "surah")} {formatNumber(surah.id, locale)}
+                  {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")}{" "}
-                  {formatNumber(ayah.id, locale)} {t(locale, "of")}{" "}
-                  {formatNumber(surah.ayat.length, locale)}
+                  {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
+                  {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
               <p className="m-0">{ayah.body}</p>
