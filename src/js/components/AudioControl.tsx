@@ -41,7 +41,7 @@ export function AudioControl({
   }, [ayah.id]);
 
   useEffect(() => {
-    if (audioStatus === "end") {
+    if (!autoPlay && audioStatus === "end") {
       setEnabled(false);
     }
     onStatusChange(audioStatus);

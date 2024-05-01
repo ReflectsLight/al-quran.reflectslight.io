@@ -88,7 +88,12 @@ export function SurahStream({ surah, locale, t }: Props) {
               audio={audio}
               surah={surah}
               ayah={ayah}
-              onStatusChange={s => setAudioStatus(s)}
+              onStatusChange={status => {
+                if (status === "play") {
+                  setMs(ayah.ms);
+                }
+                setAudioStatus(status)
+              }}
             />
           </div>
         )}
