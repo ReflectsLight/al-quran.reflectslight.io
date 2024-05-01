@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TLocale, TSurah, Surah } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
-import { formatNumber, TFunction } from "~/lib/i18n";
+import { formatNumber, TFunction } from "~/lib/t";
 import { RightArrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
 import { Filter } from "./Filter";

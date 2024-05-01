@@ -6,8 +6,7 @@ type PhraseMap<T> = {
 
 export type TFunction = (locale: TLocale, key: string) => string;
 
-export function i18n(json: string): TFunction {
-  const phrases: PhraseMap<string> = JSON.parse(json);
+export function T(phrases: PhraseMap<string>): TFunction {
   return function (locale: TLocale, key: string) {
     const path = key.split(".");
     const phrase = path.reduce(

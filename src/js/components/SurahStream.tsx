@@ -12,7 +12,7 @@ import {
   RefreshIcon,
   StalledIcon,
 } from "~/components/Icon";
-import { TFunction } from "~/lib/i18n";
+import { TFunction } from "~/lib/t";
 
 type Props = {
   surah: Surah<TSurah>;

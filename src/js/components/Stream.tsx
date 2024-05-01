@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { Surah, Ayah, TAyah, TAyat, TSurah, TLocale } from "Quran";
 import { AudioControl } from "~/components/AudioControl";
-import { formatNumber, TFunction } from "~/lib/i18n";
+import { formatNumber, TFunction } from "~/lib/t";
 import classNames from "classnames";
 
 type Props = {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Surah, TSurah, TLocale, TAyat } from "Quran";
-import { formatNumber } from "~/lib/i18n";
+import { formatNumber } from "~/lib/t";
 
 type Props = {
   surah: Surah<TSurah>;

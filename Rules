@@ -13,8 +13,8 @@ require_relative "nanoc/lib/require_rules"
 locales    = %w[ar en]
 json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json_file("#{json_dir}/nameById.json")
-i18n       = Ryo.from_json_file("#{json_dir}/i18n.json")
-buildenv   = ENV["buildenv"] || "development"
+tdata    = Ryo.from_json_file("#{json_dir}/t.json")
+buildenv = ENV["buildenv"] || "development"
 
 ##
 # Plugins
@@ -52,8 +52,8 @@ end
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect"
 require_rules "nanoc/rules/random", {locales:}
-require_rules "nanoc/rules/stream", {locales:, i18n:, name_by_id:}
-require_rules "nanoc/rules/index", {locales:, i18n:}
+require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:}
+require_rules "nanoc/rules/index", {locales:, tdata:}
 
 ##
 # Defaults

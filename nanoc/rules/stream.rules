@@ -14,7 +14,7 @@ end
 
 Ryo.each(name_by_id) do |id, transliterated_name|
   writer = ->(locale, identifier:) do
-    name = i18n[locale].surahs.names[id.to_i - 1]
+    name = tdata[locale].surahs.names[id.to_i - 1]
     context = Ryo.from(
       filename: "stream.html.erb",
       locale:,

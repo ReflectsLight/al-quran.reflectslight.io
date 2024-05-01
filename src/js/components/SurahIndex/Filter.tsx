@@ -1,5 +1,5 @@
 import React from "react";
-import { TFunction } from "~/lib/i18n";
+import { TFunction } from "~/lib/t";
 import type { TLocale, TSurah, Surah } from "Quran";
 
 type Props = {

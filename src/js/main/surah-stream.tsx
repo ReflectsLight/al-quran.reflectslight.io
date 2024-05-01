@@ -1,13 +1,13 @@
 import { Surah, Ayah, TSurah, TLocale } from "Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { i18n } from "~/lib/i18n";
+import { T } from "~/lib/t";
 import { SurahStream } from "~/components/SurahStream";
 
 (function () {
   const root: HTMLElement = document.querySelector(".root")!;
   const locale = root.getAttribute("data-locale") as TLocale;
-  const t = i18n(document.querySelector<HTMLElement>(".json.i18n")!.innerText);
+  const t = T(require("@json/t.json"));
 
   /*
    * Configure an instance of Surah
