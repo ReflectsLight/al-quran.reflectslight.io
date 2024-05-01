@@ -8,12 +8,13 @@ import { Filter } from "./Filter";
 import classNames from "classnames";
 
 type Props = {
+  appVersion: string;
   locale: TLocale;
   surahs: Surah[];
   t: TFunction;
 };
 
-export function SurahIndex({ locale, surahs, t }: Props) {
+export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>();
@@ -81,6 +82,9 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         </a>
         <Filter t={t} locale={locale} surahs={surahs} setIndex={setIndex} />
       </footer>
+      <span className="appver flex justify-end mb-3 w-full font-mono text-xs font-bold">
+        v{appVersion}
+      </span>
     </div>
   );
 }

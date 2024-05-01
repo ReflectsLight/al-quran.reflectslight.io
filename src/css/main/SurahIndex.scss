@@ -35,6 +35,11 @@ body .root .content.theme {
       }
     }
   }
+  @media(max-width: $breakpoint-sm) {
+    .appver {
+      display: none;
+    }
+  }
 }
 
 
@@ -57,5 +62,8 @@ body .root .content.theme.ar {
     a {
       flex-direction: row-reverse;
     }
+  }
+  .appver {
+    display: none;
   }
 }
