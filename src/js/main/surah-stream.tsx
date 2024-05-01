@@ -23,7 +23,7 @@ import { SurahStream } from "~/components/SurahStream";
   }
   for (let i = 0; i < surah.ayat.length; i++) {
     const ayah = surah.ayat[i];
-    const [_, ms] = blob2[i];
+    const [, ms] = blob2[i];
     ayah.ms = ms * 1000;
   }
 

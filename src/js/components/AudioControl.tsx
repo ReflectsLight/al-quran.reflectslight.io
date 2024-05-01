@@ -1,5 +1,5 @@
-import type { Surah, TSurah, Ayah, TAyah } from "Quran";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
+import type { Surah, Ayah } from "Quran";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
 export type TAudioStatus = "play" | "pause" | "wait" | "end";
@@ -8,8 +8,8 @@ type Maybe<T> = T | null | undefined;
 type TChangeFuncs = [() => void, () => void];
 type Props = {
   audio: HTMLAudioElement;
-  surah: Surah<TSurah>;
-  ayah: Maybe<Ayah<TAyah>>;
+  surah: Surah;
+  ayah: Maybe<Ayah>;
   hidden?: boolean;
   onStatusChange?: (s: TAudioStatus, fns: TChangeFuncs) => void;
 };

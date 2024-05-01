@@ -1,12 +1,12 @@
 import React from "react";
 import { TFunction } from "~/lib/t";
-import type { TLocale, TSurah, Surah } from "Quran";
+import type { Surah, TLocale } from "Quran";
 
 type Props = {
   t: TFunction;
   locale: TLocale;
-  setIndex: (k: Surah<TSurah>[]) => void;
-  surahs: Surah<TSurah>[];
+  setIndex: (k: Surah[]) => void;
+  surahs: Surah[];
 };
 
 export function Filter({ t, locale, setIndex, surahs }: Props) {

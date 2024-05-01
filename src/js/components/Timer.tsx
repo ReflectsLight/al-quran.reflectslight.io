@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { Surah, Ayah, TAyah, TSurah, TLocale, TAyat } from "Quran";
+import type { Surah, Ayah, TLocale, TAyat } from "Quran";
 import { formatNumber } from "~/lib/t";
 
 type Maybe<T> = T | null | undefined;
 
 type Props = {
-  surah: Surah<TSurah>;
+  surah: Surah;
   locale: TLocale;
   stream: TAyat;
   setStream: (stream: TAyat) => void;
@@ -27,8 +27,8 @@ export function Timer({
   ms,
   setMs,
 }: Props) {
-  const ayah: Maybe<Ayah<TAyah>> = stream[stream.length - 1];
-  const lastAyah: Maybe<Ayah<TAyah>> = surah.ayat[surah.ayat.length - 1];
+  const ayah: Maybe<Ayah> = stream[stream.length - 1];
+  const lastAyah: Maybe<Ayah> = surah.ayat[surah.ayat.length - 1];
 
   useEffect(() => {
     if (!ayah) {

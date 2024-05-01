@@ -8,7 +8,7 @@ import { SurahIndex } from "~/components/SurahIndex";
   const root: HTMLElement = document.querySelector(".root")!;
   const locale = root.getAttribute("data-locale") as TLocale;
   const t = T(require("@json/t.json"));
-  const surahs: Surah<TSurah>[] = require("@json/surahs").map(
+  const surahs: Surah[] = require("@json/surahs").map(
     (e: TSurah) => new Surah(e),
   );
   ReactDOM.createRoot(root).render(

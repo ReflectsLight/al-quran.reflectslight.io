@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useRef } from "react";
-import { Surah, Ayah, TAyah, TAyat, TSurah, TLocale } from "Quran";
+import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/t";
 import classNames from "classnames";
 
 type Props = {
-  surah: Surah<TSurah>;
+  surah: Surah;
   stream: TAyat;
   locale: TLocale;
   endOfStream: boolean;
@@ -35,7 +35,7 @@ export function Stream({
         )}
         ref={ref}
       >
-        {stream.map((ayah: Ayah<TAyah>) => {
+        {stream.map((ayah: Ayah) => {
           return (
             <li
               key={ayah.id}

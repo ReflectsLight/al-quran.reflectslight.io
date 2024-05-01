@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
-import { Surah, Ayah, TAyah, TSurah, TAyat, TLocale } from "Quran";
+import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { Timer } from "~/components/Timer";
 import { Stream } from "~/components/Stream";
@@ -17,7 +17,7 @@ import { TFunction } from "~/lib/t";
 type Maybe<T> = T | null | undefined;
 
 type Props = {
-  surah: Surah<TSurah>;
+  surah: Surah;
   locale: TLocale;
   t: TFunction;
 };
@@ -32,7 +32,7 @@ export function SurahStream({ surah, locale, t }: Props) {
   const ref = useRef<HTMLDivElement>();
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
-  const ayah: Maybe<Ayah<TAyah>> = stream[stream.length - 1];
+  const ayah: Maybe<Ayah> = stream[stream.length - 1];
 
   useEffect(() => {
     if (ref.current) {

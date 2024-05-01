@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { TLocale, TSurah, Surah } from "Quran";
+import type { Surah, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/t";
 import { RightArrow } from "~/components/Icon";
@@ -9,13 +9,13 @@ import classNames from "classnames";
 
 type Props = {
   locale: TLocale;
-  surahs: Surah<TSurah>[];
+  surahs: Surah[];
   t: TFunction;
 };
 
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
-  const [index, setIndex] = useState<Surah<TSurah>[]>(surahs);
+  const [index, setIndex] = useState<Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>();
   const ltr = locale === "en";
 
