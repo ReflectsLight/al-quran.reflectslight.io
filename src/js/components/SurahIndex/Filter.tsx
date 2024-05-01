@@ -3,13 +3,13 @@ import { TFunction } from "~/lib/t";
 import type { Surah, TLocale } from "Quran";
 
 type Props = {
-  t: TFunction;
   locale: TLocale;
+  t: TFunction;
   setIndex: (k: Surah[]) => void;
   surahs: Surah[];
 };
 
-export function Filter({ t, locale, setIndex, surahs }: Props) {
+export function Filter({ locale, t, setIndex, surahs }: Props) {
   const onInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       target: { value },
