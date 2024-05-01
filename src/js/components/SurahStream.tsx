@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
-import { Surah, TSurah, TAyat, TLocale } from "Quran";
+import { Surah, Ayah, TAyah, TSurah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { Timer } from "~/components/Timer";
 import { Stream } from "~/components/Stream";
@@ -14,6 +14,8 @@ import {
 } from "~/components/Icon";
 import { TFunction } from "~/lib/t";
 
+type Maybe<T> = T | null | undefined;
+
 type Props = {
   surah: Surah<TSurah>;
   locale: TLocale;
@@ -26,11 +28,11 @@ export function SurahStream({ surah, locale, t }: Props) {
   const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
-  const readyToRender = stream.length > 0;
-  const ayah = stream[stream.length - 1];
   const [ms, setMs] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>();
   const audio = useMemo(() => new Audio(), []);
+  const readyToRender = stream.length > 0;
+  const ayah: Maybe<Ayah<TAyah>> = stream[stream.length - 1];
 
   useEffect(() => {
     if (ref.current) {
@@ -40,15 +42,16 @@ export function SurahStream({ surah, locale, t }: Props) {
   }, [ref.current, theme]);
 
   useEffect(() => {
-    setEndOfStream(false);
-    setStream([surah.ayat[0]]);
-  }, [stream.length === 0]);
-
-  useEffect(() => {
     if (ayah) {
       setMs(ayah.ms);
     }
   }, [ayah]);
+
+  useEffect(() => {
+    if (!endOfStream) {
+      setStream([surah.ayat[0]]);
+    }
+  }, [endOfStream]);
 
   return (
     <article
@@ -57,47 +60,50 @@ export function SurahStream({ surah, locale, t }: Props) {
         "flex flex-col invisible h-full content theme",
         locale,
         theme,
+        { hidden: !readyToRender },
       )}
     >
-      {readyToRender && (
-        <Head locale={locale} theme={theme} setTheme={setTheme}>
-          {t(locale, "TheNobleQuran")}
-        </Head>
-      )}
-      {readyToRender && (
-        <Stream
-          surah={surah}
-          stream={stream}
-          locale={locale}
-          endOfStream={endOfStream}
-          isPaused={isPaused}
-          t={t}
-        />
-      )}
+      <Head locale={locale} theme={theme} setTheme={setTheme}>
+        {t(locale, "TheNobleQuran")}
+      </Head>
+      <Stream
+        surah={surah}
+        stream={stream}
+        locale={locale}
+        endOfStream={endOfStream}
+        isPaused={isPaused}
+        t={t}
+      />
       <footer className="flex justify-between items-center h-16">
-        {readyToRender && isPaused && !endOfStream && (
+        {!endOfStream && isPaused && (
           <PlayIcon onClick={() => setIsPaused(false)} />
         )}
-        {readyToRender && !isPaused && !endOfStream && (
+        {!endOfStream && !isPaused && (
           <PauseIcon onClick={() => setIsPaused(true)} />
         )}
-        {readyToRender && !endOfStream && (
-          <div className="sound-box flex w-14 justify-end">
-            <AudioControl
-              autoPlay={true}
-              audio={audio}
-              surah={surah}
-              ayah={ayah}
-              onStatusChange={status => {
-                if (status === "play") {
-                  setMs(ayah.ms);
-                }
-                setAudioStatus(status)
-              }}
-            />
-          </div>
-        )}
-        {readyToRender && !endOfStream && (
+        <span
+          className={classNames("sound-box flex w-14 justify-end", {
+            hidden: endOfStream,
+          })}
+        >
+          <AudioControl
+            audio={audio}
+            surah={surah}
+            ayah={ayah}
+            hidden={endOfStream}
+            onStatusChange={status => {
+              if (status === "play") {
+                setMs(ayah.ms);
+              }
+              setAudioStatus(status);
+            }}
+          />
+        </span>
+        <span
+          className={classNames({
+            hidden: endOfStream || audioStatus === "wait",
+          })}
+        >
           <Timer
             surah={surah}
             setStream={setStream}
@@ -109,11 +115,11 @@ export function SurahStream({ surah, locale, t }: Props) {
             ms={ms}
             setMs={setMs}
           />
-        )}
-        {readyToRender && audioStatus === "wait" && <StalledIcon />}
-        {readyToRender && endOfStream && (
-          <RefreshIcon onClick={() => setStream([])} />
-        )}
+        </span>
+        {audioStatus === "wait" && <StalledIcon />}
+        <span className={classNames({ hidden: !endOfStream })}>
+          <RefreshIcon onClick={() => [setEndOfStream(false)]} />
+        </span>
       </footer>
     </article>
   );

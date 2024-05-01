@@ -44,9 +44,18 @@ export function Stream({
               <span
                 className={classNames("flex h-8 items-center", { "mb-2": rtl })}
               >
-                {(isPaused || endOfStream) && (
-                  <AudioControl audio={new Audio()} surah={surah} ayah={ayah} />
-                )}
+                <AudioControl
+                  hidden={!(isPaused || endOfStream)}
+                  audio={new Audio()}
+                  surah={surah}
+                  ayah={ayah}
+                  onStatusChange={(status, [_, disable]) => {
+                    console.log({ status });
+                    if (status === "end") {
+                      disable();
+                    }
+                  }}
+                />
                 <span>
                   {t(locale, "surah")} {formatNumber(surah.id, locale)}
                   {t(locale, "comma")} {t(locale, "ayah")}{" "}

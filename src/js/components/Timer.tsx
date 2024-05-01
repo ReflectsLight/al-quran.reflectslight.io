@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { Surah, TSurah, TLocale, TAyat } from "Quran";
+import { Surah, Ayah, TAyah, TSurah, TLocale, TAyat } from "Quran";
 import { formatNumber } from "~/lib/t";
+
+type Maybe<T> = T | null | undefined;
 
 type Props = {
   surah: Surah<TSurah>;
@@ -25,15 +27,20 @@ export function Timer({
   ms,
   setMs,
 }: Props) {
-  const ayah = stream[stream.length - 1];
-  const lastAyah = surah.ayat[surah.ayat.length - 1];
+  const ayah: Maybe<Ayah<TAyah>> = stream[stream.length - 1];
+  const lastAyah: Maybe<Ayah<TAyah>> = surah.ayat[surah.ayat.length - 1];
 
   useEffect(() => {
+    if (!ayah) {
+      return;
+    }
     setMs(ayah.ms);
-  }, [ayah.id]);
+  }, [ayah?.id]);
 
   useEffect(() => {
-    if (isStalled || isPaused) {
+    if (!ayah || !lastAyah) {
+      return;
+    } else if (isStalled || isPaused) {
       /* no-op */
     } else if (ms <= 0) {
       if (lastAyah.id === ayah.id) {

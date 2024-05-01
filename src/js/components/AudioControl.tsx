@@ -1,24 +1,25 @@
-import url from "url";
 import type { Surah, TSurah, Ayah, TAyah } from "Quran";
 import React, { useEffect, useMemo, useState } from "react";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
 export type TAudioStatus = "play" | "pause" | "wait" | "end";
 
+type Maybe<T> = T | null | undefined;
+type TChangeFuncs = [() => void, () => void];
 type Props = {
-  autoPlay?: boolean;
-  onStatusChange?: (s: TAudioStatus) => void;
   audio: HTMLAudioElement;
   surah: Surah<TSurah>;
-  ayah: Ayah<TAyah>;
+  ayah: Maybe<Ayah<TAyah>>;
+  hidden?: boolean;
+  onStatusChange?: (s: TAudioStatus, fns: TChangeFuncs) => void;
 };
 
 export function AudioControl({
-  autoPlay = false,
-  onStatusChange = () => null,
   audio,
   surah,
   ayah,
+  hidden = false,
+  onStatusChange = () => null,
 }: Props) {
   const [enabled, setEnabled] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<TAudioStatus>(null);
@@ -26,6 +27,9 @@ export function AudioControl({
   const pause = (audio: HTMLAudioElement) => audio.pause();
 
   useEffect(() => {
+    if (hidden || !ayah) {
+      return;
+    }
     if (audio) {
       audio.src = [
         "https://al-quran.reflectslight.io",
@@ -34,21 +38,16 @@ export function AudioControl({
         surah.id,
         `${ayah.id}.mp3`,
       ].join("/");
-      if (autoPlay) {
-        play(audio);
-      }
     }
-  }, [ayah.id]);
+    if (enabled) {
+      play(audio);
+    }
+  }, [hidden, enabled, ayah?.id]);
 
   useEffect(() => {
-    if (!autoPlay && audioStatus === "end") {
-      setEnabled(false);
+    if (!audio || !ayah) {
+      return;
     }
-    onStatusChange(audioStatus);
-  }, [audioStatus]);
-
-  useEffect(() => {
-    if (!audio) return;
     const onPlay = () => setAudioStatus("play");
     const onPause = () => setAudioStatus("pause");
     const onEnd = () => setAudioStatus("end");
@@ -67,16 +66,25 @@ export function AudioControl({
       audio.removeEventListener("stalled", onWait);
       audio.removeEventListener("waiting", onWait);
     };
-  }, [ayah.id]);
+  }, [enabled, ayah?.id]);
+
+  useEffect(() => {
+    onStatusChange(audioStatus, [
+      () => setEnabled(true),
+      () => setEnabled(false),
+    ]);
+  }, [audioStatus]);
 
   return (
-    <>
-      {enabled && (
-        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
-      )}
-      {!enabled && (
-        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
-      )}
-    </>
+    !hidden && (
+      <>
+        {enabled && (
+          <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
+        )}
+        {!enabled && (
+          <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
+        )}
+      </>
+    )
   );
 }
