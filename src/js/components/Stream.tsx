@@ -50,7 +50,6 @@ export function Stream({
                   surah={surah}
                   ayah={ayah}
                   onStatusChange={(status, [_, disable]) => {
-                    console.log({ status });
                     if (status === "end") {
                       disable();
                     }
