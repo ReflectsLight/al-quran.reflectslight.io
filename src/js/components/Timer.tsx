@@ -50,10 +50,9 @@ export function Timer({
 
   return (
     <div className="timer text-base w-10 flex justify-end">
-      {ms &&
-        (ms / 1000 <= 0
-          ? formatNumber(locale, 0)
-          : formatNumber(locale, ms / 1000))}
+      {!ms || ms / 1000 <= 0
+        ? formatNumber(locale, 0)
+        : formatNumber(locale, ms / 1000)}
     </div>
   );
 }
