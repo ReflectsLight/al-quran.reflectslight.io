@@ -1,0 +1,7 @@
+#!/bin/sh -ex
+
+##
+# main
+bundle install
+npm i
+git submodule update --init --recursive

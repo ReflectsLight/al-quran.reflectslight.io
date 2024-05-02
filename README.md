@@ -7,16 +7,14 @@ After the website is built, the build directory consists of HTML,
 CSS, JavaScript and other static assets that can be hosted by a
 standard web server (eg nginx, apache, ...).
 
-## Stack
+## Environment
 
-The following languages and tools have to be installed before
-the website can be built:
+The following languages and tools have to be installed to build
+the website from source:
 
-* Ruby 3.1, or later.
-* NodeJS v18.15, or later.
-* [tidy-html5](https://github.com/htacg/tidy-html5) <br>
-  There is a good chance there's a package available for
-  tidy-html5 on your operating system of choice.
+* Ruby 3.1 (or later)
+* NodeJS v18.15 (or later)
+* [tidy-html5](https://github.com/htacg/tidy-html5)
 
 ## Development
 
@@ -24,9 +22,8 @@ the website can be built:
     git clone https://github.com/ReflectsLight/al-quran.git
     cd al-quran
 
-    # Install Ruby, NodeJS packages
-    bundle install
-    npm i
+    # Setup build environment
+    bin/setup
 
     # Build website
     rake nanoc:build
@@ -36,7 +33,7 @@ the website can be built:
 
 ## Thanks
 
-First and foremost, Alhamdulillah.
+Alhamdulillah.
 
 * Thanks to the following graphic artists:
     - [RefreshIcon](/src/js/components/Icon.tsx)
