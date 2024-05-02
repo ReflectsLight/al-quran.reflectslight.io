@@ -32,7 +32,7 @@ export function Timer({
   }, [ayah?.id]);
 
   useEffect(() => {
-    if (!ayah || !ms) {
+    if (!ayah || typeof ms !== "number") {
       return;
     } else if (isStalled || isPaused) {
       /* no-op */
