@@ -1,8 +1,22 @@
 module Nanoc::RuleDSL
   module RequireRules
-    def require_rules(rules, locals = {}, target = binding)
+    ##
+    # @example
+    #   require_rules "nanoc/rules/assets"
+    #
+    # @param [String] path
+    #  The path to a file
+    #
+    # @param [Hash] locals
+    #  A hash of locals
+    #
+    # @param [Binding] target
+    #  Binding context
+    #
+    # @return [void]
+    def require_rules(path, locals = {}, target = binding)
       locals.each { target.local_variable_set(_1, _2) }
-      path = File.join(Dir.getwd, rules)
+      path = File.join(Dir.getwd, path)
       target.eval(
         if File.readable?(path)
           File.read(path)
