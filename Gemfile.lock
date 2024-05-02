@@ -12,7 +12,6 @@ GEM
     ddmetrics (1.1.0)
     ddplugin (1.0.3)
     diff-lcs (1.5.1)
-    dotenv (2.8.1)
     ffi (1.16.3)
     immutable-ruby (0.1.0)
       concurrent-ruby (~> 1.1)
@@ -24,9 +23,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    lockf.rb (0.13.0)
     memo_wise (1.8.0)
-    memoize (1.3.1)
     method_source (1.0.0)
     nanoc (4.12.20)
       addressable (~> 2.5)
@@ -138,7 +135,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.20.2)
     stringio (3.1.0)
-    test-cmd.rb (0.6.0)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)
@@ -152,10 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv (~> 2.8)
   listen (~> 3.0)
-  lockf.rb
-  memoize (~> 1.3)
   nanoc (~> 4.12)
   nanoc-gzip.rb
   nanoc-tidy.rb
@@ -166,7 +159,6 @@ DEPENDENCIES
   sass (~> 3.7)
   server.rb
   standard (~> 1.24)
-  test-cmd.rb
 
 BUNDLED WITH
    2.5.9
