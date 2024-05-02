@@ -17,7 +17,7 @@ module Mixin::OpenGraph
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
        url: "https://al-quran.reflectslight.io/#{context.locale}/",
-       image: "https://al-quran.reflectslight.io/images/opengraph/quran.png"}
+       image: "https://al-quran.reflectslight.io/images/opengraph/0.png"}
     end
   end
 end
