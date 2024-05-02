@@ -2,6 +2,6 @@
 
 ##
 # main
+git submodule update -f --init --recursive
 bundle install
 npm i
-git submodule update --init --recursive
