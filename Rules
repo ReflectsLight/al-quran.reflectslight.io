@@ -6,11 +6,14 @@ require "ryo/json"
 require "nanoc-gzip"
 require "nanoc-webpack"
 require "nanoc-tidy"
-require_relative "nanoc/lib/require_rules"
-Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::RuleDSL::Filter)
 
 ##
-# Common vars
+# DSL extensions
+Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::RuleDSL::Filter)
+Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::RuleDSL::RequireRules)
+
+##
+# variables
 locales    = %w[ar en]
 json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json_file("#{json_dir}/nameById.json")
@@ -18,7 +21,7 @@ tdata    = Ryo.from_json_file("#{json_dir}/t.json")
 buildenv = ENV["buildenv"] || "development"
 
 ##
-# Plugins
+# plugins
 Nanoc::Webpack
   .default_argv
   .concat ["--config", "webpack.#{buildenv}.js"]
@@ -27,7 +30,7 @@ Nanoc::Tidy
   .concat ["-upper"]
 
 ##
-# See packages/typescript/postman
+# see packages/typescript/postman
 compile "/css/vendor/postman.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
@@ -49,7 +52,7 @@ compile "/robots.txt" do
 end
 
 ##
-# Require rules
+# require rules
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect"
 require_rules "nanoc/rules/random", {locales:}
@@ -57,6 +60,6 @@ require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:}
 require_rules "nanoc/rules/index", {locales:, tdata:}
 
 ##
-# Defaults
+# defaults
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)
