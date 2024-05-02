@@ -43,7 +43,7 @@ end
 # /sitemap.xml
 compile "/sitemap.xml.erb" do
   filter(:erb, locals: {locales:, name_by_id:})
-  filter Proc.new { _1.each_line.reject { |s| s.strip.empty? }.join }
+  filter proc { _1.each_line.reject { |s| s.strip.empty? }.join }
   write("/sitemap.xml")
 end
 

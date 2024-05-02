@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Nanoc::RuleDSL
   module Filter
     ##
@@ -28,9 +30,9 @@ module Nanoc::RuleDSL
     private
 
     def random_id
-      name = item.identifier.to_s.gsub(%r|[./\\]|, "_")[/[A-Za-z0-9_]+/]
+      name = item.identifier.to_s.gsub(%r{[./\\]}, "_")[/[A-Za-z0-9_]+/]
       random = SecureRandom.alphanumeric
-      "__nanoc_#{name}_#{random}".to_sym
+      :"__nanoc_#{name}_#{random}"
     end
   end
 end

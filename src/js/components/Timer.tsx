@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import type { Surah, Ayah, TLocale, TAyat } from "Quran";
+import type { Surah, Ayah, TLocale } from "Quran";
 import { formatNumber } from "~/lib/t";
 
 type Maybe<T> = T | null | undefined;

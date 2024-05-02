@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-namespace :linter do
+namespace :format do
   desc "Run rubocop (Ruby)"
   task :rubocop do
     sh "bundle exec rubocop -A"
@@ -17,5 +17,5 @@ namespace :linter do
   end
 end
 
-desc "Run all linters"
-task linter: ["linter:rubocop", "linter:eslint", "linter:prettier"]
+desc "Run all formats"
+task format: ["format:rubocop", "format:eslint", "format:prettier"]

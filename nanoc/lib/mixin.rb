@@ -9,7 +9,7 @@ module Mixin
   def app_version
     @app_version ||= begin
       ver = File.read File.join(Dir.getwd, "VERSION")
-      ver.gsub(/[^\d.]/, '')
+      ver.gsub(/[^\d.]/, "")
     end
   end
 
