@@ -11,7 +11,7 @@ text_extensions: [
 prune:
   auto_prune: true
 
-lib_dirs: ['nanoc/lib']
+lib_dirs: ['nanoc/lib', 'nanoc/ruledsl']
 output_dir: build/al-quran/
 
 data_sources:
