@@ -7,7 +7,6 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "jsx": "react",
-    "allowJs": true,
     "lib": [ "ES2020", "DOM" ],
 
     "baseUrl": "src/",
