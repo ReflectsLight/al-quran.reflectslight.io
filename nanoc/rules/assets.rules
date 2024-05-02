@@ -1,11 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
+# Contains rules for images, fonts, etc
 
 ##
-# Contains rules that are related to assets (eg images, fonts, etc)
-
-##
-# Fonts
+# fonts
 compile "/fonts/*" do
   write(item.identifier.to_s)
   filter :gzip
@@ -13,7 +11,7 @@ compile "/fonts/*" do
 end
 
 ##
-# Images
+# images
 compile "/images/*.svg" do
   write(item.identifier.to_s)
   filter :gzip
@@ -31,7 +29,3 @@ end
 compile "/favicon.ico" do
   write(item.identifier.to_s)
 end
-
-##
-# JSON
-passthrough "/json/durations/*/*.json"
