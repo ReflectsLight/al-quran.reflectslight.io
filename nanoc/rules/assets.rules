@@ -24,7 +24,7 @@ compile "/images/*.png" do
   write(item.identifier.to_s)
 end
 
-compile "/images/opengraph/*.png" do
+compile "/images/og/*.png" do
   write(item.identifier.to_s)
 end
 

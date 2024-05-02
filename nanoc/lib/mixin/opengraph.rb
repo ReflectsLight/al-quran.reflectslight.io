@@ -12,12 +12,12 @@ module Mixin::OpenGraph
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.stream.description", surah_name: surah.name),
        url: "https://al-quran.reflectslight.io/#{context.locale}/#{surah.slug}/",
-       image: "https://al-quran.reflectslight.io/images/opengraph/#{surah.id}.png"}
+       image: "https://al-quran.reflectslight.io/images/og/#{surah.id}.png"}
     when "index.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
        url: "https://al-quran.reflectslight.io/#{context.locale}/",
-       image: "https://al-quran.reflectslight.io/images/opengraph/0.png"}
+       image: "https://al-quran.reflectslight.io/images/og/0.png"}
     end
   end
 end
