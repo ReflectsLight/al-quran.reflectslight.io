@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-# Contains rules for images, fonts, etc
+# contains rules for images, fonts, etc
 
 ##
 # fonts

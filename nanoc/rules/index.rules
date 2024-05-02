@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-# Contains rules for the surah index available at /<locale>/
+# contains rules for the surah index available at /<locale>/
 
 locales.each do |locale|
   compile "/html/index.html.erb", rep: "/#{locale}/surah/index" do

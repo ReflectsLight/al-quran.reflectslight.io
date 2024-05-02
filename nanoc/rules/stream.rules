@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-# Contains rules for the the surah stream available
+# contains rules for the the surah stream available
 # at /<locale>/<name>/, /<locale>/<id>/
 
 compile "/json/*/*/surah.json" do

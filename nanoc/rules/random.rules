@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-# Contains rules for a redirect from /<locale>/random/ to a
+# contains rules for a redirect from /<locale>/random/ to a
 # random surah (eg /en/random/ -> /en/al-kahf/)
 
 locales.each do |locale|
