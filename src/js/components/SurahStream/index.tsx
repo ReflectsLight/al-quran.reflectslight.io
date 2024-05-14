@@ -29,17 +29,17 @@ export function SurahStream({ surah, locale, t }: Props) {
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
   const [ms, setMs] = useState<number | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
+  const articleRef = useRef<HTMLElement>(null);
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
 
   useEffect(() => {
-    if (ref.current) {
-      const div = ref.current;
-      div.classList.remove("invisible");
+    const el = articleRef.current;
+    if (el) {
+      el.classList.remove("invisible");
     }
-  }, [ref.current, theme]);
+  }, [articleRef.current, theme]);
 
   useEffect(() => {
     if (ayah) {
@@ -55,7 +55,7 @@ export function SurahStream({ surah, locale, t }: Props) {
 
   return (
     <article
-      ref={ref}
+      ref={articleRef}
       className={classNames(
         "flex flex-col invisible h-full content theme",
         locale,
