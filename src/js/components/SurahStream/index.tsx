@@ -2,8 +2,6 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
-import { Timer } from "~/components/Timer";
-import { Stream } from "~/components/Stream";
 import { AudioControl, TAudioStatus } from "~/components/AudioControl";
 import { Head } from "~/components/Head";
 import {
@@ -13,6 +11,8 @@ import {
   StalledIcon,
 } from "~/components/Icon";
 import { TFunction } from "~/lib/t";
+import { Timer } from "./Timer";
+import { Stream } from "./Stream";
 
 type Maybe<T> = T | null | undefined;
 
