@@ -8,16 +8,12 @@
     <meta name="description" content='<%= t(locale, 'meta.stream.description', {surah_name: surah.name}) %>'>
     <link
       rel="canonical"
-      hreflang="<%= locale %>"
       href="https://al-quran.reflectslight.io/<%= locale %>/<%= surah.slug %>/"
     />
     <% locales.each do |locale| %>
-    <link
-        rel="alternate"
-        type="text/html"
-        hreflang="<%= locale %>"
-        href="https://al-quran.reflectslight.io/<%= locale %>/<%= surah.slug %>/"
-      />
+    <link rel="alternate"
+          href="https://al-quran.reflectslight.io/<%= locale %>/<%= surah.slug %>/"
+          hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
     <%= opengraph(context) %>

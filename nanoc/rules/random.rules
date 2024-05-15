@@ -8,7 +8,7 @@
 locales.each do |locale|
   compile "/html/main/random.html.erb", rep: "random/#{locale}" do
     context = Ryo.from({locale:})
-    filter(:erb, locals: {context:})
+    filter(:erb, locals: {locale:, locales:, context:})
     filter(:tidy)
     write("/#{locale}/random/index.html")
   end

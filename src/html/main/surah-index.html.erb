@@ -8,16 +8,12 @@
     <meta name="description" content="<%= t(locale, 'meta.index.description') %>">
     <link
       rel="canonical"
-      hreflang="<%= locale %>"
       href="https://al-quran.reflectslight.io/<%= locale %>/"
     />
     <% locales.each do |locale| %>
-    <link
-      rel="alternate"
-      type="text/html"
-      hreflang="<%= locale %>"
-      href="https://al-quran.reflectslight.io/<%= locale %>/"
-     />
+    <link rel="alternate"
+          href="https://al-quran.reflectslight.io/<%= locale %>/"
+          hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
     <%= opengraph(context) %>

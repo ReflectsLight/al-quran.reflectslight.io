@@ -2,9 +2,16 @@
 <html lang="en">
   <head>
     <title><%= t("en", "TheNobleQuran") %></title>
-    <link rel="canonical" href="https://al-quran.reflectslight.io/en/">
-    <link rel="alternate" hreflang="ar" href="https://al-quran.reflectslight.io/ar/">
-    <link rel="alternate" hreflang="en" href="https://al-quran.reflectslight.io/en/">
+    <link
+      rel="canonical"
+      href="https://al-quran.reflectslight.io/en/"
+    />
+    <% locales.each do |locale| %>
+    <link
+      rel="alternate"
+      href="https://al-quran.reflectslight.io/<%= locale %>/"
+      hreflang="<%= locale %>" />
+    <% end %>
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
