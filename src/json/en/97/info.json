@@ -1,1 +1,18 @@
-{"id":97,"name":"The Power","numberOfAyah":5,"romanized":{"name":"Al-Qadr","slug":"al-qadr"},"utf8":{"codepoints":[1575,1604,1602,1583,1585]}}
+{
+  "id": 97,
+  "name": "The Power",
+  "numberOfAyah": 5,
+  "romanized": {
+    "name": "Al-Qadr",
+    "slug": "al-qadr"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1602,
+      1583,
+      1585
+    ]
+  }
+}

@@ -1,1 +1,18 @@
-{"id":90,"name":"The City","numberOfAyah":20,"romanized":{"name":"Al-Balad","slug":"al-balad"},"utf8":{"codepoints":[1575,1604,1576,1604,1583]}}
+{
+  "id": 90,
+  "name": "The City",
+  "numberOfAyah": 20,
+  "romanized": {
+    "name": "Al-Balad",
+    "slug": "al-balad"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1576,
+      1604,
+      1583
+    ]
+  }
+}

@@ -1,1 +1,14 @@
-{"id":50,"name":"The Letter \"Qaf\"","numberOfAyah":45,"romanized":{"name":"Qaf","slug":"qaf"},"utf8":{"codepoints":[1602]}}
+{
+  "id": 50,
+  "name": "The Letter \"Qaf\"",
+  "numberOfAyah": 45,
+  "romanized": {
+    "name": "Qaf",
+    "slug": "qaf"
+  },
+  "utf8": {
+    "codepoints": [
+      1602
+    ]
+  }
+}

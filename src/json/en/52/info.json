@@ -1,1 +1,18 @@
-{"id":52,"name":"The Mount","numberOfAyah":49,"romanized":{"name":"At-Tur","slug":"at-tur"},"utf8":{"codepoints":[1575,1604,1591,1608,1585]}}
+{
+  "id": 52,
+  "name": "The Mount",
+  "numberOfAyah": 49,
+  "romanized": {
+    "name": "At-Tur",
+    "slug": "at-tur"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1591,
+      1608,
+      1585
+    ]
+  }
+}

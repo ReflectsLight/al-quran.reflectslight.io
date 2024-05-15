@@ -1,1 +1,20 @@
-{"id":25,"name":"The Criterion","numberOfAyah":77,"romanized":{"name":"Al-Furqan","slug":"al-furqan"},"utf8":{"codepoints":[1575,1604,1601,1585,1602,1575,1606]}}
+{
+  "id": 25,
+  "name": "The Criterion",
+  "numberOfAyah": 77,
+  "romanized": {
+    "name": "Al-Furqan",
+    "slug": "al-furqan"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1601,
+      1585,
+      1602,
+      1575,
+      1606
+    ]
+  }
+}

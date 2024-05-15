@@ -1,1 +1,21 @@
-{"id":79,"name":"Those who drag forth","numberOfAyah":46,"romanized":{"name":"An-Nazi'at","slug":"an-naziat"},"utf8":{"codepoints":[1575,1604,1606,1575,1586,1593,1575,1578]}}
+{
+  "id": 79,
+  "name": "Those who drag forth",
+  "numberOfAyah": 46,
+  "romanized": {
+    "name": "An-Nazi'at",
+    "slug": "an-naziat"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1606,
+      1575,
+      1586,
+      1593,
+      1575,
+      1578
+    ]
+  }
+}

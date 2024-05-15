@@ -1,1 +1,19 @@
-{"id":44,"name":"The Smoke","numberOfAyah":59,"romanized":{"name":"Ad-Dukhan","slug":"ad-dukhan"},"utf8":{"codepoints":[1575,1604,1583,1582,1575,1606]}}
+{
+  "id": 44,
+  "name": "The Smoke",
+  "numberOfAyah": 59,
+  "romanized": {
+    "name": "Ad-Dukhan",
+    "slug": "ad-dukhan"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1583,
+      1582,
+      1575,
+      1606
+    ]
+  }
+}

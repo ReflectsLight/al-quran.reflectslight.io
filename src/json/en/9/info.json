@@ -1,1 +1,19 @@
-{"id":9,"name":"The Repentance","numberOfAyah":129,"romanized":{"name":"At-Tawbah","slug":"at-tawbah"},"utf8":{"codepoints":[1575,1604,1578,1608,1576,1577]}}
+{
+  "id": 9,
+  "name": "The Repentance",
+  "numberOfAyah": 129,
+  "romanized": {
+    "name": "At-Tawbah",
+    "slug": "at-tawbah"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1578,
+      1608,
+      1576,
+      1577
+    ]
+  }
+}

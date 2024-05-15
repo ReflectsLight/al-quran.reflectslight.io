@@ -1,1 +1,15 @@
-{"id":36,"name":"Ya Sin","numberOfAyah":83,"romanized":{"name":"Ya-Sin","slug":"ya-sin"},"utf8":{"codepoints":[1610,1587]}}
+{
+  "id": 36,
+  "name": "Ya Sin",
+  "numberOfAyah": 83,
+  "romanized": {
+    "name": "Ya-Sin",
+    "slug": "ya-sin"
+  },
+  "utf8": {
+    "codepoints": [
+      1610,
+      1587
+    ]
+  }
+}

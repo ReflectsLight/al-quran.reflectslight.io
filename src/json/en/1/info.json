@@ -1,1 +1,20 @@
-{"id":1,"name":"The Opener","numberOfAyah":7,"romanized":{"name":"Al-Fatihah","slug":"al-fatihah"},"utf8":{"codepoints":[1575,1604,1601,1575,1578,1581,1577]}}
+{
+  "id": 1,
+  "name": "The Opener",
+  "numberOfAyah": 7,
+  "romanized": {
+    "name": "Al-Fatihah",
+    "slug": "al-fatihah"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1601,
+      1575,
+      1578,
+      1581,
+      1577
+    ]
+  }
+}

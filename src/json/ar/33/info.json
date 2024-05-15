@@ -1,1 +1,20 @@
-{"id":33,"name":"The Combined Forces","numberOfAyah":73,"romanized":{"name":"Al-Ahzab","slug":"al-ahzab"},"utf8":{"codepoints":[1575,1604,1571,1581,1586,1575,1576]}}
+{
+  "id": 33,
+  "name": "The Combined Forces",
+  "numberOfAyah": 73,
+  "romanized": {
+    "name": "Al-Ahzab",
+    "slug": "al-ahzab"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1571,
+      1581,
+      1586,
+      1575,
+      1576
+    ]
+  }
+}

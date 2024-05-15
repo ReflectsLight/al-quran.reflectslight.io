@@ -1,1 +1,18 @@
-{"id":28,"name":"The Stories","numberOfAyah":88,"romanized":{"name":"Al-Qasas","slug":"al-qasas"},"utf8":{"codepoints":[1575,1604,1602,1589,1589]}}
+{
+  "id": 28,
+  "name": "The Stories",
+  "numberOfAyah": 88,
+  "romanized": {
+    "name": "Al-Qasas",
+    "slug": "al-qasas"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1602,
+      1589,
+      1589
+    ]
+  }
+}

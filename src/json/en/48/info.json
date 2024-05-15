@@ -1,1 +1,18 @@
-{"id":48,"name":"The Victory","numberOfAyah":29,"romanized":{"name":"Al-Fath","slug":"al-fath"},"utf8":{"codepoints":[1575,1604,1601,1578,1581]}}
+{
+  "id": 48,
+  "name": "The Victory",
+  "numberOfAyah": 29,
+  "romanized": {
+    "name": "Al-Fath",
+    "slug": "al-fath"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1601,
+      1578,
+      1581
+    ]
+  }
+}

@@ -1,1 +1,18 @@
-{"id":105,"name":"The Elephant","numberOfAyah":5,"romanized":{"name":"Al-Fil","slug":"al-fil"},"utf8":{"codepoints":[1575,1604,1601,1610,1604]}}
+{
+  "id": 105,
+  "name": "The Elephant",
+  "numberOfAyah": 5,
+  "romanized": {
+    "name": "Al-Fil",
+    "slug": "al-fil"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1601,
+      1610,
+      1604
+    ]
+  }
+}

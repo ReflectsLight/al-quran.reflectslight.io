@@ -1,1 +1,18 @@
-{"id":92,"name":"The Night","numberOfAyah":21,"romanized":{"name":"Al-Layl","slug":"al-layl"},"utf8":{"codepoints":[1575,1604,1604,1610,1604]}}
+{
+  "id": 92,
+  "name": "The Night",
+  "numberOfAyah": 21,
+  "romanized": {
+    "name": "Al-Layl",
+    "slug": "al-layl"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1604,
+      1610,
+      1604
+    ]
+  }
+}

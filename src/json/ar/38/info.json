@@ -1,1 +1,14 @@
-{"id":38,"name":"The Letter \"Saad\"","numberOfAyah":88,"romanized":{"name":"Sad","slug":"sad"},"utf8":{"codepoints":[1589]}}
+{
+  "id": 38,
+  "name": "The Letter \"Saad\"",
+  "numberOfAyah": 88,
+  "romanized": {
+    "name": "Sad",
+    "slug": "sad"
+  },
+  "utf8": {
+    "codepoints": [
+      1589
+    ]
+  }
+}

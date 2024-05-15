@@ -1,1 +1,18 @@
-{"id":67,"name":"The Sovereignty","numberOfAyah":30,"romanized":{"name":"Al-Mulk","slug":"al-mulk"},"utf8":{"codepoints":[1575,1604,1605,1604,1603]}}
+{
+  "id": 67,
+  "name": "The Sovereignty",
+  "numberOfAyah": 30,
+  "romanized": {
+    "name": "Al-Mulk",
+    "slug": "al-mulk"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1605,
+      1604,
+      1603
+    ]
+  }
+}

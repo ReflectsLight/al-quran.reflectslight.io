@@ -1,1 +1,21 @@
-{"id":109,"name":"The Disbelievers","numberOfAyah":6,"romanized":{"name":"Al-Kafirun","slug":"al-kafirun"},"utf8":{"codepoints":[1575,1604,1603,1575,1601,1585,1608,1606]}}
+{
+  "id": 109,
+  "name": "The Disbelievers",
+  "numberOfAyah": 6,
+  "romanized": {
+    "name": "Al-Kafirun",
+    "slug": "al-kafirun"
+  },
+  "utf8": {
+    "codepoints": [
+      1575,
+      1604,
+      1603,
+      1575,
+      1601,
+      1585,
+      1608,
+      1606
+    ]
+  }
+}
