@@ -13,7 +13,8 @@ import postman, { item } from "postman";
     item.css("/css/main/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/json/${locale}/${surahId}/surah.json`, { className: "surah" }),
+    item.json(`/json/${locale}/${surahId}/info.json`, { className: "json surahinfo" }),
+    item.json(`/json/${locale}/${surahId}/surah.json`, { className: "json surah" }),
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = `${percent.toFixed(0)}%`;

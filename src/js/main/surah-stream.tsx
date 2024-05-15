@@ -1,4 +1,4 @@
-import { Surah, Ayah, TSurah, TLocale } from "Quran";
+import { Surah, Ayah, TAyat, TSurah, TLocale } from "Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
@@ -12,18 +12,20 @@ import { SurahStream } from "~/components/SurahStream";
   /*
    * Configure an instance of Surah
    */
-  const node1: HTMLScriptElement = document.querySelector("script.surah")!;
-  const node2: HTMLScriptElement = document.querySelector(".json.durations")!;
-  const blob1: [TSurah, [number, string]] = JSON.parse(node1.innerText)!;
-  const blob2: Array<[number, number]> = JSON.parse(node2.innerText)!;
-  const surah = new Surah(blob1[0]);
-  for (let i = 1; i < blob1.length; i++) {
-    const [id, body] = blob1[i] as [number, string];
+  const node1: HTMLScriptElement = document.querySelector(".json.surahinfo")!;
+  const node2: HTMLScriptElement = document.querySelector(".json.surah")!;
+  const node3: HTMLScriptElement = document.querySelector(".json.durations")!;
+  const blob1: TSurah = JSON.parse(node1.innerText)!;
+  const blob2: [number, string][] = JSON.parse(node2.innerText)!;
+  const blob3: [number, number][] = JSON.parse(node3.innerText)!;
+  const surah = new Surah(blob1);
+  for (let i = 0; i < blob2.length; i++) {
+    const [id, body] = blob2[i] as [number, string];
     surah.ayat.push(new Ayah({ id, body }));
   }
   for (let i = 0; i < surah.ayat.length; i++) {
     const ayah = surah.ayat[i];
-    const [, ms] = blob2[i];
+    const [, ms] = blob3[i];
     ayah.ms = ms * 1000;
   }
 

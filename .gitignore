@@ -4,6 +4,7 @@
 /packages/typescript/**/dist/
 /rake/tasks/deploy.rake
 /.gems/
+/submodules/quran-json/
 /crash.log
 node_modules/
 *.core
