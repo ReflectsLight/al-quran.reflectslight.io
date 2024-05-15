@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content='<%= t(locale, 'meta.stream.description', {surah_name: surah.name}) %>'>
-    <%= erb("partials/favicon.html.erb") %>
     <link
       rel="canonical"
       hreflang="<%= locale %>"
@@ -20,6 +19,7 @@
         href="https://al-quran.reflectslight.io/<%= locale %>/<%= surah.slug %>/"
       />
     <% end %>
+    <%= erb("_favicon.html.erb") %>
     <%= opengraph(context) %>
   </head>
   <body>

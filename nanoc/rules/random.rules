@@ -6,7 +6,7 @@
 # random surah (eg /en/random/ -> /en/al-kahf/)
 
 locales.each do |locale|
-  compile "/html/random.html.erb", rep: "random/#{locale}" do
+  compile "/html/main/random.html.erb", rep: "random/#{locale}" do
     context = Ryo.from({locale:})
     filter(:erb, locals: {context:})
     filter(:tidy)
