@@ -20,7 +20,10 @@ class Quran {
   locale: TLocale;
   surahs: Surah[];
 
-  static get locales(): Array<TLocale> {
+  /**
+   * @returns {Array} The available locales
+   */
+  static get locales(): TLocale[] {
     return ["ar", "en"];
   }
 
