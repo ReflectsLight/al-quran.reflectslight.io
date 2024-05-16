@@ -1,9 +1,14 @@
+/**
+ * Types
+ */
 type TLocale = "ar" | "en";
 type TAyat = Ayah[];
+
 type TQuran = {
   locale: TLocale;
   surahs: Surah[];
 }
+
 type TSurah = {
   readonly id: number;
   readonly name: string;
@@ -11,11 +16,15 @@ type TSurah = {
   readonly romanized: { name: string; slug: string };
   readonly utf8: { codepoints: number[] };
 };
+
 type TAyah = {
   id: number;
   body: string;
 }
 
+/**
+ * Classes
+ */
 class Quran {
   locale: TLocale;
   surahs: Surah[];
@@ -72,6 +81,9 @@ class Ayah {
   }
 }
 
+/**
+ * Exports
+ */
 export {
   Quran, Surah, Ayah,
   TQuran, TSurah, TAyah,
