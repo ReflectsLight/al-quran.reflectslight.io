@@ -20,6 +20,10 @@ class Quran {
   locale: TLocale;
   surahs: Surah[];
 
+  static get locales(): Array<TLocale> {
+    return ["ar", "en"];
+  }
+
   constructor(self: TQuran) {
     this.locale = self.locale;
     this.surahs = self.surahs;

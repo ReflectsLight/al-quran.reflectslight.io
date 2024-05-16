@@ -2,3 +2,5 @@
 -/tmp/
 -/build/
 -/.gems/
+-/packages/typescript/*/src/*.js
+-/packages/typescript/*/src/**/*.js
