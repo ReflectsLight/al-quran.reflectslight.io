@@ -5,8 +5,8 @@ type TLocale = "ar" | "en";
 type TAyat = Ayah[];
 
 type TQuran = {
-  locale: TLocale;
-  surahs: Surah[];
+  readonly locale: TLocale;
+  readonly surahs: Surah[];
 }
 
 type TSurah = {
@@ -18,16 +18,16 @@ type TSurah = {
 };
 
 type TAyah = {
-  id: number;
-  body: string;
+  readonly id: number;
+  readonly body: string;
 }
 
 /**
  * Classes
  */
 class Quran {
-  locale: TLocale;
-  surahs: Surah[];
+  readonly locale: TLocale;
+  readonly surahs: Surah[];
 
   /**
    * @returns {Array} The available locales
