@@ -1,18 +1,9 @@
 {
   "id": 53,
-  "name": "The Star",
+  "name": "النجم",
   "numberOfAyah": 62,
-  "romanized": {
+  "roman": {
     "name": "An-Najm",
     "slug": "an-najm"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1580,
-      1605
-    ]
   }
 }

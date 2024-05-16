@@ -2,17 +2,8 @@
   "id": 114,
   "name": "Mankind",
   "numberOfAyah": 6,
-  "romanized": {
+  "roman": {
     "name": "An-Nas",
     "slug": "an-nas"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1575,
-      1587
-    ]
   }
 }

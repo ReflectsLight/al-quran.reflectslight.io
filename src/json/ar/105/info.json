@@ -1,18 +1,9 @@
 {
   "id": 105,
-  "name": "The Elephant",
+  "name": "الفيل",
   "numberOfAyah": 5,
-  "romanized": {
+  "roman": {
     "name": "Al-Fil",
     "slug": "al-fil"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1601,
-      1610,
-      1604
-    ]
   }
 }

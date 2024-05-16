@@ -2,17 +2,8 @@
   "id": 31,
   "name": "Luqman",
   "numberOfAyah": 34,
-  "romanized": {
+  "roman": {
     "name": "Luqman",
     "slug": "luqman"
-  },
-  "utf8": {
-    "codepoints": [
-      1604,
-      1602,
-      1605,
-      1575,
-      1606
-    ]
   }
 }

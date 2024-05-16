@@ -2,17 +2,8 @@
   "id": 16,
   "name": "The Bee",
   "numberOfAyah": 128,
-  "romanized": {
+  "roman": {
     "name": "An-Nahl",
     "slug": "an-nahl"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1581,
-      1604
-    ]
   }
 }

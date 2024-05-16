@@ -1,19 +1,9 @@
 {
   "id": 55,
-  "name": "The Beneficent",
+  "name": "الرحمن",
   "numberOfAyah": 78,
-  "romanized": {
+  "roman": {
     "name": "Ar-Rahman",
     "slug": "ar-rahman"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1585,
-      1581,
-      1605,
-      1606
-    ]
   }
 }

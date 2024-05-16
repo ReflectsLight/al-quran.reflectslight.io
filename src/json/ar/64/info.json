@@ -1,20 +1,9 @@
 {
   "id": 64,
-  "name": "The Mutual Disillusion",
+  "name": "التغابن",
   "numberOfAyah": 18,
-  "romanized": {
+  "roman": {
     "name": "At-Taghabun",
     "slug": "at-taghabun"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1578,
-      1594,
-      1575,
-      1576,
-      1606
-    ]
   }
 }

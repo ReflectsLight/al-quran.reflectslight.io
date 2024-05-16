@@ -1,18 +1,9 @@
 {
   "id": 54,
-  "name": "The Moon",
+  "name": "القمر",
   "numberOfAyah": 55,
-  "romanized": {
+  "roman": {
     "name": "Al-Qamar",
     "slug": "al-qamar"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1602,
-      1605,
-      1585
-    ]
   }
 }

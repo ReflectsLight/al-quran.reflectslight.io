@@ -1,20 +1,9 @@
 {
   "id": 81,
-  "name": "The Overthrowing",
+  "name": "التكوير",
   "numberOfAyah": 29,
-  "romanized": {
+  "roman": {
     "name": "At-Takwir",
     "slug": "at-takwir"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1578,
-      1603,
-      1608,
-      1610,
-      1585
-    ]
   }
 }

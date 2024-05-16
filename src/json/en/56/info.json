@@ -2,19 +2,8 @@
   "id": 56,
   "name": "The Inevitable",
   "numberOfAyah": 96,
-  "romanized": {
+  "roman": {
     "name": "Al-Waqi'ah",
     "slug": "al-waqiah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1608,
-      1575,
-      1602,
-      1593,
-      1577
-    ]
   }
 }

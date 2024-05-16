@@ -2,20 +2,8 @@
   "id": 23,
   "name": "The Believers",
   "numberOfAyah": 118,
-  "romanized": {
+  "roman": {
     "name": "Al-Mu'minun",
     "slug": "al-muminun"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1572,
-      1605,
-      1606,
-      1608,
-      1606
-    ]
   }
 }

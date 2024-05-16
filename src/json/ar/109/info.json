@@ -1,21 +1,9 @@
 {
   "id": 109,
-  "name": "The Disbelievers",
+  "name": "الكافرون",
   "numberOfAyah": 6,
-  "romanized": {
+  "roman": {
     "name": "Al-Kafirun",
     "slug": "al-kafirun"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1603,
-      1575,
-      1601,
-      1585,
-      1608,
-      1606
-    ]
   }
 }

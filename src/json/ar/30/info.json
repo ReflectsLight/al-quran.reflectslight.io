@@ -1,18 +1,9 @@
 {
   "id": 30,
-  "name": "The Romans",
+  "name": "الروم",
   "numberOfAyah": 60,
-  "romanized": {
+  "roman": {
     "name": "Ar-Rum",
     "slug": "ar-rum"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1585,
-      1608,
-      1605
-    ]
   }
 }

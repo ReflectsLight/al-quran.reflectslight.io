@@ -1,17 +1,9 @@
 {
   "id": 19,
-  "name": "Mary",
+  "name": "مريم",
   "numberOfAyah": 98,
-  "romanized": {
+  "roman": {
     "name": "Maryam",
     "slug": "maryam"
-  },
-  "utf8": {
-    "codepoints": [
-      1605,
-      1585,
-      1610,
-      1605
-    ]
   }
 }

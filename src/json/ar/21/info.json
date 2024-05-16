@@ -1,21 +1,9 @@
 {
   "id": 21,
-  "name": "The Prophets",
+  "name": "الأنبياء",
   "numberOfAyah": 112,
-  "romanized": {
+  "roman": {
     "name": "Al-Anbya",
     "slug": "al-anbya"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1606,
-      1576,
-      1610,
-      1575,
-      1569
-    ]
   }
 }

@@ -2,19 +2,8 @@
   "id": 7,
   "name": "The Heights",
   "numberOfAyah": 206,
-  "romanized": {
+  "roman": {
     "name": "Al-A'raf",
     "slug": "al-araf"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1593,
-      1585,
-      1575,
-      1601
-    ]
   }
 }

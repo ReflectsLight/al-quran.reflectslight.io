@@ -1,18 +1,9 @@
 {
   "id": 96,
-  "name": "The Clot",
+  "name": "العلق",
   "numberOfAyah": 19,
-  "romanized": {
+  "roman": {
     "name": "Al-'Alaq",
     "slug": "al-alaq"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1593,
-      1604,
-      1602
-    ]
   }
 }

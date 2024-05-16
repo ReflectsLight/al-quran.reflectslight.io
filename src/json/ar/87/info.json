@@ -1,19 +1,9 @@
 {
   "id": 87,
-  "name": "The Most High",
+  "name": "الأعلى",
   "numberOfAyah": 19,
-  "romanized": {
+  "roman": {
     "name": "Al-A'la",
     "slug": "al-ala"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1593,
-      1604,
-      1609
-    ]
   }
 }

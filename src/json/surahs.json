@@ -1,2141 +1,2058 @@
-[
-  {
-    "id": 1,
-    "name": "The Opener",
-    "numberOfAyah": 7,
-    "romanized": {
-      "name": "Al-Fatihah",
-      "slug": "al-fatihah"
+{
+  "ar": [
+    {
+      "id": 1,
+      "name": "الفاتحة",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Fatihah",
+        "slug": "al-fatihah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1575,
-        1578,
-        1581,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 2,
-    "name": "The Cow",
-    "numberOfAyah": 286,
-    "romanized": {
-      "name": "Al-Baqarah",
-      "slug": "al-baqarah"
+    {
+      "id": 2,
+      "name": "البقرة",
+      "numberOfAyah": 286,
+      "roman": {
+        "name": "Al-Baqarah",
+        "slug": "al-baqarah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1576,
-        1602,
-        1585,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 3,
-    "name": "Family of Imran",
-    "numberOfAyah": 200,
-    "romanized": {
-      "name": "Ali 'Imran",
-      "slug": "ali-imran"
+    {
+      "id": 3,
+      "name": "آل عمران",
+      "numberOfAyah": 200,
+      "roman": {
+        "name": "Ali 'Imran",
+        "slug": "ali-imran"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1570,
-        1604,
-        32,
-        1593,
-        1605,
-        1585,
-        1575,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 4,
-    "name": "The Women",
-    "numberOfAyah": 176,
-    "romanized": {
-      "name": "An-Nisa",
-      "slug": "an-nisa"
+    {
+      "id": 4,
+      "name": "النساء",
+      "numberOfAyah": 176,
+      "roman": {
+        "name": "An-Nisa",
+        "slug": "an-nisa"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1587,
-        1575,
-        1569
-      ]
-    }
-  },
-  {
-    "id": 5,
-    "name": "The Table Spread",
-    "numberOfAyah": 120,
-    "romanized": {
-      "name": "Al-Ma'idah",
-      "slug": "al-maidah"
+    {
+      "id": 5,
+      "name": "المائدة",
+      "numberOfAyah": 120,
+      "roman": {
+        "name": "Al-Ma'idah",
+        "slug": "al-maidah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1575,
-        1574,
-        1583,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "name": "The Cattle",
-    "numberOfAyah": 165,
-    "romanized": {
-      "name": "Al-An'am",
-      "slug": "al-anam"
+    {
+      "id": 6,
+      "name": "الأنعام",
+      "numberOfAyah": 165,
+      "roman": {
+        "name": "Al-An'am",
+        "slug": "al-anam"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1606,
-        1593,
-        1575,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 7,
-    "name": "The Heights",
-    "numberOfAyah": 206,
-    "romanized": {
-      "name": "Al-A'raf",
-      "slug": "al-araf"
+    {
+      "id": 7,
+      "name": "الأعراف",
+      "numberOfAyah": 206,
+      "roman": {
+        "name": "Al-A'raf",
+        "slug": "al-araf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1593,
-        1585,
-        1575,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 8,
-    "name": "The Spoils of War",
-    "numberOfAyah": 75,
-    "romanized": {
-      "name": "Al-Anfal",
-      "slug": "al-anfal"
+    {
+      "id": 8,
+      "name": "الأنفال",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Al-Anfal",
+        "slug": "al-anfal"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1606,
-        1601,
-        1575,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 9,
-    "name": "The Repentance",
-    "numberOfAyah": 129,
-    "romanized": {
-      "name": "At-Tawbah",
-      "slug": "at-tawbah"
+    {
+      "id": 9,
+      "name": "التوبة",
+      "numberOfAyah": 129,
+      "roman": {
+        "name": "At-Tawbah",
+        "slug": "at-tawbah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1608,
-        1576,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 10,
-    "name": "Jonah",
-    "numberOfAyah": 109,
-    "romanized": {
-      "name": "Yunus",
-      "slug": "yunus"
+    {
+      "id": 10,
+      "name": "يونس",
+      "numberOfAyah": 109,
+      "roman": {
+        "name": "Yunus",
+        "slug": "yunus"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1610,
-        1608,
-        1606,
-        1587
-      ]
+    {
+      "id": 11,
+      "name": "هود",
+      "numberOfAyah": 123,
+      "roman": {
+        "name": "Hud",
+        "slug": "hud"
+      }
+    },
+    {
+      "id": 12,
+      "name": "يوسف",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Yusuf",
+        "slug": "yusuf"
+      }
+    },
+    {
+      "id": 13,
+      "name": "الرعد",
+      "numberOfAyah": 43,
+      "roman": {
+        "name": "Ar-Ra'd",
+        "slug": "ar-rad"
+      }
+    },
+    {
+      "id": 14,
+      "name": "ابراهيم",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Ibrahim",
+        "slug": "ibrahim"
+      }
+    },
+    {
+      "id": 15,
+      "name": "الحجر",
+      "numberOfAyah": 99,
+      "roman": {
+        "name": "Al-Hijr",
+        "slug": "al-hijr"
+      }
+    },
+    {
+      "id": 16,
+      "name": "النحل",
+      "numberOfAyah": 128,
+      "roman": {
+        "name": "An-Nahl",
+        "slug": "an-nahl"
+      }
+    },
+    {
+      "id": 17,
+      "name": "الإسراء",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Al-Isra",
+        "slug": "al-isra"
+      }
+    },
+    {
+      "id": 18,
+      "name": "الكهف",
+      "numberOfAyah": 110,
+      "roman": {
+        "name": "Al-Kahf",
+        "slug": "al-kahf"
+      }
+    },
+    {
+      "id": 19,
+      "name": "مريم",
+      "numberOfAyah": 98,
+      "roman": {
+        "name": "Maryam",
+        "slug": "maryam"
+      }
+    },
+    {
+      "id": 20,
+      "name": "طه",
+      "numberOfAyah": 135,
+      "roman": {
+        "name": "Taha",
+        "slug": "taha"
+      }
+    },
+    {
+      "id": 21,
+      "name": "الأنبياء",
+      "numberOfAyah": 112,
+      "roman": {
+        "name": "Al-Anbya",
+        "slug": "al-anbya"
+      }
+    },
+    {
+      "id": 22,
+      "name": "الحج",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Al-Hajj",
+        "slug": "al-hajj"
+      }
+    },
+    {
+      "id": 23,
+      "name": "المؤمنون",
+      "numberOfAyah": 118,
+      "roman": {
+        "name": "Al-Mu'minun",
+        "slug": "al-muminun"
+      }
+    },
+    {
+      "id": 24,
+      "name": "النور",
+      "numberOfAyah": 64,
+      "roman": {
+        "name": "An-Nur",
+        "slug": "an-nur"
+      }
+    },
+    {
+      "id": 25,
+      "name": "الفرقان",
+      "numberOfAyah": 77,
+      "roman": {
+        "name": "Al-Furqan",
+        "slug": "al-furqan"
+      }
+    },
+    {
+      "id": 26,
+      "name": "الشعراء",
+      "numberOfAyah": 227,
+      "roman": {
+        "name": "Ash-Shu'ara",
+        "slug": "ash-shuara"
+      }
+    },
+    {
+      "id": 27,
+      "name": "النمل",
+      "numberOfAyah": 93,
+      "roman": {
+        "name": "An-Naml",
+        "slug": "an-naml"
+      }
+    },
+    {
+      "id": 28,
+      "name": "القصص",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Al-Qasas",
+        "slug": "al-qasas"
+      }
+    },
+    {
+      "id": 29,
+      "name": "العنكبوت",
+      "numberOfAyah": 69,
+      "roman": {
+        "name": "Al-'Ankabut",
+        "slug": "al-ankabut"
+      }
+    },
+    {
+      "id": 30,
+      "name": "الروم",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Ar-Rum",
+        "slug": "ar-rum"
+      }
+    },
+    {
+      "id": 31,
+      "name": "لقمان",
+      "numberOfAyah": 34,
+      "roman": {
+        "name": "Luqman",
+        "slug": "luqman"
+      }
+    },
+    {
+      "id": 32,
+      "name": "السجدة",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "As-Sajdah",
+        "slug": "as-sajdah"
+      }
+    },
+    {
+      "id": 33,
+      "name": "الأحزاب",
+      "numberOfAyah": 73,
+      "roman": {
+        "name": "Al-Ahzab",
+        "slug": "al-ahzab"
+      }
+    },
+    {
+      "id": 34,
+      "name": "سبإ",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Saba",
+        "slug": "saba"
+      }
+    },
+    {
+      "id": 35,
+      "name": "فاطر",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Fatir",
+        "slug": "fatir"
+      }
+    },
+    {
+      "id": 36,
+      "name": "يس",
+      "numberOfAyah": 83,
+      "roman": {
+        "name": "Ya-Sin",
+        "slug": "ya-sin"
+      }
+    },
+    {
+      "id": 37,
+      "name": "الصافات",
+      "numberOfAyah": 182,
+      "roman": {
+        "name": "As-Saffat",
+        "slug": "as-saffat"
+      }
+    },
+    {
+      "id": 38,
+      "name": "ص",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Sad",
+        "slug": "sad"
+      }
+    },
+    {
+      "id": 39,
+      "name": "الزمر",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Az-Zumar",
+        "slug": "az-zumar"
+      }
+    },
+    {
+      "id": 40,
+      "name": "غافر",
+      "numberOfAyah": 85,
+      "roman": {
+        "name": "Ghafir",
+        "slug": "ghafir"
+      }
+    },
+    {
+      "id": 41,
+      "name": "فصلت",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Fussilat",
+        "slug": "fussilat"
+      }
+    },
+    {
+      "id": 42,
+      "name": "الشورى",
+      "numberOfAyah": 53,
+      "roman": {
+        "name": "Ash-Shuraa",
+        "slug": "ash-shuraa"
+      }
+    },
+    {
+      "id": 43,
+      "name": "الزخرف",
+      "numberOfAyah": 89,
+      "roman": {
+        "name": "Az-Zukhruf",
+        "slug": "az-zukhruf"
+      }
+    },
+    {
+      "id": 44,
+      "name": "الدخان",
+      "numberOfAyah": 59,
+      "roman": {
+        "name": "Ad-Dukhan",
+        "slug": "ad-dukhan"
+      }
+    },
+    {
+      "id": 45,
+      "name": "الجاثية",
+      "numberOfAyah": 37,
+      "roman": {
+        "name": "Al-Jathiyah",
+        "slug": "al-jathiyah"
+      }
+    },
+    {
+      "id": 46,
+      "name": "الأحقاف",
+      "numberOfAyah": 35,
+      "roman": {
+        "name": "Al-Ahqaf",
+        "slug": "al-ahqaf"
+      }
+    },
+    {
+      "id": 47,
+      "name": "محمد",
+      "numberOfAyah": 38,
+      "roman": {
+        "name": "Muhammad",
+        "slug": "muhammad"
+      }
+    },
+    {
+      "id": 48,
+      "name": "الفتح",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Fath",
+        "slug": "al-fath"
+      }
+    },
+    {
+      "id": 49,
+      "name": "الحجرات",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "Al-Hujurat",
+        "slug": "al-hujurat"
+      }
+    },
+    {
+      "id": 50,
+      "name": "ق",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Qaf",
+        "slug": "qaf"
+      }
+    },
+    {
+      "id": 51,
+      "name": "الذاريات",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Adh-Dhariyat",
+        "slug": "adh-dhariyat"
+      }
+    },
+    {
+      "id": 52,
+      "name": "الطور",
+      "numberOfAyah": 49,
+      "roman": {
+        "name": "At-Tur",
+        "slug": "at-tur"
+      }
+    },
+    {
+      "id": 53,
+      "name": "النجم",
+      "numberOfAyah": 62,
+      "roman": {
+        "name": "An-Najm",
+        "slug": "an-najm"
+      }
+    },
+    {
+      "id": 54,
+      "name": "القمر",
+      "numberOfAyah": 55,
+      "roman": {
+        "name": "Al-Qamar",
+        "slug": "al-qamar"
+      }
+    },
+    {
+      "id": 55,
+      "name": "الرحمن",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Ar-Rahman",
+        "slug": "ar-rahman"
+      }
+    },
+    {
+      "id": 56,
+      "name": "الواقعة",
+      "numberOfAyah": 96,
+      "roman": {
+        "name": "Al-Waqi'ah",
+        "slug": "al-waqiah"
+      }
+    },
+    {
+      "id": 57,
+      "name": "الحديد",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Hadid",
+        "slug": "al-hadid"
+      }
+    },
+    {
+      "id": 58,
+      "name": "المجادلة",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Mujadila",
+        "slug": "al-mujadila"
+      }
+    },
+    {
+      "id": 59,
+      "name": "الحشر",
+      "numberOfAyah": 24,
+      "roman": {
+        "name": "Al-Hashr",
+        "slug": "al-hashr"
+      }
+    },
+    {
+      "id": 60,
+      "name": "الممتحنة",
+      "numberOfAyah": 13,
+      "roman": {
+        "name": "Al-Mumtahanah",
+        "slug": "al-mumtahanah"
+      }
+    },
+    {
+      "id": 61,
+      "name": "الصف",
+      "numberOfAyah": 14,
+      "roman": {
+        "name": "As-Saf",
+        "slug": "as-saf"
+      }
+    },
+    {
+      "id": 62,
+      "name": "الجمعة",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Jumu'ah",
+        "slug": "al-jumuah"
+      }
+    },
+    {
+      "id": 63,
+      "name": "المنافقون",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Munafiqun",
+        "slug": "al-munafiqun"
+      }
+    },
+    {
+      "id": 64,
+      "name": "التغابن",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "At-Taghabun",
+        "slug": "at-taghabun"
+      }
+    },
+    {
+      "id": 65,
+      "name": "الطلاق",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Talaq",
+        "slug": "at-talaq"
+      }
+    },
+    {
+      "id": 66,
+      "name": "التحريم",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Tahrim",
+        "slug": "at-tahrim"
+      }
+    },
+    {
+      "id": 67,
+      "name": "الملك",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Mulk",
+        "slug": "al-mulk"
+      }
+    },
+    {
+      "id": 68,
+      "name": "القلم",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Qalam",
+        "slug": "al-qalam"
+      }
+    },
+    {
+      "id": 69,
+      "name": "الحاقة",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Haqqah",
+        "slug": "al-haqqah"
+      }
+    },
+    {
+      "id": 70,
+      "name": "المعارج",
+      "numberOfAyah": 44,
+      "roman": {
+        "name": "Al-Ma'arij",
+        "slug": "al-maarij"
+      }
+    },
+    {
+      "id": 71,
+      "name": "نوح",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Nuh",
+        "slug": "nuh"
+      }
+    },
+    {
+      "id": 72,
+      "name": "الجن",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Al-Jinn",
+        "slug": "al-jinn"
+      }
+    },
+    {
+      "id": 73,
+      "name": "المزمل",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Muzzammil",
+        "slug": "al-muzzammil"
+      }
+    },
+    {
+      "id": 74,
+      "name": "المدثر",
+      "numberOfAyah": 56,
+      "roman": {
+        "name": "Al-Muddaththir",
+        "slug": "al-muddaththir"
+      }
+    },
+    {
+      "id": 75,
+      "name": "القيامة",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "Al-Qiyamah",
+        "slug": "al-qiyamah"
+      }
+    },
+    {
+      "id": 76,
+      "name": "الانسان",
+      "numberOfAyah": 31,
+      "roman": {
+        "name": "Al-Insan",
+        "slug": "al-insan"
+      }
+    },
+    {
+      "id": 77,
+      "name": "المرسلات",
+      "numberOfAyah": 50,
+      "roman": {
+        "name": "Al-Mursalat",
+        "slug": "al-mursalat"
+      }
+    },
+    {
+      "id": 78,
+      "name": "النبإ",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "An-Naba",
+        "slug": "an-naba"
+      }
+    },
+    {
+      "id": 79,
+      "name": "النازعات",
+      "numberOfAyah": 46,
+      "roman": {
+        "name": "An-Nazi'at",
+        "slug": "an-naziat"
+      }
+    },
+    {
+      "id": 80,
+      "name": "عبس",
+      "numberOfAyah": 42,
+      "roman": {
+        "name": "'Abasa",
+        "slug": "abasa"
+      }
+    },
+    {
+      "id": 81,
+      "name": "التكوير",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "At-Takwir",
+        "slug": "at-takwir"
+      }
+    },
+    {
+      "id": 82,
+      "name": "الإنفطار",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-Infitar",
+        "slug": "al-infitar"
+      }
+    },
+    {
+      "id": 83,
+      "name": "المطففين",
+      "numberOfAyah": 36,
+      "roman": {
+        "name": "Al-Mutaffifin",
+        "slug": "al-mutaffifin"
+      }
+    },
+    {
+      "id": 84,
+      "name": "الإنشقاق",
+      "numberOfAyah": 25,
+      "roman": {
+        "name": "Al-Inshiqaq",
+        "slug": "al-inshiqaq"
+      }
+    },
+    {
+      "id": 85,
+      "name": "البروج",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Buruj",
+        "slug": "al-buruj"
+      }
+    },
+    {
+      "id": 86,
+      "name": "الطارق",
+      "numberOfAyah": 17,
+      "roman": {
+        "name": "At-Tariq",
+        "slug": "at-tariq"
+      }
+    },
+    {
+      "id": 87,
+      "name": "الأعلى",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-A'la",
+        "slug": "al-ala"
+      }
+    },
+    {
+      "id": 88,
+      "name": "الغاشية",
+      "numberOfAyah": 26,
+      "roman": {
+        "name": "Al-Ghashiyah",
+        "slug": "al-ghashiyah"
+      }
+    },
+    {
+      "id": 89,
+      "name": "الفجر",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Fajr",
+        "slug": "al-fajr"
+      }
+    },
+    {
+      "id": 90,
+      "name": "البلد",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Balad",
+        "slug": "al-balad"
+      }
+    },
+    {
+      "id": 91,
+      "name": "الشمس",
+      "numberOfAyah": 15,
+      "roman": {
+        "name": "Ash-Shams",
+        "slug": "ash-shams"
+      }
+    },
+    {
+      "id": 92,
+      "name": "الليل",
+      "numberOfAyah": 21,
+      "roman": {
+        "name": "Al-Layl",
+        "slug": "al-layl"
+      }
+    },
+    {
+      "id": 93,
+      "name": "الضحى",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Ad-Duhaa",
+        "slug": "ad-duhaa"
+      }
+    },
+    {
+      "id": 94,
+      "name": "الشرح",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Ash-Sharh",
+        "slug": "ash-sharh"
+      }
+    },
+    {
+      "id": 95,
+      "name": "التين",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Tin",
+        "slug": "at-tin"
+      }
+    },
+    {
+      "id": 96,
+      "name": "العلق",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-'Alaq",
+        "slug": "al-alaq"
+      }
+    },
+    {
+      "id": 97,
+      "name": "القدر",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Qadr",
+        "slug": "al-qadr"
+      }
+    },
+    {
+      "id": 98,
+      "name": "البينة",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Al-Bayyinah",
+        "slug": "al-bayyinah"
+      }
+    },
+    {
+      "id": 99,
+      "name": "الزلزلة",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Az-Zalzalah",
+        "slug": "az-zalzalah"
+      }
+    },
+    {
+      "id": 100,
+      "name": "العاديات",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-'Adiyat",
+        "slug": "al-adiyat"
+      }
+    },
+    {
+      "id": 101,
+      "name": "القارعة",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Qari'ah",
+        "slug": "al-qariah"
+      }
+    },
+    {
+      "id": 102,
+      "name": "التكاثر",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Takathur",
+        "slug": "at-takathur"
+      }
+    },
+    {
+      "id": 103,
+      "name": "العصر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-'Asr",
+        "slug": "al-asr"
+      }
+    },
+    {
+      "id": 104,
+      "name": "الهمزة",
+      "numberOfAyah": 9,
+      "roman": {
+        "name": "Al-Humazah",
+        "slug": "al-humazah"
+      }
+    },
+    {
+      "id": 105,
+      "name": "الفيل",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Fil",
+        "slug": "al-fil"
+      }
+    },
+    {
+      "id": 106,
+      "name": "قريش",
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Quraysh",
+        "slug": "quraysh"
+      }
+    },
+    {
+      "id": 107,
+      "name": "الماعون",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Ma'un",
+        "slug": "al-maun"
+      }
+    },
+    {
+      "id": 108,
+      "name": "الكوثر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-Kawthar",
+        "slug": "al-kawthar"
+      }
+    },
+    {
+      "id": 109,
+      "name": "الكافرون",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "Al-Kafirun",
+        "slug": "al-kafirun"
+      }
+    },
+    {
+      "id": 110,
+      "name": "النصر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "An-Nasr",
+        "slug": "an-nasr"
+      }
+    },
+    {
+      "id": 111,
+      "name": "المسد",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Masad",
+        "slug": "al-masad"
+      }
+    },
+    {
+      "id": 112,
+      "name": "الإخلاص",
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Al-Ikhlas",
+        "slug": "al-ikhlas"
+      }
+    },
+    {
+      "id": 113,
+      "name": "الفلق",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Falaq",
+        "slug": "al-falaq"
+      }
+    },
+    {
+      "id": 114,
+      "name": "الناس",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "An-Nas",
+        "slug": "an-nas"
+      }
     }
-  },
-  {
-    "id": 11,
-    "name": "Hud",
-    "numberOfAyah": 123,
-    "romanized": {
+  ],
+  "en": [
+    {
+      "id": 1,
+      "name": "The Opener",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Fatihah",
+        "slug": "al-fatihah"
+      }
+    },
+    {
+      "id": 2,
+      "name": "The Cow",
+      "numberOfAyah": 286,
+      "roman": {
+        "name": "Al-Baqarah",
+        "slug": "al-baqarah"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Family of Imran",
+      "numberOfAyah": 200,
+      "roman": {
+        "name": "Ali 'Imran",
+        "slug": "ali-imran"
+      }
+    },
+    {
+      "id": 4,
+      "name": "The Women",
+      "numberOfAyah": 176,
+      "roman": {
+        "name": "An-Nisa",
+        "slug": "an-nisa"
+      }
+    },
+    {
+      "id": 5,
+      "name": "The Table Spread",
+      "numberOfAyah": 120,
+      "roman": {
+        "name": "Al-Ma'idah",
+        "slug": "al-maidah"
+      }
+    },
+    {
+      "id": 6,
+      "name": "The Cattle",
+      "numberOfAyah": 165,
+      "roman": {
+        "name": "Al-An'am",
+        "slug": "al-anam"
+      }
+    },
+    {
+      "id": 7,
+      "name": "The Heights",
+      "numberOfAyah": 206,
+      "roman": {
+        "name": "Al-A'raf",
+        "slug": "al-araf"
+      }
+    },
+    {
+      "id": 8,
+      "name": "The Spoils of War",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Al-Anfal",
+        "slug": "al-anfal"
+      }
+    },
+    {
+      "id": 9,
+      "name": "The Repentance",
+      "numberOfAyah": 129,
+      "roman": {
+        "name": "At-Tawbah",
+        "slug": "at-tawbah"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Jonah",
+      "numberOfAyah": 109,
+      "roman": {
+        "name": "Yunus",
+        "slug": "yunus"
+      }
+    },
+    {
+      "id": 11,
       "name": "Hud",
-      "slug": "hud"
+      "numberOfAyah": 123,
+      "roman": {
+        "name": "Hud",
+        "slug": "hud"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1607,
-        1608,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 12,
-    "name": "Joseph",
-    "numberOfAyah": 111,
-    "romanized": {
-      "name": "Yusuf",
-      "slug": "yusuf"
+    {
+      "id": 12,
+      "name": "Joseph",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Yusuf",
+        "slug": "yusuf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1610,
-        1608,
-        1587,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 13,
-    "name": "The Thunder",
-    "numberOfAyah": 43,
-    "romanized": {
-      "name": "Ar-Ra'd",
-      "slug": "ar-rad"
+    {
+      "id": 13,
+      "name": "The Thunder",
+      "numberOfAyah": 43,
+      "roman": {
+        "name": "Ar-Ra'd",
+        "slug": "ar-rad"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1585,
-        1593,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 14,
-    "name": "Abraham",
-    "numberOfAyah": 52,
-    "romanized": {
-      "name": "Ibrahim",
-      "slug": "ibrahim"
+    {
+      "id": 14,
+      "name": "Abraham",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Ibrahim",
+        "slug": "ibrahim"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1576,
-        1585,
-        1575,
-        1607,
-        1610,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 15,
-    "name": "The Rocky Tract",
-    "numberOfAyah": 99,
-    "romanized": {
-      "name": "Al-Hijr",
-      "slug": "al-hijr"
+    {
+      "id": 15,
+      "name": "The Rocky Tract",
+      "numberOfAyah": 99,
+      "roman": {
+        "name": "Al-Hijr",
+        "slug": "al-hijr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1580,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 16,
-    "name": "The Bee",
-    "numberOfAyah": 128,
-    "romanized": {
-      "name": "An-Nahl",
-      "slug": "an-nahl"
+    {
+      "id": 16,
+      "name": "The Bee",
+      "numberOfAyah": 128,
+      "roman": {
+        "name": "An-Nahl",
+        "slug": "an-nahl"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1581,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 17,
-    "name": "The Night Journey",
-    "numberOfAyah": 111,
-    "romanized": {
-      "name": "Al-Isra",
-      "slug": "al-isra"
+    {
+      "id": 17,
+      "name": "The Night Journey",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Al-Isra",
+        "slug": "al-isra"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1573,
-        1587,
-        1585,
-        1575,
-        1569
-      ]
-    }
-  },
-  {
-    "id": 18,
-    "name": "The Cave",
-    "numberOfAyah": 110,
-    "romanized": {
-      "name": "Al-Kahf",
-      "slug": "al-kahf"
+    {
+      "id": 18,
+      "name": "The Cave",
+      "numberOfAyah": 110,
+      "roman": {
+        "name": "Al-Kahf",
+        "slug": "al-kahf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1603,
-        1607,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 19,
-    "name": "Mary",
-    "numberOfAyah": 98,
-    "romanized": {
-      "name": "Maryam",
-      "slug": "maryam"
+    {
+      "id": 19,
+      "name": "Mary",
+      "numberOfAyah": 98,
+      "roman": {
+        "name": "Maryam",
+        "slug": "maryam"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1605,
-        1585,
-        1610,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 20,
-    "name": "Ta-Ha",
-    "numberOfAyah": 135,
-    "romanized": {
-      "name": "Taha",
-      "slug": "taha"
+    {
+      "id": 20,
+      "name": "Ta-Ha",
+      "numberOfAyah": 135,
+      "roman": {
+        "name": "Taha",
+        "slug": "taha"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1591,
-        1607
-      ]
-    }
-  },
-  {
-    "id": 21,
-    "name": "The Prophets",
-    "numberOfAyah": 112,
-    "romanized": {
-      "name": "Al-Anbya",
-      "slug": "al-anbya"
+    {
+      "id": 21,
+      "name": "The Prophets",
+      "numberOfAyah": 112,
+      "roman": {
+        "name": "Al-Anbya",
+        "slug": "al-anbya"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1606,
-        1576,
-        1610,
-        1575,
-        1569
-      ]
-    }
-  },
-  {
-    "id": 22,
-    "name": "The Pilgrimage",
-    "numberOfAyah": 78,
-    "romanized": {
-      "name": "Al-Hajj",
-      "slug": "al-hajj"
+    {
+      "id": 22,
+      "name": "The Pilgrimage",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Al-Hajj",
+        "slug": "al-hajj"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1580
-      ]
-    }
-  },
-  {
-    "id": 23,
-    "name": "The Believers",
-    "numberOfAyah": 118,
-    "romanized": {
-      "name": "Al-Mu'minun",
-      "slug": "al-muminun"
+    {
+      "id": 23,
+      "name": "The Believers",
+      "numberOfAyah": 118,
+      "roman": {
+        "name": "Al-Mu'minun",
+        "slug": "al-muminun"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1572,
-        1605,
-        1606,
-        1608,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 24,
-    "name": "The Light",
-    "numberOfAyah": 64,
-    "romanized": {
-      "name": "An-Nur",
-      "slug": "an-nur"
+    {
+      "id": 24,
+      "name": "The Light",
+      "numberOfAyah": 64,
+      "roman": {
+        "name": "An-Nur",
+        "slug": "an-nur"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1608,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 25,
-    "name": "The Criterion",
-    "numberOfAyah": 77,
-    "romanized": {
-      "name": "Al-Furqan",
-      "slug": "al-furqan"
+    {
+      "id": 25,
+      "name": "The Criterion",
+      "numberOfAyah": 77,
+      "roman": {
+        "name": "Al-Furqan",
+        "slug": "al-furqan"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1585,
-        1602,
-        1575,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 26,
-    "name": "The Poets",
-    "numberOfAyah": 227,
-    "romanized": {
-      "name": "Ash-Shu'ara",
-      "slug": "ash-shuara"
+    {
+      "id": 26,
+      "name": "The Poets",
+      "numberOfAyah": 227,
+      "roman": {
+        "name": "Ash-Shu'ara",
+        "slug": "ash-shuara"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1588,
-        1593,
-        1585,
-        1575,
-        1569
-      ]
-    }
-  },
-  {
-    "id": 27,
-    "name": "The Ant",
-    "numberOfAyah": 93,
-    "romanized": {
-      "name": "An-Naml",
-      "slug": "an-naml"
+    {
+      "id": 27,
+      "name": "The Ant",
+      "numberOfAyah": 93,
+      "roman": {
+        "name": "An-Naml",
+        "slug": "an-naml"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1605,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 28,
-    "name": "The Stories",
-    "numberOfAyah": 88,
-    "romanized": {
-      "name": "Al-Qasas",
-      "slug": "al-qasas"
+    {
+      "id": 28,
+      "name": "The Stories",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Al-Qasas",
+        "slug": "al-qasas"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1589,
-        1589
-      ]
-    }
-  },
-  {
-    "id": 29,
-    "name": "The Spider",
-    "numberOfAyah": 69,
-    "romanized": {
-      "name": "Al-'Ankabut",
-      "slug": "al-ankabut"
+    {
+      "id": 29,
+      "name": "The Spider",
+      "numberOfAyah": 69,
+      "roman": {
+        "name": "Al-'Ankabut",
+        "slug": "al-ankabut"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1593,
-        1606,
-        1603,
-        1576,
-        1608,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 30,
-    "name": "The Romans",
-    "numberOfAyah": 60,
-    "romanized": {
-      "name": "Ar-Rum",
-      "slug": "ar-rum"
+    {
+      "id": 30,
+      "name": "The Romans",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Ar-Rum",
+        "slug": "ar-rum"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1585,
-        1608,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 31,
-    "name": "Luqman",
-    "numberOfAyah": 34,
-    "romanized": {
+    {
+      "id": 31,
       "name": "Luqman",
-      "slug": "luqman"
+      "numberOfAyah": 34,
+      "roman": {
+        "name": "Luqman",
+        "slug": "luqman"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1604,
-        1602,
-        1605,
-        1575,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 32,
-    "name": "The Prostration",
-    "numberOfAyah": 30,
-    "romanized": {
-      "name": "As-Sajdah",
-      "slug": "as-sajdah"
+    {
+      "id": 32,
+      "name": "The Prostration",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "As-Sajdah",
+        "slug": "as-sajdah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1587,
-        1580,
-        1583,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 33,
-    "name": "The Combined Forces",
-    "numberOfAyah": 73,
-    "romanized": {
-      "name": "Al-Ahzab",
-      "slug": "al-ahzab"
+    {
+      "id": 33,
+      "name": "The Combined Forces",
+      "numberOfAyah": 73,
+      "roman": {
+        "name": "Al-Ahzab",
+        "slug": "al-ahzab"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1581,
-        1586,
-        1575,
-        1576
-      ]
-    }
-  },
-  {
-    "id": 34,
-    "name": "Sheba",
-    "numberOfAyah": 54,
-    "romanized": {
-      "name": "Saba",
-      "slug": "saba"
+    {
+      "id": 34,
+      "name": "Sheba",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Saba",
+        "slug": "saba"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1587,
-        1576,
-        1573
-      ]
-    }
-  },
-  {
-    "id": 35,
-    "name": "Originator",
-    "numberOfAyah": 45,
-    "romanized": {
-      "name": "Fatir",
-      "slug": "fatir"
+    {
+      "id": 35,
+      "name": "Originator",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Fatir",
+        "slug": "fatir"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1601,
-        1575,
-        1591,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 36,
-    "name": "Ya Sin",
-    "numberOfAyah": 83,
-    "romanized": {
-      "name": "Ya-Sin",
-      "slug": "ya-sin"
+    {
+      "id": 36,
+      "name": "Ya Sin",
+      "numberOfAyah": 83,
+      "roman": {
+        "name": "Ya-Sin",
+        "slug": "ya-sin"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1610,
-        1587
-      ]
-    }
-  },
-  {
-    "id": 37,
-    "name": "Those who set the Ranks",
-    "numberOfAyah": 182,
-    "romanized": {
-      "name": "As-Saffat",
-      "slug": "as-saffat"
+    {
+      "id": 37,
+      "name": "Those who set the Ranks",
+      "numberOfAyah": 182,
+      "roman": {
+        "name": "As-Saffat",
+        "slug": "as-saffat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1589,
-        1575,
-        1601,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 38,
-    "name": "The Letter \"Saad\"",
-    "numberOfAyah": 88,
-    "romanized": {
-      "name": "Sad",
-      "slug": "sad"
+    {
+      "id": 38,
+      "name": "The Letter \"Saad\"",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Sad",
+        "slug": "sad"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1589
-      ]
-    }
-  },
-  {
-    "id": 39,
-    "name": "The Troops",
-    "numberOfAyah": 75,
-    "romanized": {
-      "name": "Az-Zumar",
-      "slug": "az-zumar"
+    {
+      "id": 39,
+      "name": "The Troops",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Az-Zumar",
+        "slug": "az-zumar"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1586,
-        1605,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 40,
-    "name": "The Forgiver",
-    "numberOfAyah": 85,
-    "romanized": {
-      "name": "Ghafir",
-      "slug": "ghafir"
+    {
+      "id": 40,
+      "name": "The Forgiver",
+      "numberOfAyah": 85,
+      "roman": {
+        "name": "Ghafir",
+        "slug": "ghafir"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1594,
-        1575,
-        1601,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 41,
-    "name": "Explained in Detail",
-    "numberOfAyah": 54,
-    "romanized": {
-      "name": "Fussilat",
-      "slug": "fussilat"
+    {
+      "id": 41,
+      "name": "Explained in Detail",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Fussilat",
+        "slug": "fussilat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1601,
-        1589,
-        1604,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 42,
-    "name": "The Consultation",
-    "numberOfAyah": 53,
-    "romanized": {
-      "name": "Ash-Shuraa",
-      "slug": "ash-shuraa"
+    {
+      "id": 42,
+      "name": "The Consultation",
+      "numberOfAyah": 53,
+      "roman": {
+        "name": "Ash-Shuraa",
+        "slug": "ash-shuraa"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1588,
-        1608,
-        1585,
-        1609
-      ]
-    }
-  },
-  {
-    "id": 43,
-    "name": "The Ornaments of Gold",
-    "numberOfAyah": 89,
-    "romanized": {
-      "name": "Az-Zukhruf",
-      "slug": "az-zukhruf"
+    {
+      "id": 43,
+      "name": "The Ornaments of Gold",
+      "numberOfAyah": 89,
+      "roman": {
+        "name": "Az-Zukhruf",
+        "slug": "az-zukhruf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1586,
-        1582,
-        1585,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 44,
-    "name": "The Smoke",
-    "numberOfAyah": 59,
-    "romanized": {
-      "name": "Ad-Dukhan",
-      "slug": "ad-dukhan"
+    {
+      "id": 44,
+      "name": "The Smoke",
+      "numberOfAyah": 59,
+      "roman": {
+        "name": "Ad-Dukhan",
+        "slug": "ad-dukhan"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1583,
-        1582,
-        1575,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 45,
-    "name": "The Crouching",
-    "numberOfAyah": 37,
-    "romanized": {
-      "name": "Al-Jathiyah",
-      "slug": "al-jathiyah"
+    {
+      "id": 45,
+      "name": "The Crouching",
+      "numberOfAyah": 37,
+      "roman": {
+        "name": "Al-Jathiyah",
+        "slug": "al-jathiyah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1580,
-        1575,
-        1579,
-        1610,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 46,
-    "name": "The Wind-Curved Sandhills",
-    "numberOfAyah": 35,
-    "romanized": {
-      "name": "Al-Ahqaf",
-      "slug": "al-ahqaf"
+    {
+      "id": 46,
+      "name": "The Wind-Curved Sandhills",
+      "numberOfAyah": 35,
+      "roman": {
+        "name": "Al-Ahqaf",
+        "slug": "al-ahqaf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1581,
-        1602,
-        1575,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 47,
-    "name": "Muhammad",
-    "numberOfAyah": 38,
-    "romanized": {
+    {
+      "id": 47,
       "name": "Muhammad",
-      "slug": "muhammad"
+      "numberOfAyah": 38,
+      "roman": {
+        "name": "Muhammad",
+        "slug": "muhammad"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1605,
-        1581,
-        1605,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 48,
-    "name": "The Victory",
-    "numberOfAyah": 29,
-    "romanized": {
-      "name": "Al-Fath",
-      "slug": "al-fath"
+    {
+      "id": 48,
+      "name": "The Victory",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Fath",
+        "slug": "al-fath"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1578,
-        1581
-      ]
-    }
-  },
-  {
-    "id": 49,
-    "name": "The Rooms",
-    "numberOfAyah": 18,
-    "romanized": {
-      "name": "Al-Hujurat",
-      "slug": "al-hujurat"
+    {
+      "id": 49,
+      "name": "The Rooms",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "Al-Hujurat",
+        "slug": "al-hujurat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1580,
-        1585,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 50,
-    "name": "The Letter \"Qaf\"",
-    "numberOfAyah": 45,
-    "romanized": {
-      "name": "Qaf",
-      "slug": "qaf"
+    {
+      "id": 50,
+      "name": "The Letter \"Qaf\"",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Qaf",
+        "slug": "qaf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1602
-      ]
-    }
-  },
-  {
-    "id": 51,
-    "name": "The Winnowing Winds",
-    "numberOfAyah": 60,
-    "romanized": {
-      "name": "Adh-Dhariyat",
-      "slug": "adh-dhariyat"
+    {
+      "id": 51,
+      "name": "The Winnowing Winds",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Adh-Dhariyat",
+        "slug": "adh-dhariyat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1584,
-        1575,
-        1585,
-        1610,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 52,
-    "name": "The Mount",
-    "numberOfAyah": 49,
-    "romanized": {
-      "name": "At-Tur",
-      "slug": "at-tur"
+    {
+      "id": 52,
+      "name": "The Mount",
+      "numberOfAyah": 49,
+      "roman": {
+        "name": "At-Tur",
+        "slug": "at-tur"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1591,
-        1608,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 53,
-    "name": "The Star",
-    "numberOfAyah": 62,
-    "romanized": {
-      "name": "An-Najm",
-      "slug": "an-najm"
+    {
+      "id": 53,
+      "name": "The Star",
+      "numberOfAyah": 62,
+      "roman": {
+        "name": "An-Najm",
+        "slug": "an-najm"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1580,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 54,
-    "name": "The Moon",
-    "numberOfAyah": 55,
-    "romanized": {
-      "name": "Al-Qamar",
-      "slug": "al-qamar"
+    {
+      "id": 54,
+      "name": "The Moon",
+      "numberOfAyah": 55,
+      "roman": {
+        "name": "Al-Qamar",
+        "slug": "al-qamar"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1605,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 55,
-    "name": "The Beneficent",
-    "numberOfAyah": 78,
-    "romanized": {
-      "name": "Ar-Rahman",
-      "slug": "ar-rahman"
+    {
+      "id": 55,
+      "name": "The Beneficent",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Ar-Rahman",
+        "slug": "ar-rahman"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1585,
-        1581,
-        1605,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 56,
-    "name": "The Inevitable",
-    "numberOfAyah": 96,
-    "romanized": {
-      "name": "Al-Waqi'ah",
-      "slug": "al-waqiah"
+    {
+      "id": 56,
+      "name": "The Inevitable",
+      "numberOfAyah": 96,
+      "roman": {
+        "name": "Al-Waqi'ah",
+        "slug": "al-waqiah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1608,
-        1575,
-        1602,
-        1593,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 57,
-    "name": "The Iron",
-    "numberOfAyah": 29,
-    "romanized": {
-      "name": "Al-Hadid",
-      "slug": "al-hadid"
+    {
+      "id": 57,
+      "name": "The Iron",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Hadid",
+        "slug": "al-hadid"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1583,
-        1610,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 58,
-    "name": "The Pleading Woman",
-    "numberOfAyah": 22,
-    "romanized": {
-      "name": "Al-Mujadila",
-      "slug": "al-mujadila"
+    {
+      "id": 58,
+      "name": "The Pleading Woman",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Mujadila",
+        "slug": "al-mujadila"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1580,
-        1575,
-        1583,
-        1604,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 59,
-    "name": "The Exile",
-    "numberOfAyah": 24,
-    "romanized": {
-      "name": "Al-Hashr",
-      "slug": "al-hashr"
+    {
+      "id": 59,
+      "name": "The Exile",
+      "numberOfAyah": 24,
+      "roman": {
+        "name": "Al-Hashr",
+        "slug": "al-hashr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1588,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 60,
-    "name": "She that is to be examined",
-    "numberOfAyah": 13,
-    "romanized": {
-      "name": "Al-Mumtahanah",
-      "slug": "al-mumtahanah"
+    {
+      "id": 60,
+      "name": "She that is to be examined",
+      "numberOfAyah": 13,
+      "roman": {
+        "name": "Al-Mumtahanah",
+        "slug": "al-mumtahanah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1605,
-        1578,
-        1581,
-        1606,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 61,
-    "name": "The Ranks",
-    "numberOfAyah": 14,
-    "romanized": {
-      "name": "As-Saf",
-      "slug": "as-saf"
+    {
+      "id": 61,
+      "name": "The Ranks",
+      "numberOfAyah": 14,
+      "roman": {
+        "name": "As-Saf",
+        "slug": "as-saf"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1589,
-        1601
-      ]
-    }
-  },
-  {
-    "id": 62,
-    "name": "The Congregation, Friday",
-    "numberOfAyah": 11,
-    "romanized": {
-      "name": "Al-Jumu'ah",
-      "slug": "al-jumuah"
+    {
+      "id": 62,
+      "name": "The Congregation, Friday",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Jumu'ah",
+        "slug": "al-jumuah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1580,
-        1605,
-        1593,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 63,
-    "name": "The Hypocrites",
-    "numberOfAyah": 11,
-    "romanized": {
-      "name": "Al-Munafiqun",
-      "slug": "al-munafiqun"
+    {
+      "id": 63,
+      "name": "The Hypocrites",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Munafiqun",
+        "slug": "al-munafiqun"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1606,
-        1575,
-        1601,
-        1602,
-        1608,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 64,
-    "name": "The Mutual Disillusion",
-    "numberOfAyah": 18,
-    "romanized": {
-      "name": "At-Taghabun",
-      "slug": "at-taghabun"
+    {
+      "id": 64,
+      "name": "The Mutual Disillusion",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "At-Taghabun",
+        "slug": "at-taghabun"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1594,
-        1575,
-        1576,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 65,
-    "name": "The Divorce",
-    "numberOfAyah": 12,
-    "romanized": {
-      "name": "At-Talaq",
-      "slug": "at-talaq"
+    {
+      "id": 65,
+      "name": "The Divorce",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Talaq",
+        "slug": "at-talaq"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1591,
-        1604,
-        1575,
-        1602
-      ]
-    }
-  },
-  {
-    "id": 66,
-    "name": "The Prohibition",
-    "numberOfAyah": 12,
-    "romanized": {
-      "name": "At-Tahrim",
-      "slug": "at-tahrim"
+    {
+      "id": 66,
+      "name": "The Prohibition",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Tahrim",
+        "slug": "at-tahrim"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1581,
-        1585,
-        1610,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 67,
-    "name": "The Sovereignty",
-    "numberOfAyah": 30,
-    "romanized": {
-      "name": "Al-Mulk",
-      "slug": "al-mulk"
+    {
+      "id": 67,
+      "name": "The Sovereignty",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Mulk",
+        "slug": "al-mulk"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1604,
-        1603
-      ]
-    }
-  },
-  {
-    "id": 68,
-    "name": "The Pen",
-    "numberOfAyah": 52,
-    "romanized": {
-      "name": "Al-Qalam",
-      "slug": "al-qalam"
+    {
+      "id": 68,
+      "name": "The Pen",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Qalam",
+        "slug": "al-qalam"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1604,
-        1605
-      ]
-    }
-  },
-  {
-    "id": 69,
-    "name": "The Reality",
-    "numberOfAyah": 52,
-    "romanized": {
-      "name": "Al-Haqqah",
-      "slug": "al-haqqah"
+    {
+      "id": 69,
+      "name": "The Reality",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Haqqah",
+        "slug": "al-haqqah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1581,
-        1575,
-        1602,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 70,
-    "name": "The Ascending Stairways",
-    "numberOfAyah": 44,
-    "romanized": {
-      "name": "Al-Ma'arij",
-      "slug": "al-maarij"
+    {
+      "id": 70,
+      "name": "The Ascending Stairways",
+      "numberOfAyah": 44,
+      "roman": {
+        "name": "Al-Ma'arij",
+        "slug": "al-maarij"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1593,
-        1575,
-        1585,
-        1580
-      ]
-    }
-  },
-  {
-    "id": 71,
-    "name": "Noah",
-    "numberOfAyah": 28,
-    "romanized": {
-      "name": "Nuh",
-      "slug": "nuh"
+    {
+      "id": 71,
+      "name": "Noah",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Nuh",
+        "slug": "nuh"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1606,
-        1608,
-        1581
-      ]
-    }
-  },
-  {
-    "id": 72,
-    "name": "The Jinn",
-    "numberOfAyah": 28,
-    "romanized": {
-      "name": "Al-Jinn",
-      "slug": "al-jinn"
+    {
+      "id": 72,
+      "name": "The Jinn",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Al-Jinn",
+        "slug": "al-jinn"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1580,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 73,
-    "name": "The Enshrouded One",
-    "numberOfAyah": 20,
-    "romanized": {
-      "name": "Al-Muzzammil",
-      "slug": "al-muzzammil"
+    {
+      "id": 73,
+      "name": "The Enshrouded One",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Muzzammil",
+        "slug": "al-muzzammil"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1586,
-        1605,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 74,
-    "name": "The Cloaked One",
-    "numberOfAyah": 56,
-    "romanized": {
-      "name": "Al-Muddaththir",
-      "slug": "al-muddaththir"
+    {
+      "id": 74,
+      "name": "The Cloaked One",
+      "numberOfAyah": 56,
+      "roman": {
+        "name": "Al-Muddaththir",
+        "slug": "al-muddaththir"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1583,
-        1579,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 75,
-    "name": "The Resurrection",
-    "numberOfAyah": 40,
-    "romanized": {
-      "name": "Al-Qiyamah",
-      "slug": "al-qiyamah"
+    {
+      "id": 75,
+      "name": "The Resurrection",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "Al-Qiyamah",
+        "slug": "al-qiyamah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1610,
-        1575,
-        1605,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 76,
-    "name": "The Man",
-    "numberOfAyah": 31,
-    "romanized": {
-      "name": "Al-Insan",
-      "slug": "al-insan"
+    {
+      "id": 76,
+      "name": "The Man",
+      "numberOfAyah": 31,
+      "roman": {
+        "name": "Al-Insan",
+        "slug": "al-insan"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1575,
-        1606,
-        1587,
-        1575,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 77,
-    "name": "The Emissaries",
-    "numberOfAyah": 50,
-    "romanized": {
-      "name": "Al-Mursalat",
-      "slug": "al-mursalat"
+    {
+      "id": 77,
+      "name": "The Emissaries",
+      "numberOfAyah": 50,
+      "roman": {
+        "name": "Al-Mursalat",
+        "slug": "al-mursalat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1585,
-        1587,
-        1604,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 78,
-    "name": "The Tidings",
-    "numberOfAyah": 40,
-    "romanized": {
-      "name": "An-Naba",
-      "slug": "an-naba"
+    {
+      "id": 78,
+      "name": "The Tidings",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "An-Naba",
+        "slug": "an-naba"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1576,
-        1573
-      ]
-    }
-  },
-  {
-    "id": 79,
-    "name": "Those who drag forth",
-    "numberOfAyah": 46,
-    "romanized": {
-      "name": "An-Nazi'at",
-      "slug": "an-naziat"
+    {
+      "id": 79,
+      "name": "Those who drag forth",
+      "numberOfAyah": 46,
+      "roman": {
+        "name": "An-Nazi'at",
+        "slug": "an-naziat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1575,
-        1586,
-        1593,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 80,
-    "name": "He Frowned",
-    "numberOfAyah": 42,
-    "romanized": {
-      "name": "'Abasa",
-      "slug": "abasa"
+    {
+      "id": 80,
+      "name": "He Frowned",
+      "numberOfAyah": 42,
+      "roman": {
+        "name": "'Abasa",
+        "slug": "abasa"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1593,
-        1576,
-        1587
-      ]
-    }
-  },
-  {
-    "id": 81,
-    "name": "The Overthrowing",
-    "numberOfAyah": 29,
-    "romanized": {
-      "name": "At-Takwir",
-      "slug": "at-takwir"
+    {
+      "id": 81,
+      "name": "The Overthrowing",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "At-Takwir",
+        "slug": "at-takwir"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1603,
-        1608,
-        1610,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 82,
-    "name": "The Cleaving",
-    "numberOfAyah": 19,
-    "romanized": {
-      "name": "Al-Infitar",
-      "slug": "al-infitar"
+    {
+      "id": 82,
+      "name": "The Cleaving",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-Infitar",
+        "slug": "al-infitar"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1573,
-        1606,
-        1601,
-        1591,
-        1575,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 83,
-    "name": "The Defrauding",
-    "numberOfAyah": 36,
-    "romanized": {
-      "name": "Al-Mutaffifin",
-      "slug": "al-mutaffifin"
+    {
+      "id": 83,
+      "name": "The Defrauding",
+      "numberOfAyah": 36,
+      "roman": {
+        "name": "Al-Mutaffifin",
+        "slug": "al-mutaffifin"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1591,
-        1601,
-        1601,
-        1610,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 84,
-    "name": "The Sundering",
-    "numberOfAyah": 25,
-    "romanized": {
-      "name": "Al-Inshiqaq",
-      "slug": "al-inshiqaq"
+    {
+      "id": 84,
+      "name": "The Sundering",
+      "numberOfAyah": 25,
+      "roman": {
+        "name": "Al-Inshiqaq",
+        "slug": "al-inshiqaq"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1573,
-        1606,
-        1588,
-        1602,
-        1575,
-        1602
-      ]
-    }
-  },
-  {
-    "id": 85,
-    "name": "The Mansions of the Stars",
-    "numberOfAyah": 22,
-    "romanized": {
-      "name": "Al-Buruj",
-      "slug": "al-buruj"
+    {
+      "id": 85,
+      "name": "The Mansions of the Stars",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Buruj",
+        "slug": "al-buruj"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1576,
-        1585,
-        1608,
-        1580
-      ]
-    }
-  },
-  {
-    "id": 86,
-    "name": "The Nightcommer",
-    "numberOfAyah": 17,
-    "romanized": {
-      "name": "At-Tariq",
-      "slug": "at-tariq"
+    {
+      "id": 86,
+      "name": "The Nightcommer",
+      "numberOfAyah": 17,
+      "roman": {
+        "name": "At-Tariq",
+        "slug": "at-tariq"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1591,
-        1575,
-        1585,
-        1602
-      ]
-    }
-  },
-  {
-    "id": 87,
-    "name": "The Most High",
-    "numberOfAyah": 19,
-    "romanized": {
-      "name": "Al-A'la",
-      "slug": "al-ala"
+    {
+      "id": 87,
+      "name": "The Most High",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-A'la",
+        "slug": "al-ala"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1571,
-        1593,
-        1604,
-        1609
-      ]
-    }
-  },
-  {
-    "id": 88,
-    "name": "The Overwhelming",
-    "numberOfAyah": 26,
-    "romanized": {
-      "name": "Al-Ghashiyah",
-      "slug": "al-ghashiyah"
+    {
+      "id": 88,
+      "name": "The Overwhelming",
+      "numberOfAyah": 26,
+      "roman": {
+        "name": "Al-Ghashiyah",
+        "slug": "al-ghashiyah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1594,
-        1575,
-        1588,
-        1610,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 89,
-    "name": "The Dawn",
-    "numberOfAyah": 30,
-    "romanized": {
-      "name": "Al-Fajr",
-      "slug": "al-fajr"
+    {
+      "id": 89,
+      "name": "The Dawn",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Fajr",
+        "slug": "al-fajr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1580,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 90,
-    "name": "The City",
-    "numberOfAyah": 20,
-    "romanized": {
-      "name": "Al-Balad",
-      "slug": "al-balad"
+    {
+      "id": 90,
+      "name": "The City",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Balad",
+        "slug": "al-balad"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1576,
-        1604,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 91,
-    "name": "The Sun",
-    "numberOfAyah": 15,
-    "romanized": {
-      "name": "Ash-Shams",
-      "slug": "ash-shams"
+    {
+      "id": 91,
+      "name": "The Sun",
+      "numberOfAyah": 15,
+      "roman": {
+        "name": "Ash-Shams",
+        "slug": "ash-shams"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1588,
-        1605,
-        1587
-      ]
-    }
-  },
-  {
-    "id": 92,
-    "name": "The Night",
-    "numberOfAyah": 21,
-    "romanized": {
-      "name": "Al-Layl",
-      "slug": "al-layl"
+    {
+      "id": 92,
+      "name": "The Night",
+      "numberOfAyah": 21,
+      "roman": {
+        "name": "Al-Layl",
+        "slug": "al-layl"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1604,
-        1610,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 93,
-    "name": "The Morning Hours",
-    "numberOfAyah": 11,
-    "romanized": {
-      "name": "Ad-Duhaa",
-      "slug": "ad-duhaa"
+    {
+      "id": 93,
+      "name": "The Morning Hours",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Ad-Duhaa",
+        "slug": "ad-duhaa"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1590,
-        1581,
-        1609
-      ]
-    }
-  },
-  {
-    "id": 94,
-    "name": "The Relief",
-    "numberOfAyah": 8,
-    "romanized": {
-      "name": "Ash-Sharh",
-      "slug": "ash-sharh"
+    {
+      "id": 94,
+      "name": "The Relief",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Ash-Sharh",
+        "slug": "ash-sharh"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1588,
-        1585,
-        1581
-      ]
-    }
-  },
-  {
-    "id": 95,
-    "name": "The Fig",
-    "numberOfAyah": 8,
-    "romanized": {
-      "name": "At-Tin",
-      "slug": "at-tin"
+    {
+      "id": 95,
+      "name": "The Fig",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Tin",
+        "slug": "at-tin"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1610,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 96,
-    "name": "The Clot",
-    "numberOfAyah": 19,
-    "romanized": {
-      "name": "Al-'Alaq",
-      "slug": "al-alaq"
+    {
+      "id": 96,
+      "name": "The Clot",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-'Alaq",
+        "slug": "al-alaq"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1593,
-        1604,
-        1602
-      ]
-    }
-  },
-  {
-    "id": 97,
-    "name": "The Power",
-    "numberOfAyah": 5,
-    "romanized": {
-      "name": "Al-Qadr",
-      "slug": "al-qadr"
+    {
+      "id": 97,
+      "name": "The Power",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Qadr",
+        "slug": "al-qadr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1583,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 98,
-    "name": "The Clear Proof",
-    "numberOfAyah": 8,
-    "romanized": {
-      "name": "Al-Bayyinah",
-      "slug": "al-bayyinah"
+    {
+      "id": 98,
+      "name": "The Clear Proof",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Al-Bayyinah",
+        "slug": "al-bayyinah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1576,
-        1610,
-        1606,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 99,
-    "name": "The Earthquake",
-    "numberOfAyah": 8,
-    "romanized": {
-      "name": "Az-Zalzalah",
-      "slug": "az-zalzalah"
+    {
+      "id": 99,
+      "name": "The Earthquake",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Az-Zalzalah",
+        "slug": "az-zalzalah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1586,
-        1604,
-        1586,
-        1604,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 100,
-    "name": "The Courser",
-    "numberOfAyah": 11,
-    "romanized": {
-      "name": "Al-'Adiyat",
-      "slug": "al-adiyat"
+    {
+      "id": 100,
+      "name": "The Courser",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-'Adiyat",
+        "slug": "al-adiyat"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1593,
-        1575,
-        1583,
-        1610,
-        1575,
-        1578
-      ]
-    }
-  },
-  {
-    "id": 101,
-    "name": "The Calamity",
-    "numberOfAyah": 11,
-    "romanized": {
-      "name": "Al-Qari'ah",
-      "slug": "al-qariah"
+    {
+      "id": 101,
+      "name": "The Calamity",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Qari'ah",
+        "slug": "al-qariah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1602,
-        1575,
-        1585,
-        1593,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 102,
-    "name": "The Rivalry in world increase",
-    "numberOfAyah": 8,
-    "romanized": {
-      "name": "At-Takathur",
-      "slug": "at-takathur"
+    {
+      "id": 102,
+      "name": "The Rivalry in world increase",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Takathur",
+        "slug": "at-takathur"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1578,
-        1603,
-        1575,
-        1579,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 103,
-    "name": "The Declining Day",
-    "numberOfAyah": 3,
-    "romanized": {
-      "name": "Al-'Asr",
-      "slug": "al-asr"
+    {
+      "id": 103,
+      "name": "The Declining Day",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-'Asr",
+        "slug": "al-asr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1593,
-        1589,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 104,
-    "name": "The Traducer",
-    "numberOfAyah": 9,
-    "romanized": {
-      "name": "Al-Humazah",
-      "slug": "al-humazah"
+    {
+      "id": 104,
+      "name": "The Traducer",
+      "numberOfAyah": 9,
+      "roman": {
+        "name": "Al-Humazah",
+        "slug": "al-humazah"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1607,
-        1605,
-        1586,
-        1577
-      ]
-    }
-  },
-  {
-    "id": 105,
-    "name": "The Elephant",
-    "numberOfAyah": 5,
-    "romanized": {
-      "name": "Al-Fil",
-      "slug": "al-fil"
+    {
+      "id": 105,
+      "name": "The Elephant",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Fil",
+        "slug": "al-fil"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1610,
-        1604
-      ]
-    }
-  },
-  {
-    "id": 106,
-    "name": "Quraysh",
-    "numberOfAyah": 4,
-    "romanized": {
+    {
+      "id": 106,
       "name": "Quraysh",
-      "slug": "quraysh"
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Quraysh",
+        "slug": "quraysh"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1602,
-        1585,
-        1610,
-        1588
-      ]
-    }
-  },
-  {
-    "id": 107,
-    "name": "The Small kindnesses",
-    "numberOfAyah": 7,
-    "romanized": {
-      "name": "Al-Ma'un",
-      "slug": "al-maun"
+    {
+      "id": 107,
+      "name": "The Small kindnesses",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Ma'un",
+        "slug": "al-maun"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1575,
-        1593,
-        1608,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 108,
-    "name": "The Abundance",
-    "numberOfAyah": 3,
-    "romanized": {
-      "name": "Al-Kawthar",
-      "slug": "al-kawthar"
+    {
+      "id": 108,
+      "name": "The Abundance",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-Kawthar",
+        "slug": "al-kawthar"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1603,
-        1608,
-        1579,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 109,
-    "name": "The Disbelievers",
-    "numberOfAyah": 6,
-    "romanized": {
-      "name": "Al-Kafirun",
-      "slug": "al-kafirun"
+    {
+      "id": 109,
+      "name": "The Disbelievers",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "Al-Kafirun",
+        "slug": "al-kafirun"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1603,
-        1575,
-        1601,
-        1585,
-        1608,
-        1606
-      ]
-    }
-  },
-  {
-    "id": 110,
-    "name": "The Divine Support",
-    "numberOfAyah": 3,
-    "romanized": {
-      "name": "An-Nasr",
-      "slug": "an-nasr"
+    {
+      "id": 110,
+      "name": "The Divine Support",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "An-Nasr",
+        "slug": "an-nasr"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1589,
-        1585
-      ]
-    }
-  },
-  {
-    "id": 111,
-    "name": "The Palm Fiber",
-    "numberOfAyah": 5,
-    "romanized": {
-      "name": "Al-Masad",
-      "slug": "al-masad"
+    {
+      "id": 111,
+      "name": "The Palm Fiber",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Masad",
+        "slug": "al-masad"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1605,
-        1587,
-        1583
-      ]
-    }
-  },
-  {
-    "id": 112,
-    "name": "The Sincerity",
-    "numberOfAyah": 4,
-    "romanized": {
-      "name": "Al-Ikhlas",
-      "slug": "al-ikhlas"
+    {
+      "id": 112,
+      "name": "The Sincerity",
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Al-Ikhlas",
+        "slug": "al-ikhlas"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1573,
-        1582,
-        1604,
-        1575,
-        1589
-      ]
-    }
-  },
-  {
-    "id": 113,
-    "name": "The Daybreak",
-    "numberOfAyah": 5,
-    "romanized": {
-      "name": "Al-Falaq",
-      "slug": "al-falaq"
+    {
+      "id": 113,
+      "name": "The Daybreak",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Falaq",
+        "slug": "al-falaq"
+      }
     },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1601,
-        1604,
-        1602
-      ]
+    {
+      "id": 114,
+      "name": "Mankind",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "An-Nas",
+        "slug": "an-nas"
+      }
     }
-  },
-  {
-    "id": 114,
-    "name": "Mankind",
-    "numberOfAyah": 6,
-    "romanized": {
-      "name": "An-Nas",
-      "slug": "an-nas"
-    },
-    "utf8": {
-      "codepoints": [
-        1575,
-        1604,
-        1606,
-        1575,
-        1587
-      ]
-    }
-  }
-]
+  ]
+}

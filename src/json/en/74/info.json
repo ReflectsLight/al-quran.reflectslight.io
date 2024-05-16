@@ -2,18 +2,8 @@
   "id": 74,
   "name": "The Cloaked One",
   "numberOfAyah": 56,
-  "romanized": {
+  "roman": {
     "name": "Al-Muddaththir",
     "slug": "al-muddaththir"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1583,
-      1579,
-      1585
-    ]
   }
 }

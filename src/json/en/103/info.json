@@ -2,17 +2,8 @@
   "id": 103,
   "name": "The Declining Day",
   "numberOfAyah": 3,
-  "romanized": {
+  "roman": {
     "name": "Al-'Asr",
     "slug": "al-asr"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1593,
-      1589,
-      1585
-    ]
   }
 }

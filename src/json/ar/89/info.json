@@ -1,18 +1,9 @@
 {
   "id": 89,
-  "name": "The Dawn",
+  "name": "الفجر",
   "numberOfAyah": 30,
-  "romanized": {
+  "roman": {
     "name": "Al-Fajr",
     "slug": "al-fajr"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1601,
-      1580,
-      1585
-    ]
   }
 }

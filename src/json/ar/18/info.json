@@ -1,18 +1,9 @@
 {
   "id": 18,
-  "name": "The Cave",
+  "name": "الكهف",
   "numberOfAyah": 110,
-  "romanized": {
+  "roman": {
     "name": "Al-Kahf",
     "slug": "al-kahf"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1603,
-      1607,
-      1601
-    ]
   }
 }

@@ -2,18 +2,8 @@
   "id": 4,
   "name": "The Women",
   "numberOfAyah": 176,
-  "romanized": {
+  "roman": {
     "name": "An-Nisa",
     "slug": "an-nisa"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1587,
-      1575,
-      1569
-    ]
   }
 }

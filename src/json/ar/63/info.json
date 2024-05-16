@@ -1,22 +1,9 @@
 {
   "id": 63,
-  "name": "The Hypocrites",
+  "name": "المنافقون",
   "numberOfAyah": 11,
-  "romanized": {
+  "roman": {
     "name": "Al-Munafiqun",
     "slug": "al-munafiqun"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1606,
-      1575,
-      1601,
-      1602,
-      1608,
-      1606
-    ]
   }
 }

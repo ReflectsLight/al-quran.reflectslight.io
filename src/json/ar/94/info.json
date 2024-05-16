@@ -1,18 +1,9 @@
 {
   "id": 94,
-  "name": "The Relief",
+  "name": "الشرح",
   "numberOfAyah": 8,
-  "romanized": {
+  "roman": {
     "name": "Ash-Sharh",
     "slug": "ash-sharh"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1588,
-      1585,
-      1581
-    ]
   }
 }

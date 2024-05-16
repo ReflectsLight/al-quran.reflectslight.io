@@ -2,20 +2,8 @@
   "id": 29,
   "name": "The Spider",
   "numberOfAyah": 69,
-  "romanized": {
+  "roman": {
     "name": "Al-'Ankabut",
     "slug": "al-ankabut"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1593,
-      1606,
-      1603,
-      1576,
-      1608,
-      1578
-    ]
   }
 }

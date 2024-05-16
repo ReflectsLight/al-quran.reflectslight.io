@@ -2,19 +2,8 @@
   "id": 49,
   "name": "The Rooms",
   "numberOfAyah": 18,
-  "romanized": {
+  "roman": {
     "name": "Al-Hujurat",
     "slug": "al-hujurat"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1581,
-      1580,
-      1585,
-      1575,
-      1578
-    ]
   }
 }

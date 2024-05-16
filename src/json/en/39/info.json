@@ -2,17 +2,8 @@
   "id": 39,
   "name": "The Troops",
   "numberOfAyah": 75,
-  "romanized": {
+  "roman": {
     "name": "Az-Zumar",
     "slug": "az-zumar"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1586,
-      1605,
-      1585
-    ]
   }
 }

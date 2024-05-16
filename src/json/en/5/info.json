@@ -2,19 +2,8 @@
   "id": 5,
   "name": "The Table Spread",
   "numberOfAyah": 120,
-  "romanized": {
+  "roman": {
     "name": "Al-Ma'idah",
     "slug": "al-maidah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1575,
-      1574,
-      1583,
-      1577
-    ]
   }
 }

@@ -1,20 +1,9 @@
 {
   "id": 88,
-  "name": "The Overwhelming",
+  "name": "الغاشية",
   "numberOfAyah": 26,
-  "romanized": {
+  "roman": {
     "name": "Al-Ghashiyah",
     "slug": "al-ghashiyah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1594,
-      1575,
-      1588,
-      1610,
-      1577
-    ]
   }
 }

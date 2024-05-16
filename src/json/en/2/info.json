@@ -2,18 +2,8 @@
   "id": 2,
   "name": "The Cow",
   "numberOfAyah": 286,
-  "romanized": {
+  "roman": {
     "name": "Al-Baqarah",
     "slug": "al-baqarah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1576,
-      1602,
-      1585,
-      1577
-    ]
   }
 }

@@ -2,19 +2,8 @@
   "id": 76,
   "name": "The Man",
   "numberOfAyah": 31,
-  "romanized": {
+  "roman": {
     "name": "Al-Insan",
     "slug": "al-insan"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1575,
-      1606,
-      1587,
-      1575,
-      1606
-    ]
   }
 }

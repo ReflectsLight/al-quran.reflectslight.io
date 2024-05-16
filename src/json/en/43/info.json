@@ -2,18 +2,8 @@
   "id": 43,
   "name": "The Ornaments of Gold",
   "numberOfAyah": 89,
-  "romanized": {
+  "roman": {
     "name": "Az-Zukhruf",
     "slug": "az-zukhruf"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1586,
-      1582,
-      1585,
-      1601
-    ]
   }
 }

@@ -1,14 +1,9 @@
 {
   "id": 38,
-  "name": "The Letter \"Saad\"",
+  "name": "ص",
   "numberOfAyah": 88,
-  "romanized": {
+  "roman": {
     "name": "Sad",
     "slug": "sad"
-  },
-  "utf8": {
-    "codepoints": [
-      1589
-    ]
   }
 }

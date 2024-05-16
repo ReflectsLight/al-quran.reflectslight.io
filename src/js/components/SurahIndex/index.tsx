@@ -47,17 +47,17 @@ export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
                 "flex items-center color-primary no-underline",
                 { "h-14": ltr, "h-10": !ltr },
               )}
-              href={`/${locale}/${surah.romanized.slug}/`}
+              href={`/${locale}/${surah.roman.slug}/`}
             >
               <span className="color-secondary font-extrabold w-10 text-center">
                 {formatNumber(locale, surah.id)}
               </span>
-              <span>{surah.getName(locale)}</span>
+              <span>{surah.name}</span>
               {ltr && (
                 <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
                     <span className="transliterated" lang="en">
-                      {surah.romanized.name}
+                      {surah.roman.name}
                     </span>
                     <span className="ayat flex justify-end text-sm">
                       {formatNumber(locale, surah.numberOfAyah)}{" "}

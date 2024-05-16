@@ -2,18 +2,8 @@
   "id": 65,
   "name": "The Divorce",
   "numberOfAyah": 12,
-  "romanized": {
+  "roman": {
     "name": "At-Talaq",
     "slug": "at-talaq"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1591,
-      1604,
-      1575,
-      1602
-    ]
   }
 }

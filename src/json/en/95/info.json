@@ -2,17 +2,8 @@
   "id": 95,
   "name": "The Fig",
   "numberOfAyah": 8,
-  "romanized": {
+  "roman": {
     "name": "At-Tin",
     "slug": "at-tin"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1578,
-      1610,
-      1606
-    ]
   }
 }

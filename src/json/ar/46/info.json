@@ -1,20 +1,9 @@
 {
   "id": 46,
-  "name": "The Wind-Curved Sandhills",
+  "name": "الأحقاف",
   "numberOfAyah": 35,
-  "romanized": {
+  "roman": {
     "name": "Al-Ahqaf",
     "slug": "al-ahqaf"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1581,
-      1602,
-      1575,
-      1601
-    ]
   }
 }

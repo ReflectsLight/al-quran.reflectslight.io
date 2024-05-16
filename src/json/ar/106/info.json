@@ -1,17 +1,9 @@
 {
   "id": 106,
-  "name": "Quraysh",
+  "name": "قريش",
   "numberOfAyah": 4,
-  "romanized": {
+  "roman": {
     "name": "Quraysh",
     "slug": "quraysh"
-  },
-  "utf8": {
-    "codepoints": [
-      1602,
-      1585,
-      1610,
-      1588
-    ]
   }
 }

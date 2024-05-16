@@ -2,18 +2,8 @@
   "id": 98,
   "name": "The Clear Proof",
   "numberOfAyah": 8,
-  "romanized": {
+  "roman": {
     "name": "Al-Bayyinah",
     "slug": "al-bayyinah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1576,
-      1610,
-      1606,
-      1577
-    ]
   }
 }

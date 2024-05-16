@@ -2,15 +2,8 @@
   "id": 34,
   "name": "Sheba",
   "numberOfAyah": 54,
-  "romanized": {
+  "roman": {
     "name": "Saba",
     "slug": "saba"
-  },
-  "utf8": {
-    "codepoints": [
-      1587,
-      1576,
-      1573
-    ]
   }
 }

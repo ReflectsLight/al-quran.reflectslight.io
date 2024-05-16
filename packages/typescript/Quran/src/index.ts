@@ -13,8 +13,7 @@ type TSurah = {
   readonly id: number;
   readonly name: string;
   readonly numberOfAyah: number;
-  readonly romanized: { name: string; slug: string };
-  readonly utf8: { codepoints: number[] };
+  readonly roman: { name: string; slug: string };
 };
 
 type TAyah = {
@@ -46,26 +45,16 @@ class Surah {
   readonly id: number;
   readonly name: string;
   readonly numberOfAyah: number;
-  readonly romanized: { name: string; slug: string };
-  readonly utf8: { codepoints: number[] };
+  readonly roman: {name: string, slug: string};
   readonly ayat: TAyat
 
   constructor(self: TSurah) {
     this.id = self.id;
     this.name = self.name;
     this.numberOfAyah = self.numberOfAyah;
-    this.romanized = self.romanized;
-    this.utf8 = self.utf8;
+    this.roman = self.roman;
     this.ayat = [];
     return this;
-  }
-
-  getName(locale: TLocale): string {
-    if (locale === "ar") {
-      return String.fromCodePoint(...this.utf8.codepoints);
-    } else {
-      return this.name;
-    }
   }
 }
 

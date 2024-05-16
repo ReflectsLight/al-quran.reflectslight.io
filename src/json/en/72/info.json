@@ -2,16 +2,8 @@
   "id": 72,
   "name": "The Jinn",
   "numberOfAyah": 28,
-  "romanized": {
+  "roman": {
     "name": "Al-Jinn",
     "slug": "al-jinn"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1580,
-      1606
-    ]
   }
 }

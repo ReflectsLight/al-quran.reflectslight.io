@@ -1,17 +1,9 @@
 {
   "id": 40,
-  "name": "The Forgiver",
+  "name": "غافر",
   "numberOfAyah": 85,
-  "romanized": {
+  "roman": {
     "name": "Ghafir",
     "slug": "ghafir"
-  },
-  "utf8": {
-    "codepoints": [
-      1594,
-      1575,
-      1601,
-      1585
-    ]
   }
 }

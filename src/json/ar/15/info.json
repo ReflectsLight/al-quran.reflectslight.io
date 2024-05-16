@@ -1,18 +1,9 @@
 {
   "id": 15,
-  "name": "The Rocky Tract",
+  "name": "الحجر",
   "numberOfAyah": 99,
-  "romanized": {
+  "roman": {
     "name": "Al-Hijr",
     "slug": "al-hijr"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1581,
-      1580,
-      1585
-    ]
   }
 }

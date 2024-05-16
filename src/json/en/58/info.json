@@ -2,20 +2,8 @@
   "id": 58,
   "name": "The Pleading Woman",
   "numberOfAyah": 22,
-  "romanized": {
+  "roman": {
     "name": "Al-Mujadila",
     "slug": "al-mujadila"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1580,
-      1575,
-      1583,
-      1604,
-      1577
-    ]
   }
 }

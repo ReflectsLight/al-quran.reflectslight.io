@@ -1,19 +1,9 @@
 {
   "id": 85,
-  "name": "The Mansions of the Stars",
+  "name": "البروج",
   "numberOfAyah": 22,
-  "romanized": {
+  "roman": {
     "name": "Al-Buruj",
     "slug": "al-buruj"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1576,
-      1585,
-      1608,
-      1580
-    ]
   }
 }

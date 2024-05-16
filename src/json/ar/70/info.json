@@ -1,20 +1,9 @@
 {
   "id": 70,
-  "name": "The Ascending Stairways",
+  "name": "المعارج",
   "numberOfAyah": 44,
-  "romanized": {
+  "roman": {
     "name": "Al-Ma'arij",
     "slug": "al-maarij"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1593,
-      1575,
-      1585,
-      1580
-    ]
   }
 }

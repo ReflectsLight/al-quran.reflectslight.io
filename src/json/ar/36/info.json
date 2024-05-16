@@ -1,15 +1,9 @@
 {
   "id": 36,
-  "name": "Ya Sin",
+  "name": "يس",
   "numberOfAyah": 83,
-  "romanized": {
+  "roman": {
     "name": "Ya-Sin",
     "slug": "ya-sin"
-  },
-  "utf8": {
-    "codepoints": [
-      1610,
-      1587
-    ]
   }
 }

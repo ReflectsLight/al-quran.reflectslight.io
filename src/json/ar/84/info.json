@@ -1,21 +1,9 @@
 {
   "id": 84,
-  "name": "The Sundering",
+  "name": "الإنشقاق",
   "numberOfAyah": 25,
-  "romanized": {
+  "roman": {
     "name": "Al-Inshiqaq",
     "slug": "al-inshiqaq"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1573,
-      1606,
-      1588,
-      1602,
-      1575,
-      1602
-    ]
   }
 }

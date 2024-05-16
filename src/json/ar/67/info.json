@@ -1,18 +1,9 @@
 {
   "id": 67,
-  "name": "The Sovereignty",
+  "name": "الملك",
   "numberOfAyah": 30,
-  "romanized": {
+  "roman": {
     "name": "Al-Mulk",
     "slug": "al-mulk"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1605,
-      1604,
-      1603
-    ]
   }
 }

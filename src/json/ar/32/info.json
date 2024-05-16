@@ -1,19 +1,9 @@
 {
   "id": 32,
-  "name": "The Prostration",
+  "name": "السجدة",
   "numberOfAyah": 30,
-  "romanized": {
+  "roman": {
     "name": "As-Sajdah",
     "slug": "as-sajdah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1587,
-      1580,
-      1583,
-      1577
-    ]
   }
 }

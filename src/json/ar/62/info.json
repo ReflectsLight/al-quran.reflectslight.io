@@ -1,19 +1,9 @@
 {
   "id": 62,
-  "name": "The Congregation, Friday",
+  "name": "الجمعة",
   "numberOfAyah": 11,
-  "romanized": {
+  "roman": {
     "name": "Al-Jumu'ah",
     "slug": "al-jumuah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1580,
-      1605,
-      1593,
-      1577
-    ]
   }
 }

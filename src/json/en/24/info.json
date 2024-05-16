@@ -2,17 +2,8 @@
   "id": 24,
   "name": "The Light",
   "numberOfAyah": 64,
-  "romanized": {
+  "roman": {
     "name": "An-Nur",
     "slug": "an-nur"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1608,
-      1585
-    ]
   }
 }

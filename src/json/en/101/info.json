@@ -2,19 +2,8 @@
   "id": 101,
   "name": "The Calamity",
   "numberOfAyah": 11,
-  "romanized": {
+  "roman": {
     "name": "Al-Qari'ah",
     "slug": "al-qariah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1602,
-      1575,
-      1585,
-      1593,
-      1577
-    ]
   }
 }

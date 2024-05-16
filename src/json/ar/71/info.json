@@ -1,16 +1,9 @@
 {
   "id": 71,
-  "name": "Noah",
+  "name": "نوح",
   "numberOfAyah": 28,
-  "romanized": {
+  "roman": {
     "name": "Nuh",
     "slug": "nuh"
-  },
-  "utf8": {
-    "codepoints": [
-      1606,
-      1608,
-      1581
-    ]
   }
 }

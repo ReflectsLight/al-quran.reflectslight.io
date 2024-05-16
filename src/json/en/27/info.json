@@ -2,17 +2,8 @@
   "id": 27,
   "name": "The Ant",
   "numberOfAyah": 93,
-  "romanized": {
+  "roman": {
     "name": "An-Naml",
     "slug": "an-naml"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1606,
-      1605,
-      1604
-    ]
   }
 }

@@ -1,14 +1,9 @@
 {
   "id": 50,
-  "name": "The Letter \"Qaf\"",
+  "name": "ق",
   "numberOfAyah": 45,
-  "romanized": {
+  "roman": {
     "name": "Qaf",
     "slug": "qaf"
-  },
-  "utf8": {
-    "codepoints": [
-      1602
-    ]
   }
 }

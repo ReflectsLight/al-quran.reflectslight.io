@@ -2,18 +2,8 @@
   "id": 86,
   "name": "The Nightcommer",
   "numberOfAyah": 17,
-  "romanized": {
+  "roman": {
     "name": "At-Tariq",
     "slug": "at-tariq"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1591,
-      1575,
-      1585,
-      1602
-    ]
   }
 }

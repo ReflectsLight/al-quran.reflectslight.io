@@ -1,20 +1,9 @@
 {
   "id": 99,
-  "name": "The Earthquake",
+  "name": "الزلزلة",
   "numberOfAyah": 8,
-  "romanized": {
+  "roman": {
     "name": "Az-Zalzalah",
     "slug": "az-zalzalah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1586,
-      1604,
-      1586,
-      1604,
-      1577
-    ]
   }
 }

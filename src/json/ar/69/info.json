@@ -1,19 +1,9 @@
 {
   "id": 69,
-  "name": "The Reality",
+  "name": "الحاقة",
   "numberOfAyah": 52,
-  "romanized": {
+  "roman": {
     "name": "Al-Haqqah",
     "slug": "al-haqqah"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1581,
-      1575,
-      1602,
-      1577
-    ]
   }
 }

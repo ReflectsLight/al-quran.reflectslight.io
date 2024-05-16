@@ -2,16 +2,8 @@
   "id": 22,
   "name": "The Pilgrimage",
   "numberOfAyah": 78,
-  "romanized": {
+  "roman": {
     "name": "Al-Hajj",
     "slug": "al-hajj"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1581,
-      1580
-    ]
   }
 }

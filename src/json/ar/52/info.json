@@ -1,18 +1,9 @@
 {
   "id": 52,
-  "name": "The Mount",
+  "name": "الطور",
   "numberOfAyah": 49,
-  "romanized": {
+  "roman": {
     "name": "At-Tur",
     "slug": "at-tur"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1591,
-      1608,
-      1585
-    ]
   }
 }

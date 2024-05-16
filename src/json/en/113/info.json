@@ -2,17 +2,8 @@
   "id": 113,
   "name": "The Daybreak",
   "numberOfAyah": 5,
-  "romanized": {
+  "roman": {
     "name": "Al-Falaq",
     "slug": "al-falaq"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1601,
-      1604,
-      1602
-    ]
   }
 }

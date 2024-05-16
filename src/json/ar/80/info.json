@@ -1,16 +1,9 @@
 {
   "id": 80,
-  "name": "He Frowned",
+  "name": "عبس",
   "numberOfAyah": 42,
-  "romanized": {
+  "roman": {
     "name": "'Abasa",
     "slug": "abasa"
-  },
-  "utf8": {
-    "codepoints": [
-      1593,
-      1576,
-      1587
-    ]
   }
 }

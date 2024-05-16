@@ -2,19 +2,8 @@
   "id": 102,
   "name": "The Rivalry in world increase",
   "numberOfAyah": 8,
-  "romanized": {
+  "roman": {
     "name": "At-Takathur",
     "slug": "at-takathur"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1578,
-      1603,
-      1575,
-      1579,
-      1585
-    ]
   }
 }

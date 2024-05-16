@@ -2,19 +2,8 @@
   "id": 8,
   "name": "The Spoils of War",
   "numberOfAyah": 75,
-  "romanized": {
+  "roman": {
     "name": "Al-Anfal",
     "slug": "al-anfal"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1606,
-      1601,
-      1575,
-      1604
-    ]
   }
 }

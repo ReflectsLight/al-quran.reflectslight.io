@@ -1,15 +1,9 @@
 {
   "id": 20,
-  "name": "Ta-Ha",
+  "name": "طه",
   "numberOfAyah": 135,
-  "romanized": {
+  "roman": {
     "name": "Taha",
     "slug": "taha"
-  },
-  "utf8": {
-    "codepoints": [
-      1591,
-      1607
-    ]
   }
 }

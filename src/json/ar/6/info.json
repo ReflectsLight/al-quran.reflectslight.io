@@ -1,20 +1,9 @@
 {
   "id": 6,
-  "name": "The Cattle",
+  "name": "الأنعام",
   "numberOfAyah": 165,
-  "romanized": {
+  "roman": {
     "name": "Al-An'am",
     "slug": "al-anam"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1571,
-      1606,
-      1593,
-      1575,
-      1605
-    ]
   }
 }

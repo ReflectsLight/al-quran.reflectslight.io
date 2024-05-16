@@ -1,18 +1,9 @@
 {
   "id": 68,
-  "name": "The Pen",
+  "name": "القلم",
   "numberOfAyah": 52,
-  "romanized": {
+  "roman": {
     "name": "Al-Qalam",
     "slug": "al-qalam"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1602,
-      1604,
-      1605
-    ]
   }
 }

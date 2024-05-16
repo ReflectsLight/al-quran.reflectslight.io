@@ -1,21 +1,9 @@
 {
   "id": 82,
-  "name": "The Cleaving",
+  "name": "الإنفطار",
   "numberOfAyah": 19,
-  "romanized": {
+  "roman": {
     "name": "Al-Infitar",
     "slug": "al-infitar"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1573,
-      1606,
-      1601,
-      1591,
-      1575,
-      1585
-    ]
   }
 }

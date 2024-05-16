@@ -1,18 +1,9 @@
 {
   "id": 13,
-  "name": "The Thunder",
+  "name": "الرعد",
   "numberOfAyah": 43,
-  "romanized": {
+  "roman": {
     "name": "Ar-Ra'd",
     "slug": "ar-rad"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1585,
-      1593,
-      1583
-    ]
   }
 }

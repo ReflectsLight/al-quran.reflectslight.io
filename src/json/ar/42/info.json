@@ -1,19 +1,9 @@
 {
   "id": 42,
-  "name": "The Consultation",
+  "name": "الشورى",
   "numberOfAyah": 53,
-  "romanized": {
+  "roman": {
     "name": "Ash-Shuraa",
     "slug": "ash-shuraa"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1588,
-      1608,
-      1585,
-      1609
-    ]
   }
 }

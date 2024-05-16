@@ -2,19 +2,8 @@
   "id": 66,
   "name": "The Prohibition",
   "numberOfAyah": 12,
-  "romanized": {
+  "roman": {
     "name": "At-Tahrim",
     "slug": "at-tahrim"
-  },
-  "utf8": {
-    "codepoints": [
-      1575,
-      1604,
-      1578,
-      1581,
-      1585,
-      1610,
-      1605
-    ]
   }
 }

@@ -2,16 +2,8 @@
   "id": 47,
   "name": "Muhammad",
   "numberOfAyah": 38,
-  "romanized": {
+  "roman": {
     "name": "Muhammad",
     "slug": "muhammad"
-  },
-  "utf8": {
-    "codepoints": [
-      1605,
-      1581,
-      1605,
-      1583
-    ]
   }
 }
