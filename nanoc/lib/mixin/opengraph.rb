@@ -13,7 +13,7 @@ module Mixin::OpenGraph
        description: t(context.locale, "meta.stream.description", surah_name: surah.name),
        url: "https://al-quran.reflectslight.io/#{context.locale}/#{surah.slug}/",
        image: "https://al-quran.reflectslight.io/images/og/#{surah.id}.png"}
-    when "surah-index.html.erb"
+    when "redirect.html.erb", "surah-index.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
        url: "https://al-quran.reflectslight.io/#{context.locale}/",

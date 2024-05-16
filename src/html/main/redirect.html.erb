@@ -13,6 +13,7 @@
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
+    <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
   </head>
   <body>
     <script src="/js/main/redirect.js"></script>
