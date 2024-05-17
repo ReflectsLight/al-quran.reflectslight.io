@@ -40,4 +40,4 @@ jobs:
     - name: Add HTMLTidy
       run: sudo apt-get install tidy
     - name: nanoc
-      run: bundle exec rake build
+      run: rake nanoc:build
