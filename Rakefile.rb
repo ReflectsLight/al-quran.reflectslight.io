@@ -6,7 +6,11 @@ require "yaml"
 
 ##
 # Rake tasks
-load "rake/tasks/deploy.rake"
+begin
+  load "rake/tasks/deploy.rake"
+rescue LoadError
+  warn "[warn] #{$!.class}: #{$!.message}"
+end
 load "rake/tasks/format.rake"
 load "rake/tasks/nanoc.rake"
 
