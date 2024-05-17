@@ -10,9 +10,7 @@ import { SurahIndex } from "~/components/SurahIndex";
   const appVersion = root.getAttribute("data-app-version") as string;
   const t = T(require("@json/t.json"));
   const byLocale = require("@json/surahs");
-  const surahs: Surah[] = byLocale[locale].map(
-    (e: TSurah) => new Surah(e),
-  );
+  const surahs: Surah[] = byLocale[locale].map((e: TSurah) => new Surah(e));
   ReactDOM.createRoot(root).render(
     <SurahIndex
       appVersion={appVersion}
