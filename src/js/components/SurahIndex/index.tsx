@@ -39,7 +39,7 @@ export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <ul className="body index scroll-y list-none p-0 m-0 h-5/6">
+      <ul className="body index scroll-y list-none p-0 m-0 mt-4 h-5/6">
         {index.map((surah, key) => (
           <li className="surah" key={key}>
             <a
