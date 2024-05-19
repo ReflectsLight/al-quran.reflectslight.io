@@ -20,7 +20,7 @@ export function ThemeSelect({ theme, setTheme }: Props) {
             className={classNames("block circle mb-1", t)}
             value={t}
           >
-            <span />
+            <span className="block w-full h-full" />
           </Select.Option>
         );
       })}
