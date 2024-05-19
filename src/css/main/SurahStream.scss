@@ -32,7 +32,10 @@ body .root .content.theme {
   }
 }
 
-/* English-specific rules */
+
+/**
+ * LTR languages
+ */
 body .root .content.theme.en {
   ul.body.stream {
     .sound-off.icon, .sound-on.icon {
@@ -40,8 +43,10 @@ body .root .content.theme.en {
   }
 }
 
-/* Arabic-specific rules */
-body .root .content.theme.ar {
+/**
+ * RTL languages
+ */
+body .root .content.theme.rtl {
   font-size: larger;
 
   header {

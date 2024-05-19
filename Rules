@@ -11,7 +11,7 @@ require "nanoc-tidy"
 
 ##
 # variables
-locales    = %w[ar en]
+locales    = %w[ar fa en]
 json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json_file("#{json_dir}/nameById.json")
 tdata    = Ryo.from_json_file("#{json_dir}/t.json")

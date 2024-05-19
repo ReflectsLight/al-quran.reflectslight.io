@@ -7,15 +7,5 @@
 
   header {
     h1 , h1 a { color: $primary-color; }
-    nav .react-select {
-      color: $secondary-color;
-    }
-    nav .react-select.language {
-      ul li {
-        background: $primary-color;
-        color: $white;
-        border: 3px solid $secondary-color;
-      }
-    }
   }
 }

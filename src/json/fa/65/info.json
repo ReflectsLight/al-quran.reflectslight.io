@@ -1,0 +1,9 @@
+{
+  "id": 65,
+  "name": "طلاق",
+  "numberOfAyah": 12,
+  "roman": {
+    "name": "At-Talaq",
+    "slug": "at-talaq"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": 101,
+  "name": "قارعه",
+  "numberOfAyah": 11,
+  "roman": {
+    "name": "Al-Qari'ah",
+    "slug": "al-qariah"
+  }
+}

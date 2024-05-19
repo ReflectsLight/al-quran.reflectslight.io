@@ -1,32 +1,29 @@
 import React from "react";
+import { Quran, TLocale } from "Quran";
 import { Select } from "~/components/Select";
+import classNames from "classnames";
 
 type Props = {
-  locale: string;
+  locale: TLocale;
 };
 
 export function LanguageSelect({ locale }: Props) {
   return (
-    <Select
-      value={locale}
-      className="language"
-      onChange={(el: JSX.Element) => {
-        const newLocale = el.props.value;
-        const content = document.querySelector(".content.theme");
-        const path = location.pathname.replace(
-          new RegExp(`^/${locale}/`),
-          `/${newLocale}/`,
+    <Select value={locale.name} className="language-select">
+      {Quran.locales.map((l: TLocale, i: number) => {
+        const path = location.pathname;
+        const href = path.replace(`/${locale.name}/`, `/${l.name}/`);
+        return (
+          <Select.Option
+            key={i}
+            className={classNames("flex h-6 w-20 justify-center no-underline mb-1 rounded", l.direction)}
+            value={l.name}
+            href={l.name === locale.name ? undefined : href}
+          >
+            {l.displayName}
+          </Select.Option>
         );
-        content?.classList?.add("invisible");
-        location.replace(path);
-      }}
-    >
-      <option value="ar">
-        <span>عربي</span>
-      </option>
-      <option value="en">
-        <span>English</span>
-      </option>
+      })}
     </Select>
   );
 }

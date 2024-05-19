@@ -1,0 +1,9 @@
+{
+  "id": 30,
+  "name": "روم",
+  "numberOfAyah": 60,
+  "roman": {
+    "name": "Ar-Rum",
+    "slug": "ar-rum"
+  }
+}

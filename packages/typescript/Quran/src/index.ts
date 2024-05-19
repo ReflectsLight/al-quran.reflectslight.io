@@ -1,8 +1,13 @@
 /**
  * Types
  */
-type TLocale = "ar" | "en";
 type TAyat = Ayah[];
+
+type TLocale = {
+  readonly name: string,
+  readonly displayName: string,
+  readonly direction: "rtl" | "ltr"
+};
 
 type TQuran = {
   readonly locale: TLocale;
@@ -32,7 +37,11 @@ class Quran {
    * @returns {Array} The available locales
    */
   static get locales(): TLocale[] {
-    return ["ar", "en"];
+    return [
+      {"name": "en", "displayName": "English", "direction": "ltr"},
+      {"name": "ar", "displayName": "العربية", "direction": "rtl"},
+      {"name": "fa", "displayName": "فارسی", "direction": "rtl"}
+    ];
   }
 
   constructor(self: TQuran) {

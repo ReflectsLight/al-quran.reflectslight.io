@@ -1,4 +1,4 @@
-import { Surah, Ayah, TSurah, TLocale } from "Quran";
+import { Quran, Surah, Ayah, TSurah, TLocale } from "Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
@@ -6,8 +6,11 @@ import { SurahStream } from "~/components/SurahStream";
 
 (function () {
   const root: HTMLElement = document.querySelector(".root")!;
-  const locale = root.getAttribute("data-locale") as TLocale;
   const t = T(require("@json/t.json"));
+  const locale = (() => {
+    const l = root.getAttribute("data-locale");
+    return Quran.locales.find(ll => ll.name === l);
+  })()!;
 
   /*
    * Configure an instance of Surah
@@ -29,7 +32,5 @@ import { SurahStream } from "~/components/SurahStream";
     ayah.ms = ms * 1000;
   }
 
-  ReactDOM.createRoot(root).render(
-    <SurahStream surah={surah} locale={locale} t={t} />,
-  );
+  ReactDOM.createRoot(root).render(<SurahStream surah={surah} locale={locale} t={t} />);
 })();

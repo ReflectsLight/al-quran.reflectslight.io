@@ -1,4 +1,4 @@
-.root .content.theme.blue.ar {
+.root .content.theme.blue.rtl {
   direction: rtl;
 }
 
@@ -17,13 +17,16 @@
     color: $accent-color;
   }
 
-  .react-select.theme {
-    .selected {
-      .circle {
-        background: $primary-color;
-        border-radius: 10px;
-      }
-    }
+  .background-primary {
+    background: $primary-color;
+  }
+
+  .background-secondary {
+    background: $secondary-color;
+  }
+
+  .background-accent {
+    background: $accent-color;
   }
 }
 

@@ -70,10 +70,7 @@ export function AudioControl({
 
   useEffect(() => {
     if (audioStatus) {
-      onStatusChange(audioStatus, [
-        () => setEnabled(true),
-        () => setEnabled(false),
-      ]);
+      onStatusChange(audioStatus, [() => setEnabled(true), () => setEnabled(false)]);
     }
   }, [audioStatus]);
 
@@ -83,12 +80,8 @@ export function AudioControl({
 
   return (
     <>
-      {enabled && (
-        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
-      )}
-      {!enabled && (
-        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
-      )}
+      {enabled && <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />}
+      {!enabled && <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />}
     </>
   );
 }

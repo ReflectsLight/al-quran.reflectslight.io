@@ -1,11 +1,16 @@
 $black: #454545;
 $max-width: 768px;
 
-html[lang="en"] {
+html[lang="en"], .ltr {
   font-family: "Kanit Regular";
 }
 
-html[lang="ar"] {
+html[lang="ar"], .rtl {
+  font-family: "Mada Regular";
+}
+
+html[lang="fa"] {
+  // FIXME: add font for farsi?
   font-family: "Mada Regular";
 }
 
@@ -28,52 +33,21 @@ body .root .content.theme {
   width: 85%;
   max-width: $max-width;
 
-  header {
-    .br {
-      width: 100%;
-    }
-    .react-select.theme {
-      .selected {
-        display: flex;
-        justify-content: flex-end;
-      }
-    }
-    .react-select.language {
-      ul {
-        position: relative;
-        top: 15px;
-        right: 0px;
-      }
-    }
-  }
-
-  footer {
-    .br {
-      width: 100%;
-    }
-  }
-
   .scroll-y {
     overflow-y: auto !important;
   }
 }
 
-/* English-specific rules */
-body .root .content.en {
+/**
+ * LTR languages
+ */
+body .root .content.ltr {
   h1 {
     font-size: x-large;
   }
   header {
     nav, div {
       font-size: large;
-    }
-    .react-select.language {
-      ul {
-        li.ar span {
-          position: relative;
-          bottom: 3px;
-        }
-      }
     }
   }
   ul.body {
@@ -84,37 +58,31 @@ body .root .content.en {
   }
 }
 
-/* Arabic-specific rules */
-body .root .content.theme.ar {
+/**
+ * RTL languages
+ */
+body .root .content.theme.rtl {
   header {
     h1 {
-      font-size: xx-large;
+      font-size: x-large;
     }
     nav, div {
       direction: ltr;
-      .react-select.language {
-        ul {
-          position: relative;
-          top: 7.5px;
+      .react-select.language-select {
+        .active {
+          font-size: larger;
         }
-        li.en span {
-          position: relative;
-          right: 3px;
-        }
-      }
-      .selected {
-        font-size: x-large;
       }
     }
   }
 
   footer {
-    font-size: larger;
+    font-size: large;
     flex-direction: row-reverse;
   }
 }
 
-.invisible {
+.invisible, .hidden {
   display: none !important;
 }
 

@@ -1,10 +1,7 @@
-.root .content.theme.green.ar {
+.root .content.theme.green.rtl {
   @import "green/base/colors";
 
   direction: rtl;
-  .react-select.language {
-    .selected { color: $primary-color; }
-  }
 }
 
 .root .content.theme.green {
@@ -20,15 +17,6 @@
 
   .color-accent {
     color: $accent-color;
-  }
-
-  .react-select.theme {
-    .selected {
-      .circle {
-        background: $primary-color;
-        border-radius: 10px;
-      }
-    }
   }
 }
 

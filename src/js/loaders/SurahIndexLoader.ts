@@ -22,8 +22,6 @@ import postman, { item } from "postman";
       parent.remove();
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
-      pkg.scripts.forEach(s =>
-        document.body.removeChild(document.body.appendChild(s)),
-      );
+      pkg.scripts.forEach(s => document.body.removeChild(document.body.appendChild(s)));
     });
 })();

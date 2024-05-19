@@ -3,20 +3,20 @@ import ReactDOM from "react-dom/client";
 import { Surah, TSurah, TLocale } from "Quran";
 import { T } from "~/lib/t";
 import { SurahIndex } from "~/components/SurahIndex";
+import { Quran } from "Quran";
 
 (function () {
   const root: HTMLElement = document.querySelector(".root")!;
-  const locale = root.getAttribute("data-locale") as TLocale;
-  const appVersion = root.getAttribute("data-app-version") as string;
   const t = T(require("@json/t.json"));
   const byLocale = require("@json/surahs");
-  const surahs: Surah[] = byLocale[locale].map((e: TSurah) => new Surah(e));
+  const appVersion = root.getAttribute("data-app-version")!;
+  const locale = (() => {
+    const l = root.getAttribute("data-locale");
+    return Quran.locales.find(ll => ll.name === l);
+  })()!;
+  const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
+
   ReactDOM.createRoot(root).render(
-    <SurahIndex
-      appVersion={appVersion}
-      locale={locale}
-      surahs={surahs}
-      t={t}
-    />,
+    <SurahIndex appVersion={appVersion} locale={locale} surahs={surahs} t={t} />,
   );
 })();

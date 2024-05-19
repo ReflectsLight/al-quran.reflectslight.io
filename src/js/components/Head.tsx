@@ -14,9 +14,9 @@ type Props = {
 
 export function Head({ locale, theme, setTheme, children }: Props) {
   return (
-    <header className="flex flex-col h-18 mt-4 mb-4">
+    <header className="flex flex-col h-12 mt-4 mb-4">
       <h1 className="flex justify-center p-0 m-0">
-        <a className="no-underline" href={`/${locale}/`}>
+        <a className="no-underline" href={`/${locale.name}/`}>
           {children}
         </a>
       </h1>

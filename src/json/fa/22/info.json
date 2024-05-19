@@ -1,0 +1,9 @@
+{
+  "id": 22,
+  "name": "حج",
+  "numberOfAyah": 78,
+  "roman": {
+    "name": "Al-Hajj",
+    "slug": "al-hajj"
+  }
+}

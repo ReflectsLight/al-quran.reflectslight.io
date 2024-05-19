@@ -2054,5 +2054,1033 @@
         "slug": "an-nas"
       }
     }
+  ],
+  "fa": [
+    {
+      "id": 1,
+      "name": "فاتحه",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Fatihah",
+        "slug": "al-fatihah"
+      }
+    },
+    {
+      "id": 2,
+      "name": "بقره",
+      "numberOfAyah": 286,
+      "roman": {
+        "name": "Al-Baqarah",
+        "slug": "al-baqarah"
+      }
+    },
+    {
+      "id": 3,
+      "name": "آل عمران",
+      "numberOfAyah": 200,
+      "roman": {
+        "name": "Ali 'Imran",
+        "slug": "ali-imran"
+      }
+    },
+    {
+      "id": 4,
+      "name": "نساء",
+      "numberOfAyah": 176,
+      "roman": {
+        "name": "An-Nisa",
+        "slug": "an-nisa"
+      }
+    },
+    {
+      "id": 5,
+      "name": "مائده",
+      "numberOfAyah": 120,
+      "roman": {
+        "name": "Al-Ma'idah",
+        "slug": "al-maidah"
+      }
+    },
+    {
+      "id": 6,
+      "name": "انعام",
+      "numberOfAyah": 165,
+      "roman": {
+        "name": "Al-An'am",
+        "slug": "al-anam"
+      }
+    },
+    {
+      "id": 7,
+      "name": "اعراف",
+      "numberOfAyah": 206,
+      "roman": {
+        "name": "Al-A'raf",
+        "slug": "al-araf"
+      }
+    },
+    {
+      "id": 8,
+      "name": "انفال",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Al-Anfal",
+        "slug": "al-anfal"
+      }
+    },
+    {
+      "id": 9,
+      "name": "توبه",
+      "numberOfAyah": 129,
+      "roman": {
+        "name": "At-Tawbah",
+        "slug": "at-tawbah"
+      }
+    },
+    {
+      "id": 10,
+      "name": "یونس",
+      "numberOfAyah": 109,
+      "roman": {
+        "name": "Yunus",
+        "slug": "yunus"
+      }
+    },
+    {
+      "id": 11,
+      "name": "هود",
+      "numberOfAyah": 123,
+      "roman": {
+        "name": "Hud",
+        "slug": "hud"
+      }
+    },
+    {
+      "id": 12,
+      "name": "یوسف",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Yusuf",
+        "slug": "yusuf"
+      }
+    },
+    {
+      "id": 13,
+      "name": "رعد",
+      "numberOfAyah": 43,
+      "roman": {
+        "name": "Ar-Ra'd",
+        "slug": "ar-rad"
+      }
+    },
+    {
+      "id": 14,
+      "name": "ابراهیم",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Ibrahim",
+        "slug": "ibrahim"
+      }
+    },
+    {
+      "id": 15,
+      "name": "حجر",
+      "numberOfAyah": 99,
+      "roman": {
+        "name": "Al-Hijr",
+        "slug": "al-hijr"
+      }
+    },
+    {
+      "id": 16,
+      "name": "نحل",
+      "numberOfAyah": 128,
+      "roman": {
+        "name": "An-Nahl",
+        "slug": "an-nahl"
+      }
+    },
+    {
+      "id": 17,
+      "name": "اسراء",
+      "numberOfAyah": 111,
+      "roman": {
+        "name": "Al-Isra",
+        "slug": "al-isra"
+      }
+    },
+    {
+      "id": 18,
+      "name": "کهف",
+      "numberOfAyah": 110,
+      "roman": {
+        "name": "Al-Kahf",
+        "slug": "al-kahf"
+      }
+    },
+    {
+      "id": 19,
+      "name": "مریم",
+      "numberOfAyah": 98,
+      "roman": {
+        "name": "Maryam",
+        "slug": "maryam"
+      }
+    },
+    {
+      "id": 20,
+      "name": "طه",
+      "numberOfAyah": 135,
+      "roman": {
+        "name": "Taha",
+        "slug": "taha"
+      }
+    },
+    {
+      "id": 21,
+      "name": "انبیاء",
+      "numberOfAyah": 112,
+      "roman": {
+        "name": "Al-Anbya",
+        "slug": "al-anbya"
+      }
+    },
+    {
+      "id": 22,
+      "name": "حج",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Al-Hajj",
+        "slug": "al-hajj"
+      }
+    },
+    {
+      "id": 23,
+      "name": "مؤمنون",
+      "numberOfAyah": 118,
+      "roman": {
+        "name": "Al-Mu'minun",
+        "slug": "al-muminun"
+      }
+    },
+    {
+      "id": 24,
+      "name": "نور",
+      "numberOfAyah": 64,
+      "roman": {
+        "name": "An-Nur",
+        "slug": "an-nur"
+      }
+    },
+    {
+      "id": 25,
+      "name": "فرقان",
+      "numberOfAyah": 77,
+      "roman": {
+        "name": "Al-Furqan",
+        "slug": "al-furqan"
+      }
+    },
+    {
+      "id": 26,
+      "name": "شعرا",
+      "numberOfAyah": 227,
+      "roman": {
+        "name": "Ash-Shu'ara",
+        "slug": "ash-shuara"
+      }
+    },
+    {
+      "id": 27,
+      "name": "نمل",
+      "numberOfAyah": 93,
+      "roman": {
+        "name": "An-Naml",
+        "slug": "an-naml"
+      }
+    },
+    {
+      "id": 28,
+      "name": "قصص",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Al-Qasas",
+        "slug": "al-qasas"
+      }
+    },
+    {
+      "id": 29,
+      "name": "عنکبوت",
+      "numberOfAyah": 69,
+      "roman": {
+        "name": "Al-'Ankabut",
+        "slug": "al-ankabut"
+      }
+    },
+    {
+      "id": 30,
+      "name": "روم",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Ar-Rum",
+        "slug": "ar-rum"
+      }
+    },
+    {
+      "id": 31,
+      "name": "لقمان",
+      "numberOfAyah": 34,
+      "roman": {
+        "name": "Luqman",
+        "slug": "luqman"
+      }
+    },
+    {
+      "id": 32,
+      "name": "سجده",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "As-Sajdah",
+        "slug": "as-sajdah"
+      }
+    },
+    {
+      "id": 33,
+      "name": "احزاب",
+      "numberOfAyah": 73,
+      "roman": {
+        "name": "Al-Ahzab",
+        "slug": "al-ahzab"
+      }
+    },
+    {
+      "id": 34,
+      "name": "سبأ",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Saba",
+        "slug": "saba"
+      }
+    },
+    {
+      "id": 35,
+      "name": "فاطر",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Fatir",
+        "slug": "fatir"
+      }
+    },
+    {
+      "id": 36,
+      "name": "یس",
+      "numberOfAyah": 83,
+      "roman": {
+        "name": "Ya-Sin",
+        "slug": "ya-sin"
+      }
+    },
+    {
+      "id": 37,
+      "name": "صافات",
+      "numberOfAyah": 182,
+      "roman": {
+        "name": "As-Saffat",
+        "slug": "as-saffat"
+      }
+    },
+    {
+      "id": 38,
+      "name": "ص",
+      "numberOfAyah": 88,
+      "roman": {
+        "name": "Sad",
+        "slug": "sad"
+      }
+    },
+    {
+      "id": 39,
+      "name": "زمر",
+      "numberOfAyah": 75,
+      "roman": {
+        "name": "Az-Zumar",
+        "slug": "az-zumar"
+      }
+    },
+    {
+      "id": 40,
+      "name": "غافر",
+      "numberOfAyah": 85,
+      "roman": {
+        "name": "Ghafir",
+        "slug": "ghafir"
+      }
+    },
+    {
+      "id": 41,
+      "name": "فصلت",
+      "numberOfAyah": 54,
+      "roman": {
+        "name": "Fussilat",
+        "slug": "fussilat"
+      }
+    },
+    {
+      "id": 42,
+      "name": "شوری",
+      "numberOfAyah": 53,
+      "roman": {
+        "name": "Ash-Shuraa",
+        "slug": "ash-shuraa"
+      }
+    },
+    {
+      "id": 43,
+      "name": "زخرف",
+      "numberOfAyah": 89,
+      "roman": {
+        "name": "Az-Zukhruf",
+        "slug": "az-zukhruf"
+      }
+    },
+    {
+      "id": 44,
+      "name": "دخان",
+      "numberOfAyah": 59,
+      "roman": {
+        "name": "Ad-Dukhan",
+        "slug": "ad-dukhan"
+      }
+    },
+    {
+      "id": 45,
+      "name": "جاثیه",
+      "numberOfAyah": 37,
+      "roman": {
+        "name": "Al-Jathiyah",
+        "slug": "al-jathiyah"
+      }
+    },
+    {
+      "id": 46,
+      "name": "احقاف",
+      "numberOfAyah": 35,
+      "roman": {
+        "name": "Al-Ahqaf",
+        "slug": "al-ahqaf"
+      }
+    },
+    {
+      "id": 47,
+      "name": "محمد",
+      "numberOfAyah": 38,
+      "roman": {
+        "name": "Muhammad",
+        "slug": "muhammad"
+      }
+    },
+    {
+      "id": 48,
+      "name": "فتح",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Fath",
+        "slug": "al-fath"
+      }
+    },
+    {
+      "id": 49,
+      "name": "حجرات",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "Al-Hujurat",
+        "slug": "al-hujurat"
+      }
+    },
+    {
+      "id": 50,
+      "name": "ق",
+      "numberOfAyah": 45,
+      "roman": {
+        "name": "Qaf",
+        "slug": "qaf"
+      }
+    },
+    {
+      "id": 51,
+      "name": "ذاریات",
+      "numberOfAyah": 60,
+      "roman": {
+        "name": "Adh-Dhariyat",
+        "slug": "adh-dhariyat"
+      }
+    },
+    {
+      "id": 52,
+      "name": "طور",
+      "numberOfAyah": 49,
+      "roman": {
+        "name": "At-Tur",
+        "slug": "at-tur"
+      }
+    },
+    {
+      "id": 53,
+      "name": "نجم",
+      "numberOfAyah": 62,
+      "roman": {
+        "name": "An-Najm",
+        "slug": "an-najm"
+      }
+    },
+    {
+      "id": 54,
+      "name": "قمر",
+      "numberOfAyah": 55,
+      "roman": {
+        "name": "Al-Qamar",
+        "slug": "al-qamar"
+      }
+    },
+    {
+      "id": 55,
+      "name": "رحمن",
+      "numberOfAyah": 78,
+      "roman": {
+        "name": "Ar-Rahman",
+        "slug": "ar-rahman"
+      }
+    },
+    {
+      "id": 56,
+      "name": "واقعه",
+      "numberOfAyah": 96,
+      "roman": {
+        "name": "Al-Waqi'ah",
+        "slug": "al-waqiah"
+      }
+    },
+    {
+      "id": 57,
+      "name": "حدید",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "Al-Hadid",
+        "slug": "al-hadid"
+      }
+    },
+    {
+      "id": 58,
+      "name": "مجادله",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Mujadila",
+        "slug": "al-mujadila"
+      }
+    },
+    {
+      "id": 59,
+      "name": "حشر",
+      "numberOfAyah": 24,
+      "roman": {
+        "name": "Al-Hashr",
+        "slug": "al-hashr"
+      }
+    },
+    {
+      "id": 60,
+      "name": "ممتحنه",
+      "numberOfAyah": 13,
+      "roman": {
+        "name": "Al-Mumtahanah",
+        "slug": "al-mumtahanah"
+      }
+    },
+    {
+      "id": 61,
+      "name": "صف",
+      "numberOfAyah": 14,
+      "roman": {
+        "name": "As-Saf",
+        "slug": "as-saf"
+      }
+    },
+    {
+      "id": 62,
+      "name": "جمعه",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Jumu'ah",
+        "slug": "al-jumuah"
+      }
+    },
+    {
+      "id": 63,
+      "name": "منافقون",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Munafiqun",
+        "slug": "al-munafiqun"
+      }
+    },
+    {
+      "id": 64,
+      "name": "تغابن",
+      "numberOfAyah": 18,
+      "roman": {
+        "name": "At-Taghabun",
+        "slug": "at-taghabun"
+      }
+    },
+    {
+      "id": 65,
+      "name": "طلاق",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Talaq",
+        "slug": "at-talaq"
+      }
+    },
+    {
+      "id": 66,
+      "name": "تحریم",
+      "numberOfAyah": 12,
+      "roman": {
+        "name": "At-Tahrim",
+        "slug": "at-tahrim"
+      }
+    },
+    {
+      "id": 67,
+      "name": "ملک",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Mulk",
+        "slug": "al-mulk"
+      }
+    },
+    {
+      "id": 68,
+      "name": "قلم",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Qalam",
+        "slug": "al-qalam"
+      }
+    },
+    {
+      "id": 69,
+      "name": "حاقه",
+      "numberOfAyah": 52,
+      "roman": {
+        "name": "Al-Haqqah",
+        "slug": "al-haqqah"
+      }
+    },
+    {
+      "id": 70,
+      "name": "معارج",
+      "numberOfAyah": 44,
+      "roman": {
+        "name": "Al-Ma'arij",
+        "slug": "al-maarij"
+      }
+    },
+    {
+      "id": 71,
+      "name": "نوح",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Nuh",
+        "slug": "nuh"
+      }
+    },
+    {
+      "id": 72,
+      "name": "جن",
+      "numberOfAyah": 28,
+      "roman": {
+        "name": "Al-Jinn",
+        "slug": "al-jinn"
+      }
+    },
+    {
+      "id": 73,
+      "name": "مزمل",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Muzzammil",
+        "slug": "al-muzzammil"
+      }
+    },
+    {
+      "id": 74,
+      "name": "مدثر",
+      "numberOfAyah": 56,
+      "roman": {
+        "name": "Al-Muddaththir",
+        "slug": "al-muddaththir"
+      }
+    },
+    {
+      "id": 75,
+      "name": "قیامه",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "Al-Qiyamah",
+        "slug": "al-qiyamah"
+      }
+    },
+    {
+      "id": 76,
+      "name": "انسان",
+      "numberOfAyah": 31,
+      "roman": {
+        "name": "Al-Insan",
+        "slug": "al-insan"
+      }
+    },
+    {
+      "id": 77,
+      "name": "مرسلات",
+      "numberOfAyah": 50,
+      "roman": {
+        "name": "Al-Mursalat",
+        "slug": "al-mursalat"
+      }
+    },
+    {
+      "id": 78,
+      "name": "نبأ",
+      "numberOfAyah": 40,
+      "roman": {
+        "name": "An-Naba",
+        "slug": "an-naba"
+      }
+    },
+    {
+      "id": 79,
+      "name": "نازعات",
+      "numberOfAyah": 46,
+      "roman": {
+        "name": "An-Nazi'at",
+        "slug": "an-naziat"
+      }
+    },
+    {
+      "id": 80,
+      "name": "عبس",
+      "numberOfAyah": 42,
+      "roman": {
+        "name": "'Abasa",
+        "slug": "abasa"
+      }
+    },
+    {
+      "id": 81,
+      "name": "تکویر",
+      "numberOfAyah": 29,
+      "roman": {
+        "name": "At-Takwir",
+        "slug": "at-takwir"
+      }
+    },
+    {
+      "id": 82,
+      "name": "انفطار",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-Infitar",
+        "slug": "al-infitar"
+      }
+    },
+    {
+      "id": 83,
+      "name": "مطففین",
+      "numberOfAyah": 36,
+      "roman": {
+        "name": "Al-Mutaffifin",
+        "slug": "al-mutaffifin"
+      }
+    },
+    {
+      "id": 84,
+      "name": "انشقاق",
+      "numberOfAyah": 25,
+      "roman": {
+        "name": "Al-Inshiqaq",
+        "slug": "al-inshiqaq"
+      }
+    },
+    {
+      "id": 85,
+      "name": "بروج",
+      "numberOfAyah": 22,
+      "roman": {
+        "name": "Al-Buruj",
+        "slug": "al-buruj"
+      }
+    },
+    {
+      "id": 86,
+      "name": "طارق",
+      "numberOfAyah": 17,
+      "roman": {
+        "name": "At-Tariq",
+        "slug": "at-tariq"
+      }
+    },
+    {
+      "id": 87,
+      "name": "اعلی",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-A'la",
+        "slug": "al-ala"
+      }
+    },
+    {
+      "id": 88,
+      "name": "غاشیه",
+      "numberOfAyah": 26,
+      "roman": {
+        "name": "Al-Ghashiyah",
+        "slug": "al-ghashiyah"
+      }
+    },
+    {
+      "id": 89,
+      "name": "فجر",
+      "numberOfAyah": 30,
+      "roman": {
+        "name": "Al-Fajr",
+        "slug": "al-fajr"
+      }
+    },
+    {
+      "id": 90,
+      "name": "بلد",
+      "numberOfAyah": 20,
+      "roman": {
+        "name": "Al-Balad",
+        "slug": "al-balad"
+      }
+    },
+    {
+      "id": 91,
+      "name": "شمس",
+      "numberOfAyah": 15,
+      "roman": {
+        "name": "Ash-Shams",
+        "slug": "ash-shams"
+      }
+    },
+    {
+      "id": 92,
+      "name": "لیل",
+      "numberOfAyah": 21,
+      "roman": {
+        "name": "Al-Layl",
+        "slug": "al-layl"
+      }
+    },
+    {
+      "id": 93,
+      "name": "ضحی",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Ad-Duhaa",
+        "slug": "ad-duhaa"
+      }
+    },
+    {
+      "id": 94,
+      "name": "شرح",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Ash-Sharh",
+        "slug": "ash-sharh"
+      }
+    },
+    {
+      "id": 95,
+      "name": "تین",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Tin",
+        "slug": "at-tin"
+      }
+    },
+    {
+      "id": 96,
+      "name": "علق",
+      "numberOfAyah": 19,
+      "roman": {
+        "name": "Al-'Alaq",
+        "slug": "al-alaq"
+      }
+    },
+    {
+      "id": 97,
+      "name": "قدر",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Qadr",
+        "slug": "al-qadr"
+      }
+    },
+    {
+      "id": 98,
+      "name": "بینه",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Al-Bayyinah",
+        "slug": "al-bayyinah"
+      }
+    },
+    {
+      "id": 99,
+      "name": "زلزله",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "Az-Zalzalah",
+        "slug": "az-zalzalah"
+      }
+    },
+    {
+      "id": 100,
+      "name": "عادیات",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-'Adiyat",
+        "slug": "al-adiyat"
+      }
+    },
+    {
+      "id": 101,
+      "name": "قارعه",
+      "numberOfAyah": 11,
+      "roman": {
+        "name": "Al-Qari'ah",
+        "slug": "al-qariah"
+      }
+    },
+    {
+      "id": 102,
+      "name": "تکاثر",
+      "numberOfAyah": 8,
+      "roman": {
+        "name": "At-Takathur",
+        "slug": "at-takathur"
+      }
+    },
+    {
+      "id": 103,
+      "name": "عصر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-'Asr",
+        "slug": "al-asr"
+      }
+    },
+    {
+      "id": 104,
+      "name": "همزه",
+      "numberOfAyah": 9,
+      "roman": {
+        "name": "Al-Humazah",
+        "slug": "al-humazah"
+      }
+    },
+    {
+      "id": 105,
+      "name": "فیل",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Fil",
+        "slug": "al-fil"
+      }
+    },
+    {
+      "id": 106,
+      "name": "قریش",
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Quraysh",
+        "slug": "quraysh"
+      }
+    },
+    {
+      "id": 107,
+      "name": "ماعون",
+      "numberOfAyah": 7,
+      "roman": {
+        "name": "Al-Ma'un",
+        "slug": "al-maun"
+      }
+    },
+    {
+      "id": 108,
+      "name": "کوثر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "Al-Kawthar",
+        "slug": "al-kawthar"
+      }
+    },
+    {
+      "id": 109,
+      "name": "کافرون",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "Al-Kafirun",
+        "slug": "al-kafirun"
+      }
+    },
+    {
+      "id": 110,
+      "name": "نصر",
+      "numberOfAyah": 3,
+      "roman": {
+        "name": "An-Nasr",
+        "slug": "an-nasr"
+      }
+    },
+    {
+      "id": 111,
+      "name": "مسد",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Masad",
+        "slug": "al-masad"
+      }
+    },
+    {
+      "id": 112,
+      "name": "اخلاص",
+      "numberOfAyah": 4,
+      "roman": {
+        "name": "Al-Ikhlas",
+        "slug": "al-ikhlas"
+      }
+    },
+    {
+      "id": 113,
+      "name": "فلق",
+      "numberOfAyah": 5,
+      "roman": {
+        "name": "Al-Falaq",
+        "slug": "al-falaq"
+      }
+    },
+    {
+      "id": 114,
+      "name": "ناس",
+      "numberOfAyah": 6,
+      "roman": {
+        "name": "An-Nas",
+        "slug": "an-nas"
+      }
+    }
   ]
 }

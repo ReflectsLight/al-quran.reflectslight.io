@@ -1,34 +1,32 @@
 .content.theme {
   @import "themes/blue/base/colors";
-
-  .react-select.theme {
-    .selected .circle {
-      background: $primary-color;
-    }
-    ul li.blue .circle {
-      background: $primary-color;
-    }
+  .blue {
+    background: $primary-color;
   }
 }
 
 .content.theme.blue {
   @import "themes/blue/base/colors";
 
-  .react-select.language {
-    .selected {
-      color: $primary-color;
+  .react-select.theme-select {
+    .active .circle {
+      background: $primary-color;
+    }
+    ul li.blue .circle {
+      background: $primary-color;
     }
   }
 
-  .react-select.theme {
-    ul li.blue {
-      display: none;
-    }
-  }
-
-  .react-select.language ul {
-    li {
-      color: $primary-color;
+  .react-select.language-select {
+    li a {
+      background: $secondary-color;
+      color: $white;
+      &:active, &:visited, &:link {
+        color: $white;
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "id": 90,
+  "name": "بلد",
+  "numberOfAyah": 20,
+  "roman": {
+    "name": "Al-Balad",
+    "slug": "al-balad"
+  }
+}

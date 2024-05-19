@@ -25,6 +25,7 @@ body .root .content.theme {
     input {
       border-radius: 5px;
     }
+
     @media(max-width: $breakpoint-sm) {
       a {
         width: 100%;
@@ -35,6 +36,7 @@ body .root .content.theme {
       }
     }
   }
+
   @media(max-width: $breakpoint-sm) {
     .appver {
       display: none;
@@ -42,14 +44,17 @@ body .root .content.theme {
   }
 }
 
-
-/* English-specific rules */
-body .root .content.theme.en {
+/**
+ * LTR languages
+ */
+body .root .content.theme.ltr {
 
 }
 
-/* Arabic-specific rules */
-body .root .content.theme.ar {
+/**
+ * RTL languages
+ */
+body .root .content.theme.rtl {
   @import "base/breakpoints";
   font-size: larger;
 

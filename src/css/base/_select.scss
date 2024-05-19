@@ -1,113 +1,16 @@
 .root .content.theme {
   .react-select {
-    display: flex;
-    flex-direction: column;
-
-    height: 20px;
-    z-index: 3;
-
-    .selected {
+    z-index: 2;
+    .active {
       cursor: pointer;
     }
-
-    ul {
-      margin: 0;
-      padding: 0;
-      height: 0;
-      background: #fff;
-      list-style-type: none;
-    }
-
-    ul li {
-      height: 100%;
-      width: 100%;
-      font-weight: normal;
-      cursor: pointer;
-      background: #fff;
-    }
   }
 
-  .react-select.language {
-    flex-direction: column;
-    justify-content: flex-start;
-
-    ul {
-      height: 0;
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: medium;
-        height: 30px;
-        min-width: 125px;
-        padding-left: 15px;
-      }
-
-      li.en {
-        font-family: "Kanit Regular";
-        font-weight: normal;
-      }
-
-      li.ar {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: large;
-      }
-    }
-  }
-
-  .react-select.theme {
-    .selected {
-      .circle {
-        display: block;
-        width: 16px;
-        height: 16px;
-        border-radius: 16px;
-      }
-    }
-
-    ul {
-      border: none;
-      height: 0;
-      width: 50px;
-    }
-
-    ul li {
-      display: flex;
-      height: 20px;
-      align-items: flex-end;
-      justify-content: flex-end;
-      .circle {
-        display: block;
-        width: 16px;
-        height: 16px;
-        border-radius: 16px;
-      }
-    }
-  }
-}
-
-.content.theme.en {
-  .react-select.language {
-    ul {
-      li.en {
-        display: none;
-      }
-    }
-  }
-}
-
-.content.theme.ar {
-  .react-select.language {
-    .selected span {
-      position: relative;
-      bottom: 8px;
-    }
-    ul {
-      li.ar {
-        display: none;
-      }
+  .react-select.theme-select {
+    .circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 12px;
     }
   }
 }
