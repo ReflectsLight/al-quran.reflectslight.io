@@ -69,7 +69,7 @@ export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
           </li>
         ))}
       </ul>
-      <footer className="flex flex-row justify-between h-16">
+      <footer className="flex flex-row justify-between mb-5 h-12">
         <a
           className="flex flex-row items-center no-underline"
           href={`/${locale.name}/random/`}
@@ -77,7 +77,6 @@ export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
           {locale.direction === "ltr" && <RightArrow />}
           <span
             className={classNames({
-              "text-base": locale.direction === "rtl",
               "pl-3": locale.direction === "ltr",
             })}
           >
@@ -86,9 +85,6 @@ export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
         </a>
         <Filter t={t} locale={locale} surahs={surahs} setIndex={setIndex} />
       </footer>
-      <span className="appver flex justify-end mb-3 w-full font-mono text-xs font-bold">
-        v{appVersion}
-      </span>
     </div>
   );
 }

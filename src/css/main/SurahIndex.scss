@@ -25,6 +25,9 @@ body .root .content.theme {
     input {
       border-radius: 5px;
     }
+    .surah-index-filter {
+      outline: 0;
+    }
 
     @media(max-width: $breakpoint-sm) {
       a {

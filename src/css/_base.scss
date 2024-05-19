@@ -66,19 +66,10 @@ body .root .content.theme.rtl {
     h1 {
       font-size: x-large;
     }
-    nav, div {
-      direction: ltr;
-      .react-select.language-select {
-        .active {
-          font-size: larger;
-        }
-      }
-    }
   }
 
   footer {
     font-size: large;
-    flex-direction: row-reverse;
   }
 }
 
