@@ -1,4 +1,4 @@
-import { Quran, Surah, Ayah, TSurah, TLocale } from "Quran";
+import { Quran, Surah, Ayah, TSurah } from "Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";

@@ -1,9 +1,8 @@
+import { Surah, TSurah, Quran } from "Quran";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Surah, TSurah, TLocale } from "Quran";
 import { T } from "~/lib/t";
 import { SurahIndex } from "~/components/SurahIndex";
-import { Quran } from "Quran";
 
 (function () {
   const root: HTMLElement = document.querySelector(".root")!;

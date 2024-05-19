@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :nanoc do
   require "bundler/setup"
   root = File.realpath File.join(__dir__, "..", "..")
@@ -24,7 +26,7 @@ namespace :nanoc do
   end
 
   desc "Produce the build/ directory on-demand"
-  task watch: ['nanoc:build'] do
+  task watch: ["nanoc:build"] do
     Dir.chdir(root) do
       require "listen"
       srcdir = File.join(root, "src")

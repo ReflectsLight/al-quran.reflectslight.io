@@ -2,9 +2,11 @@
 # Defaults
 AllCops:
   TargetRubyVersion: 3.2
+  Exclude:
+    - submodules/**/*
   Include:
     - Rakefile.rb
-    - tasks/*.rake
+    - rake/tasks/*.rake
     - nanoc/rules/*.rules
     - nanoc/rules/**/**/*.rules
     - nanoc/lib/*.rb

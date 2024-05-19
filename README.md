@@ -34,13 +34,14 @@ the website from source:
 
 Alhamdulillah.
 
-* Thanks to the following graphic artists:
+* Thanks to the graphic artists:
     - [RefreshIcon](/src/js/components/Icon.tsx)
       by
       [Muhammad Haq](https://freeicons.io/profile/823)
 
-* Thanks to the following translators:
+* Thanks to the translators:
     - English (The Clear Quran) by Dr. Mustafa Khattab
+    - Farsi by Hussein Taji Kal Dari
 
 ## License
 

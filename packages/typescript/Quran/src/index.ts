@@ -19,6 +19,7 @@ type TSurah = {
   readonly name: string;
   readonly numberOfAyah: number;
   readonly roman: { name: string; slug: string };
+  readonly translatedBy: string | null;
 };
 
 type TAyah = {
@@ -55,7 +56,8 @@ class Surah {
   readonly name: string;
   readonly numberOfAyah: number;
   readonly roman: {name: string, slug: string};
-  readonly ayat: TAyat
+  readonly ayat: TAyat;
+  readonly translatedBy: string | null;
 
   constructor(self: TSurah) {
     this.id = self.id;
@@ -63,6 +65,7 @@ class Surah {
     this.numberOfAyah = self.numberOfAyah;
     this.roman = self.roman;
     this.ayat = [];
+    this.translatedBy = self.translatedBy;
     return this;
   }
 }

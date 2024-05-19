@@ -7,7 +7,8 @@
       "roman": {
         "name": "Al-Fatihah",
         "slug": "al-fatihah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "roman": {
         "name": "Al-Baqarah",
         "slug": "al-baqarah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "roman": {
         "name": "Ali 'Imran",
         "slug": "ali-imran"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "roman": {
         "name": "An-Nisa",
         "slug": "an-nisa"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "roman": {
         "name": "Al-Ma'idah",
         "slug": "al-maidah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "roman": {
         "name": "Al-An'am",
         "slug": "al-anam"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "roman": {
         "name": "Al-A'raf",
         "slug": "al-araf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "roman": {
         "name": "Al-Anfal",
         "slug": "al-anfal"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "roman": {
         "name": "At-Tawbah",
         "slug": "at-tawbah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "roman": {
         "name": "Yunus",
         "slug": "yunus"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "roman": {
         "name": "Hud",
         "slug": "hud"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "roman": {
         "name": "Yusuf",
         "slug": "yusuf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "roman": {
         "name": "Ar-Ra'd",
         "slug": "ar-rad"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 14,
@@ -124,7 +137,8 @@
       "roman": {
         "name": "Ibrahim",
         "slug": "ibrahim"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 15,
@@ -133,7 +147,8 @@
       "roman": {
         "name": "Al-Hijr",
         "slug": "al-hijr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 16,
@@ -142,7 +157,8 @@
       "roman": {
         "name": "An-Nahl",
         "slug": "an-nahl"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 17,
@@ -151,7 +167,8 @@
       "roman": {
         "name": "Al-Isra",
         "slug": "al-isra"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 18,
@@ -160,7 +177,8 @@
       "roman": {
         "name": "Al-Kahf",
         "slug": "al-kahf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 19,
@@ -169,7 +187,8 @@
       "roman": {
         "name": "Maryam",
         "slug": "maryam"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 20,
@@ -178,7 +197,8 @@
       "roman": {
         "name": "Taha",
         "slug": "taha"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 21,
@@ -187,7 +207,8 @@
       "roman": {
         "name": "Al-Anbya",
         "slug": "al-anbya"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 22,
@@ -196,7 +217,8 @@
       "roman": {
         "name": "Al-Hajj",
         "slug": "al-hajj"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 23,
@@ -205,7 +227,8 @@
       "roman": {
         "name": "Al-Mu'minun",
         "slug": "al-muminun"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 24,
@@ -214,7 +237,8 @@
       "roman": {
         "name": "An-Nur",
         "slug": "an-nur"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 25,
@@ -223,7 +247,8 @@
       "roman": {
         "name": "Al-Furqan",
         "slug": "al-furqan"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 26,
@@ -232,7 +257,8 @@
       "roman": {
         "name": "Ash-Shu'ara",
         "slug": "ash-shuara"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 27,
@@ -241,7 +267,8 @@
       "roman": {
         "name": "An-Naml",
         "slug": "an-naml"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 28,
@@ -250,7 +277,8 @@
       "roman": {
         "name": "Al-Qasas",
         "slug": "al-qasas"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 29,
@@ -259,7 +287,8 @@
       "roman": {
         "name": "Al-'Ankabut",
         "slug": "al-ankabut"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 30,
@@ -268,7 +297,8 @@
       "roman": {
         "name": "Ar-Rum",
         "slug": "ar-rum"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 31,
@@ -277,7 +307,8 @@
       "roman": {
         "name": "Luqman",
         "slug": "luqman"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 32,
@@ -286,7 +317,8 @@
       "roman": {
         "name": "As-Sajdah",
         "slug": "as-sajdah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 33,
@@ -295,7 +327,8 @@
       "roman": {
         "name": "Al-Ahzab",
         "slug": "al-ahzab"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 34,
@@ -304,7 +337,8 @@
       "roman": {
         "name": "Saba",
         "slug": "saba"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 35,
@@ -313,7 +347,8 @@
       "roman": {
         "name": "Fatir",
         "slug": "fatir"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 36,
@@ -322,7 +357,8 @@
       "roman": {
         "name": "Ya-Sin",
         "slug": "ya-sin"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 37,
@@ -331,7 +367,8 @@
       "roman": {
         "name": "As-Saffat",
         "slug": "as-saffat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 38,
@@ -340,7 +377,8 @@
       "roman": {
         "name": "Sad",
         "slug": "sad"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 39,
@@ -349,7 +387,8 @@
       "roman": {
         "name": "Az-Zumar",
         "slug": "az-zumar"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 40,
@@ -358,7 +397,8 @@
       "roman": {
         "name": "Ghafir",
         "slug": "ghafir"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 41,
@@ -367,7 +407,8 @@
       "roman": {
         "name": "Fussilat",
         "slug": "fussilat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 42,
@@ -376,7 +417,8 @@
       "roman": {
         "name": "Ash-Shuraa",
         "slug": "ash-shuraa"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 43,
@@ -385,7 +427,8 @@
       "roman": {
         "name": "Az-Zukhruf",
         "slug": "az-zukhruf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 44,
@@ -394,7 +437,8 @@
       "roman": {
         "name": "Ad-Dukhan",
         "slug": "ad-dukhan"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 45,
@@ -403,7 +447,8 @@
       "roman": {
         "name": "Al-Jathiyah",
         "slug": "al-jathiyah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 46,
@@ -412,7 +457,8 @@
       "roman": {
         "name": "Al-Ahqaf",
         "slug": "al-ahqaf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 47,
@@ -421,7 +467,8 @@
       "roman": {
         "name": "Muhammad",
         "slug": "muhammad"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 48,
@@ -430,7 +477,8 @@
       "roman": {
         "name": "Al-Fath",
         "slug": "al-fath"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 49,
@@ -439,7 +487,8 @@
       "roman": {
         "name": "Al-Hujurat",
         "slug": "al-hujurat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 50,
@@ -448,7 +497,8 @@
       "roman": {
         "name": "Qaf",
         "slug": "qaf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 51,
@@ -457,7 +507,8 @@
       "roman": {
         "name": "Adh-Dhariyat",
         "slug": "adh-dhariyat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 52,
@@ -466,7 +517,8 @@
       "roman": {
         "name": "At-Tur",
         "slug": "at-tur"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 53,
@@ -475,7 +527,8 @@
       "roman": {
         "name": "An-Najm",
         "slug": "an-najm"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 54,
@@ -484,7 +537,8 @@
       "roman": {
         "name": "Al-Qamar",
         "slug": "al-qamar"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 55,
@@ -493,7 +547,8 @@
       "roman": {
         "name": "Ar-Rahman",
         "slug": "ar-rahman"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 56,
@@ -502,7 +557,8 @@
       "roman": {
         "name": "Al-Waqi'ah",
         "slug": "al-waqiah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 57,
@@ -511,7 +567,8 @@
       "roman": {
         "name": "Al-Hadid",
         "slug": "al-hadid"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 58,
@@ -520,7 +577,8 @@
       "roman": {
         "name": "Al-Mujadila",
         "slug": "al-mujadila"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 59,
@@ -529,7 +587,8 @@
       "roman": {
         "name": "Al-Hashr",
         "slug": "al-hashr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 60,
@@ -538,7 +597,8 @@
       "roman": {
         "name": "Al-Mumtahanah",
         "slug": "al-mumtahanah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 61,
@@ -547,7 +607,8 @@
       "roman": {
         "name": "As-Saf",
         "slug": "as-saf"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 62,
@@ -556,7 +617,8 @@
       "roman": {
         "name": "Al-Jumu'ah",
         "slug": "al-jumuah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 63,
@@ -565,7 +627,8 @@
       "roman": {
         "name": "Al-Munafiqun",
         "slug": "al-munafiqun"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 64,
@@ -574,7 +637,8 @@
       "roman": {
         "name": "At-Taghabun",
         "slug": "at-taghabun"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 65,
@@ -583,7 +647,8 @@
       "roman": {
         "name": "At-Talaq",
         "slug": "at-talaq"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 66,
@@ -592,7 +657,8 @@
       "roman": {
         "name": "At-Tahrim",
         "slug": "at-tahrim"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 67,
@@ -601,7 +667,8 @@
       "roman": {
         "name": "Al-Mulk",
         "slug": "al-mulk"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 68,
@@ -610,7 +677,8 @@
       "roman": {
         "name": "Al-Qalam",
         "slug": "al-qalam"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 69,
@@ -619,7 +687,8 @@
       "roman": {
         "name": "Al-Haqqah",
         "slug": "al-haqqah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 70,
@@ -628,7 +697,8 @@
       "roman": {
         "name": "Al-Ma'arij",
         "slug": "al-maarij"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 71,
@@ -637,7 +707,8 @@
       "roman": {
         "name": "Nuh",
         "slug": "nuh"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 72,
@@ -646,7 +717,8 @@
       "roman": {
         "name": "Al-Jinn",
         "slug": "al-jinn"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 73,
@@ -655,7 +727,8 @@
       "roman": {
         "name": "Al-Muzzammil",
         "slug": "al-muzzammil"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 74,
@@ -664,7 +737,8 @@
       "roman": {
         "name": "Al-Muddaththir",
         "slug": "al-muddaththir"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 75,
@@ -673,7 +747,8 @@
       "roman": {
         "name": "Al-Qiyamah",
         "slug": "al-qiyamah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 76,
@@ -682,7 +757,8 @@
       "roman": {
         "name": "Al-Insan",
         "slug": "al-insan"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 77,
@@ -691,7 +767,8 @@
       "roman": {
         "name": "Al-Mursalat",
         "slug": "al-mursalat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 78,
@@ -700,7 +777,8 @@
       "roman": {
         "name": "An-Naba",
         "slug": "an-naba"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 79,
@@ -709,7 +787,8 @@
       "roman": {
         "name": "An-Nazi'at",
         "slug": "an-naziat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 80,
@@ -718,7 +797,8 @@
       "roman": {
         "name": "'Abasa",
         "slug": "abasa"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 81,
@@ -727,7 +807,8 @@
       "roman": {
         "name": "At-Takwir",
         "slug": "at-takwir"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 82,
@@ -736,7 +817,8 @@
       "roman": {
         "name": "Al-Infitar",
         "slug": "al-infitar"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 83,
@@ -745,7 +827,8 @@
       "roman": {
         "name": "Al-Mutaffifin",
         "slug": "al-mutaffifin"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 84,
@@ -754,7 +837,8 @@
       "roman": {
         "name": "Al-Inshiqaq",
         "slug": "al-inshiqaq"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 85,
@@ -763,7 +847,8 @@
       "roman": {
         "name": "Al-Buruj",
         "slug": "al-buruj"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 86,
@@ -772,7 +857,8 @@
       "roman": {
         "name": "At-Tariq",
         "slug": "at-tariq"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 87,
@@ -781,7 +867,8 @@
       "roman": {
         "name": "Al-A'la",
         "slug": "al-ala"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 88,
@@ -790,7 +877,8 @@
       "roman": {
         "name": "Al-Ghashiyah",
         "slug": "al-ghashiyah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 89,
@@ -799,7 +887,8 @@
       "roman": {
         "name": "Al-Fajr",
         "slug": "al-fajr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 90,
@@ -808,7 +897,8 @@
       "roman": {
         "name": "Al-Balad",
         "slug": "al-balad"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 91,
@@ -817,7 +907,8 @@
       "roman": {
         "name": "Ash-Shams",
         "slug": "ash-shams"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 92,
@@ -826,7 +917,8 @@
       "roman": {
         "name": "Al-Layl",
         "slug": "al-layl"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 93,
@@ -835,7 +927,8 @@
       "roman": {
         "name": "Ad-Duhaa",
         "slug": "ad-duhaa"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 94,
@@ -844,7 +937,8 @@
       "roman": {
         "name": "Ash-Sharh",
         "slug": "ash-sharh"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 95,
@@ -853,7 +947,8 @@
       "roman": {
         "name": "At-Tin",
         "slug": "at-tin"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 96,
@@ -862,7 +957,8 @@
       "roman": {
         "name": "Al-'Alaq",
         "slug": "al-alaq"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 97,
@@ -871,7 +967,8 @@
       "roman": {
         "name": "Al-Qadr",
         "slug": "al-qadr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 98,
@@ -880,7 +977,8 @@
       "roman": {
         "name": "Al-Bayyinah",
         "slug": "al-bayyinah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 99,
@@ -889,7 +987,8 @@
       "roman": {
         "name": "Az-Zalzalah",
         "slug": "az-zalzalah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 100,
@@ -898,7 +997,8 @@
       "roman": {
         "name": "Al-'Adiyat",
         "slug": "al-adiyat"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 101,
@@ -907,7 +1007,8 @@
       "roman": {
         "name": "Al-Qari'ah",
         "slug": "al-qariah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 102,
@@ -916,7 +1017,8 @@
       "roman": {
         "name": "At-Takathur",
         "slug": "at-takathur"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 103,
@@ -925,7 +1027,8 @@
       "roman": {
         "name": "Al-'Asr",
         "slug": "al-asr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 104,
@@ -934,7 +1037,8 @@
       "roman": {
         "name": "Al-Humazah",
         "slug": "al-humazah"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 105,
@@ -943,7 +1047,8 @@
       "roman": {
         "name": "Al-Fil",
         "slug": "al-fil"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 106,
@@ -952,7 +1057,8 @@
       "roman": {
         "name": "Quraysh",
         "slug": "quraysh"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 107,
@@ -961,7 +1067,8 @@
       "roman": {
         "name": "Al-Ma'un",
         "slug": "al-maun"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 108,
@@ -970,7 +1077,8 @@
       "roman": {
         "name": "Al-Kawthar",
         "slug": "al-kawthar"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 109,
@@ -979,7 +1087,8 @@
       "roman": {
         "name": "Al-Kafirun",
         "slug": "al-kafirun"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 110,
@@ -988,7 +1097,8 @@
       "roman": {
         "name": "An-Nasr",
         "slug": "an-nasr"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 111,
@@ -997,7 +1107,8 @@
       "roman": {
         "name": "Al-Masad",
         "slug": "al-masad"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 112,
@@ -1006,7 +1117,8 @@
       "roman": {
         "name": "Al-Ikhlas",
         "slug": "al-ikhlas"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 113,
@@ -1015,7 +1127,8 @@
       "roman": {
         "name": "Al-Falaq",
         "slug": "al-falaq"
-      }
+      },
+      "translatedBy": null
     },
     {
       "id": 114,
@@ -1024,7 +1137,8 @@
       "roman": {
         "name": "An-Nas",
         "slug": "an-nas"
-      }
+      },
+      "translatedBy": null
     }
   ],
   "en": [
@@ -1035,7 +1149,8 @@
       "roman": {
         "name": "Al-Fatihah",
         "slug": "al-fatihah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 2,
@@ -1044,7 +1159,8 @@
       "roman": {
         "name": "Al-Baqarah",
         "slug": "al-baqarah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 3,
@@ -1053,7 +1169,8 @@
       "roman": {
         "name": "Ali 'Imran",
         "slug": "ali-imran"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 4,
@@ -1062,7 +1179,8 @@
       "roman": {
         "name": "An-Nisa",
         "slug": "an-nisa"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 5,
@@ -1071,7 +1189,8 @@
       "roman": {
         "name": "Al-Ma'idah",
         "slug": "al-maidah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 6,
@@ -1080,7 +1199,8 @@
       "roman": {
         "name": "Al-An'am",
         "slug": "al-anam"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 7,
@@ -1089,7 +1209,8 @@
       "roman": {
         "name": "Al-A'raf",
         "slug": "al-araf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 8,
@@ -1098,7 +1219,8 @@
       "roman": {
         "name": "Al-Anfal",
         "slug": "al-anfal"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 9,
@@ -1107,7 +1229,8 @@
       "roman": {
         "name": "At-Tawbah",
         "slug": "at-tawbah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 10,
@@ -1116,7 +1239,8 @@
       "roman": {
         "name": "Yunus",
         "slug": "yunus"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 11,
@@ -1125,7 +1249,8 @@
       "roman": {
         "name": "Hud",
         "slug": "hud"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 12,
@@ -1134,7 +1259,8 @@
       "roman": {
         "name": "Yusuf",
         "slug": "yusuf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 13,
@@ -1143,7 +1269,8 @@
       "roman": {
         "name": "Ar-Ra'd",
         "slug": "ar-rad"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 14,
@@ -1152,7 +1279,8 @@
       "roman": {
         "name": "Ibrahim",
         "slug": "ibrahim"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 15,
@@ -1161,7 +1289,8 @@
       "roman": {
         "name": "Al-Hijr",
         "slug": "al-hijr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 16,
@@ -1170,7 +1299,8 @@
       "roman": {
         "name": "An-Nahl",
         "slug": "an-nahl"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 17,
@@ -1179,7 +1309,8 @@
       "roman": {
         "name": "Al-Isra",
         "slug": "al-isra"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 18,
@@ -1188,7 +1319,8 @@
       "roman": {
         "name": "Al-Kahf",
         "slug": "al-kahf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 19,
@@ -1197,7 +1329,8 @@
       "roman": {
         "name": "Maryam",
         "slug": "maryam"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 20,
@@ -1206,7 +1339,8 @@
       "roman": {
         "name": "Taha",
         "slug": "taha"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 21,
@@ -1215,7 +1349,8 @@
       "roman": {
         "name": "Al-Anbya",
         "slug": "al-anbya"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 22,
@@ -1224,7 +1359,8 @@
       "roman": {
         "name": "Al-Hajj",
         "slug": "al-hajj"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 23,
@@ -1233,7 +1369,8 @@
       "roman": {
         "name": "Al-Mu'minun",
         "slug": "al-muminun"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 24,
@@ -1242,7 +1379,8 @@
       "roman": {
         "name": "An-Nur",
         "slug": "an-nur"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 25,
@@ -1251,7 +1389,8 @@
       "roman": {
         "name": "Al-Furqan",
         "slug": "al-furqan"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 26,
@@ -1260,7 +1399,8 @@
       "roman": {
         "name": "Ash-Shu'ara",
         "slug": "ash-shuara"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 27,
@@ -1269,7 +1409,8 @@
       "roman": {
         "name": "An-Naml",
         "slug": "an-naml"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 28,
@@ -1278,7 +1419,8 @@
       "roman": {
         "name": "Al-Qasas",
         "slug": "al-qasas"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 29,
@@ -1287,7 +1429,8 @@
       "roman": {
         "name": "Al-'Ankabut",
         "slug": "al-ankabut"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 30,
@@ -1296,7 +1439,8 @@
       "roman": {
         "name": "Ar-Rum",
         "slug": "ar-rum"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 31,
@@ -1305,7 +1449,8 @@
       "roman": {
         "name": "Luqman",
         "slug": "luqman"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 32,
@@ -1314,7 +1459,8 @@
       "roman": {
         "name": "As-Sajdah",
         "slug": "as-sajdah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 33,
@@ -1323,7 +1469,8 @@
       "roman": {
         "name": "Al-Ahzab",
         "slug": "al-ahzab"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 34,
@@ -1332,7 +1479,8 @@
       "roman": {
         "name": "Saba",
         "slug": "saba"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 35,
@@ -1341,7 +1489,8 @@
       "roman": {
         "name": "Fatir",
         "slug": "fatir"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 36,
@@ -1350,7 +1499,8 @@
       "roman": {
         "name": "Ya-Sin",
         "slug": "ya-sin"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 37,
@@ -1359,7 +1509,8 @@
       "roman": {
         "name": "As-Saffat",
         "slug": "as-saffat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 38,
@@ -1368,7 +1519,8 @@
       "roman": {
         "name": "Sad",
         "slug": "sad"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 39,
@@ -1377,7 +1529,8 @@
       "roman": {
         "name": "Az-Zumar",
         "slug": "az-zumar"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 40,
@@ -1386,7 +1539,8 @@
       "roman": {
         "name": "Ghafir",
         "slug": "ghafir"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 41,
@@ -1395,7 +1549,8 @@
       "roman": {
         "name": "Fussilat",
         "slug": "fussilat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 42,
@@ -1404,7 +1559,8 @@
       "roman": {
         "name": "Ash-Shuraa",
         "slug": "ash-shuraa"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 43,
@@ -1413,7 +1569,8 @@
       "roman": {
         "name": "Az-Zukhruf",
         "slug": "az-zukhruf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 44,
@@ -1422,7 +1579,8 @@
       "roman": {
         "name": "Ad-Dukhan",
         "slug": "ad-dukhan"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 45,
@@ -1431,7 +1589,8 @@
       "roman": {
         "name": "Al-Jathiyah",
         "slug": "al-jathiyah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 46,
@@ -1440,7 +1599,8 @@
       "roman": {
         "name": "Al-Ahqaf",
         "slug": "al-ahqaf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 47,
@@ -1449,7 +1609,8 @@
       "roman": {
         "name": "Muhammad",
         "slug": "muhammad"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 48,
@@ -1458,7 +1619,8 @@
       "roman": {
         "name": "Al-Fath",
         "slug": "al-fath"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 49,
@@ -1467,7 +1629,8 @@
       "roman": {
         "name": "Al-Hujurat",
         "slug": "al-hujurat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 50,
@@ -1476,7 +1639,8 @@
       "roman": {
         "name": "Qaf",
         "slug": "qaf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 51,
@@ -1485,7 +1649,8 @@
       "roman": {
         "name": "Adh-Dhariyat",
         "slug": "adh-dhariyat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 52,
@@ -1494,7 +1659,8 @@
       "roman": {
         "name": "At-Tur",
         "slug": "at-tur"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 53,
@@ -1503,7 +1669,8 @@
       "roman": {
         "name": "An-Najm",
         "slug": "an-najm"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 54,
@@ -1512,7 +1679,8 @@
       "roman": {
         "name": "Al-Qamar",
         "slug": "al-qamar"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 55,
@@ -1521,7 +1689,8 @@
       "roman": {
         "name": "Ar-Rahman",
         "slug": "ar-rahman"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 56,
@@ -1530,7 +1699,8 @@
       "roman": {
         "name": "Al-Waqi'ah",
         "slug": "al-waqiah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 57,
@@ -1539,7 +1709,8 @@
       "roman": {
         "name": "Al-Hadid",
         "slug": "al-hadid"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 58,
@@ -1548,7 +1719,8 @@
       "roman": {
         "name": "Al-Mujadila",
         "slug": "al-mujadila"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 59,
@@ -1557,7 +1729,8 @@
       "roman": {
         "name": "Al-Hashr",
         "slug": "al-hashr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 60,
@@ -1566,7 +1739,8 @@
       "roman": {
         "name": "Al-Mumtahanah",
         "slug": "al-mumtahanah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 61,
@@ -1575,7 +1749,8 @@
       "roman": {
         "name": "As-Saf",
         "slug": "as-saf"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 62,
@@ -1584,7 +1759,8 @@
       "roman": {
         "name": "Al-Jumu'ah",
         "slug": "al-jumuah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 63,
@@ -1593,7 +1769,8 @@
       "roman": {
         "name": "Al-Munafiqun",
         "slug": "al-munafiqun"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 64,
@@ -1602,7 +1779,8 @@
       "roman": {
         "name": "At-Taghabun",
         "slug": "at-taghabun"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 65,
@@ -1611,7 +1789,8 @@
       "roman": {
         "name": "At-Talaq",
         "slug": "at-talaq"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 66,
@@ -1620,7 +1799,8 @@
       "roman": {
         "name": "At-Tahrim",
         "slug": "at-tahrim"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 67,
@@ -1629,7 +1809,8 @@
       "roman": {
         "name": "Al-Mulk",
         "slug": "al-mulk"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 68,
@@ -1638,7 +1819,8 @@
       "roman": {
         "name": "Al-Qalam",
         "slug": "al-qalam"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 69,
@@ -1647,7 +1829,8 @@
       "roman": {
         "name": "Al-Haqqah",
         "slug": "al-haqqah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 70,
@@ -1656,7 +1839,8 @@
       "roman": {
         "name": "Al-Ma'arij",
         "slug": "al-maarij"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 71,
@@ -1665,7 +1849,8 @@
       "roman": {
         "name": "Nuh",
         "slug": "nuh"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 72,
@@ -1674,7 +1859,8 @@
       "roman": {
         "name": "Al-Jinn",
         "slug": "al-jinn"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 73,
@@ -1683,7 +1869,8 @@
       "roman": {
         "name": "Al-Muzzammil",
         "slug": "al-muzzammil"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 74,
@@ -1692,7 +1879,8 @@
       "roman": {
         "name": "Al-Muddaththir",
         "slug": "al-muddaththir"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 75,
@@ -1701,7 +1889,8 @@
       "roman": {
         "name": "Al-Qiyamah",
         "slug": "al-qiyamah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 76,
@@ -1710,7 +1899,8 @@
       "roman": {
         "name": "Al-Insan",
         "slug": "al-insan"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 77,
@@ -1719,7 +1909,8 @@
       "roman": {
         "name": "Al-Mursalat",
         "slug": "al-mursalat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 78,
@@ -1728,7 +1919,8 @@
       "roman": {
         "name": "An-Naba",
         "slug": "an-naba"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 79,
@@ -1737,7 +1929,8 @@
       "roman": {
         "name": "An-Nazi'at",
         "slug": "an-naziat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 80,
@@ -1746,7 +1939,8 @@
       "roman": {
         "name": "'Abasa",
         "slug": "abasa"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 81,
@@ -1755,7 +1949,8 @@
       "roman": {
         "name": "At-Takwir",
         "slug": "at-takwir"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 82,
@@ -1764,7 +1959,8 @@
       "roman": {
         "name": "Al-Infitar",
         "slug": "al-infitar"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 83,
@@ -1773,7 +1969,8 @@
       "roman": {
         "name": "Al-Mutaffifin",
         "slug": "al-mutaffifin"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 84,
@@ -1782,7 +1979,8 @@
       "roman": {
         "name": "Al-Inshiqaq",
         "slug": "al-inshiqaq"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 85,
@@ -1791,7 +1989,8 @@
       "roman": {
         "name": "Al-Buruj",
         "slug": "al-buruj"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 86,
@@ -1800,7 +1999,8 @@
       "roman": {
         "name": "At-Tariq",
         "slug": "at-tariq"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 87,
@@ -1809,7 +2009,8 @@
       "roman": {
         "name": "Al-A'la",
         "slug": "al-ala"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 88,
@@ -1818,7 +2019,8 @@
       "roman": {
         "name": "Al-Ghashiyah",
         "slug": "al-ghashiyah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 89,
@@ -1827,7 +2029,8 @@
       "roman": {
         "name": "Al-Fajr",
         "slug": "al-fajr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 90,
@@ -1836,7 +2039,8 @@
       "roman": {
         "name": "Al-Balad",
         "slug": "al-balad"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 91,
@@ -1845,7 +2049,8 @@
       "roman": {
         "name": "Ash-Shams",
         "slug": "ash-shams"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 92,
@@ -1854,7 +2059,8 @@
       "roman": {
         "name": "Al-Layl",
         "slug": "al-layl"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 93,
@@ -1863,7 +2069,8 @@
       "roman": {
         "name": "Ad-Duhaa",
         "slug": "ad-duhaa"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 94,
@@ -1872,7 +2079,8 @@
       "roman": {
         "name": "Ash-Sharh",
         "slug": "ash-sharh"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 95,
@@ -1881,7 +2089,8 @@
       "roman": {
         "name": "At-Tin",
         "slug": "at-tin"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 96,
@@ -1890,7 +2099,8 @@
       "roman": {
         "name": "Al-'Alaq",
         "slug": "al-alaq"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 97,
@@ -1899,7 +2109,8 @@
       "roman": {
         "name": "Al-Qadr",
         "slug": "al-qadr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 98,
@@ -1908,7 +2119,8 @@
       "roman": {
         "name": "Al-Bayyinah",
         "slug": "al-bayyinah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 99,
@@ -1917,7 +2129,8 @@
       "roman": {
         "name": "Az-Zalzalah",
         "slug": "az-zalzalah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 100,
@@ -1926,7 +2139,8 @@
       "roman": {
         "name": "Al-'Adiyat",
         "slug": "al-adiyat"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 101,
@@ -1935,7 +2149,8 @@
       "roman": {
         "name": "Al-Qari'ah",
         "slug": "al-qariah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 102,
@@ -1944,7 +2159,8 @@
       "roman": {
         "name": "At-Takathur",
         "slug": "at-takathur"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 103,
@@ -1953,7 +2169,8 @@
       "roman": {
         "name": "Al-'Asr",
         "slug": "al-asr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 104,
@@ -1962,7 +2179,8 @@
       "roman": {
         "name": "Al-Humazah",
         "slug": "al-humazah"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 105,
@@ -1971,7 +2189,8 @@
       "roman": {
         "name": "Al-Fil",
         "slug": "al-fil"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 106,
@@ -1980,7 +2199,8 @@
       "roman": {
         "name": "Quraysh",
         "slug": "quraysh"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 107,
@@ -1989,7 +2209,8 @@
       "roman": {
         "name": "Al-Ma'un",
         "slug": "al-maun"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 108,
@@ -1998,7 +2219,8 @@
       "roman": {
         "name": "Al-Kawthar",
         "slug": "al-kawthar"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 109,
@@ -2007,7 +2229,8 @@
       "roman": {
         "name": "Al-Kafirun",
         "slug": "al-kafirun"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 110,
@@ -2016,7 +2239,8 @@
       "roman": {
         "name": "An-Nasr",
         "slug": "an-nasr"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 111,
@@ -2025,7 +2249,8 @@
       "roman": {
         "name": "Al-Masad",
         "slug": "al-masad"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 112,
@@ -2034,7 +2259,8 @@
       "roman": {
         "name": "Al-Ikhlas",
         "slug": "al-ikhlas"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 113,
@@ -2043,7 +2269,8 @@
       "roman": {
         "name": "Al-Falaq",
         "slug": "al-falaq"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     },
     {
       "id": 114,
@@ -2052,7 +2279,8 @@
       "roman": {
         "name": "An-Nas",
         "slug": "an-nas"
-      }
+      },
+      "translatedBy": "Dr. Mustafa Khattab"
     }
   ],
   "fa": [
@@ -2063,7 +2291,8 @@
       "roman": {
         "name": "Al-Fatihah",
         "slug": "al-fatihah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 2,
@@ -2072,7 +2301,8 @@
       "roman": {
         "name": "Al-Baqarah",
         "slug": "al-baqarah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 3,
@@ -2081,7 +2311,8 @@
       "roman": {
         "name": "Ali 'Imran",
         "slug": "ali-imran"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 4,
@@ -2090,7 +2321,8 @@
       "roman": {
         "name": "An-Nisa",
         "slug": "an-nisa"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 5,
@@ -2099,7 +2331,8 @@
       "roman": {
         "name": "Al-Ma'idah",
         "slug": "al-maidah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 6,
@@ -2108,7 +2341,8 @@
       "roman": {
         "name": "Al-An'am",
         "slug": "al-anam"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 7,
@@ -2117,7 +2351,8 @@
       "roman": {
         "name": "Al-A'raf",
         "slug": "al-araf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 8,
@@ -2126,7 +2361,8 @@
       "roman": {
         "name": "Al-Anfal",
         "slug": "al-anfal"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 9,
@@ -2135,7 +2371,8 @@
       "roman": {
         "name": "At-Tawbah",
         "slug": "at-tawbah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 10,
@@ -2144,7 +2381,8 @@
       "roman": {
         "name": "Yunus",
         "slug": "yunus"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 11,
@@ -2153,7 +2391,8 @@
       "roman": {
         "name": "Hud",
         "slug": "hud"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 12,
@@ -2162,7 +2401,8 @@
       "roman": {
         "name": "Yusuf",
         "slug": "yusuf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 13,
@@ -2171,7 +2411,8 @@
       "roman": {
         "name": "Ar-Ra'd",
         "slug": "ar-rad"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 14,
@@ -2180,7 +2421,8 @@
       "roman": {
         "name": "Ibrahim",
         "slug": "ibrahim"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 15,
@@ -2189,7 +2431,8 @@
       "roman": {
         "name": "Al-Hijr",
         "slug": "al-hijr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 16,
@@ -2198,7 +2441,8 @@
       "roman": {
         "name": "An-Nahl",
         "slug": "an-nahl"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 17,
@@ -2207,7 +2451,8 @@
       "roman": {
         "name": "Al-Isra",
         "slug": "al-isra"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 18,
@@ -2216,7 +2461,8 @@
       "roman": {
         "name": "Al-Kahf",
         "slug": "al-kahf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 19,
@@ -2225,7 +2471,8 @@
       "roman": {
         "name": "Maryam",
         "slug": "maryam"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 20,
@@ -2234,7 +2481,8 @@
       "roman": {
         "name": "Taha",
         "slug": "taha"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 21,
@@ -2243,7 +2491,8 @@
       "roman": {
         "name": "Al-Anbya",
         "slug": "al-anbya"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 22,
@@ -2252,7 +2501,8 @@
       "roman": {
         "name": "Al-Hajj",
         "slug": "al-hajj"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 23,
@@ -2261,7 +2511,8 @@
       "roman": {
         "name": "Al-Mu'minun",
         "slug": "al-muminun"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 24,
@@ -2270,7 +2521,8 @@
       "roman": {
         "name": "An-Nur",
         "slug": "an-nur"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 25,
@@ -2279,7 +2531,8 @@
       "roman": {
         "name": "Al-Furqan",
         "slug": "al-furqan"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 26,
@@ -2288,7 +2541,8 @@
       "roman": {
         "name": "Ash-Shu'ara",
         "slug": "ash-shuara"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 27,
@@ -2297,7 +2551,8 @@
       "roman": {
         "name": "An-Naml",
         "slug": "an-naml"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 28,
@@ -2306,7 +2561,8 @@
       "roman": {
         "name": "Al-Qasas",
         "slug": "al-qasas"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 29,
@@ -2315,7 +2571,8 @@
       "roman": {
         "name": "Al-'Ankabut",
         "slug": "al-ankabut"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 30,
@@ -2324,7 +2581,8 @@
       "roman": {
         "name": "Ar-Rum",
         "slug": "ar-rum"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 31,
@@ -2333,7 +2591,8 @@
       "roman": {
         "name": "Luqman",
         "slug": "luqman"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 32,
@@ -2342,7 +2601,8 @@
       "roman": {
         "name": "As-Sajdah",
         "slug": "as-sajdah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 33,
@@ -2351,7 +2611,8 @@
       "roman": {
         "name": "Al-Ahzab",
         "slug": "al-ahzab"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 34,
@@ -2360,7 +2621,8 @@
       "roman": {
         "name": "Saba",
         "slug": "saba"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 35,
@@ -2369,7 +2631,8 @@
       "roman": {
         "name": "Fatir",
         "slug": "fatir"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 36,
@@ -2378,7 +2641,8 @@
       "roman": {
         "name": "Ya-Sin",
         "slug": "ya-sin"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 37,
@@ -2387,7 +2651,8 @@
       "roman": {
         "name": "As-Saffat",
         "slug": "as-saffat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 38,
@@ -2396,7 +2661,8 @@
       "roman": {
         "name": "Sad",
         "slug": "sad"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 39,
@@ -2405,7 +2671,8 @@
       "roman": {
         "name": "Az-Zumar",
         "slug": "az-zumar"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 40,
@@ -2414,7 +2681,8 @@
       "roman": {
         "name": "Ghafir",
         "slug": "ghafir"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 41,
@@ -2423,7 +2691,8 @@
       "roman": {
         "name": "Fussilat",
         "slug": "fussilat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 42,
@@ -2432,7 +2701,8 @@
       "roman": {
         "name": "Ash-Shuraa",
         "slug": "ash-shuraa"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 43,
@@ -2441,7 +2711,8 @@
       "roman": {
         "name": "Az-Zukhruf",
         "slug": "az-zukhruf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 44,
@@ -2450,7 +2721,8 @@
       "roman": {
         "name": "Ad-Dukhan",
         "slug": "ad-dukhan"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 45,
@@ -2459,7 +2731,8 @@
       "roman": {
         "name": "Al-Jathiyah",
         "slug": "al-jathiyah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 46,
@@ -2468,7 +2741,8 @@
       "roman": {
         "name": "Al-Ahqaf",
         "slug": "al-ahqaf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 47,
@@ -2477,7 +2751,8 @@
       "roman": {
         "name": "Muhammad",
         "slug": "muhammad"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 48,
@@ -2486,7 +2761,8 @@
       "roman": {
         "name": "Al-Fath",
         "slug": "al-fath"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 49,
@@ -2495,7 +2771,8 @@
       "roman": {
         "name": "Al-Hujurat",
         "slug": "al-hujurat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 50,
@@ -2504,7 +2781,8 @@
       "roman": {
         "name": "Qaf",
         "slug": "qaf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 51,
@@ -2513,7 +2791,8 @@
       "roman": {
         "name": "Adh-Dhariyat",
         "slug": "adh-dhariyat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 52,
@@ -2522,7 +2801,8 @@
       "roman": {
         "name": "At-Tur",
         "slug": "at-tur"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 53,
@@ -2531,7 +2811,8 @@
       "roman": {
         "name": "An-Najm",
         "slug": "an-najm"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 54,
@@ -2540,7 +2821,8 @@
       "roman": {
         "name": "Al-Qamar",
         "slug": "al-qamar"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 55,
@@ -2549,7 +2831,8 @@
       "roman": {
         "name": "Ar-Rahman",
         "slug": "ar-rahman"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 56,
@@ -2558,7 +2841,8 @@
       "roman": {
         "name": "Al-Waqi'ah",
         "slug": "al-waqiah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 57,
@@ -2567,7 +2851,8 @@
       "roman": {
         "name": "Al-Hadid",
         "slug": "al-hadid"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 58,
@@ -2576,7 +2861,8 @@
       "roman": {
         "name": "Al-Mujadila",
         "slug": "al-mujadila"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 59,
@@ -2585,7 +2871,8 @@
       "roman": {
         "name": "Al-Hashr",
         "slug": "al-hashr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 60,
@@ -2594,7 +2881,8 @@
       "roman": {
         "name": "Al-Mumtahanah",
         "slug": "al-mumtahanah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 61,
@@ -2603,7 +2891,8 @@
       "roman": {
         "name": "As-Saf",
         "slug": "as-saf"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 62,
@@ -2612,7 +2901,8 @@
       "roman": {
         "name": "Al-Jumu'ah",
         "slug": "al-jumuah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 63,
@@ -2621,7 +2911,8 @@
       "roman": {
         "name": "Al-Munafiqun",
         "slug": "al-munafiqun"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 64,
@@ -2630,7 +2921,8 @@
       "roman": {
         "name": "At-Taghabun",
         "slug": "at-taghabun"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 65,
@@ -2639,7 +2931,8 @@
       "roman": {
         "name": "At-Talaq",
         "slug": "at-talaq"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 66,
@@ -2648,7 +2941,8 @@
       "roman": {
         "name": "At-Tahrim",
         "slug": "at-tahrim"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 67,
@@ -2657,7 +2951,8 @@
       "roman": {
         "name": "Al-Mulk",
         "slug": "al-mulk"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 68,
@@ -2666,7 +2961,8 @@
       "roman": {
         "name": "Al-Qalam",
         "slug": "al-qalam"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 69,
@@ -2675,7 +2971,8 @@
       "roman": {
         "name": "Al-Haqqah",
         "slug": "al-haqqah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 70,
@@ -2684,7 +2981,8 @@
       "roman": {
         "name": "Al-Ma'arij",
         "slug": "al-maarij"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 71,
@@ -2693,7 +2991,8 @@
       "roman": {
         "name": "Nuh",
         "slug": "nuh"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 72,
@@ -2702,7 +3001,8 @@
       "roman": {
         "name": "Al-Jinn",
         "slug": "al-jinn"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 73,
@@ -2711,7 +3011,8 @@
       "roman": {
         "name": "Al-Muzzammil",
         "slug": "al-muzzammil"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 74,
@@ -2720,7 +3021,8 @@
       "roman": {
         "name": "Al-Muddaththir",
         "slug": "al-muddaththir"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 75,
@@ -2729,7 +3031,8 @@
       "roman": {
         "name": "Al-Qiyamah",
         "slug": "al-qiyamah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 76,
@@ -2738,7 +3041,8 @@
       "roman": {
         "name": "Al-Insan",
         "slug": "al-insan"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 77,
@@ -2747,7 +3051,8 @@
       "roman": {
         "name": "Al-Mursalat",
         "slug": "al-mursalat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 78,
@@ -2756,7 +3061,8 @@
       "roman": {
         "name": "An-Naba",
         "slug": "an-naba"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 79,
@@ -2765,7 +3071,8 @@
       "roman": {
         "name": "An-Nazi'at",
         "slug": "an-naziat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 80,
@@ -2774,7 +3081,8 @@
       "roman": {
         "name": "'Abasa",
         "slug": "abasa"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 81,
@@ -2783,7 +3091,8 @@
       "roman": {
         "name": "At-Takwir",
         "slug": "at-takwir"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 82,
@@ -2792,7 +3101,8 @@
       "roman": {
         "name": "Al-Infitar",
         "slug": "al-infitar"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 83,
@@ -2801,7 +3111,8 @@
       "roman": {
         "name": "Al-Mutaffifin",
         "slug": "al-mutaffifin"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 84,
@@ -2810,7 +3121,8 @@
       "roman": {
         "name": "Al-Inshiqaq",
         "slug": "al-inshiqaq"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 85,
@@ -2819,7 +3131,8 @@
       "roman": {
         "name": "Al-Buruj",
         "slug": "al-buruj"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 86,
@@ -2828,7 +3141,8 @@
       "roman": {
         "name": "At-Tariq",
         "slug": "at-tariq"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 87,
@@ -2837,7 +3151,8 @@
       "roman": {
         "name": "Al-A'la",
         "slug": "al-ala"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 88,
@@ -2846,7 +3161,8 @@
       "roman": {
         "name": "Al-Ghashiyah",
         "slug": "al-ghashiyah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 89,
@@ -2855,7 +3171,8 @@
       "roman": {
         "name": "Al-Fajr",
         "slug": "al-fajr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 90,
@@ -2864,7 +3181,8 @@
       "roman": {
         "name": "Al-Balad",
         "slug": "al-balad"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 91,
@@ -2873,7 +3191,8 @@
       "roman": {
         "name": "Ash-Shams",
         "slug": "ash-shams"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 92,
@@ -2882,7 +3201,8 @@
       "roman": {
         "name": "Al-Layl",
         "slug": "al-layl"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 93,
@@ -2891,7 +3211,8 @@
       "roman": {
         "name": "Ad-Duhaa",
         "slug": "ad-duhaa"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 94,
@@ -2900,7 +3221,8 @@
       "roman": {
         "name": "Ash-Sharh",
         "slug": "ash-sharh"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 95,
@@ -2909,7 +3231,8 @@
       "roman": {
         "name": "At-Tin",
         "slug": "at-tin"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 96,
@@ -2918,7 +3241,8 @@
       "roman": {
         "name": "Al-'Alaq",
         "slug": "al-alaq"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 97,
@@ -2927,7 +3251,8 @@
       "roman": {
         "name": "Al-Qadr",
         "slug": "al-qadr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 98,
@@ -2936,7 +3261,8 @@
       "roman": {
         "name": "Al-Bayyinah",
         "slug": "al-bayyinah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 99,
@@ -2945,7 +3271,8 @@
       "roman": {
         "name": "Az-Zalzalah",
         "slug": "az-zalzalah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 100,
@@ -2954,7 +3281,8 @@
       "roman": {
         "name": "Al-'Adiyat",
         "slug": "al-adiyat"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 101,
@@ -2963,7 +3291,8 @@
       "roman": {
         "name": "Al-Qari'ah",
         "slug": "al-qariah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 102,
@@ -2972,7 +3301,8 @@
       "roman": {
         "name": "At-Takathur",
         "slug": "at-takathur"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 103,
@@ -2981,7 +3311,8 @@
       "roman": {
         "name": "Al-'Asr",
         "slug": "al-asr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 104,
@@ -2990,7 +3321,8 @@
       "roman": {
         "name": "Al-Humazah",
         "slug": "al-humazah"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 105,
@@ -2999,7 +3331,8 @@
       "roman": {
         "name": "Al-Fil",
         "slug": "al-fil"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 106,
@@ -3008,7 +3341,8 @@
       "roman": {
         "name": "Quraysh",
         "slug": "quraysh"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 107,
@@ -3017,7 +3351,8 @@
       "roman": {
         "name": "Al-Ma'un",
         "slug": "al-maun"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 108,
@@ -3026,7 +3361,8 @@
       "roman": {
         "name": "Al-Kawthar",
         "slug": "al-kawthar"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 109,
@@ -3035,7 +3371,8 @@
       "roman": {
         "name": "Al-Kafirun",
         "slug": "al-kafirun"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 110,
@@ -3044,7 +3381,8 @@
       "roman": {
         "name": "An-Nasr",
         "slug": "an-nasr"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 111,
@@ -3053,7 +3391,8 @@
       "roman": {
         "name": "Al-Masad",
         "slug": "al-masad"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 112,
@@ -3062,7 +3401,8 @@
       "roman": {
         "name": "Al-Ikhlas",
         "slug": "al-ikhlas"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 113,
@@ -3071,7 +3411,8 @@
       "roman": {
         "name": "Al-Falaq",
         "slug": "al-falaq"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     },
     {
       "id": 114,
@@ -3080,7 +3421,8 @@
       "roman": {
         "name": "An-Nas",
         "slug": "an-nas"
-      }
+      },
+      "translatedBy": "Hussein Taji Kal Dari"
     }
   ]
 }
