@@ -10,7 +10,7 @@ module Mixin::OpenGraph
     when "surah-stream.html.erb"
       surah = context.surah
       {title: t(context.locale, "TheNobleQuran"),
-       description: t(context.locale, "meta.stream.description", surah_name: surah.name),
+       description: surah.name,
        url: "https://al-quran.reflectslight.io/#{context.locale}/#{surah.slug}/",
        image: "https://al-quran.reflectslight.io/images/og/#{surah.id}.png"}
     when "redirect.html.erb", "surah-index.html.erb"
