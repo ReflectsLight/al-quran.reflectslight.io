@@ -8,11 +8,6 @@ the build directory consists of HTML, CSS, JavaScript
 and other static assets that can be hosted by nginx,
 apache, etc.
 
-Please note that the audio files are hosted by
-https://al-quran.reflectslight.io, and due to
-their overall size they are only files **not**
-kept in this repository.
-
 ## Environment
 
 The following languages and tools have to be
@@ -21,6 +16,11 @@ installed to build the website from source:
 * Ruby 3.1 (or later)
 * NodeJS v18.15 (or later)
 * [tidy-html5](https://github.com/htacg/tidy-html5)
+
+**Please note** that the audio files are hosted by
+https://al-quran.reflectslight.io, and due to
+their overall size they are only files **not**
+kept in this repository.
 
 ## Development
 
