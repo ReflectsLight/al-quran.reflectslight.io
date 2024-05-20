@@ -17,27 +17,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Prepare environment
       uses: './.github/actions/prepare-env'
-    - name: eslint
-      run: npm exec eslint -- src/js/
-    - name: rubocop
-      run: bundle exec rubocop
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Clone
-      uses: actions/checkout@v2
-    - name: Prepare environment
-      uses: './.github/actions/prepare-env'
-    - name: prettier
-      run: npm exec prettier -- --check src/js/
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Clone
-      uses: actions/checkout@v2
-    - name: Prepare environment
-      uses: './.github/actions/prepare-env'
-    - name: Add HTMLTidy
-      run: sudo apt-get install tidy
-    - name: nanoc
-      run: rake nanoc:build
+    - name: ci
+      run: rake ci

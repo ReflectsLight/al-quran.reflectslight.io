@@ -14,6 +14,7 @@ end
 load "rake/tasks/format.rake"
 load "rake/tasks/nanoc.rake"
 load "rake/tasks/t.rake"
+load "rake/tasks/ci.rake"
 
 desc "Serve the website on localhost"
 task :server, [:protocol] do |_t, args|
