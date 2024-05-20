@@ -10,7 +10,7 @@ env:
   SASS_PATH: ./src/css/
 
 jobs:
-  lint:
+  ci:
     runs-on: ubuntu-latest
     steps:
     - name: Clone
