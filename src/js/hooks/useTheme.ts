@@ -13,7 +13,7 @@ export function useTheme(): Result {
   const set = (t: Theme) => {
     if (THEMES.includes(t)) {
       const maxAge = 3600 * 24 * 90;
-      document.cookie = `theme=${t}; path=/; max-age=${maxAge}`;
+      document.cookie = `theme=${t}; path=/; max-age=${maxAge}; SameSite=Strict`;
       setTheme(t);
     }
   };
