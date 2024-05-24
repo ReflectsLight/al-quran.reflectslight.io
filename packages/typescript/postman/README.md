@@ -1,21 +1,21 @@
 ## About
 
-Postman is a TypeScript library that can download the dependencies <br>
-of a web page, and afterwards display the web page with all of its <br>
-dependencies in-place, ready to use. <br>
+Postman is a TypeScript library that can download the dependencies
+of a web page, and afterwards display the web page with all of its
+dependencies in-place, ready to use.
 
-An example of a dependency could be a font, an image, a script, <br> 
-a stylesheet, and a JSON blob. Other formats can be downloaded <br>
-as plain-text. <br>
+An example of a dependency could be a font, an image, a script,
+a stylesheet, and a JSON blob. Other formats can be downloaded
+as plain-text.
 
 ## Examples
 
 ### Progress bar
 
-The following example demonstrates how postman can be used to download <br>
-fonts, images, scripts, and stylesheets. The progress of the download is <br>
-reported in `span.percent`. When the download is complete the text <br>
-"Done" will replace the progress tracked in `span.percent`: <br>
+The following example demonstrates how postman can be used to download
+fonts, images, scripts, and stylesheets. The progress of the download is
+reported in `span.percent`. When the download is complete the text
+"Done" will replace the progress tracked in `span.percent`:
 
 **/index.html**
 
@@ -56,7 +56,7 @@ postman(
 
 ## License
 
-[BSD Zero Clause](https://choosealicense.com/licenses/0bsd/).
+[BSD Zero Clause](https://choosealicense.com/licenses/0bsd/)
 <br>
-See [LICENSE](./LICENSE).
+See [LICENSE](./LICENSE)
 
