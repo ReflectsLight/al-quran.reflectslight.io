@@ -5,8 +5,8 @@ import { useTheme } from "~/hooks/useTheme";
 import { AudioControl, TAudioStatus } from "~/components/AudioControl";
 import { Head } from "~/components/Head";
 import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "~/components/Icon";
+import { Timer } from "~/components/Timer";
 import { TFunction } from "~/lib/t";
-import { Timer } from "./Timer";
 import { Stream } from "./Stream";
 
 type Maybe<T> = T | null | undefined;
