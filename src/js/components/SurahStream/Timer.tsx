@@ -39,7 +39,7 @@ export function Timer({ locale, surah, ayah, isPaused, audioStatus, onComplete }
     } else if (ms <= 0) {
       onComplete(surah, ayah);
     } else {
-      const tid = setTimeout(() => setMs(ms - 100), 100);
+      const tid = setTimeout(() => setMs(ms - 1000), 1000);
       return () => clearTimeout(tid);
     }
   }, [isStalled, isPaused, ms]);
@@ -50,7 +50,9 @@ export function Timer({ locale, surah, ayah, isPaused, audioStatus, onComplete }
 
   return (
     <div className="timer text-base w-10 flex justify-end">
-      {!ms || ms / 1000 <= 0 ? formatNumber(locale, 0) : formatNumber(locale, ms / 1000)}
+      {!ms || ms / 1000 <= 0
+        ? formatNumber(locale, 0)
+        : formatNumber(locale, ms / 1000, { maximumFractionDigits: 0 })}
     </div>
   );
 }

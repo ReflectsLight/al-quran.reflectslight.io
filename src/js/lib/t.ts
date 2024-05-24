@@ -17,8 +17,9 @@ export function T(phrases: PhraseMap<string>): TFunction {
   };
 }
 
-export function formatNumber(locale: TLocale, num: number): string {
+export function formatNumber(locale: TLocale, num: number, options = {}): string {
   const numl = locale.name === "ar" ? "ar-SA" : locale.name;
-  const options = { maximumFractionDigits: 1 };
-  return new Intl.NumberFormat(numl, options).format(num);
+  return new Intl.NumberFormat(numl, { maximumFractionDigits: 1, ...options }).format(
+    num,
+  );
 }
