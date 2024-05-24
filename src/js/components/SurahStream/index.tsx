@@ -23,7 +23,6 @@ export function SurahStream({ surah, locale, t }: Props) {
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
-  const [ms, setMs] = useState<number | null>(null);
   const articleRef = useRef<HTMLElement>(null);
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
@@ -35,12 +34,6 @@ export function SurahStream({ surah, locale, t }: Props) {
       el.classList.remove("invisible");
     }
   }, [articleRef.current, theme]);
-
-  useEffect(() => {
-    if (ayah) {
-      setMs(ayah.ms);
-    }
-  }, [ayah]);
 
   useEffect(() => {
     if (!endOfStream) {
@@ -84,9 +77,6 @@ export function SurahStream({ surah, locale, t }: Props) {
             ayah={ayah}
             hidden={endOfStream}
             onStatusChange={status => {
-              if (status === "play") {
-                setMs(ayah.ms);
-              }
               setAudioStatus(status);
             }}
           />
@@ -101,9 +91,7 @@ export function SurahStream({ surah, locale, t }: Props) {
             surah={surah}
             ayah={ayah}
             isPaused={isPaused}
-            isStalled={audioStatus === "wait"}
-            ms={ms}
-            setMs={setMs}
+            audioStatus={audioStatus}
             onComplete={(surah, ayah) => {
               const layah = surah.ayat[surah.ayat.length - 1];
               if (!layah || !ayah) {

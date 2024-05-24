@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import type { Surah, Ayah, TLocale } from "Quran";
 import { formatNumber } from "~/lib/t";
 
@@ -9,9 +9,7 @@ type Props = {
   surah: Surah;
   ayah: Maybe<Ayah>;
   isPaused: boolean;
-  isStalled: boolean;
-  ms: number | null;
-  setMs: (n: number) => void;
+  audioStatus: Maybe<string>;
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
@@ -20,16 +18,24 @@ export function Timer({
   surah,
   ayah,
   isPaused,
-  isStalled,
-  ms,
-  setMs,
+  audioStatus,
   onComplete,
 }: Props) {
+  const [ms, setMs] = useState<number | null>(null);
+  const isStalled = audioStatus === "wait";
+
   useEffect(() => {
-    if (ayah) {
-      setMs(ayah.ms);
-    }
+    if (!ayah)
+      return
+    setMs(ayah.ms);
   }, [ayah?.id]);
+
+  useEffect(() => {
+    if (!ayah)
+      return
+    if (audioStatus === "play")
+      setMs(ayah.ms)
+  }, [audioStatus]);
 
   useEffect(() => {
     if (!ayah || typeof ms !== "number") {
