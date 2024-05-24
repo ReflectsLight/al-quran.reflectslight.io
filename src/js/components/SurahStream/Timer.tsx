@@ -13,28 +13,22 @@ type Props = {
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
-export function Timer({
-  locale,
-  surah,
-  ayah,
-  isPaused,
-  audioStatus,
-  onComplete,
-}: Props) {
+export function Timer({ locale, surah, ayah, isPaused, audioStatus, onComplete }: Props) {
   const [ms, setMs] = useState<number | null>(null);
   const isStalled = audioStatus === "wait";
 
   useEffect(() => {
-    if (!ayah)
-      return
-    setMs(ayah.ms);
+    if (ayah) {
+      setMs(ayah.ms);
+    }
   }, [ayah?.id]);
 
   useEffect(() => {
-    if (!ayah)
-      return
-    if (audioStatus === "play")
-      setMs(ayah.ms)
+    if (!ayah) {
+      return;
+    } else if (audioStatus === "play") {
+      setMs(ayah.ms);
+    }
   }, [audioStatus]);
 
   useEffect(() => {
