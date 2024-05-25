@@ -19,7 +19,7 @@ namespace :nanoc do
       buildenv = args.buildenv || ENV["buildenv"] || "development"
       sass_path = File.join(root, "src", "css")
       sh "rm -rf build/al-quran/css/"
-      Bundler.with_unbundled_env {
+      Bundler.with_original_env {
         sh "SASS_PATH=#{sass_path} buildenv=#{buildenv} bundle exec nanoc co"
       }
     end
@@ -31,7 +31,7 @@ namespace :nanoc do
       require "listen"
       srcdir = File.join(root, "src")
       Listen.to(srcdir) do
-        Bundler.with_unbundled_env { sh "rake nanoc:build" }
+        Bundler.with_original_env { sh "rake nanoc:build" }
       end.start
       sleep
     end
