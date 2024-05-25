@@ -31,6 +31,9 @@ kept in this repository.
     # Setup build environment
     bin/setup
 
+    # List all tasks
+    rake -T
+
     # Build website
     rake nanoc:build
 
