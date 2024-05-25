@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(locale, 'meta.index.description') %>">
+    <%= erb("_revision.html.erb") %>
+    <%= opengraph(context) %>
     <link
       rel="canonical"
       href="https://al-quran.reflectslight.io/<%= locale %>/"
@@ -16,7 +18,6 @@
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
-    <%= opengraph(context) %>
   </head>
   <body>
     <div class="postman loader">

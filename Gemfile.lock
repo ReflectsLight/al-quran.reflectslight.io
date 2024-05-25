@@ -137,6 +137,7 @@ GEM
       rubocop-performance (~> 1.20.2)
     stringio (3.1.0)
     strscan (3.1.0)
+    test-cmd.rb (0.11.1)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)
@@ -161,6 +162,7 @@ DEPENDENCIES
   sass (~> 3.7)
   server.rb
   standard (~> 1.24)
+  test-cmd.rb
 
 BUNDLED WITH
    2.5.9

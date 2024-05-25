@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title><%= t("en", "TheNobleQuran") %></title>
+    <%= erb("_revision.html.erb") %>
+    <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
     <link
       rel="canonical"
       href="https://al-quran.reflectslight.io/en/"
@@ -13,7 +15,6 @@
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
-    <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
   </head>
   <body>
     <script src="/js/main/redirect.js"></script>

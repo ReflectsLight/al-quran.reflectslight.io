@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Mixin
+  require "test-cmd"
   require_relative "mixin/t"
   require_relative "mixin/inline"
   require_relative "mixin/erb"
@@ -11,6 +12,10 @@ module Mixin
       ver = File.read File.join(Dir.getwd, "VERSION")
       ver.gsub(/[^\d.]/, "")
     end
+  end
+
+  def revision
+    ["v#{app_version}", " ", "(#{cmd("git rev-parse HEAD").stdout.strip})"].join
   end
 
   def build_dir
