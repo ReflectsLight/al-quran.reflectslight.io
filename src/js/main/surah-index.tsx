@@ -14,7 +14,5 @@ import { SurahIndex } from "~/components/SurahIndex";
   })()!;
   const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
 
-  ReactDOM.createRoot(root).render(
-    <SurahIndex locale={locale} surahs={surahs} t={t} />,
-  );
+  ReactDOM.createRoot(root).render(<SurahIndex locale={locale} surahs={surahs} t={t} />);
 })();
