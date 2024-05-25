@@ -16,7 +16,7 @@ load "rake/tasks/nanoc.rake"
 load "rake/tasks/t.rake"
 load "rake/tasks/ci.rake"
 
-desc "Serve the website on localhost"
+desc "Start HTTP server"
 task :server, [:protocol] do |_t, args|
   require "server"
   nanoc = Ryo.from(YAML.load_file("./nanoc.yaml"))
