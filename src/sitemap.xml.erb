@@ -7,12 +7,17 @@
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
- <% Ryo.each(name_by_id) do |_, transliterated_name| %>
+  <% Ryo.each(name_by_id) do |_, transliterated_name| %>
   <url>
     <loc>https://al-quran.reflectslight.io/<%= locale %>/<%= transliterated_name %>/</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
- <% end %>
- <% end %>
+  <% end %>
+  <url>
+    <loc>https://al-quran.reflectslight.io/<%= locale %>/random/</loc>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <% end %>
 </urlset>
