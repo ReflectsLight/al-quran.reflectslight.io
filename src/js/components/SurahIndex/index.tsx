@@ -8,13 +8,12 @@ import { Filter } from "./Filter";
 import classNames from "classnames";
 
 type Props = {
-  appVersion: string;
   locale: TLocale;
   surahs: Surah[];
   t: TFunction;
 };
 
-export function SurahIndex({ appVersion, locale, surahs, t }: Props) {
+export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>(null);

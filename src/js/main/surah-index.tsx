@@ -8,7 +8,6 @@ import { SurahIndex } from "~/components/SurahIndex";
   const root: HTMLElement = document.querySelector(".root")!;
   const t = T(require("@json/t.json"));
   const byLocale = require("@json/surahs");
-  const appVersion = root.getAttribute("data-app-version")!;
   const locale = (() => {
     const l = root.getAttribute("data-locale");
     return Quran.locales.find(ll => ll.name === l);
@@ -16,6 +15,6 @@ import { SurahIndex } from "~/components/SurahIndex";
   const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
 
   ReactDOM.createRoot(root).render(
-    <SurahIndex appVersion={appVersion} locale={locale} surahs={surahs} t={t} />,
+    <SurahIndex locale={locale} surahs={surahs} t={t} />,
   );
 })();
