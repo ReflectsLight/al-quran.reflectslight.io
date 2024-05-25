@@ -15,7 +15,7 @@ module Mixin
   end
 
   def revision
-    ["v#{app_version}", " ", "(#{cmd("git rev-parse HEAD").stdout.strip})"].join
+    cmd("git rev-parse HEAD").stdout.strip
   end
 
   def build_dir
