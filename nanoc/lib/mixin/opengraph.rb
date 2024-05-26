@@ -11,13 +11,13 @@ module Mixin::OpenGraph
       surah = context.surah
       {title: t(context.locale, "TheNobleQuran"),
        description: surah.name,
-       url: "https://al-quran.reflectslight.io/#{context.locale}/#{surah.slug}/",
-       image: "https://al-quran.reflectslight.io/images/og/#{surah.id}.png"}
+       url: "https://<%= hostname %>/#{context.locale}/#{surah.slug}/",
+       image: "https://<%= hostname %>/images/og/#{surah.id}.png"}
     when "redirect.html.erb", "surah-index.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
-       url: "https://al-quran.reflectslight.io/#{context.locale}/",
-       image: "https://al-quran.reflectslight.io/images/og/0.png"}
+       url: "https://<%= hostname %>/#{context.locale}/",
+       image: "https://<%= hostname %>/images/og/0.png"}
     end
   end
 end

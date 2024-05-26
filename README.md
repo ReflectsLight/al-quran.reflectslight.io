@@ -5,7 +5,7 @@ This repository contains the source code of
 a static website for reading (and listening to)
 The Noble Quran. After the website is built,
 the build directory consists of HTML, CSS, JavaScript
-and other static assets that can be hosted by 
+and other static assets that can be hosted by
 a web server such as nginx, apache, etc.
 
 ## Requirements
