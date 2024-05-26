@@ -5,7 +5,8 @@ import postman, { item } from "postman";
   const progressBar: HTMLProgressElement = container.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
   const stylesheet: HTMLStyleElement = document.querySelector(".css.postman")!;
-  const { locale, surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+  const locale = document.querySelector("html")!.getAttribute("lang")!;
+  const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
 
   postman(
     item.script("/js/main/surah-stream.js"),

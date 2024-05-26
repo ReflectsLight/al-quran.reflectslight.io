@@ -8,7 +8,7 @@ import { SurahStream } from "~/components/SurahStream";
   const root: HTMLElement = document.querySelector(".root")!;
   const t = T(require("@json/t.json"));
   const locale = (() => {
-    const l = root.getAttribute("data-locale");
+    const l = document.querySelector("html")!.getAttribute("lang")!;
     return Quran.locales.find(ll => ll.name === l);
   })()!;
 
