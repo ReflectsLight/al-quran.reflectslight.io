@@ -8,6 +8,7 @@
     "comma": ",",
     "of": "of",
     "filter": "Filter",
+    "loading": "Loading",
     "meta": {
       "index": {"description": "Explore the chapters of The Noble Quran"},
       "stream": {"description": "Read and listen to %{surah_name}"},
@@ -141,6 +142,7 @@
     "comma": "،",
     "of": "من",
     "filter": "تصفية",
+    "loading": "جارٍ التحميل",
     "meta": {
       "index": {
         "description": "استكشف فصول القرآن الكريم"
@@ -280,6 +282,7 @@
     "comma": "،",
     "of": "از",
     "filter": "فیلتر",
+    "loading": "در حال بارگذاری",
     "meta": {
       "index": {
         "description": "فصول قرآن کریم را کاوش کنید"
