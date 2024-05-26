@@ -5,10 +5,10 @@ This repository contains the source code of
 a static website for reading (and listening to)
 The Noble Quran. After the website is built,
 the build directory consists of HTML, CSS, JavaScript
-and other static assets that can be hosted by nginx,
-apache, etc.
+and other static assets that can be hosted by 
+a web server such as nginx, apache, etc.
 
-## Environment
+## Requirements
 
 The following languages and tools have to be
 installed to build the website from source:
@@ -40,6 +40,17 @@ kept in this repository.
     # Start web server
     rake server
 
+## Configuration
+
+If you plan to host the website on your own domain
+you will probably want to update
+[nanoc.yaml](nanoc.yaml)
+first. Largely for SEO reasons certain links will
+reference the hostname al-quran.reflectslight.io.
+Those links can be updated to your own domain by
+changing the `server.hostname` field in
+[nanoc.yaml](nanoc.yaml).
+
 ## Thanks
 
 Alhamdulillah
@@ -56,4 +67,4 @@ Alhamdulillah
 ## License
 
 The "source code" is released under the terms of the GPL <br>
-See [./LICENSE](./LICENSE) for details
+See [LICENSE](./LICENSE) for details

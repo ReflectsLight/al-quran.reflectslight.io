@@ -6,12 +6,12 @@
     <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
     <link
       rel="canonical"
-      href="https://al-quran.reflectslight.io/en/"
+      href="https://<%= hostname %>/en/"
     />
     <% locales.each do |locale| %>
     <link
       rel="alternate"
-      href="https://al-quran.reflectslight.io/<%= locale %>/"
+      href="https://<%= hostname %>/<%= locale %>/"
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>

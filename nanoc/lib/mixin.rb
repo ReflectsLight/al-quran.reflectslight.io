@@ -19,10 +19,15 @@ module Mixin
   end
 
   def build_dir
-    @build_dir ||= begin
-      nanoc = Ryo.from YAML.load_file(File.join(Dir.getwd, "nanoc.yaml"))
-      nanoc.output_dir
-    end
+    nanoc.output_dir
+  end
+
+  def hostname
+    nanoc.server.hostname
+  end
+
+  def nanoc
+    @nanoc ||= Ryo.from YAML.load_file(File.join(Dir.getwd, "nanoc.yaml"))
   end
 
   include T

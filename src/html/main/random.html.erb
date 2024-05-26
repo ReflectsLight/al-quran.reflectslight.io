@@ -6,12 +6,12 @@
     <%= erb("_revision.html.erb") %>
     <link
       rel="canonical"
-      href="https://al-quran.reflectslight.io/<%= locale %>/random/"
+      href="https://<%= hostname %>/<%= locale %>/random/"
     />
     <% locales.each do |locale| %>
     <link
       rel="alternate"
-      href="https://al-quran.reflectslight.io/<%= locale %>/random/"
+      href="https://<%= hostname %>/<%= locale %>/random/"
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
