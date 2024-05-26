@@ -18,6 +18,11 @@ module Mixin::OpenGraph
        description: t(context.locale, "meta.index.description"),
        url: "https://<%= hostname %>/#{context.locale}/",
        image: "https://<%= hostname %>/images/og/0.png"}
+    when "random.html.erb"
+      {title: t(context.locale, "TheNobleQuran"),
+       description: t(context.locale, "meta.random.description"),
+       url: "https://<%= hostname %>/#{context.locale}/random/",
+       image: "https://<%= hostname %>/images/og/0.png"}
     end
   end
 end
