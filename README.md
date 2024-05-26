@@ -1,7 +1,7 @@
 ## About
 
 This repository contains the source code of
-[al-quran.reflectslight.io](https://al-quran.reflectslight.io),
+[al-quran.reflectslight.io](https://al-quran.reflectslight.io) -
 a static website for reading (and listening to)
 The Noble Quran. After the website is built,
 the build directory consists of HTML, CSS, JavaScript
