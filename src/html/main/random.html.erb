@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="<%= context.locale %>">
+<html lang="<%= locale %>">
   <head>
-    <title><%= t(context.locale, "TheNobleQuran") %></title>
+    <title><%= t(locale, "TheNobleQuran") %></title>
     <meta name="description" content="<%= t(locale, 'meta.random.description') %>">
     <%= erb("_revision.html.erb") %>
     <%= opengraph(context) %>
