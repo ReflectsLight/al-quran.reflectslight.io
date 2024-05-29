@@ -20,11 +20,12 @@ Ryo.each(name_by_id) do |id, slug|
       filename: "surah-stream.html.erb",
       locale:,
       locales:,
-      surah: {id:, name:, slug:}
+      surah: {id:, name:, slug:},
+      dir: tdata[locale].dir
     )
     locals = {
       locale: context.locale, locales: context.locales,
-      surah: context.surah, context:
+      surah: context.surah, dir: context.dir, context:
     }
     filter(:erb, locals:)
     filter(:tidy)

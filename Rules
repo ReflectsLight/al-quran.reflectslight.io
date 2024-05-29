@@ -61,7 +61,7 @@ passthrough "/json/durations/*/*.json"
 # require rules
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect", {locales:}
-require_rules "nanoc/rules/random", {locales:}
+require_rules "nanoc/rules/random", {locales:, tdata:}
 require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:}
 require_rules "nanoc/rules/index", {locales:, tdata:}
 

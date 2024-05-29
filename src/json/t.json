@@ -1,5 +1,6 @@
 {
   "en": {
+    "dir": "ltr",
     "TheNobleQuran": "The Noble Quran",
     "ChooseRandomChapter": "Select a random surah",
     "surah": "Surah",
@@ -134,6 +135,7 @@
     }
   },
   "ar": {
+    "dir": "rtl",
     "TheNobleQuran": "القرآن الكريم",
     "ChooseRandomChapter": "اختر سورة عشوائية",
     "surah": "سورة",
@@ -274,6 +276,7 @@
     }
   },
   "fa": {
+    "dir": "rtl",
     "TheNobleQuran": "قرآن کریم",
     "ChooseRandomChapter": "یک سوره تصادفی انتخاب کنید",
     "surah": "سوره",
