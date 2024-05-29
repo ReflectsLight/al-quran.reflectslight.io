@@ -20,12 +20,7 @@
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <div class="postman loader">
-      <div>
-        <progress value="0" max="100"></progress>
-        <span class="percentage"><%= t(locale, "loading") %></span>
-      </div>
-    </div>
+    <%= erb("_postman.html.erb", {locale:}) %>
     <div class="root h-full"></div>
     <script src="/js/loaders/surah-index-loader.js"></script>
   </body>
