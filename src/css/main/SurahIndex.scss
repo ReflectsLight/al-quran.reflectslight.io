@@ -34,15 +34,11 @@ body .root .content.theme {
         width: 100%;
         justify-content: center;
       }
+    }
+    @media(hover: none) {
       .right-arrow, .surah-index-filter {
         display: none;
       }
-    }
-  }
-
-  @media(max-width: $breakpoint-sm) {
-    .appver {
-      display: none;
     }
   }
 }
@@ -70,8 +66,5 @@ body .root .content.theme.rtl {
     a {
       flex-direction: row-reverse;
     }
-  }
-  .appver {
-    display: none;
   }
 }
