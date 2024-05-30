@@ -43,7 +43,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           <li className="surah" key={key}>
             <a
               className={classNames(
-                "flex items-center color-primary no-underline rounded",
+                "flex items-center color-primary no-underline rounded w-95",
                 {
                   "h-14": locale.direction === "ltr",
                   "h-10": locale.direction === "rtl",
