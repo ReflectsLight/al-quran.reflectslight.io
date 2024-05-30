@@ -20,6 +20,9 @@ body .root .content.theme {
   footer {
     @media(max-width: $breakpoint-sm) {
       border-top: 1px solid #f2f2f2;
+      .right-arrow {
+        display: none;
+      }
       a {
         width: 100%;
         justify-content: center;
@@ -27,7 +30,7 @@ body .root .content.theme {
     }
 
     @media(hover: none) {
-      .right-arrow, input[data-testid="SurahIndex/Filter"] {
+      input[data-testid="SurahIndex/Filter"] {
         display: none;
       }
     }
