@@ -4,6 +4,12 @@
 
 body .root .content.theme {
   ul.body.index {
+    @media (max-width: $breakpoint-sm) {
+      li, li a {
+        width: 100%;
+      }
+    }
+
     li.surah a {
       &:visited, &:active, &:link {
         text-decoration: none;
