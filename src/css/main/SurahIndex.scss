@@ -20,6 +20,12 @@ body .root .content.theme {
           display: none;
         }
       }
+
+      @media (hover: hover) {
+        &:hover {
+          background: rgba(220, 220, 220, 0.25);
+        }
+      }
     }
   }
 

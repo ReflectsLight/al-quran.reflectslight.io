@@ -9,11 +9,6 @@
 
     @media (hover: hover) {
       &:hover {
-        background: $primary-color;
-        color: $accent-color;
-        span:first-child {
-          color: $accent-color;
-        }
       }
     }
   }

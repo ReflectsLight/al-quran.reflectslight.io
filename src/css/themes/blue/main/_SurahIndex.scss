@@ -8,12 +8,6 @@
         color: $primary-color;
       }
 
-      @media (hover: hover) {
-        &:hover {
-          background: $accent-color;
-        }
-      }
-
       span.id {
         color: $secondary-color;
       }

@@ -1,6 +1,5 @@
 .root .content.theme.green.rtl {
   @import "green/base/colors";
-
   direction: rtl;
 }
 
@@ -17,6 +16,22 @@
 
   .color-accent {
     color: $accent-color;
+  }
+
+  .color-white {
+    color: #FFF;
+  }
+
+  .background-primary {
+    background: $primary-color;
+  }
+
+  .background-secondary {
+    background: $secondary-color;
+  }
+
+  .background-accent {
+    background: $accent-color;
   }
 }
 

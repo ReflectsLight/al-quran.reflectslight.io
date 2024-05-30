@@ -5,6 +5,10 @@
 .root .content.theme.blue {
   @import "blue/base/colors";
 
+  .color-white {
+    color: $white;
+  }
+
   .color-primary {
     color: $primary-color;
   }
