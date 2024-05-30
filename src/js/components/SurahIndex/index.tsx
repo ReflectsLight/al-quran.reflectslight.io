@@ -42,10 +42,13 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         {index.map((surah, key) => (
           <li className="surah" key={key}>
             <a
-              className={classNames("flex items-center color-primary no-underline rounded", {
-                "h-14": locale.direction === "ltr",
-                "h-10": locale.direction === "rtl",
-              })}
+              className={classNames(
+                "flex items-center color-primary no-underline rounded",
+                {
+                  "h-14": locale.direction === "ltr",
+                  "h-10": locale.direction === "rtl",
+                },
+              )}
               href={`/${locale.name}/${surah.roman.slug}/`}
             >
               <span className="color-secondary font-extrabold w-10 text-center">
