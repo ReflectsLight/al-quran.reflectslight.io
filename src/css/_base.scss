@@ -77,6 +77,10 @@ body .root .content.theme.rtl {
   display: none !important;
 }
 
+.outline-0 {
+  outline: 0 !important;
+}
+
 @import "vendor/tail";
 @import "base/breakpoints";
 @import "base/icon";

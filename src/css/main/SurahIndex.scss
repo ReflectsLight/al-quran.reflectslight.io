@@ -5,15 +5,11 @@
 body .root .content.theme {
   ul.body.index {
     li.surah a {
-      border-radius: 10px;
-      width: 98%;
-
       &:visited, &:active, &:link {
         text-decoration: none;
       }
 
       @media (max-width: $breakpoint-sm) {
-        height: 45px;
         span.transliterated, span.ayat {
           display: none;
         }
@@ -22,19 +18,14 @@ body .root .content.theme {
   }
 
   footer {
-    input {
-      border-radius: 5px;
-    }
-    .surah-index-filter {
-      outline: 0;
-    }
-
     @media(max-width: $breakpoint-sm) {
+      border-top: 1px solid #f2f2f2;
       a {
         width: 100%;
         justify-content: center;
       }
     }
+
     @media(hover: none) {
       .right-arrow, .surah-index-filter {
         display: none;
@@ -60,11 +51,6 @@ body .root .content.theme.rtl {
   ul.body.index {
     li.surah {
       span.transliterated { display: none; }
-    }
-  }
-  footer {
-    a {
-      flex-direction: row-reverse;
     }
   }
 }
