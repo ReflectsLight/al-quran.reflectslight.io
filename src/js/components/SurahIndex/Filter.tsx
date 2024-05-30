@@ -27,7 +27,8 @@ export function Filter({ locale, t, setIndex, surahs }: Props) {
 
   return (
     <input
-      className="p-3 h-2 text-base color-primary rounded outline-0 surah-index-filter"
+      data-testid="SurahIndex/Filter"
+      className="p-3 h-2 text-base color-primary rounded outline-0"
       type="text"
       placeholder={t(locale, "filter")}
       onChange={onInput}

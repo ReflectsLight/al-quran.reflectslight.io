@@ -27,7 +27,7 @@ body .root .content.theme {
     }
 
     @media(hover: none) {
-      .right-arrow, .surah-index-filter {
+      .right-arrow, input[data-testid="SurahIndex/Filter"] {
         display: none;
       }
     }
