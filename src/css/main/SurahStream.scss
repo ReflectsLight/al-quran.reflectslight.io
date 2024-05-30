@@ -37,10 +37,6 @@ body .root .content.theme {
  * LTR languages
  */
 body .root .content.theme.en {
-  ul.body.stream {
-    .sound-off.icon, .sound-on.icon {
-    }
-  }
 }
 
 /**
@@ -48,30 +44,11 @@ body .root .content.theme.en {
  */
 body .root .content.theme.rtl {
   font-size: larger;
-
-  header {
-    .surah-name {
-      flex-direction: row-reverse;
-      .transliterated-name {
-        display: none;
-      }
-    }
-  }
-
   ul.body.stream {
     li.ayah {
       .sound-off.icon, .sound-on.icon {
         transform: rotate(180deg);
       }
-    }
-  }
-
-  footer {
-    .timer {
-      justify-content: flex-start;
-    }
-    .sound-box {
-      justify-content: flex-start;
     }
   }
 }

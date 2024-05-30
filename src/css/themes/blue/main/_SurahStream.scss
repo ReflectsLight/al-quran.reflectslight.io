@@ -2,12 +2,6 @@
   @import "themes/blue/base/colors";
   @import "base/breakpoints";
 
-  header {
-    div {
-      .localized-name, .transliterated-name { color: $secondary-color; }
-    }
-  }
-
   ul.body.stream {
     li.ayah {
       span span {
@@ -20,18 +14,6 @@
   footer {
     .timer {
       color: $primary-color;
-    }
-  }
-}
-
-.root .content.theme.blue.rtl {
-  @import "themes/blue/base/colors";
-
-  header {
-    div {
-      .localized-name {
-        color: $primary-color;
-      }
     }
   }
 }
