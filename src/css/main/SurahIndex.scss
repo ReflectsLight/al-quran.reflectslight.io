@@ -64,6 +64,12 @@ body .root .content.theme.rtl {
   font-size: larger;
 
   ul.body.index {
+    li a {
+      span:first-child {
+        border: 1px solid $black;
+      }
+    }
+
     li.surah {
       span.transliterated { display: none; }
     }

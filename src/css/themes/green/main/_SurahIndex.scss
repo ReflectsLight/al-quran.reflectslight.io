@@ -6,11 +6,6 @@
     &:active, &:link, &:visited {
       color: $primary-color;
     }
-
-    @media (hover: hover) {
-      &:hover {
-      }
-    }
   }
 
   footer {
