@@ -19,7 +19,7 @@ export function LanguageSelect({ locale }: Props) {
             className={classNames(
               "flex h-6 w-20 justify-center no-underline mb-1 rounded",
               l.direction,
-              l.name === locale.name ? "active" : undefined
+              l.name === locale.name ? "active" : undefined,
             )}
             value={l.name}
             href={l.name === locale.name ? undefined : href}
