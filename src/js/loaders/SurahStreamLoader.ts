@@ -20,7 +20,7 @@ import postman, { item } from "postman";
       className: "json surah",
     }),
     item.json(`/json/durations/alafasy/${surahId}.json`, {
-      className: 'json durations'
+      className: "json durations",
     }),
     item.progress((percent: number) => {
       progressBar.value = percent;
