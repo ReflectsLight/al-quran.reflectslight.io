@@ -27,10 +27,10 @@ export function AudioControl({
   const pause = (audio: HTMLAudioElement) => audio.pause();
 
   useEffect(() => {
-    if (hidden || !ayah) {
+    if (hidden || !ayah || !audio) {
       return;
     }
-    if (audio) {
+    if (enabled) {
       audio.src = [
         "https://al-quran.reflectslight.io",
         "audio",
@@ -38,8 +38,6 @@ export function AudioControl({
         surah.id,
         `${ayah.id}.mp3`,
       ].join("/");
-    }
-    if (enabled) {
       play(audio);
     }
   }, [hidden, enabled, ayah?.id]);
