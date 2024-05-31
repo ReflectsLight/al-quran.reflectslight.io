@@ -1,7 +1,7 @@
 .content.theme {
   @import "themes/blue/base/colors";
   .blue {
-    background: $primary-color;
+    background: $secondary-color;
   }
 }
 
@@ -10,10 +10,10 @@
 
   .react-select.theme-select {
     .active .circle {
-      background: $primary-color;
+      background: $secondary-color;
     }
     ul li.blue .circle {
-      background: $primary-color;
+      background: $secondary-color;
     }
   }
 
