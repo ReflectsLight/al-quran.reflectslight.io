@@ -5,19 +5,19 @@ import { T } from "~/lib/t";
 import { SurahStream } from "~/components/SurahStream";
 
 (function () {
-  const root: HTMLElement = document.querySelector(".root")!;
+  const doc = document.documentElement;
+  const root = doc.querySelector(".root")!;
   const t = T(require("@json/t.json"));
   const locale = (() => {
-    const l = document.querySelector("html")!.getAttribute("lang")!;
-    return Quran.locales.find(ll => ll.name === l);
+    return Quran.locales.find(ll => ll.name === doc.lang);
   })()!;
 
   /*
    * Configure an instance of Surah
    */
-  const node1: HTMLScriptElement = document.querySelector(".json.surahinfo")!;
-  const node2: HTMLScriptElement = document.querySelector(".json.surah")!;
-  const node3: HTMLScriptElement = document.querySelector(".json.durations")!;
+  const node1: HTMLScriptElement = doc.querySelector(".json.surahinfo")!;
+  const node2: HTMLScriptElement = doc.querySelector(".json.surah")!;
+  const node3: HTMLScriptElement = doc.querySelector(".json.durations")!;
   const blob1: TSurah = JSON.parse(node1.innerText)!;
   const blob2: Array<[number, string]> = JSON.parse(node2.innerText)!;
   const blob3: Array<[number, number]> = JSON.parse(node3.innerText)!;

@@ -5,12 +5,12 @@ import { T } from "~/lib/t";
 import { SurahIndex } from "~/components/SurahIndex";
 
 (function () {
-  const root: HTMLElement = document.querySelector(".root")!;
+  const doc = document.documentElement;
+  const root = doc.querySelector(".root")!;
   const t = T(require("@json/t.json"));
   const byLocale = require("@json/surahs");
   const locale = (() => {
-    const l = document.querySelector("html")!.getAttribute("lang")!;
-    return Quran.locales.find(ll => ll.name === l);
+    return Quran.locales.find(ll => ll.name === doc.lang);
   })()!;
   const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
 
