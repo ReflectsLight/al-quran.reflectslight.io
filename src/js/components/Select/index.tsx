@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Option } from "./Option";
+import { ThemeSelect } from "./ThemeSelect";
+import { LanguageSelect } from "./LanguageSelect";
 
 type Props = {
   value: string;
@@ -45,4 +47,4 @@ function Select({ value, children: options, className }: Props) {
 
 Select.Option = Option;
 
-export { Select };
+export { Select, LanguageSelect, ThemeSelect };
