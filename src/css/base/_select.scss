@@ -13,4 +13,10 @@
       border-radius: 12px;
     }
   }
+
+  .react-select.language-select {
+    li a {
+      border: 1px solid $black;
+    }
+  }
 }
