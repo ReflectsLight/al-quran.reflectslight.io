@@ -22,7 +22,6 @@
   <body>
     <%= erb("_postman.html.erb", {locale:}) %>
     <div class="root" data-surah-id="<%= surah.id %>"></div>
-    <%= inline_json("/json/durations/alafasy/#{surah.id}.json", class_name: 'durations') %>
     <script src="/js/loaders/surah-stream-loader.js"></script>
   </body>
 </html>
