@@ -42,14 +42,20 @@ kept in this repository.
 
 ## Configuration
 
-If you plan to host the website on your own domain
-you will probably want to update
+If you plan to host the website on
+your own domain you might want to update
 [nanoc.yaml](nanoc.yaml)
-first. Largely for SEO reasons certain links will
-reference https://al-quran.reflectslight.io.
-Those links can be updated to your own domain by
-changing the `server.base_url` field in
-[nanoc.yaml](nanoc.yaml).
+first. In certain places
+links will reference
+https://al-quran.reflectslight.io
+instead of using a relative path.
+For example
+[/src/sitemap.xml.erb](/src/sitemap.html.erb)
+is one such place. Those links can be updated
+to your own domain by changing the `server.base_url`
+field in
+[nanoc.yaml](nanoc.yaml)
+before running `rake nanoc:build`.
 
 In a similar way, `audio.base_url` controls what
 web server serves audio content. The default
