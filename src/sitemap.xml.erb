@@ -7,9 +7,9 @@
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
-  <% Ryo.each(name_by_id) do |_, transliterated_name| %>
+  <% Ryo.each(name_by_id) do |_id, name| %>
   <url>
-    <loc><%= base_url %>/<%= locale %>/<%= transliterated_name %>/</loc>
+    <loc><%= base_url %>/<%= locale %>/<%= name %>/</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
