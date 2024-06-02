@@ -46,10 +46,17 @@ If you plan to host the website on your own domain
 you will probably want to update
 [nanoc.yaml](nanoc.yaml)
 first. Largely for SEO reasons certain links will
-reference the hostname al-quran.reflectslight.io.
+reference https://al-quran.reflectslight.io.
 Those links can be updated to your own domain by
-changing the `server.hostname` field in
+changing the `server.base_url` field in
 [nanoc.yaml](nanoc.yaml).
+
+In a similar way, `audio.base_url` controls what
+web server serves audio content. The default
+(https://al-quran.reflectslight.io/audio/alafasy)
+works out of the box. The URL for an audio file is
+resolved by joining `audio.base_url` and
+`/<surahid>/<ayahid>.mp3`.
 
 ## Thanks
 

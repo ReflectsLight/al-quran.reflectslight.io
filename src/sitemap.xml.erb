@@ -3,19 +3,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <% locales.each do |locale| %>
   <url>
-    <loc>https://<%= hostname %>/<%= locale %>/</loc>
+    <loc><%= base_url %>/<%= locale %>/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <% Ryo.each(name_by_id) do |_, transliterated_name| %>
   <url>
-    <loc>https://<%= hostname %>/<%= locale %>/<%= transliterated_name %>/</loc>
+    <loc><%= base_url %>/<%= locale %>/<%= transliterated_name %>/</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <% end %>
   <url>
-    <loc>https://<%= hostname %>/<%= locale %>/random/</loc>
+    <loc><%= base_url %>/<%= locale %>/random/</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>

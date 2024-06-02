@@ -23,24 +23,29 @@ export function AudioControl({
 }: Props) {
   const [enabled, setEnabled] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
+  const [audioBaseUrl, setAudioBaseUrl] = useState<Maybe<string>>(null);
   const play = (audio: HTMLAudioElement) => audio.play().catch(() => null);
   const pause = (audio: HTMLAudioElement) => audio.pause();
 
   useEffect(() => {
-    if (hidden || !ayah || !audio) {
+    if (hidden || !ayah || !audio || !audioBaseUrl) {
       return;
     }
     if (enabled) {
-      audio.src = [
-        "https://al-quran.reflectslight.io",
-        "audio",
-        "alafasy",
-        surah.id,
-        `${ayah.id}.mp3`,
-      ].join("/");
+      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3`].join("/");
       play(audio);
     }
-  }, [hidden, enabled, ayah?.id]);
+  }, [hidden, enabled, ayah?.id, audioBaseUrl]);
+
+  useEffect(() => {
+    const el: HTMLDivElement | null = document.querySelector("[data-audio-base-url]");
+    const url = el?.dataset?.audioBaseUrl;
+    if (url?.length) {
+      setAudioBaseUrl(url);
+    } else {
+      console.warn("audio.base_url is not set");
+    }
+  }, []);
 
   useEffect(() => {
     if (!audio || !ayah) {

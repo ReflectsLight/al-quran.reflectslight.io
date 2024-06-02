@@ -20,8 +20,11 @@ data_sources:
     content_dir: src/
     layouts_dir: src/layouts
 
+audio:
+  base_url: https://al-quran.reflectslight.io/audio/alafasy
+
 server:
-  hostname: al-quran.reflectslight.io
+  base_url: https://al-quran.reflectslight.io
   unix:
     path: /tmp/al-quran.reflectslight.io
   tcp:

@@ -7,12 +7,12 @@
     <%= opengraph(context) %>
     <link
       rel="canonical"
-      href="https://<%= hostname %>/<%= locale %>/random/"
+      href="<%= base_url %>/<%= locale %>/random/"
     />
     <% locales.each do |locale| %>
     <link
       rel="alternate"
-      href="https://<%= hostname %>/<%= locale %>/random/"
+      href="<%= base_url %>/<%= locale %>/random/"
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>

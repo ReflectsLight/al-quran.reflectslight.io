@@ -10,18 +10,21 @@
     <%= opengraph(context) %>
     <link
       rel="canonical"
-      href="https://<%= hostname %>/<%= locale %>/<%= surah.slug %>/"
+      href="<%= base_url %>/<%= locale %>/<%= surah.slug %>/"
     />
     <% locales.each do |locale| %>
     <link rel="alternate"
-          href="https://<%= hostname %>/<%= locale %>/<%= surah.slug %>/"
+          href="<%= base_url %>/<%= locale %>/<%= surah.slug %>/"
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
     <%= erb("_postman.html.erb", {locale:}) %>
-    <div class="root" data-surah-id="<%= surah.id %>"></div>
+    <div class="root"
+         data-surah-id="<%= surah.id %>"
+         data-audio-base-url="<%= audio_base_url %>">
+    </div>
     <script src="/js/loaders/surah-stream-loader.js"></script>
   </body>
 </html>
