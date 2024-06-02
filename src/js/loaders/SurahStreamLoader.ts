@@ -1,12 +1,15 @@
 import postman, { item } from "postman";
 
 (function () {
-  const container: HTMLElement = document.querySelector(".postman.loader")!;
-  const progressBar: HTMLProgressElement = container.querySelector("progress")!;
-  const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
-  const stylesheet: HTMLStyleElement = document.querySelector(".css.postman")!;
-  const locale = document.querySelector("html")!.getAttribute("lang")!;
+  const doc = document.documentElement;
+  const locale = doc.lang;
   const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+
+  /* Postman */
+  const container = document.querySelector(".postman.loader")!;
+  const progressBar = container.querySelector("progress")!;
+  const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
+  const stylesheet = document.querySelector(".css.postman")!;
 
   postman(
     item.script("/js/main/surah-stream.js"),
