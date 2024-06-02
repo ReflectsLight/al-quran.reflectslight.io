@@ -50,7 +50,7 @@ links will reference
 https://al-quran.reflectslight.io
 instead of using a relative path.
 For example
-[/src/sitemap.xml.erb](/src/sitemap.html.erb)
+[/src/sitemap.xml.erb](/src/sitemap.xml.erb)
 is one such place. Those links can be updated
 to your own domain by changing the `server.base_url`
 field in
