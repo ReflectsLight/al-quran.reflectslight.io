@@ -70,6 +70,15 @@ resolved by joining `audio.base_url` and
 makes it relatively easy to change the recitation
 author at build time, before deploying the website.
 
+The https://al-quran.reflectslight.io website provides
+the following recitations:
+
+- Mishari bin Rashed Alafasy (default) <br>
+  https://al-quran.reflectslight.io/audio/alafasy
+
+- Ahmad bin Ali Al-Ajmi <br>
+  https://al-quran.reflectslight.io/audio/alajmi
+
 ## Thanks
 
 Alhamdulillah
