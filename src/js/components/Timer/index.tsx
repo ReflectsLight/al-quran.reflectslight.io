@@ -60,7 +60,7 @@ export function Timer({
     } else if (ms <= 0) {
       onComplete(surah, ayah);
     } else {
-      const tid = setTimeout(() => setMs(ms - 1000), 1000);
+      const tid = setTimeout(() => setMs(ms - 100), 100);
       return () => clearTimeout(tid);
     }
   }, [isStalled, isPaused, ms]);
