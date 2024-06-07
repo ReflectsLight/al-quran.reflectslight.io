@@ -91,6 +91,7 @@ export function SurahStream({ surah, locale, t }: Props) {
             surah={surah}
             ayah={ayah}
             isPaused={isPaused}
+            audio={audio}
             audioStatus={audioStatus}
             onComplete={(surah, ayah) => {
               const layah = surah.ayat[surah.ayat.length - 1];

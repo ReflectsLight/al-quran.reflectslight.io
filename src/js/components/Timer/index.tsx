@@ -9,17 +9,38 @@ type Props = {
   surah: Surah;
   ayah: Maybe<Ayah>;
   isPaused: boolean;
+  audio: HTMLAudioElement;
   audioStatus: Maybe<string>;
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
-export function Timer({ locale, surah, ayah, isPaused, audioStatus, onComplete }: Props) {
+export function Timer({
+  locale,
+  surah,
+  ayah,
+  isPaused,
+  audio,
+  audioStatus,
+  onComplete,
+}: Props) {
   const [ms, setMs] = useState<number | null>(null);
   const isStalled = audioStatus === "wait";
 
+  const getMs = () => {
+    const fallback =
+      audioStatus === null || audioStatus === "pause" || isNaN(audio.duration);
+    if (fallback) {
+      console.info("timer: length determined by ayah.ms");
+      return ayah?.ms || 0;
+    } else {
+      console.info("timer: length determined by HTMLAudioElement");
+      return audio.duration * 1000;
+    }
+  };
+
   useEffect(() => {
     if (ayah) {
-      setMs(ayah.ms);
+      setMs(getMs());
     }
   }, [ayah?.id]);
 
@@ -27,7 +48,7 @@ export function Timer({ locale, surah, ayah, isPaused, audioStatus, onComplete }
     if (!ayah) {
       return;
     } else if (audioStatus === "play") {
-      setMs(ayah.ms);
+      setMs(getMs());
     }
   }, [audioStatus]);
 

@@ -22,7 +22,7 @@ import postman, { item } from "postman";
     item.json(`/json/${locale}/${surahId}/surah.json`, {
       className: "json surah",
     }),
-    item.json(`/json/durations/alafasy/${surahId}.json`, {
+    item.json(`/json/durations/${surahId}.json`, {
       className: "json durations",
     }),
     item.progress((percent: number) => {

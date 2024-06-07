@@ -55,7 +55,7 @@ end
 
 ##
 # /json/durations/*/*.json
-passthrough "/json/durations/*/*.json"
+passthrough "/json/durations/*.json"
 
 ##
 # require rules
