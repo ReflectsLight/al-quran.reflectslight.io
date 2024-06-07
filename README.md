@@ -61,8 +61,8 @@ before running `rake nanoc:build`.
 
 **audio.base_url**
 
-In a similar way, `audio.base_url` controls what
-web server serves audio content. The default
+`audio.base_url` controls what web server serves
+audio content. The default
 (https://al-quran.reflectslight.io/audio/alafasy)
 works out of the box. The URL for an audio file is
 resolved by joining `audio.base_url` and
