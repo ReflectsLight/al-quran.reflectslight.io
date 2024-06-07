@@ -42,6 +42,8 @@ kept in this repository.
 
 ## Configuration
 
+**server.base_url**
+
 If you plan to host the website on
 your own domain you might want to update
 [nanoc.yaml](nanoc.yaml)
@@ -56,6 +58,8 @@ to your own domain by changing the `server.base_url`
 field in
 [nanoc.yaml](nanoc.yaml)
 before running `rake nanoc:build`.
+
+**audio.base_url**
 
 In a similar way, `audio.base_url` controls what
 web server serves audio content. The default
