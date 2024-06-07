@@ -81,7 +81,7 @@ the following recitations:
 
 - Sahl Yassin <br>
   https://al-quran.reflectslight.io/audio/yassin
-  
+
 ## Thanks
 
 Alhamdulillah
@@ -94,6 +94,11 @@ Alhamdulillah
 * Thanks to the translators:
     - English (The Clear Quran) by Dr. Mustafa Khattab
     - Farsi by Hussain Ansarian
+
+* Thanks to the reciters:
+    - Mishari bin Rashed Alafasy
+    - Ahmad bin Ali Al-Ajmi
+    - Sahl Yassin
 
 ## License
 
