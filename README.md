@@ -79,9 +79,6 @@ the following recitations:
 - Ahmad bin Ali Al-Ajmi <br>
   https://al-quran.reflectslight.io/audio/alajmi
 
-- Abdullah Awad Al Juhany <br>
-  https://al-quran.reflectslight.io/audio/aljuhany
-
 ## Thanks
 
 Alhamdulillah
