@@ -62,7 +62,9 @@ web server serves audio content. The default
 (https://al-quran.reflectslight.io/audio/alafasy)
 works out of the box. The URL for an audio file is
 resolved by joining `audio.base_url` and
-`/<surahid>/<ayahid>.mp3`.
+`/<surahid>/<ayahid>.mp3`. The `audio.base_url` option
+makes it relatively easy to change the recitation
+author at build time, before deploying the website.
 
 ## Thanks
 
