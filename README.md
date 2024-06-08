@@ -34,8 +34,11 @@ kept in this repository.
     # List all tasks
     rake -T
 
-    # Build website
+    # Build website (dev build)
     rake nanoc:build
+
+    # Build website (production build)
+    buildenv=production rake nanoc:build
 
     # Start web server
     rake server
