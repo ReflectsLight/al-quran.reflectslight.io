@@ -48,7 +48,7 @@ kept in this repository.
 **server.base_url**
 
 If you plan to host the website on
-your own domain you might want to update
+your own domain you should update
 [nanoc.yaml](nanoc.yaml)
 first. In certain places
 links will reference
