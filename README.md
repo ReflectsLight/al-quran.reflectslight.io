@@ -38,7 +38,7 @@ kept in this repository.
     rake nanoc:build
 
     # Build website (production build)
-    buildenv=production rake nanoc:build
+    rake nanoc:build[production]
 
     # Start web server
     rake server
@@ -70,8 +70,8 @@ audio content. The default
 works out of the box. The URL for an audio file is
 resolved by joining `audio.base_url` and
 `/<surahid>/<ayahid>.mp3`. The `audio.base_url` option
-makes it relatively easy to change the recitation
-author at build time, before deploying the website.
+makes it relatively easy to change the reciter
+at build time, before deploying the website.
 
 The https://al-quran.reflectslight.io web server
 provides the following recitations:
