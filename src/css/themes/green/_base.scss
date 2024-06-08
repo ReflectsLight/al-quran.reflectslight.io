@@ -3,7 +3,7 @@
 
 .root .content.theme.green {
   @import "base/colors";
-  scrollbar-color: $primary-color $accent-color;
+  scrollbar-color: $primary-color #FFF;
 
   header {
     h1 , h1 a { color: $primary-color; }
