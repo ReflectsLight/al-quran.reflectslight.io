@@ -8,7 +8,7 @@ import type { TLocale } from "Quran";
   const locale: TLocale = {
     name: doc.lang,
     direction: doc.dir as "rtl" | "ltr",
-    displayName: ""
+    displayName: "",
   };
 
   /* Postman */
@@ -22,8 +22,8 @@ import type { TLocale } from "Quran";
     item.css("/css/main/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/json/${locale.name}/${surahId}/info.json`, { className: "json surahinfo" }),
-    item.json(`/json/${locale.name}/${surahId}/surah.json`, { className: "json surah" }),
+    item.json(`/json/${doc.lang}/${surahId}/info.json`, { className: "json surahinfo" }),
+    item.json(`/json/${doc.lang}/${surahId}/surah.json`, { className: "json surah" }),
     item.json(`/json/durations/${surahId}.json`, { className: "json durations" }),
     item.progress((percent: number) => {
       progressBar.value = percent;

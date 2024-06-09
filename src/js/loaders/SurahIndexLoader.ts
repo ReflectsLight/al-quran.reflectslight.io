@@ -7,7 +7,7 @@ import type { TLocale } from "Quran";
   const locale: TLocale = {
     name: doc.lang,
     direction: doc.dir as "rtl" | "ltr",
-    displayName: ""
+    displayName: "",
   };
 
   /* Postman */
