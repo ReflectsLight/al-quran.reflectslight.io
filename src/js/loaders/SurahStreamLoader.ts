@@ -14,7 +14,7 @@ import type { TLocale } from "Quran";
 
   /* Postman */
   const loader = doc.querySelector(".postman.loader")!;
-  const stylesheet = doc.querySelector(".css.postman")!;
+  const style = doc.querySelector(".css.postman")!;
   const progressBar = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
 
@@ -23,15 +23,11 @@ import type { TLocale } from "Quran";
     item.css(`/css/main/surah-stream.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/json/${doc.lang}/${surahId}/info.json?v=${rev}`, {
-      className: "json surahinfo",
-    }),
-    item.json(`/json/${doc.lang}/${surahId}/surah.json?v=${rev}`, {
-      className: "json surah",
-    }),
-    item.json(`/json/durations/${surahId}.json?v=${rev}`, {
-      className: "json durations",
-    }),
+    /* eslint-disable */
+    item.json(`/json/${doc.lang}/${surahId}/info.json?v=${rev}`, { className: "json surahinfo" }),
+    item.json(`/json/${doc.lang}/${surahId}/surah.json?v=${rev}`, { className: "json surah" }),
+    item.json(`/json/durations/${surahId}.json?v=${rev}`, { className: "json durations" }),
+    /* eslint-enable */
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(locale, Number(percent.toFixed(0)));
@@ -39,8 +35,7 @@ import type { TLocale } from "Quran";
   )
     .fetch()
     .then(pkg => {
-      stylesheet.remove();
-      loader.remove();
+      [loader, style].forEach(el => el.remove());
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
       pkg.json.forEach(o => document.body.appendChild(o));

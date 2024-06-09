@@ -1,5 +1,6 @@
 module.exports = {
   extends: ["standard-with-typescript", "standard-jsx", "prettier"],
+  "plugins": ["prettier"],
   parserOptions: {
     project: "./tsconfig.json",
   },
@@ -24,5 +25,16 @@ module.exports = {
     "quotes": 0,
     "object-curly-spacing": 2,
     "n/no-callback-literal": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": false,
+        "printWidth": 90,
+        "arrowParens": "avoid"
+      }
+    ]
   },
 };
