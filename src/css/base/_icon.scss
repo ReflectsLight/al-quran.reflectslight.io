@@ -88,9 +88,18 @@
   }
 
   footer {
+    .timer {
+      font-size: larger;
+    }
+    .sound-on.icon,
+    .sound-off.icon {
+      position: relative;
+      bottom: 5px;
+    }
     .sound-on.icon,
     .sound-off.icon,
     .play.icon {
+      display: inline-block;
       transform: rotate(180deg);
     }
   }
