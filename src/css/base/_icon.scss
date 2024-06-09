@@ -1,28 +1,3 @@
-.icon {
-  cursor: pointer;
-}
-
-.play.icon, .pause.icon {
-  width: 20px;
-  height: 20px;
-}
-
-.pause.icon {
-  g rect {
-    width: 15px;
-    height: 40px;
-    fill: #FFF;
-  }
-}
-
-.refresh.icon {
-  width: 16px;
-}
-
-.right-arrow.icon {
-  width: 16px;
-}
-
 .stalled.icon {
   display: inline-block;
   position: relative;
@@ -64,16 +39,40 @@
   }
 }
 
-.content.theme ul.stream span {
-  .sound-on.icon, .sound-off.icon {
-    position: relative;
-    top: 2px;
-    width: 24px;
-    height: 24px;
-  }
-}
-
 .root .content.theme {
+  .icon {
+    cursor: pointer;
+  }
+
+  .play.icon,
+  .pause.icon {
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  .refresh.icon,
+  .right-arrow.icon {
+    height: 16px !important;
+    width: 16px !important;
+  }
+
+  .pause.icon {
+    g rect {
+      width: 15px;
+      height: 40px;
+      fill: #FFF;
+    }
+  }
+
+  ul.stream span {
+    .sound-on.icon, .sound-off.icon {
+      position: relative;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   footer {
     .sound-on.icon, .sound-off.icon {
       width: 28px;
