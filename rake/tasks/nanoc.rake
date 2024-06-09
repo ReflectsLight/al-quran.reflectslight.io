@@ -9,7 +9,7 @@ namespace :nanoc do
     Dir.chdir(root) do
       sh "rm -rf node_modules/.cache/"
       sh "rm -rf tmp/"
-      sh "rm -rf build"
+      sh "rm -rf build/al-quran/* build/*"
     end
   end
 
