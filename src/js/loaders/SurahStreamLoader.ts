@@ -13,10 +13,10 @@ import type { TLocale } from "Quran";
   };
 
   /* Postman */
-  const container = document.querySelector(".postman.loader")!;
-  const progressBar = container.querySelector("progress")!;
-  const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
-  const stylesheet = document.querySelector(".css.postman")!;
+  const loader = doc.querySelector(".postman.loader")!;
+  const stylesheet = doc.querySelector(".css.postman")!;
+  const progressBar = loader.querySelector("progress")!;
+  const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
 
   postman(
     item.script(`/js/main/surah-stream.js?v=${rev}`),
@@ -34,7 +34,7 @@ import type { TLocale } from "Quran";
     .fetch()
     .then(pkg => {
       stylesheet.remove();
-      container.remove();
+      loader.remove();
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
       pkg.json.forEach(o => document.body.appendChild(o));

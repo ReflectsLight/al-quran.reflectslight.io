@@ -12,10 +12,10 @@ import type { TLocale } from "Quran";
   };
 
   /* Postman */
-  const container: HTMLElement = document.querySelector(".postman.loader")!;
-  const progressBar: HTMLProgressElement = container.querySelector("progress")!;
-  const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
-  const stylesheet: HTMLStyleElement = document.querySelector(".css.postman")!;
+  const loader: HTMLElement = doc.querySelector(".postman.loader")!;
+  const stylesheet: HTMLStyleElement = doc.querySelector(".css.postman")!;
+  const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
+  const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
 
   postman(
     item.script(`/js/main/surah-index.js?v=${rev}`),
@@ -30,7 +30,7 @@ import type { TLocale } from "Quran";
     .fetch()
     .then(pkg => {
       stylesheet.remove();
-      container.remove();
+      loader.remove();
       pkg.fonts.forEach(f => document.fonts.add(f));
       pkg.css.forEach(s => document.head.appendChild(s));
       pkg.scripts.forEach(s => document.body.removeChild(document.body.appendChild(s)));
