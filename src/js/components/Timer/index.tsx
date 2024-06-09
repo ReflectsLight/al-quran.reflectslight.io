@@ -45,18 +45,15 @@ export function Timer({
   }, [ayah?.id]);
 
   useEffect(() => {
-    if (!ayah) {
-      return;
-    } else if (audioStatus === "play") {
+    if (ayah && audioStatus === "play") {
       setMs(getMs());
     }
   }, [audioStatus]);
 
   useEffect(() => {
-    if (!ayah || typeof ms !== "number") {
+    const noop = !ayah || typeof ms !== "number" || isStalled || isPaused;
+    if (noop) {
       return;
-    } else if (isStalled || isPaused) {
-      /* no-op */
     } else if (ms <= 0) {
       onComplete(surah, ayah);
     } else {
