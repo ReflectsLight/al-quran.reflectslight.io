@@ -23,7 +23,7 @@ import type { TLocale } from "Quran";
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {
       progressBar.value = percent;
-      progressNumber.innerText = `${formatNumber(locale, Number(percent.toFixed(0)))}%`;
+      progressNumber.innerText = formatNumber(locale, Number(percent.toFixed(0)));
     }),
   )
     .fetch()

@@ -27,7 +27,7 @@ import type { TLocale } from "Quran";
     item.json(`/json/durations/${surahId}.json`, { className: "json durations" }),
     item.progress((percent: number) => {
       progressBar.value = percent;
-      progressNumber.innerText = `${formatNumber(locale, Number(percent.toFixed(0)))}%`;
+      progressNumber.innerText = formatNumber(locale, Number(percent.toFixed(0)));
     }),
   )
     .fetch()
