@@ -26,6 +26,8 @@ end
 compile "/js/loaders/SurahIndexLoader.ts" do
   filter :webpack
   write "/js/loaders/surah-index-loader.js"
+  filter :gzip
+  write "/js/loaders/surah-index-loader.js.gz"
 end
 
 compile "/css/main/SurahIndex.scss" do

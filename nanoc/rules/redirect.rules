@@ -14,4 +14,6 @@ end
 compile "/js/main/redirect.ts" do
   filter(:webpack, depend_on: ["/js/lib/"])
   write("/js/main/redirect.js")
+  filter(:gzip)
+  write("/js/main/redirect.js.gz")
 end

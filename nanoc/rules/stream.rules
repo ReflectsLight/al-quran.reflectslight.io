@@ -52,6 +52,8 @@ end
 compile "/js/loaders/SurahStreamLoader.ts" do
   filter :webpack
   write "/js/loaders/surah-stream-loader.js"
+  filter :gzip
+  write "/js/loaders/surah-stream-loader.js.gz"
 end
 
 compile "/css/main/SurahStream.scss" do
