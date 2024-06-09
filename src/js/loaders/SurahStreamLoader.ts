@@ -1,9 +1,15 @@
 import postman, { item } from "postman";
+import { formatNumber } from "~/lib/t";
+import type { TLocale } from "Quran";
 
 (function () {
   const doc = document.documentElement;
-  const locale = doc.lang;
   const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+  const locale: TLocale = {
+    name: doc.lang,
+    direction: doc.dir as "rtl" | "ltr",
+    displayName: ""
+  };
 
   /* Postman */
   const container = document.querySelector(".postman.loader")!;
@@ -16,12 +22,12 @@ import postman, { item } from "postman";
     item.css("/css/main/surah-stream.css"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/json/${locale}/${surahId}/info.json`, { className: "json surahinfo" }),
-    item.json(`/json/${locale}/${surahId}/surah.json`, { className: "json surah" }),
+    item.json(`/json/${locale.name}/${surahId}/info.json`, { className: "json surahinfo" }),
+    item.json(`/json/${locale.name}/${surahId}/surah.json`, { className: "json surah" }),
     item.json(`/json/durations/${surahId}.json`, { className: "json durations" }),
     item.progress((percent: number) => {
       progressBar.value = percent;
-      progressNumber.innerText = `${percent.toFixed(0)}%`;
+      progressNumber.innerText = `${formatNumber(locale, Number(percent.toFixed(0)))}%`;
     }),
   )
     .fetch()

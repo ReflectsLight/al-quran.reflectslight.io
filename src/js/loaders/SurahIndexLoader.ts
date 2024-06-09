@@ -1,6 +1,16 @@
 import postman, { item } from "postman";
+import { formatNumber } from "~/lib/t";
+import type { TLocale } from "Quran";
 
 (function () {
+  const doc = document.documentElement;
+  const locale: TLocale = {
+    name: doc.lang,
+    direction: doc.dir as "rtl" | "ltr",
+    displayName: ""
+  };
+
+  /* Postman */
   const container: HTMLElement = document.querySelector(".postman.loader")!;
   const progressBar: HTMLProgressElement = container.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = container.querySelector(".percentage")!;
@@ -13,7 +23,7 @@ import postman, { item } from "postman";
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {
       progressBar.value = percent;
-      progressNumber.innerText = `${percent.toFixed(0)}%`;
+      progressNumber.innerText = `${formatNumber(locale, Number(percent.toFixed(0)))}%`;
     }),
   )
     .fetch()

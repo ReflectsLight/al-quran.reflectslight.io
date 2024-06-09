@@ -20,7 +20,7 @@
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <%= erb("_postman.html.erb", {locale:}) %>
+    <%= erb("_postman.html.erb", {locale:, dir:}) %>
     <div class="root"
          data-surah-id="<%= surah.id %>"
          data-audio-base-url="<%= audio_base_url %>">
