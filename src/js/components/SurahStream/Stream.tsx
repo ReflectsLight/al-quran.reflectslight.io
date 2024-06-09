@@ -33,7 +33,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
           return (
             <li
               key={ayah.id}
-              className={classNames("ayah fade", { "mb-6": rtl, "mb-4": ltr })}
+              className={classNames("ayah fade", { "mb-8": rtl, "mb-4": ltr })}
             >
               <span className={classNames("flex h-8 items-center", { "mb-2": rtl })}>
                 <AudioControl
