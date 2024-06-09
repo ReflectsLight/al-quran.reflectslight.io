@@ -80,3 +80,18 @@
     }
   }
 }
+
+.root .content.theme.rtl {
+  .stalled.icon {
+    left: 0px;
+    right: 7px;
+  }
+
+  footer {
+    .sound-on.icon,
+    .sound-off.icon,
+    .play.icon {
+      transform: rotate(180deg);
+    }
+  }
+}
