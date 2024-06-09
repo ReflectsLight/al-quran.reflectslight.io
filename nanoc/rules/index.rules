@@ -34,4 +34,6 @@ compile "/css/main/SurahIndex.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
   write("/css/main/surah-index.css")
+  filter :gzip
+  write("/css/main/surah-index.css.gz")
 end

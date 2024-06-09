@@ -60,4 +60,6 @@ compile "/css/main/SurahStream.scss" do
   filter :sass, syntax: :scss, style: :compact
   filter :rainpress
   write("/css/main/surah-stream.css")
+  filter :gzip
+  write("/css/main/surah-stream.css.gz")
 end
