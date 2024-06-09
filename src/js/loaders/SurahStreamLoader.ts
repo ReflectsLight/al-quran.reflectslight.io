@@ -23,9 +23,9 @@ import type { TLocale } from "Quran";
     item.css(`/css/main/surah-stream.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
-    item.json(`/json/${doc.lang}/${surahId}/info.json`, { className: "json surahinfo" }),
-    item.json(`/json/${doc.lang}/${surahId}/surah.json`, { className: "json surah" }),
-    item.json(`/json/durations/${surahId}.json`, { className: "json durations" }),
+    item.json(`/json/${doc.lang}/${surahId}/info.json?v=${rev}`, { className: "json surahinfo" }),
+    item.json(`/json/${doc.lang}/${surahId}/surah.json?v=${rev}`, { className: "json surah" }),
+    item.json(`/json/durations/${surahId}.json?v=${rev}`, { className: "json durations" }),
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(locale, Number(percent.toFixed(0)));
