@@ -10,12 +10,7 @@ namespace :format do
   task :eslint do
     sh "npm run eslint"
   end
-
-  desc "Run prettier (TypeScript)"
-  task :prettier do
-    sh "npm run prettier"
-  end
 end
 
 desc "Run all formats"
-task format: ["format:rubocop", "format:eslint", "format:prettier"]
+task format: ["format:rubocop", "format:eslint"]
