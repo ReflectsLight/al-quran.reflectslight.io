@@ -4,6 +4,7 @@ import type { TLocale } from "Quran";
 
 (function () {
   const doc = document.documentElement;
+  const rev = doc.querySelector("meta[name='revision']")!.getAttribute("content")!;
   const locale: TLocale = {
     name: doc.lang,
     direction: doc.dir as "rtl" | "ltr",
@@ -17,8 +18,8 @@ import type { TLocale } from "Quran";
   const stylesheet: HTMLStyleElement = document.querySelector(".css.postman")!;
 
   postman(
-    item.script("/js/main/surah-index.js"),
-    item.css("/css/main/surah-index.css"),
+    item.script(`/js/main/surah-index.js?v=${rev}`),
+    item.css(`/css/main/surah-index.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {

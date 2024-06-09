@@ -4,6 +4,7 @@ import type { TLocale } from "Quran";
 
 (function () {
   const doc = document.documentElement;
+  const rev = doc.querySelector("meta[name='revision']")!.getAttribute("content")!;
   const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
   const locale: TLocale = {
     name: doc.lang,
@@ -18,8 +19,8 @@ import type { TLocale } from "Quran";
   const stylesheet = document.querySelector(".css.postman")!;
 
   postman(
-    item.script("/js/main/surah-stream.js"),
-    item.css("/css/main/surah-stream.css"),
+    item.script(`/js/main/surah-stream.js?v=${rev}`),
+    item.css(`/css/main/surah-stream.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.json(`/json/${doc.lang}/${surahId}/info.json`, { className: "json surahinfo" }),

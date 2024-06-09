@@ -22,6 +22,6 @@
   <body>
     <%= erb("_postman.html.erb", {locale:, dir:}) %>
     <div class="root h-full"></div>
-    <script src="/js/loaders/surah-index-loader.js"></script>
+    <script src="/js/loaders/surah-index-loader.js?v=<%= revision %>"></script>
   </body>
 </html>
