@@ -1,11 +1,10 @@
 import postman, { item } from "postman";
 import { formatNumber } from "~/lib/t";
-import type { TLocale } from "Quran";
 
 (function () {
   const doc = document.documentElement;
   const rev = doc.querySelector("meta[name='revision']")!.getAttribute("content")!;
-  const locale: TLocale = {
+  const locale = {
     name: doc.lang,
     direction: doc.dir as "rtl" | "ltr",
     displayName: "",
@@ -16,7 +15,6 @@ import type { TLocale } from "Quran";
   const style: HTMLStyleElement = doc.querySelector(".css.postman")!;
   const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
-
   postman(
     item.script(`/js/main/surah-index.js?v=${rev}`),
     item.css(`/css/main/surah-index.css?v=${rev}`),
