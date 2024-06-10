@@ -74,6 +74,14 @@ body .root .content.theme.rtl {
     }
   }
 
+  ul.body.index {
+    li.surah a {
+      span:last-child {
+        font-size: larger;
+      }
+    }
+  }
+
   footer {
     .timer {
       font-size: larger;
