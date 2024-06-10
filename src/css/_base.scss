@@ -69,8 +69,11 @@ body .root .content.theme.rtl {
     }
 
     ul.body.stream {
+      $gap: 2rem;
+      margin-top: $gap;
       li.ayah {
         font-size: larger;
+        margin-bottom: $gap;
       }
     }
 
