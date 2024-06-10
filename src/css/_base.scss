@@ -64,6 +64,9 @@ body .root .content.theme.rtl {
   header {
     h1 {
       font-size: xx-large;
+      @media (max-width: $breakpoint-sm) {
+        font-size: x-large;
+      }
     }
   }
 
