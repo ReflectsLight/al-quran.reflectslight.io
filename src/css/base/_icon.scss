@@ -10,6 +10,16 @@
     left: 8px;
     width: 5px;
     animation: stalled 0.8s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    @keyframes stalled {
+      0% {
+        top: 4px;
+        height: 8px;
+      }
+      50%, 100% {
+        top: 8px;
+        height: 4px;
+      }
+    }
   }
 
   div:nth-child(1) {
@@ -25,17 +35,6 @@
   div:nth-child(3) {
     left: 28px;
     animation-delay: 0;
-  }
-}
-
-@keyframes stalled {
-  0% {
-    top: 4px;
-    height: 8px;
-  }
-  50%, 100% {
-    top: 8px;
-    height: 4px;
   }
 }
 

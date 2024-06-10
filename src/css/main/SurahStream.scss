@@ -17,3 +17,22 @@ body .root .content.theme {
     }
   }
 }
+
+body .root .content.theme.rtl {
+  /* >= $breakpoint-xxl */
+  @media (min-width: $breakpoint-xxl) {
+    ul.body.stream {
+      $gap: 2rem;
+      margin-top: $gap;
+      li.ayah {
+        font-size: larger;
+        margin-bottom: $gap;
+      }
+    }
+    footer {
+      .timer {
+        font-size: larger;
+      }
+    }
+  }
+}
