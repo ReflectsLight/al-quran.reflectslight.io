@@ -25,7 +25,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
         className={classNames(
           "body stream scroll-y list-none p-0 m-0 h-5/6",
           ...className,
-          { "mt-4": ltr, "mt-8": rtl },
+          { "mt-4": ltr, "mt-7": rtl },
         )}
         ref={ref}
       >
@@ -33,7 +33,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
           return (
             <li
               key={ayah.id}
-              className={classNames("ayah fade", { "mb-8": rtl, "mb-4": ltr })}
+              className={classNames("ayah fade", { "mb-7": rtl, "mb-4": ltr })}
             >
               <span className={classNames("flex h-8 items-center", { "mb-2": rtl })}>
                 <AudioControl
