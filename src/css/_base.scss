@@ -61,6 +61,12 @@ body .root .content {
 body .root .content.theme.rtl {
   @import "base/breakpoints";
 
+  header {
+    h1 {
+      font-size: xx-large;
+    }
+  }
+
   /* <= $breakpoint-xxl */
   @media (max-width: $breakpoint-xxl) {
     ul.body {
@@ -70,12 +76,6 @@ body .root .content.theme.rtl {
 
   /* >= $breakpoint-xxl */
   @media (min-width: $breakpoint-xxl) {
-    header {
-      h1 {
-        font-size: xx-large;
-      }
-    }
-
     ul.body.stream {
       $gap: 2rem;
       margin-top: $gap;
