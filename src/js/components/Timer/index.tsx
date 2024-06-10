@@ -45,7 +45,7 @@ export function Timer({
   }, [ayah?.id]);
 
   useEffect(() => {
-    if (ayah && audioStatus === "play") {
+    if (audioStatus === "play") {
       setMs(getMs());
     }
   }, [audioStatus]);
