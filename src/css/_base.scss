@@ -61,6 +61,14 @@ body .root .content {
 body .root .content.theme.rtl {
   @import "base/breakpoints";
 
+  /* <= $breakpoint-xxl */
+  @media (max-width: $breakpoint-xxl) {
+    ul.body {
+      font-size: larger;
+    }
+  }
+
+  /* >= $breakpoint-xxl */
   @media (min-width: $breakpoint-xxl) {
     header {
       h1 {
