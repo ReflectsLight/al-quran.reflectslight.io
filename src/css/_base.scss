@@ -62,13 +62,9 @@ body .root .content.ltr {
  * RTL languages
  */
 body .root .content.theme.rtl {
-  @import "base/breakpoints";
   header {
     h1 {
-      font-size: x-large;
-      @media (min-width: $breakpoint-md) {
-        font-size: xx-large;
-      }
+      font-size: xx-large;
     }
   }
 
