@@ -6,14 +6,6 @@ body .root .content.theme {
   ul.body.stream {
     scrollbar-gutter: stable;
     li.ayah.fade {
-      .sound-on.icon, .sound-off.icon {
-        width: 24px;
-        height: 24px;
-        g {
-          transform: translate(0, 12px);
-        }
-      }
-
       @keyframes FadeIn {
         0% { opacity: 0;}
         25% { opacity: 0.25; }
@@ -22,33 +14,6 @@ body .root .content.theme {
         100% { opacity: 1; }
       }
       animation: FadeIn 1s;
-    }
-  }
-
-  footer {
-    .sound-off.icon, .sound-on.icon {
-      transform: translate(0, 7px);
-    }
-  }
-}
-
-
-/**
- * LTR languages
- */
-body .root .content.theme.en {
-}
-
-/**
- * RTL languages
- */
-body .root .content.theme.rtl {
-  font-size: larger;
-  ul.body.stream {
-    li.ayah {
-      .sound-off.icon, .sound-on.icon {
-        transform: rotate(180deg);
-      }
     }
   }
 }

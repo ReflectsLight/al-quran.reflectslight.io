@@ -41,6 +41,7 @@
 
 .root .content.theme {
   .icon {
+    display: inline-block;
     cursor: pointer;
   }
 
@@ -68,17 +69,19 @@
     }
   }
 
-  ul.stream span {
-    .sound-on.icon, .sound-off.icon {
-      position: relative;
-      top: 2px;
+  ul.body.stream span {
+    .sound-on.icon,
+    .sound-off.icon {
       width: 24px;
       height: 24px;
+      transform: translateY(5px);
     }
   }
 
   footer {
-    .sound-on.icon, .sound-off.icon {
+    .sound-on.icon,
+    .sound-off.icon {
+      transform: translateY(5px);
       width: 24px;
       height: 24px;
 
@@ -96,16 +99,19 @@
     right: 7px;
   }
 
+  ul.body.stream {
+    li.ayah .sound-on.icon,
+    li.ayah .sound-off.icon {
+      transform: rotate(180deg) translateY(3px);
+    }
+  }
+
   footer {
     .sound-on.icon,
     .sound-off.icon {
-      position: relative;
-      bottom: 5px;
+      transform: rotate(180deg) translateY(5px);
     }
-    .sound-on.icon,
-    .sound-off.icon,
     .play.icon {
-      display: inline-block;
       transform: rotate(180deg);
     }
   }
