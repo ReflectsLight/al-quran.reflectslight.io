@@ -25,7 +25,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
         className={classNames(
           "body stream scroll-y list-none p-0 m-0 h-5/6",
           ...className,
-          { "mt-4": ltr, "mt-7": rtl },
+          { "mt-4": ltr, "mt-5": rtl },
         )}
         ref={ref}
       >

@@ -61,7 +61,7 @@ body .root .content {
 body .root .content.theme.rtl {
   @import "base/breakpoints";
 
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-xl) {
     header {
       h1 {
         font-size: xx-large;
