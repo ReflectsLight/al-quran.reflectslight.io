@@ -38,10 +38,7 @@ body .root .content.theme {
   }
 }
 
-/**
- * LTR languages
- */
-body .root .content.ltr {
+body .root .content {
   h1 {
     font-size: x-large;
   }
@@ -62,29 +59,33 @@ body .root .content.ltr {
  * RTL languages
  */
 body .root .content.theme.rtl {
-  header {
-    h1 {
-      font-size: xx-large;
-    }
-  }
+  @import "base/breakpoints";
 
-  ul.body.stream {
-    li.ayah {
-      font-size: larger;
+  @media (min-width: $breakpoint-lg) {
+    header {
+      h1 {
+        font-size: xx-large;
+      }
     }
-  }
 
-  ul.body.index {
-    li.surah a {
-      span:last-child {
+    ul.body.stream {
+      li.ayah {
         font-size: larger;
       }
     }
-  }
 
-  footer {
-    .timer {
-      font-size: larger;
+    ul.body.index {
+      li.surah a {
+        span:last-child {
+          font-size: larger;
+        }
+      }
+    }
+
+    footer {
+      .timer {
+        font-size: larger;
+      }
     }
   }
 }
