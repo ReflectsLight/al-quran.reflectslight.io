@@ -46,8 +46,12 @@
 
   .play.icon,
   .pause.icon {
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
+    @media (min-width: $breakpoint-xxl) {
+      height: 20px;
+      width: 20px;
+    }
   }
 
   .refresh.icon,
@@ -75,8 +79,13 @@
 
   footer {
     .sound-on.icon, .sound-off.icon {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
+
+      @media(min-width: $breakpoint-xxl) {
+        height: 28px;
+        width: 28px;
+      }
     }
   }
 }
