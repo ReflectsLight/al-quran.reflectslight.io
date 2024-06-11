@@ -23,7 +23,7 @@ export function Filter({ locale, t, setIndex, surahs }: Props) {
           regexp.test(surah.name) ||
           regexp.test(surah.roman.name) ||
           regexp.test(String(surah.id)) ||
-          regexp.test(formatNumber(locale, surah.id))
+          regexp.test(formatNumber(locale, surah.id)),
       );
       setIndex(newIndex);
     }
