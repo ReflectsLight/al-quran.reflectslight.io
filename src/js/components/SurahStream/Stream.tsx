@@ -53,9 +53,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                   {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className={classNames("m-0")}>
-                {ayah.body}
-              </p>
+              <p className={classNames("m-0")}>{ayah.body}</p>
             </li>
           );
         })}
