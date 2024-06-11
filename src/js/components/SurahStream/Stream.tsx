@@ -25,7 +25,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
         className={classNames(
           "body stream scroll-y list-none p-0 m-0 h-5/6",
           ...className,
-          { "mt-4": ltr, "mt-6": rtl },
+          { "mt-4": ltr, "mt-12": rtl },
         )}
         ref={ref}
       >
@@ -53,7 +53,9 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                   {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className="m-0">{ayah.body}</p>
+              <p className={classNames("m-0", { "w-96": locale.direction === "rtl" })}>
+                {ayah.body}
+              </p>
             </li>
           );
         })}
