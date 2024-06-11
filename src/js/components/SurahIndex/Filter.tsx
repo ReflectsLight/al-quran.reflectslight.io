@@ -1,5 +1,5 @@
 import React from "react";
-import { TFunction } from "~/lib/t";
+import { TFunction, formatNumber } from "~/lib/t";
 import type { Surah, TLocale } from "Quran";
 
 type Props = {
@@ -22,7 +22,8 @@ export function Filter({ locale, t, setIndex, surahs }: Props) {
         surah =>
           regexp.test(surah.name) ||
           regexp.test(surah.roman.name) ||
-          regexp.test(String(surah.id)),
+          regexp.test(String(surah.id)) ||
+          regexp.test(formatNumber(locale, surah.id))
       );
       setIndex(newIndex);
     }
