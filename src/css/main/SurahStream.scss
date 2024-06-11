@@ -19,19 +19,27 @@ body .root .content.theme {
 }
 
 body .root .content.theme.rtl {
+  ul.body.stream {
+    li.ayah p {
+      line-height: 1.7;
+    }
+  }
   /* <= $breakpoint-sm */
   @media (max-width: $breakpoint-sm) {
     ul.body.stream {
-      li.ayah p { width: 100%; }
+      li.ayah p {
+        width: 100%;
+      }
     }
   }
   /* >= $breakpoint-xxl */
   @media (min-width: $breakpoint-xxl) {
     ul.body.stream {
-      margin-top: 4rem;
+      $gap: 2rem;
+      margin-top: $gap;
       li.ayah {
         font-size: larger;
-        margin-bottom: 2rem;
+        margin-bottom: $gap;
       }
     }
     footer {
