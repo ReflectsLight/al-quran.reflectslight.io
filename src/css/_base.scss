@@ -1,41 +1,42 @@
 @import "base/colors";
-$max-width: 768px;
-
-html[lang="en"], .ltr {
-  font-family: "Kanit Regular";
-}
-
-html[lang="ar"], .rtl {
-  font-family: "Mada Regular";
-}
-
-html[lang="fa"] {
-  // FIXME: add font for farsi?
-  font-family: "Mada Regular";
-}
+@import "base/breakpoints";
+@import "base/icon";
+@import "base/select";
+@import "vendor/tail";
 
 html {
   height: 100%;
-}
-
-html body {
-  color: $black;
-  height: 100%;
-  margin: 0;
-}
-
-body .root {
-  height: 100%;
+  body {
+    height: 100%;
+    color: $black;
+    margin: 0;
+    .root {
+      height: 100%;
+    }
+    .ltr {
+      font-family: "Kanit Regular";
+      direction: ltr;
+    }
+    .rtl {
+      font-family: "Mada Regular";
+      direction: rtl;
+    }
+    .invisible, .hidden {
+      display: none;
+    }
+    .outline-0 {
+      outline: 0;
+    }
+    .scroll-y {
+      overflow-y: auto;
+    }
+  }
 }
 
 body .root .content.theme {
   margin: 0 auto;
+  max-width: $breakpoint-md;
   width: 85%;
-  max-width: $max-width;
-
-  .scroll-y {
-    overflow-y: auto !important;
-  }
 }
 
 body .root .content {
@@ -59,14 +60,14 @@ body .root .content {
  * RTL languages
  */
 body .root .content.theme.rtl {
-  @import "base/breakpoints";
+  header h1 {
+    font-size: xx-large;
+  }
 
-  header {
-    h1 {
-      font-size: xx-large;
-      @media (max-width: $breakpoint-sm) {
-        font-size: x-large;
-      }
+  /* <= $breakpoint-sm */
+  @media (max-width: $breakpoint-sm) {
+    header h1 {
+      font-size: x-large;
     }
   }
 
@@ -76,43 +77,4 @@ body .root .content.theme.rtl {
       font-size: larger;
     }
   }
-
-  /* >= $breakpoint-xxl */
-  @media (min-width: $breakpoint-xxl) {
-    ul.body.stream {
-      $gap: 2rem;
-      margin-top: $gap;
-      li.ayah {
-        font-size: larger;
-        margin-bottom: $gap;
-      }
-    }
-
-    ul.body.index {
-      li.surah a {
-        span:last-child {
-          font-size: larger;
-        }
-      }
-    }
-
-    footer {
-      .timer {
-        font-size: larger;
-      }
-    }
-  }
 }
-
-.invisible, .hidden {
-  display: none !important;
-}
-
-.outline-0 {
-  outline: 0 !important;
-}
-
-@import "vendor/tail";
-@import "base/breakpoints";
-@import "base/icon";
-@import "base/select";
