@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import type { Surah, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/t";
-import { RightArrow } from "~/components/Icon";
+import { Arrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
 import { Filter } from "./Filter";
 import classNames from "classnames";
@@ -82,10 +82,15 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           className="flex flex-row items-center no-underline"
           href={`/${locale.name}/random/`}
         >
-          {locale.direction === "ltr" && <RightArrow />}
+          {locale.direction === "ltr" ? (
+            <Arrow direction="right" />
+          ) : (
+            <Arrow direction="left" />
+          )}
           <span
             className={classNames({
               "pl-3": locale.direction === "ltr",
+              "pr-3": locale.direction === "rtl",
             })}
           >
             {t(locale, "ChooseRandomChapter")}
