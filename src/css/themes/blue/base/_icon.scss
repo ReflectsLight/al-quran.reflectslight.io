@@ -26,7 +26,8 @@
         stroke-width: 2;
       }
     }
-    .right-arrow.icon {
+    .right-arrow.icon,
+    .left-arrow.icon {
       g {
         fill: $secondary-color;
       }

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 type Props = {
   onClick: () => void;
@@ -159,9 +160,12 @@ export function StalledIcon() {
   );
 }
 
-export function RightArrow() {
+export function Arrow({ direction }: { direction: string }) {
   return (
-    <svg className="right-arrow icon" viewBox="0 0 512.171 512.171">
+    <svg
+      className={classNames(`${direction}-arrow`, "icon")}
+      viewBox="0 0 512.171 512.171"
+    >
       <g>
         <g>
           <path

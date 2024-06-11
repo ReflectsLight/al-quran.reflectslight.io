@@ -55,9 +55,14 @@
   }
 
   .refresh.icon,
-  .right-arrow.icon {
+  .right-arrow.icon,
+  .left-arrow.icon {
     height: 16px;
     width: 16px;
+  }
+
+  .left-arrow.icon {
+    transform: rotate(180deg);
   }
 
   .pause.icon {
