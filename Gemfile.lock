@@ -65,9 +65,9 @@ GEM
     nanoc-tidy.rb (0.8.2)
       ryo.rb (~> 0.5)
       test-cmd.rb (~> 0.12.3)
-    nanoc-webpack.rb (0.10.3)
+    nanoc-webpack.rb (0.10.4)
       ryo.rb (~> 0.5)
-      test-cmd.rb (~> 0.12.2)
+      test-cmd.rb (~> 0.12.3)
     nio4r (2.7.1)
     paint (2.3.0)
     parallel (1.24.0)
@@ -158,7 +158,7 @@ DEPENDENCIES
   nanoc (~> 4.12)
   nanoc-gzip.rb
   nanoc-tidy.rb (~> 0.8.2)
-  nanoc-webpack.rb (~> 0.10.3)
+  nanoc-webpack.rb (~> 0.10.4)
   paint (~> 2.3)
   rainpress (~> 1.0)
   ryo.rb
