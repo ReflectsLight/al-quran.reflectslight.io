@@ -42,7 +42,7 @@ Ryo.each(name_by_id) do |id, slug|
 end
 
 compile "/js/main/surah-stream.tsx" do
-  filter :webpack,
+  filter :webpack, exe: tidy,
          depend_on: ["/js/components", "/js/lib/", "/js/hooks"]
   write "/js/main/surah-stream.js"
   filter :gzip
@@ -50,7 +50,7 @@ compile "/js/main/surah-stream.tsx" do
 end
 
 compile "/js/loaders/SurahStreamLoader.ts" do
-  filter :webpack
+  filter :webpack, exe: tidy
   write "/js/loaders/surah-stream-loader.js"
   filter :gzip
   write "/js/loaders/surah-stream-loader.js.gz"

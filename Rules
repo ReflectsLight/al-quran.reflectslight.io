@@ -15,6 +15,7 @@ locales    = %w[ar fa en]
 json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json(path: File.join(json_dir, "nameById.json"))
 tdata      = Ryo.from_json(path: File.join(json_dir, "t.json"))
+tidy       = `which tidy || which tidy5`
 buildenv   = ENV["buildenv"] || "development"
 
 ##
@@ -60,10 +61,10 @@ passthrough "/json/durations/*.json"
 ##
 # Require rules
 require_rules "nanoc/rules/assets"
-require_rules "nanoc/rules/redirect", {locales:}
-require_rules "nanoc/rules/random", {locales:, tdata:}
-require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:}
-require_rules "nanoc/rules/index", {locales:, tdata:}
+require_rules "nanoc/rules/redirect", {locales:, tidy:}
+require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
+require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:, tidy:}
+require_rules "nanoc/rules/index", {locales:, tdata:, tidy:}
 
 ##
 # Catch-all
