@@ -43,7 +43,11 @@ end
 
 compile "/js/main/surah-stream.tsx" do
   filter :webpack, exe: tidy,
-         depend_on: ["/js/components", "/js/lib/", "/js/hooks"]
+                   depend_on: [
+                     "/js/components",
+                     "/js/lib/",
+                     "/js/hooks"
+                   ]
   write "/js/main/surah-stream.js"
   filter :gzip
   write "/js/main/surah-stream.js.gz"
