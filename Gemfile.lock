@@ -139,7 +139,7 @@ GEM
       rubocop-performance (~> 1.20.2)
     stringio (3.1.0)
     strscan (3.1.0)
-    test-cmd.rb (0.12.2)
+    test-cmd.rb (0.12.3)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)
