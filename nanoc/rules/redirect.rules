@@ -7,12 +7,12 @@
 
 compile "/html/main/redirect.html.erb" do
   filter(:erb, locals: {locales:})
-  filter(:tidy)
+  filter(:tidy, exe: tidy)
   write("/index.html")
 end
 
 compile "/js/main/redirect.ts" do
-  filter(:webpack, exe: tidy, depend_on: ["/js/lib/"])
+  filter(:webpack, depend_on: ["/js/lib/"])
   write("/js/main/redirect.js")
   filter(:gzip)
   write("/js/main/redirect.js.gz")
