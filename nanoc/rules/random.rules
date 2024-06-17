@@ -9,13 +9,13 @@ locales.each do |locale|
   compile "/html/main/random.html.erb", rep: "random/#{locale}" do
     context = Ryo.from({filename: "random.html.erb", dir: tdata[locale].dir, locale:, locales:})
     filter(:erb, locals: {locale:, locales:, dir: context.dir, context:})
-    filter(:tidy)
+    filter(:tidy, exe: tidy)
     write("/#{locale}/random/index.html")
   end
 end
 
 compile "/js/main/random.ts" do
-  filter(:webpack, exe: tidy, depend_on: ["/js/lib/"])
+  filter(:webpack, depend_on: ["/js/lib/"])
   write("/js/main/random.js")
   filter(:gzip)
   write("/js/main/random.js.gz")

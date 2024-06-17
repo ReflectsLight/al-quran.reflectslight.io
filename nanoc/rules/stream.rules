@@ -28,7 +28,7 @@ Ryo.each(name_by_id) do |id, slug|
       surah: context.surah, dir: context.dir, context:
     }
     filter(:erb, locals:)
-    filter(:tidy)
+    filter(:tidy, exe: tidy)
     write "/#{locale}/#{pathname}/index.html"
   end
   locales.each do |locale|
@@ -42,19 +42,18 @@ Ryo.each(name_by_id) do |id, slug|
 end
 
 compile "/js/main/surah-stream.tsx" do
-  filter :webpack, exe: tidy,
-                   depend_on: [
-                     "/js/components",
-                     "/js/lib/",
-                     "/js/hooks"
-                   ]
+  filter :webpack, depend_on: [
+    "/js/components",
+    "/js/lib/",
+    "/js/hooks"
+  ]
   write "/js/main/surah-stream.js"
   filter :gzip
   write "/js/main/surah-stream.js.gz"
 end
 
 compile "/js/loaders/SurahStreamLoader.ts" do
-  filter :webpack, exe: tidy
+  filter :webpack
   write "/js/loaders/surah-stream-loader.js"
   filter :gzip
   write "/js/loaders/surah-stream-loader.js.gz"

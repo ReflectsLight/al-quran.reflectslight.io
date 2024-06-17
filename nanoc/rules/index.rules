@@ -9,25 +9,24 @@ locales.each do |locale|
   compile "/html/main/surah-index.html.erb", rep: "/#{locale}/surah/index" do
     context = Ryo.from(filename: "surah-index.html.erb", dir: tdata[locale].dir, locale:, locales:)
     filter(:erb, {locals: {locale:, locales:, dir: context.dir, context:}})
-    filter(:tidy)
+    filter(:tidy, exe: tidy)
     write "/#{locale}/index.html"
   end
 end
 
 compile "/js/main/surah-index.tsx" do
-  filter :webpack, exe: tidy,
-                   depend_on: [
-                     "/js/components",
-                     "/js/lib/",
-                     "/js/hooks"
-                   ]
+  filter :webpack, depend_on: [
+    "/js/components",
+    "/js/lib/",
+    "/js/hooks"
+  ]
   write "/js/main/surah-index.js"
   filter :gzip
   write "/js/main/surah-index.js.gz"
 end
 
 compile "/js/loaders/SurahIndexLoader.ts" do
-  filter :webpack, exe: tidy
+  filter :webpack
   write "/js/loaders/surah-index-loader.js"
   filter :gzip
   write "/js/loaders/surah-index-loader.js.gz"
