@@ -1,42 +1,37 @@
-# frozen_string_literal: true
+require "bundler/setup"
+require "nanoc"
+cwd = File.realpath File.join(__dir__, "..", "..")
 
 namespace :nanoc do
-  require "bundler/setup"
-  root = File.realpath File.join(__dir__, "..", "..")
-
   desc "Clean the build/ directory"
   task :clean do
-    Dir.chdir(root) do
+    Dir.chdir(cwd) do
       sh "rm -rf node_modules/.cache/"
+      sh "rm -rf build/"
       sh "rm -rf tmp/"
-      sh "rm -rf build/al-quran/* build/*"
     end
   end
 
   desc "Produce the build/ directory"
-  task :build, [:buildenv] do |t, args|
-    Dir.chdir(root) do
-      buildenv = args.buildenv || ENV["buildenv"] || "development"
-      sass_path = File.join(root, "src", "css")
-      sh "rm -rf build/al-quran/css/"
-      Bundler.with_original_env {
-        sh "SASS_PATH=#{sass_path} buildenv=#{buildenv} bundle exec nanoc co"
-      }
-    end
+  task :build, %i[buildenv] => %i[setenv] do |t, args|
+    Nanoc::CLI.run(["compile"])
   end
 
   desc "Produce the build/ directory on-demand"
-  task watch: ["nanoc:build"] do
-    Dir.chdir(root) do
-      require "listen"
-      srcdir = File.join(root, "src")
-      Listen.to(srcdir) do
-        Bundler.with_original_env { sh "rake nanoc:build" }
-      end.start
-      sleep
-    end
+  task :watch, %i[buildenv] => %i[setenv nanoc:build]  do |t, args|
+    require "listen"
+    path = File.join(Dir.getwd, "src")
+    Listen.to(path) do
+      Nanoc::CLI.run(["compile"])
+    end.start
+    sleep
   rescue Interrupt
     warn "SIGINT: exit"
     exit
+  end
+
+  task :setenv, %i[buildenv] do |t, args|
+    ENV["SASS_PATH"] = File.join(cwd, "src", "css")
+    ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
   end
 end

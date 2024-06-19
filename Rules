@@ -27,10 +27,11 @@ Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::RuleDSL::RequireRules)
 # Plugins
 Nanoc::Webpack
   .default_argv
-  .concat ["--config", "webpack.#{buildenv}.js"]
+  .replace([*Nanoc::Webpack.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
+
 Nanoc::Tidy
   .default_argv
-  .concat ["-upper"]
+  .replace([*Nanoc::Tidy.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
 
 ##
 # See packages/typescript/postman
