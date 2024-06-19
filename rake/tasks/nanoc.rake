@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
 require "nanoc"
 cwd = File.realpath File.join(__dir__, "..", "..")
