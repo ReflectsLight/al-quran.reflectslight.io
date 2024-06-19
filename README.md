@@ -25,8 +25,8 @@ kept in this repository.
 ## Development
 
     # Clone repository
-    git clone https://github.com/ReflectsLight/al-quran.git
-    cd al-quran
+    git clone https://github.com/ReflectsLight/al-quran.reflectslight.io
+    cd al-quran.reflectslight.io
 
     # Setup build environment
     bin/setup
