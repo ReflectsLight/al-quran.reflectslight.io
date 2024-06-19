@@ -5,7 +5,7 @@ require "nanoc"
 cwd = File.realpath File.join(__dir__, "..", "..")
 
 namespace :nanoc do
-  desc "Clean the build/ directory"
+  desc "Clean directories"
   task :clean do
     Dir.chdir(cwd) do
       sh "rm -rf node_modules/.cache/"
@@ -14,12 +14,12 @@ namespace :nanoc do
     end
   end
 
-  desc "Produce the build/ directory"
+  desc "Produce the build directory"
   task :build, %i[buildenv] => %i[setenv] do |t, args|
     Nanoc::CLI.run(["compile"])
   end
 
-  desc "Produce the build/ directory on-demand"
+  desc "Produce the build directory on-demand"
   task :watch, %i[buildenv] => %i[setenv nanoc:build]  do |t, args|
     require "listen"
     path = File.join(Dir.getwd, "src")
