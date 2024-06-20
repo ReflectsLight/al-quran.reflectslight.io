@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-require "bundler/setup"
-require "nanoc"
 cwd = File.realpath File.join(__dir__, "..", "..")
-
 namespace :nanoc do
   desc "Clean directories"
   task :clean do
@@ -22,8 +19,7 @@ namespace :nanoc do
   desc "Produce the build directory on-demand"
   task :watch, %i[buildenv] => %i[setenv nanoc:build]  do |t, args|
     require "listen"
-    path = File.join(Dir.getwd, "src")
-    Listen.to(path) do
+    Listen.to(File.join(cwd, "src")) do
       Nanoc::CLI.run(["compile"])
     end.start
     sleep
