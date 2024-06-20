@@ -5,6 +5,7 @@
 # Requires
 require "ryo"
 require "ryo/json"
+require "ryo/yaml"
 require "nanoc-gzip"
 require "nanoc-webpack"
 require "nanoc-tidy"

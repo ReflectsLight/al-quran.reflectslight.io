@@ -48,11 +48,7 @@ module Mixin
   # @return [Ryo::Object]
   #  Returns the contents of nanoc.yaml as a Ryo object
   def nanoc
-    return @nanoc if defined?(@nanoc)
-    @nanoc = begin
-      path = File.join(Dir.getwd, "nanoc.yaml")
-      Ryo.from YAML.load_file(path)
-    end
+    @nanoc ||= Ryo.from_yaml(path: File.join(Dir.getwd, "nanoc.yaml"))
   end
 
   include T

@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
+require "nanoc"
 require "ryo"
 require "yaml"
 
 begin
   load "rake/tasks/deploy.rake"
-rescue LoadError
-  warn "[warn] #{$!.class}: #{$!.message}"
+rescue LoadError => ex
+  warn "[warn] #{ex.class}: #{ex.message}"
 end
 load "rake/tasks/format.rake"
 load "rake/tasks/nanoc.rake"
