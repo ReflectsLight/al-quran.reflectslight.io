@@ -3,6 +3,7 @@
 require "bundler/setup"
 require "nanoc"
 require "ryo"
+require "ryo/yaml"
 require "yaml"
 
 begin
