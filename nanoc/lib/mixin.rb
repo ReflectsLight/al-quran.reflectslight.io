@@ -15,7 +15,7 @@ module Mixin
   end
 
   def revision
-    cmd("git rev-parse HEAD").stdout.strip
+    @rev ||= cmd("git", "rev-parse", "HEAD").stdout.strip
   end
 
   def build_dir
