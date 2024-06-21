@@ -13,7 +13,7 @@ module Mixin
   def dirs
     @dirs ||= Ryo(
       root:,
-      build: nanoc.output_dir,
+      build: File.join(root, nanoc.output_dir),
       content: File.join(root, nanoc.data_sources[0].content_dir)
     )
   end
