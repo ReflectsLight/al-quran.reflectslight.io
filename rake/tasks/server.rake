@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
+cwd = File.realpath File.join(__dir__, "..", "..", ".")
 desc "Start web server"
 task :server, [:protocol] do |_t, args|
-  require "yaml"
-  require "ryo"
   require "server"
-  nanoc = Ryo.from(YAML.load_file("./nanoc.yaml"))
+  nanoc = Ryo.from_yaml(path: File.join(cwd, "nanoc.yaml"))
   h = args.to_h
   p = h[:protocol] || "tcp"
-  n = File.basename File.realpath(File.join(__dir__, "..", "..", "."))
+  n = File.basename(cwd)
   o = if p == "unix"
     {unix: nanoc.server.unix.path}
   else
