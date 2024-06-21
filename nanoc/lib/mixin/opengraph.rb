@@ -12,7 +12,7 @@ module Mixin::OpenGraph
       {title: t(context.locale, "TheNobleQuran"),
        description: surah.name,
        url: "#{base_url}/#{context.locale}/#{surah.slug}/",
-       image: "#{base_url}/images/og/#{surah.id}.png"}
+       image: "#{base_url}/images/og/#{surah.id}.png?v=#{revision}"}
     when "redirect.html.erb", "surah-index.html.erb"
       {title: t(context.locale, "TheNobleQuran"),
        description: t(context.locale, "meta.index.description"),
