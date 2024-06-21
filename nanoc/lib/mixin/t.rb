@@ -7,9 +7,6 @@ module Mixin::T
   end
 
   def tdata
-    @tdata ||= begin
-      path = File.join(Dir.getwd, "src", "json", "t.json")
-      Ryo.from_json(path:)
-    end
+    @tdata ||= Ryo.from_json(path: File.join(dirs.content, "json", "t.json"))
   end
 end

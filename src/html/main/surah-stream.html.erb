@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(locale, 'meta.stream.description', {surah_name: surah.name}) %>">
-    <%= erb("_revision.html.erb") %>
+    <%= erb("_version.html.erb") %>
     <%= opengraph(context) %>
     <link
       rel="canonical"
@@ -25,6 +25,6 @@
          data-surah-id="<%= surah.id %>"
          data-audio-base-url="<%= audio_base_url %>">
     </div>
-    <script src="/js/loaders/surah-stream-loader.js?v=<%= revision %>"></script>
+    <script src="/js/loaders/surah-stream-loader.js?v=<%= commit %>"></script>
   </body>
 </html>

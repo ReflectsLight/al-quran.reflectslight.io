@@ -3,7 +3,7 @@
   <head>
     <title><%= t(locale, "TheNobleQuran") %></title>
     <meta name="description" content="<%= t(locale, 'meta.random.description') %>">
-    <%= erb("_revision.html.erb") %>
+    <%= erb("_version.html.erb") %>
     <%= opengraph(context) %>
     <link
       rel="canonical"
@@ -18,6 +18,6 @@
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <script src="/js/main/random.js?v=<%= revision %>"></script>
+    <script src="/js/main/random.js?v=<%= commit %>"></script>
   </body>
 </html>

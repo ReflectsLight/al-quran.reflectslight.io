@@ -7,19 +7,44 @@ module Mixin
   require_relative "mixin/erb"
   require_relative "mixin/opengraph"
 
-  def app_version
-    @app_version ||= begin
-      ver = File.read File.join(Dir.getwd, "VERSION")
-      ver.gsub(/[^\d.]/, "")
-    end
+  ##
+  # @return [Ryo::Object]
+  #  Returns common directory paths as a Ryo object
+  def dirs
+    @dirs ||= Ryo(
+      root:,
+      build: nanoc.output_dir,
+      content: File.join(root, nanoc.data_sources[0].content_dir)
+    )
   end
 
-  def revision
-    @rev ||= cmd("git", "rev-parse", "HEAD").stdout.strip
+  ##
+  # @return [Ryo::Object]
+  #  Returns the contents of nanoc.yaml as a Ryo object
+  def nanoc
+    @nanoc ||= Ryo.from_yaml(path: File.join(root, "nanoc.yaml"))
   end
 
-  def build_dir
-    nanoc.output_dir
+  ##
+  # @return [String]
+  #  Returns an absolute path to the root directory of the website
+  def root
+    @root ||= File.realpath(File.join(__dir__, "..", "..", "."))
+  end
+
+  ##
+  # @return [String]
+  #  Returns the website version
+  def version
+    @version ||= File.read(File.join(dirs.root, "VERSION"))
+                     .gsub(/[^\d.]/, "")
+  end
+
+  ##
+  # @return [String]
+  #  Returns the most recent git commit hash
+  def commit
+    @commit ||= cmd("git", "rev-parse", "HEAD").stdout.strip
   end
 
   ##
@@ -42,13 +67,6 @@ module Mixin
   #  https://al-quran.reflectslight.io.
   def base_url
     nanoc.server.base_url
-  end
-
-  ##
-  # @return [Ryo::Object]
-  #  Returns the contents of nanoc.yaml as a Ryo object
-  def nanoc
-    @nanoc ||= Ryo.from_yaml(path: File.join(Dir.getwd, "nanoc.yaml"))
   end
 
   include T
