@@ -31,7 +31,7 @@ Nanoc::Webpack
   .replace([*Nanoc::Webpack.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
 Nanoc::Tidy
   .default_argv
-  .replace([*Nanoc::Tidy.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
+  .replace([*Nanoc::Tidy.default_argv, "-upper"].uniq)
 
 ##
 # See packages/typescript/postman
