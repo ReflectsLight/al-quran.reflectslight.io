@@ -56,7 +56,7 @@ compile "/robots.txt" do
 end
 
 ##
-# /json/durations/*/*.json
+# /json/durations/*.json
 passthrough "/json/durations/*.json"
 
 ##
