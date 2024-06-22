@@ -11,7 +11,7 @@ require "nanoc-webpack"
 require "nanoc-tidy"
 
 ##
-# Configuration
+# Locals
 locales    = %w[ar fa en]
 json_dir   = File.join(Dir.getwd, "src", "json")
 name_by_id = Ryo.from_json(path: File.join(json_dir, "nameById.json"))
@@ -60,7 +60,7 @@ end
 passthrough "/json/durations/*.json"
 
 ##
-# Require rules
+# Rules
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect", {locales:, tidy:}
 require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
