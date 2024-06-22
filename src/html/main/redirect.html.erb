@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <title><%= t("en", "TheNobleQuran") %></title>
-    <%= erb("_revision.html.erb") %>
+    <%= erb("_version.html.erb") %>
     <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
     <link
       rel="canonical"
@@ -17,6 +17,6 @@
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <script src="/js/main/redirect.js?v=<%= revision %>"></script>
+    <script src="/js/main/redirect.js?v=<%= commit %>"></script>
   </body>
 </html>

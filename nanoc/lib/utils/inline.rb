@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Mixin::Inline
+module Utils::Inline
   def inline_json(path, class_name: File.basename(path, File.extname(path)))
     %|<script class="json #{class_name}" type="application/json">| \
     "#{items[path].compiled_content}" \

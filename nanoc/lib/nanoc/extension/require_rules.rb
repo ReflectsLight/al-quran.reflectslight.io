@@ -1,20 +1,19 @@
 # frozen_string_literal: true
 
-module Nanoc::RuleDSL
+module Nanoc::Extension
+  ##
+  # The RequireRules extension adds a method that can help
+  # break up the Rules file into multiple separate files.
+  # See the Rules file to learn how this module is added
+  # to nanoc.
   module RequireRules
     ##
     # @example
     #   require_rules "nanoc/rules/assets"
-    #
+    #   require_rules "nanoc/rules/index", {locales: ["en", "ar", "fa"]}
     # @param [String] path
-    #  The path to a file
-    #
     # @param [Hash] locals
-    #  A hash of locals
-    #
     # @param [Binding] target
-    #  Binding context
-    #
     # @return [void]
     def require_rules(path, locals = {}, target = binding)
       locals.each { target.local_variable_set(_1, _2) }
