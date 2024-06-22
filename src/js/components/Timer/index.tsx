@@ -26,7 +26,7 @@ export function Timer({
   const [ms, setMs] = useState<number | null>(null);
   const isStalled = audioStatus === "wait";
 
-  const getMs = () => {
+  function getMs() {
     const fallback =
       audioStatus === null || audioStatus === "pause" || isNaN(audio.duration);
     if (fallback) {
@@ -36,7 +36,7 @@ export function Timer({
       console.info("timer: length determined by HTMLAudioElement");
       return audio.duration * 1000;
     }
-  };
+  }
 
   useEffect(() => {
     if (ayah) {
