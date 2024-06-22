@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :t do
-  jsondir = File.join(Dir.getwd, "src", "json")
+  jsondir = File.join(dirs.content, "json")
   desc "Generate /json/<locale>/<surahid>/info.json from surahs.json"
   task :"surahs.json" do
     require "json"

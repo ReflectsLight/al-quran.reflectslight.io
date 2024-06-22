@@ -4,7 +4,8 @@ require "bundler/setup"
 require "nanoc"
 require "ryo"
 require "ryo/yaml"
-require "yaml"
+require_relative "nanoc/lib/utils"
+include Utils
 
 begin
   load "rake/tasks/deploy.rake"

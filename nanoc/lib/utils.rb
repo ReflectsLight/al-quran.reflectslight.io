@@ -2,8 +2,9 @@
 
 ##
 # The {Utils Utils} module provides methods that are
-# available at build time. Both ERB templates and the
-# Rules file have access to the methods of this module
+# available at build time. ERB templates, the Rules file
+# and Rakefile.rb all have access to the methods of this
+# module
 module Utils
   require "test-cmd"
   require_relative "utils/t"
@@ -78,4 +79,4 @@ module Utils
   include ERB
   include OpenGraph
 end
-use_helper Utils
+use_helper(Utils) if respond_to?(:use_helper)
