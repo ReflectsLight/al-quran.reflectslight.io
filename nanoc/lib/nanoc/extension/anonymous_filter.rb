@@ -4,7 +4,7 @@ module Nanoc::Extension
   ##
   # The AnonymousFilter extension adds support for Proc-based
   # filters. See the Rules file to learn how this module is
-  # added to nanoc.
+  # added to nanoc
   module AnonymousFilter
     require "securerandom"
     ##

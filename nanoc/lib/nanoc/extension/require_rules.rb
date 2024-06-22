@@ -5,7 +5,7 @@ module Nanoc::Extension
   # The RequireRules extension adds a method that can help
   # break up the Rules file into multiple separate files.
   # See the Rules file to learn how this module is added
-  # to nanoc.
+  # to nanoc
   module RequireRules
     ##
     # @example
