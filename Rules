@@ -20,16 +20,15 @@ tidy       = `which tidy || which tidy5`.chomp
 buildenv   = ENV["buildenv"] || "development"
 
 ##
-# DSL extensions
-Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::RuleDSL::Filter)
-Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::RuleDSL::RequireRules)
+# Extensions
+Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::Extension::AnonymousFilter)
+Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::Extension::RequireRules)
 
 ##
 # Plugins
 Nanoc::Webpack
   .default_argv
   .replace([*Nanoc::Webpack.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
-
 Nanoc::Tidy
   .default_argv
   .replace([*Nanoc::Tidy.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
