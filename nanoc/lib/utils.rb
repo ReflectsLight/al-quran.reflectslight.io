@@ -3,7 +3,7 @@
 ##
 # The {Utils Utils} module provides methods that are
 # available at build time. Both ERB templates and the
-# Rules file have access to the methods of this module.
+# Rules file have access to the methods of this module
 module Utils
   require "test-cmd"
   require_relative "utils/t"
