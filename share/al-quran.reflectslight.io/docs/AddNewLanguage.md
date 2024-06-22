@@ -1,4 +1,4 @@
-== Introduction
+## Introduction
 
 This post documents the process
 that should be followed when adding
@@ -22,6 +22,6 @@ The process:
 
 Tip:
 
-'/src/json/<locale>/<surahId>/info.json' can be generated
-automatically from the contents of '/src/json/surahs.json'
-via: rake t:surahs.json.
+`src/json/<locale>/<surahId>/info.json` can be generated
+automatically from the contents of `src/json/surahs.json`
+via: `rake t:surahs.json`
