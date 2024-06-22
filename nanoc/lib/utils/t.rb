@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 ##
-# The {Mixin::T Mixin::T} module provides a method that
+# The {Utils::T Utils::T} module provides a method that
 # can render user-facing text strings in different
 # locales / languages
-module Mixin::T
+module Utils::T
   ##
   # @param [String] locale
   #  Locale (eg "en")

@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
-module Mixin
+##
+# The {Utils Utils} module provides methods that are
+# available at build time. Both ERB templates and the
+# Rules file have access to the methods of this module.
+module Utils
   require "test-cmd"
-  require_relative "mixin/t"
-  require_relative "mixin/inline"
-  require_relative "mixin/erb"
-  require_relative "mixin/opengraph"
+  require_relative "utils/t"
+  require_relative "utils/inline"
+  require_relative "utils/erb"
+  require_relative "utils/opengraph"
 
   ##
   # @return [Ryo::Object]
@@ -74,4 +78,4 @@ module Mixin
   include ERB
   include OpenGraph
 end
-use_helper Mixin
+use_helper Utils

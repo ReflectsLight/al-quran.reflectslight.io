@@ -12,7 +12,7 @@ require "nanoc-tidy"
 
 ##
 # Extensions
-[Nanoc::RuleDSL::CompilationRuleContext, Nanoc::RuleDSL::CompilerDSL].each { _1.prepend(Mixin) }
+[Nanoc::RuleDSL::CompilationRuleContext, Nanoc::RuleDSL::CompilerDSL].each { _1.prepend(Utils) }
 Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::Extension::AnonymousFilter)
 Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::Extension::RequireRules)
 

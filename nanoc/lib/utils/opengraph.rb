@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Mixin::OpenGraph
+module Utils::OpenGraph
   def opengraph(context)
     erb "_opengraph.html.erb", local_assigns(context)
   end

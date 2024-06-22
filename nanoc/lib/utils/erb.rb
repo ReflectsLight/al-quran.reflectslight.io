@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 ##
-# The {Mixin::ERB Mixin::ERB} module provides a method
+# The {Utils::ERB Utils::ERB} module provides a method
 # that can render an ERB template
-module Mixin::ERB
+module Utils::ERB
   ##
   # @param [String] file
   #  The path to an ERB template
