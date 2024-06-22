@@ -10,7 +10,7 @@ printok()
 
 printerr()
 {
-    echo "error: ${1}" > /dev/stdout
+    echo "error: ${1}" > /dev/stderr
 }
 
 require_dependency()
