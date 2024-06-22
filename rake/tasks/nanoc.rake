@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-cwd = File.realpath File.join(__dir__, "..", "..")
 namespace :nanoc do
   desc "Clean directories"
   task :clean do
-    Dir.chdir(cwd) do
+    Dir.chdir(dirs.root) do
       sh "rm -rf node_modules/.cache/"
       sh "rm -rf build/"
       sh "rm -rf tmp/"
@@ -19,9 +18,9 @@ namespace :nanoc do
   desc "Produce the build directory on-demand"
   task :watch, %i[buildenv] => %i[setenv nanoc:build]  do |t, args|
     require "listen"
-    Listen.to(File.join(cwd, "src")) do
+    Listen.to(dirs.content) {
       Nanoc::CLI.run(["compile"])
-    end.start
+    }.start
     sleep
   rescue Interrupt
     warn "SIGINT: exit"
@@ -29,7 +28,7 @@ namespace :nanoc do
   end
 
   task :setenv, %i[buildenv] do |t, args|
-    ENV["SASS_PATH"] = File.join(cwd, "src", "css")
+    ENV["SASS_PATH"] = File.join(dirs.content, "css")
     ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
   end
 end
