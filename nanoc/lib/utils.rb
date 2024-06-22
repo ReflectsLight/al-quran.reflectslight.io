@@ -13,6 +13,10 @@ module Utils
   require_relative "utils/opengraph"
 
   ##
+  # Generic error
+  Error = Class.new(RuntimeError) unless defined?(Error)
+
+  ##
   # @return [Ryo::Object]
   #  Returns common directory paths as a Ryo object
   def dirs
@@ -46,15 +50,17 @@ module Utils
   end
 
   ##
-  # @note
-  #  This method returns the website version in
-  #  case git fails or is unavailable
+  # @raise [Utils::Error]
+  #  When git fails or is unavailable
   # @return [String]
   #  Returns the most recent git commit hash
   def commit
     @commit ||= begin
-      r = cmd("git", "rev-parse", "HEAD")
-      r.success? ? r.stdout.strip : version
+      hash = nil
+      cmd("git", "rev-parse", "HEAD")
+        .success { hash = _1.stdout.strip }
+        .failure { raise(Error, "git exited unsuccessfully in method Utils#commit", []) }
+      hash
     end
   end
 
