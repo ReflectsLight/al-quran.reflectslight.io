@@ -46,10 +46,16 @@ module Utils
   end
 
   ##
+  # @note
+  #  This method returns the website version in
+  #  case git fails or is unavailable
   # @return [String]
   #  Returns the most recent git commit hash
   def commit
-    @commit ||= cmd("git", "rev-parse", "HEAD").stdout.strip
+    @commit ||= begin
+      r = cmd("git", "rev-parse", "HEAD")
+      r.success? ? r.stdout.strip : version
+    end
   end
 
   ##
