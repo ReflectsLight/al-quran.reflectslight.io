@@ -64,8 +64,8 @@ passthrough "/json/durations/*.json"
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect", {locales:, tidy:}
 require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
-require_rules "nanoc/rules/stream", {locales:, tdata:, name_by_id:, tidy:}
-require_rules "nanoc/rules/index", {locales:, tdata:, tidy:}
+require_rules "nanoc/rules/surah-stream", {locales:, tdata:, name_by_id:, tidy:}
+require_rules "nanoc/rules/surah-index", {locales:, tdata:, tidy:}
 
 ##
 # Catch-all
