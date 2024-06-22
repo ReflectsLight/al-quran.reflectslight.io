@@ -59,7 +59,7 @@ module Utils
       hash = nil
       cmd("git", "rev-parse", "HEAD")
         .success { hash = _1.stdout.strip }
-        .failure { raise(Error, "git exited unsuccessfully in method Utils#commit", []) }
+        .failure { error!("git exited unsuccessfully in method Utils#commit") }
       hash
     end
   end
@@ -90,5 +90,11 @@ module Utils
   include Inline
   include ERB
   include OpenGraph
+
+  private
+
+  def error!(m)
+    raise Error, m, []
+  end
 end
 use_helper(Utils) if respond_to?(:use_helper)
