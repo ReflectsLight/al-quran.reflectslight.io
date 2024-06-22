@@ -4,6 +4,7 @@ require "bundler/setup"
 require "nanoc"
 require "ryo"
 require "ryo/yaml"
+require "ryo/json"
 require_relative "nanoc/lib/utils"
 include Utils
 
