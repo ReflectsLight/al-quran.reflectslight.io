@@ -1,7 +1,39 @@
-#!/bin/sh -ex
+#!/bin/sh
+set -e
+
+##
+# functions
+printok()
+{
+    echo "ok: ${1}" > /dev/stdout
+}
+
+printerr()
+{
+    echo "error: ${1}" > /dev/stdout
+}
+
+require_dependency()
+{
+    for i in $(seq 1 $#); do
+        eval "cmd=\$${i}"
+        if which ${cmd} > /dev/null 2>&1; then
+            printok "${cmd} found"
+        else
+            printerr "${cmd} is required but was not found on \$PATH"
+            exit 1
+        fi
+    done
+}
 
 ##
 # main
+require_dependency git bundle npm
 git submodule update -f --init --recursive
+printok "submodules checked out"
+
 bundle install
+printok "ruby dependencies installed"
+
 npm i
+printok "nodejs dependencies installed"
