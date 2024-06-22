@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
+##
+# The {Mixin::ERB Mixin::ERB} module provides a method
+# that can render an ERB template
 module Mixin::ERB
+  ##
+  # @param [String] file
+  #  The path to an ERB template
+  # @param [Hash] local_assigns
+  #  Template variables
+  # @return [String]
   def erb(file, local_assigns = {})
     erb = File.binread File.join(dirs.content, "html", file)
     ctx = binding
