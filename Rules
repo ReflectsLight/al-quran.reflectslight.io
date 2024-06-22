@@ -11,18 +11,18 @@ require "nanoc-webpack"
 require "nanoc-tidy"
 
 ##
-# Locals
-locales    = %w[ar fa en]
-json_dir   = File.join(Dir.getwd, "src", "json")
-name_by_id = Ryo.from_json(path: File.join(json_dir, "nameById.json"))
-tdata      = Ryo.from_json(path: File.join(json_dir, "t.json"))
-tidy       = `which tidy || which tidy5`.chomp
-buildenv   = ENV["buildenv"] || "development"
-
-##
 # Extensions
+[Nanoc::RuleDSL::CompilationRuleContext, Nanoc::RuleDSL::CompilerDSL].each { _1.prepend(Mixin) }
 Nanoc::RuleDSL::CompilationRuleContext.prepend(Nanoc::Extension::AnonymousFilter)
 Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::Extension::RequireRules)
+
+##
+# Locals
+locales    = %w[ar fa en]
+name_by_id = Ryo.from_json(path: File.join(dirs.content, "json", "nameById.json"))
+tdata      = Ryo.from_json(path: File.join(dirs.content, "json", "t.json"))
+tidy       = `which tidy || which tidy5`.chomp
+buildenv   = ENV["buildenv"] || "development"
 
 ##
 # Plugins
