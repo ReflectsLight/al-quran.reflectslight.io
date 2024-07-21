@@ -49,7 +49,7 @@ kept in this repository.
 
 If you plan to host the website on
 your own domain you should update
-[nanoc.yaml](nanoc.yaml)
+[nanoc.yaml](nanoc.yaml.sample)
 first. In certain places
 links will reference
 https://al-quran.reflectslight.io
@@ -59,7 +59,7 @@ For example
 is one such place. Those links can be updated
 to your own domain by changing the `server.base_url`
 field in
-[nanoc.yaml](nanoc.yaml)
+[nanoc.yaml](nanoc.yaml.sample)
 before running `rake nanoc:build`.
 
 **audio.base_url**
