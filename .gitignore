@@ -1,10 +1,11 @@
+node_modules/
+dist/
+/.gems/
 /build/
 /tmp/
-/packages/typescript/**/*.js
-/packages/typescript/**/dist/
 /rake/tasks/deploy.rake
-/.gems/
-/submodules/quran-json/
+/packages/**/*.js
+/submodules/
 /crash.log
-node_modules/
-*.core
+/*.core/
+/nanoc.yaml
