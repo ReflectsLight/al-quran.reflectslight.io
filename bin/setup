@@ -37,3 +37,6 @@ printok "ruby dependencies installed"
 
 npm i
 printok "nodejs dependencies installed"
+
+cp nanoc.yaml.sample nanoc.yaml
+printok "nanoc.yaml.sample -> nanoc.yaml"
