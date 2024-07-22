@@ -15,5 +15,5 @@ runs:
   - name: Setup packages
     shell: bash
     run: |
-	bin/setup
+      bin/setup
     
