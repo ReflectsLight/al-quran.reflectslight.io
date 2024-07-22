@@ -1,12 +1,12 @@
-= Introduction
+| Introduction
 
 This post documents the process that should be
-followed when adding a new language to
-the website.
+followed when adding a new locale or language
+to the website.
 
 Ideally the process would require a minimal amount
 of manual work and be fast to complete but we're
-not there yet.
+not quite there yet.
 
 The process:
 
@@ -19,8 +19,6 @@ The process:
   (/src/json/surahs.json)
   (/src/json/<locale>/<surahId>/{info,surah}.json)
 
-Tip:
-
-'src/json/<locale>/<surahId>/info.json' can be generated
-automatically from the contents of 'src/json/surahs.json'
+Note that 'src/json/<locale>/<surahId>/info.json' can
+be generated from the contents of 'src/json/surahs.json'
 via: 'rake t:surahs.json'
