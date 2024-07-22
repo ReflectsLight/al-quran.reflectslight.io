@@ -6,6 +6,11 @@
   scrollbar-color: $primary-color #FFF;
 
   header {
-    h1 , h1 a { color: $primary-color; }
+    a[data-testid="h1"] {
+      background: $primary-color;
+      border: 1px solid $black;
+      color: #FFF;
+      font-size: x-large;
+    }
   }
 }
