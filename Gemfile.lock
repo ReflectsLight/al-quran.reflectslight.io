@@ -87,7 +87,6 @@ GEM
     racc (1.8.0)
     rack (3.1.7)
     rainbow (3.1.1)
-    rainpress (1.0.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
@@ -113,11 +112,6 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
     ryo.rb (0.5.5)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     server.rb (0.2.2)
       puma (~> 6.3)
       rack (~> 3.0)
@@ -158,11 +152,9 @@ DEPENDENCIES
   nanoc (~> 4.12)
   nanoc-gzip.rb
   nanoc-tidy.rb (~> 0.8.4)
-  nanoc-webpack.rb (~> 0.10.4)
+  nanoc-webpack.rb (~> 0.10)
   paint (~> 2.3)
-  rainpress (~> 1.0)
   ryo.rb
-  sass (~> 3.7)
   server.rb
   standard (~> 1.24)
   test-cmd.rb

@@ -18,7 +18,6 @@ import { formatNumber } from "~/lib/t";
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
   postman(
     item.script(`/js/main/surah-stream.js?v=${rev}`),
-    item.css(`/css/main/surah-stream.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     /* eslint-disable */
