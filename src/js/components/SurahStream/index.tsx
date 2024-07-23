@@ -8,6 +8,7 @@ import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "~/components/Icon
 import { Timer } from "~/components/Timer";
 import { TFunction } from "~/lib/t";
 import { Stream } from "./Stream";
+import "@css/main/SurahStream.scss";
 
 type Maybe<T> = T | null | undefined;
 

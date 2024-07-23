@@ -9,7 +9,7 @@ type Props = {
 
 export function LanguageSelect({ locale }: Props) {
   return (
-    <Select value={locale.name} className="language-select">
+    <Select value={locale.name} className="language-select w-20">
       {Quran.locales.map((l: TLocale, i: number) => {
         const path = location.pathname;
         const href = path.replace(`/${locale.name}/`, `/${l.name}/`);
@@ -17,7 +17,7 @@ export function LanguageSelect({ locale }: Props) {
           <Select.Option
             key={i}
             className={classNames(
-              "flex h-6 w-20 justify-center no-underline mb-1 rounded",
+              "flex h-6 w-full justify-center no-underline mb-1 rounded",
               l.direction,
               l.name === locale.name ? "active" : undefined,
             )}

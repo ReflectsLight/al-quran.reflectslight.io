@@ -8,10 +8,8 @@ gem "nanoc", "~> 4.12"
 ##
 # filters
 gem "nanoc-gzip.rb"
-gem "nanoc-webpack.rb", "~> 0.10.4"
+gem "nanoc-webpack.rb", "~> 0.10"
 gem "nanoc-tidy.rb", "~> 0.8.4"
-gem "rainpress", "~> 1.0"
-gem "sass", "~> 3.7"
 
 ##
 # dev

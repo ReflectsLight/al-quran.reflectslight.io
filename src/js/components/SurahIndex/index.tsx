@@ -6,6 +6,7 @@ import { Arrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
 import { Filter } from "./Filter";
 import classNames from "classnames";
+import "@css/main/SurahIndex.scss";
 
 type Props = {
   locale: TLocale;

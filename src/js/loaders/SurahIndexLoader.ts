@@ -17,7 +17,6 @@ import { formatNumber } from "~/lib/t";
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
   postman(
     item.script(`/js/main/surah-index.js?v=${rev}`),
-    item.css(`/css/main/surah-index.css?v=${rev}`),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {

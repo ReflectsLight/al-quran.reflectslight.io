@@ -44,8 +44,9 @@ end
 compile "/js/main/surah-stream.tsx" do
   filter :webpack, depend_on: [
     "/js/components",
-    "/js/lib/",
-    "/js/hooks"
+    "/js/lib",
+    "/js/hooks",
+    "/css"
   ]
   write "/js/main/surah-stream.js"
   filter :gzip
@@ -57,12 +58,4 @@ compile "/js/loaders/SurahStreamLoader.ts" do
   write "/js/loaders/surah-stream-loader.js"
   filter :gzip
   write "/js/loaders/surah-stream-loader.js.gz"
-end
-
-compile "/css/main/SurahStream.scss" do
-  filter :sass, syntax: :scss, style: :compact
-  filter :rainpress
-  write("/css/main/surah-stream.css")
-  filter :gzip
-  write("/css/main/surah-stream.css.gz")
 end

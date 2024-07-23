@@ -15,20 +15,26 @@ type Props = {
 export function Head({ locale, theme, setTheme, children }: Props) {
   return (
     <header
-      className={classNames("flex flex-col h-12 mt-4", {
+      className={classNames("flex flex-col h-20 mt-4", {
         "mb-4": locale.direction === "ltr",
         "mb-6": locale.direction === "rtl",
       })}
     >
-      <h1 className="flex justify-center p-0 m-0 mb-4">
-        <a className="no-underline" href={`/${locale.name}/`}>
-          {children}
-        </a>
-      </h1>
-      <nav className="flex flex-row justify-between">
-        <LanguageSelect locale={locale} />
-        <ThemeSelect theme={theme} setTheme={setTheme} />
-      </nav>
+      <div className="flex flex-col">
+        <div className="flex items-center justify-center">
+          <a
+            data-testid="h1"
+            href={`/${locale.name}/`}
+            className="flex rounded justify-center p-3 m-0 mb-4 w-full no-underline"
+          >
+            {children}
+          </a>
+        </div>
+        <nav className="flex flex-row justify-between">
+          <LanguageSelect locale={locale} />
+          <ThemeSelect theme={theme} setTheme={setTheme} />
+        </nav>
+      </div>
     </header>
   );
 }
