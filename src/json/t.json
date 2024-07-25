@@ -12,8 +12,8 @@
     "loading": "Loading",
     "meta": {
       "index": {"description": "Explore the chapters of The Noble Quran"},
-      "stream": {"description": "Read and listen to %{surah_name}"},
-      "random": {"description": "Read and listen to a randomly selected chapter"}
+      "stream": {"description": "Read and listen to The Noble Quran"},
+      "random": {"description": "Read and listen to The Noble Quran"}
     },
     "surahs": {
       "names": [
@@ -147,13 +147,13 @@
     "loading": "جارٍ التحميل",
     "meta": {
       "index": {
-        "description": "استكشف فصول القرآن الكريم"
+        "description": "استكشف سور القرآن الكريم"
       },
       "stream": {
-        "description": "%{surah_name} اقرأ واستمع إلى"
+        "description": "اقرأ واستمع للقرآن الكريم"
       },
       "random": {
-        "description": "اقرأ واستمع إلى سورة مختارة عشوائيًا"
+        "description": "اقرأ واستمع للقرآن الكريم"
       }
     },
     "surahs": {
@@ -288,13 +288,13 @@
     "loading": "در حال بارگذاری",
     "meta": {
       "index": {
-        "description": "فصول قرآن کریم را کاوش کنید"
+        "description": "کاوش در سوره های قرآن کریم"
       },
       "stream": {
-        "description": "خواندن و شنیدن %{surah_name}"
+        "description": "قرآن کریم را بخوانید و گوش دهید"
       },
       "random": {
-        "description": "یک سوره به صورت تصادفی را بخوانید و گوش کنید"
+        "description": "قرآن کریم را بخوانید و گوش دهید"
       }
     },
     "surahs": {
