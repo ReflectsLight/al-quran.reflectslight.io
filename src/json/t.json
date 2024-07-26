@@ -11,9 +11,9 @@
     "filter": "Filter",
     "loading": "Loading",
     "meta": {
-      "index": {"description": "Explore the chapters of The Noble Quran"},
-      "stream": {"description": "Read and listen to The Noble Quran"},
-      "random": {"description": "Read and listen to The Noble Quran"}
+      "index": { "description": "Explore the chapters of The Noble Quran" },
+      "stream": { "description": "Read and listen to The Noble Quran" },
+      "random": { "description": "Read and listen to The Noble Quran" }
     },
     "surahs": {
       "names": [
@@ -153,7 +153,7 @@
         "description": "اقرأ واستمع للقرآن الكريم"
       },
       "random": {
-        "description": "اقرأ واستمع للقرآن الكريم"
+        "description": "اقرأ واستمع إلى سورة مختارة عشوائيًا"
       }
     },
     "surahs": {
