@@ -7,6 +7,6 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   prettier,
   {
-    rules: {'@typescript-eslint/no-var-requires': 0},
+    rules: {'@typescript-eslint/no-require-imports': 0},
   }
 )
