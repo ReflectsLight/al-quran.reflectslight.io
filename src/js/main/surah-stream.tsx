@@ -9,7 +9,7 @@ import { SurahStream } from "~/components/SurahStream";
   const root = doc.querySelector(".root")!;
   const t = T(require("@json/t.json"));
   const locale = (() => {
-    return Quran.locales.find(ll => ll.name === doc.lang);
+    return Quran.locales.find((ll) => ll.name === doc.lang);
   })()!;
 
   /*
@@ -32,5 +32,7 @@ import { SurahStream } from "~/components/SurahStream";
     ayah.ms = ms * 1000;
   }
 
-  ReactDOM.createRoot(root).render(<SurahStream surah={surah} locale={locale} t={t} />);
+  ReactDOM.createRoot(root).render(
+    <SurahStream surah={surah} locale={locale} t={t} />,
+  );
 })();

@@ -13,7 +13,14 @@ type Props = {
   t: TFunction;
 };
 
-export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Props) {
+export function Stream({
+  locale,
+  surah,
+  stream,
+  endOfStream,
+  isPaused,
+  t,
+}: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
@@ -35,13 +42,15 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
               key={ayah.id}
               className={classNames("ayah fade", { "mb-6": rtl, "mb-4": ltr })}
             >
-              <span className={classNames("flex h-8 items-center", { "mb-2": rtl })}>
+              <span
+                className={classNames("flex h-8 items-center", { "mb-2": rtl })}
+              >
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}
                   surah={surah}
                   ayah={ayah}
-                  onStatusChange={(status, [_, disable]) => {
+                  onStatusChange={(status, [, disable]) => {
                     if (status === "end") {
                       disable();
                     }
@@ -49,8 +58,9 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 />
                 <span>
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
-                  {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)}{" "}
-                  {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
+                  {t(locale, "comma")} {t(locale, "ayah")}{" "}
+                  {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
+                  {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
               <p className="m-0">{ayah.body}</p>

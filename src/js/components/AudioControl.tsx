@@ -38,7 +38,9 @@ export function AudioControl({
   }, [hidden, enabled, ayah?.id, audioBaseUrl]);
 
   useEffect(() => {
-    const el: HTMLDivElement | null = document.querySelector("[data-audio-base-url]");
+    const el: HTMLDivElement | null = document.querySelector(
+      "[data-audio-base-url]",
+    );
     const url = el?.dataset?.audioBaseUrl;
     if (url?.length) {
       setAudioBaseUrl(url);
@@ -73,7 +75,10 @@ export function AudioControl({
 
   useEffect(() => {
     if (audioStatus) {
-      onStatusChange(audioStatus, [() => setEnabled(true), () => setEnabled(false)]);
+      onStatusChange(audioStatus, [
+        () => setEnabled(true),
+        () => setEnabled(false),
+      ]);
     }
   }, [audioStatus]);
 
@@ -83,8 +88,12 @@ export function AudioControl({
 
   return (
     <>
-      {enabled && <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />}
-      {!enabled && <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />}
+      {enabled && (
+        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
+      )}
+      {!enabled && (
+        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
+      )}
     </>
   );
 }

@@ -10,9 +10,13 @@ import { SurahIndex } from "~/components/SurahIndex";
   const t = T(require("@json/t.json"));
   const byLocale = require("@json/surahs");
   const locale = (() => {
-    return Quran.locales.find(ll => ll.name === doc.lang);
+    return Quran.locales.find((ll) => ll.name === doc.lang);
   })()!;
-  const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
+  const surahs: Surah[] = byLocale[locale.name].map(
+    (e: TSurah) => new Surah(e),
+  );
 
-  ReactDOM.createRoot(root).render(<SurahIndex locale={locale} surahs={surahs} t={t} />);
+  ReactDOM.createRoot(root).render(
+    <SurahIndex locale={locale} surahs={surahs} t={t} />,
+  );
 })();
