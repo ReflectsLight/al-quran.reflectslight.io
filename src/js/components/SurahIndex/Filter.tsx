@@ -19,7 +19,7 @@ export function Filter({ locale, t, setIndex, surahs }: Props) {
     } else {
       const regexp = new RegExp(value, "i");
       const newIndex = surahs.filter(
-        surah =>
+        (surah) =>
           regexp.test(surah.name) ||
           regexp.test(surah.roman.name) ||
           regexp.test(String(surah.id)) ||

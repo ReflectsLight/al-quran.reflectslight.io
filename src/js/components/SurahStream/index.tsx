@@ -4,7 +4,12 @@ import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { AudioControl, TAudioStatus } from "~/components/AudioControl";
 import { Head } from "~/components/Head";
-import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "~/components/Icon";
+import {
+  PlayIcon,
+  PauseIcon,
+  RefreshIcon,
+  StalledIcon,
+} from "~/components/Icon";
 import { Timer } from "~/components/Timer";
 import { TFunction } from "~/lib/t";
 import { Stream } from "./Stream";
@@ -65,8 +70,12 @@ export function SurahStream({ surah, locale, t }: Props) {
         t={t}
       />
       <footer className="flex justify-between items-center h-16">
-        {!endOfStream && isPaused && <PlayIcon onClick={() => setIsPaused(false)} />}
-        {!endOfStream && !isPaused && <PauseIcon onClick={() => setIsPaused(true)} />}
+        {!endOfStream && isPaused && (
+          <PlayIcon onClick={() => setIsPaused(false)} />
+        )}
+        {!endOfStream && !isPaused && (
+          <PauseIcon onClick={() => setIsPaused(true)} />
+        )}
         <span
           className={classNames("sound-box flex flex-col items-end w-16", {
             hidden: endOfStream,
@@ -77,7 +86,7 @@ export function SurahStream({ surah, locale, t }: Props) {
             surah={surah}
             ayah={ayah}
             hidden={endOfStream}
-            onStatusChange={status => {
+            onStatusChange={(status) => {
               setAudioStatus(status);
             }}
           />

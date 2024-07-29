@@ -1,17 +1,22 @@
 # frozen_string_literal: true
 
-desc "Run CI tasks"
-task :ci do
-  ##
-  # format
-  sh "bundle exec rubocop"
-  sh "npm exec eslint -- src/js/"
+namespace :ci do
+  task :rubocop do
+    sh "bundle exec rubocop"
+  end
 
-  ##
-  # tsc
-  sh "npm run tsc"
+  task :eslint do
+    sh "npx eslint src/js"
+  end
 
-  ##
-  # build
-  Bundler.with_original_env { sh "buildenv=production rake nanoc:clean nanoc:build" }
+  task :tsc do
+    sh "npm run tsc"
+  end
+
+  task :env do
+    ENV["buildenv"] = "production"
+  end
 end
+
+desc "Run CI tasks"
+task ci: %i[ci:env ci:rubocop ci:eslint ci:tsc nanoc:clean nanoc:build]

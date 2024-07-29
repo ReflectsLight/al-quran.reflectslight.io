@@ -8,9 +8,9 @@ runs:
     with:
       ruby-version: 3.3
   - name: Setup NodeJS
-    uses: actions/setup-node@v2
+    uses: actions/setup-node@v4
     with:
-      node-version: 16
+      node-version: latest
       cache: npm
   - name: Setup packages
     shell: bash
