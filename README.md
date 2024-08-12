@@ -17,11 +17,6 @@ installed to build the website from source:
 * NodeJS v18.15 (or later)
 * [tidy-html5](https://github.com/htacg/tidy-html5)
 
-**Please note** that the audio files are hosted by
-https://al-quran.reflectslight.io, and due to
-their overall size they are only files **not**
-kept in this repository.
-
 ## Development
 
     # Clone repository
@@ -45,59 +40,58 @@ kept in this repository.
 
 ## Configuration
 
-**server.base_url**
+* **server.base_url** <br>
+  If you plan to host the website on
+  your own domain you should update
+  [nanoc.yaml](nanoc.yaml.sample)
+  first. In certain places
+  links will reference
+  https://al-quran.reflectslight.io
+  instead of using a relative path.
+  For example
+  [/src/sitemap.xml.erb](/src/sitemap.xml.erb)
+  is one such place. Those links can be updated
+  to your own domain by changing the `server.base_url`
+  field in
+  [nanoc.yaml](nanoc.yaml.sample)
+  before running `rake nanoc:build`.
 
-If you plan to host the website on
-your own domain you should update
-[nanoc.yaml](nanoc.yaml.sample)
-first. In certain places
-links will reference
-https://al-quran.reflectslight.io
-instead of using a relative path.
-For example
-[/src/sitemap.xml.erb](/src/sitemap.xml.erb)
-is one such place. Those links can be updated
-to your own domain by changing the `server.base_url`
-field in
-[nanoc.yaml](nanoc.yaml.sample)
-before running `rake nanoc:build`.
+* **audio.base_url** <br>
+  `audio.base_url` controls what web server serves
+  audio content. 
+  [The default](https://al-quran.reflectslight.io/audio/alafasy)
+  works out of the box. The URL for an audio file is
+  resolved by joining `audio.base_url` and
+  `/<surahid>/<ayahid>.mp3`. The `audio.base_url` option
+  makes it relatively easy to change the reciter
+  at build time, before deploying the website.
 
-**audio.base_url**
+  The https://al-quran.reflectslight.io web server
+  provides the following recitations:
 
-`audio.base_url` controls what web server serves
-audio content. The default
-(https://al-quran.reflectslight.io/audio/alafasy)
-works out of the box. The URL for an audio file is
-resolved by joining `audio.base_url` and
-`/<surahid>/<ayahid>.mp3`. The `audio.base_url` option
-makes it relatively easy to change the reciter
-at build time, before deploying the website.
-
-The https://al-quran.reflectslight.io web server
-provides the following recitations:
-
-- Mishari bin Rashed Alafasy <br>
+  - Mishari bin Rashed Alafasy <br>
   https://al-quran.reflectslight.io/audio/alafasy
-
-- Ahmad bin Ali Al-Ajmi <br>
+  - Ahmad bin Ali Al-Ajmi <br>
   https://al-quran.reflectslight.io/audio/alajmi
-
-- Sahl Yassin <br>
+  - Sahl Yassin <br>
   https://al-quran.reflectslight.io/audio/yassin
+
+  **Note**<br>
+  Due to their overall size the audio files are the only 
+  files **not** kept in this repository. The audio files 
+  are hosted  by https://al-quran.reflectslight.io instead.
 
 ## Thanks
 
-Alhamdulillah
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
 
 * Thanks to the graphic artists:
     - [RefreshIcon](/src/js/components/Icon.tsx)
       by
       [Muhammad Haq](https://freeicons.io/profile/823)
-
 * Thanks to the translators:
     - English (The Clear Quran) by Dr. Mustafa Khattab
     - Farsi by Hussain Ansarian
-
 * Thanks to the reciters:
     - Mishari bin Rashed Alafasy
     - Ahmad bin Ali Al-Ajmi
