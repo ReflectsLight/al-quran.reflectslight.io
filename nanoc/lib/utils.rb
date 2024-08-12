@@ -10,7 +10,6 @@ module Utils
   require_relative "utils/t"
   require_relative "utils/inline"
   require_relative "utils/erb"
-  require_relative "utils/opengraph"
 
   ##
   # Generic error
@@ -89,7 +88,6 @@ module Utils
   include T
   include Inline
   include ERB
-  include OpenGraph
 
   private
 

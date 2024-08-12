@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(locale, 'meta.stream.description') %>">
     <%= erb("_version.html.erb") %>
-    <%= opengraph(context) %>
+    <%= erb("_opengraph.html.erb", {file: "stream-stream.html.erb", context:}) %>
     <link
       rel="canonical"
       href="<%= base_url %>/<%= locale %>/<%= surah.slug %>/"

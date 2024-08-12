@@ -4,11 +4,8 @@
     <title><%= t("en", "TheNobleQuran") %></title>
     <meta name="description" content="<%= t('en', 'meta.index.description') %>">
     <%= erb("_version.html.erb") %>
-    <%= opengraph(Ryo(filename: "redirect.html.erb", locale: "en")) %>
-    <link
-      rel="canonical"
-      href="<%= base_url %>/en/"
-    />
+    <%= erb("_opengraph.html.erb", {page: "redirect.html.erb", context:}) %>
+    <link rel="canonical" href="<%= base_url %>/en/" />
     <% locales.each do |locale| %>
     <link
       rel="alternate"
