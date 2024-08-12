@@ -13,7 +13,7 @@
     "meta": {
       "index": { "description": "Explore the chapters of The Noble Quran" },
       "stream": { "description": "Read and listen to The Noble Quran" },
-      "random": { "description": "Read and listen to The Noble Quran" }
+      "random": { "description": "Read and listen to a randomly selected chapter from The Noble Quran" }
     },
     "surahs": {
       "names": [
@@ -146,15 +146,9 @@
     "filter": "تصفية",
     "loading": "جارٍ التحميل",
     "meta": {
-      "index": {
-        "description": "استكشف سور القرآن الكريم"
-      },
-      "stream": {
-        "description": "اقرأ واستمع للقرآن الكريم"
-      },
-      "random": {
-        "description": "اقرأ واستمع إلى سورة مختارة عشوائيًا"
-      }
+      "index": { "description": "استكشاف سور القرآن الكريم" },
+      "stream": { "description": "قراءة والاستماع إلى القرآن الكريم" },
+      "random": { "description": "قراءة والاستماع إلى سورة مختارة عشوائيًا من القرآن الكريم" }
     },
     "surahs": {
       "names": [
@@ -287,15 +281,9 @@
     "filter": "فیلتر",
     "loading": "در حال بارگذاری",
     "meta": {
-      "index": {
-        "description": "کاوش در سوره های قرآن کریم"
-      },
-      "stream": {
-        "description": "قرآن کریم را بخوانید و گوش دهید"
-      },
-      "random": {
-        "description": "قرآن کریم را بخوانید و گوش دهید"
-      }
+      "index": { "description": "کاوش در سوره‌های قرآن کریم" },
+      "stream": { "description": "قرائت و استماع به قرآن کریم" },
+      "random": { "description": "قرائت و استماع به یک سوره تصادفی از قرآن کریم" }
     },
     "surahs": {
       "names": [
