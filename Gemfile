@@ -13,7 +13,7 @@ gem "nanoc-tidy.rb", "~> 0.8.4"
 
 ##
 # dev
-gem "server.rb"
+gem "server.rb", github: "0x1eef/server.rb"
 gem "ryo.rb"
 gem "standard", "~> 1.24"
 gem "paint", "~> 2.3"

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/0x1eef/server.rb.git
+  revision: c1cf8b235c732d85d708f784ab16d2075cca9f79
+  specs:
+    server.rb (0.3.0)
+      puma (~> 6.3)
+      rack (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,9 +120,6 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
     ryo.rb (0.5.5)
-    server.rb (0.3.0)
-      puma (~> 6.3)
-      rack (~> 3.0)
     set (1.1.0)
     slow_enumerator_tools (1.1.0)
     sorted_set (1.0.3)
@@ -156,7 +161,7 @@ DEPENDENCIES
   paint (~> 2.3)
   rexml (~> 3.3.3)
   ryo.rb
-  server.rb
+  server.rb!
   standard (~> 1.24)
   test-cmd.rb
 
