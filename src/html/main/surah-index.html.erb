@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>" dir="<%= dir %>">
+<html lang="<%= context.locale %>" dir="<%= context.dir %>">
   <head>
-    <title><%= t(locale, "TheNobleQuran") %></title>
+    <title><%= t(context.locale, "TheNobleQuran") %></title>
     <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="<%= t(locale, 'meta.index.description') %>">
+    <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
     <%= erb("_version.html.erb") %>
     <%= erb("_opengraph.html.erb", {file: "surah-index.html.erb", context:}) %>
     <link
       rel="canonical"
-      href="<%= base_url %>/<%= locale %>/"
+      href="<%= base_url %>/<%= context.locale %>/"
     />
-    <% locales.each do |locale| %>
+    <% context.locales.each do |locale| %>
     <link rel="alternate"
           href="<%= base_url %>/<%= locale %>/"
           hreflang="<%= locale %>" />
@@ -20,7 +20,7 @@
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <%= erb("_postman.html.erb", {locale:, dir:}) %>
+    <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="root h-full"></div>
     <script src="/js/loaders/surah-index-loader.js?v=<%= commit %>"></script>
   </body>

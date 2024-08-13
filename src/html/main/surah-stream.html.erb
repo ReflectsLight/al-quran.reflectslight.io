@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>" dir="<%= dir %>">
+<html lang="<%= context.locale %>" dir="<%= context.dir %>">
   <head>
-    <title><%= surah.name %></title>
+    <title><%= context.surah.name %></title>
     <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="<%= t(locale, 'meta.stream.description') %>">
+    <meta name="description" content="<%= t(context.locale, 'meta.stream.description') %>">
     <%= erb("_version.html.erb") %>
     <%= erb("_opengraph.html.erb", {file: "stream-stream.html.erb", context:}) %>
     <link
       rel="canonical"
-      href="<%= base_url %>/<%= locale %>/<%= surah.urlName %>/"
+      href="<%= base_url %>/<%= context.locale %>/<%= context.surah.urlName %>/"
     />
-    <% locales.each do |locale| %>
+    <% context.locales.each do |locale| %>
     <link rel="alternate"
-          href="<%= base_url %>/<%= locale %>/<%= surah.urlName %>/"
+          href="<%= base_url %>/<%= locale %>/<%= context.surah.urlName %>/"
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
   </head>
   <body>
-    <%= erb("_postman.html.erb", {locale:, dir:}) %>
+    <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="root"
-         data-surah-id="<%= surah.id %>"
+         data-surah-id="<%= context.surah.id %>"
          data-audio-base-url="<%= audio_base_url %>">
     </div>
     <script src="/js/loaders/surah-stream-loader.js?v=<%= commit %>"></script>

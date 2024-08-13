@@ -15,19 +15,9 @@ end
 
 Ryo.each(name_by_id) do |id, slug|
   write_file = ->(locale, pathname:) do
-    name = tdata[locale].surahs.names[id.to_i - 1]
-    context = Ryo.from(
-      filename: "surah-stream.html.erb",
-      locale:,
-      locales:,
-      surah: {id:, name:, slug:},
-      dir: tdata[locale].dir
-    )
-    locals = {
-      locale: context.locale, locales: context.locales,
-      surah: context.surah, dir: context.dir, context:
-    }
-    filter(:erb, locals:)
+    surah = surahs[locale][id.to_i - 1]
+    context = Ryo.from(locale:, locales:, surah:, dir: tdata[locale].dir)
+    filter(:erb, locals: {context:})
     filter(:tidy, exe: tidy)
     write "/#{locale}/#{pathname}/index.html"
   end

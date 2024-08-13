@@ -21,6 +21,7 @@ Nanoc::RuleDSL::CompilerDSL.prepend(Nanoc::Extension::RequireRules)
 locales    = %w[ar fa en]
 name_by_id = Ryo.from_json(path: File.join(dirs.content, "json", "nameById.json"))
 tdata      = Ryo.from_json(path: File.join(dirs.content, "json", "t.json"))
+surahs     = Ryo.from_json(path: File.join(dirs.content, "json", "surahs.json"))
 tidy       = `which tidy || which tidy5`.chomp
 buildenv   = ENV["buildenv"] || "development"
 
@@ -62,7 +63,7 @@ passthrough "/json/durations/*.json"
 require_rules "nanoc/rules/assets"
 require_rules "nanoc/rules/redirect", {locales:, tidy:}
 require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
-require_rules "nanoc/rules/surah-stream", {locales:, tdata:, name_by_id:, tidy:}
+require_rules "nanoc/rules/surah-stream", {locales:, tdata:, surahs:, name_by_id:, tidy:}
 require_rules "nanoc/rules/surah-index", {locales:, tdata:, tidy:}
 
 ##

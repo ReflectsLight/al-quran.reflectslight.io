@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="<%= locale %>" dir="<%= dir %>">
+<html lang="<%= context.locale %>" dir="<%= context.dir %>">
   <head>
-    <title><%= t(locale, "TheNobleQuran") %></title>
-    <meta name="description" content="<%= t(locale, 'meta.random.description') %>">
+    <title><%= t(context.locale, "TheNobleQuran") %></title>
+    <meta name="description" content="<%= t(context.locale, 'meta.random.description') %>">
     <%= erb("_version.html.erb") %>
     <%= erb("_opengraph.html.erb", {file: "random.html.erb", context:}) %>
     <link
       rel="canonical"
-      href="<%= base_url %>/<%= locale %>/random/"
+      href="<%= base_url %>/<%= context.locale %>/random/"
     />
-    <% locales.each do |locale| %>
+    <% context.locales.each do |locale| %>
     <link
       rel="alternate"
       href="<%= base_url %>/<%= locale %>/random/"
