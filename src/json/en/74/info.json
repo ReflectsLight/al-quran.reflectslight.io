@@ -2,9 +2,7 @@
   "id": 74,
   "name": "The Cloaked One",
   "numberOfAyah": 56,
-  "roman": {
-    "name": "Al-Muddaththir",
-    "slug": "al-muddaththir"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-muddaththir",
+  "translitName": "Al-Muddaththir"
 }

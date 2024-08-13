@@ -2,9 +2,7 @@
   "id": 63,
   "name": "المنافقون",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-Munafiqun",
-    "slug": "al-munafiqun"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-munafiqun",
+  "translitName": "Al-Munafiqun"
 }

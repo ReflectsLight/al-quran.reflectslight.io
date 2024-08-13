@@ -2,9 +2,7 @@
   "id": 106,
   "name": "قريش",
   "numberOfAyah": 4,
-  "roman": {
-    "name": "Quraysh",
-    "slug": "quraysh"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "quraysh",
+  "translitName": "Quraysh"
 }

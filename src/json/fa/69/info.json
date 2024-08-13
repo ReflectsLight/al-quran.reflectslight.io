@@ -2,9 +2,7 @@
   "id": 69,
   "name": "حاقه",
   "numberOfAyah": 52,
-  "roman": {
-    "name": "Al-Haqqah",
-    "slug": "al-haqqah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-haqqah",
+  "translitName": "Al-Haqqah"
 }

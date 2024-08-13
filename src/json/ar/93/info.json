@@ -2,9 +2,7 @@
   "id": 93,
   "name": "الضحى",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Ad-Duhaa",
-    "slug": "ad-duhaa"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "ad-duhaa",
+  "translitName": "Ad-Duhaa"
 }

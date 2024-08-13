@@ -2,9 +2,7 @@
   "id": 43,
   "name": "The Ornaments of Gold",
   "numberOfAyah": 89,
-  "roman": {
-    "name": "Az-Zukhruf",
-    "slug": "az-zukhruf"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "az-zukhruf",
+  "translitName": "Az-Zukhruf"
 }

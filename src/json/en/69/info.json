@@ -2,9 +2,7 @@
   "id": 69,
   "name": "The Reality",
   "numberOfAyah": 52,
-  "roman": {
-    "name": "Al-Haqqah",
-    "slug": "al-haqqah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-haqqah",
+  "translitName": "Al-Haqqah"
 }

@@ -2,9 +2,7 @@
   "id": 109,
   "name": "The Disbelievers",
   "numberOfAyah": 6,
-  "roman": {
-    "name": "Al-Kafirun",
-    "slug": "al-kafirun"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-kafirun",
+  "translitName": "Al-Kafirun"
 }

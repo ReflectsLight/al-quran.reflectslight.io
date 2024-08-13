@@ -2,9 +2,7 @@
   "id": 59,
   "name": "الحشر",
   "numberOfAyah": 24,
-  "roman": {
-    "name": "Al-Hashr",
-    "slug": "al-hashr"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-hashr",
+  "translitName": "Al-Hashr"
 }

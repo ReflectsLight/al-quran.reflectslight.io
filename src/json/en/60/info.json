@@ -2,9 +2,7 @@
   "id": 60,
   "name": "She that is to be examined",
   "numberOfAyah": 13,
-  "roman": {
-    "name": "Al-Mumtahanah",
-    "slug": "al-mumtahanah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-mumtahanah",
+  "translitName": "Al-Mumtahanah"
 }

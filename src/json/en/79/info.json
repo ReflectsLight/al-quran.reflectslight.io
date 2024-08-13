@@ -2,9 +2,7 @@
   "id": 79,
   "name": "Those who drag forth",
   "numberOfAyah": 46,
-  "roman": {
-    "name": "An-Nazi'at",
-    "slug": "an-naziat"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "an-naziat",
+  "translitName": "An-Nazi'at"
 }

@@ -2,9 +2,7 @@
   "id": 86,
   "name": "الطارق",
   "numberOfAyah": 17,
-  "roman": {
-    "name": "At-Tariq",
-    "slug": "at-tariq"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-tariq",
+  "translitName": "At-Tariq"
 }

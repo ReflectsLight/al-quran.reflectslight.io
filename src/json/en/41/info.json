@@ -2,9 +2,7 @@
   "id": 41,
   "name": "Explained in Detail",
   "numberOfAyah": 54,
-  "roman": {
-    "name": "Fussilat",
-    "slug": "fussilat"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "fussilat",
+  "translitName": "Fussilat"
 }

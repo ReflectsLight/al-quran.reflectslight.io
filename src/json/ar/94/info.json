@@ -2,9 +2,7 @@
   "id": 94,
   "name": "الشرح",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Ash-Sharh",
-    "slug": "ash-sharh"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "ash-sharh",
+  "translitName": "Ash-Sharh"
 }

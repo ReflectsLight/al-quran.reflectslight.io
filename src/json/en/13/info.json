@@ -2,9 +2,7 @@
   "id": 13,
   "name": "The Thunder",
   "numberOfAyah": 43,
-  "roman": {
-    "name": "Ar-Ra'd",
-    "slug": "ar-rad"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ar-rad",
+  "translitName": "Ar-Ra'd"
 }

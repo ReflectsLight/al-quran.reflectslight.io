@@ -2,9 +2,7 @@
   "id": 28,
   "name": "القصص",
   "numberOfAyah": 88,
-  "roman": {
-    "name": "Al-Qasas",
-    "slug": "al-qasas"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-qasas",
+  "translitName": "Al-Qasas"
 }

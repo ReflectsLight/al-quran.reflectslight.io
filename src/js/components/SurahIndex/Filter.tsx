@@ -21,7 +21,7 @@ export function Filter({ locale, t, setIndex, surahs }: Props) {
       const newIndex = surahs.filter(
         (surah) =>
           regexp.test(surah.name) ||
-          regexp.test(surah.roman.name) ||
+          regexp.test(surah.translitName) ||
           regexp.test(String(surah.id)) ||
           regexp.test(formatNumber(locale, surah.id)),
       );

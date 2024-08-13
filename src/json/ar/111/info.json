@@ -2,9 +2,7 @@
   "id": 111,
   "name": "المسد",
   "numberOfAyah": 5,
-  "roman": {
-    "name": "Al-Masad",
-    "slug": "al-masad"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-masad",
+  "translitName": "Al-Masad"
 }

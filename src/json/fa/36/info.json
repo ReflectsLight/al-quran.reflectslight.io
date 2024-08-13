@@ -2,9 +2,7 @@
   "id": 36,
   "name": "یس",
   "numberOfAyah": 83,
-  "roman": {
-    "name": "Ya-Sin",
-    "slug": "ya-sin"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ya-sin",
+  "translitName": "Ya-Sin"
 }

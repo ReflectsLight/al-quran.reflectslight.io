@@ -2,9 +2,7 @@
   "id": 12,
   "name": "يوسف",
   "numberOfAyah": 111,
-  "roman": {
-    "name": "Yusuf",
-    "slug": "yusuf"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "yusuf",
+  "translitName": "Yusuf"
 }

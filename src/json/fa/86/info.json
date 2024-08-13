@@ -2,9 +2,7 @@
   "id": 86,
   "name": "طارق",
   "numberOfAyah": 17,
-  "roman": {
-    "name": "At-Tariq",
-    "slug": "at-tariq"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-tariq",
+  "translitName": "At-Tariq"
 }

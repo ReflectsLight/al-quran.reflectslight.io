@@ -2,9 +2,7 @@
   "id": 48,
   "name": "الفتح",
   "numberOfAyah": 29,
-  "roman": {
-    "name": "Al-Fath",
-    "slug": "al-fath"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-fath",
+  "translitName": "Al-Fath"
 }

@@ -2,9 +2,7 @@
   "id": 109,
   "name": "الكافرون",
   "numberOfAyah": 6,
-  "roman": {
-    "name": "Al-Kafirun",
-    "slug": "al-kafirun"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-kafirun",
+  "translitName": "Al-Kafirun"
 }

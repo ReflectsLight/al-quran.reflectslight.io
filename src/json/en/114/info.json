@@ -2,9 +2,7 @@
   "id": 114,
   "name": "Mankind",
   "numberOfAyah": 6,
-  "roman": {
-    "name": "An-Nas",
-    "slug": "an-nas"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "an-nas",
+  "translitName": "An-Nas"
 }

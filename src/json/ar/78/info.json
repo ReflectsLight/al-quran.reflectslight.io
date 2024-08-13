@@ -2,9 +2,7 @@
   "id": 78,
   "name": "النبإ",
   "numberOfAyah": 40,
-  "roman": {
-    "name": "An-Naba",
-    "slug": "an-naba"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "an-naba",
+  "translitName": "An-Naba"
 }

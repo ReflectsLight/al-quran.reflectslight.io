@@ -2,9 +2,7 @@
   "id": 34,
   "name": "سبإ",
   "numberOfAyah": 54,
-  "roman": {
-    "name": "Saba",
-    "slug": "saba"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "saba",
+  "translitName": "Saba"
 }

@@ -2,9 +2,7 @@
   "id": 4,
   "name": "النساء",
   "numberOfAyah": 176,
-  "roman": {
-    "name": "An-Nisa",
-    "slug": "an-nisa"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "an-nisa",
+  "translitName": "An-Nisa"
 }

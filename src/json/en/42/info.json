@@ -2,9 +2,7 @@
   "id": 42,
   "name": "The Consultation",
   "numberOfAyah": 53,
-  "roman": {
-    "name": "Ash-Shuraa",
-    "slug": "ash-shuraa"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ash-shuraa",
+  "translitName": "Ash-Shuraa"
 }

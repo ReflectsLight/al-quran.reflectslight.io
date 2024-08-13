@@ -2,9 +2,7 @@
   "id": 59,
   "name": "The Exile",
   "numberOfAyah": 24,
-  "roman": {
-    "name": "Al-Hashr",
-    "slug": "al-hashr"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-hashr",
+  "translitName": "Al-Hashr"
 }

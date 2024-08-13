@@ -2,9 +2,7 @@
   "id": 38,
   "name": "The Letter \"Saad\"",
   "numberOfAyah": 88,
-  "roman": {
-    "name": "Sad",
-    "slug": "sad"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "sad",
+  "translitName": "Sad"
 }

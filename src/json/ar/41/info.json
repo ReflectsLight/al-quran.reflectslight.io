@@ -2,9 +2,7 @@
   "id": 41,
   "name": "فصلت",
   "numberOfAyah": 54,
-  "roman": {
-    "name": "Fussilat",
-    "slug": "fussilat"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "fussilat",
+  "translitName": "Fussilat"
 }

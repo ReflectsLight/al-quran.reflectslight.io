@@ -2,9 +2,7 @@
   "id": 56,
   "name": "The Inevitable",
   "numberOfAyah": 96,
-  "roman": {
-    "name": "Al-Waqi'ah",
-    "slug": "al-waqiah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-waqiah",
+  "translitName": "Al-Waqi'ah"
 }

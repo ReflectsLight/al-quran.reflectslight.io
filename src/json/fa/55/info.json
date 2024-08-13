@@ -2,9 +2,7 @@
   "id": 55,
   "name": "رحمن",
   "numberOfAyah": 78,
-  "roman": {
-    "name": "Ar-Rahman",
-    "slug": "ar-rahman"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ar-rahman",
+  "translitName": "Ar-Rahman"
 }

@@ -2,9 +2,7 @@
   "id": 81,
   "name": "التكوير",
   "numberOfAyah": 29,
-  "roman": {
-    "name": "At-Takwir",
-    "slug": "at-takwir"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-takwir",
+  "translitName": "At-Takwir"
 }

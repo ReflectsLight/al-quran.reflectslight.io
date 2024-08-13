@@ -2,9 +2,7 @@
   "id": 32,
   "name": "سجده",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "As-Sajdah",
-    "slug": "as-sajdah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "as-sajdah",
+  "translitName": "As-Sajdah"
 }

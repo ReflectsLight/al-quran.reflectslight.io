@@ -2,9 +2,7 @@
   "id": 108,
   "name": "The Abundance",
   "numberOfAyah": 3,
-  "roman": {
-    "name": "Al-Kawthar",
-    "slug": "al-kawthar"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-kawthar",
+  "translitName": "Al-Kawthar"
 }

@@ -2,9 +2,7 @@
   "id": 7,
   "name": "اعراف",
   "numberOfAyah": 206,
-  "roman": {
-    "name": "Al-A'raf",
-    "slug": "al-araf"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-araf",
+  "translitName": "Al-A'raf"
 }

@@ -2,9 +2,7 @@
   "id": 27,
   "name": "نمل",
   "numberOfAyah": 93,
-  "roman": {
-    "name": "An-Naml",
-    "slug": "an-naml"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "an-naml",
+  "translitName": "An-Naml"
 }

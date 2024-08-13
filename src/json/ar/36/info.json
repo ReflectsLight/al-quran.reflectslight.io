@@ -2,9 +2,7 @@
   "id": 36,
   "name": "يس",
   "numberOfAyah": 83,
-  "roman": {
-    "name": "Ya-Sin",
-    "slug": "ya-sin"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "ya-sin",
+  "translitName": "Ya-Sin"
 }

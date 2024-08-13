@@ -2,9 +2,7 @@
   "id": 114,
   "name": "الناس",
   "numberOfAyah": 6,
-  "roman": {
-    "name": "An-Nas",
-    "slug": "an-nas"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "an-nas",
+  "translitName": "An-Nas"
 }

@@ -2,9 +2,7 @@
   "id": 83,
   "name": "المطففين",
   "numberOfAyah": 36,
-  "roman": {
-    "name": "Al-Mutaffifin",
-    "slug": "al-mutaffifin"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-mutaffifin",
+  "translitName": "Al-Mutaffifin"
 }

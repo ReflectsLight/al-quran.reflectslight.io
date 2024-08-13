@@ -2,9 +2,7 @@
   "id": 16,
   "name": "النحل",
   "numberOfAyah": 128,
-  "roman": {
-    "name": "An-Nahl",
-    "slug": "an-nahl"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "an-nahl",
+  "translitName": "An-Nahl"
 }

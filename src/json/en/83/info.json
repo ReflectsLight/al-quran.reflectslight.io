@@ -2,9 +2,7 @@
   "id": 83,
   "name": "The Defrauding",
   "numberOfAyah": 36,
-  "roman": {
-    "name": "Al-Mutaffifin",
-    "slug": "al-mutaffifin"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-mutaffifin",
+  "translitName": "Al-Mutaffifin"
 }

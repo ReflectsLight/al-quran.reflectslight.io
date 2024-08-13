@@ -2,9 +2,7 @@
   "id": 95,
   "name": "تین",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "At-Tin",
-    "slug": "at-tin"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-tin",
+  "translitName": "At-Tin"
 }

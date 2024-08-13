@@ -2,9 +2,7 @@
   "id": 104,
   "name": "The Traducer",
   "numberOfAyah": 9,
-  "roman": {
-    "name": "Al-Humazah",
-    "slug": "al-humazah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-humazah",
+  "translitName": "Al-Humazah"
 }

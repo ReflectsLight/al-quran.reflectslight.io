@@ -2,9 +2,7 @@
   "id": 39,
   "name": "الزمر",
   "numberOfAyah": 75,
-  "roman": {
-    "name": "Az-Zumar",
-    "slug": "az-zumar"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "az-zumar",
+  "translitName": "Az-Zumar"
 }

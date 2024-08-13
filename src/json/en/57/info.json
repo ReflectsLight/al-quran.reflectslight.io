@@ -2,9 +2,7 @@
   "id": 57,
   "name": "The Iron",
   "numberOfAyah": 29,
-  "roman": {
-    "name": "Al-Hadid",
-    "slug": "al-hadid"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-hadid",
+  "translitName": "Al-Hadid"
 }

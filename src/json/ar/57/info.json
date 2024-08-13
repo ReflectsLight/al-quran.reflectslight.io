@@ -2,9 +2,7 @@
   "id": 57,
   "name": "الحديد",
   "numberOfAyah": 29,
-  "roman": {
-    "name": "Al-Hadid",
-    "slug": "al-hadid"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-hadid",
+  "translitName": "Al-Hadid"
 }

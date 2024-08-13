@@ -2,9 +2,7 @@
   "id": 46,
   "name": "الأحقاف",
   "numberOfAyah": 35,
-  "roman": {
-    "name": "Al-Ahqaf",
-    "slug": "al-ahqaf"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-ahqaf",
+  "translitName": "Al-Ahqaf"
 }

@@ -2,9 +2,7 @@
   "id": 57,
   "name": "حدید",
   "numberOfAyah": 29,
-  "roman": {
-    "name": "Al-Hadid",
-    "slug": "al-hadid"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-hadid",
+  "translitName": "Al-Hadid"
 }

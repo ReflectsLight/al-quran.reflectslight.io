@@ -2,9 +2,7 @@
   "id": 35,
   "name": "Originator",
   "numberOfAyah": 45,
-  "roman": {
-    "name": "Fatir",
-    "slug": "fatir"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "fatir",
+  "translitName": "Fatir"
 }

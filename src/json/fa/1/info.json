@@ -2,9 +2,7 @@
   "id": 1,
   "name": "فاتحه",
   "numberOfAyah": 7,
-  "roman": {
-    "name": "Al-Fatihah",
-    "slug": "al-fatihah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-fatihah",
+  "translitName": "Al-Fatihah"
 }

@@ -2,9 +2,7 @@
   "id": 92,
   "name": "لیل",
   "numberOfAyah": 21,
-  "roman": {
-    "name": "Al-Layl",
-    "slug": "al-layl"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-layl",
+  "translitName": "Al-Layl"
 }

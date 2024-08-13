@@ -4,1141 +4,913 @@
       "id": 1,
       "name": "الفاتحة",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Fatihah",
-        "slug": "al-fatihah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-fatihah",
+      "translitName": "Al-Fatihah"
     },
     {
       "id": 2,
       "name": "البقرة",
       "numberOfAyah": 286,
-      "roman": {
-        "name": "Al-Baqarah",
-        "slug": "al-baqarah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-baqarah",
+      "translitName": "Al-Baqarah"
     },
     {
       "id": 3,
       "name": "آل عمران",
       "numberOfAyah": 200,
-      "roman": {
-        "name": "Ali 'Imran",
-        "slug": "ali-imran"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ali-imran",
+      "translitName": "Ali 'Imran"
     },
     {
       "id": 4,
       "name": "النساء",
       "numberOfAyah": 176,
-      "roman": {
-        "name": "An-Nisa",
-        "slug": "an-nisa"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-nisa",
+      "translitName": "An-Nisa"
     },
     {
       "id": 5,
       "name": "المائدة",
       "numberOfAyah": 120,
-      "roman": {
-        "name": "Al-Ma'idah",
-        "slug": "al-maidah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-maidah",
+      "translitName": "Al-Ma'idah"
     },
     {
       "id": 6,
       "name": "الأنعام",
       "numberOfAyah": 165,
-      "roman": {
-        "name": "Al-An'am",
-        "slug": "al-anam"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-anam",
+      "translitName": "Al-An'am"
     },
     {
       "id": 7,
       "name": "الأعراف",
       "numberOfAyah": 206,
-      "roman": {
-        "name": "Al-A'raf",
-        "slug": "al-araf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-araf",
+      "translitName": "Al-A'raf"
     },
     {
       "id": 8,
       "name": "الأنفال",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Al-Anfal",
-        "slug": "al-anfal"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-anfal",
+      "translitName": "Al-Anfal"
     },
     {
       "id": 9,
       "name": "التوبة",
       "numberOfAyah": 129,
-      "roman": {
-        "name": "At-Tawbah",
-        "slug": "at-tawbah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-tawbah",
+      "translitName": "At-Tawbah"
     },
     {
       "id": 10,
       "name": "يونس",
       "numberOfAyah": 109,
-      "roman": {
-        "name": "Yunus",
-        "slug": "yunus"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "yunus",
+      "translitName": "Yunus"
     },
     {
       "id": 11,
       "name": "هود",
       "numberOfAyah": 123,
-      "roman": {
-        "name": "Hud",
-        "slug": "hud"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "hud",
+      "translitName": "Hud"
     },
     {
       "id": 12,
       "name": "يوسف",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Yusuf",
-        "slug": "yusuf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "yusuf",
+      "translitName": "Yusuf"
     },
     {
       "id": 13,
       "name": "الرعد",
       "numberOfAyah": 43,
-      "roman": {
-        "name": "Ar-Ra'd",
-        "slug": "ar-rad"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ar-rad",
+      "translitName": "Ar-Ra'd"
     },
     {
       "id": 14,
       "name": "ابراهيم",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Ibrahim",
-        "slug": "ibrahim"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ibrahim",
+      "translitName": "Ibrahim"
     },
     {
       "id": 15,
       "name": "الحجر",
       "numberOfAyah": 99,
-      "roman": {
-        "name": "Al-Hijr",
-        "slug": "al-hijr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-hijr",
+      "translitName": "Al-Hijr"
     },
     {
       "id": 16,
       "name": "النحل",
       "numberOfAyah": 128,
-      "roman": {
-        "name": "An-Nahl",
-        "slug": "an-nahl"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-nahl",
+      "translitName": "An-Nahl"
     },
     {
       "id": 17,
       "name": "الإسراء",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Al-Isra",
-        "slug": "al-isra"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-isra",
+      "translitName": "Al-Isra"
     },
     {
       "id": 18,
       "name": "الكهف",
       "numberOfAyah": 110,
-      "roman": {
-        "name": "Al-Kahf",
-        "slug": "al-kahf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-kahf",
+      "translitName": "Al-Kahf"
     },
     {
       "id": 19,
       "name": "مريم",
       "numberOfAyah": 98,
-      "roman": {
-        "name": "Maryam",
-        "slug": "maryam"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "maryam",
+      "translitName": "Maryam"
     },
     {
       "id": 20,
       "name": "طه",
       "numberOfAyah": 135,
-      "roman": {
-        "name": "Taha",
-        "slug": "taha"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "taha",
+      "translitName": "Taha"
     },
     {
       "id": 21,
       "name": "الأنبياء",
       "numberOfAyah": 112,
-      "roman": {
-        "name": "Al-Anbya",
-        "slug": "al-anbya"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-anbya",
+      "translitName": "Al-Anbya"
     },
     {
       "id": 22,
       "name": "الحج",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Al-Hajj",
-        "slug": "al-hajj"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-hajj",
+      "translitName": "Al-Hajj"
     },
     {
       "id": 23,
       "name": "المؤمنون",
       "numberOfAyah": 118,
-      "roman": {
-        "name": "Al-Mu'minun",
-        "slug": "al-muminun"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-muminun",
+      "translitName": "Al-Mu'minun"
     },
     {
       "id": 24,
       "name": "النور",
       "numberOfAyah": 64,
-      "roman": {
-        "name": "An-Nur",
-        "slug": "an-nur"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-nur",
+      "translitName": "An-Nur"
     },
     {
       "id": 25,
       "name": "الفرقان",
       "numberOfAyah": 77,
-      "roman": {
-        "name": "Al-Furqan",
-        "slug": "al-furqan"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-furqan",
+      "translitName": "Al-Furqan"
     },
     {
       "id": 26,
       "name": "الشعراء",
       "numberOfAyah": 227,
-      "roman": {
-        "name": "Ash-Shu'ara",
-        "slug": "ash-shuara"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ash-shuara",
+      "translitName": "Ash-Shu'ara"
     },
     {
       "id": 27,
       "name": "النمل",
       "numberOfAyah": 93,
-      "roman": {
-        "name": "An-Naml",
-        "slug": "an-naml"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-naml",
+      "translitName": "An-Naml"
     },
     {
       "id": 28,
       "name": "القصص",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Al-Qasas",
-        "slug": "al-qasas"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qasas",
+      "translitName": "Al-Qasas"
     },
     {
       "id": 29,
       "name": "العنكبوت",
       "numberOfAyah": 69,
-      "roman": {
-        "name": "Al-'Ankabut",
-        "slug": "al-ankabut"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ankabut",
+      "translitName": "Al-'Ankabut"
     },
     {
       "id": 30,
       "name": "الروم",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Ar-Rum",
-        "slug": "ar-rum"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ar-rum",
+      "translitName": "Ar-Rum"
     },
     {
       "id": 31,
       "name": "لقمان",
       "numberOfAyah": 34,
-      "roman": {
-        "name": "Luqman",
-        "slug": "luqman"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "luqman",
+      "translitName": "Luqman"
     },
     {
       "id": 32,
       "name": "السجدة",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "As-Sajdah",
-        "slug": "as-sajdah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "as-sajdah",
+      "translitName": "As-Sajdah"
     },
     {
       "id": 33,
       "name": "الأحزاب",
       "numberOfAyah": 73,
-      "roman": {
-        "name": "Al-Ahzab",
-        "slug": "al-ahzab"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ahzab",
+      "translitName": "Al-Ahzab"
     },
     {
       "id": 34,
       "name": "سبإ",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Saba",
-        "slug": "saba"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "saba",
+      "translitName": "Saba"
     },
     {
       "id": 35,
       "name": "فاطر",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Fatir",
-        "slug": "fatir"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "fatir",
+      "translitName": "Fatir"
     },
     {
       "id": 36,
       "name": "يس",
       "numberOfAyah": 83,
-      "roman": {
-        "name": "Ya-Sin",
-        "slug": "ya-sin"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ya-sin",
+      "translitName": "Ya-Sin"
     },
     {
       "id": 37,
       "name": "الصافات",
       "numberOfAyah": 182,
-      "roman": {
-        "name": "As-Saffat",
-        "slug": "as-saffat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "as-saffat",
+      "translitName": "As-Saffat"
     },
     {
       "id": 38,
       "name": "ص",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Sad",
-        "slug": "sad"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "sad",
+      "translitName": "Sad"
     },
     {
       "id": 39,
       "name": "الزمر",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Az-Zumar",
-        "slug": "az-zumar"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "az-zumar",
+      "translitName": "Az-Zumar"
     },
     {
       "id": 40,
       "name": "غافر",
       "numberOfAyah": 85,
-      "roman": {
-        "name": "Ghafir",
-        "slug": "ghafir"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ghafir",
+      "translitName": "Ghafir"
     },
     {
       "id": 41,
       "name": "فصلت",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Fussilat",
-        "slug": "fussilat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "fussilat",
+      "translitName": "Fussilat"
     },
     {
       "id": 42,
       "name": "الشورى",
       "numberOfAyah": 53,
-      "roman": {
-        "name": "Ash-Shuraa",
-        "slug": "ash-shuraa"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ash-shuraa",
+      "translitName": "Ash-Shuraa"
     },
     {
       "id": 43,
       "name": "الزخرف",
       "numberOfAyah": 89,
-      "roman": {
-        "name": "Az-Zukhruf",
-        "slug": "az-zukhruf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "az-zukhruf",
+      "translitName": "Az-Zukhruf"
     },
     {
       "id": 44,
       "name": "الدخان",
       "numberOfAyah": 59,
-      "roman": {
-        "name": "Ad-Dukhan",
-        "slug": "ad-dukhan"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ad-dukhan",
+      "translitName": "Ad-Dukhan"
     },
     {
       "id": 45,
       "name": "الجاثية",
       "numberOfAyah": 37,
-      "roman": {
-        "name": "Al-Jathiyah",
-        "slug": "al-jathiyah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-jathiyah",
+      "translitName": "Al-Jathiyah"
     },
     {
       "id": 46,
       "name": "الأحقاف",
       "numberOfAyah": 35,
-      "roman": {
-        "name": "Al-Ahqaf",
-        "slug": "al-ahqaf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ahqaf",
+      "translitName": "Al-Ahqaf"
     },
     {
       "id": 47,
       "name": "محمد",
       "numberOfAyah": 38,
-      "roman": {
-        "name": "Muhammad",
-        "slug": "muhammad"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "muhammad",
+      "translitName": "Muhammad"
     },
     {
       "id": 48,
       "name": "الفتح",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Fath",
-        "slug": "al-fath"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-fath",
+      "translitName": "Al-Fath"
     },
     {
       "id": 49,
       "name": "الحجرات",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "Al-Hujurat",
-        "slug": "al-hujurat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-hujurat",
+      "translitName": "Al-Hujurat"
     },
     {
       "id": 50,
       "name": "ق",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Qaf",
-        "slug": "qaf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "qaf",
+      "translitName": "Qaf"
     },
     {
       "id": 51,
       "name": "الذاريات",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Adh-Dhariyat",
-        "slug": "adh-dhariyat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "adh-dhariyat",
+      "translitName": "Adh-Dhariyat"
     },
     {
       "id": 52,
       "name": "الطور",
       "numberOfAyah": 49,
-      "roman": {
-        "name": "At-Tur",
-        "slug": "at-tur"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-tur",
+      "translitName": "At-Tur"
     },
     {
       "id": 53,
       "name": "النجم",
       "numberOfAyah": 62,
-      "roman": {
-        "name": "An-Najm",
-        "slug": "an-najm"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-najm",
+      "translitName": "An-Najm"
     },
     {
       "id": 54,
       "name": "القمر",
       "numberOfAyah": 55,
-      "roman": {
-        "name": "Al-Qamar",
-        "slug": "al-qamar"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qamar",
+      "translitName": "Al-Qamar"
     },
     {
       "id": 55,
       "name": "الرحمن",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Ar-Rahman",
-        "slug": "ar-rahman"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ar-rahman",
+      "translitName": "Ar-Rahman"
     },
     {
       "id": 56,
       "name": "الواقعة",
       "numberOfAyah": 96,
-      "roman": {
-        "name": "Al-Waqi'ah",
-        "slug": "al-waqiah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-waqiah",
+      "translitName": "Al-Waqi'ah"
     },
     {
       "id": 57,
       "name": "الحديد",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Hadid",
-        "slug": "al-hadid"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-hadid",
+      "translitName": "Al-Hadid"
     },
     {
       "id": 58,
       "name": "المجادلة",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Mujadila",
-        "slug": "al-mujadila"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-mujadila",
+      "translitName": "Al-Mujadila"
     },
     {
       "id": 59,
       "name": "الحشر",
       "numberOfAyah": 24,
-      "roman": {
-        "name": "Al-Hashr",
-        "slug": "al-hashr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-hashr",
+      "translitName": "Al-Hashr"
     },
     {
       "id": 60,
       "name": "الممتحنة",
       "numberOfAyah": 13,
-      "roman": {
-        "name": "Al-Mumtahanah",
-        "slug": "al-mumtahanah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-mumtahanah",
+      "translitName": "Al-Mumtahanah"
     },
     {
       "id": 61,
       "name": "الصف",
       "numberOfAyah": 14,
-      "roman": {
-        "name": "As-Saf",
-        "slug": "as-saf"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "as-saf",
+      "translitName": "As-Saf"
     },
     {
       "id": 62,
       "name": "الجمعة",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Jumu'ah",
-        "slug": "al-jumuah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-jumuah",
+      "translitName": "Al-Jumu'ah"
     },
     {
       "id": 63,
       "name": "المنافقون",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Munafiqun",
-        "slug": "al-munafiqun"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-munafiqun",
+      "translitName": "Al-Munafiqun"
     },
     {
       "id": 64,
       "name": "التغابن",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "At-Taghabun",
-        "slug": "at-taghabun"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-taghabun",
+      "translitName": "At-Taghabun"
     },
     {
       "id": 65,
       "name": "الطلاق",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Talaq",
-        "slug": "at-talaq"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-talaq",
+      "translitName": "At-Talaq"
     },
     {
       "id": 66,
       "name": "التحريم",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Tahrim",
-        "slug": "at-tahrim"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-tahrim",
+      "translitName": "At-Tahrim"
     },
     {
       "id": 67,
       "name": "الملك",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Mulk",
-        "slug": "al-mulk"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-mulk",
+      "translitName": "Al-Mulk"
     },
     {
       "id": 68,
       "name": "القلم",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Qalam",
-        "slug": "al-qalam"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qalam",
+      "translitName": "Al-Qalam"
     },
     {
       "id": 69,
       "name": "الحاقة",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Haqqah",
-        "slug": "al-haqqah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-haqqah",
+      "translitName": "Al-Haqqah"
     },
     {
       "id": 70,
       "name": "المعارج",
       "numberOfAyah": 44,
-      "roman": {
-        "name": "Al-Ma'arij",
-        "slug": "al-maarij"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-maarij",
+      "translitName": "Al-Ma'arij"
     },
     {
       "id": 71,
       "name": "نوح",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Nuh",
-        "slug": "nuh"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "nuh",
+      "translitName": "Nuh"
     },
     {
       "id": 72,
       "name": "الجن",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Al-Jinn",
-        "slug": "al-jinn"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-jinn",
+      "translitName": "Al-Jinn"
     },
     {
       "id": 73,
       "name": "المزمل",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Muzzammil",
-        "slug": "al-muzzammil"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-muzzammil",
+      "translitName": "Al-Muzzammil"
     },
     {
       "id": 74,
       "name": "المدثر",
       "numberOfAyah": 56,
-      "roman": {
-        "name": "Al-Muddaththir",
-        "slug": "al-muddaththir"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-muddaththir",
+      "translitName": "Al-Muddaththir"
     },
     {
       "id": 75,
       "name": "القيامة",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "Al-Qiyamah",
-        "slug": "al-qiyamah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qiyamah",
+      "translitName": "Al-Qiyamah"
     },
     {
       "id": 76,
       "name": "الانسان",
       "numberOfAyah": 31,
-      "roman": {
-        "name": "Al-Insan",
-        "slug": "al-insan"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-insan",
+      "translitName": "Al-Insan"
     },
     {
       "id": 77,
       "name": "المرسلات",
       "numberOfAyah": 50,
-      "roman": {
-        "name": "Al-Mursalat",
-        "slug": "al-mursalat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-mursalat",
+      "translitName": "Al-Mursalat"
     },
     {
       "id": 78,
       "name": "النبإ",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "An-Naba",
-        "slug": "an-naba"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-naba",
+      "translitName": "An-Naba"
     },
     {
       "id": 79,
       "name": "النازعات",
       "numberOfAyah": 46,
-      "roman": {
-        "name": "An-Nazi'at",
-        "slug": "an-naziat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-naziat",
+      "translitName": "An-Nazi'at"
     },
     {
       "id": 80,
       "name": "عبس",
       "numberOfAyah": 42,
-      "roman": {
-        "name": "'Abasa",
-        "slug": "abasa"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "abasa",
+      "translitName": "'Abasa"
     },
     {
       "id": 81,
       "name": "التكوير",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "At-Takwir",
-        "slug": "at-takwir"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-takwir",
+      "translitName": "At-Takwir"
     },
     {
       "id": 82,
       "name": "الإنفطار",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-Infitar",
-        "slug": "al-infitar"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-infitar",
+      "translitName": "Al-Infitar"
     },
     {
       "id": 83,
       "name": "المطففين",
       "numberOfAyah": 36,
-      "roman": {
-        "name": "Al-Mutaffifin",
-        "slug": "al-mutaffifin"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-mutaffifin",
+      "translitName": "Al-Mutaffifin"
     },
     {
       "id": 84,
       "name": "الإنشقاق",
       "numberOfAyah": 25,
-      "roman": {
-        "name": "Al-Inshiqaq",
-        "slug": "al-inshiqaq"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-inshiqaq",
+      "translitName": "Al-Inshiqaq"
     },
     {
       "id": 85,
       "name": "البروج",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Buruj",
-        "slug": "al-buruj"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-buruj",
+      "translitName": "Al-Buruj"
     },
     {
       "id": 86,
       "name": "الطارق",
       "numberOfAyah": 17,
-      "roman": {
-        "name": "At-Tariq",
-        "slug": "at-tariq"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-tariq",
+      "translitName": "At-Tariq"
     },
     {
       "id": 87,
       "name": "الأعلى",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-A'la",
-        "slug": "al-ala"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ala",
+      "translitName": "Al-A'la"
     },
     {
       "id": 88,
       "name": "الغاشية",
       "numberOfAyah": 26,
-      "roman": {
-        "name": "Al-Ghashiyah",
-        "slug": "al-ghashiyah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ghashiyah",
+      "translitName": "Al-Ghashiyah"
     },
     {
       "id": 89,
       "name": "الفجر",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Fajr",
-        "slug": "al-fajr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-fajr",
+      "translitName": "Al-Fajr"
     },
     {
       "id": 90,
       "name": "البلد",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Balad",
-        "slug": "al-balad"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-balad",
+      "translitName": "Al-Balad"
     },
     {
       "id": 91,
       "name": "الشمس",
       "numberOfAyah": 15,
-      "roman": {
-        "name": "Ash-Shams",
-        "slug": "ash-shams"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ash-shams",
+      "translitName": "Ash-Shams"
     },
     {
       "id": 92,
       "name": "الليل",
       "numberOfAyah": 21,
-      "roman": {
-        "name": "Al-Layl",
-        "slug": "al-layl"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-layl",
+      "translitName": "Al-Layl"
     },
     {
       "id": 93,
       "name": "الضحى",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Ad-Duhaa",
-        "slug": "ad-duhaa"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ad-duhaa",
+      "translitName": "Ad-Duhaa"
     },
     {
       "id": 94,
       "name": "الشرح",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Ash-Sharh",
-        "slug": "ash-sharh"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "ash-sharh",
+      "translitName": "Ash-Sharh"
     },
     {
       "id": 95,
       "name": "التين",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Tin",
-        "slug": "at-tin"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-tin",
+      "translitName": "At-Tin"
     },
     {
       "id": 96,
       "name": "العلق",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-'Alaq",
-        "slug": "al-alaq"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-alaq",
+      "translitName": "Al-'Alaq"
     },
     {
       "id": 97,
       "name": "القدر",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Qadr",
-        "slug": "al-qadr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qadr",
+      "translitName": "Al-Qadr"
     },
     {
       "id": 98,
       "name": "البينة",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Al-Bayyinah",
-        "slug": "al-bayyinah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-bayyinah",
+      "translitName": "Al-Bayyinah"
     },
     {
       "id": 99,
       "name": "الزلزلة",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Az-Zalzalah",
-        "slug": "az-zalzalah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "az-zalzalah",
+      "translitName": "Az-Zalzalah"
     },
     {
       "id": 100,
       "name": "العاديات",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-'Adiyat",
-        "slug": "al-adiyat"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-adiyat",
+      "translitName": "Al-'Adiyat"
     },
     {
       "id": 101,
       "name": "القارعة",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Qari'ah",
-        "slug": "al-qariah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-qariah",
+      "translitName": "Al-Qari'ah"
     },
     {
       "id": 102,
       "name": "التكاثر",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Takathur",
-        "slug": "at-takathur"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "at-takathur",
+      "translitName": "At-Takathur"
     },
     {
       "id": 103,
       "name": "العصر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-'Asr",
-        "slug": "al-asr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-asr",
+      "translitName": "Al-'Asr"
     },
     {
       "id": 104,
       "name": "الهمزة",
       "numberOfAyah": 9,
-      "roman": {
-        "name": "Al-Humazah",
-        "slug": "al-humazah"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-humazah",
+      "translitName": "Al-Humazah"
     },
     {
       "id": 105,
       "name": "الفيل",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Fil",
-        "slug": "al-fil"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-fil",
+      "translitName": "Al-Fil"
     },
     {
       "id": 106,
       "name": "قريش",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Quraysh",
-        "slug": "quraysh"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "quraysh",
+      "translitName": "Quraysh"
     },
     {
       "id": 107,
       "name": "الماعون",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Ma'un",
-        "slug": "al-maun"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-maun",
+      "translitName": "Al-Ma'un"
     },
     {
       "id": 108,
       "name": "الكوثر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-Kawthar",
-        "slug": "al-kawthar"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-kawthar",
+      "translitName": "Al-Kawthar"
     },
     {
       "id": 109,
       "name": "الكافرون",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "Al-Kafirun",
-        "slug": "al-kafirun"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-kafirun",
+      "translitName": "Al-Kafirun"
     },
     {
       "id": 110,
       "name": "النصر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "An-Nasr",
-        "slug": "an-nasr"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-nasr",
+      "translitName": "An-Nasr"
     },
     {
       "id": 111,
       "name": "المسد",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Masad",
-        "slug": "al-masad"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-masad",
+      "translitName": "Al-Masad"
     },
     {
       "id": 112,
       "name": "الإخلاص",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Al-Ikhlas",
-        "slug": "al-ikhlas"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-ikhlas",
+      "translitName": "Al-Ikhlas"
     },
     {
       "id": 113,
       "name": "الفلق",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Falaq",
-        "slug": "al-falaq"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "al-falaq",
+      "translitName": "Al-Falaq"
     },
     {
       "id": 114,
       "name": "الناس",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "An-Nas",
-        "slug": "an-nas"
-      },
-      "translatedBy": null
+      "translatedBy": null,
+      "urlName": "an-nas",
+      "translitName": "An-Nas"
     }
   ],
   "en": [
@@ -1146,1141 +918,913 @@
       "id": 1,
       "name": "The Opener",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Fatihah",
-        "slug": "al-fatihah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-fatihah",
+      "translitName": "Al-Fatihah"
     },
     {
       "id": 2,
       "name": "The Cow",
       "numberOfAyah": 286,
-      "roman": {
-        "name": "Al-Baqarah",
-        "slug": "al-baqarah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-baqarah",
+      "translitName": "Al-Baqarah"
     },
     {
       "id": 3,
       "name": "Family of Imran",
       "numberOfAyah": 200,
-      "roman": {
-        "name": "Ali 'Imran",
-        "slug": "ali-imran"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ali-imran",
+      "translitName": "Ali 'Imran"
     },
     {
       "id": 4,
       "name": "The Women",
       "numberOfAyah": 176,
-      "roman": {
-        "name": "An-Nisa",
-        "slug": "an-nisa"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-nisa",
+      "translitName": "An-Nisa"
     },
     {
       "id": 5,
       "name": "The Table Spread",
       "numberOfAyah": 120,
-      "roman": {
-        "name": "Al-Ma'idah",
-        "slug": "al-maidah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-maidah",
+      "translitName": "Al-Ma'idah"
     },
     {
       "id": 6,
       "name": "The Cattle",
       "numberOfAyah": 165,
-      "roman": {
-        "name": "Al-An'am",
-        "slug": "al-anam"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-anam",
+      "translitName": "Al-An'am"
     },
     {
       "id": 7,
       "name": "The Heights",
       "numberOfAyah": 206,
-      "roman": {
-        "name": "Al-A'raf",
-        "slug": "al-araf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-araf",
+      "translitName": "Al-A'raf"
     },
     {
       "id": 8,
       "name": "The Spoils of War",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Al-Anfal",
-        "slug": "al-anfal"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-anfal",
+      "translitName": "Al-Anfal"
     },
     {
       "id": 9,
       "name": "The Repentance",
       "numberOfAyah": 129,
-      "roman": {
-        "name": "At-Tawbah",
-        "slug": "at-tawbah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-tawbah",
+      "translitName": "At-Tawbah"
     },
     {
       "id": 10,
       "name": "Jonah",
       "numberOfAyah": 109,
-      "roman": {
-        "name": "Yunus",
-        "slug": "yunus"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "yunus",
+      "translitName": "Yunus"
     },
     {
       "id": 11,
       "name": "Hud",
       "numberOfAyah": 123,
-      "roman": {
-        "name": "Hud",
-        "slug": "hud"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "hud",
+      "translitName": "Hud"
     },
     {
       "id": 12,
       "name": "Joseph",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Yusuf",
-        "slug": "yusuf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "yusuf",
+      "translitName": "Yusuf"
     },
     {
       "id": 13,
       "name": "The Thunder",
       "numberOfAyah": 43,
-      "roman": {
-        "name": "Ar-Ra'd",
-        "slug": "ar-rad"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ar-rad",
+      "translitName": "Ar-Ra'd"
     },
     {
       "id": 14,
       "name": "Abraham",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Ibrahim",
-        "slug": "ibrahim"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ibrahim",
+      "translitName": "Ibrahim"
     },
     {
       "id": 15,
       "name": "The Rocky Tract",
       "numberOfAyah": 99,
-      "roman": {
-        "name": "Al-Hijr",
-        "slug": "al-hijr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-hijr",
+      "translitName": "Al-Hijr"
     },
     {
       "id": 16,
       "name": "The Bee",
       "numberOfAyah": 128,
-      "roman": {
-        "name": "An-Nahl",
-        "slug": "an-nahl"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-nahl",
+      "translitName": "An-Nahl"
     },
     {
       "id": 17,
       "name": "The Night Journey",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Al-Isra",
-        "slug": "al-isra"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-isra",
+      "translitName": "Al-Isra"
     },
     {
       "id": 18,
       "name": "The Cave",
       "numberOfAyah": 110,
-      "roman": {
-        "name": "Al-Kahf",
-        "slug": "al-kahf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-kahf",
+      "translitName": "Al-Kahf"
     },
     {
       "id": 19,
       "name": "Mary",
       "numberOfAyah": 98,
-      "roman": {
-        "name": "Maryam",
-        "slug": "maryam"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "maryam",
+      "translitName": "Maryam"
     },
     {
       "id": 20,
       "name": "Ta-Ha",
       "numberOfAyah": 135,
-      "roman": {
-        "name": "Taha",
-        "slug": "taha"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "taha",
+      "translitName": "Taha"
     },
     {
       "id": 21,
       "name": "The Prophets",
       "numberOfAyah": 112,
-      "roman": {
-        "name": "Al-Anbya",
-        "slug": "al-anbya"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-anbya",
+      "translitName": "Al-Anbya"
     },
     {
       "id": 22,
       "name": "The Pilgrimage",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Al-Hajj",
-        "slug": "al-hajj"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-hajj",
+      "translitName": "Al-Hajj"
     },
     {
       "id": 23,
       "name": "The Believers",
       "numberOfAyah": 118,
-      "roman": {
-        "name": "Al-Mu'minun",
-        "slug": "al-muminun"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-muminun",
+      "translitName": "Al-Mu'minun"
     },
     {
       "id": 24,
       "name": "The Light",
       "numberOfAyah": 64,
-      "roman": {
-        "name": "An-Nur",
-        "slug": "an-nur"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-nur",
+      "translitName": "An-Nur"
     },
     {
       "id": 25,
       "name": "The Criterion",
       "numberOfAyah": 77,
-      "roman": {
-        "name": "Al-Furqan",
-        "slug": "al-furqan"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-furqan",
+      "translitName": "Al-Furqan"
     },
     {
       "id": 26,
       "name": "The Poets",
       "numberOfAyah": 227,
-      "roman": {
-        "name": "Ash-Shu'ara",
-        "slug": "ash-shuara"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ash-shuara",
+      "translitName": "Ash-Shu'ara"
     },
     {
       "id": 27,
       "name": "The Ant",
       "numberOfAyah": 93,
-      "roman": {
-        "name": "An-Naml",
-        "slug": "an-naml"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-naml",
+      "translitName": "An-Naml"
     },
     {
       "id": 28,
       "name": "The Stories",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Al-Qasas",
-        "slug": "al-qasas"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qasas",
+      "translitName": "Al-Qasas"
     },
     {
       "id": 29,
       "name": "The Spider",
       "numberOfAyah": 69,
-      "roman": {
-        "name": "Al-'Ankabut",
-        "slug": "al-ankabut"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ankabut",
+      "translitName": "Al-'Ankabut"
     },
     {
       "id": 30,
       "name": "The Romans",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Ar-Rum",
-        "slug": "ar-rum"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ar-rum",
+      "translitName": "Ar-Rum"
     },
     {
       "id": 31,
       "name": "Luqman",
       "numberOfAyah": 34,
-      "roman": {
-        "name": "Luqman",
-        "slug": "luqman"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "luqman",
+      "translitName": "Luqman"
     },
     {
       "id": 32,
       "name": "The Prostration",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "As-Sajdah",
-        "slug": "as-sajdah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "as-sajdah",
+      "translitName": "As-Sajdah"
     },
     {
       "id": 33,
       "name": "The Combined Forces",
       "numberOfAyah": 73,
-      "roman": {
-        "name": "Al-Ahzab",
-        "slug": "al-ahzab"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ahzab",
+      "translitName": "Al-Ahzab"
     },
     {
       "id": 34,
       "name": "Sheba",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Saba",
-        "slug": "saba"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "saba",
+      "translitName": "Saba"
     },
     {
       "id": 35,
       "name": "Originator",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Fatir",
-        "slug": "fatir"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "fatir",
+      "translitName": "Fatir"
     },
     {
       "id": 36,
       "name": "Ya Sin",
       "numberOfAyah": 83,
-      "roman": {
-        "name": "Ya-Sin",
-        "slug": "ya-sin"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ya-sin",
+      "translitName": "Ya-Sin"
     },
     {
       "id": 37,
       "name": "Those who set the Ranks",
       "numberOfAyah": 182,
-      "roman": {
-        "name": "As-Saffat",
-        "slug": "as-saffat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "as-saffat",
+      "translitName": "As-Saffat"
     },
     {
       "id": 38,
       "name": "The Letter \"Saad\"",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Sad",
-        "slug": "sad"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "sad",
+      "translitName": "Sad"
     },
     {
       "id": 39,
       "name": "The Troops",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Az-Zumar",
-        "slug": "az-zumar"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "az-zumar",
+      "translitName": "Az-Zumar"
     },
     {
       "id": 40,
       "name": "The Forgiver",
       "numberOfAyah": 85,
-      "roman": {
-        "name": "Ghafir",
-        "slug": "ghafir"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ghafir",
+      "translitName": "Ghafir"
     },
     {
       "id": 41,
       "name": "Explained in Detail",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Fussilat",
-        "slug": "fussilat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "fussilat",
+      "translitName": "Fussilat"
     },
     {
       "id": 42,
       "name": "The Consultation",
       "numberOfAyah": 53,
-      "roman": {
-        "name": "Ash-Shuraa",
-        "slug": "ash-shuraa"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ash-shuraa",
+      "translitName": "Ash-Shuraa"
     },
     {
       "id": 43,
       "name": "The Ornaments of Gold",
       "numberOfAyah": 89,
-      "roman": {
-        "name": "Az-Zukhruf",
-        "slug": "az-zukhruf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "az-zukhruf",
+      "translitName": "Az-Zukhruf"
     },
     {
       "id": 44,
       "name": "The Smoke",
       "numberOfAyah": 59,
-      "roman": {
-        "name": "Ad-Dukhan",
-        "slug": "ad-dukhan"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ad-dukhan",
+      "translitName": "Ad-Dukhan"
     },
     {
       "id": 45,
       "name": "The Crouching",
       "numberOfAyah": 37,
-      "roman": {
-        "name": "Al-Jathiyah",
-        "slug": "al-jathiyah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-jathiyah",
+      "translitName": "Al-Jathiyah"
     },
     {
       "id": 46,
       "name": "The Wind-Curved Sandhills",
       "numberOfAyah": 35,
-      "roman": {
-        "name": "Al-Ahqaf",
-        "slug": "al-ahqaf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ahqaf",
+      "translitName": "Al-Ahqaf"
     },
     {
       "id": 47,
       "name": "Muhammad",
       "numberOfAyah": 38,
-      "roman": {
-        "name": "Muhammad",
-        "slug": "muhammad"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "muhammad",
+      "translitName": "Muhammad"
     },
     {
       "id": 48,
       "name": "The Victory",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Fath",
-        "slug": "al-fath"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-fath",
+      "translitName": "Al-Fath"
     },
     {
       "id": 49,
       "name": "The Rooms",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "Al-Hujurat",
-        "slug": "al-hujurat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-hujurat",
+      "translitName": "Al-Hujurat"
     },
     {
       "id": 50,
       "name": "The Letter \"Qaf\"",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Qaf",
-        "slug": "qaf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "qaf",
+      "translitName": "Qaf"
     },
     {
       "id": 51,
       "name": "The Winnowing Winds",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Adh-Dhariyat",
-        "slug": "adh-dhariyat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "adh-dhariyat",
+      "translitName": "Adh-Dhariyat"
     },
     {
       "id": 52,
       "name": "The Mount",
       "numberOfAyah": 49,
-      "roman": {
-        "name": "At-Tur",
-        "slug": "at-tur"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-tur",
+      "translitName": "At-Tur"
     },
     {
       "id": 53,
       "name": "The Star",
       "numberOfAyah": 62,
-      "roman": {
-        "name": "An-Najm",
-        "slug": "an-najm"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-najm",
+      "translitName": "An-Najm"
     },
     {
       "id": 54,
       "name": "The Moon",
       "numberOfAyah": 55,
-      "roman": {
-        "name": "Al-Qamar",
-        "slug": "al-qamar"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qamar",
+      "translitName": "Al-Qamar"
     },
     {
       "id": 55,
       "name": "The Beneficent",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Ar-Rahman",
-        "slug": "ar-rahman"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ar-rahman",
+      "translitName": "Ar-Rahman"
     },
     {
       "id": 56,
       "name": "The Inevitable",
       "numberOfAyah": 96,
-      "roman": {
-        "name": "Al-Waqi'ah",
-        "slug": "al-waqiah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-waqiah",
+      "translitName": "Al-Waqi'ah"
     },
     {
       "id": 57,
       "name": "The Iron",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Hadid",
-        "slug": "al-hadid"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-hadid",
+      "translitName": "Al-Hadid"
     },
     {
       "id": 58,
       "name": "The Pleading Woman",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Mujadila",
-        "slug": "al-mujadila"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-mujadila",
+      "translitName": "Al-Mujadila"
     },
     {
       "id": 59,
       "name": "The Exile",
       "numberOfAyah": 24,
-      "roman": {
-        "name": "Al-Hashr",
-        "slug": "al-hashr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-hashr",
+      "translitName": "Al-Hashr"
     },
     {
       "id": 60,
       "name": "She that is to be examined",
       "numberOfAyah": 13,
-      "roman": {
-        "name": "Al-Mumtahanah",
-        "slug": "al-mumtahanah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-mumtahanah",
+      "translitName": "Al-Mumtahanah"
     },
     {
       "id": 61,
       "name": "The Ranks",
       "numberOfAyah": 14,
-      "roman": {
-        "name": "As-Saf",
-        "slug": "as-saf"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "as-saf",
+      "translitName": "As-Saf"
     },
     {
       "id": 62,
       "name": "The Congregation, Friday",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Jumu'ah",
-        "slug": "al-jumuah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-jumuah",
+      "translitName": "Al-Jumu'ah"
     },
     {
       "id": 63,
       "name": "The Hypocrites",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Munafiqun",
-        "slug": "al-munafiqun"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-munafiqun",
+      "translitName": "Al-Munafiqun"
     },
     {
       "id": 64,
       "name": "The Mutual Disillusion",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "At-Taghabun",
-        "slug": "at-taghabun"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-taghabun",
+      "translitName": "At-Taghabun"
     },
     {
       "id": 65,
       "name": "The Divorce",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Talaq",
-        "slug": "at-talaq"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-talaq",
+      "translitName": "At-Talaq"
     },
     {
       "id": 66,
       "name": "The Prohibition",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Tahrim",
-        "slug": "at-tahrim"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-tahrim",
+      "translitName": "At-Tahrim"
     },
     {
       "id": 67,
       "name": "The Sovereignty",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Mulk",
-        "slug": "al-mulk"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-mulk",
+      "translitName": "Al-Mulk"
     },
     {
       "id": 68,
       "name": "The Pen",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Qalam",
-        "slug": "al-qalam"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qalam",
+      "translitName": "Al-Qalam"
     },
     {
       "id": 69,
       "name": "The Reality",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Haqqah",
-        "slug": "al-haqqah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-haqqah",
+      "translitName": "Al-Haqqah"
     },
     {
       "id": 70,
       "name": "The Ascending Stairways",
       "numberOfAyah": 44,
-      "roman": {
-        "name": "Al-Ma'arij",
-        "slug": "al-maarij"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-maarij",
+      "translitName": "Al-Ma'arij"
     },
     {
       "id": 71,
       "name": "Noah",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Nuh",
-        "slug": "nuh"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "nuh",
+      "translitName": "Nuh"
     },
     {
       "id": 72,
       "name": "The Jinn",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Al-Jinn",
-        "slug": "al-jinn"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-jinn",
+      "translitName": "Al-Jinn"
     },
     {
       "id": 73,
       "name": "The Enshrouded One",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Muzzammil",
-        "slug": "al-muzzammil"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-muzzammil",
+      "translitName": "Al-Muzzammil"
     },
     {
       "id": 74,
       "name": "The Cloaked One",
       "numberOfAyah": 56,
-      "roman": {
-        "name": "Al-Muddaththir",
-        "slug": "al-muddaththir"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-muddaththir",
+      "translitName": "Al-Muddaththir"
     },
     {
       "id": 75,
       "name": "The Resurrection",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "Al-Qiyamah",
-        "slug": "al-qiyamah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qiyamah",
+      "translitName": "Al-Qiyamah"
     },
     {
       "id": 76,
       "name": "The Man",
       "numberOfAyah": 31,
-      "roman": {
-        "name": "Al-Insan",
-        "slug": "al-insan"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-insan",
+      "translitName": "Al-Insan"
     },
     {
       "id": 77,
       "name": "The Emissaries",
       "numberOfAyah": 50,
-      "roman": {
-        "name": "Al-Mursalat",
-        "slug": "al-mursalat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-mursalat",
+      "translitName": "Al-Mursalat"
     },
     {
       "id": 78,
       "name": "The Tidings",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "An-Naba",
-        "slug": "an-naba"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-naba",
+      "translitName": "An-Naba"
     },
     {
       "id": 79,
       "name": "Those who drag forth",
       "numberOfAyah": 46,
-      "roman": {
-        "name": "An-Nazi'at",
-        "slug": "an-naziat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-naziat",
+      "translitName": "An-Nazi'at"
     },
     {
       "id": 80,
       "name": "He Frowned",
       "numberOfAyah": 42,
-      "roman": {
-        "name": "'Abasa",
-        "slug": "abasa"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "abasa",
+      "translitName": "'Abasa"
     },
     {
       "id": 81,
       "name": "The Overthrowing",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "At-Takwir",
-        "slug": "at-takwir"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-takwir",
+      "translitName": "At-Takwir"
     },
     {
       "id": 82,
       "name": "The Cleaving",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-Infitar",
-        "slug": "al-infitar"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-infitar",
+      "translitName": "Al-Infitar"
     },
     {
       "id": 83,
       "name": "The Defrauding",
       "numberOfAyah": 36,
-      "roman": {
-        "name": "Al-Mutaffifin",
-        "slug": "al-mutaffifin"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-mutaffifin",
+      "translitName": "Al-Mutaffifin"
     },
     {
       "id": 84,
       "name": "The Sundering",
       "numberOfAyah": 25,
-      "roman": {
-        "name": "Al-Inshiqaq",
-        "slug": "al-inshiqaq"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-inshiqaq",
+      "translitName": "Al-Inshiqaq"
     },
     {
       "id": 85,
       "name": "The Mansions of the Stars",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Buruj",
-        "slug": "al-buruj"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-buruj",
+      "translitName": "Al-Buruj"
     },
     {
       "id": 86,
       "name": "The Nightcommer",
       "numberOfAyah": 17,
-      "roman": {
-        "name": "At-Tariq",
-        "slug": "at-tariq"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-tariq",
+      "translitName": "At-Tariq"
     },
     {
       "id": 87,
       "name": "The Most High",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-A'la",
-        "slug": "al-ala"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ala",
+      "translitName": "Al-A'la"
     },
     {
       "id": 88,
       "name": "The Overwhelming",
       "numberOfAyah": 26,
-      "roman": {
-        "name": "Al-Ghashiyah",
-        "slug": "al-ghashiyah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ghashiyah",
+      "translitName": "Al-Ghashiyah"
     },
     {
       "id": 89,
       "name": "The Dawn",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Fajr",
-        "slug": "al-fajr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-fajr",
+      "translitName": "Al-Fajr"
     },
     {
       "id": 90,
       "name": "The City",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Balad",
-        "slug": "al-balad"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-balad",
+      "translitName": "Al-Balad"
     },
     {
       "id": 91,
       "name": "The Sun",
       "numberOfAyah": 15,
-      "roman": {
-        "name": "Ash-Shams",
-        "slug": "ash-shams"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ash-shams",
+      "translitName": "Ash-Shams"
     },
     {
       "id": 92,
       "name": "The Night",
       "numberOfAyah": 21,
-      "roman": {
-        "name": "Al-Layl",
-        "slug": "al-layl"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-layl",
+      "translitName": "Al-Layl"
     },
     {
       "id": 93,
       "name": "The Morning Hours",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Ad-Duhaa",
-        "slug": "ad-duhaa"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ad-duhaa",
+      "translitName": "Ad-Duhaa"
     },
     {
       "id": 94,
       "name": "The Relief",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Ash-Sharh",
-        "slug": "ash-sharh"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "ash-sharh",
+      "translitName": "Ash-Sharh"
     },
     {
       "id": 95,
       "name": "The Fig",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Tin",
-        "slug": "at-tin"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-tin",
+      "translitName": "At-Tin"
     },
     {
       "id": 96,
       "name": "The Clot",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-'Alaq",
-        "slug": "al-alaq"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-alaq",
+      "translitName": "Al-'Alaq"
     },
     {
       "id": 97,
       "name": "The Power",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Qadr",
-        "slug": "al-qadr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qadr",
+      "translitName": "Al-Qadr"
     },
     {
       "id": 98,
       "name": "The Clear Proof",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Al-Bayyinah",
-        "slug": "al-bayyinah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-bayyinah",
+      "translitName": "Al-Bayyinah"
     },
     {
       "id": 99,
       "name": "The Earthquake",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Az-Zalzalah",
-        "slug": "az-zalzalah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "az-zalzalah",
+      "translitName": "Az-Zalzalah"
     },
     {
       "id": 100,
       "name": "The Courser",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-'Adiyat",
-        "slug": "al-adiyat"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-adiyat",
+      "translitName": "Al-'Adiyat"
     },
     {
       "id": 101,
       "name": "The Calamity",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Qari'ah",
-        "slug": "al-qariah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-qariah",
+      "translitName": "Al-Qari'ah"
     },
     {
       "id": 102,
       "name": "The Rivalry in world increase",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Takathur",
-        "slug": "at-takathur"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "at-takathur",
+      "translitName": "At-Takathur"
     },
     {
       "id": 103,
       "name": "The Declining Day",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-'Asr",
-        "slug": "al-asr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-asr",
+      "translitName": "Al-'Asr"
     },
     {
       "id": 104,
       "name": "The Traducer",
       "numberOfAyah": 9,
-      "roman": {
-        "name": "Al-Humazah",
-        "slug": "al-humazah"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-humazah",
+      "translitName": "Al-Humazah"
     },
     {
       "id": 105,
       "name": "The Elephant",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Fil",
-        "slug": "al-fil"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-fil",
+      "translitName": "Al-Fil"
     },
     {
       "id": 106,
       "name": "Quraysh",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Quraysh",
-        "slug": "quraysh"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "quraysh",
+      "translitName": "Quraysh"
     },
     {
       "id": 107,
       "name": "The Small kindnesses",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Ma'un",
-        "slug": "al-maun"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-maun",
+      "translitName": "Al-Ma'un"
     },
     {
       "id": 108,
       "name": "The Abundance",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-Kawthar",
-        "slug": "al-kawthar"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-kawthar",
+      "translitName": "Al-Kawthar"
     },
     {
       "id": 109,
       "name": "The Disbelievers",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "Al-Kafirun",
-        "slug": "al-kafirun"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-kafirun",
+      "translitName": "Al-Kafirun"
     },
     {
       "id": 110,
       "name": "The Divine Support",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "An-Nasr",
-        "slug": "an-nasr"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-nasr",
+      "translitName": "An-Nasr"
     },
     {
       "id": 111,
       "name": "The Palm Fiber",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Masad",
-        "slug": "al-masad"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-masad",
+      "translitName": "Al-Masad"
     },
     {
       "id": 112,
       "name": "The Sincerity",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Al-Ikhlas",
-        "slug": "al-ikhlas"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-ikhlas",
+      "translitName": "Al-Ikhlas"
     },
     {
       "id": 113,
       "name": "The Daybreak",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Falaq",
-        "slug": "al-falaq"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "al-falaq",
+      "translitName": "Al-Falaq"
     },
     {
       "id": 114,
       "name": "Mankind",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "An-Nas",
-        "slug": "an-nas"
-      },
-      "translatedBy": "Dr. Mustafa Khattab"
+      "translatedBy": "Dr. Mustafa Khattab",
+      "urlName": "an-nas",
+      "translitName": "An-Nas"
     }
   ],
   "fa": [
@@ -2288,1141 +1832,913 @@
       "id": 1,
       "name": "فاتحه",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Fatihah",
-        "slug": "al-fatihah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-fatihah",
+      "translitName": "Al-Fatihah"
     },
     {
       "id": 2,
       "name": "بقره",
       "numberOfAyah": 286,
-      "roman": {
-        "name": "Al-Baqarah",
-        "slug": "al-baqarah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-baqarah",
+      "translitName": "Al-Baqarah"
     },
     {
       "id": 3,
       "name": "آل عمران",
       "numberOfAyah": 200,
-      "roman": {
-        "name": "Ali 'Imran",
-        "slug": "ali-imran"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ali-imran",
+      "translitName": "Ali 'Imran"
     },
     {
       "id": 4,
       "name": "نساء",
       "numberOfAyah": 176,
-      "roman": {
-        "name": "An-Nisa",
-        "slug": "an-nisa"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-nisa",
+      "translitName": "An-Nisa"
     },
     {
       "id": 5,
       "name": "مائده",
       "numberOfAyah": 120,
-      "roman": {
-        "name": "Al-Ma'idah",
-        "slug": "al-maidah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-maidah",
+      "translitName": "Al-Ma'idah"
     },
     {
       "id": 6,
       "name": "انعام",
       "numberOfAyah": 165,
-      "roman": {
-        "name": "Al-An'am",
-        "slug": "al-anam"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-anam",
+      "translitName": "Al-An'am"
     },
     {
       "id": 7,
       "name": "اعراف",
       "numberOfAyah": 206,
-      "roman": {
-        "name": "Al-A'raf",
-        "slug": "al-araf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-araf",
+      "translitName": "Al-A'raf"
     },
     {
       "id": 8,
       "name": "انفال",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Al-Anfal",
-        "slug": "al-anfal"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-anfal",
+      "translitName": "Al-Anfal"
     },
     {
       "id": 9,
       "name": "توبه",
       "numberOfAyah": 129,
-      "roman": {
-        "name": "At-Tawbah",
-        "slug": "at-tawbah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-tawbah",
+      "translitName": "At-Tawbah"
     },
     {
       "id": 10,
       "name": "یونس",
       "numberOfAyah": 109,
-      "roman": {
-        "name": "Yunus",
-        "slug": "yunus"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "yunus",
+      "translitName": "Yunus"
     },
     {
       "id": 11,
       "name": "هود",
       "numberOfAyah": 123,
-      "roman": {
-        "name": "Hud",
-        "slug": "hud"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "hud",
+      "translitName": "Hud"
     },
     {
       "id": 12,
       "name": "یوسف",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Yusuf",
-        "slug": "yusuf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "yusuf",
+      "translitName": "Yusuf"
     },
     {
       "id": 13,
       "name": "رعد",
       "numberOfAyah": 43,
-      "roman": {
-        "name": "Ar-Ra'd",
-        "slug": "ar-rad"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ar-rad",
+      "translitName": "Ar-Ra'd"
     },
     {
       "id": 14,
       "name": "ابراهیم",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Ibrahim",
-        "slug": "ibrahim"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ibrahim",
+      "translitName": "Ibrahim"
     },
     {
       "id": 15,
       "name": "حجر",
       "numberOfAyah": 99,
-      "roman": {
-        "name": "Al-Hijr",
-        "slug": "al-hijr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-hijr",
+      "translitName": "Al-Hijr"
     },
     {
       "id": 16,
       "name": "نحل",
       "numberOfAyah": 128,
-      "roman": {
-        "name": "An-Nahl",
-        "slug": "an-nahl"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-nahl",
+      "translitName": "An-Nahl"
     },
     {
       "id": 17,
       "name": "اسراء",
       "numberOfAyah": 111,
-      "roman": {
-        "name": "Al-Isra",
-        "slug": "al-isra"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-isra",
+      "translitName": "Al-Isra"
     },
     {
       "id": 18,
       "name": "کهف",
       "numberOfAyah": 110,
-      "roman": {
-        "name": "Al-Kahf",
-        "slug": "al-kahf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-kahf",
+      "translitName": "Al-Kahf"
     },
     {
       "id": 19,
       "name": "مریم",
       "numberOfAyah": 98,
-      "roman": {
-        "name": "Maryam",
-        "slug": "maryam"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "maryam",
+      "translitName": "Maryam"
     },
     {
       "id": 20,
       "name": "طه",
       "numberOfAyah": 135,
-      "roman": {
-        "name": "Taha",
-        "slug": "taha"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "taha",
+      "translitName": "Taha"
     },
     {
       "id": 21,
       "name": "انبیاء",
       "numberOfAyah": 112,
-      "roman": {
-        "name": "Al-Anbya",
-        "slug": "al-anbya"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-anbya",
+      "translitName": "Al-Anbya"
     },
     {
       "id": 22,
       "name": "حج",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Al-Hajj",
-        "slug": "al-hajj"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-hajj",
+      "translitName": "Al-Hajj"
     },
     {
       "id": 23,
       "name": "مؤمنون",
       "numberOfAyah": 118,
-      "roman": {
-        "name": "Al-Mu'minun",
-        "slug": "al-muminun"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-muminun",
+      "translitName": "Al-Mu'minun"
     },
     {
       "id": 24,
       "name": "نور",
       "numberOfAyah": 64,
-      "roman": {
-        "name": "An-Nur",
-        "slug": "an-nur"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-nur",
+      "translitName": "An-Nur"
     },
     {
       "id": 25,
       "name": "فرقان",
       "numberOfAyah": 77,
-      "roman": {
-        "name": "Al-Furqan",
-        "slug": "al-furqan"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-furqan",
+      "translitName": "Al-Furqan"
     },
     {
       "id": 26,
       "name": "شعرا",
       "numberOfAyah": 227,
-      "roman": {
-        "name": "Ash-Shu'ara",
-        "slug": "ash-shuara"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ash-shuara",
+      "translitName": "Ash-Shu'ara"
     },
     {
       "id": 27,
       "name": "نمل",
       "numberOfAyah": 93,
-      "roman": {
-        "name": "An-Naml",
-        "slug": "an-naml"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-naml",
+      "translitName": "An-Naml"
     },
     {
       "id": 28,
       "name": "قصص",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Al-Qasas",
-        "slug": "al-qasas"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qasas",
+      "translitName": "Al-Qasas"
     },
     {
       "id": 29,
       "name": "عنکبوت",
       "numberOfAyah": 69,
-      "roman": {
-        "name": "Al-'Ankabut",
-        "slug": "al-ankabut"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ankabut",
+      "translitName": "Al-'Ankabut"
     },
     {
       "id": 30,
       "name": "روم",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Ar-Rum",
-        "slug": "ar-rum"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ar-rum",
+      "translitName": "Ar-Rum"
     },
     {
       "id": 31,
       "name": "لقمان",
       "numberOfAyah": 34,
-      "roman": {
-        "name": "Luqman",
-        "slug": "luqman"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "luqman",
+      "translitName": "Luqman"
     },
     {
       "id": 32,
       "name": "سجده",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "As-Sajdah",
-        "slug": "as-sajdah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "as-sajdah",
+      "translitName": "As-Sajdah"
     },
     {
       "id": 33,
       "name": "احزاب",
       "numberOfAyah": 73,
-      "roman": {
-        "name": "Al-Ahzab",
-        "slug": "al-ahzab"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ahzab",
+      "translitName": "Al-Ahzab"
     },
     {
       "id": 34,
       "name": "سبأ",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Saba",
-        "slug": "saba"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "saba",
+      "translitName": "Saba"
     },
     {
       "id": 35,
       "name": "فاطر",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Fatir",
-        "slug": "fatir"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "fatir",
+      "translitName": "Fatir"
     },
     {
       "id": 36,
       "name": "یس",
       "numberOfAyah": 83,
-      "roman": {
-        "name": "Ya-Sin",
-        "slug": "ya-sin"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ya-sin",
+      "translitName": "Ya-Sin"
     },
     {
       "id": 37,
       "name": "صافات",
       "numberOfAyah": 182,
-      "roman": {
-        "name": "As-Saffat",
-        "slug": "as-saffat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "as-saffat",
+      "translitName": "As-Saffat"
     },
     {
       "id": 38,
       "name": "ص",
       "numberOfAyah": 88,
-      "roman": {
-        "name": "Sad",
-        "slug": "sad"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "sad",
+      "translitName": "Sad"
     },
     {
       "id": 39,
       "name": "زمر",
       "numberOfAyah": 75,
-      "roman": {
-        "name": "Az-Zumar",
-        "slug": "az-zumar"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "az-zumar",
+      "translitName": "Az-Zumar"
     },
     {
       "id": 40,
       "name": "غافر",
       "numberOfAyah": 85,
-      "roman": {
-        "name": "Ghafir",
-        "slug": "ghafir"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ghafir",
+      "translitName": "Ghafir"
     },
     {
       "id": 41,
       "name": "فصلت",
       "numberOfAyah": 54,
-      "roman": {
-        "name": "Fussilat",
-        "slug": "fussilat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "fussilat",
+      "translitName": "Fussilat"
     },
     {
       "id": 42,
       "name": "شوری",
       "numberOfAyah": 53,
-      "roman": {
-        "name": "Ash-Shuraa",
-        "slug": "ash-shuraa"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ash-shuraa",
+      "translitName": "Ash-Shuraa"
     },
     {
       "id": 43,
       "name": "زخرف",
       "numberOfAyah": 89,
-      "roman": {
-        "name": "Az-Zukhruf",
-        "slug": "az-zukhruf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "az-zukhruf",
+      "translitName": "Az-Zukhruf"
     },
     {
       "id": 44,
       "name": "دخان",
       "numberOfAyah": 59,
-      "roman": {
-        "name": "Ad-Dukhan",
-        "slug": "ad-dukhan"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ad-dukhan",
+      "translitName": "Ad-Dukhan"
     },
     {
       "id": 45,
       "name": "جاثیه",
       "numberOfAyah": 37,
-      "roman": {
-        "name": "Al-Jathiyah",
-        "slug": "al-jathiyah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-jathiyah",
+      "translitName": "Al-Jathiyah"
     },
     {
       "id": 46,
       "name": "احقاف",
       "numberOfAyah": 35,
-      "roman": {
-        "name": "Al-Ahqaf",
-        "slug": "al-ahqaf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ahqaf",
+      "translitName": "Al-Ahqaf"
     },
     {
       "id": 47,
       "name": "محمد",
       "numberOfAyah": 38,
-      "roman": {
-        "name": "Muhammad",
-        "slug": "muhammad"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "muhammad",
+      "translitName": "Muhammad"
     },
     {
       "id": 48,
       "name": "فتح",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Fath",
-        "slug": "al-fath"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-fath",
+      "translitName": "Al-Fath"
     },
     {
       "id": 49,
       "name": "حجرات",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "Al-Hujurat",
-        "slug": "al-hujurat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-hujurat",
+      "translitName": "Al-Hujurat"
     },
     {
       "id": 50,
       "name": "ق",
       "numberOfAyah": 45,
-      "roman": {
-        "name": "Qaf",
-        "slug": "qaf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "qaf",
+      "translitName": "Qaf"
     },
     {
       "id": 51,
       "name": "ذاریات",
       "numberOfAyah": 60,
-      "roman": {
-        "name": "Adh-Dhariyat",
-        "slug": "adh-dhariyat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "adh-dhariyat",
+      "translitName": "Adh-Dhariyat"
     },
     {
       "id": 52,
       "name": "طور",
       "numberOfAyah": 49,
-      "roman": {
-        "name": "At-Tur",
-        "slug": "at-tur"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-tur",
+      "translitName": "At-Tur"
     },
     {
       "id": 53,
       "name": "نجم",
       "numberOfAyah": 62,
-      "roman": {
-        "name": "An-Najm",
-        "slug": "an-najm"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-najm",
+      "translitName": "An-Najm"
     },
     {
       "id": 54,
       "name": "قمر",
       "numberOfAyah": 55,
-      "roman": {
-        "name": "Al-Qamar",
-        "slug": "al-qamar"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qamar",
+      "translitName": "Al-Qamar"
     },
     {
       "id": 55,
       "name": "رحمن",
       "numberOfAyah": 78,
-      "roman": {
-        "name": "Ar-Rahman",
-        "slug": "ar-rahman"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ar-rahman",
+      "translitName": "Ar-Rahman"
     },
     {
       "id": 56,
       "name": "واقعه",
       "numberOfAyah": 96,
-      "roman": {
-        "name": "Al-Waqi'ah",
-        "slug": "al-waqiah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-waqiah",
+      "translitName": "Al-Waqi'ah"
     },
     {
       "id": 57,
       "name": "حدید",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "Al-Hadid",
-        "slug": "al-hadid"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-hadid",
+      "translitName": "Al-Hadid"
     },
     {
       "id": 58,
       "name": "مجادله",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Mujadila",
-        "slug": "al-mujadila"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-mujadila",
+      "translitName": "Al-Mujadila"
     },
     {
       "id": 59,
       "name": "حشر",
       "numberOfAyah": 24,
-      "roman": {
-        "name": "Al-Hashr",
-        "slug": "al-hashr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-hashr",
+      "translitName": "Al-Hashr"
     },
     {
       "id": 60,
       "name": "ممتحنه",
       "numberOfAyah": 13,
-      "roman": {
-        "name": "Al-Mumtahanah",
-        "slug": "al-mumtahanah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-mumtahanah",
+      "translitName": "Al-Mumtahanah"
     },
     {
       "id": 61,
       "name": "صف",
       "numberOfAyah": 14,
-      "roman": {
-        "name": "As-Saf",
-        "slug": "as-saf"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "as-saf",
+      "translitName": "As-Saf"
     },
     {
       "id": 62,
       "name": "جمعه",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Jumu'ah",
-        "slug": "al-jumuah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-jumuah",
+      "translitName": "Al-Jumu'ah"
     },
     {
       "id": 63,
       "name": "منافقون",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Munafiqun",
-        "slug": "al-munafiqun"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-munafiqun",
+      "translitName": "Al-Munafiqun"
     },
     {
       "id": 64,
       "name": "تغابن",
       "numberOfAyah": 18,
-      "roman": {
-        "name": "At-Taghabun",
-        "slug": "at-taghabun"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-taghabun",
+      "translitName": "At-Taghabun"
     },
     {
       "id": 65,
       "name": "طلاق",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Talaq",
-        "slug": "at-talaq"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-talaq",
+      "translitName": "At-Talaq"
     },
     {
       "id": 66,
       "name": "تحریم",
       "numberOfAyah": 12,
-      "roman": {
-        "name": "At-Tahrim",
-        "slug": "at-tahrim"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-tahrim",
+      "translitName": "At-Tahrim"
     },
     {
       "id": 67,
       "name": "ملک",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Mulk",
-        "slug": "al-mulk"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-mulk",
+      "translitName": "Al-Mulk"
     },
     {
       "id": 68,
       "name": "قلم",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Qalam",
-        "slug": "al-qalam"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qalam",
+      "translitName": "Al-Qalam"
     },
     {
       "id": 69,
       "name": "حاقه",
       "numberOfAyah": 52,
-      "roman": {
-        "name": "Al-Haqqah",
-        "slug": "al-haqqah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-haqqah",
+      "translitName": "Al-Haqqah"
     },
     {
       "id": 70,
       "name": "معارج",
       "numberOfAyah": 44,
-      "roman": {
-        "name": "Al-Ma'arij",
-        "slug": "al-maarij"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-maarij",
+      "translitName": "Al-Ma'arij"
     },
     {
       "id": 71,
       "name": "نوح",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Nuh",
-        "slug": "nuh"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "nuh",
+      "translitName": "Nuh"
     },
     {
       "id": 72,
       "name": "جن",
       "numberOfAyah": 28,
-      "roman": {
-        "name": "Al-Jinn",
-        "slug": "al-jinn"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-jinn",
+      "translitName": "Al-Jinn"
     },
     {
       "id": 73,
       "name": "مزمل",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Muzzammil",
-        "slug": "al-muzzammil"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-muzzammil",
+      "translitName": "Al-Muzzammil"
     },
     {
       "id": 74,
       "name": "مدثر",
       "numberOfAyah": 56,
-      "roman": {
-        "name": "Al-Muddaththir",
-        "slug": "al-muddaththir"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-muddaththir",
+      "translitName": "Al-Muddaththir"
     },
     {
       "id": 75,
       "name": "قیامه",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "Al-Qiyamah",
-        "slug": "al-qiyamah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qiyamah",
+      "translitName": "Al-Qiyamah"
     },
     {
       "id": 76,
       "name": "انسان",
       "numberOfAyah": 31,
-      "roman": {
-        "name": "Al-Insan",
-        "slug": "al-insan"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-insan",
+      "translitName": "Al-Insan"
     },
     {
       "id": 77,
       "name": "مرسلات",
       "numberOfAyah": 50,
-      "roman": {
-        "name": "Al-Mursalat",
-        "slug": "al-mursalat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-mursalat",
+      "translitName": "Al-Mursalat"
     },
     {
       "id": 78,
       "name": "نبأ",
       "numberOfAyah": 40,
-      "roman": {
-        "name": "An-Naba",
-        "slug": "an-naba"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-naba",
+      "translitName": "An-Naba"
     },
     {
       "id": 79,
       "name": "نازعات",
       "numberOfAyah": 46,
-      "roman": {
-        "name": "An-Nazi'at",
-        "slug": "an-naziat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-naziat",
+      "translitName": "An-Nazi'at"
     },
     {
       "id": 80,
       "name": "عبس",
       "numberOfAyah": 42,
-      "roman": {
-        "name": "'Abasa",
-        "slug": "abasa"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "abasa",
+      "translitName": "'Abasa"
     },
     {
       "id": 81,
       "name": "تکویر",
       "numberOfAyah": 29,
-      "roman": {
-        "name": "At-Takwir",
-        "slug": "at-takwir"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-takwir",
+      "translitName": "At-Takwir"
     },
     {
       "id": 82,
       "name": "انفطار",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-Infitar",
-        "slug": "al-infitar"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-infitar",
+      "translitName": "Al-Infitar"
     },
     {
       "id": 83,
       "name": "مطففین",
       "numberOfAyah": 36,
-      "roman": {
-        "name": "Al-Mutaffifin",
-        "slug": "al-mutaffifin"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-mutaffifin",
+      "translitName": "Al-Mutaffifin"
     },
     {
       "id": 84,
       "name": "انشقاق",
       "numberOfAyah": 25,
-      "roman": {
-        "name": "Al-Inshiqaq",
-        "slug": "al-inshiqaq"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-inshiqaq",
+      "translitName": "Al-Inshiqaq"
     },
     {
       "id": 85,
       "name": "بروج",
       "numberOfAyah": 22,
-      "roman": {
-        "name": "Al-Buruj",
-        "slug": "al-buruj"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-buruj",
+      "translitName": "Al-Buruj"
     },
     {
       "id": 86,
       "name": "طارق",
       "numberOfAyah": 17,
-      "roman": {
-        "name": "At-Tariq",
-        "slug": "at-tariq"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-tariq",
+      "translitName": "At-Tariq"
     },
     {
       "id": 87,
       "name": "اعلی",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-A'la",
-        "slug": "al-ala"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ala",
+      "translitName": "Al-A'la"
     },
     {
       "id": 88,
       "name": "غاشیه",
       "numberOfAyah": 26,
-      "roman": {
-        "name": "Al-Ghashiyah",
-        "slug": "al-ghashiyah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ghashiyah",
+      "translitName": "Al-Ghashiyah"
     },
     {
       "id": 89,
       "name": "فجر",
       "numberOfAyah": 30,
-      "roman": {
-        "name": "Al-Fajr",
-        "slug": "al-fajr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-fajr",
+      "translitName": "Al-Fajr"
     },
     {
       "id": 90,
       "name": "بلد",
       "numberOfAyah": 20,
-      "roman": {
-        "name": "Al-Balad",
-        "slug": "al-balad"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-balad",
+      "translitName": "Al-Balad"
     },
     {
       "id": 91,
       "name": "شمس",
       "numberOfAyah": 15,
-      "roman": {
-        "name": "Ash-Shams",
-        "slug": "ash-shams"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ash-shams",
+      "translitName": "Ash-Shams"
     },
     {
       "id": 92,
       "name": "لیل",
       "numberOfAyah": 21,
-      "roman": {
-        "name": "Al-Layl",
-        "slug": "al-layl"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-layl",
+      "translitName": "Al-Layl"
     },
     {
       "id": 93,
       "name": "ضحی",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Ad-Duhaa",
-        "slug": "ad-duhaa"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ad-duhaa",
+      "translitName": "Ad-Duhaa"
     },
     {
       "id": 94,
       "name": "شرح",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Ash-Sharh",
-        "slug": "ash-sharh"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "ash-sharh",
+      "translitName": "Ash-Sharh"
     },
     {
       "id": 95,
       "name": "تین",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Tin",
-        "slug": "at-tin"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-tin",
+      "translitName": "At-Tin"
     },
     {
       "id": 96,
       "name": "علق",
       "numberOfAyah": 19,
-      "roman": {
-        "name": "Al-'Alaq",
-        "slug": "al-alaq"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-alaq",
+      "translitName": "Al-'Alaq"
     },
     {
       "id": 97,
       "name": "قدر",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Qadr",
-        "slug": "al-qadr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qadr",
+      "translitName": "Al-Qadr"
     },
     {
       "id": 98,
       "name": "بینه",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Al-Bayyinah",
-        "slug": "al-bayyinah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-bayyinah",
+      "translitName": "Al-Bayyinah"
     },
     {
       "id": 99,
       "name": "زلزله",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "Az-Zalzalah",
-        "slug": "az-zalzalah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "az-zalzalah",
+      "translitName": "Az-Zalzalah"
     },
     {
       "id": 100,
       "name": "عادیات",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-'Adiyat",
-        "slug": "al-adiyat"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-adiyat",
+      "translitName": "Al-'Adiyat"
     },
     {
       "id": 101,
       "name": "قارعه",
       "numberOfAyah": 11,
-      "roman": {
-        "name": "Al-Qari'ah",
-        "slug": "al-qariah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-qariah",
+      "translitName": "Al-Qari'ah"
     },
     {
       "id": 102,
       "name": "تکاثر",
       "numberOfAyah": 8,
-      "roman": {
-        "name": "At-Takathur",
-        "slug": "at-takathur"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "at-takathur",
+      "translitName": "At-Takathur"
     },
     {
       "id": 103,
       "name": "عصر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-'Asr",
-        "slug": "al-asr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-asr",
+      "translitName": "Al-'Asr"
     },
     {
       "id": 104,
       "name": "همزه",
       "numberOfAyah": 9,
-      "roman": {
-        "name": "Al-Humazah",
-        "slug": "al-humazah"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-humazah",
+      "translitName": "Al-Humazah"
     },
     {
       "id": 105,
       "name": "فیل",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Fil",
-        "slug": "al-fil"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-fil",
+      "translitName": "Al-Fil"
     },
     {
       "id": 106,
       "name": "قریش",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Quraysh",
-        "slug": "quraysh"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "quraysh",
+      "translitName": "Quraysh"
     },
     {
       "id": 107,
       "name": "ماعون",
       "numberOfAyah": 7,
-      "roman": {
-        "name": "Al-Ma'un",
-        "slug": "al-maun"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-maun",
+      "translitName": "Al-Ma'un"
     },
     {
       "id": 108,
       "name": "کوثر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "Al-Kawthar",
-        "slug": "al-kawthar"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-kawthar",
+      "translitName": "Al-Kawthar"
     },
     {
       "id": 109,
       "name": "کافرون",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "Al-Kafirun",
-        "slug": "al-kafirun"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-kafirun",
+      "translitName": "Al-Kafirun"
     },
     {
       "id": 110,
       "name": "نصر",
       "numberOfAyah": 3,
-      "roman": {
-        "name": "An-Nasr",
-        "slug": "an-nasr"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-nasr",
+      "translitName": "An-Nasr"
     },
     {
       "id": 111,
       "name": "مسد",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Masad",
-        "slug": "al-masad"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-masad",
+      "translitName": "Al-Masad"
     },
     {
       "id": 112,
       "name": "اخلاص",
       "numberOfAyah": 4,
-      "roman": {
-        "name": "Al-Ikhlas",
-        "slug": "al-ikhlas"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-ikhlas",
+      "translitName": "Al-Ikhlas"
     },
     {
       "id": 113,
       "name": "فلق",
       "numberOfAyah": 5,
-      "roman": {
-        "name": "Al-Falaq",
-        "slug": "al-falaq"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "al-falaq",
+      "translitName": "Al-Falaq"
     },
     {
       "id": 114,
       "name": "ناس",
       "numberOfAyah": 6,
-      "roman": {
-        "name": "An-Nas",
-        "slug": "an-nas"
-      },
-      "translatedBy": "Hussain Ansarian"
+      "translatedBy": "Hussain Ansarian",
+      "urlName": "an-nas",
+      "translitName": "An-Nas"
     }
   ]
 }

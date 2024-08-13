@@ -2,9 +2,7 @@
   "id": 66,
   "name": "تحریم",
   "numberOfAyah": 12,
-  "roman": {
-    "name": "At-Tahrim",
-    "slug": "at-tahrim"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-tahrim",
+  "translitName": "At-Tahrim"
 }

@@ -2,9 +2,7 @@
   "id": 23,
   "name": "مؤمنون",
   "numberOfAyah": 118,
-  "roman": {
-    "name": "Al-Mu'minun",
-    "slug": "al-muminun"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-muminun",
+  "translitName": "Al-Mu'minun"
 }

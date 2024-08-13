@@ -2,9 +2,7 @@
   "id": 102,
   "name": "التكاثر",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "At-Takathur",
-    "slug": "at-takathur"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-takathur",
+  "translitName": "At-Takathur"
 }

@@ -2,9 +2,7 @@
   "id": 94,
   "name": "شرح",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Ash-Sharh",
-    "slug": "ash-sharh"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ash-sharh",
+  "translitName": "Ash-Sharh"
 }

@@ -2,9 +2,7 @@
   "id": 96,
   "name": "العلق",
   "numberOfAyah": 19,
-  "roman": {
-    "name": "Al-'Alaq",
-    "slug": "al-alaq"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-alaq",
+  "translitName": "Al-'Alaq"
 }

@@ -2,9 +2,7 @@
   "id": 9,
   "name": "توبه",
   "numberOfAyah": 129,
-  "roman": {
-    "name": "At-Tawbah",
-    "slug": "at-tawbah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-tawbah",
+  "translitName": "At-Tawbah"
 }

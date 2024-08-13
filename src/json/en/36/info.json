@@ -2,9 +2,7 @@
   "id": 36,
   "name": "Ya Sin",
   "numberOfAyah": 83,
-  "roman": {
-    "name": "Ya-Sin",
-    "slug": "ya-sin"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ya-sin",
+  "translitName": "Ya-Sin"
 }

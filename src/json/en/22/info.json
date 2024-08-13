@@ -2,9 +2,7 @@
   "id": 22,
   "name": "The Pilgrimage",
   "numberOfAyah": 78,
-  "roman": {
-    "name": "Al-Hajj",
-    "slug": "al-hajj"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-hajj",
+  "translitName": "Al-Hajj"
 }

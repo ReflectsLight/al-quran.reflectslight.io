@@ -2,9 +2,7 @@
   "id": 82,
   "name": "الإنفطار",
   "numberOfAyah": 19,
-  "roman": {
-    "name": "Al-Infitar",
-    "slug": "al-infitar"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-infitar",
+  "translitName": "Al-Infitar"
 }

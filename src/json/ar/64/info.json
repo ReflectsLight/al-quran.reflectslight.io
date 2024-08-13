@@ -2,9 +2,7 @@
   "id": 64,
   "name": "التغابن",
   "numberOfAyah": 18,
-  "roman": {
-    "name": "At-Taghabun",
-    "slug": "at-taghabun"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-taghabun",
+  "translitName": "At-Taghabun"
 }

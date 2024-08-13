@@ -2,9 +2,7 @@
   "id": 18,
   "name": "کهف",
   "numberOfAyah": 110,
-  "roman": {
-    "name": "Al-Kahf",
-    "slug": "al-kahf"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-kahf",
+  "translitName": "Al-Kahf"
 }

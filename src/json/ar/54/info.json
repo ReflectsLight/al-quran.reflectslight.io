@@ -2,9 +2,7 @@
   "id": 54,
   "name": "القمر",
   "numberOfAyah": 55,
-  "roman": {
-    "name": "Al-Qamar",
-    "slug": "al-qamar"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-qamar",
+  "translitName": "Al-Qamar"
 }

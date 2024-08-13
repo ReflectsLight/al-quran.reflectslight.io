@@ -2,9 +2,7 @@
   "id": 82,
   "name": "The Cleaving",
   "numberOfAyah": 19,
-  "roman": {
-    "name": "Al-Infitar",
-    "slug": "al-infitar"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-infitar",
+  "translitName": "Al-Infitar"
 }

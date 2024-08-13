@@ -2,9 +2,7 @@
   "id": 51,
   "name": "الذاريات",
   "numberOfAyah": 60,
-  "roman": {
-    "name": "Adh-Dhariyat",
-    "slug": "adh-dhariyat"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "adh-dhariyat",
+  "translitName": "Adh-Dhariyat"
 }

@@ -2,9 +2,7 @@
   "id": 39,
   "name": "The Troops",
   "numberOfAyah": 75,
-  "roman": {
-    "name": "Az-Zumar",
-    "slug": "az-zumar"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "az-zumar",
+  "translitName": "Az-Zumar"
 }

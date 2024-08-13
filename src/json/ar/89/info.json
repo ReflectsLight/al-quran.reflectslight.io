@@ -2,9 +2,7 @@
   "id": 89,
   "name": "الفجر",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "Al-Fajr",
-    "slug": "al-fajr"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-fajr",
+  "translitName": "Al-Fajr"
 }

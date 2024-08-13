@@ -2,9 +2,7 @@
   "id": 58,
   "name": "المجادلة",
   "numberOfAyah": 22,
-  "roman": {
-    "name": "Al-Mujadila",
-    "slug": "al-mujadila"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-mujadila",
+  "translitName": "Al-Mujadila"
 }

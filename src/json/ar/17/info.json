@@ -2,9 +2,7 @@
   "id": 17,
   "name": "الإسراء",
   "numberOfAyah": 111,
-  "roman": {
-    "name": "Al-Isra",
-    "slug": "al-isra"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-isra",
+  "translitName": "Al-Isra"
 }

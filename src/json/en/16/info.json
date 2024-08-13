@@ -2,9 +2,7 @@
   "id": 16,
   "name": "The Bee",
   "numberOfAyah": 128,
-  "roman": {
-    "name": "An-Nahl",
-    "slug": "an-nahl"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "an-nahl",
+  "translitName": "An-Nahl"
 }

@@ -2,9 +2,7 @@
   "id": 44,
   "name": "دخان",
   "numberOfAyah": 59,
-  "roman": {
-    "name": "Ad-Dukhan",
-    "slug": "ad-dukhan"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ad-dukhan",
+  "translitName": "Ad-Dukhan"
 }

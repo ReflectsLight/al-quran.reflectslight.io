@@ -2,9 +2,7 @@
   "id": 2,
   "name": "بقره",
   "numberOfAyah": 286,
-  "roman": {
-    "name": "Al-Baqarah",
-    "slug": "al-baqarah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-baqarah",
+  "translitName": "Al-Baqarah"
 }

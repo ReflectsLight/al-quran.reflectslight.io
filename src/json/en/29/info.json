@@ -2,9 +2,7 @@
   "id": 29,
   "name": "The Spider",
   "numberOfAyah": 69,
-  "roman": {
-    "name": "Al-'Ankabut",
-    "slug": "al-ankabut"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-ankabut",
+  "translitName": "Al-'Ankabut"
 }

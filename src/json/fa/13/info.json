@@ -2,9 +2,7 @@
   "id": 13,
   "name": "رعد",
   "numberOfAyah": 43,
-  "roman": {
-    "name": "Ar-Ra'd",
-    "slug": "ar-rad"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ar-rad",
+  "translitName": "Ar-Ra'd"
 }

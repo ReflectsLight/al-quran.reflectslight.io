@@ -2,9 +2,7 @@
   "id": 67,
   "name": "The Sovereignty",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "Al-Mulk",
-    "slug": "al-mulk"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-mulk",
+  "translitName": "Al-Mulk"
 }

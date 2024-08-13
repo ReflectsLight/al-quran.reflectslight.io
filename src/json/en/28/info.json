@@ -2,9 +2,7 @@
   "id": 28,
   "name": "The Stories",
   "numberOfAyah": 88,
-  "roman": {
-    "name": "Al-Qasas",
-    "slug": "al-qasas"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-qasas",
+  "translitName": "Al-Qasas"
 }

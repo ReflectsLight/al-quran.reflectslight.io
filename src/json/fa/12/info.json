@@ -2,9 +2,7 @@
   "id": 12,
   "name": "یوسف",
   "numberOfAyah": 111,
-  "roman": {
-    "name": "Yusuf",
-    "slug": "yusuf"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "yusuf",
+  "translitName": "Yusuf"
 }

@@ -2,9 +2,7 @@
   "id": 46,
   "name": "احقاف",
   "numberOfAyah": 35,
-  "roman": {
-    "name": "Al-Ahqaf",
-    "slug": "al-ahqaf"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-ahqaf",
+  "translitName": "Al-Ahqaf"
 }

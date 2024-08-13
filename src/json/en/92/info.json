@@ -2,9 +2,7 @@
   "id": 92,
   "name": "The Night",
   "numberOfAyah": 21,
-  "roman": {
-    "name": "Al-Layl",
-    "slug": "al-layl"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-layl",
+  "translitName": "Al-Layl"
 }

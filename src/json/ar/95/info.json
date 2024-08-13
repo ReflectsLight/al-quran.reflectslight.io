@@ -2,9 +2,7 @@
   "id": 95,
   "name": "التين",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "At-Tin",
-    "slug": "at-tin"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-tin",
+  "translitName": "At-Tin"
 }

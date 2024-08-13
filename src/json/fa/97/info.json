@@ -2,9 +2,7 @@
   "id": 97,
   "name": "قدر",
   "numberOfAyah": 5,
-  "roman": {
-    "name": "Al-Qadr",
-    "slug": "al-qadr"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-qadr",
+  "translitName": "Al-Qadr"
 }

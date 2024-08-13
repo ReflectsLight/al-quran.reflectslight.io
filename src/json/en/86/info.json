@@ -2,9 +2,7 @@
   "id": 86,
   "name": "The Nightcommer",
   "numberOfAyah": 17,
-  "roman": {
-    "name": "At-Tariq",
-    "slug": "at-tariq"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "at-tariq",
+  "translitName": "At-Tariq"
 }

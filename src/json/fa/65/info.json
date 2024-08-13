@@ -2,9 +2,7 @@
   "id": 65,
   "name": "طلاق",
   "numberOfAyah": 12,
-  "roman": {
-    "name": "At-Talaq",
-    "slug": "at-talaq"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-talaq",
+  "translitName": "At-Talaq"
 }

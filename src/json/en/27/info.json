@@ -2,9 +2,7 @@
   "id": 27,
   "name": "The Ant",
   "numberOfAyah": 93,
-  "roman": {
-    "name": "An-Naml",
-    "slug": "an-naml"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "an-naml",
+  "translitName": "An-Naml"
 }

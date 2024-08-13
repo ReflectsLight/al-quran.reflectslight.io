@@ -2,9 +2,7 @@
   "id": 51,
   "name": "The Winnowing Winds",
   "numberOfAyah": 60,
-  "roman": {
-    "name": "Adh-Dhariyat",
-    "slug": "adh-dhariyat"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "adh-dhariyat",
+  "translitName": "Adh-Dhariyat"
 }

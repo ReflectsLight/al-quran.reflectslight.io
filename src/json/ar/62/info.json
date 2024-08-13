@@ -2,9 +2,7 @@
   "id": 62,
   "name": "الجمعة",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-Jumu'ah",
-    "slug": "al-jumuah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-jumuah",
+  "translitName": "Al-Jumu'ah"
 }

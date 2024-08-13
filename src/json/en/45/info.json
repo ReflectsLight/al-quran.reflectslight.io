@@ -2,9 +2,7 @@
   "id": 45,
   "name": "The Crouching",
   "numberOfAyah": 37,
-  "roman": {
-    "name": "Al-Jathiyah",
-    "slug": "al-jathiyah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-jathiyah",
+  "translitName": "Al-Jathiyah"
 }

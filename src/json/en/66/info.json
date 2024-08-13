@@ -2,9 +2,7 @@
   "id": 66,
   "name": "The Prohibition",
   "numberOfAyah": 12,
-  "roman": {
-    "name": "At-Tahrim",
-    "slug": "at-tahrim"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "at-tahrim",
+  "translitName": "At-Tahrim"
 }

@@ -2,9 +2,7 @@
   "id": 10,
   "name": "Jonah",
   "numberOfAyah": 109,
-  "roman": {
-    "name": "Yunus",
-    "slug": "yunus"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "yunus",
+  "translitName": "Yunus"
 }

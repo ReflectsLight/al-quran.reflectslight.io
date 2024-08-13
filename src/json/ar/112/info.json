@@ -2,9 +2,7 @@
   "id": 112,
   "name": "الإخلاص",
   "numberOfAyah": 4,
-  "roman": {
-    "name": "Al-Ikhlas",
-    "slug": "al-ikhlas"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-ikhlas",
+  "translitName": "Al-Ikhlas"
 }

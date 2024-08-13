@@ -2,9 +2,7 @@
   "id": 98,
   "name": "بینه",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Al-Bayyinah",
-    "slug": "al-bayyinah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-bayyinah",
+  "translitName": "Al-Bayyinah"
 }

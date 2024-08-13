@@ -2,9 +2,7 @@
   "id": 99,
   "name": "The Earthquake",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Az-Zalzalah",
-    "slug": "az-zalzalah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "az-zalzalah",
+  "translitName": "Az-Zalzalah"
 }

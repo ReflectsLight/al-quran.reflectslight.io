@@ -2,9 +2,7 @@
   "id": 103,
   "name": "العصر",
   "numberOfAyah": 3,
-  "roman": {
-    "name": "Al-'Asr",
-    "slug": "al-asr"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-asr",
+  "translitName": "Al-'Asr"
 }

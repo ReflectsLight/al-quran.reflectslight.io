@@ -2,9 +2,7 @@
   "id": 52,
   "name": "The Mount",
   "numberOfAyah": 49,
-  "roman": {
-    "name": "At-Tur",
-    "slug": "at-tur"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "at-tur",
+  "translitName": "At-Tur"
 }

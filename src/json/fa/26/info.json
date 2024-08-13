@@ -2,9 +2,7 @@
   "id": 26,
   "name": "شعرا",
   "numberOfAyah": 227,
-  "roman": {
-    "name": "Ash-Shu'ara",
-    "slug": "ash-shuara"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ash-shuara",
+  "translitName": "Ash-Shu'ara"
 }

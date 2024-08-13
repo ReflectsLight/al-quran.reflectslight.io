@@ -2,9 +2,7 @@
   "id": 114,
   "name": "ناس",
   "numberOfAyah": 6,
-  "roman": {
-    "name": "An-Nas",
-    "slug": "an-nas"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "an-nas",
+  "translitName": "An-Nas"
 }

@@ -2,9 +2,7 @@
   "id": 33,
   "name": "احزاب",
   "numberOfAyah": 73,
-  "roman": {
-    "name": "Al-Ahzab",
-    "slug": "al-ahzab"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-ahzab",
+  "translitName": "Al-Ahzab"
 }

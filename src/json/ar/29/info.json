@@ -2,9 +2,7 @@
   "id": 29,
   "name": "العنكبوت",
   "numberOfAyah": 69,
-  "roman": {
-    "name": "Al-'Ankabut",
-    "slug": "al-ankabut"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-ankabut",
+  "translitName": "Al-'Ankabut"
 }

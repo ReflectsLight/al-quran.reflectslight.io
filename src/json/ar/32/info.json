@@ -2,9 +2,7 @@
   "id": 32,
   "name": "السجدة",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "As-Sajdah",
-    "slug": "as-sajdah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "as-sajdah",
+  "translitName": "As-Sajdah"
 }

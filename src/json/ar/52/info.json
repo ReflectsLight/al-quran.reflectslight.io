@@ -2,9 +2,7 @@
   "id": 52,
   "name": "الطور",
   "numberOfAyah": 49,
-  "roman": {
-    "name": "At-Tur",
-    "slug": "at-tur"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-tur",
+  "translitName": "At-Tur"
 }

@@ -2,9 +2,7 @@
   "id": 38,
   "name": "ص",
   "numberOfAyah": 88,
-  "roman": {
-    "name": "Sad",
-    "slug": "sad"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "sad",
+  "translitName": "Sad"
 }

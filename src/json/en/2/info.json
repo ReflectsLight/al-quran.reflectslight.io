@@ -2,9 +2,7 @@
   "id": 2,
   "name": "The Cow",
   "numberOfAyah": 286,
-  "roman": {
-    "name": "Al-Baqarah",
-    "slug": "al-baqarah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-baqarah",
+  "translitName": "Al-Baqarah"
 }

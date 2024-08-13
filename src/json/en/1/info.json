@@ -2,9 +2,7 @@
   "id": 1,
   "name": "The Opener",
   "numberOfAyah": 7,
-  "roman": {
-    "name": "Al-Fatihah",
-    "slug": "al-fatihah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-fatihah",
+  "translitName": "Al-Fatihah"
 }

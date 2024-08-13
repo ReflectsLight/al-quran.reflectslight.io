@@ -2,9 +2,7 @@
   "id": 49,
   "name": "الحجرات",
   "numberOfAyah": 18,
-  "roman": {
-    "name": "Al-Hujurat",
-    "slug": "al-hujurat"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-hujurat",
+  "translitName": "Al-Hujurat"
 }

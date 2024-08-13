@@ -2,9 +2,7 @@
   "id": 32,
   "name": "The Prostration",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "As-Sajdah",
-    "slug": "as-sajdah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "as-sajdah",
+  "translitName": "As-Sajdah"
 }

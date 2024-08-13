@@ -2,9 +2,7 @@
   "id": 77,
   "name": "The Emissaries",
   "numberOfAyah": 50,
-  "roman": {
-    "name": "Al-Mursalat",
-    "slug": "al-mursalat"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-mursalat",
+  "translitName": "Al-Mursalat"
 }

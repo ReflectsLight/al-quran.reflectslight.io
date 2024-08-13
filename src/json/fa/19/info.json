@@ -2,9 +2,7 @@
   "id": 19,
   "name": "مریم",
   "numberOfAyah": 98,
-  "roman": {
-    "name": "Maryam",
-    "slug": "maryam"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "maryam",
+  "translitName": "Maryam"
 }

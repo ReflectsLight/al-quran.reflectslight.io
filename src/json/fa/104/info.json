@@ -2,9 +2,7 @@
   "id": 104,
   "name": "همزه",
   "numberOfAyah": 9,
-  "roman": {
-    "name": "Al-Humazah",
-    "slug": "al-humazah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-humazah",
+  "translitName": "Al-Humazah"
 }

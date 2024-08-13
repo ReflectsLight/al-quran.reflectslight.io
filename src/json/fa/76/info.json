@@ -2,9 +2,7 @@
   "id": 76,
   "name": "انسان",
   "numberOfAyah": 31,
-  "roman": {
-    "name": "Al-Insan",
-    "slug": "al-insan"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-insan",
+  "translitName": "Al-Insan"
 }

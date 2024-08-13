@@ -2,9 +2,7 @@
   "id": 22,
   "name": "الحج",
   "numberOfAyah": 78,
-  "roman": {
-    "name": "Al-Hajj",
-    "slug": "al-hajj"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-hajj",
+  "translitName": "Al-Hajj"
 }

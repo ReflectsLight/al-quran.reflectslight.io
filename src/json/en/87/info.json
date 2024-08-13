@@ -2,9 +2,7 @@
   "id": 87,
   "name": "The Most High",
   "numberOfAyah": 19,
-  "roman": {
-    "name": "Al-A'la",
-    "slug": "al-ala"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-ala",
+  "translitName": "Al-A'la"
 }

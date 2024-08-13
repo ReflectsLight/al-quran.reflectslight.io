@@ -2,9 +2,7 @@
   "id": 84,
   "name": "The Sundering",
   "numberOfAyah": 25,
-  "roman": {
-    "name": "Al-Inshiqaq",
-    "slug": "al-inshiqaq"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-inshiqaq",
+  "translitName": "Al-Inshiqaq"
 }

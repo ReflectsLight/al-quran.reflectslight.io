@@ -2,9 +2,7 @@
   "id": 108,
   "name": "الكوثر",
   "numberOfAyah": 3,
-  "roman": {
-    "name": "Al-Kawthar",
-    "slug": "al-kawthar"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-kawthar",
+  "translitName": "Al-Kawthar"
 }

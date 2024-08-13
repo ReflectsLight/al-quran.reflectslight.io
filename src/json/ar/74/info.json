@@ -2,9 +2,7 @@
   "id": 74,
   "name": "المدثر",
   "numberOfAyah": 56,
-  "roman": {
-    "name": "Al-Muddaththir",
-    "slug": "al-muddaththir"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-muddaththir",
+  "translitName": "Al-Muddaththir"
 }

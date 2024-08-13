@@ -2,9 +2,7 @@
   "id": 40,
   "name": "غافر",
   "numberOfAyah": 85,
-  "roman": {
-    "name": "Ghafir",
-    "slug": "ghafir"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "ghafir",
+  "translitName": "Ghafir"
 }

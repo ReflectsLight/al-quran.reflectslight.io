@@ -2,9 +2,7 @@
   "id": 80,
   "name": "He Frowned",
   "numberOfAyah": 42,
-  "roman": {
-    "name": "'Abasa",
-    "slug": "abasa"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "abasa",
+  "translitName": "'Abasa"
 }

@@ -2,9 +2,7 @@
   "id": 100,
   "name": "العاديات",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-'Adiyat",
-    "slug": "al-adiyat"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-adiyat",
+  "translitName": "Al-'Adiyat"
 }

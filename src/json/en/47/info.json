@@ -2,9 +2,7 @@
   "id": 47,
   "name": "Muhammad",
   "numberOfAyah": 38,
-  "roman": {
-    "name": "Muhammad",
-    "slug": "muhammad"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "muhammad",
+  "translitName": "Muhammad"
 }

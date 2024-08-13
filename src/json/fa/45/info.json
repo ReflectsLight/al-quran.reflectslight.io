@@ -2,9 +2,7 @@
   "id": 45,
   "name": "جاثیه",
   "numberOfAyah": 37,
-  "roman": {
-    "name": "Al-Jathiyah",
-    "slug": "al-jathiyah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-jathiyah",
+  "translitName": "Al-Jathiyah"
 }

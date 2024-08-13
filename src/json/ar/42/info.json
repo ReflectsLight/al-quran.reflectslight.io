@@ -2,9 +2,7 @@
   "id": 42,
   "name": "الشورى",
   "numberOfAyah": 53,
-  "roman": {
-    "name": "Ash-Shuraa",
-    "slug": "ash-shuraa"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "ash-shuraa",
+  "translitName": "Ash-Shuraa"
 }

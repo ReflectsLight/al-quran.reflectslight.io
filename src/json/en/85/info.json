@@ -2,9 +2,7 @@
   "id": 85,
   "name": "The Mansions of the Stars",
   "numberOfAyah": 22,
-  "roman": {
-    "name": "Al-Buruj",
-    "slug": "al-buruj"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-buruj",
+  "translitName": "Al-Buruj"
 }

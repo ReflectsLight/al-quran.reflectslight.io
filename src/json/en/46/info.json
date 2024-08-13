@@ -2,9 +2,7 @@
   "id": 46,
   "name": "The Wind-Curved Sandhills",
   "numberOfAyah": 35,
-  "roman": {
-    "name": "Al-Ahqaf",
-    "slug": "al-ahqaf"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-ahqaf",
+  "translitName": "Al-Ahqaf"
 }

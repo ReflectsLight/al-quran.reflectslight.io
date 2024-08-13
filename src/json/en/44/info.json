@@ -2,9 +2,7 @@
   "id": 44,
   "name": "The Smoke",
   "numberOfAyah": 59,
-  "roman": {
-    "name": "Ad-Dukhan",
-    "slug": "ad-dukhan"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ad-dukhan",
+  "translitName": "Ad-Dukhan"
 }

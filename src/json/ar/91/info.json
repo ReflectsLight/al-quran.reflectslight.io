@@ -2,9 +2,7 @@
   "id": 91,
   "name": "الشمس",
   "numberOfAyah": 15,
-  "roman": {
-    "name": "Ash-Shams",
-    "slug": "ash-shams"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "ash-shams",
+  "translitName": "Ash-Shams"
 }

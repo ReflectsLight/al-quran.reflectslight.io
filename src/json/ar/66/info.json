@@ -2,9 +2,7 @@
   "id": 66,
   "name": "التحريم",
   "numberOfAyah": 12,
-  "roman": {
-    "name": "At-Tahrim",
-    "slug": "at-tahrim"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "at-tahrim",
+  "translitName": "At-Tahrim"
 }

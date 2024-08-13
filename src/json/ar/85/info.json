@@ -2,9 +2,7 @@
   "id": 85,
   "name": "البروج",
   "numberOfAyah": 22,
-  "roman": {
-    "name": "Al-Buruj",
-    "slug": "al-buruj"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-buruj",
+  "translitName": "Al-Buruj"
 }

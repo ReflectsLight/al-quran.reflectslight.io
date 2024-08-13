@@ -2,9 +2,7 @@
   "id": 103,
   "name": "The Declining Day",
   "numberOfAyah": 3,
-  "roman": {
-    "name": "Al-'Asr",
-    "slug": "al-asr"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-asr",
+  "translitName": "Al-'Asr"
 }

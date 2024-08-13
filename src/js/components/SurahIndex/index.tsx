@@ -50,7 +50,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           >
             <a
               className="flex items-center color-primary no-underline rounded w-11/12 h-14"
-              href={`/${locale.name}/${surah.roman.slug}/`}
+              href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
                 <span className="color-secondary font-extrabold w-10 text-center">
@@ -66,7 +66,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
                 <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
                     <span className="transliterated" lang="en">
-                      {surah.roman.name}
+                      {surah.translitName}
                     </span>
                     <span className="ayat flex justify-end text-sm">
                       {formatNumber(locale, surah.numberOfAyah)}{" "}

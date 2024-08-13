@@ -2,9 +2,7 @@
   "id": 94,
   "name": "The Relief",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Ash-Sharh",
-    "slug": "ash-sharh"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ash-sharh",
+  "translitName": "Ash-Sharh"
 }

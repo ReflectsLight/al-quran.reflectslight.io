@@ -2,9 +2,7 @@
   "id": 3,
   "name": "Family of Imran",
   "numberOfAyah": 200,
-  "roman": {
-    "name": "Ali 'Imran",
-    "slug": "ali-imran"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ali-imran",
+  "translitName": "Ali 'Imran"
 }

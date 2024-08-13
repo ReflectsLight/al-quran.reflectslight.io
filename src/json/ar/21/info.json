@@ -2,9 +2,7 @@
   "id": 21,
   "name": "الأنبياء",
   "numberOfAyah": 112,
-  "roman": {
-    "name": "Al-Anbya",
-    "slug": "al-anbya"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-anbya",
+  "translitName": "Al-Anbya"
 }

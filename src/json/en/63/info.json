@@ -2,9 +2,7 @@
   "id": 63,
   "name": "The Hypocrites",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-Munafiqun",
-    "slug": "al-munafiqun"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-munafiqun",
+  "translitName": "Al-Munafiqun"
 }

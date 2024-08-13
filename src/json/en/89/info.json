@@ -2,9 +2,7 @@
   "id": 89,
   "name": "The Dawn",
   "numberOfAyah": 30,
-  "roman": {
-    "name": "Al-Fajr",
-    "slug": "al-fajr"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-fajr",
+  "translitName": "Al-Fajr"
 }

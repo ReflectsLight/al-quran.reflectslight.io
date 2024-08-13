@@ -2,9 +2,7 @@
   "id": 99,
   "name": "الزلزلة",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Az-Zalzalah",
-    "slug": "az-zalzalah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "az-zalzalah",
+  "translitName": "Az-Zalzalah"
 }

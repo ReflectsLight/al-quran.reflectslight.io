@@ -2,9 +2,7 @@
   "id": 15,
   "name": "الحجر",
   "numberOfAyah": 99,
-  "roman": {
-    "name": "Al-Hijr",
-    "slug": "al-hijr"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-hijr",
+  "translitName": "Al-Hijr"
 }

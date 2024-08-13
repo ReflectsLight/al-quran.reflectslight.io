@@ -2,9 +2,7 @@
   "id": 68,
   "name": "القلم",
   "numberOfAyah": 52,
-  "roman": {
-    "name": "Al-Qalam",
-    "slug": "al-qalam"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-qalam",
+  "translitName": "Al-Qalam"
 }

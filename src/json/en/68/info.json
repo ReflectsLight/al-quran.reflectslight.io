@@ -2,9 +2,7 @@
   "id": 68,
   "name": "The Pen",
   "numberOfAyah": 52,
-  "roman": {
-    "name": "Al-Qalam",
-    "slug": "al-qalam"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-qalam",
+  "translitName": "Al-Qalam"
 }

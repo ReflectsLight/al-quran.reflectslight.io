@@ -2,9 +2,7 @@
   "id": 77,
   "name": "مرسلات",
   "numberOfAyah": 50,
-  "roman": {
-    "name": "Al-Mursalat",
-    "slug": "al-mursalat"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-mursalat",
+  "translitName": "Al-Mursalat"
 }

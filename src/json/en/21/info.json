@@ -2,9 +2,7 @@
   "id": 21,
   "name": "The Prophets",
   "numberOfAyah": 112,
-  "roman": {
-    "name": "Al-Anbya",
-    "slug": "al-anbya"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-anbya",
+  "translitName": "Al-Anbya"
 }

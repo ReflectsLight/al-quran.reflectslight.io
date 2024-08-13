@@ -2,9 +2,7 @@
   "id": 56,
   "name": "الواقعة",
   "numberOfAyah": 96,
-  "roman": {
-    "name": "Al-Waqi'ah",
-    "slug": "al-waqiah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-waqiah",
+  "translitName": "Al-Waqi'ah"
 }

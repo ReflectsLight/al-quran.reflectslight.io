@@ -2,9 +2,7 @@
   "id": 25,
   "name": "الفرقان",
   "numberOfAyah": 77,
-  "roman": {
-    "name": "Al-Furqan",
-    "slug": "al-furqan"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-furqan",
+  "translitName": "Al-Furqan"
 }

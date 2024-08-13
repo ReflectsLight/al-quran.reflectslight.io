@@ -2,9 +2,7 @@
   "id": 75,
   "name": "القيامة",
   "numberOfAyah": 40,
-  "roman": {
-    "name": "Al-Qiyamah",
-    "slug": "al-qiyamah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-qiyamah",
+  "translitName": "Al-Qiyamah"
 }

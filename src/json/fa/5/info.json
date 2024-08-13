@@ -2,9 +2,7 @@
   "id": 5,
   "name": "مائده",
   "numberOfAyah": 120,
-  "roman": {
-    "name": "Al-Ma'idah",
-    "slug": "al-maidah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-maidah",
+  "translitName": "Al-Ma'idah"
 }

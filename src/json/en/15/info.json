@@ -2,9 +2,7 @@
   "id": 15,
   "name": "The Rocky Tract",
   "numberOfAyah": 99,
-  "roman": {
-    "name": "Al-Hijr",
-    "slug": "al-hijr"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-hijr",
+  "translitName": "Al-Hijr"
 }

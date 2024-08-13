@@ -2,9 +2,7 @@
   "id": 106,
   "name": "Quraysh",
   "numberOfAyah": 4,
-  "roman": {
-    "name": "Quraysh",
-    "slug": "quraysh"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "quraysh",
+  "translitName": "Quraysh"
 }

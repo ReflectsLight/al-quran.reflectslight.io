@@ -2,9 +2,7 @@
   "id": 52,
   "name": "طور",
   "numberOfAyah": 49,
-  "roman": {
-    "name": "At-Tur",
-    "slug": "at-tur"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "at-tur",
+  "translitName": "At-Tur"
 }

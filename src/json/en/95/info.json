@@ -2,9 +2,7 @@
   "id": 95,
   "name": "The Fig",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "At-Tin",
-    "slug": "at-tin"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "at-tin",
+  "translitName": "At-Tin"
 }

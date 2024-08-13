@@ -2,9 +2,7 @@
   "id": 70,
   "name": "The Ascending Stairways",
   "numberOfAyah": 44,
-  "roman": {
-    "name": "Al-Ma'arij",
-    "slug": "al-maarij"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-maarij",
+  "translitName": "Al-Ma'arij"
 }

@@ -2,9 +2,7 @@
   "id": 92,
   "name": "الليل",
   "numberOfAyah": 21,
-  "roman": {
-    "name": "Al-Layl",
-    "slug": "al-layl"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-layl",
+  "translitName": "Al-Layl"
 }

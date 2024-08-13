@@ -2,9 +2,7 @@
   "id": 75,
   "name": "The Resurrection",
   "numberOfAyah": 40,
-  "roman": {
-    "name": "Al-Qiyamah",
-    "slug": "al-qiyamah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-qiyamah",
+  "translitName": "Al-Qiyamah"
 }

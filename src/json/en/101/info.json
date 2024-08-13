@@ -2,9 +2,7 @@
   "id": 101,
   "name": "The Calamity",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-Qari'ah",
-    "slug": "al-qariah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-qariah",
+  "translitName": "Al-Qari'ah"
 }

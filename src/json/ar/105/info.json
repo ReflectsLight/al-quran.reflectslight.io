@@ -2,9 +2,7 @@
   "id": 105,
   "name": "الفيل",
   "numberOfAyah": 5,
-  "roman": {
-    "name": "Al-Fil",
-    "slug": "al-fil"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-fil",
+  "translitName": "Al-Fil"
 }

@@ -2,9 +2,7 @@
   "id": 88,
   "name": "The Overwhelming",
   "numberOfAyah": 26,
-  "roman": {
-    "name": "Al-Ghashiyah",
-    "slug": "al-ghashiyah"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-ghashiyah",
+  "translitName": "Al-Ghashiyah"
 }

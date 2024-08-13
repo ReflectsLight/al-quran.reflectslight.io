@@ -2,9 +2,7 @@
   "id": 111,
   "name": "The Palm Fiber",
   "numberOfAyah": 5,
-  "roman": {
-    "name": "Al-Masad",
-    "slug": "al-masad"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-masad",
+  "translitName": "Al-Masad"
 }

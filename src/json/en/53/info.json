@@ -2,9 +2,7 @@
   "id": 53,
   "name": "The Star",
   "numberOfAyah": 62,
-  "roman": {
-    "name": "An-Najm",
-    "slug": "an-najm"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "an-najm",
+  "translitName": "An-Najm"
 }

@@ -2,9 +2,7 @@
   "id": 76,
   "name": "The Man",
   "numberOfAyah": 31,
-  "roman": {
-    "name": "Al-Insan",
-    "slug": "al-insan"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-insan",
+  "translitName": "Al-Insan"
 }

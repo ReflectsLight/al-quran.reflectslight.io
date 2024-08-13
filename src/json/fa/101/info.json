@@ -2,9 +2,7 @@
   "id": 101,
   "name": "قارعه",
   "numberOfAyah": 11,
-  "roman": {
-    "name": "Al-Qari'ah",
-    "slug": "al-qariah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-qariah",
+  "translitName": "Al-Qari'ah"
 }

@@ -17,8 +17,9 @@ type TQuran = {
 type TSurah = {
   readonly id: number;
   readonly name: string;
+  readonly urlName: string;
+  readonly translitName: string;
   readonly numberOfAyah: number;
-  readonly roman: { name: string; slug: string };
   readonly translatedBy: string | null;
 };
 
@@ -54,16 +55,18 @@ class Quran {
 class Surah {
   readonly id: number;
   readonly name: string;
+  readonly urlName: string;
+  readonly translitName: string;
   readonly numberOfAyah: number;
-  readonly roman: {name: string, slug: string};
   readonly ayat: TAyat;
   readonly translatedBy: string | null;
 
   constructor(self: TSurah) {
     this.id = self.id;
     this.name = self.name;
+    this.urlName = self.urlName;
+    this.translitName = self.translitName;
     this.numberOfAyah = self.numberOfAyah;
-    this.roman = self.roman;
     this.ayat = [];
     this.translatedBy = self.translatedBy;
     return this;

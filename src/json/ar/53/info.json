@@ -2,9 +2,7 @@
   "id": 53,
   "name": "النجم",
   "numberOfAyah": 62,
-  "roman": {
-    "name": "An-Najm",
-    "slug": "an-najm"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "an-najm",
+  "translitName": "An-Najm"
 }

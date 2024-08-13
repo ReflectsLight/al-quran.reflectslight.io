@@ -2,9 +2,7 @@
   "id": 97,
   "name": "The Power",
   "numberOfAyah": 5,
-  "roman": {
-    "name": "Al-Qadr",
-    "slug": "al-qadr"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-qadr",
+  "translitName": "Al-Qadr"
 }

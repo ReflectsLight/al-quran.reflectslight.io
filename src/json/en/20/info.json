@@ -2,9 +2,7 @@
   "id": 20,
   "name": "Ta-Ha",
   "numberOfAyah": 135,
-  "roman": {
-    "name": "Taha",
-    "slug": "taha"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "taha",
+  "translitName": "Taha"
 }

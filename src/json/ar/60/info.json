@@ -2,9 +2,7 @@
   "id": 60,
   "name": "الممتحنة",
   "numberOfAyah": 13,
-  "roman": {
-    "name": "Al-Mumtahanah",
-    "slug": "al-mumtahanah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-mumtahanah",
+  "translitName": "Al-Mumtahanah"
 }

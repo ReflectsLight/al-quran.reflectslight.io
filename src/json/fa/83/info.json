@@ -2,9 +2,7 @@
   "id": 83,
   "name": "مطففین",
   "numberOfAyah": 36,
-  "roman": {
-    "name": "Al-Mutaffifin",
-    "slug": "al-mutaffifin"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-mutaffifin",
+  "translitName": "Al-Mutaffifin"
 }

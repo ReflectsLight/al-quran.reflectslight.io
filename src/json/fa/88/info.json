@@ -2,9 +2,7 @@
   "id": 88,
   "name": "غاشیه",
   "numberOfAyah": 26,
-  "roman": {
-    "name": "Al-Ghashiyah",
-    "slug": "al-ghashiyah"
-  },
-  "translatedBy": "Hussain Ansarian"
+  "translatedBy": "Hussain Ansarian",
+  "urlName": "al-ghashiyah",
+  "translitName": "Al-Ghashiyah"
 }

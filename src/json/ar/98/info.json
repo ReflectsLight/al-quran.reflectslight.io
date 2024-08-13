@@ -2,9 +2,7 @@
   "id": 98,
   "name": "البينة",
   "numberOfAyah": 8,
-  "roman": {
-    "name": "Al-Bayyinah",
-    "slug": "al-bayyinah"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-bayyinah",
+  "translitName": "Al-Bayyinah"
 }

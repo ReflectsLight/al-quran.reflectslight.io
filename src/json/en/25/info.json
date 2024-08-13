@@ -2,9 +2,7 @@
   "id": 25,
   "name": "The Criterion",
   "numberOfAyah": 77,
-  "roman": {
-    "name": "Al-Furqan",
-    "slug": "al-furqan"
-  },
-  "translatedBy": "Dr. Mustafa Khattab"
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-furqan",
+  "translitName": "Al-Furqan"
 }

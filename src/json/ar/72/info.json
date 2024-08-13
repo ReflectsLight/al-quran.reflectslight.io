@@ -2,9 +2,7 @@
   "id": 72,
   "name": "الجن",
   "numberOfAyah": 28,
-  "roman": {
-    "name": "Al-Jinn",
-    "slug": "al-jinn"
-  },
-  "translatedBy": null
+  "translatedBy": null,
+  "urlName": "al-jinn",
+  "translitName": "Al-Jinn"
 }
