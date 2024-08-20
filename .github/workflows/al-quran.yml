@@ -20,4 +20,4 @@ jobs:
     - name: Add HTMLTidy
       run: sudo apt-get install tidy
     - name: ci
-      run: rake ci
+      run: bundle exec rake ci
