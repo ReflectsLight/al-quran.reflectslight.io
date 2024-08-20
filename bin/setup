@@ -15,9 +15,10 @@ printerr()
 
 require_dependency()
 {
+    local cmd
     for i in $(seq 1 $#); do
         eval "cmd=\$${i}"
-        if which ${cmd} > /dev/null 2>&1; then
+        if which "${cmd}" > /dev/null 2>&1; then
             printok "${cmd} found"
         else
             printerr "${cmd} is required but was not found on \$PATH"
@@ -38,5 +39,21 @@ printok "ruby dependencies installed"
 npm i
 printok "nodejs dependencies installed"
 
-cp nanoc.yaml.sample nanoc.yaml
-printok "nanoc.yaml.sample -> nanoc.yaml"
+if [ ! -e "nanoc.yaml" ]; then
+    cp nanoc.yaml.sample nanoc.yaml
+    printok "nanoc.yaml.sample -> nanoc.yaml"
+fi
+
+found=0
+for t in tidy tidy5; do
+    if which ${t} > /dev/null 2>&1; then
+	found=1
+	break
+    fi
+done
+
+if  [ "${found}" = "1" ]; then
+    printok "tidy-html5 found"
+else
+    printerr "tidy-html5 is required but was not found on \$PATH"
+fi
