@@ -54,7 +54,7 @@ installed to build the website from source:
   to your own domain by changing the `server.base_url`
   field in
   [nanoc.yaml](nanoc.yaml.sample)
-  before running `rake nanoc:build`.
+  before running `bundle exec rake nanoc:build`.
 
 * **audio.base_url** <br>
   `audio.base_url` controls what web server serves
