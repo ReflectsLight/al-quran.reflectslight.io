@@ -47,8 +47,8 @@ fi
 found=0
 for t in tidy tidy5; do
     if which ${t} > /dev/null 2>&1; then
-	found=1
-	break
+        found=1
+        break
     fi
 done
 
