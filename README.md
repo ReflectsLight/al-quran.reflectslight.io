@@ -27,16 +27,16 @@ installed to build the website from source:
     bin/setup
 
     # List all tasks
-    rake -T
+    bundle exec rake -T
 
     # Build website (dev build)
-    rake nanoc:build
+    bundle exec rake nanoc:build
 
     # Build website (production build)
-    rake nanoc:build[production]
+    bundle exec rake nanoc:build[production]
 
     # Start web server
-    rake server
+    bundle exec rake server
 
 ## Configuration
 
