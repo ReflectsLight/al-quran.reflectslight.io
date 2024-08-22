@@ -1,0 +1,24 @@
+* vNEXT
+
+**** Add ~share/al-quran.reflectslight.io/documentation/~
+This change replaces ~share/doc/al-quran.reflectslight.io~
+
+**** Add new recitation
+A new recitation by Hani ar-Rifai has been added
+
+**** Replace ~opengraph.rb~ with ~_opengraph.html.erb~
+This change simplifies how we render opengraph-related meta tags
+
+**** Move to nodejs for scss compiler
+This change replaces the deprecated Ruby scss compiler with the
+nodejs compiler
+
+**** Add ~audio.base_url~ to nanoc.yaml
+This change provides increased flexibility in how the website
+serve audio files
+
+**** Rename packages/typescript/Quran/ properties
+This change introduces urlName, translitName to Surah objects
+
+**** eslint upgrade
+This change migrates to the most recent version of eslint (^9.8)

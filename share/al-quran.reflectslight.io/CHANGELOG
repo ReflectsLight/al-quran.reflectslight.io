@@ -1,4 +1,0 @@
-* vNEXT
-
-** Replace opengraph.rb with _opengraph.html.erb
-This change simplifies how we render opengraph-related meta tags
