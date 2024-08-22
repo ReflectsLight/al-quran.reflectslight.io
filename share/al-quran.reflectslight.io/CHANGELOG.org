@@ -1,3 +1,9 @@
+* vNEXT
+
+**** Add ~etc/~
+This change moves a large portion of the website's configuration
+files to the ~/etc~ directory
+
 * v0.9.0
 
 **** Add ~share/al-quran.reflectslight.io/documentation/~

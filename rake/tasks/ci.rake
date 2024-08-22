@@ -6,7 +6,7 @@ namespace :ci do
   end
 
   task :eslint do
-    sh "npx eslint src/js"
+    sh "npm run eslint"
   end
 
   task :tsc do

@@ -4,8 +4,9 @@
     "./packages/typescript/*"
   ],
   "scripts": {
-    "tsc": "tsc --noEmit",
-    "eslint": "npm exec eslint -- --fix src/js/"
+    "tsc": "npx tsc --noEmit -p etc/tsconfig.json",
+    "eslint": "npx eslint --config etc/eslint.config.mjs src/js/",
+    "eslint:apply": "npx eslint --config etc/eslint.config.mjs --fix src/js/"
   },
   "dependencies": {
     "classnames": "^2.3",

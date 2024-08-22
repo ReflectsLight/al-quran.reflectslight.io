@@ -24,12 +24,13 @@ tdata      = Ryo.from_json(path: File.join(dirs.content, "json", "t.json"))
 surahs     = Ryo.from_json(path: File.join(dirs.content, "json", "surahs.json"))
 tidy       = `which tidy || which tidy5`.chomp
 buildenv   = ENV["buildenv"] || "development"
+etcdir     = File.join(__dir__, "etc")
 
 ##
-# Plugins
+# Filters
 Nanoc::Webpack
   .default_argv
-  .replace([*Nanoc::Webpack.default_argv, "--config", "webpack.#{buildenv}.js"].uniq)
+  .replace([*Nanoc::Webpack.default_argv, "--config", File.join(etcdir, "webpack.#{buildenv}.js")].uniq)
 Nanoc::Tidy
   .default_argv
   .replace([*Nanoc::Tidy.default_argv, "-upper"].uniq)
