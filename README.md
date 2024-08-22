@@ -98,6 +98,7 @@ installed to build the website from source:
     - Mishari bin Rashed Alafasy
     - Ahmad bin Ali Al-Ajmi
     - Sahl Yassin
+    - Hani ar-Rifai
 
 ## License
 
