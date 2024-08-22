@@ -59,7 +59,7 @@ installed to build the website from source:
 * **audio.base_url** <br>
   `audio.base_url` controls what web server serves
   audio content.
-  [The default](https://al-quran.reflectslight.io/audio/alafasy)
+  [The default](https://al-quran.reflectslight.io/audio/rifai)
   works out of the box. The URL for an audio file is
   resolved by joining `audio.base_url` and
   `/<surahid>/<ayahid>.mp3`. The `audio.base_url` option
