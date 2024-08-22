@@ -58,7 +58,7 @@ installed to build the website from source:
 
 * **audio.base_url** <br>
   `audio.base_url` controls what web server serves
-  audio content. 
+  audio content.
   [The default](https://al-quran.reflectslight.io/audio/alafasy)
   works out of the box. The URL for an audio file is
   resolved by joining `audio.base_url` and
@@ -75,10 +75,12 @@ installed to build the website from source:
   https://al-quran.reflectslight.io/audio/alajmi
   - Sahl Yassin <br>
   https://al-quran.reflectslight.io/audio/yassin
+  - Hani ar-Rifai <br>
+  https://al-quran.reflectslight.io/audio/rifai
 
   **Note**<br>
-  Due to their overall size the audio files are the only 
-  files **not** kept in this repository. The audio files 
+  Due to their overall size the audio files are the only
+  files **not** kept in this repository. The audio files
   are hosted  by https://al-quran.reflectslight.io instead.
 
 ## Thanks
