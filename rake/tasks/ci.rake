@@ -2,7 +2,7 @@
 
 namespace :ci do
   task :rubocop do
-    sh "bundle exec rubocop"
+    sh "bundle exec rubocop -c etc/rubocop.yml"
   end
 
   task :eslint do
