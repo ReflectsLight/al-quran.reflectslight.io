@@ -2,6 +2,10 @@
 
 * vNEXT
 
+**** Improve KaiOS support
+This change optimizes the layout for KaiOS devices through
+specialized media queries
+
 **** Add ~etc/~
 This change moves a large portion of the website's configuration
 files to the ~/etc~ directory
