@@ -44,8 +44,10 @@ module Utils
   # @return [String]
   #  Returns the website version
   def version
-    @version ||= File.read(File.join(dirs.root, "VERSION"))
-                     .gsub(/[^\d.]/, "")
+    @version ||= begin
+      path = File.join(dirs.root, "share", "al-quran.reflectslight.io", "VERSION")
+      File.read(path).gsub(/[^\d.]/, "")
+    end
   end
 
   ##
