@@ -10,19 +10,19 @@ but we're not quite there yet.
 
 ** Steps
 
-**** 1) Add new locale to file ~/Rules~
+**** Add new locale to file ~/Rules~
 The ~/Rules~ file has to be updated
 
-**** 2) Add new locale to array ~Quran.locales~
+**** Add new locale to array ~Quran.locales~
 The ~/packages/Quran/src/index.ts~ file has to be updated
 
-**** 3) Add new locale (+ translations)
+**** Add new locale (+ translations)
 The following files have to updated:
 + ~/src/json/t.json~
 + ~/src/json/surahs.json~
 + ~/src/json/<locale>/<surahId>/{info,surah}.json~
 
-**** 4) Save time
+**** Save time
 The ~/src/json/<locale>/<surahId>/info.json~ files can
 be generated from the contents of ~/src/json/surahs.json~ -
 and that leaves us with one less step to complete:

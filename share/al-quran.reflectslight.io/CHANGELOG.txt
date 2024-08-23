@@ -1,6 +1,6 @@
 # -*- mode: org -*-
 
-* vNEXT
+** vNEXT
 
 **** Improve KaiOS support
 This change optimizes the layout for KaiOS devices through
@@ -10,7 +10,7 @@ specialized media queries
 This change moves a large portion of the website's configuration
 files to the ~/etc~ directory
 
-* v0.9.0
+** v0.9.0
 
 **** Add ~share/al-quran.reflectslight.io/documentation/~
 This change replaces ~share/doc/al-quran.reflectslight.io~
