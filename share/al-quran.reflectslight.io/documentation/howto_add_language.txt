@@ -1,6 +1,6 @@
 # -*- mode: org -*-
 
-* Introduction
+*** Introduction
 
 This document explains the process that should be
 followed when adding a new locale or language
@@ -8,21 +8,21 @@ to the website. Ideally the process would require
 a minimal amount of manual work and be fast to complete
 but we're not quite there yet.
 
-* Steps
+*** Steps
 
-*** 1) Add new locale to file ~/Rules~
+**** 1) Add new locale to file ~/Rules~
 The ~/Rules~ file has to be updated
 
-*** 2) Add new locale to array ~Quran.locales~
+**** 2) Add new locale to array ~Quran.locales~
 The ~/packages/Quran/src/index.ts~ file has to be updated
 
-*** 3) Add new locale (+ translations)
+**** 3) Add new locale (+ translations)
 The following files have to updated:
 + ~/src/json/t.json~
 + ~/src/json/surahs.json~
 + ~/src/json/<locale>/<surahId>/{info,surah}.json~
 
-*** 4) Save time
+**** 4) Save time
 The ~/src/json/<locale>/<surahId>/info.json~ files can
 be generated from the contents of ~/src/json/surahs.json~ -
 and that leaves us with one less step to complete:
