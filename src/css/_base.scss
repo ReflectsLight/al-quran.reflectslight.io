@@ -41,17 +41,12 @@ body .root .content.theme {
   header {
     a[data-testid="h1"] {
       font-size: x-large;
-    }
-
-    @media screen and (max-width: $breakpoint-kaiOS-portrait) and (orientation: portrait) {
-      a[data-testid="h1"] {
+      @media screen and
+      (max-width: $breakpoint-kaiOS-portrait) and
+      (orientation: portrait) {
         font-size: larger;
       }
     }
-  }
-
-  h1 {
-    font-size: x-large;
   }
 
   header {
