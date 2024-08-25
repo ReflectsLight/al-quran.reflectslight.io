@@ -6,7 +6,6 @@
 require "ryo"
 require "ryo/json"
 require "ryo/yaml"
-require "nanoc-gzip"
 require "nanoc-webpack"
 require "nanoc-tidy"
 
@@ -36,12 +35,6 @@ Nanoc::Tidy
   .replace([*Nanoc::Tidy.default_argv, "-upper"].uniq)
 
 ##
-# See packages/typescript/postman
-compile "/css/vendor/postman.css" do
-  write("/css/vendor/postman.css")
-end
-
-##
 # /sitemap.xml
 compile "/sitemap.xml.erb" do
   filter(:erb, locals: {locales:, name_by_id:})
@@ -66,6 +59,10 @@ require_rules "nanoc/rules/redirect", {locales:, tidy:}
 require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
 require_rules "nanoc/rules/surah-stream", {locales:, tdata:, surahs:, name_by_id:, tidy:}
 require_rules "nanoc/rules/surah-index", {locales:, tdata:, tidy:}
+
+compile("/manifest.webapp") do
+  write("/manifest.webapp")
+end
 
 ##
 # Catch-all

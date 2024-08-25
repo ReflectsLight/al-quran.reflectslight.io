@@ -6,18 +6,18 @@
 
 ##
 # fonts
+compile "/css/fonts.css" do
+  write(item.identifier.to_s)
+end
+
 compile "/fonts/*" do
   write(item.identifier.to_s)
-  filter :gzip
-  write("#{item.identifier}.gz")
 end
 
 ##
 # images
 compile "/images/*.svg" do
   write(item.identifier.to_s)
-  filter :gzip
-  write("#{item.identifier}.gz")
 end
 
 compile "/images/*.png" do
@@ -31,3 +31,4 @@ end
 compile "/favicon.ico" do
   write(item.identifier.to_s)
 end
+

@@ -32,7 +32,6 @@ export function Stream({
         className={classNames(
           "body stream scroll-y list-none p-0 m-0 h-5/6",
           ...className,
-          { "mt-6": ltr || rtl },
         )}
         ref={ref}
       >

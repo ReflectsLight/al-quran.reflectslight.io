@@ -1,0 +1,24 @@
+{
+    "name": "The Noble Quran",
+    "description": "Read and listen to The Noble Quran",
+    "launch_path": "/en/index.html",
+    "icons": {
+        "128": "/images/favicon-128x128.png"
+    },
+    "type": "privileged",
+    "developer": {
+        "name": "0x1eef",
+        "url": "http://al-quran.reflectslight.io"
+    },
+    "default_locale": "en",
+    "locales": {
+        "en": {
+            "name": "The Noble Quran",
+            "description": "Read and listen to The Noble Quran"
+        }
+    },
+    "permissions": {
+        "systemXHR": {},
+        "storage": {}
+    }
+}

@@ -7,16 +7,12 @@
 
 compile "/json/*/*/{surah,info}.json" do
   write(item.identifier.to_s)
-  if File.size(item.raw_filename) > (1024 * 10)
-    filter :gzip
-    write("#{item.identifier}.gz")
-  end
 end
 
 Ryo.each(name_by_id) do |id, slug|
   write_file = ->(locale, pathname:) do
     surah = surahs[locale][id.to_i - 1]
-    context = Ryo.from(locale:, locales:, surah:, dir: tdata[locale].dir)
+    context = Ryo.from(locale:, surah_id: surah.id, locales:, surah:, dir: tdata[locale].dir)
     filter(:erb, locals: {context:})
     filter(:tidy, exe: tidy)
     write "/#{locale}/#{pathname}/index.html"
@@ -39,13 +35,4 @@ compile "/js/main/surah-stream.tsx" do
     "/css"
   ]
   write "/js/main/surah-stream.js"
-  filter :gzip
-  write "/js/main/surah-stream.js.gz"
-end
-
-compile "/js/loaders/SurahStreamLoader.ts" do
-  filter :webpack
-  write "/js/loaders/surah-stream-loader.js"
-  filter :gzip
-  write "/js/loaders/surah-stream-loader.js.gz"
 end

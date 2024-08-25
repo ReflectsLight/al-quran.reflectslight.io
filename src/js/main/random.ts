@@ -1,3 +1,4 @@
+import "core-js";
 (function () {
   const nameById = require("@json/nameById.json");
   const surahId: number = Math.ceil(Math.random() * 114);

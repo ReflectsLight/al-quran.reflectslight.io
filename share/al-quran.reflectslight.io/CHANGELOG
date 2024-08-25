@@ -2,19 +2,29 @@
 
 ** vNEXT
 
-**** Improve KaiOS support
-This change optimizes the layout for KaiOS devices through
-specialized media queries
+**** Remove nanoc-gzip.rb
+This change removes a network optimization that doesn't apply when
+resources are local to the device
+
+**** Remove loaders
+This change removes all loaders from ~/src/js/loaders/~, and
+the postman package (~packages/typescript/postman~). Resources
+are local to the device, and that reduces how useful the loader
+feature can be
+
+**** KaiOS fork
+This change forks a new branch: ~kaios/main~. The branch will be
+dedicated to KaiOS support, and diverges from the ~main~ branch
 
 **** Add ~etc/~
 This change moves a large portion of the website's configuration
 files to the ~/etc~ directory
 
+
 ** v0.9.0
 
 **** Add ~share/al-quran.reflectslight.io/documentation/~
 This change replaces ~share/doc/al-quran.reflectslight.io~
-
 **** Add new recitation
 A new recitation by Hani ar-Rifai has been added
 

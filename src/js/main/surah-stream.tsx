@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
 import { SurahStream } from "~/components/SurahStream";
+import "core-js";
 
 (function () {
   const doc = document.documentElement;
@@ -15,7 +16,7 @@ import { SurahStream } from "~/components/SurahStream";
   /*
    * Configure an instance of Surah
    */
-  const node1: HTMLScriptElement = doc.querySelector(".json.surahinfo")!;
+  const node1: HTMLScriptElement = doc.querySelector(".json.info")!;
   const node2: HTMLScriptElement = doc.querySelector(".json.surah")!;
   const node3: HTMLScriptElement = doc.querySelector(".json.durations")!;
   const blob1: TSurah = JSON.parse(node1.innerText)!;

@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  devtool: "source-map",
   resolve: {
     modules: [path.resolve(__dirname, "..", "node_modules")],
     alias: {
@@ -14,12 +15,22 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'esbuild-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          loader: 'tsx',
-          target: 'es2015'
-        }
+          presets: [
+            ['@babel/preset-env', {
+              targets: {
+                esmodules: false,
+                browsers: ['KaiOS >= 2.5', 'Firefox >= 48'],
+              },
+              useBuiltIns: 'entry',
+              corejs: 3,
+            }],
+            '@babel/preset-typescript',
+            '@babel/preset-react'
+          ],
+        },
       },
       {
         test: /\.(scss|css)$/i,

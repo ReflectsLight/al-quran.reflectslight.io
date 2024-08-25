@@ -22,13 +22,4 @@ compile "/js/main/surah-index.tsx" do
     "/css"
   ]
   write "/js/main/surah-index.js"
-  filter :gzip
-  write "/js/main/surah-index.js.gz"
-end
-
-compile "/js/loaders/SurahIndexLoader.ts" do
-  filter :webpack
-  write "/js/loaders/surah-index-loader.js"
-  filter :gzip
-  write "/js/loaders/surah-index-loader.js.gz"
 end

@@ -18,7 +18,7 @@ html {
       direction: ltr;
     }
     .rtl {
-      font-family: "Mada Regular";
+      font-family: 'Arial', 'Tahoma', sans-serif;
       direction: rtl;
     }
     .invisible, .hidden {
@@ -40,12 +40,7 @@ body .root .content.theme {
 
   header {
     a[data-testid="h1"] {
-      font-size: x-large;
-      @media screen and
-      (max-width: $breakpoint-kaiOS-portrait) and
-      (orientation: portrait) {
-        font-size: larger;
-      }
+      font-size: medium;
     }
   }
 
@@ -66,10 +61,6 @@ body .root .content.theme {
  * RTL languages
  */
 body .root .content.theme.rtl {
-  header h1 {
-    font-size: xx-large;
-  }
-
   /* <= $breakpoint-sm */
   @media (max-width: $breakpoint-sm) {
     header h1 {

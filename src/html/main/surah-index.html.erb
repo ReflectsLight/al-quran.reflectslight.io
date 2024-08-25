@@ -2,7 +2,6 @@
 <html lang="<%= context.locale %>" dir="<%= context.dir %>">
   <head>
     <title><%= t(context.locale, "TheNobleQuran") %></title>
-    <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
@@ -11,17 +10,17 @@
     <link
       rel="canonical"
       href="<%= base_url %>/<%= context.locale %>/"
-    />
+      />
     <% context.locales.each do |locale| %>
     <link rel="alternate"
           href="<%= base_url %>/<%= locale %>/"
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
+    <link rel="stylesheet" href="/css/fonts.css"/>
   </head>
   <body>
-    <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="root h-full"></div>
-    <script src="/js/loaders/surah-index-loader.js?v=<%= commit %>"></script>
+    <script type="text/javascript" src="/js/main/surah-index.js"></script>
   </body>
 </html>

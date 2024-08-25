@@ -7,4 +7,12 @@ module Utils::Inline
     "#{items[path].compiled_content}" \
     "</style>"
   end
+
+  def inline_json(path, context:, class_name: File.basename(path, File.extname(path)))
+    ctx = Ryo.table_of(context).map { [_1.to_sym, _2] }.to_h
+    path = format(path, ctx)
+    %|<script type='application/json' class="json #{class_name}">| \
+    "#{items[path].compiled_content}" \
+    "</script>"
+  end
 end

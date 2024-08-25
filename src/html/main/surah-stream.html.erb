@@ -18,13 +18,16 @@
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
+    <link rel="stylesheet" href="/css/fonts.css"/>
   </head>
   <body>
-    <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="root"
          data-surah-id="<%= context.surah.id %>"
          data-audio-base-url="<%= audio_base_url %>">
     </div>
-    <script src="/js/loaders/surah-stream-loader.js?v=<%= commit %>"></script>
+    <%= inline_json("/json/%{locale}/%{surah_id}/info.json", context:, class_name: "info") %>
+    <%= inline_json("/json/%{locale}/%{surah_id}/surah.json", context:, class_name: "surah") %>
+    <%= inline_json("/json/durations/%{surah_id}.json", context:, class_name: "durations") %>
+    <script src="/js/main/surah-stream.js"></script>
   </body>
 </html>

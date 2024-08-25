@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
 import { SurahIndex } from "~/components/SurahIndex";
+import "core-js";
 
 (function () {
   const doc = document.documentElement;

@@ -39,7 +39,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6">
+      <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 m-auto w-full h-5/6">
         {index.map((surah, key) => (
           <li
             className={classNames("flex justify-center surah", {
