@@ -7,20 +7,55 @@ type Props = {
 
 export function PlayIcon({ onClick }: Props) {
   return (
-    <svg className="play icon" onClick={onClick} viewBox="0 0 48 48">
+    <svg
+      onClick={onClick}
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="163.861px"
+      height="163.861px"
+      viewBox="0 0 163.861 163.861"
+      className="play icon"
+    >
       <g>
-        <path d="M10,6 L38,24 L10,42 Z" />
+        <path
+          d="M34.857,3.613C20.084-4.861,8.107,2.081,8.107,19.106v125.637c0,17.042,11.977,23.975,26.75,15.509L144.67,97.275
+		c14.778-8.477,14.778-22.211,0-30.686L34.857,3.613z"
+        />
       </g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
+      <g></g>
     </svg>
   );
 }
 
 export function PauseIcon({ onClick }: Props) {
   return (
-    <svg className="icon pause" onClick={onClick} viewBox="0 0 48 48">
-      <g>
-        <rect x="7" y="6" />
-        <rect x="28" y="6" />
+    <svg
+      onClick={onClick}
+      height="512"
+      className="icon pause"
+      viewBox="0 0 32 32"
+      width="512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="Layer_33" data-name="Layer 33">
+        <path d="m14 5v22a3 3 0 0 1 -3 3h-3a3 3 0 0 1 -3-3v-22a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3zm10-3h-3a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3z" />
       </g>
     </svg>
   );

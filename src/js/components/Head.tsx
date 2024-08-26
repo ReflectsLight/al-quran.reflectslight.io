@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { LanguageSelect, ThemeSelect } from "~/components/Select";
 import type { TLocale } from "Quran";
 import { Theme } from "~/hooks/useTheme";
-import classNames from "classnames";
 
 type Props = {
   locale: TLocale;

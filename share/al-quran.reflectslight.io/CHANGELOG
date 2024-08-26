@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Replace the play, pause icons
+This change replaces the previous icons with a set of icons
+compatible with KaiOS
+
 **** Remove nanoc-gzip.rb
 This change removes a network optimization that doesn't apply when
 resources are local to the device

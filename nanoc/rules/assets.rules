@@ -31,4 +31,3 @@ end
 compile "/favicon.ico" do
   write(item.identifier.to_s)
 end
-
