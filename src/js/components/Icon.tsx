@@ -49,7 +49,7 @@ export function PauseIcon({ onClick }: Props) {
     <svg
       onClick={onClick}
       height="512"
-      className="icon pause"
+      className="pause icon"
       viewBox="0 0 32 32"
       width="512"
       xmlns="http://www.w3.org/2000/svg"
