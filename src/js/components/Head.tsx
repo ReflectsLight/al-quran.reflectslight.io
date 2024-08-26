@@ -14,12 +14,7 @@ type Props = {
 
 export function Head({ locale, theme, setTheme, children }: Props) {
   return (
-    <header
-      className={classNames("flex flex-col h-20 mt-4", {
-        "mb-4": locale.direction === "ltr",
-        "mb-6": locale.direction === "rtl",
-      })}
-    >
+    <header className="flex flex-col h-20 mt-4 mb-4">
       <div className="flex flex-col">
         <div className="flex items-center justify-center">
           <a

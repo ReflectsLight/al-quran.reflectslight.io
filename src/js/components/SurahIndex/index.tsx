@@ -39,7 +39,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 m-auto w-full h-5/6">
+      <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 w-full h-full">
         {index.map((surah, key) => (
           <li
             className={classNames("flex justify-center surah", {
@@ -49,11 +49,11 @@ export function SurahIndex({ locale, surahs, t }: Props) {
             key={key}
           >
             <a
-              className="flex items-center color-primary no-underline rounded w-11/12 h-14"
+              className="flex items-center color-primary no-underline rounded w-11/12 h-8"
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span className="color-secondary font-extrabold w-10 text-center">
+                <span className="color-secondary font-extrabold w-5 text-center">
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (

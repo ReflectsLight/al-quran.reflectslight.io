@@ -37,23 +37,12 @@ body .root .content.theme {
   margin: 0 auto;
   max-width: $breakpoint-md;
   width: 85%;
+  font-size: medium;
 
   header {
     a[data-testid="h1"] {
-      font-size: medium;
-    }
-  }
-
-  header {
-    nav, div {
       font-size: large;
     }
-  }
-  ul.body {
-    font-size: large;
-  }
-  footer {
-    font-size: large;
   }
 }
 
