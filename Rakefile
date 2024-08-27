@@ -1,18 +1,18 @@
 namespace :source do
+  desc "Clone"
   task :clone do
-    sh "git clone " \
-       "http://git.bastion.home.network/ReflectsLight/al-quran.reflectslight.io " \
-       "source/"
+    # TODO
   end
 
+  desc "Pull updates"
   task :pull do
     Dir.chdir File.join(__dir__, "source") do
       sh "git pull --rebase origin main"
     end
   end
 
-  task :build do
-    sh "rm -rf build/"
+  desc "Build the build/ directory"
+  task build: %i[source:clean] do
     Dir.chdir File.join(__dir__, "source") do
       Bundler.with_unbundled_env do
       sh "bundle exec rake nanoc:clean"
@@ -20,5 +20,15 @@ namespace :source do
       sh "mv build/ ../"
       end
     end
+  end
+
+  task deploy: %i[source:build] do
+    sh "git commit -am 'Update build/al-quran' || true"
+    sh "git push origin production"
+  end
+
+  desc "Clean the build/ directory"
+  task :clean do
+    sh "rm -rf build/"
   end
 end
