@@ -4,13 +4,13 @@
 namespace :source do
   desc "Clone the website"
   task :clone do
-    # TODO
+    sh "git clone https://github.com/ReflectsLight/al-quran.reflectslight.io source/"
   end
 
   desc "Pull website updates"
   task :pull do
     Dir.chdir File.join(__dir__, "source") do
-      sh "git pull github main"
+      sh "git pull origin main"
     end
   end
 end
