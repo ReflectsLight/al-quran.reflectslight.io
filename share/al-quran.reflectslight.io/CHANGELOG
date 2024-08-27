@@ -4,7 +4,7 @@
 
 **** Change default ~audio.base_url~
 This change sets the default audio URL to
-https://audio.al-quran.reflectslight.io/rifai
+https://audio1.al-quran.reflectslight.io/rifai
 
 **** Improve KaiOS support
 This change optimizes the layout for KaiOS devices through
