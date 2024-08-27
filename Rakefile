@@ -15,16 +15,16 @@ namespace :source do
   task build: %i[source:clean] do
     Dir.chdir File.join(__dir__, "source") do
       Bundler.with_unbundled_env do
-      sh "bundle exec rake nanoc:clean"
-      sh "bundle exec rake nanoc:build[production]"
-      sh "mv build/ ../"
+        sh "bundle exec rake nanoc:clean"
+        sh "bundle exec rake nanoc:build[production]"
+        sh "mv build/ ../"
       end
     end
   end
 
   task deploy: %i[source:build] do
     sh "git commit -am 'Update build/al-quran' || true"
-    sh "git push origin production"
+    sh "git-push github"
   end
 
   desc "Clean the build/ directory"
