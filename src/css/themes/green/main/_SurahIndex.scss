@@ -6,6 +6,10 @@
     &:active, &:link, &:visited {
       color: $primary-color;
     }
+    span:first-child {
+      border: 1px solid $black;
+      color: $white;
+    }
   }
 
   footer {

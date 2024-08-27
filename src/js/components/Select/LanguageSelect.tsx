@@ -17,7 +17,7 @@ export function LanguageSelect({ locale }: Props) {
           <Select.Option
             key={i}
             className={classNames(
-              "flex h-6 text-base w-full items-center justify-center no-underline mb-1 rounded",
+              "flex h-5 text-sm w-full items-center justify-center no-underline mb-1 rounded",
               l.direction,
               l.name === locale.name ? "active" : undefined,
             )}

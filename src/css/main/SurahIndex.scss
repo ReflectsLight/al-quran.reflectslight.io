@@ -30,30 +30,8 @@ body .root .content.theme {
   }
 
   footer {
-    @media screen and (max-width: $breakpoint-kaiOS-landscape) {
-      display: none;
-    }
-    @media screen and (max-width: $breakpoint-kaiOS-portrait) {
-      display: none;
-    }
-
-    @media(max-width: $breakpoint-sm) {
-      border-top: 1px solid #f2f2f2;
-      .right-arrow,
-      .left-arrow {
-        display: none;
-      }
-      a {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-
-    @media(hover: none) {
-      input[data-testid="SurahIndex/Filter"] {
-        display: none;
-      }
-    }
+    /* TODO: Remove footer ? */
+    display: none;
   }
 }
 

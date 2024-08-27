@@ -8,8 +8,9 @@
         color: $primary-color;
       }
 
-      span.id {
-        color: $secondary-color;
+      span:first-child {
+        border: 1px solid $black;
+        color: $white;
       }
     }
   }
