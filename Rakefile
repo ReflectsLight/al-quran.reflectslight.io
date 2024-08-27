@@ -10,7 +10,7 @@ namespace :source do
   desc "Pull website updates"
   task :pull do
     Dir.chdir File.join(__dir__, "source") do
-      sh "git pull --rebase github $(git branch --show)"
+      sh "git pull --rebase github main"
     end
   end
 end
