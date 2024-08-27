@@ -7,15 +7,15 @@ includes the build directory that is live on production
 
 ## Example
 
-        ##
-        # Clone / Pull a copy of the website
-        bundle exec rake source:clone
-        bundle exec rake source:pull
+    ##
+    # Clone / Pull a copy of the website
+    bundle exec rake source:clone
+    bundle exec rake source:pull
 
-        ##
-        # Build the website
-        # git: commit build/al-quran
-        # git: push
-        # deploy: auto-deploy by CloudFlare
-        bundle exec rake website:deploy
+    ##
+    # Build the website
+    # git: commit build/al-quran
+    # git: push
+    # deploy: auto-deploy by CloudFlare
+    bundle exec rake website:deploy
 
