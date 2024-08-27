@@ -82,7 +82,7 @@ installed to build the website from source:
   Due to their overall size the audio files are the only
   files **not** kept in this repository. The audio files
   are hosted  by https://audio.al-quran.reflectslight.io
-  instead.
+  instead
 
 ## Thanks
 
