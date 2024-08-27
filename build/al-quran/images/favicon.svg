@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.43 358.056">
+  <g id="Calque_2" data-name="Calque 2" transform="scale(0.9) translate(0, 15)">
+    <g id="_01-_quran" data-name="01- quran" transform="scale(0.9) translate(0, 15)">
+      <path d="m198.551 46.33s11.042-28.077 41.994-46.33l178.721 13.64-123.041 144.872s-94.415-64.169-97.674-112.182z" fill="#f0e3e7" stroke="black" stroke-width="0.5"/>
+      <path d="m445.23 41.488-112.33 125.012-28.95 16.59-223.09-70.512-.07-.02-79.87-30.73 5.49-67.45s78.88-3.87 155.26 6.09c0 0 74.38 42.59 134.29 129.43 0 0 10.48-88.32 123.31-136.26z" fill="#fcf4f6" stroke="black" stroke-width="0.5"/>
+      <path d="m161.67 20.468c-9.99 51.44-28.46 75.41-28.46 75.41l-52.35 16.7-.07-.02-79.87-30.73 5.49-67.45s78.88-3.87 155.26 6.09z" fill="#f0e3e7" stroke="black" stroke-width="0.5"/>
+      <path d="m457.43 51.128-53.92 52.83-77.28 109.3-239.83-80.9-58.69-19.8-27.71-5.28.92-25.45 132.29 14.05 176.46 83.93 135.56-138.32z" fill="#ffb48d" stroke="black" stroke-width="0.5"/>
+      <path d="m133.21 95.878-4.17 38.18-42.64-1.7-58.69-19.8-27.71-5.28.92-25.45z" fill="#f5a27e" stroke="black" stroke-width="0.5"/>
+      <!-- Manually added stroke for blue areas -->
+      <path d="m453.57 268.438-17.75 30.05h-78.91l-337.34-157.37 8.14-28.56 137.84 18.72z" fill="#3383C3" stroke="black" stroke-width="0.5"/>
+      <path d="m435.82 298.488h-78.91l-337.34-157.37 130.2 19.4z" fill="#3383C3" stroke="black" stroke-width="0.5"/>
+      <path d="m290.414 228.353-84.615 121.474-145.539-54.202 107.307-85.463h.005z" fill="#3383C3" stroke="black" stroke-width="0.5"/>
+      <path d="m424.967 128.549-216.751 229.507-147.956-35.248v-27.183l141.298 30.459 201.955-222.13z" fill="#3383C3" stroke="black" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
