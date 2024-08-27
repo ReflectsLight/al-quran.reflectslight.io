@@ -11,7 +11,7 @@ namespace :source do
     end
   end
 
-  desc "Build the build/ directory"
+  desc "Build the website"
   task build: %i[source:clean] do
     Dir.chdir File.join(__dir__, "source") do
       Bundler.with_unbundled_env do
@@ -22,9 +22,10 @@ namespace :source do
     end
   end
 
+  desc "Deploy the website"
   task deploy: %i[source:build] do
     sh "git commit -am 'Update build/al-quran' || true"
-    sh "git-push github"
+    sh "git push github production"
   end
 
   desc "Clean the build/ directory"
