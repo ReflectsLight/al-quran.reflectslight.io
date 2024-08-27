@@ -17,5 +17,5 @@ includes the build directory that is live on production
    # git: commit build/al-quran
    # git: push
    # deploy: auto-deploy by CloudFlare
-   bundle exec rake deploy
+   bundle exec rake website:deploy
 
