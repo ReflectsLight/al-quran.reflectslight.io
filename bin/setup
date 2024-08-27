@@ -5,12 +5,12 @@ set -e
 # functions
 printok()
 {
-    echo "ok: ${1}" > /dev/stdout
+    echo "ok: ${1}"
 }
 
 printerr()
 {
-    echo "error: ${1}" > /dev/stderr
+    echo "error: ${1}"
 }
 
 require_dependency()
