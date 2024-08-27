@@ -29,7 +29,7 @@ namespace :website do
 
   desc "Deploy the website"
   task deploy: %i[source:pull website:build] do
-    sh "git commit -am 'Update build/al-quran' || true"
+    sh "git commit -am 'Deploy the website' || true"
     sh "git push github production"
   end
 
