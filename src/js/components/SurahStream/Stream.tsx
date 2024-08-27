@@ -39,7 +39,7 @@ export function Stream({
           return (
             <li
               key={ayah.id}
-              className={classNames("ayah fade", { "mb-5": rtl, "mb-4": ltr })}
+              className={classNames("ayah fade", { "mb-1": rtl || ltr })}
             >
               <span className="flex h-8 items-center">
                 <AudioControl
