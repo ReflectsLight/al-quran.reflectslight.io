@@ -1,9 +1,0 @@
-[submodule "submodules/surah-name-glyphs"]
-	path = submodules/surah-name-glyphs
-	url = https://github.com/ReflectsLight/surah-name-glyphs
-[submodule "submodules/quran-json"]
-	path = submodules/quran-json
-	url = https://github.com/ReflectsLight/quran-json
-[submodule "submodules/tail.css"]
-	path = submodules/tail.css
-	url = https://github.com/0x1eef/tail.css
