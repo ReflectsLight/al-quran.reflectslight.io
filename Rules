@@ -35,20 +35,6 @@ Nanoc::Tidy
   .replace([*Nanoc::Tidy.default_argv, "-upper"].uniq)
 
 ##
-# /sitemap.xml
-compile "/sitemap.xml.erb" do
-  filter(:erb, locals: {locales:, name_by_id:})
-  filter proc { _1.each_line.reject { |s| s.strip.empty? }.join }
-  write("/sitemap.xml")
-end
-
-##
-# /robots.txt
-compile "/robots.txt" do
-  write("/robots.txt")
-end
-
-##
 # /json/durations/*.json
 passthrough "/json/durations/*.json"
 
