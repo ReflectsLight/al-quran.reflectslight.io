@@ -54,3 +54,8 @@ end
 # Catch-all
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)
+
+postprocess do
+  # Remove build artifacts
+  system "rm -rf build/al-quran/json/"
+end
