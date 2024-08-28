@@ -35,6 +35,10 @@ export function SurahStream({ surah, locale, t }: Props) {
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
 
   useEffect(() => {
+    navigator.spatialNavigationEnabled = false;
+  }, []);
+
+  useEffect(() => {
     const el = articleRef.current;
     if (el) {
       el.classList.remove("invisible");

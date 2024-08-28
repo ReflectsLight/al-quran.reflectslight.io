@@ -20,6 +20,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    navigator.spatialNavigationEnabled = true;
+  }, []);
+
+  useEffect(() => {
     const div = ref.current;
     if (div) {
       div.classList.remove("invisible");

@@ -19,7 +19,7 @@
     },
     "permissions": {
         "systemXHR": {},
-        "storage": {}
-    },
-    "cursor": true
+        "storage": {},
+        "spatialnavigation-app-manage": {}
+    }
 }
