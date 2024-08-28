@@ -39,6 +39,30 @@ export function SurahStream({ surah, locale, t }: Props) {
   }, []);
 
   useEffect(() => {
+    const el = document.activeElement;
+    if (!el)
+      return
+    const onKeyUp = (e) => {
+       switch(e.key) {
+         case 'ArrowUp':
+           /* FIXME: Toggle audio */
+           break;
+         case 'ArrowDown':
+           location.href = `/${locale.name}/index.html`;
+           break;
+         case 'ArrowRight':
+           /* FIXME: map to ...? */
+           break;
+         case 'ArrowLeft':
+           setIsPaused(!isPaused)
+           break;
+       }
+    }
+    el.addEventListener("keyup", onKeyUp);
+    return () => el.removeEvenetListener("keyup", onKeyUp);
+  }, [document.activeElement, isPaused]);
+
+  useEffect(() => {
     const el = articleRef.current;
     if (el) {
       el.classList.remove("invisible");
