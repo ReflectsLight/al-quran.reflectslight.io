@@ -26,6 +26,12 @@ export function SurahIndex({ locale, surahs, t }: Props) {
     }
   }, [ref.current, theme]);
 
+  useEffect(() => {
+    if (!document.activeElement)
+      return
+    //document.activeElement.addEventListener("keydown", onKeyDown);
+  }, [document.activeElement]);
+
   return (
     <div
       ref={ref}
@@ -50,7 +56,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           >
             <a
               className="flex items-center color-primary no-underline rounded w-11/12 h-8"
-              href={`/${locale.name}/${surah.urlName}/`}
+              href={`/${locale.name}/${surah.urlName}/index.html`}
             >
               {locale.direction === "ltr" ? (
                 <span className="background-secondary color-white rounded flex w-8 font-extrabold w-5 mr-3 justify-center text-center">

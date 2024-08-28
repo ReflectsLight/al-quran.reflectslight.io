@@ -20,5 +20,6 @@
     "permissions": {
         "systemXHR": {},
         "storage": {}
-    }
+    },
+    "cursor": true
 }
