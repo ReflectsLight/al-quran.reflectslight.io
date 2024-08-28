@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Reduce bundle size
+This change removes build artifacts and features that don't
+apply on KaiOS (such as opengraph)
+
 **** Replace the play, pause icons
 This change replaces the previous icons with a set of icons
 compatible with KaiOS
