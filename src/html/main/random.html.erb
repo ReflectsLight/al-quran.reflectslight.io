@@ -4,7 +4,6 @@
     <title><%= t(context.locale, "TheNobleQuran") %></title>
     <meta name="description" content="<%= t(context.locale, 'meta.random.description') %>">
     <%= erb("_version.html.erb") %>
-    <%= erb("_opengraph.html.erb", {file: "random.html.erb", context:}) %>
     <link
       rel="canonical"
       href="<%= base_url %>/<%= context.locale %>/random/"

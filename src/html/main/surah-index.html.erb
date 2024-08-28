@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="description" content="<%= t(context.locale, 'meta.index.description') %>">
     <%= erb("_version.html.erb") %>
-    <%= erb("_opengraph.html.erb", {file: "surah-index.html.erb", context:}) %>
     <link
       rel="canonical"
       href="<%= base_url %>/<%= context.locale %>/"

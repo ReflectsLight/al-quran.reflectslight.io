@@ -24,10 +24,6 @@ compile "/images/*.png" do
   write(item.identifier.to_s)
 end
 
-compile "/images/og/*.png" do
-  write(item.identifier.to_s)
-end
-
 compile "/favicon.ico" do
   write(item.identifier.to_s)
 end
