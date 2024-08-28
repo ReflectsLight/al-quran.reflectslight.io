@@ -59,7 +59,7 @@ export function SurahStream({ surah, locale, t }: Props) {
        }
     }
     el.addEventListener("keyup", onKeyUp);
-    return () => el.removeEvenetListener("keyup", onKeyUp);
+    return () => el.removeEventListener("keyup", onKeyUp);
   }, [document.activeElement, isPaused]);
 
   useEffect(() => {
