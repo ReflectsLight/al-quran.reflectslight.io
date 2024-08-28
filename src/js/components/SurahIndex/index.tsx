@@ -33,7 +33,6 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   useEffect(() => {
     if (!document.activeElement)
       return
-    //document.activeElement.addEventListener("keydown", onKeyDown);
   }, [document.activeElement]);
 
   return (
@@ -62,16 +61,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               className="flex items-center color-primary no-underline rounded w-11/12 h-8"
               href={`/${locale.name}/${surah.urlName}/index.html`}
             >
-              {locale.direction === "ltr" ? (
-                <span className="background-secondary color-white rounded flex w-8 font-extrabold w-5 mr-3 justify-center text-center">
-                  {formatNumber(locale, surah.id)}
-                </span>
-              ) : (
-                <span className="flex items-center justify-center color-primary background-secondary w-8 h-8 p-1 ml-5 rounded">
-                  {formatNumber(locale, surah.id)}
-                </span>
-              )}
-              <span>{surah.name}</span>
+            <span className="background-secondary color-white rounded flex w-8 font-extrabold w-5 mr-3 justify-center text-center">
+              {formatNumber(locale, surah.id)}
+            </span>
+            <span>{surah.name}</span>
               {locale.direction === "ltr" && (
                 <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
