@@ -3,6 +3,7 @@ import classNames from "classnames";
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { AudioControl, TAudioStatus } from "~/components/AudioControl";
+import { LanguageSelect, ThemeSelect } from "~/components/Select";
 import { Head } from "~/components/Head";
 import {
   PlayIcon,
@@ -40,18 +41,17 @@ export function SurahStream({ surah, locale, t }: Props) {
 
   useEffect(() => {
     const el = document.activeElement;
-    if (!el)
-      return
+    if (!el) return;
     const onKeyUp = (e) => {
-       switch(e.key) {
-         case 'Backspace':
-           location.href = `/${locale.name}/index.html`;
-           break;
-         case 'ArrowLeft':
-           setIsPaused(!isPaused)
-           break;
-       }
-    }
+      switch (e.key) {
+        case "Backspace":
+          location.href = `/${locale.name}/index.html`;
+          break;
+        case "ArrowLeft":
+          setIsPaused(!isPaused);
+          break;
+      }
+    };
     el.addEventListener("keyup", onKeyUp);
     return () => el.removeEventListener("keyup", onKeyUp);
   }, [document.activeElement, isPaused]);
@@ -80,8 +80,9 @@ export function SurahStream({ surah, locale, t }: Props) {
         { hidden: !readyToRender },
       )}
     >
-      <Head locale={locale} theme={theme} setTheme={setTheme}>
-        {t(locale, "TheNobleQuran")}
+      <Head title={t(locale, "TheNobleQuran")} locale={locale}>
+        <LanguageSelect locale={locale} />
+        <ThemeSelect theme={theme} setTheme={setTheme} />
       </Head>
       <Stream
         surah={surah}
