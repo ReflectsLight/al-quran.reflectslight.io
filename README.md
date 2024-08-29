@@ -8,6 +8,12 @@ the build directory consists of HTML, CSS, JavaScript
 and other static assets that can be hosted by
 a web server such as nginx, apache, et cetera.
 
+The branch you are looking at (`kaios/main`) contains a
+fork of the `main` branch that is focused on implementing
+[KaiOS](https://www.kaiostech.com/)
+support. The main branch can be accessed by 
+[clicking here (GitHub)](https://github.com/ReflectsLight/al-quran.reflectslight.io/tree/main).
+
 ## Requirements
 
 The following languages and tools have to be
