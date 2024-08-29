@@ -44,14 +44,8 @@ export function SurahStream({ surah, locale, t }: Props) {
       return
     const onKeyUp = (e) => {
        switch(e.key) {
-         case 'ArrowUp':
-           /* FIXME: Toggle audio */
-           break;
-         case 'ArrowDown':
+         case 'Backspace':
            location.href = `/${locale.name}/index.html`;
-           break;
-         case 'ArrowRight':
-           /* FIXME: map to ...? */
            break;
          case 'ArrowLeft':
            setIsPaused(!isPaused)
