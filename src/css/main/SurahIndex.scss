@@ -72,15 +72,4 @@ body .root .content.theme.rtl {
       span.transliterated { display: none; }
     }
   }
-
-  /* >= $breakpoint-xxl */
-  @media (min-width: $breakpoint-xxl) {
-    ul.body.index {
-      li.surah a {
-        span:last-child {
-          font-size: larger;
-        }
-      }
-    }
-  }
 }

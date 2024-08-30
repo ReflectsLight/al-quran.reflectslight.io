@@ -67,7 +67,7 @@ export function SurahStream({ surah, locale, t }: Props) {
         isPaused={isPaused}
         t={t}
       />
-      <footer className="flex justify-between items-center h-16">
+      <footer className="flex justify-between items-center h-16 text-lg">
         {!endOfStream && isPaused && (
           <PlayIcon onClick={() => setIsPaused(false)} />
         )}

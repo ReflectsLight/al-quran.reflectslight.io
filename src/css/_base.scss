@@ -37,29 +37,6 @@ body .root .content.theme {
   margin: 0 auto;
   max-width: $breakpoint-md;
   width: 85%;
-
-  header {
-    a[data-testid="h1"] {
-      font-size: x-large;
-      @media screen and
-      (max-width: $breakpoint-kaiOS-portrait) and
-      (orientation: portrait) {
-        font-size: larger;
-      }
-    }
-  }
-
-  header {
-    nav, div {
-      font-size: large;
-    }
-  }
-  ul.body {
-    font-size: large;
-  }
-  footer {
-    font-size: large;
-  }
 }
 
 /**

@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Replace font-size rules with tail.css classes
+This change replaces custom 'font-size' rules with standard
+tail.css classes (eg text-lg, etc)
+
 **** Remove ~mada-regular.ttf~
 With this change, the Arabic font is now based on
 standard web fonts rather than a custom font obtained

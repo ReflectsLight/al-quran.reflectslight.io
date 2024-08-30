@@ -32,14 +32,4 @@ body .root .content.theme.rtl {
       }
     }
   }
-  /* >= $breakpoint-xxl */
-  @media (min-width: $breakpoint-xxl) {
-    ul.body.stream {
-      $gap: 2rem;
-      margin-top: $gap;
-      li.ayah {
-        margin-bottom: $gap;
-      }
-    }
-  }
 }

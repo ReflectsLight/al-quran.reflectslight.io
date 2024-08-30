@@ -29,9 +29,9 @@ export function Stream({
       <ul
         lang={locale.name}
         className={classNames(
-          "body stream scroll-y list-none p-0 m-0 h-5/6",
+          "body stream scroll-y text-lg list-none p-0 m-0 h-5/6",
           ...className,
-          { "mt-6": ltr || rtl },
+          { "mt-4": ltr || rtl },
         )}
         ref={ref}
       >
@@ -41,7 +41,7 @@ export function Stream({
               key={ayah.id}
               className="ayah fade mb-5"
             >
-              <span className={classNames("flex h-8 items-center", {"mb-3": rtl})}>
+              <span className={classNames("flex h-8 items-center", {"mb-2": rtl})}>
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}

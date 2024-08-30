@@ -20,7 +20,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
       })}
     >
       <div className="flex flex-col">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center text-xl">
           <a
             data-testid="h1"
             href={`/${locale.name}/`}
@@ -29,7 +29,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
             {children}
           </a>
         </div>
-        <nav className="flex flex-row justify-between">
+        <nav className="flex flex-row justify-between text-lg">
           <LanguageSelect locale={locale} />
           <ThemeSelect theme={theme} setTheme={setTheme} />
         </nav>
