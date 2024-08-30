@@ -20,6 +20,7 @@ namespace :website do
   task build: %i[website:clean] do
     Dir.chdir File.join(__dir__, "source") do
       Bundler.with_unbundled_env do
+        sh "./bin/setup"
         sh "bundle exec rake nanoc:clean"
         sh "bundle exec rake nanoc:build[production]"
         sh "mv build/ ../"
