@@ -21,6 +21,20 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const el = document.activeElement;
+    if (!el) return;
+    const onKeyUp = (e) => {
+      if (e.key === "SoftLeft") {
+        setShowLangDropdown(!showLangDropdown);
+      } else if (e.key === "SoftRight") {
+        setShowThemeDropdown(!showThemeDropdown);
+      }
+    };
+    el.addEventListener("keyup", onKeyUp);
+    return () => el.removeEventListener("keyup", onKeyUp);
+  }, [document.activeElement, showLangDropdown, showThemeDropdown]);
+
+  useEffect(() => {
     navigator.spatialNavigationEnabled = true;
   }, []);
 
