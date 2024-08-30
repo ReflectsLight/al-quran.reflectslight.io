@@ -66,8 +66,6 @@ compile "/js/main/vendor.ts" do
   filter :webpack,
          argv: %w[--config etc/webpack.vendor.js]
   write("/js/main/vendor.js")
-  filter :gzip
-  write("/js/main/vendor.js.gz")
 end
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)
