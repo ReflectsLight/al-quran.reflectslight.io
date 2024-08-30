@@ -30,8 +30,5 @@ import { SurahStream } from "~/components/SurahStream";
     ayah.ms = ms * 1000;
   }
 
-  render(
-    <SurahStream surah={surah} locale={locale} t={t} />,
-    root
-  );
+  render(<SurahStream surah={surah} locale={locale} t={t} />, root);
 })();

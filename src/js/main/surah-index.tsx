@@ -14,8 +14,5 @@ import { SurahIndex } from "~/components/SurahIndex";
     (e: TSurah) => new Surah(e),
   );
 
-  render(
-    <SurahIndex locale={locale} surahs={surahs} t={t} />,
-    root
-  );
+  render(<SurahIndex locale={locale} surahs={surahs} t={t} />, root);
 })();

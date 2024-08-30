@@ -10,7 +10,7 @@ export default {
     const { href } = item;
     return fetch(href, options)
       .then((res) => res.text())
-      .then((text) => ({ type: 'application/javascript', text }))
+      .then((text) => ({ type: 'application/javascript', text, ...item.props }))
       .then((props) => Object.assign(document.createElement('script'), props));
   },
 
