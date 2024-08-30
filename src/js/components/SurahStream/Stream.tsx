@@ -69,8 +69,8 @@ export function Stream({
   useEffect(() => {
     const el = ref.current;
     if (el) {
-      const top = el.scrollHeight;
-      el.scrollTo({ behavior: "smooth", top });
+      el.focus();
+      el.scrollTop = el.scrollHeight;
     }
   }, [stream.length]);
 

@@ -16,6 +16,9 @@ body .root .content.theme {
       animation: FadeIn 1s;
     }
   }
+  ul.body.stream:focus {
+    outline: none;
+  }
 }
 
 body .root .content.theme.rtl {

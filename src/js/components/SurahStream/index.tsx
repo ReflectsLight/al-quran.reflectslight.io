@@ -41,7 +41,6 @@ export function SurahStream({ surah, locale, t }: Props) {
   }, []);
 
   useEffect(() => {
-
     const el = document.activeElement;
     if (!el) return;
     const onKeyUp = (e) => {
