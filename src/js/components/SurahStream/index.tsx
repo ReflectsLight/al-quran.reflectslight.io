@@ -48,11 +48,23 @@ export function SurahStream({ surah, locale, t }: Props) {
         setShowLangDropdown(!showLangDropdown);
       } else if (e.key === "SoftRight") {
         setShowThemeDropdown(!showThemeDropdown);
+      } else if (e.key === "ArrowLeft") {
+        if (endOfStream) {
+          setEndOfStream(false);
+        } else {
+          setIsPaused(!isPaused);
+        }
       }
     };
     el.addEventListener("keyup", onKeyUp);
     return () => el.removeEventListener("keyup", onKeyUp);
-  }, [document.activeElement, showLangDropdown, showThemeDropdown]);
+  }, [
+    document.activeElement,
+    showLangDropdown,
+    showThemeDropdown,
+    isPaused,
+    endOfStream,
+  ]);
 
   useEffect(() => {
     const el = articleRef.current;
