@@ -2,6 +2,11 @@
 
 ** vNEXT
 
+**** Remove ~kanit-regular.ttf~
+This change falls back onto standard web fonts across all
+languages. This should help decrease bundle size, and save
+time processing the custom font during page load
+
 **** Add src/js/main/vendor.ts
 Add a new entry point that bundles preact, and other third
 party dependencies. Third-party imports are now in a single

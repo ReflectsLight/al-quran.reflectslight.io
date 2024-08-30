@@ -5,16 +5,6 @@
 # Contains rules for images, fonts, etc
 
 ##
-# fonts
-compile "/css/fonts.css" do
-  write(item.identifier.to_s)
-end
-
-compile "/fonts/*" do
-  write(item.identifier.to_s)
-end
-
-##
 # images
 compile "/images/*.svg" do
   write(item.identifier.to_s)
