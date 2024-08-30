@@ -39,9 +39,9 @@ export function Stream({
           return (
             <li
               key={ayah.id}
-              className={classNames("ayah fade", { "mb-5": rtl, "mb-4": ltr })}
+              className="ayah fade mb-5"
             >
-              <span className="flex h-8 items-center">
+              <span className={classNames("flex h-8 items-center", {"mb-3": rtl})}>
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}

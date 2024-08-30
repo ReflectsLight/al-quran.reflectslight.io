@@ -21,7 +21,6 @@ body .root .content.theme {
 body .root .content.theme.rtl {
   ul.body.stream {
     li.ayah p {
-      line-height: 1.7;
       max-width: 470px;
     }
   }
@@ -39,13 +38,7 @@ body .root .content.theme.rtl {
       $gap: 2rem;
       margin-top: $gap;
       li.ayah {
-        font-size: larger;
         margin-bottom: $gap;
-      }
-    }
-    footer {
-      .timer {
-        font-size: larger;
       }
     }
   }

@@ -66,21 +66,4 @@ body .root .content.theme {
  * RTL languages
  */
 body .root .content.theme.rtl {
-  header h1 {
-    font-size: xx-large;
-  }
-
-  /* <= $breakpoint-sm */
-  @media (max-width: $breakpoint-sm) {
-    header h1 {
-      font-size: x-large;
-    }
-  }
-
-  /* <= $breakpoint-xxl */
-  @media (max-width: $breakpoint-xxl) {
-    ul.body {
-      font-size: larger;
-    }
-  }
 }
