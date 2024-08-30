@@ -5,7 +5,7 @@ namespace :nanoc do
   task :clean do
     Dir.chdir(dirs.root) do
       sh "rm -rf node_modules/.cache/"
-      sh "rm -rf build/"
+      sh "rm -rf #{nanoc.output_dir}/*"
       sh "rm -rf tmp/"
     end
   end

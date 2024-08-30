@@ -1,6 +1,4 @@
 import { Surah, TSurah, Quran } from "Quran";
-import React from "react";
-import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
 import { SurahIndex } from "~/components/SurahIndex";
 
@@ -16,7 +14,8 @@ import { SurahIndex } from "~/components/SurahIndex";
     (e: TSurah) => new Surah(e),
   );
 
-  ReactDOM.createRoot(root).render(
+  render(
     <SurahIndex locale={locale} surahs={surahs} t={t} />,
+    root
   );
 })();

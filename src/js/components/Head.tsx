@@ -1,4 +1,3 @@
-import React from "react";
 import type { ReactNode } from "react";
 import { LanguageSelect, ThemeSelect } from "~/components/Select";
 import type { TLocale } from "Quran";

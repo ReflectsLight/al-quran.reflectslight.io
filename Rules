@@ -25,12 +25,10 @@ surahs     = Ryo.from_json(path: File.join(dirs.content, "json", "surahs.json"))
 tidy       = `which tidy || which tidy5`.chomp
 buildenv   = ENV["buildenv"] || "development"
 etcdir     = File.join(__dir__, "etc")
+globals = {buildenv:, locales:, tidy:, tdata:, surahs:, name_by_id:}
 
 ##
 # Filters
-Nanoc::Webpack
-  .default_argv
-  .replace([*Nanoc::Webpack.default_argv, "--config", File.join(etcdir, "webpack.#{buildenv}.js")].uniq)
 Nanoc::Tidy
   .default_argv
   .replace([*Nanoc::Tidy.default_argv, "-upper"].uniq)
@@ -56,18 +54,20 @@ compile "/robots.txt" do
 end
 
 ##
-# /json/durations/*.json
-passthrough "/json/durations/*.json"
-
-##
 # Rules
-require_rules "nanoc/rules/assets"
-require_rules "nanoc/rules/redirect", {locales:, tidy:}
-require_rules "nanoc/rules/random", {locales:, tdata:, tidy:}
-require_rules "nanoc/rules/surah-stream", {locales:, tdata:, surahs:, name_by_id:, tidy:}
-require_rules "nanoc/rules/surah-index", {locales:, tdata:, tidy:}
+passthrough "/json/durations/*.json"
+require_rules "nanoc/rules/assets", globals
+require_rules "nanoc/rules/redirect", globals
+require_rules "nanoc/rules/random", globals
+require_rules "nanoc/rules/surah-stream", globals
+require_rules "nanoc/rules/surah-index", globals
 
-##
-# Catch-all
+compile "/js/main/vendor.ts" do
+  filter :webpack,
+         argv: %w[--config etc/webpack.vendor.js]
+  write("/js/main/vendor.js")
+  filter :gzip
+  write("/js/main/vendor.js.gz")
+end
 compile("/**/*") { write(nil) }
 layout("**/*", :erb)

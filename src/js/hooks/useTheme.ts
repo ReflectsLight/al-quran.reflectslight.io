@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export type Theme = "blue" | "green";
 type Result = [Theme, (t: Theme) => void];
 const THEMES: Theme[] = ["blue", "green"];

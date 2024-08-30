@@ -1,11 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
 import type { Surah, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/t";
 import { Arrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
 import { Filter } from "./Filter";
-import classNames from "classnames";
 import "@css/main/SurahIndex.scss";
 
 type Props = {

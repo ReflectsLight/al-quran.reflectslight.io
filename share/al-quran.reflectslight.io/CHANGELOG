@@ -2,13 +2,24 @@
 
 ** vNEXT
 
+**** Add ~src/js/main/vendor.ts~
+The new vendor entry point bundles preact, and other
+third party dependencies in a single file. This change
+is an improvement imported from the ~kaios/main~ branch
+
+**** Replace React with preact
+The preact library is a lightweight alternative to React,
+with a smaller footprint. This change is an improvement
+imported from the ~kaios/main~ branch
+
 **** Change default ~audio.base_url~
 This change sets the default audio URL to
-https://audio1.al-quran.reflectslight.io/rifai
+https://audio.al-quran.reflectslight.io/rifai
 
 **** Improve KaiOS support
 This change optimizes the layout for KaiOS devices through
-specialized media queries
+specialized media queries. A new branch (~kaios/main~) will
+focus on KaiOS support
 
 **** Add ~etc/~
 This change moves a large portion of the website's configuration

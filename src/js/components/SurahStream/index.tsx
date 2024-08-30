@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
-import classNames from "classnames";
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { AudioControl, TAudioStatus } from "~/components/AudioControl";

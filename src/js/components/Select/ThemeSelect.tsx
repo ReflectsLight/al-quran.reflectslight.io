@@ -1,7 +1,5 @@
-import React from "react";
 import { Select } from "~/components/Select";
 import type { Theme } from "~/hooks/useTheme";
-import classNames from "classnames";
 
 type Props = {
   theme: string;

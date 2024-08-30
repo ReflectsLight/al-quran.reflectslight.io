@@ -1,4 +1,3 @@
-import React from "react";
 import { Quran, TLocale } from "Quran";
 import { Select } from "~/components/Select";
 import classNames from "classnames";

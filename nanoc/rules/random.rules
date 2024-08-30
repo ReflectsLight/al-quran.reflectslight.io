@@ -15,7 +15,9 @@ locales.each do |locale|
 end
 
 compile "/js/main/random.ts" do
-  filter(:webpack, depend_on: ["/js/lib/"])
+  filter :webpack,
+         argv: %W[--config etc/webpack.#{buildenv}.js],
+         depend_on: ["/js/lib/"]
   write("/js/main/random.js")
   filter(:gzip)
   write("/js/main/random.js.gz")

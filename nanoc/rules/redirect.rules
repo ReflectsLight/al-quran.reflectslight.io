@@ -12,7 +12,9 @@ compile "/html/main/redirect.html.erb" do
 end
 
 compile "/js/main/redirect.ts" do
-  filter(:webpack, depend_on: ["/js/lib/"])
+  filter :webpack,
+         argv: %W[--config etc/webpack.#{buildenv}.js],
+         depend_on: ["/js/lib/"]
   write("/js/main/redirect.js")
   filter(:gzip)
   write("/js/main/redirect.js.gz")

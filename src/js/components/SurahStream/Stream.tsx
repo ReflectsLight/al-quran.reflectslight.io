@@ -1,4 +1,3 @@
-import React, { useEffect, useMemo, useRef } from "react";
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/t";

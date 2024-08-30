@@ -15,19 +15,22 @@ locales.each do |locale|
 end
 
 compile "/js/main/surah-index.tsx" do
-  filter :webpack, depend_on: [
-    "/js/components",
-    "/js/lib",
-    "/js/hooks",
-    "/css"
-  ]
+  filter :webpack,
+         argv: %W[--config etc/webpack.#{buildenv}.js],
+         depend_on: [
+           "/js/components",
+           "/js/lib",
+           "/js/hooks",
+           "/css"
+         ]
   write "/js/main/surah-index.js"
   filter :gzip
   write "/js/main/surah-index.js.gz"
 end
 
 compile "/js/loaders/SurahIndexLoader.ts" do
-  filter :webpack
+  filter :webpack,
+         argv: %W[--config etc/webpack.#{buildenv}.js]
   write "/js/loaders/surah-index-loader.js"
   filter :gzip
   write "/js/loaders/surah-index-loader.js.gz"
