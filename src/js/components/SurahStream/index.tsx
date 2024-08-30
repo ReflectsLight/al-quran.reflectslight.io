@@ -1,4 +1,3 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
 import classNames from "classnames";
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
@@ -29,6 +28,8 @@ export function SurahStream({ surah, locale, t }: Props) {
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
+  const [showLangDropdown, setShowLangDropdown] = useState<boolean>(false);
+  const [showThemeDropdown, setShowThemeDropdown] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
   const articleRef = useRef<HTMLElement>(null);
   const audio = useMemo(() => new Audio(), []);
@@ -81,8 +82,17 @@ export function SurahStream({ surah, locale, t }: Props) {
       )}
     >
       <Head title={t(locale, "TheNobleQuran")} locale={locale}>
-        <LanguageSelect locale={locale} />
-        <ThemeSelect theme={theme} setTheme={setTheme} />
+        <LanguageSelect
+          locale={locale}
+          isOpen={showLangDropdown}
+          setIsOpen={setShowLangDropdown}
+        />
+        <ThemeSelect
+          theme={theme}
+          setTheme={setTheme}
+          isOpen={showThemeDropdown}
+          setIsOpen={setShowThemeDropdown}
+        />
       </Head>
       <Stream
         surah={surah}

@@ -15,11 +15,13 @@ locales.each do |locale|
 end
 
 compile "/js/main/surah-index.tsx" do
-  filter :webpack, depend_on: [
-    "/js/components",
-    "/js/lib",
-    "/js/hooks",
-    "/css"
-  ]
+  filter :webpack,
+         argv: ["--config", "etc/webpack.#{buildenv}.js"],
+         depend_on: [
+           "/js/components",
+           "/js/lib",
+           "/js/hooks",
+           "/css"
+         ]
   write "/js/main/surah-index.js"
 end

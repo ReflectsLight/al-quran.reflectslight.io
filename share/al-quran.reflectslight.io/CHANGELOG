@@ -2,6 +2,11 @@
 
 ** vNEXT
 
+**** Add src/js/main/vendor.ts
+Add a new entry point that bundles preact, and other third
+party dependencies. Third-party imports are now in a single
+place rather than duplicated throughout app components
+
 **** Reduce bundle size
 This change removes build artifacts and features that don't
 apply on KaiOS (such as opengraph)

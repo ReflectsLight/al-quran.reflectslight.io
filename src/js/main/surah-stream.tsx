@@ -1,9 +1,6 @@
 import { Quran, Surah, Ayah, TSurah } from "Quran";
-import React from "react";
-import ReactDOM from "react-dom/client";
 import { T } from "~/lib/t";
 import { SurahStream } from "~/components/SurahStream";
-import "core-js";
 
 (function () {
   const doc = document.documentElement;
@@ -33,7 +30,5 @@ import "core-js";
     ayah.ms = ms * 1000;
   }
 
-  ReactDOM.createRoot(root).render(
-    <SurahStream surah={surah} locale={locale} t={t} />,
-  );
+  render(<SurahStream surah={surah} locale={locale} t={t} />, root);
 })();

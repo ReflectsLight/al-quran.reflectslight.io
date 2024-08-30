@@ -1,5 +1,4 @@
-import React, { ReactNode, AnchorHTMLAttributes } from "react";
-
+import type { ReactNode, AnchorHTMLAttributes } from "react";
 type Rest = AnchorHTMLAttributes<HTMLAnchorElement>;
 type Props = {
   value: string;

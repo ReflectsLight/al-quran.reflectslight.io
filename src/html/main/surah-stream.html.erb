@@ -26,6 +26,7 @@
     <%= inline_json("/json/%{locale}/%{surah_id}/info.json", context:, class_name: "info") %>
     <%= inline_json("/json/%{locale}/%{surah_id}/surah.json", context:, class_name: "surah") %>
     <%= inline_json("/json/durations/%{surah_id}.json", context:, class_name: "durations") %>
-    <script src="/js/main/surah-stream.js"></script>
+    <script src="/js/main/vendor.js?v=<%= commit %>"></script>
+    <script src="/js/main/surah-stream.js?v=<%= commit %>"></script>
   </body>
 </html>

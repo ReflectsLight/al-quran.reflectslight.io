@@ -28,11 +28,13 @@ Ryo.each(name_by_id) do |id, slug|
 end
 
 compile "/js/main/surah-stream.tsx" do
-  filter :webpack, depend_on: [
-    "/js/components",
-    "/js/lib",
-    "/js/hooks",
-    "/css"
-  ]
+  filter :webpack,
+         argv: ["--config", "etc/webpack.#{buildenv}.js"],
+         depend_on: [
+           "/js/components",
+           "/js/lib",
+           "/js/hooks",
+           "/css"
+         ]
   write "/js/main/surah-stream.js"
 end

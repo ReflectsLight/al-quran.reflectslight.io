@@ -1,17 +1,22 @@
-import React from "react";
 import { Select } from "~/components/Select";
 import type { Theme } from "~/hooks/useTheme";
-import classNames from "classnames";
 
 type Props = {
   theme: string;
   setTheme: (theme: Theme) => void;
+  isOpen: boolean;
+  setIsOpen: (b: boolean) => void;
 };
 
-export function ThemeSelect({ theme, setTheme }: Props) {
+export function ThemeSelect({ theme, setTheme, isOpen, setIsOpen }: Props) {
   const themes: Theme[] = ["blue", "green"];
   return (
-    <Select value={theme} className="theme-select">
+    <Select
+      value={theme}
+      className="theme-select"
+      isOpen={isOpen}
+      setIsOpen={setIsOpen}
+    >
       {themes.map((t, i) => {
         return (
           <Select.Option

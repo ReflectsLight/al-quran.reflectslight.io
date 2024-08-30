@@ -1,20 +1,25 @@
-import React, { useState, useEffect } from "react";
-import classNames from "classnames";
 import { Option } from "./Option";
 import { ThemeSelect } from "./ThemeSelect";
 import { LanguageSelect } from "./LanguageSelect";
 
 type Props = {
+  isOpen: boolean;
+  setIsOpen: (v: boolean) => void;
   value: string;
   children: JSX.Element[];
   className?: string;
 };
 
-function Select({ value, children: options, className }: Props) {
-  const [isOpen, setOpen] = useState<boolean>(false);
+function Select({
+  value,
+  children: options,
+  className,
+  isOpen,
+  setIsOpen,
+}: Props) {
   const [option, setOption] = useState<JSX.Element | null>(null);
   const sortedOptions = options.sort((n) => (value === n.props.value ? -1 : 1));
-  const close = () => setOpen(false);
+  const close = () => setIsOpen(false);
 
   useEffect(() => {
     document.body.addEventListener("click", close);
@@ -39,7 +44,7 @@ function Select({ value, children: options, className }: Props) {
             <li
               key={key}
               className={classNames({ hidden: isHidden })}
-              onClick={(e) => [e.stopPropagation(), setOpen(!isOpen)]}
+              onClick={(e) => [e.stopPropagation(), setIsOpen(!isOpen)]}
             >
               {n}
             </li>

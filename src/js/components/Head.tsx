@@ -1,6 +1,4 @@
-import React from "react";
 import type { ReactNode } from "react";
-
 import type { TLocale } from "Quran";
 import { Theme } from "~/hooks/useTheme";
 

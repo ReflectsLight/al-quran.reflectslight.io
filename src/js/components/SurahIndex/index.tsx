@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
 import type { Surah, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/t";
 import { Arrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
+import { LanguageSelect, ThemeSelect } from "~/components/Select";
 import { Filter } from "./Filter";
-import classNames from "classnames";
 import "@css/main/SurahIndex.scss";
 
 type Props = {
@@ -17,6 +16,8 @@ type Props = {
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Surah[]>(surahs);
+  const [showLangDropdown, setShowLangDropdown] = useState<boolean>(false);
+  const [showThemeDropdown, setShowThemeDropdown] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,8 +46,17 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       )}
     >
       <Head title={t(locale, "TheNobleQuran")} locale={locale}>
-        <LanguageSelect locale={locale} />
-        <ThemeSelect theme={theme} setTheme={setTheme} />
+        <LanguageSelect
+          isOpen={showLangDropdown}
+          setIsOpen={setShowLangDropdown}
+          locale={locale}
+        />
+        <ThemeSelect
+          isOpen={showThemeDropdown}
+          setIsOpen={setShowThemeDropdown}
+          theme={theme}
+          setTheme={setTheme}
+        />
       </Head>
       <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 w-full h-full">
         {index.map((surah, key) => (

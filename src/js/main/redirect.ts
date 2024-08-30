@@ -1,5 +1,4 @@
 import { Quran } from "Quran";
-import "core-js";
 (function () {
   const defaultl = "en";
   const locales = Quran.locales.map((l) => l.name);

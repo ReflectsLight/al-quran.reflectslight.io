@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import type { Surah, Ayah, TLocale } from "Quran";
 import { formatNumber } from "~/lib/t";
 

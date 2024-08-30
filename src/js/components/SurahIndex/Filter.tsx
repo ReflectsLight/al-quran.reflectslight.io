@@ -1,4 +1,3 @@
-import React from "react";
 import { TFunction, formatNumber } from "~/lib/t";
 import type { Surah, TLocale } from "Quran";
 

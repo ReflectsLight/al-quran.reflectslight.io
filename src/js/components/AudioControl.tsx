@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import type { Surah, Ayah } from "Quran";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
