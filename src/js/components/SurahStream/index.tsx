@@ -26,6 +26,7 @@ type Props = {
 export function SurahStream({ surah, locale, t }: Props) {
   const [stream, setStream] = useState<TAyat>([]);
   const [isPaused, setIsPaused] = useState<boolean>(false);
+  const [audioEnabled, setAudioEnabled] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [endOfStream, setEndOfStream] = useState<boolean>(false);
   const [showLangDropdown, setShowLangDropdown] = useState<boolean>(false);
@@ -48,6 +49,8 @@ export function SurahStream({ surah, locale, t }: Props) {
         setShowLangDropdown(!showLangDropdown);
       } else if (e.key === "SoftRight") {
         setShowThemeDropdown(!showThemeDropdown);
+      } else if (e.key === "ArrowUp") {
+        setAudioEnabled(!audioEnabled);
       } else if (e.key === "ArrowLeft") {
         if (endOfStream) {
           setEndOfStream(false);
@@ -64,6 +67,7 @@ export function SurahStream({ surah, locale, t }: Props) {
     showThemeDropdown,
     isPaused,
     endOfStream,
+    audioEnabled,
   ]);
 
   useEffect(() => {
@@ -128,7 +132,12 @@ export function SurahStream({ surah, locale, t }: Props) {
             surah={surah}
             ayah={ayah}
             hidden={endOfStream}
+            enabled={audioEnabled}
+            setEnabled={setAudioEnabled}
             onStatusChange={(status) => {
+              if (status === "end") {
+                setAudioEnabled(false);
+              }
               setAudioStatus(status);
             }}
           />

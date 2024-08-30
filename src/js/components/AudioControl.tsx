@@ -9,6 +9,8 @@ type Props = {
   audio: HTMLAudioElement;
   surah: Surah;
   ayah: Maybe<Ayah>;
+  enabled: boolean;
+  setEnabled: (v: boolean) => void;
   hidden?: boolean;
   onStatusChange?: (s: TAudioStatus, fns: TChangeFuncs) => void;
 };
@@ -17,10 +19,11 @@ export function AudioControl({
   audio,
   surah,
   ayah,
+  enabled,
+  setEnabled,
   hidden = false,
   onStatusChange = () => null,
 }: Props) {
-  const [enabled, setEnabled] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [audioBaseUrl, setAudioBaseUrl] = useState<Maybe<string>>(null);
   const play = (audio: HTMLAudioElement) => audio.play().catch(() => null);

@@ -1,5 +1,4 @@
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
-import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/t";
 
 type Props = {
@@ -40,17 +39,6 @@ export function Stream({
               className={classNames("ayah fade", { "mb-1": rtl || ltr })}
             >
               <span className="flex h-8 items-center">
-                <AudioControl
-                  hidden={!(isPaused || endOfStream)}
-                  audio={new Audio()}
-                  surah={surah}
-                  ayah={ayah}
-                  onStatusChange={(status, [, disable]) => {
-                    if (status === "end") {
-                      disable();
-                    }
-                  }}
-                />
                 <span>
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")}{" "}
