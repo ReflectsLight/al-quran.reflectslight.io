@@ -21,7 +21,6 @@ import { formatNumber } from "~/lib/t";
     item.script(`/js/main/vendor.js?v=${rev}`, { id: 0 }),
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: 1 }),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(

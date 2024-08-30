@@ -22,7 +22,6 @@ import { formatNumber } from "~/lib/t";
     item.script(`/js/main/vendor.js?v=${rev}`, { id: 0 }),
     item.script(`/js/main/surah-stream.js?v=${rev}`, { id: 1 }),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    item.font("Mada Regular", "url(/fonts/mada-regular.ttf"),
     /* eslint-disable */
     item.json(`/json/${doc.lang}/${surahId}/info.json?v=${rev}`, { className: "json surahinfo" }),
     item.json(`/json/${doc.lang}/${surahId}/surah.json?v=${rev}`, { className: "json surah" }),

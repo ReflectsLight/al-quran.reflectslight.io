@@ -2,6 +2,11 @@
 
 ** vNEXT
 
+**** Remove ~mada-regular.ttf~
+With this change, the Arabic font is now based on
+standard web fonts rather than a custom font obtained
+from fonts.google.com
+
 **** Add ~src/js/main/vendor.ts~
 The new vendor entry point bundles preact, and other
 third party dependencies in a single file. This change
