@@ -11,7 +11,7 @@ type Props = {
 export function Option({ children, href, className, onClick }: Props) {
   return (
     <a href={href || "#"} className={className} onClick={onClick}>
-      {String(children)}
+      {children as string}
     </a>
   );
 }
