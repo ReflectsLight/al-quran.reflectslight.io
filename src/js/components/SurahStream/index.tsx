@@ -36,21 +36,32 @@ export function SurahStream({ surah, locale, t }: Props) {
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
+  const activeEl = useMemo(
+    () => document.activeElement,
+    [document.activeElement],
+  );
 
   useEffect(() => {
     navigator.spatialNavigationEnabled = false;
   }, []);
 
   useEffect(() => {
-    const el = document.activeElement;
-    if (!el) return;
-    const onKeyUp = (e) => {
-      if (e.key === "SoftLeft") {
+    if (showLangDropdown || showThemeDropdown) {
+      setIsPaused(true);
+    } else {
+      setIsPaused(false);
+    }
+  }, [showLangDropdown, showThemeDropdown]);
+
+  useEffect(() => {
+    const onKeyPress = (e) => {
+      if (e.key === "Backspace") {
+        e.preventDefault();
+        location.href = `/${locale.name}/index.html`;
+      } else if (e.key === "SoftLeft") {
         setShowLangDropdown(!showLangDropdown);
       } else if (e.key === "SoftRight") {
         setShowThemeDropdown(!showThemeDropdown);
-      } else if (e.key === "ArrowUp") {
-        setAudioEnabled(!audioEnabled);
       } else if (e.key === "ArrowLeft") {
         if (endOfStream) {
           setEndOfStream(false);
@@ -59,16 +70,9 @@ export function SurahStream({ surah, locale, t }: Props) {
         }
       }
     };
-    el.addEventListener("keyup", onKeyUp);
-    return () => el.removeEventListener("keyup", onKeyUp);
-  }, [
-    document.activeElement,
-    showLangDropdown,
-    showThemeDropdown,
-    isPaused,
-    endOfStream,
-    audioEnabled,
-  ]);
+    activeEl.addEventListener("keydown", onKeyPress);
+    return () => activeEl.removeEventListener("keydown", onKeyPress);
+  }, [activeEl, showLangDropdown, showThemeDropdown]);
 
   useEffect(() => {
     const el = articleRef.current;
