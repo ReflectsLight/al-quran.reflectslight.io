@@ -1,6 +1,5 @@
 import * as preact from "preact";
 import * as hooks from "preact/hooks";
-import fn from "classnames";
 
 declare global {
   const render: typeof preact.render;
