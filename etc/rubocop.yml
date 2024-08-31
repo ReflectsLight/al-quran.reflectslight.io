@@ -4,6 +4,7 @@ AllCops:
   TargetRubyVersion: 3.2
   Exclude:
     - submodules/**/*
+    - source/**/*
   Include:
     - Rakefile.rb
     - rake/tasks/*.rake

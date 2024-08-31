@@ -18,8 +18,8 @@ import { formatNumber } from "~/lib/t";
   const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
   postman(
-    item.script(`/js/main/vendor.js?v=${rev}`, { id: 0 }),
-    item.script(`/js/main/surah-index.js?v=${rev}`, { id: 1 }),
+    item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
+    item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.progress((percent: number) => {
       progressBar.value = percent;
@@ -35,7 +35,7 @@ import { formatNumber } from "~/lib/t";
       pkg.fonts.forEach((f) => document.fonts.add(f));
       pkg.css.forEach((s) => document.head.appendChild(s));
       pkg.scripts
-        .sort((s) => s.id)
+        .sort((s) => Number(s.id))
         .forEach((s) => {
           document.body.removeChild(document.body.appendChild(s));
         });

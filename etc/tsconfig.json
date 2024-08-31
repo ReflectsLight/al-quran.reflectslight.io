@@ -1,5 +1,9 @@
 {
-  "include": ["../src/**/*.ts", "../src/**/*.tsx"],
+  "include": [
+    "../src/js/typings/globals.d.ts",
+    "../src/**/*.ts",
+    "../src/**/*.tsx",
+  ],
   "exclude": ["../node_modules"],
   "compilerOptions": {
     "strict": true,
@@ -8,7 +12,7 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": [ "ES2020", "DOM" ],
 
     "baseUrl": "../src/",

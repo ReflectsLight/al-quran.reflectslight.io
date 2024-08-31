@@ -1,0 +1,11 @@
+import * as preact from "preact";
+import * as hooks from "preact/hooks";
+import fn from "classnames";
+
+declare global {
+  const render: typeof preact.render;
+  const useState: typeof hooks.useState;
+  const useEffect: typeof hooks.useEffect;
+  const useRef: typeof hooks.useRef;
+  const useMemo: typeof hooks.useMemo;
+}

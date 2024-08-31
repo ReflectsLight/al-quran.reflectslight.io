@@ -1,9 +1,17 @@
-type Rest = AnchorHTMLAttributes<HTMLAnchorElement>;
+import type { ReactNode } from "preact/compat";
+
 type Props = {
   value: string;
+  href?: string | undefined;
+  className?: string;
+  onClick?: () => void;
   children: ReactNode;
-} & Rest;
+};
 
-export function Option({ children, ...rest }: Props) {
-  return <a {...rest}>{children}</a>;
+export function Option({ children, href, className, onClick }: Props) {
+  return (
+    <a href={href || "#"} className={className} onClick={onClick}>
+      {String(children)}
+    </a>
+  );
 }

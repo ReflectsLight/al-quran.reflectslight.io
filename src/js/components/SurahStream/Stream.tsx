@@ -37,11 +37,10 @@ export function Stream({
       >
         {stream.map((ayah: Ayah) => {
           return (
-            <li
-              key={ayah.id}
-              className="ayah fade mb-5"
-            >
-              <span className={classNames("flex h-8 items-center", {"mb-2": rtl})}>
+            <li key={ayah.id} className="ayah fade mb-5">
+              <span
+                className={classNames("flex h-8 items-center", { "mb-2": rtl })}
+              >
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}
