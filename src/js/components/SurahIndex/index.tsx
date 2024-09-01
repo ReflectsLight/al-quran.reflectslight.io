@@ -18,40 +18,34 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const [index, setIndex] = useState<Surah[]>(surahs);
   const [showLangDropdown, setShowLangDropdown] = useState<boolean>(false);
   const [showThemeDropdown, setShowThemeDropdown] = useState<boolean>(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const activeEl = useMemo(
+    () => document.activeElement,
+    [document.activeElement]
+  )
 
   useEffect(() => {
-    const el = document.activeElement;
-    if (!el) return;
-    const onKeyUp = (e) => {
+    const onKeyPress = (e) => {
       if (e.key === "SoftLeft") {
         setShowLangDropdown(!showLangDropdown);
       } else if (e.key === "SoftRight") {
         setShowThemeDropdown(!showThemeDropdown);
       }
     };
-    el.addEventListener("keyup", onKeyUp);
-    return () => el.removeEventListener("keyup", onKeyUp);
-  }, [document.activeElement, showLangDropdown, showThemeDropdown]);
+    activeEl.addEventListener("keydown", onKeyPress);
+    return () => activeEl.removeEventListener("keydown", onKeyPress);
+  }, [activeEl, showLangDropdown, showThemeDropdown]);
 
   useEffect(() => {
-    navigator.spatialNavigationEnabled = true;
-  }, []);
-
-  useEffect(() => {
-    const div = ref.current;
-    if (div) {
-      div.classList.remove("invisible");
+    const el = rootRef.current;
+    if (el) {
+      el.classList.remove("invisible");
     }
-  }, [ref.current, theme]);
-
-  useEffect(() => {
-    if (!document.activeElement) return;
-  }, [document.activeElement]);
+  }, [rootRef.current, theme]);
 
   return (
     <div
-      ref={ref}
+      ref={rootRef}
       className={classNames(
         "flex flex-col invisible h-full content surah-index theme",
         theme,

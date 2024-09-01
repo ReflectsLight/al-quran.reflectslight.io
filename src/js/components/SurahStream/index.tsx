@@ -32,7 +32,7 @@ export function SurahStream({ surah, locale, t }: Props) {
   const [showLangDropdown, setShowLangDropdown] = useState<boolean>(false);
   const [showThemeDropdown, setShowThemeDropdown] = useState<boolean>(false);
   const [theme, setTheme] = useTheme();
-  const articleRef = useRef<HTMLElement>(null);
+  const rootRef = useRef<HTMLElement>(null);
   const audio = useMemo(() => new Audio(), []);
   const readyToRender = stream.length > 0;
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
@@ -40,10 +40,6 @@ export function SurahStream({ surah, locale, t }: Props) {
     () => document.activeElement,
     [document.activeElement],
   );
-
-  useEffect(() => {
-    navigator.spatialNavigationEnabled = false;
-  }, []);
 
   useEffect(() => {
     if (showLangDropdown || showThemeDropdown) {
@@ -75,11 +71,11 @@ export function SurahStream({ surah, locale, t }: Props) {
   }, [activeEl, showLangDropdown, showThemeDropdown]);
 
   useEffect(() => {
-    const el = articleRef.current;
+    const el = rootRef.current;
     if (el) {
       el.classList.remove("invisible");
     }
-  }, [articleRef.current, theme]);
+  }, [rootRef.current, theme]);
 
   useEffect(() => {
     if (!endOfStream) {
@@ -89,7 +85,7 @@ export function SurahStream({ surah, locale, t }: Props) {
 
   return (
     <article
-      ref={articleRef}
+      ref={rootRef}
       className={classNames(
         "flex flex-col invisible h-full content theme",
         locale.name,
