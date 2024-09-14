@@ -2,6 +2,9 @@
 
 ** vNEXT
 
+**** Fix ~_opengraph.html.erb~ typos
+Fix multiple issues with the render of ~_opengraph.html.erb~
+
 **** Replace font-size rules with tail.css classes
 This change replaces custom 'font-size' rules with standard
 tail.css classes (eg text-lg, etc)
