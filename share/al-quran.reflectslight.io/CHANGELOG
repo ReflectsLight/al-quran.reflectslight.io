@@ -6,13 +6,12 @@
 Fix multiple issues with the render of ~_opengraph.html.erb~
 
 **** Replace font-size rules with tail.css classes
-This change replaces custom 'font-size' rules with standard
-tail.css classes (eg text-lg, etc)
+Replace custom 'font-size' rules with standard tail.css
+classes (eg text-lg)
 
 **** Remove ~mada-regular.ttf~
-With this change, the Arabic font is now based on
-standard web fonts rather than a custom font obtained
-from fonts.google.com
+The Arabic font is now based on standard web fonts rather than
+a custom fonts.google.com font
 
 **** Add ~src/js/main/vendor.ts~
 The new vendor entry point bundles preact, and other
@@ -25,39 +24,37 @@ with a smaller footprint. This change is an improvement
 imported from the ~kaios/main~ branch
 
 **** Change default ~audio.base_url~
-This change sets the default audio URL to
+Set the default audio URL to
 https://audio.al-quran.reflectslight.io/rifai
 
 **** Improve KaiOS support
-This change optimizes the layout for KaiOS devices through
-specialized media queries. A new branch (~kaios/main~) will
-focus on KaiOS support
+Optimize the layout for KaiOS devices through specialized
+media queries. A new branch (~kaios/main~) will focus on
+KaiOS support
 
 **** Add ~etc/~
-This change moves a large portion of the website's configuration
-files to the ~/etc~ directory
+Move a large portion of the website's configuration files to
+the ~/etc~ directory
 
 ** v0.9.0
 
 **** Add ~share/al-quran.reflectslight.io/documentation/~
-This change replaces ~share/doc/al-quran.reflectslight.io~
+Replace ~share/doc/al-quran.reflectslight.io~
 
 **** Add new recitation
-A new recitation by Hani ar-Rifai has been added
+Add a new recitation by Hani ar-Rifai
 
 **** Replace ~opengraph.rb~ with ~_opengraph.html.erb~
-This change simplifies how we render opengraph-related meta tags
+Simplify how we render opengraph meta tags
 
 **** Move to nodejs for scss compiler
-This change replaces the deprecated Ruby scss compiler with the
-nodejs compiler
+Replace the deprecated Ruby scss compiler with the nodejs compiler
 
 **** Add ~audio.base_url~ to nanoc.yaml
-This change provides increased flexibility in how the website
-serve audio files
+Provide extra flexibility for audio content
 
 **** Rename packages/typescript/Quran/ properties
-This change introduces urlName, translitName to Surah objects
+Introduce urlName, translitName to Surah objects
 
 **** eslint upgrade
-This change migrates to the most recent version of eslint (^9.8)
+Migrate to the most recent version of eslint (^9.8)
