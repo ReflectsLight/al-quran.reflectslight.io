@@ -1,6 +1,6 @@
 # -*- mode: org -*-
 
-** vNEXT
+** v0.9.1
 
 **** Fix ~_opengraph.html.erb~ typos
 Fix multiple issues with the render of ~_opengraph.html.erb~
