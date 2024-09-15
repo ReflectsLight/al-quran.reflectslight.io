@@ -2,6 +2,11 @@
 
 ** vNEXT
 
+**** Remove ~/robots.txt~
+We don't need this file anymore. It was used to block crawlers
+indexing audio content at /audio but audio content is now served
+on a separate domain
+
 **** Add file mode option to ~nanoc.yaml~
 The file mode option can be set on the server's unix socket.
 Default: ~ug=rw,o=~
