@@ -2,8 +2,8 @@
 
 ** vNEXT
 
-**** Add ability to set file mode in ~server.rake~
-Add ability to set the file mode on unix socket.
+**** Add file mode option to ~nanoc.yaml~
+The file mode option can be set on the server's unix socket.
 Default: ~ug=rw,o=~
 
 ** v0.9.1
