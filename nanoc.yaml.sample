@@ -27,6 +27,7 @@ server:
   base_url: https://al-quran.reflectslight.io
   unix:
     path:
+    mode: ug=rw,o=
   tcp:
     host: 127.0.0.1
     port: 7777

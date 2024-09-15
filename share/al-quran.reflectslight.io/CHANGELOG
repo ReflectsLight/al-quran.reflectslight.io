@@ -1,5 +1,11 @@
 # -*- mode: org -*-
 
+** vNEXT
+
+**** Add ability to set file mode in ~server.rake~
+Add ability to set the file mode on unix socket.
+Default: ~ug=rw,o=~
+
 ** v0.9.1
 
 **** Fix ~_opengraph.html.erb~ typos
