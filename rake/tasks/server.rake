@@ -9,10 +9,10 @@ task :server, [:protocol] do |_t, args|
   p = h[:protocol] || "tcp"
   n = File.basename(cwd)
   o = if p == "unix"
-        {unix: nanoc.server.unix.path}
-      else
-        {host: nanoc.server.tcp.host, port: nanoc.server.tcp.port}
-      end
+    {unix: nanoc.server.unix.path}
+  else
+    {host: nanoc.server.tcp.host, port: nanoc.server.tcp.port}
+  end
   s = Server.dir(nanoc.output_dir, o)
   Process.setproctitle "rake server[#{p}] [#{n}]"
   if p == "unix"

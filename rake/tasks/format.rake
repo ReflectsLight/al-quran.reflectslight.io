@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 namespace :format do
+  desc "Apply all formats"
+  task apply: %i[format:rubocop:apply format:eslint:apply]
+
   desc "Run rubocop (Ruby)"
   task :rubocop do
     sh "bundle exec rubocop --config etc/rubocop.yml"
