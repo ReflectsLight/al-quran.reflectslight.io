@@ -42,7 +42,7 @@ import { formatNumber } from "~/lib/t";
       pkg.css.forEach((s) => document.head.appendChild(s));
       pkg.json.forEach((o) => document.body.appendChild(o));
       pkg.scripts
-        .sort((a,b) => Number(a.id) - Number(b.id))
+        .sort((a, b) => Number(a.id) - Number(b.id))
         .forEach((s) => {
           document.body.removeChild(document.body.appendChild(s));
         });
