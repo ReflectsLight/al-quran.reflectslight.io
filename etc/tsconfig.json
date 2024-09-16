@@ -1,20 +1,19 @@
 {
   "include": [
-    "../src/js/typings/globals.d.ts",
     "../src/**/*.ts",
     "../src/**/*.tsx",
   ],
-  "exclude": ["../node_modules"],
   "compilerOptions": {
     "strict": true,
+    "noImplicitAny": true,
     "module": "commonjs",
     "target": "ES2020",
-    "noImplicitAny": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "lib": [ "ES2020", "DOM" ],
-
+    "typeRoots": ["../src/js/types/globals.d.ts", "../node_modules/@types"],
+    "skipLibCheck": true,
     "baseUrl": "../src/",
     "paths": {
       "~/*": ["./js/*"],

@@ -1,5 +1,6 @@
 import * as preact from "preact";
 import * as hooks from "preact/hooks";
+import classn from "classnames";
 
 declare global {
   const render: typeof preact.render;
@@ -7,4 +8,5 @@ declare global {
   const useEffect: typeof hooks.useEffect;
   const useRef: typeof hooks.useRef;
   const useMemo: typeof hooks.useMemo;
+  const classNames: typeof classn;
 }
