@@ -20,7 +20,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
       })}
     >
       <div className="flex flex-col">
-        <div className="flex items-center justify-center text-xl">
+        <div className="flex items-center justify-center text-2xl">
           <a
             data-testid="h1"
             href={`/${locale.name}/`}
