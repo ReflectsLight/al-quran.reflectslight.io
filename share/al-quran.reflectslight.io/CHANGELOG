@@ -2,6 +2,13 @@
 
 ** vNEXT
 
+**** Add ~rake format:apply~
+This new rake task tries to auto-correct typescript and ruby lint
+errors
+
+**** Apply larger font size in ~Head.tsx~
+The text "The Noble Quran" has a larger size (~.text-2xl~)
+
 **** Remove ~/robots.txt~
 We don't need this file anymore. It was used to block crawlers
 indexing audio content at /audio but audio content is now served
