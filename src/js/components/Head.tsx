@@ -24,7 +24,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
           <a
             data-testid="h1"
             href={`/${locale.name}/`}
-            className="flex rounded justify-center p-3 m-0 mb-4 w-full no-underline"
+            className="flex rounded justify-center p-3 m-0 mb-4 w-full no-underline font-semibold"
           >
             {children}
           </a>
