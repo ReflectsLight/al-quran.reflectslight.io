@@ -46,7 +46,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           <li
             className={classNames("flex justify-center surah", {
               "w-full": locale.direction === "ltr",
-              "w-1/2": locale.direction === "rtl",
+              "w-1/3": locale.direction === "rtl",
             })}
             key={key}
           >

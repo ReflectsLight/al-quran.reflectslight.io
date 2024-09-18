@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Render three columns on ~SurahIndex.tsx~
+The ~SurahIndex.tsx~ component renders three columns for RTL
+languages (compared with two columns before)
+
 **** Revisit ~SurahStream.tsx~ for RTL languages
 The appearance of the ~SurahStream.tsx~ component was revisted
 for RTL languages, especially Arabic
