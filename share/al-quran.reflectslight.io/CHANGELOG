@@ -2,9 +2,15 @@
 
 ** vNEXT
 
+**** Replace custom z-index rule
+Replace custom z-index rule with the CSS class ~.z-10~
+
+**** Update tail.css
+The vendored copy of ~tail.css~ has been updated
+
 **** Add ~rake format:apply~
-This new rake task tries to auto-correct typescript and ruby lint
-errors
+This new rake task tries to auto-correct typescript and
+ruby lint errors
 
 **** Apply larger font size in ~Head.tsx~
 The text "The Noble Quran" has a larger size (~.text-2xl~)

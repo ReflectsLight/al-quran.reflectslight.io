@@ -26,7 +26,7 @@ function Select({ value, children: options, className }: Props) {
   return (
     <div
       className={classNames(
-        "react-select flex flex-col h-full relative",
+        "react-select flex flex-col h-full relative z-10",
         className,
       )}
     >
