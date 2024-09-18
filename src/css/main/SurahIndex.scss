@@ -3,6 +3,17 @@
 @import "themes/green";
 
 body .root .content.theme {
+  @import "base/colors";
+
+  ul.body.index[lang="ar"] {
+    li a {
+      span:last-child {
+        font-family: "Amiri Quran Regular";
+        color: $black;
+      }
+    }
+  }
+
   ul.body.index {
     @media (max-width: $breakpoint-sm) {
       li, li a {

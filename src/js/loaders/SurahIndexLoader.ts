@@ -20,6 +20,7 @@ import { formatNumber } from "~/lib/t";
   postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
+    item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf)"),
     item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     item.progress((percent: number) => {
       progressBar.value = percent;

@@ -6,6 +6,10 @@
 The appearance of the ~SurahStream.tsx~ component was revisted
 for RTL languages, especially Arabic
 
+**** Add "Amiri Quran Regular" to ~SurahIndex.tsx~
+The name of each surah is rendered in the Amiri Quran Regular
+font in the Arabic locale / language
+
 **** Add "Amiri Quran Regular" font
 This new font is used specifically for the contents of a surah
 in the Arabic locale / language

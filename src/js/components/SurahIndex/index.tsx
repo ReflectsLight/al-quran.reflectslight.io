@@ -16,6 +16,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
   const [index, setIndex] = useState<Surah[]>(surahs);
   const ref = useRef<HTMLDivElement>(null);
+  const isArabic = locale.name === "ar";
 
   useEffect(() => {
     const div = ref.current;
@@ -37,7 +38,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <ul className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6 text-lg">
+      <ul
+        lang={locale.name}
+        className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6 text-lg"
+      >
         {index.map((surah, key) => (
           <li
             className={classNames("flex justify-center surah", {
@@ -59,7 +63,9 @@ export function SurahIndex({ locale, surahs, t }: Props) {
                   {formatNumber(locale, surah.id)}
                 </span>
               )}
-              <span>{surah.name}</span>
+              <span className={classNames({ "text-2xl": isArabic })}>
+                {surah.name}
+              </span>
               {locale.direction === "ltr" && (
                 <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
