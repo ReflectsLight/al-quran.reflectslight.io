@@ -22,17 +22,15 @@ export function Stream({
 }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const isArabic = locale.name === "ar";
+  const isRTL = locale.direction === "rtl";
   const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
-    const ltr = locale.direction === "ltr";
-    const rtl = locale.direction === "rtl";
     return (
       <ul
         lang={locale.name}
         className={classNames(
-          "body stream scroll-y text-lg list-none p-0 m-0 h-5/6",
+          "body stream scroll-y text-lg list-none p-0 m-0 h-5/6 mt-4",
           ...className,
-          { "mt-4": ltr || rtl },
         )}
         ref={ref}
       >
@@ -41,12 +39,14 @@ export function Stream({
             <li
               key={ayah.id}
               className={classNames("ayah fade", {
-                "mb-10": isArabic,
+                "mb-12": isArabic,
                 "mb-5": !isArabic,
               })}
             >
               <span
-                className={classNames("flex h-8 items-center", { "mb-2": rtl })}
+                className={classNames("flex h-8 items-center", {
+                  "mb-2": isRTL,
+                })}
               >
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
@@ -59,14 +59,19 @@ export function Stream({
                     }
                   }}
                 />
-                <span>
+                <span
+                  className={classNames({
+                    "background-primary color-white pr-3 pl-3 rounded border-black":
+                      isRTL,
+                  })}
+                >
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")}{" "}
                   {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
                   {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className={classNames("m-0", { "text-2xl": isArabic })}>
+              <p className={classNames("m-0", { "text-2xl mt-5": isArabic })}>
                 {ayah.body}
               </p>
             </li>

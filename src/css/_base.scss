@@ -30,6 +30,9 @@ html {
     .scroll-y {
       overflow-y: auto;
     }
+    .border-black {
+      border: 1px $black solid;
+    }
   }
 }
 
