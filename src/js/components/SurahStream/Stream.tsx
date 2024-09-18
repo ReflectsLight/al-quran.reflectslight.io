@@ -21,6 +21,7 @@ export function Stream({
   t,
 }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
+  const isArabic = locale.name === "ar";
   const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
     const ltr = locale.direction === "ltr";
@@ -37,7 +38,13 @@ export function Stream({
       >
         {stream.map((ayah: Ayah) => {
           return (
-            <li key={ayah.id} className="ayah fade mb-5">
+            <li
+              key={ayah.id}
+              className={classNames("ayah fade", {
+                "mb-10": isArabic,
+                "mb-5": !isArabic,
+              })}
+            >
               <span
                 className={classNames("flex h-8 items-center", { "mb-2": rtl })}
               >
@@ -59,7 +66,9 @@ export function Stream({
                   {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className="m-0">{ayah.body}</p>
+              <p className={classNames("m-0", { "text-2xl": isArabic })}>
+                {ayah.body}
+              </p>
             </li>
           );
         })}

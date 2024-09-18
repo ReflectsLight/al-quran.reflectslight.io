@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Add "Amiri Quran Regular" font
+This new font is used specifically for the contents of a surah
+in the Arabic locale / language
+
 **** Replace custom z-index rule
 Replace custom z-index rule with the CSS class ~.z-10~
 
