@@ -2,9 +2,16 @@
 
 ** vNEXT
 
+**** Add Cairo fonts
+Two new fonts for RTL languages: Cairo Regular, Cairo Bold
+
 **** Render three columns on ~SurahIndex.tsx~
 The ~SurahIndex.tsx~ component renders three columns for RTL
 languages (compared with two columns before)
+
+**** Revisit color scheme
+Redo the website color scheme with a focus on improving the
+Arabic / Farsi variants
 
 **** Revisit ~SurahStream.tsx~ for RTL languages
 The appearance of the ~SurahStream.tsx~ component was revisted
