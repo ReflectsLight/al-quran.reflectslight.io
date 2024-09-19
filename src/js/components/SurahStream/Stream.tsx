@@ -66,7 +66,7 @@ export function Stream({
                   {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className={classNames("m-0", { "text-2xl mt-1": isArabic })}>
+              <p className={classNames("m-0", { "text-2xl mt-2": isArabic })}>
                 {ayah.body}
               </p>
             </li>
