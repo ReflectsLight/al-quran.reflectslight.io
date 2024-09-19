@@ -4,10 +4,7 @@
 
   ul.body.index {
     li.surah a {
-      &:active, &:link, &:visited {
-        color: $primary-color;
-      }
-
+      color: $black;
       span.id {
         color: $secondary-color;
       }
@@ -17,7 +14,7 @@
   footer {
     a {
       &:active, &:link, &:visited {
-        color: $primary-color;
+        color: $black;
         text-decoration: none;
       }
       &:hover {
@@ -25,6 +22,7 @@
       }
     }
     input {
+      color: $black;
       border: 1px solid $secondary-color;
       &:focus {
         outline-color: $secondary-color;
@@ -47,10 +45,8 @@
   ul.body.index  {
     li.surah a {
       span.id {
-        color: $secondary-color;
-      }
-      span.name {
-        color: $primary-color;
+        background: $secondary-color;
+        color: $white;
       }
     }
   }

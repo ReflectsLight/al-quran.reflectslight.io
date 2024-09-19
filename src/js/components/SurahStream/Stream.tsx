@@ -61,8 +61,7 @@ export function Stream({
                 />
                 <span
                   className={classNames({
-                    "background-primary color-white pr-3 pl-3 rounded border-black":
-                      isRTL,
+                    "background-primary color-white pr-3 pl-3 rounded border-black": isRTL,
                   })}
                 >
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}

@@ -3,21 +3,20 @@
   @import "themes/green/base/colors";
 
   ul.body.index a {
-    &:active, &:link, &:visited {
-      color: $primary-color;
-    }
+    color: $black;
   }
 
   footer {
     a {
       &:active, &:link, &:visited {
-        color: $primary-color;
+        color: $black;
       }
       &:hover {
         font-weight: bold;
       }
     }
     input {
+      color: $black;
       border: 1px solid $primary-color;
       &:focus {
         outline-color: $primary-color;

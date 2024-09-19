@@ -20,8 +20,19 @@ import { formatNumber } from "~/lib/t";
   postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
-    item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf)"),
-    item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
+    item.font(
+      "Cairo Regular",
+      "url(/fonts/cairo-regular.ttf) format('truetype')",
+    ),
+    item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf) format('truetype')"),
+    item.font(
+      "Amiri Quran Regular",
+      "url(/fonts/amiri-quran-regular.ttf) format('truetype')",
+    ),
+    item.font(
+      "Kanit Regular",
+      "url(/fonts/kanit-regular.ttf) format('truetype')",
+    ),
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(
