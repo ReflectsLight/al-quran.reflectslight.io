@@ -43,11 +43,7 @@ export function Stream({
                 "mb-5": !isArabic,
               })}
             >
-              <span
-                className={classNames("flex h-8 items-center", {
-                  "mb-2": isRTL,
-                })}
-              >
+              <span className="flex h-8 items-center">
                 <AudioControl
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}
@@ -70,7 +66,7 @@ export function Stream({
                   {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
-              <p className={classNames("m-0", { "text-2xl mt-5": isArabic })}>
+              <p className={classNames("m-0", { "text-2xl mt-1": isArabic })}>
                 {ayah.body}
               </p>
             </li>
