@@ -1,6 +1,6 @@
 # -*- mode: org -*-
 
-** vNEXT
+** v0.10.0
 
 **** Add Cairo fonts
 Two new fonts for RTL languages: Cairo Regular, Cairo Bold
