@@ -31,7 +31,7 @@ namespace :website do
   desc "Deploy the website"
   task deploy: %i[source:pull website:build] do
     sh "git add -f build/"
-    sh "git commit -am 'Deploy the website' || true"
+    sh "git commit -am 'Deploy' || true"
     sh "git push github production"
   end
 
