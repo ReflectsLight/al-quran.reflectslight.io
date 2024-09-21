@@ -110,4 +110,4 @@ installed to build the website from source:
 ## License
 
 The "source code" is released under the terms of the GPL <br>
-See [LICENSE](./share/al-quran.reflectslight.io/LICENSE) for details
+See [LICENSE.txt](./share/al-quran.reflectslight.io/LICENSE.txt) for details

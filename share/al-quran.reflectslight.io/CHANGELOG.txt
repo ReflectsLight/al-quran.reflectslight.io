@@ -10,7 +10,6 @@ The theme implementation has been reduced to a set of colors
 that are applied when the theme is active, and in the process
 we made the creation of new themes easier
 
-
 ** v0.10.0
 
 **** Add Cairo fonts
