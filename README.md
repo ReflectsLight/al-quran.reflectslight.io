@@ -101,6 +101,12 @@ installed to build the website from source:
     - Sahl Yassin
     - Hani ar-Rifai
 
+## Sources
+
+* [GitHub](https://github.com/ReflectsLight/al-quran.reflectslight.io)
+* [GitLab](https://gitlab.com/0x1eef/al-quran.reflectslight.io)
+* [brew.bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/al-quran.reflectslight.io)
+
 ## License
 
 The "source code" is released under the terms of the GPL <br>
