@@ -22,7 +22,6 @@ export function Stream({
 }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const isArabic = locale.name === "ar";
-  const isRTL = locale.direction === "rtl";
   const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
     return (
@@ -55,11 +54,7 @@ export function Stream({
                     }
                   }}
                 />
-                <span
-                  className={classNames({
-                    "color-primary font-extrabold": isRTL,
-                  })}
-                >
+                <span className="color-primary font-extrabold">
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")}{" "}
                   {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
