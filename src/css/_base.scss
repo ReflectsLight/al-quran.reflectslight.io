@@ -8,6 +8,44 @@ html {
   body {
     height: 100%;
     margin: 0;
+
+    .root {
+      height: 100%;
+    }
+
+    .ltr {
+      font-family: "Kanit Regular";
+      direction: ltr;
+    }
+
+    .rtl {
+      font-family: "Cairo Regular", "Arial", "Tahoma", sans-serif;
+      direction: rtl;
+    }
+
+    .invisible, .hidden {
+      display: none;
+    }
+
+    .outline-0 {
+      outline: 0;
+    }
+
+    .scroll-y {
+      overflow-y: auto;
+    }
+
+    .font-cairo {
+      font-family: "Cairo Regular";
+    }
+
+    .font-cairo-bold {
+      font-family: "Cairo Bold";
+    }
+
+    .font-amiri {
+      font-family: "Amiri Quran Regular";
+    }
   }
 }
 
@@ -26,44 +64,6 @@ body .root .content.theme {
 
   ul.body {
     scrollbar-color: var(--primary-color) var(--secondary-color);
-  }
-
-  .root {
-    height: 100%;
-  }
-
-  .ltr {
-    font-family: "Kanit Regular";
-    direction: ltr;
-  }
-
-  .rtl {
-    font-family: "Cairo Regular", "Arial", "Tahoma", sans-serif;
-    direction: rtl;
-  }
-
-  .invisible, .hidden {
-    display: none;
-  }
-
-  .outline-0 {
-    outline: 0;
-  }
-
-  .scroll-y {
-    overflow-y: auto;
-  }
-
-  .font-cairo {
-    font-family: "Cairo Regular";
-  }
-
-  .font-cairo-bold {
-    font-family: "Cairo Bold";
-  }
-
-  .font-amiri {
-    font-family: "Amiri Quran Regular";
   }
 
   .color-primary {
