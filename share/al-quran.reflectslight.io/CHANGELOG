@@ -1,11 +1,17 @@
 # -*- mode: org -*-
 
-** v0.10.0
+** vNEXT
+
+**** Remove KaiOS breakpoints
+There is a separate branch (~kaios/main~) for KaiOS support
 
 **** Rewrite theme implementation
 The theme implementation has been reduced to a set of colors
 that are applied when the theme is active, and in the process
 we made the creation of new themes easier
+
+
+** v0.10.0
 
 **** Add Cairo fonts
 Two new fonts for RTL languages: Cairo Regular, Cairo Bold
