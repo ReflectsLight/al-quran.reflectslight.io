@@ -75,6 +75,10 @@ html {
     .background-accent {
       background: var(--accent-color);
     }
+
+    .border-accent {
+      border: 1px solid var(--accent-color);
+    }
   }
 }
 
