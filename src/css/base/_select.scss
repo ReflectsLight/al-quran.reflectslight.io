@@ -24,16 +24,10 @@
 
   .react-select.language-select {
     li a {
-      border: 1px solid var(--black-color);
-    }
-  }
-
-  .react-select.language-select {
-    li a {
       background: var(--primary-color);
-      color: $white;
+      color: var(--secondary-color);
       &:active, &:visited, &:link {
-        color: var(--white-color);
+        color: var(--secondary-color);
       }
       &:hover {
         font-weight: bold;

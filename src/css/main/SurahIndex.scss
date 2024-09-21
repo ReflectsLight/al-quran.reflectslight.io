@@ -5,7 +5,7 @@
 body .root .content.theme {
   ul.body.index {
     li, li a {
-      color: var(--black-color);
+      color: var(--accent-color);
       @media (max-width: $breakpoint-sm) {
         width: 100%;
       }
@@ -32,9 +32,9 @@ body .root .content.theme {
 
   footer {
     a {
-      color: var(--black-color);
+      color: var(--accent-color);
       &:active, &:link, &:visited {
-        color: var(--black-color);
+        color: var(--accent-color);
       }
       &:hover {
         font-weight: bold;
@@ -42,7 +42,7 @@ body .root .content.theme {
     }
 
     input {
-      color: var(--black-color);
+      color: var(--accent-color);
       border: 1px solid var(--primary-color);
       &:focus {
         outline-color: var(--primary-color);
@@ -74,12 +74,6 @@ body .root .content.theme {
  */
 body .root .content.theme.rtl {
   ul.body.index {
-    li a {
-      span:first-child {
-        border: 1px solid var(--black-color);
-      }
-    }
-
     li.surah {
       span.transliterated { display: none; }
     }
