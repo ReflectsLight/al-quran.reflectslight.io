@@ -66,7 +66,7 @@ export function Timer({
   }
 
   return (
-    <div className="timer font-extrabold text-base w-10 flex justify-end">
+    <div className="timer font-extrabold text-base w-10 flex justify-end color-primary">
       {!ms || ms / 1000 <= 0
         ? formatNumber(locale, 0)
         : formatNumber(locale, ms / 1000, { maximumFractionDigits: 0 })}

@@ -3,10 +3,10 @@
 @import "themes/green";
 
 body .root .content.theme {
-  @import "base/colors";
   ul.body.index {
-    @media (max-width: $breakpoint-sm) {
-      li, li a {
+    li, li a {
+      color: var(--black-color);
+      @media (max-width: $breakpoint-sm) {
         width: 100%;
       }
     }
@@ -31,11 +31,22 @@ body .root .content.theme {
   }
 
   footer {
-    @media screen and (max-width: $breakpoint-kaiOS-landscape) {
-      display: none;
+    a {
+      color: var(--black-color);
+      &:active, &:link, &:visited {
+        color: var(--black-color);
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
-    @media screen and (max-width: $breakpoint-kaiOS-portrait) {
-      display: none;
+
+    input {
+      color: var(--black-color);
+      border: 1px solid var(--primary-color);
+      &:focus {
+        outline-color: var(--primary-color);
+      }
     }
 
     @media(max-width: $breakpoint-sm) {
@@ -65,7 +76,7 @@ body .root .content.theme.rtl {
   ul.body.index {
     li a {
       span:first-child {
-        border: 1px solid $black;
+        border: 1px solid var(--black-color);
       }
     }
 

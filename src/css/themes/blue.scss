@@ -3,37 +3,9 @@
 }
 
 .root .content.theme.blue {
-  @import "blue/base/colors";
-
-  .color-white {
-    color: $white !important;
-  }
-
-  .color-primary {
-    color: $primary-color;
-  }
-
-  .color-secondary {
-    color: $secondary-color;
-  }
-
-  .color-accent {
-    color: $accent-color;
-  }
-
-  .background-primary {
-    background: $primary-color;
-  }
-
-  .background-secondary {
-    background: $secondary-color;
-  }
-
-  .background-accent {
-    background: $accent-color;
-  }
+  --primary-color: #3383C3;
+  --secondary-color: #3383C3;
+  --accent-color: #3383C3;
+  --black-color: #444444;
+  --white-color: #FFF;
 }
-
-@import "blue/base";
-@import "blue/main/SurahIndex";
-@import "blue/main/SurahStream";

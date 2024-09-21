@@ -82,7 +82,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       </ul>
       <footer className="flex flex-row justify-between mb-5 h-12 text-lg">
         <a
-          className="flex flex-row items-center no-underline"
+          className="flex flex-row items-center color-black no-underline"
           href={`/${locale.name}/random/`}
         >
           {locale.direction === "ltr" ? (

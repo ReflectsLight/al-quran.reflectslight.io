@@ -1,40 +1,11 @@
 .root .content.theme.green.rtl {
-  @import "green/base/colors";
   direction: rtl;
 }
 
 .root .content.theme.green {
-  @import "green/base/colors";
-
-  .color-primary {
-    color: $primary-color;
-  }
-
-  .color-secondary {
-    color: $secondary-color;
-  }
-
-  .color-accent {
-    color: $accent-color;
-  }
-
-  .color-white {
-    color: #FFF;
-  }
-
-  .background-primary {
-    background: $primary-color;
-  }
-
-  .background-secondary {
-    background: $secondary-color;
-  }
-
-  .background-accent {
-    background: $accent-color;
-  }
+  --primary-color: #6d765b;
+  --secondary-color: #6C755A;
+  --accent-color: #FFF;
+  --white-color: #FFF;
+  --black-color: #444;
 }
-
-@import "green/base";
-@import "green/main/SurahIndex";
-@import "green/main/SurahStream";

@@ -2,6 +2,11 @@
 
 ** v0.10.0
 
+**** Rewrite theme implementation
+The theme implementation has been reduced to a set of colors
+that are applied when the theme is active, and in the process
+we made the creation of new themes easier
+
 **** Add Cairo fonts
 Two new fonts for RTL languages: Cairo Regular, Cairo Bold
 

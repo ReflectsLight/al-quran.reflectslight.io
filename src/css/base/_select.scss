@@ -1,4 +1,11 @@
 .root .content.theme {
+  .green {
+    background: #6d765b !important;
+  }
+  .blue {
+    background: #3383C3 !important;
+  }
+
   .react-select {
     .active {
       cursor: pointer;
@@ -10,12 +17,27 @@
       width: 16px;
       height: 16px;
       border-radius: 12px;
+      background: var(--primary-color);
+      border-radius: 10px;
     }
   }
 
   .react-select.language-select {
     li a {
-      border: 1px solid $black;
+      border: 1px solid var(--black-color);
+    }
+  }
+
+  .react-select.language-select {
+    li a {
+      background: var(--primary-color);
+      color: $white;
+      &:active, &:visited, &:link {
+        color: var(--white-color);
+      }
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }
