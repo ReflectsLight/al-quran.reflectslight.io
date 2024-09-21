@@ -100,6 +100,7 @@ body .root .content.theme {
  * RTL languages
  */
 body .root .content.theme.rtl {
+  direction: rtl;
   header a[data-testid="h1"] {
     font-family: "Cairo Bold";
   }
