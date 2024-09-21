@@ -2,6 +2,9 @@
 
 ** vNEXT
 
+**** Optimize inline of ~postman.css~
+The inlined CSS is minified before being inserted into HTML documents
+
 **** Remove KaiOS breakpoints
 There is a separate branch (~kaios/main~) for KaiOS support
 

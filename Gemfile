@@ -10,6 +10,7 @@ gem "nanoc", "~> 4.12"
 gem "nanoc-gzip.rb"
 gem "nanoc-webpack.rb", "~> 0.10"
 gem "nanoc-tidy.rb", "~> 0.8.4"
+gem "rainpress"
 
 ##
 # dev
