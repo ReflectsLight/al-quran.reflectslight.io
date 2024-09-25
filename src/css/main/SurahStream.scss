@@ -21,7 +21,7 @@ body .root .content.theme {
 body .root .content.theme.rtl {
   ul.body.stream[lang="ar"] {
     li.ayah p {
-      font-family: "Amiri Quran Regular";
+      @extend .font-amiri;
     }
   }
   ul.body.stream {
