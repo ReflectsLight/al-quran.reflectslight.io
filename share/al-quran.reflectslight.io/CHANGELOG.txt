@@ -2,6 +2,10 @@
 
 ** vNEXT
 
+**** Render two columns for RTL languages
+On mobile devices we will render two columns in ~SurahIndex.tsx~ for
+RTL languages
+
 **** Optimize inline of ~postman.css~
 The inlined CSS is minified before being inserted into HTML documents
 
