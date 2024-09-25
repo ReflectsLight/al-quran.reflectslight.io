@@ -81,4 +81,14 @@ body .root .content.theme.rtl {
       span.transliterated { display: none; }
     }
   }
+  @media (hover: hover) {
+    footer {
+      a {
+        &:hover {
+          font-weight: normal;
+          font-family: "Cairo Bold";
+        }
+      }
+    }
+  }
 }
