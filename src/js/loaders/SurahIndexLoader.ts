@@ -26,10 +26,6 @@ import { formatNumber } from "~/lib/t";
     ),
     item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf) format('truetype')"),
     item.font(
-      "Amiri Quran Regular",
-      "url(/fonts/amiri-quran-regular.ttf) format('truetype')",
-    ),
-    item.font(
       "Kanit Regular",
       "url(/fonts/kanit-regular.ttf) format('truetype')",
     ),
