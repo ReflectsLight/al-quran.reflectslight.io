@@ -18,22 +18,21 @@ import { formatNumber } from "~/lib/t";
   const style = doc.querySelector(".css.postman")!;
   const progressBar = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
+  const fonts = (() => {
+    if (doc.dir === "rtl") {
+      return [
+        item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
+        item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"),
+        item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf)"),
+      ];
+    } else {
+      return [item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)")];
+    }
+  })();
   postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-stream.js?v=${rev}`, { id: "1" }),
-    item.font(
-      "Cairo Regular",
-      "url(/fonts/cairo-regular.ttf) format('truetype')",
-    ),
-    item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf) format('truetype')"),
-    item.font(
-      "Amiri Quran Regular",
-      "url(/fonts/amiri-quran-regular.ttf) format('truetype')",
-    ),
-    item.font(
-      "Kanit Regular",
-      "url(/fonts/kanit-regular.ttf) format('truetype')",
-    ),
+    ...fonts,
     /* eslint-disable */
     item.json(`/json/${doc.lang}/${surahId}/info.json?v=${rev}`, { className: "json surahinfo" }),
     item.json(`/json/${doc.lang}/${surahId}/surah.json?v=${rev}`, { className: "json surah" }),

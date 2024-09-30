@@ -17,18 +17,20 @@ import { formatNumber } from "~/lib/t";
   const style: HTMLStyleElement = doc.querySelector(".css.postman")!;
   const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
+  const fonts = (() => {
+    if (doc.dir === "rtl") {
+      return [
+        item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
+        item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"),
+      ];
+    } else {
+      return [item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)")];
+    }
+  })();
   postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
-    item.font(
-      "Cairo Regular",
-      "url(/fonts/cairo-regular.ttf) format('truetype')",
-    ),
-    item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf) format('truetype')"),
-    item.font(
-      "Kanit Regular",
-      "url(/fonts/kanit-regular.ttf) format('truetype')",
-    ),
+    ...fonts,
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(
