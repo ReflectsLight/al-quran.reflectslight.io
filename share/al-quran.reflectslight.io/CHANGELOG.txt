@@ -2,6 +2,11 @@
 
 * vNEXT
 
+** Fix the render of Amiri font on iOS
+On modern versions of iOS the "Amiri Quran Regular" font rendered
+as invisible text. This change reverts to the "Amiri Regular" font
+instead, which appears to render without any issues
+
 ** Download fonts based on language direction
 RTL and LTR languages use a different set of fonts, and before this
 change we would download all fonts regardless of whether the font

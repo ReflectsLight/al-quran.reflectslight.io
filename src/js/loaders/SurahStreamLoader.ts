@@ -23,7 +23,7 @@ import { formatNumber } from "~/lib/t";
       return [
         item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
         item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"),
-        item.font("Amiri Quran Regular", "url(/fonts/amiri-quran-regular.ttf)"),
+        item.font("Amiri Regular", "url(/fonts/amiri-regular.ttf)"),
       ];
     } else {
       return [item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)")];

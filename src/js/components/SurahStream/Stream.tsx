@@ -38,7 +38,7 @@ export function Stream({
             <li
               key={ayah.id}
               className={classNames("ayah fade", {
-                "mb-12": isArabic,
+                "mb-8": isArabic,
                 "mb-5": !isArabic,
               })}
             >
@@ -63,7 +63,7 @@ export function Stream({
               </span>
               <p
                 className={classNames("m-0 color-accent", {
-                  "text-2xl mt-2": isArabic,
+                  "text-2xl mt-5": isArabic,
                 })}
               >
                 {ayah.body}
