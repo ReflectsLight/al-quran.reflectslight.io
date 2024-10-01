@@ -12,10 +12,6 @@ RTL and LTR languages use a different set of fonts, and before this
 change we would download all fonts regardless of whether the font
 would be used or not
 
-** Render two columns for RTL languages
-On mobile devices we will render two columns in ~SurahIndex.tsx~ for
-RTL languages
-
 ** Optimize inline of ~postman.css~
 The inlined CSS is minified before being inserted into HTML documents
 

@@ -76,7 +76,7 @@ body .root .content.theme.rtl {
   ul.body.index {
     li.surah {
       @media (max-width: $breakpoint-sm) {
-        width: 50%;
+        width: 100%;
       }
       span.transliterated { display: none; }
     }
