@@ -1,6 +1,7 @@
 # -*- mode: org -*-
 
 * vNEXT
+
 ** Download fonts based on language direction
 RTL and LTR languages use a different set of fonts, and before this
 change we would download all fonts regardless of whether the font
@@ -21,7 +22,9 @@ The theme implementation has been reduced to a set of colors
 that are applied when the theme is active, and in the process
 we made the creation of new themes easier
 
+
 * v0.10.0
+
 ** Add Cairo fonts
 Two new fonts for RTL languages: Cairo Regular, Cairo Bold
 
@@ -67,7 +70,9 @@ on a separate domain
 The file mode option can be set on the server's unix socket.
 Default: ~ug=rw,o=~
 
+
 * v0.9.1
+
 ** Fix ~_opengraph.html.erb~ typos
 Fix multiple issues with the render of ~_opengraph.html.erb~
 
@@ -102,7 +107,9 @@ KaiOS support
 Move a large portion of the website's configuration files to
 the ~/etc~ directory
 
+
 * v0.9.0
+
 ** Add ~share/al-quran.reflectslight.io/documentation/~
 Replace ~share/doc/al-quran.reflectslight.io~
 
