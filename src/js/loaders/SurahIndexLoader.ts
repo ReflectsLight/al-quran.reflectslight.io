@@ -3,10 +3,8 @@ import { formatNumber } from "~/lib/t";
 
 (function () {
   const docel = document.documentElement;
-  const loader: HTMLElement = docel.querySelector(".postman.loader")!;
-  const style: HTMLStyleElement = docel.querySelector(".css.postman")!;
-  const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
-  const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
+  const main: HTMLElement = docel.querySelector(".postman.main")!;
+  const css: HTMLStyleElement = docel.querySelector(".postman.css")!;
   const rev = docel
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
@@ -26,16 +24,15 @@ import { formatNumber } from "~/lib/t";
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
     ...fonts,
     item.progress((percent: number) => {
-      progressBar.value = percent;
-      progressNumber.innerText = formatNumber(
-        docel.lang,
-        Number(percent.toFixed(0)),
-      );
+      const bar: HTMLProgressElement = main.querySelector("progress")!;
+      const num: HTMLSpanElement = main.querySelector(".percentage")!;
+      bar.value = percent;
+      num.innerText = formatNumber(docel.lang, Number(percent.toFixed(0)));
     }),
   )
     .fetch()
     .then((pkg) => {
-      [loader, style].forEach((el) => el.remove());
+      [main, css].forEach((el) => el.remove());
       pkg.fonts.forEach((f) => document.fonts.add(f));
       pkg.css.forEach((s) => document.head.appendChild(s));
       pkg.scripts

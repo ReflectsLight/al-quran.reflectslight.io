@@ -3,11 +3,9 @@ import { formatNumber } from "~/lib/t";
 
 (function () {
   const docel = document.documentElement;
-  const loader = docel.querySelector(".postman.loader")!;
-  const style = docel.querySelector(".css.postman")!;
-  const progressBar = loader.querySelector("progress")!;
-  const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
-  const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+  const main = docel.querySelector(".postman.main")!;
+  const css = docel.querySelector(".postman.css")!;
+  const { surahId } = docel.querySelector<HTMLElement>(".app.mount")!.dataset;
   const rev = docel
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
@@ -33,16 +31,15 @@ import { formatNumber } from "~/lib/t";
     item.json(`/json/durations/${surahId}.json?v=${rev}`, { className: "json durations" }),
     /* eslint-enable */
     item.progress((percent: number) => {
-      progressBar.value = percent;
-      progressNumber.innerText = formatNumber(
-        docel.lang,
-        Number(percent.toFixed(0)),
-      );
+      const bar = main.querySelector("progress")!;
+      const num: HTMLSpanElement = main.querySelector(".percentage")!;
+      bar.value = percent;
+      num.innerText = formatNumber(docel.lang, Number(percent.toFixed(0)));
     }),
   )
     .fetch()
     .then((pkg) => {
-      [loader, style].forEach((el) => el.remove());
+      [main, css].forEach((el) => el.remove());
       pkg.fonts.forEach((f) => document.fonts.add(f));
       pkg.css.forEach((s) => document.head.appendChild(s));
       pkg.json.forEach((o) => document.body.appendChild(o));
