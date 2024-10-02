@@ -18,11 +18,18 @@ export function T(phrases: PhraseMap<string>): TFunction {
 }
 
 export function formatNumber(
-  locale: TLocale,
+  locale: TLocale | string,
   num: number,
   options = {},
 ): string {
-  const numl = locale.name === "ar" ? "ar-SA" : locale.name;
+  const name = (() => {
+    if (typeof locale === "string") {
+      return locale;
+    } else {
+      return locale.name;
+    }
+  })();
+  const numl = name === "ar" ? "ar-SA" : name;
   return new Intl.NumberFormat(numl, {
     maximumFractionDigits: 1,
     ...options,

@@ -3,21 +3,14 @@ import { formatNumber } from "~/lib/t";
 
 (function () {
   const doc = document.documentElement;
-  const rev = doc
-    .querySelector("meta[name='revision']")!
-    .getAttribute("content")!;
-  const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
-  const locale = {
-    name: doc.lang,
-    direction: doc.dir as "rtl" | "ltr",
-    displayName: "",
-  };
-
-  /* Postman */
   const loader = doc.querySelector(".postman.loader")!;
   const style = doc.querySelector(".css.postman")!;
   const progressBar = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
+  const { surahId } = document.querySelector<HTMLElement>(".root")!.dataset;
+  const rev = doc
+    .querySelector("meta[name='revision']")!
+    .getAttribute("content")!;
   const fonts = (() => {
     if (doc.dir === "rtl") {
       return [
@@ -29,6 +22,7 @@ import { formatNumber } from "~/lib/t";
       return [item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)")];
     }
   })();
+
   postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-stream.js?v=${rev}`, { id: "1" }),
@@ -41,7 +35,7 @@ import { formatNumber } from "~/lib/t";
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(
-        locale,
+        doc.lang,
         Number(percent.toFixed(0)),
       );
     }),
