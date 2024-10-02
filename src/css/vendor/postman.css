@@ -8,11 +8,11 @@ body {
   padding: 0;
 }
 
-.postman.loader {
+.postman.main {
   height: 100%;
 }
 
-.postman.loader div:first-child {
+.postman.main div:first-child {
   width: 200px;
   margin: 0 auto;
   display: flex;
@@ -21,11 +21,11 @@ body {
   top: 250px;
 }
 
-.postman.loader progress {
+.postman.main progress {
   width: 100%;
 }
 
-.postman.loader .percentage {
+.postman.main .percentage {
   font-family: monospace;
   text-align: center;
   width: 100%;
