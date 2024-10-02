@@ -2,12 +2,12 @@ import postman, { item } from "postman";
 import { formatNumber } from "~/lib/t";
 
 (function () {
-  const doc = document.documentElement;
-  const loader: HTMLElement = doc.querySelector(".postman.loader")!;
-  const style: HTMLStyleElement = doc.querySelector(".css.postman")!;
+  const docel = document.documentElement;
+  const loader: HTMLElement = docel.querySelector(".postman.loader")!;
+  const style: HTMLStyleElement = docel.querySelector(".css.postman")!;
   const progressBar: HTMLProgressElement = loader.querySelector("progress")!;
   const progressNumber: HTMLSpanElement = loader.querySelector(".percentage")!;
-  const rev = doc
+  const rev = docel
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
   const fonts = (() => {
@@ -15,7 +15,7 @@ import { formatNumber } from "~/lib/t";
       item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
       item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     ];
-    if (doc.dir === "rtl") {
+    if (docel.dir === "rtl") {
       f.push(item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"));
     }
     return f;
@@ -28,7 +28,7 @@ import { formatNumber } from "~/lib/t";
     item.progress((percent: number) => {
       progressBar.value = percent;
       progressNumber.innerText = formatNumber(
-        doc.lang,
+        docel.lang,
         Number(percent.toFixed(0)),
       );
     }),
