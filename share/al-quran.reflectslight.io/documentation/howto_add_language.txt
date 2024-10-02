@@ -1,31 +1,45 @@
 # -*- mode: org -*-
 
-** Introduction
+* Introduction
 
 This document explains the process that should be
 followed when adding a new locale or language
-to the website. Ideally the process would require
-a minimal amount of manual work and be fast to complete
-but we're not quite there yet.
+to the website.
 
-** Steps
+Ideally the process would require a minimal amount
+of manual work and be fast to complete but we're not
+quite there yet.
 
-**** Add new locale to file ~/Rules~
+** Note
+
+Experience has taught me that there's more work than
+you might think in maintaining support for a language,
+and that starts with finding a good translation.
+
+But it does not end there: the pros and cons of adopting
+a new language have to be carefully considered. Going
+forward I don't plan to add another language unless a native
+speaker can help maintain its support.
+
+* Steps
+
+** Add new locale to file ~/Rules~
 The ~/Rules~ file has to be updated
 
-**** Add new locale to array ~Quran.locales~
+** Add new locale to array ~Quran.locales~
 The ~/packages/Quran/src/index.ts~ file has to be updated
 
-**** Add new locale (+ translations)
+** Add new locale (+ translations)
 The following files have to updated:
-+ ~/src/json/t.json~
-+ ~/src/json/surahs.json~
-+ ~/src/json/<locale>/<surahId>/{info,surah}.json~
+- /src/json/t.json
+- /src/json/surahs.json
+- /src/json/<locale>/<surahId>/{info,surah}.json
 
-**** Save time
+** Save time
 The ~/src/json/<locale>/<surahId>/info.json~ files can
 be generated from the contents of ~/src/json/surahs.json~ -
 and that leaves us with one less step to complete:
+
 #+BEGIN_SRC sh
   user@localhost$ bundle exec rake t:surahs.json
 #+END_SRC
