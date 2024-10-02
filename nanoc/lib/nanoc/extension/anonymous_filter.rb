@@ -9,9 +9,8 @@ module Nanoc::Extension
     require "securerandom"
     ##
     # @example
-    #   compile "/sitemap.xml.erb" do
-    #     filter(:erb)
-    #     filter Proc.new { _1.each_line.reject { |s| s.strip.empty? }.join }
+    #   compile "/sitemap.xml" do
+    #     filter proc { _1.chomp }
     #     write("/sitemap.xml")
     #   end
     # @param [Proc, Symbol] fn
@@ -21,9 +20,9 @@ module Nanoc::Extension
     # @return [void]
     def filter(fn, options = {})
       if Proc === fn
-        id = anonymous_id
-        Nanoc::Filter.define(id) { fn.call(_1, _2) }
-        super(id, options)
+        anonid = anonymous_id
+        Nanoc::Filter.define(anonid) { fn.call(_1, _2) }
+        super(anonid, options)
       else
         super(fn, options)
       end
