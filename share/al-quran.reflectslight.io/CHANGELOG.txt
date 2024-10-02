@@ -2,6 +2,10 @@
 
 * vNEXT
 
+** Render ~LanguageSelect.tsx~ items in an optimal font
+RTL languages have ~Cairo Regular~ applied.
+LTR languages have ~Kanit Regular~ applied
+
 ** Fix the render of Amiri font on iOS
 On modern versions of iOS the "Amiri Quran Regular" font rendered
 as invisible text. This change reverts to the "Amiri Regular" font
