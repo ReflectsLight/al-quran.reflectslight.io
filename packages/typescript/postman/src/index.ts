@@ -2,10 +2,10 @@ import type { Item, FontItem } from './postman/item';
 import item from './postman/item';
 import request from './postman/request';
 
-type Postman = { fetch: () => Promise<Package> };
+type Postman = { deliver: () => Promise<Parcel> };
 type Args = Array<Item | FontItem | Function>
 type Items = Array<Item | FontItem>;
-type Package = {
+export type Parcel = {
   fonts: FontFace[]
   images: HTMLElement[]
   css: HTMLElement[]
@@ -30,7 +30,7 @@ export { item };
 
 export default function (...args: Args) {
   const self: Postman = Object.create(null);
-  const result: Package = { fonts: [], images: [], css: [], scripts: [], json: [] };
+  const result: Parcel = { fonts: [], images: [], css: [], scripts: [], json: [] };
   const [items, callback] = parseArgs(args);
   items.sort((i1, i2) => i1.priority >= i2.priority ? 1 : -1);
 
@@ -62,11 +62,11 @@ export default function (...args: Args) {
       /* unreachable */
       return null;
     });
-    return reqs as Array<Promise<Package>>;
+    return reqs as Array<Promise<Parcel>>;
   };
 
-  self.fetch = async () => {
-    await Promise.all<Package>(spawnRequests());
+  self.deliver = async () => {
+    await Promise.all<Parcel>(spawnRequests());
     return result;
   };
 

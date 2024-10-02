@@ -1,4 +1,5 @@
 import postman, { item } from "postman";
+import type { Parcel } from "postman";
 import { formatNumber } from "~/lib/t";
 
 (function () {
@@ -19,7 +20,7 @@ import { formatNumber } from "~/lib/t";
     return f;
   })();
 
-  postman(
+  const delivery = postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-index.js?v=${rev}`, { id: "1" }),
     ...fonts,
@@ -29,16 +30,15 @@ import { formatNumber } from "~/lib/t";
       bar.value = percent;
       num.innerText = formatNumber(docel.lang, Number(percent.toFixed(0)));
     }),
-  )
-    .fetch()
-    .then((pkg) => {
-      [main, css].forEach((el) => el.remove());
-      pkg.fonts.forEach((f) => document.fonts.add(f));
-      pkg.css.forEach((s) => document.head.appendChild(s));
-      pkg.scripts
-        .sort((a, b) => Number(a.id) - Number(b.id))
-        .forEach((s) => {
-          document.body.removeChild(document.body.appendChild(s));
-        });
-    });
+  ).deliver();
+  delivery.then((parcel: Parcel) => {
+    [main, css].forEach((el) => el.remove());
+    parcel.fonts.forEach((f) => document.fonts.add(f));
+    parcel.css.forEach((s: HTMLElement) => document.head.appendChild(s));
+    parcel.scripts
+      .sort((a, b) => Number(a.id) - Number(b.id))
+      .forEach((s) => {
+        document.body.removeChild(document.body.appendChild(s));
+      });
+  });
 })();
