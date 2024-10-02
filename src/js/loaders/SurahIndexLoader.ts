@@ -11,14 +11,14 @@ import { formatNumber } from "~/lib/t";
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
   const fonts = (() => {
+    const f = [
+      item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
+      item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
+    ];
     if (doc.dir === "rtl") {
-      return [
-        item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
-        item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"),
-      ];
-    } else {
-      return [item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)")];
+      f.push(item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"));
     }
+    return f;
   })();
 
   postman(

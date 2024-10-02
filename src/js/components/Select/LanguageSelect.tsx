@@ -17,6 +17,7 @@ export function LanguageSelect({ locale }: Props) {
             key={i}
             className={classNames(
               "flex h-6 w-full justify-center no-underline mb-1 rounded border-accent",
+              l.direction === "rtl" ? "font-cairo" : "font-kanit",
               l.direction,
               l.name === locale.name ? "active" : undefined,
             )}
