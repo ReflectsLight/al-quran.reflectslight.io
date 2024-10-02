@@ -35,10 +35,9 @@ The following files have to updated:
 - /src/json/surahs.json
 - /src/json/<locale>/<surahId>/{info,surah}.json
 
-** Save time
-The ~/src/json/<locale>/<surahId>/info.json~ files can
-be generated from the contents of ~/src/json/surahs.json~ -
-and that leaves us with one less step to complete:
+** Automation
+The ~/src/json/<locale>/<surahId>/info.json~ files can be
+generated from the contents of ~/src/json/surahs.json~:
 
 #+BEGIN_SRC sh
   user@localhost$ bundle exec rake t:surahs.json
