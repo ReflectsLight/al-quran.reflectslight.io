@@ -19,7 +19,7 @@ body .root .content.theme {
 }
 
 body .root .content.theme.rtl {
-  ul.body.stream[lang="ar"] {
+  ul.body.stream {
     li.ayah p {
       @extend .font-amiri;
     }

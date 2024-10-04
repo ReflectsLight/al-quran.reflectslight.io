@@ -2,6 +2,12 @@
 
 * vNEXT
 
+** Apply Amiri font for Farsi
+Similar to Arabic - apply the Amiri Regular font for the content
+of a surah. With this change the distinction is more so between a
+RTL language vs a LTR language rather than between Arabic vs English
+vs Farsi
+
 ** Center-align ~ul.body.stream~
 For RTL languages we will show the content of a surah centered,
 and within a max width of 470px
