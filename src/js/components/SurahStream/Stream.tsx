@@ -21,7 +21,6 @@ export function Stream({
   t,
 }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
-  const isArabic = locale.name === "ar";
   const isRTL = locale.direction === "rtl";
   const ref = useRef<HTMLUListElement>(null);
   const ul = useMemo<JSX.Element>(() => {
