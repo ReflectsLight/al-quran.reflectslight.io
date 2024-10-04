@@ -21,24 +21,19 @@ body .root .content.theme {
 body .root .content.theme.rtl {
   ul.body.stream {
     li.ayah p {
+      width: 100%;
       @extend .font-amiri;
     }
   }
 
-  ul.body.stream {
-    display: flex;
-    flex-direction: column;
-    min-width: 470px;
-    max-width: 470px;
-    align-self: center;
-  }
-
-  /* <= $breakpoint-sm */
-  @media (max-width: $breakpoint-sm) {
+  /* >= $breakpoint-sm */
+  @media (min-width: $breakpoint-sm) {
     ul.body.stream {
-      li.ayah p {
-        width: 100%;
-      }
+      display: flex;
+      flex-direction: column;
+      min-width: 470px;
+      max-width: 470px;
+      align-self: center;
     }
   }
 }
