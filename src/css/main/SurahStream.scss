@@ -24,11 +24,15 @@ body .root .content.theme.rtl {
       @extend .font-amiri;
     }
   }
+
   ul.body.stream {
-    li.ayah p {
-      max-width: 470px;
-    }
+    display: flex;
+    flex-direction: column;
+    min-width: 470px;
+    max-width: 470px;
+    align-self: center;
   }
+
   /* <= $breakpoint-sm */
   @media (max-width: $breakpoint-sm) {
     ul.body.stream {
