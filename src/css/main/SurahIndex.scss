@@ -61,6 +61,12 @@ body .root .content.theme {
       }
     }
 
+    @media(max-width: $breakpoint-sm) {
+      input[data-testid="SurahIndex/Filter"] {
+        display: none;
+      }
+    }
+
     @media(hover: none) {
       input[data-testid="SurahIndex/Filter"] {
         display: none;
