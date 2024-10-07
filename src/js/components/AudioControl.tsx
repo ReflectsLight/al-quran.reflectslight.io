@@ -23,6 +23,7 @@ export function AudioControl({
   const [enabled, setEnabled] = useState<boolean>(false);
   const [audioStatus, setAudioStatus] = useState<Maybe<TAudioStatus>>(null);
   const [audioBaseUrl, setAudioBaseUrl] = useState<Maybe<string>>(null);
+  const [commitId, setCommitId] = useState<Maybe<string>>(null);
   const play = (audio: HTMLAudioElement) => audio.play().catch(() => null);
   const pause = (audio: HTMLAudioElement) => audio.pause();
 
@@ -31,7 +32,7 @@ export function AudioControl({
       return;
     }
     if (enabled) {
-      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3`].join("/");
+      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3?v=${commitId}`].join("/");
       play(audio);
     }
   }, [hidden, enabled, ayah?.id, audioBaseUrl]);
@@ -41,8 +42,10 @@ export function AudioControl({
       "[data-audio-base-url]",
     );
     const url = el?.dataset?.audioBaseUrl;
+    const commit = el?.dataset?.commitId
     if (url?.length) {
       setAudioBaseUrl(url);
+      setCommitId(commit);
     } else {
       console.warn("audio.base_url is not set");
     }

@@ -23,7 +23,8 @@
     <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="app mount root"
          data-surah-id="<%= context.surah.id %>"
-         data-audio-base-url="<%= audio_base_url %>">
+         data-audio-base-url="<%= audio_base_url %>"
+         data-commit-id="<%= commit %>">
     </div>
     <script src="/js/loaders/surah-stream-loader.js?v=<%= commit %>"></script>
   </body>
