@@ -55,6 +55,11 @@ body .root .content.theme {
   width: 100%;
   color: var(--color-accent);
 
+  /* <= $breakpoint-sm */
+  @media (max-width: $breakpoint-sm) {
+    width: 85%;
+  }
+
   header {
     a[data-testid="h1"] {
       background: var(--primary-color);
