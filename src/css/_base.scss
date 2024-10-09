@@ -51,8 +51,8 @@ html {
 
 body .root .content.theme {
   margin: 0 auto;
-  max-width: $breakpoint-md;
-  width: 85%;
+  max-width: $breakpoint-sm;
+  width: 100%;
   color: var(--color-accent);
 
   header {

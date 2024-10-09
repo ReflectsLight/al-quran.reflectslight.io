@@ -25,15 +25,4 @@ body .root .content.theme.rtl {
       @extend .font-amiri;
     }
   }
-
-  /* >= $breakpoint-sm */
-  @media (min-width: $breakpoint-sm) {
-    ul.body.stream {
-      display: flex;
-      flex-direction: column;
-      min-width: 470px;
-      max-width: 470px;
-      align-self: center;
-    }
-  }
 }

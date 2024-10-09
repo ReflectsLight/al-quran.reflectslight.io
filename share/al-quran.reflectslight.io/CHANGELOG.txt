@@ -2,6 +2,10 @@
 
 * vNEXT
 
+** Reduce default width
+The look and feel of the website has changed to be more like
+a book that could fit in the palm of your hand
+
 ** Add src/images/albumcover-600x600.jpg
 A copy of the album art that has been embedded as metadata
 in the MP3 files served from audio.al-quran.reflectslight.io
@@ -11,10 +15,6 @@ Similar to Arabic - apply the Amiri Regular font for the content
 of a surah. With this change the distinction is more so between a
 RTL language vs a LTR language rather than between Arabic vs English
 vs Farsi
-
-** Center-align ~ul.body.stream~
-For RTL languages we will show the content of a surah centered,
-and within a max width of 470px
 
 ** Render ~LanguageSelect.tsx~ items in an optimal font
 RTL languages have ~Cairo Regular~ applied.
