@@ -15,10 +15,10 @@ export function ThemeSelect({ theme, setTheme }: Props) {
           <Select.Option
             key={i}
             onClick={() => setTheme(t)}
-            className={classNames("block circle mb-1", t)}
+            className="flex justify-end w-10 h-6"
             value={t}
           >
-            <span className="block w-full h-full" />
+            <span className={classNames("rounded w-5 h-5", t)} />
           </Select.Option>
         );
       })}

@@ -2,6 +2,12 @@
 
 * vNEXT
 
+** Revisit ~ThemeSelect.tsx~ for touch devices
+On touch devices it is now easier to change themes thanks to
+a container that has a larger height and width than the theme
+icon it contains. Along with this change, the theme icons have
+become larger and less circular
+
 ** Reduce default width
 The look and feel of the website has changed to be more like
 a book that could fit in the palm of your hand

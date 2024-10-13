@@ -9,8 +9,9 @@ type Props = {
 };
 
 export function Option({ children, href, className, onClick }: Props) {
+  const ref = createRef();
   return (
-    <a href={href} className={className} onClick={onClick}>
+    <a href={href} className={className} onClick={onClick} ref={ref}>
       {children as string}
     </a>
   );

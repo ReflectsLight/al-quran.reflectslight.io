@@ -32,7 +32,9 @@ export function AudioControl({
       return;
     }
     if (enabled) {
-      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3?v=${commitId}`].join("/");
+      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3?v=${commitId}`].join(
+        "/",
+      );
       play(audio);
     }
   }, [hidden, enabled, ayah?.id, audioBaseUrl]);
@@ -42,7 +44,7 @@ export function AudioControl({
       "[data-audio-base-url]",
     );
     const url = el?.dataset?.audioBaseUrl;
-    const commit = el?.dataset?.commitId
+    const commit = el?.dataset?.commitId;
     if (url?.length) {
       setAudioBaseUrl(url);
       setCommitId(commit);

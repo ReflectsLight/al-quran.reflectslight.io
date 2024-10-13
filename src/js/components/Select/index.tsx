@@ -37,7 +37,12 @@ function Select({ value, children: options, className }: Props) {
             <li
               key={key}
               className={classNames({ hidden: isHidden })}
-              onClick={(e) => [e.stopPropagation(), setOpen(!isOpen)]}
+              onClick={(e) => {
+                e.stopPropagation();
+                const { ref } = n.props;
+                setOpen(!isOpen);
+                ref.current?.click();
+              }}
             >
               {n}
             </li>
