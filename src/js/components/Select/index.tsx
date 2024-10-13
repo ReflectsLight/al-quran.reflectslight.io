@@ -41,7 +41,7 @@ function Select({ value, children: options, className }: Props) {
                 e.stopPropagation();
                 const { ref } = n.props;
                 setOpen(!isOpen);
-                ref.current?.click();
+                ref?.current?.click();
               }}
             >
               {n}
