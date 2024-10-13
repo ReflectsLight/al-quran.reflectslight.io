@@ -4,11 +4,11 @@ root = true
 indent_style = space
 indent_size = 2
 
-[*.rb,*.erb]
+[*.rb, *.erb]
 indent_style = space
 indent_size = 2
 
-[*.js,*.ts,*.tsx]
+[*.js, *.ts, *.tsx]
 indent_style = space
 indent_size = 2
 
