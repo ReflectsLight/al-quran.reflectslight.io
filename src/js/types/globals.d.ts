@@ -8,5 +8,6 @@ declare global {
   const useEffect: typeof hooks.useEffect;
   const useRef: typeof hooks.useRef;
   const useMemo: typeof hooks.useMemo;
+  const createRef: typeof preact.createRef;
   const classNames: typeof classn;
 }
