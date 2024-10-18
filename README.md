@@ -8,7 +8,9 @@ the build directory consists of HTML, CSS, JavaScript
 and other static assets that can be hosted by
 a web server such as nginx, apache, et cetera.
 
-## Requirements
+## Development
+
+### Requirements
 
 The following languages and tools have to be
 installed to build the website from source:
@@ -17,7 +19,7 @@ installed to build the website from source:
 * NodeJS v18.15 (or later)
 * [tidy-html5](https://github.com/htacg/tidy-html5)
 
-## Development
+### Examples
 
     # Clone repository
     git clone https://github.com/ReflectsLight/al-quran.reflectslight.io
