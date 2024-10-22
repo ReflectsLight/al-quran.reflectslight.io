@@ -107,7 +107,7 @@ installed to build the website from source:
 
 * [GitHub](https://github.com/ReflectsLight/al-quran.reflectslight.io)
 * [GitLab](https://gitlab.com/0x1eef/al-quran.reflectslight.io)
-* [brew.bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/al-quran.reflectslight.io)
+* [brew.bsd.cafe/@ReflectsLight](https://brew.bsd.cafe/ReflectsLight/al-quran.reflectslight.io)
 
 ## License
 
