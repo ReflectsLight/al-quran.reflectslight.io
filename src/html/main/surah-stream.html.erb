@@ -21,7 +21,7 @@
   </head>
   <body>
     <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
-    <div class="app mount root"
+    <div class="app mount root w-full h-full"
          data-surah-id="<%= context.surah.id %>"
          data-audio-base-url="<%= audio_base_url %>"
          data-commit-id="<%= commit %>">

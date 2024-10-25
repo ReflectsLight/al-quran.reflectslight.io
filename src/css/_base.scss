@@ -5,6 +5,19 @@
 
 html {
   height: 100%;
+
+  @media (min-height: $breakpoint-lg) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app.mount.root {
+      max-height: $breakpoint-md;
+    }
+  }
+
   body {
     height: 100%;
     margin: 0;

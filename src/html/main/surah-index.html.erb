@@ -21,7 +21,7 @@
   </head>
   <body>
     <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
-    <div class="app mount root h-full"></div>
+    <div class="app mount root w-full h-full"></div>
     <script src="/js/loaders/surah-index-loader.js?v=<%= commit %>"></script>
   </body>
 </html>
