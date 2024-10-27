@@ -2,22 +2,14 @@
 
 * vNEXT
 
-** Add ~favicon.rake~
-The new rake task ~favicon~ can generate the favicon set
-from ~favicon.svg~ in a way that's reproducible and automated.
-
-In the process the favicons have been regenerated, and
-the misalignment that existed in ~favicon.svg~ has been
-fixed
+** Match the look and feel of a book
+The look and feel of the website has changed to be more like
+a book that could fit in the palm of your hand
 
 ** Fix font bug for iOS users
 On modern versions of iOS the "Amiri Quran Regular" font rendered
 as invisible text. This change reverts to the "Amiri Regular" font
 instead, which appears to render without any issues
-
-** Match the look and feel of a book
-The look and feel of the website has changed to be more like
-a book that could fit in the palm of your hand
 
 ** Improve UX on large screens
 On large screens - the content now has a maximum height
@@ -31,9 +23,22 @@ a container that has a larger height and width than the theme
 icon it contains. Along with this change, the theme icons have
 become larger and less circular
 
+** Refactor themes
+The theme implementation has been reduced to a set of colors
+that are applied when the theme is active, and in the process
+the creation of new themes has been made easier
+
 ** Improve ~LanguageSelect.tsx~
 RTL languages have ~Cairo Regular~ applied.
 LTR languages have ~Kanit Regular~ applied
+
+** Add ~favicon.rake~
+The new rake task ~favicon~ can generate the favicon set
+from ~favicon.svg~ in a way that's reproducible and automated.
+
+In the process the favicons have been regenerated, and
+the book misalignment that was present in ~favicon.svg~
+and the other favicons has been fixed
 
 ** Apply Amiri font for Farsi
 Same as Arabic
@@ -43,12 +48,6 @@ The inlined CSS is minified before being inserted into HTML documents
 
 ** Remove KaiOS breakpoints
 There is a separate repository for KaiOS
-
-** Rewrite theme implementation
-The theme implementation has been reduced to a set of colors
-that are applied when the theme is active, and in the process
-we made the creation of new themes easier
-
 
 * v0.10.0
 
