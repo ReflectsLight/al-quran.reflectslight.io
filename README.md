@@ -26,8 +26,8 @@ website's favicons. The favicons generally do not change
 and unless you're working with the favicons directly you
 won't need to install these tools:
 
-* rsgv-convert (via [libsvg2](https://gnome.pages.gitlab.gnome.org/librsvg/Rsvg-2.0/overview.html))
-* convert (via [ImageMagick](https://imagemagick.org/))
+* rsgv-convert via [libsvg2](https://gnome.pages.gitlab.gnome.org/librsvg/Rsvg-2.0/overview.html)
+* convert via [ImageMagick](https://imagemagick.org/)
 
 ### Examples
 
