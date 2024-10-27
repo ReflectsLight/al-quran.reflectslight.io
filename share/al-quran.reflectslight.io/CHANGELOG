@@ -10,51 +10,38 @@ In the process the favicons have been regenerated, and
 the misalignment that existed in ~favicon.svg~ has been
 fixed
 
-** Large screen optimization
-On large screens - the content now has a maximum height
-of ~$breakpoint-md~, and the content is both vertically
-and horiztonally aligned. At 2560x1080 the appearance is
-similar to a book on a large blank space
-
-** Revisit ~ThemeSelect.tsx~ for touch devices
-On touch devices it is now easier to change themes thanks to
-a container that has a larger height and width than the theme
-icon it contains. Along with this change, the theme icons have
-become larger and less circular
-
-** Reduce default width
-The look and feel of the website has changed to be more like
-a book that could fit in the palm of your hand
-
-** Add src/images/albumcover-600x600.jpg
-A copy of the album art that has been embedded as metadata
-in the MP3 files served from audio.al-quran.reflectslight.io
-
-** Apply Amiri font for Farsi
-Similar to Arabic - apply the Amiri Regular font for the content
-of a surah. With this change the distinction is more so between a
-RTL language vs a LTR language rather than between Arabic vs English
-vs Farsi
-
-** Render ~LanguageSelect.tsx~ items in an optimal font
-RTL languages have ~Cairo Regular~ applied.
-LTR languages have ~Kanit Regular~ applied
-
-** Fix the render of Amiri font on iOS
+** Fix font bug for iOS users
 On modern versions of iOS the "Amiri Quran Regular" font rendered
 as invisible text. This change reverts to the "Amiri Regular" font
 instead, which appears to render without any issues
 
-** Download fonts based on language direction
-RTL and LTR languages use a different set of fonts, and before this
-change we would download all fonts regardless of whether the font
-would be used or not
+** Match the look and feel of a book
+The look and feel of the website has changed to be more like
+a book that could fit in the palm of your hand
+
+** Improve UX on large screens
+On large screens - the content now has a maximum height
+of ~$breakpoint-md~, and the content is both vertically
+and horiztonally centered. At 2560x1080 the appearance is
+similar to a book on a large blank space
+
+** Improve UX on touch screens
+On touch screens it is now easier to change themes thanks to
+a container that has a larger height and width than the theme
+icon it contains. Along with this change, the theme icons have
+become larger and less circular
+
+** Apply Amiri font for Farsi
+Same as Arabic
+** Optimize ~LanguageSelect.tsx~ fonts
+RTL languages have ~Cairo Regular~ applied.
+LTR languages have ~Kanit Regular~ applied
 
 ** Optimize inline of ~postman.css~
 The inlined CSS is minified before being inserted into HTML documents
 
 ** Remove KaiOS breakpoints
-There is a separate branch (~kaios/main~) for KaiOS support
+There is a separate repository for KaiOS
 
 ** Rewrite theme implementation
 The theme implementation has been reduced to a set of colors
