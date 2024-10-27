@@ -2,6 +2,14 @@
 
 * vNEXT
 
+** Add ~favicon.rake~
+The new rake task ~favicon~ can generate the favicon set
+from ~favicon.svg~ in a way that's reproducible and automated.
+
+In the process the favicons have been regenerated, and
+the misalignment that existed in ~favicon.svg~ has been
+fixed
+
 ** Large screen optimization
 On large screens - the content now has a maximum height
 of ~$breakpoint-md~, and the content is both vertically
