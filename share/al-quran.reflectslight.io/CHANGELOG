@@ -31,11 +31,12 @@ a container that has a larger height and width than the theme
 icon it contains. Along with this change, the theme icons have
 become larger and less circular
 
-** Apply Amiri font for Farsi
-Same as Arabic
-** Optimize ~LanguageSelect.tsx~ fonts
+** Improve ~LanguageSelect.tsx~
 RTL languages have ~Cairo Regular~ applied.
 LTR languages have ~Kanit Regular~ applied
+
+** Apply Amiri font for Farsi
+Same as Arabic
 
 ** Optimize inline of ~postman.css~
 The inlined CSS is minified before being inserted into HTML documents
