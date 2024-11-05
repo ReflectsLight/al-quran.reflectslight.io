@@ -4,7 +4,7 @@
 
 ** Deliver audio with the help of a load balancer
 Audio content is delivered with the help of a load balancer
-that directs the user to the nearest S3 bucket
+that directs a user to the nearest S3 bucket
 
 ** Match the look and feel of a book
 The look and feel of the website has changed to be more like
