@@ -123,8 +123,8 @@ won't need to install these tools:
 
 ## Sources
 
-* [GitHub](https://github.com/ReflectsLight/al-quran.reflectslight.io)
-* [GitLab](https://gitlab.com/ReflectsLight/al-quran.reflectslight.io)
+* [github.com/@ReflectsLight](https://github.com/ReflectsLight/al-quran.reflectslight.io)
+* [gitlab.com/@ReflectsLight](https://gitlab.com/ReflectsLight/al-quran.reflectslight.io)
 * [brew.bsd.cafe/@ReflectsLight](https://brew.bsd.cafe/ReflectsLight/al-quran.reflectslight.io)
 
 ## License
