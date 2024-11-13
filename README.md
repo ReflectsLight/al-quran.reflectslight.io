@@ -1,3 +1,7 @@
+<p align="center">
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+</p>
+
 ## About
 
 This repository contains the source code of
@@ -96,22 +100,26 @@ won't need to install these tools:
   are hosted by https://al-quran-audio.reflectslight.io
   instead.
 
-## Thanks
+## Credit
 
-الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+**Translations**
 
-* Thanks to the graphic artists:
-    - [RefreshIcon](/src/js/components/Icon.tsx)
-      by
-      [Muhammad Haq](https://freeicons.io/profile/823)
-* Thanks to the translators:
-    - English (The Clear Quran) by Dr. Mustafa Khattab
-    - Farsi by Hussain Ansarian
-* Thanks to the reciters:
-    - Mishari bin Rashed Alafasy
-    - Ahmad bin Ali Al-Ajmi
-    - Sahl Yassin
-    - Hani ar-Rifai
+* English (The Clear Quran) by Dr. Mustafa Khattab
+* Farsi by Hussain Ansarian
+
+**Recitations**
+
+* Mishari bin Rashed Alafasy
+* Ahmad bin Ali Al-Ajmi
+* Sahl Yassin
+* Hani ar-Rifai
+
+**Misc**
+
+* Credit to the graphic artists:
+  * [RefreshIcon](/src/js/components/Icon.tsx)
+  by
+  [Muhammad Haq](https://freeicons.io/profile/823)
 
 ## Sources
 
