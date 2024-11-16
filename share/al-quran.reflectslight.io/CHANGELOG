@@ -2,9 +2,9 @@
 
 * vNEXT
 
-** Deliver audio with the help of a load balancer
-Audio content is delivered with the help of a load balancer
-that directs a user to the nearest S3 bucket
+** Deliver audio via bunny.net
+The audio content is now delivered via bunny.net, a CDN and
+storage provider
 
 ** Match the look and feel of a book
 The look and feel of the website has changed to be more like

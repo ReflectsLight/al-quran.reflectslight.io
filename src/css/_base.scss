@@ -6,7 +6,7 @@
 html {
   height: 100%;
 
-  @media (min-height: $breakpoint-lg) {
+  @media (min-height: $breakpoint-md) {
     body {
       display: flex;
       justify-content: center;
