@@ -118,6 +118,10 @@ instead.
   by
   [Muhammad Haq](https://freeicons.io/profile/823)
 
+## See also
+
+* [al-quran.KaiOS](https://github.com/ReflectsLight/al-quran.KaiOS#readme)
+
 ## Sources
 
 * [github.com/@ReflectsLight](https://github.com/ReflectsLight/al-quran.reflectslight.io)
