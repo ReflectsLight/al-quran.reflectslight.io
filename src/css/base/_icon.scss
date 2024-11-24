@@ -44,13 +44,24 @@
     cursor: pointer;
   }
 
-  .play.icon,
-  .pause.icon {
-    height: 16px;
-    width: 16px;
-    @media (min-width: $breakpoint-xxl) {
-      height: 20px;
-      width: 20px;
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.25rem;
+    width: 1.25rem;
+
+    .play.icon {
+      height: 1rem;
+      width: 1rem;
+    }
+
+    .pause.icon {
+      height: 1.25rem;
+      width: 1.25rem;
+      g {
+        fill: var(--primary-color);
+      }
     }
   }
 
@@ -58,42 +69,28 @@
   .right-arrow.icon,
   .left-arrow.icon {
     fill: var(--primary-color);
-    height: 16px;
-    width: 16px;
+    height: 1rem;
+    width: 1rem;
   }
-
   .left-arrow.icon {
     transform: rotate(180deg);
   }
 
-  .pause.icon {
-    g rect {
-      width: 15px;
-      height: 40px;
-      fill: var(--primary-color);
-    }
-  }
 
   ul.body.stream span {
     .sound-on.icon,
     .sound-off.icon {
-      width: 24px;
-      height: 24px;
-      transform: translateY(5px);
+      transform: translateY(2px);
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 
   footer {
     .sound-on.icon,
     .sound-off.icon {
-      transform: translateY(5px);
-      width: 24px;
-      height: 24px;
-
-      @media(min-width: $breakpoint-xxl) {
-        height: 28px;
-        width: 28px;
-      }
+      width: 1.8rem;
+      height: 1.8rem;
     }
   }
 }
@@ -107,14 +104,14 @@
   ul.body.stream {
     li.ayah .sound-on.icon,
     li.ayah .sound-off.icon {
-      transform: rotate(180deg) translateY(3px);
+      transform: rotate(180deg);
     }
   }
 
   footer {
     .sound-on.icon,
     .sound-off.icon {
-      transform: rotate(180deg) translateY(5px);
+      transform: rotate(180deg);
     }
     .play.icon {
       transform: rotate(180deg);

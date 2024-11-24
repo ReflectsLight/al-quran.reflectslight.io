@@ -1,5 +1,11 @@
 # -*- mode: org -*-
 
+* vNEXT
+
+** Replace Play/Pause icons
+The icons from the native KaiOS application replace the previous
+set of icons
+
 * v0.10.1
 
 ** Deliver audio via bunny.net
