@@ -1,6 +1,6 @@
 # -*- mode: org -*-
 
-* vNEXT
+* v0.10.1
 
 ** Deliver audio via bunny.net
 The audio content is now delivered via bunny.net, a CDN and
