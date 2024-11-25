@@ -12,7 +12,7 @@ type Props = {
 
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
-  const index = useMemo<Surah[]>(() => surahs,[surahs.length]);
+  const index = useMemo<Surah[]>(() => surahs, [surahs.length]);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         <a
           className="flex flex-row items-center color-black no-underline"
           href={`/${locale.name}/random/`}
-          >
+        >
           {t(locale, "ChooseRandomChapter")}
         </a>
       </footer>
