@@ -74,21 +74,15 @@ export function SurahStream({ surah, locale, t }: Props) {
         {!endOfStream && !isPaused && (
           <PauseIcon onClick={() => setIsPaused(true)} />
         )}
-        <span
-          className={classNames("sound-box flex flex-col items-end w-16", {
-            hidden: endOfStream,
-          })}
-        >
-          <AudioControl
-            audio={audio}
-            surah={surah}
-            ayah={ayah}
-            hidden={endOfStream}
-            onStatusChange={(status) => {
-              setAudioStatus(status);
-            }}
-          />
-        </span>
+        <AudioControl
+          audio={audio}
+          surah={surah}
+          ayah={ayah}
+          hidden={endOfStream}
+          onStatusChange={(status) => {
+            setAudioStatus(status);
+          }}
+        />
         <span
           className={classNames({
             hidden: endOfStream || audioStatus === "wait",

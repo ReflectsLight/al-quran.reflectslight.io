@@ -44,6 +44,7 @@ export function Stream({
             >
               <span className="flex h-8 items-center color-primary">
                 <AudioControl
+                  className="mr-2"
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}
                   surah={surah}

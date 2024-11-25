@@ -9,6 +9,7 @@ type Props = {
   audio: HTMLAudioElement;
   surah: Surah;
   ayah: Maybe<Ayah>;
+  className?: string;
   hidden?: boolean;
   onStatusChange?: (s: TAudioStatus, fns: TChangeFuncs) => void;
 };
@@ -17,6 +18,7 @@ export function AudioControl({
   audio,
   surah,
   ayah,
+  className = "",
   hidden = false,
   onStatusChange = () => null,
 }: Props) {
@@ -93,10 +95,16 @@ export function AudioControl({
   return (
     <>
       {enabled && (
-        <SoundOnIcon onClick={() => [setEnabled(false), pause(audio)]} />
+        <SoundOnIcon
+          className={className}
+          onClick={() => [setEnabled(false), pause(audio)]}
+        />
       )}
       {!enabled && (
-        <SoundOffIcon onClick={() => [setEnabled(true), play(audio)]} />
+        <SoundOffIcon
+          className={className}
+          onClick={() => [setEnabled(true), play(audio)]}
+        />
       )}
     </>
   );

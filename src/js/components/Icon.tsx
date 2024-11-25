@@ -1,10 +1,11 @@
 type Props = {
   onClick: () => void;
+  className?: string;
 };
 
 export function PlayIcon({ onClick }: Props) {
   return (
-    <span className="controls">
+    <span onClick={onClick} className="controls">
       <svg
         version="1.1"
         id="Capa_1"
@@ -45,14 +46,13 @@ export function PlayIcon({ onClick }: Props) {
 
 export function PauseIcon({ onClick }: Props) {
   return (
-    <span className="controls">
+    <span onClick={onClick} className="controls">
       <svg
         height="512"
         className="pause icon"
         viewBox="0 0 32 32"
         width="512"
         xmlns="http://www.w3.org/2000/svg"
-        onClick={onClick}
       >
         <g id="Layer_33" data-name="Layer 33">
           <path d="m14 5v22a3 3 0 0 1 -3 3h-3a3 3 0 0 1 -3-3v-22a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3zm10-3h-3a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3z" />
@@ -62,12 +62,12 @@ export function PauseIcon({ onClick }: Props) {
   );
 }
 
-export function SoundOnIcon({ onClick }: Props) {
+export function SoundOnIcon({ onClick, className }: Props) {
   return (
     <svg
-      viewBox="-20 -15 100 100"
+      viewBox="0 0 60 60"
       preserveAspectRatio="xMidYMid meet"
-      className="sound-on icon"
+      className={classNames("sound-on icon", className)}
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
     >
@@ -98,12 +98,12 @@ export function SoundOnIcon({ onClick }: Props) {
   );
 }
 
-export function SoundOffIcon({ onClick }: Props) {
+export function SoundOffIcon({ onClick, className }: Props) {
   return (
     <svg
-      viewBox="-20 -15 100 100"
+      viewBox="0 0 60 60"
       preserveAspectRatio="xMidYMid meet"
-      className="sound-off icon"
+      className={classNames("sound-off icon", className)}
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
     >
