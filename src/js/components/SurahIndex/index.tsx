@@ -1,9 +1,7 @@
 import type { Surah, TLocale } from "Quran";
 import { useTheme } from "~/hooks/useTheme";
 import { formatNumber, TFunction } from "~/lib/t";
-import { Arrow } from "~/components/Icon";
 import { Head } from "~/components/Head";
-import { Filter } from "./Filter";
 import "@css/main/SurahIndex.scss";
 
 type Props = {
@@ -14,7 +12,7 @@ type Props = {
 
 export function SurahIndex({ locale, surahs, t }: Props) {
   const [theme, setTheme] = useTheme();
-  const [index, setIndex] = useState<Surah[]>(surahs);
+  const index = useMemo<Surah[]>(() => surahs,[surahs.length]);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -80,26 +78,13 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           </li>
         ))}
       </ul>
-      <footer className="flex flex-row justify-between mb-5 h-12 text-lg">
+      <footer className="flex flex-row justify-center mb-5 h-12 text-lg">
         <a
           className="flex flex-row items-center color-black no-underline"
           href={`/${locale.name}/random/`}
-        >
-          {locale.direction === "ltr" ? (
-            <Arrow direction="right" />
-          ) : (
-            <Arrow direction="left" />
-          )}
-          <span
-            className={classNames({
-              "pl-3": locale.direction === "ltr",
-              "pr-3": locale.direction === "rtl",
-            })}
           >
-            {t(locale, "ChooseRandomChapter")}
-          </span>
+          {t(locale, "ChooseRandomChapter")}
         </a>
-        <Filter t={t} locale={locale} surahs={surahs} setIndex={setIndex} />
       </footer>
     </div>
   );
