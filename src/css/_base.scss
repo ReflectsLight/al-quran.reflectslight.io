@@ -14,7 +14,7 @@ html {
     }
   }
 
-  @media (min-height: $breakpoint-md) {
+  @media (height >= $breakpoint-md) {
     body {
       display: flex;
       justify-content: center;
@@ -76,8 +76,7 @@ body .root .content.theme {
   width: 100%;
   color: var(--color-accent);
 
-  /* <= $breakpoint-sm */
-  @media (max-width: $breakpoint-sm) {
+  @media (width <= $breakpoint-sm) {
     width: 85%;
   }
 
