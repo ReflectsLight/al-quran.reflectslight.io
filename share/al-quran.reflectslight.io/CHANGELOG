@@ -2,6 +2,10 @@
 
 * vNEXT
 
+** Remove unneccessary gzip compression
+The builtin gzip compression provided by nanoc-gzip.rb is no longer
+neccessary thanks to the compression provided by bunny.net
+
 ** Remove ~/src/json/durations/*.json~
 Related to the previous commit, the ~index.json~ file now contains
 the duration of each ayah

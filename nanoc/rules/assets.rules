@@ -8,16 +8,12 @@
 # fonts
 compile "/fonts/*" do
   write(item.identifier.to_s)
-  filter :gzip
-  write("#{item.identifier}.gz")
 end
 
 ##
 # images
 compile "/images/*.svg" do
   write(item.identifier.to_s)
-  filter :gzip
-  write("#{item.identifier}.gz")
 end
 
 compile "/images/*.png" do
