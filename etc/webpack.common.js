@@ -31,10 +31,18 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [require("postcss-media-minmax")()],
+              },
+            },
+          },
           "sass-loader",
-        ]
-      }
+        ],
+      },
     ],
   },
-  plugins: []
+  plugins: [],
 };
