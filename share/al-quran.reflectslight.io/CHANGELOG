@@ -2,7 +2,12 @@
 
 * vNEXT
 
-** Replace Play/Pause icons
+** Set custom zoom (0.8) on low resolution laptops
+The website is now zoomed out by default on low resolution laptops.
+My primary laptop has a resolution of 1366x768, and it was the driving
+force behind this change
+
+** Replace ~PlayIcon~ / ~PauseIcon~
 The icons from the native KaiOS application replace the previous
 set of icons
 

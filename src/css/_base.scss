@@ -6,6 +6,14 @@
 html {
   height: 100%;
 
+  @media (width <= 1366px) and
+         (height <= 768px) and
+         (resolution <= 1dppx) {
+    body {
+      zoom: 0.8;
+    }
+  }
+
   @media (min-height: $breakpoint-md) {
     body {
       display: flex;
