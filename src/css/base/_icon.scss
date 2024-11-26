@@ -80,7 +80,6 @@
   ul.body.stream span {
     .sound-on.icon,
     .sound-off.icon {
-      transform: translateY(2px);
       width: 1rem;
       height: 1rem;
     }
@@ -89,8 +88,8 @@
   footer {
     .sound-on.icon,
     .sound-off.icon {
-      width: 1.15rem;
-      height: 1.15rem;
+      width: 1.10rem;
+      height: 1.10rem;
     }
   }
 }
