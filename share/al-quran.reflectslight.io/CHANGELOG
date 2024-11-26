@@ -2,14 +2,23 @@
 
 * vNEXT
 
+** Remove ~/src/json/durations/*.json~
+Related to the previous commit, the ~index.json~ file now contains
+the duration of each ayah
+
+** Consolidate ~{info,surah,duration}.json~ into index.json
+The ~{info,surah,duration}.json~ files have been consolidated into
+a single file: index.json. This change reduces the number of requests
+mad by the surah-stream.html.erb page
+
 ** Set custom zoom (0.8) on low resolution laptops
 The website is now zoomed out by default on low resolution laptops.
 My primary laptop has a resolution of 1366x768, and it was the driving
 force behind this change
 
-** Replace ~PlayIcon~ / ~PauseIcon~
-The icons from the native KaiOS application replace the previous
-set of icons
+** Add new icons
+The play & pause icons from the native KaiOS application replace the
+previous set of icons
 
 * v0.10.1
 

@@ -1,0 +1,36 @@
+{
+  "id": 103,
+  "name": "The Declining Day",
+  "numberOfAyah": 3,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-asr",
+  "translitName": "Al-'Asr",
+  "durations": [
+    [
+      1,
+      1.8
+    ],
+    [
+      2,
+      5.83
+    ],
+    [
+      3,
+      12.56
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "By the ˹passage of˺ time!"
+    ],
+    [
+      2,
+      "Surely humanity is in ˹grave˺ loss,"
+    ],
+    [
+      3,
+      "except those who have faith, do good, and urge each other to the truth, and urge each other to perseverance."
+    ]
+  ]
+}

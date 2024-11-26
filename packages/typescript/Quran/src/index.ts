@@ -21,6 +21,8 @@ type TSurah = {
   readonly translitName: string;
   readonly numberOfAyah: number;
   readonly translatedBy: string | null;
+  readonly durations?: [number, number][];
+  readonly ayat?: [number, string][];
 };
 
 type TAyah = {
@@ -58,8 +60,8 @@ class Surah {
   readonly urlName: string;
   readonly translitName: string;
   readonly numberOfAyah: number;
-  readonly ayat: TAyat;
   readonly translatedBy: string | null;
+  readonly ayat: Ayah[];
 
   constructor(self: TSurah) {
     this.id = self.id;
@@ -67,8 +69,13 @@ class Surah {
     this.urlName = self.urlName;
     this.translitName = self.translitName;
     this.numberOfAyah = self.numberOfAyah;
-    this.ayat = [];
     this.translatedBy = self.translatedBy;
+    this.ayat = (self.ayat || []).map((ayah,i) => (
+      {
+        ...new Ayah({id: ayah[0], body: ayah[1]}),
+        ms: self.durations ? self.durations[i][1] * 1000 : 0
+      }
+    ));
     return this;
   }
 }

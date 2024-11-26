@@ -1,0 +1,68 @@
+{
+  "id": 1,
+  "name": "The Opener",
+  "numberOfAyah": 7,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-fatihah",
+  "translitName": "Al-Fatihah",
+  "durations": [
+    [
+      1,
+      6.11
+    ],
+    [
+      2,
+      5.62
+    ],
+    [
+      3,
+      4.65
+    ],
+    [
+      4,
+      4.68
+    ],
+    [
+      5,
+      6.74
+    ],
+    [
+      6,
+      5.62
+    ],
+    [
+      7,
+      13.27
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "In the Name of Allah—the Most Compassionate, Most Merciful."
+    ],
+    [
+      2,
+      "All praise is for Allah—Lord of all worlds,"
+    ],
+    [
+      3,
+      "the Most Compassionate, Most Merciful,"
+    ],
+    [
+      4,
+      "Master of the Day of Judgment."
+    ],
+    [
+      5,
+      "You ˹alone˺ we worship and You ˹alone˺ we ask for help."
+    ],
+    [
+      6,
+      "Guide us along the Straight Path,"
+    ],
+    [
+      7,
+      "the Path of those You have blessed—not those You are displeased with, or those who are astray. "
+    ]
+  ]
+}

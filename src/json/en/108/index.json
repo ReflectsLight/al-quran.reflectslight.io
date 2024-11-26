@@ -1,0 +1,36 @@
+{
+  "id": 108,
+  "name": "The Abundance",
+  "numberOfAyah": 3,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-kawthar",
+  "translitName": "Al-Kawthar",
+  "durations": [
+    [
+      1,
+      6.74
+    ],
+    [
+      2,
+      3.58
+    ],
+    [
+      3,
+      5.28
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "Indeed, We have granted you ˹O Prophet˺ abundant goodness."
+    ],
+    [
+      2,
+      "So pray and sacrifice to your Lord ˹alone˺."
+    ],
+    [
+      3,
+      "Only the one who hates you is truly cut off ˹from any goodness˺."
+    ]
+  ]
+}

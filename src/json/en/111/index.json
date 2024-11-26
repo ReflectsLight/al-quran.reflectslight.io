@@ -1,0 +1,52 @@
+{
+  "id": 111,
+  "name": "The Palm Fiber",
+  "numberOfAyah": 5,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-masad",
+  "translitName": "Al-Masad",
+  "durations": [
+    [
+      1,
+      7.42
+    ],
+    [
+      2,
+      7.18
+    ],
+    [
+      3,
+      5.2
+    ],
+    [
+      4,
+      5.62
+    ],
+    [
+      5,
+      6.48
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "May the hands of Abu Lahab perish, and he ˹himself˺ perish!"
+    ],
+    [
+      2,
+      "Neither his wealth nor ˹worldly˺ gains will benefit him."
+    ],
+    [
+      3,
+      "He will burn in a flaming Fire,"
+    ],
+    [
+      4,
+      "and ˹so will˺ his wife, the carrier of ˹thorny˺ kindling,"
+    ],
+    [
+      5,
+      "around her neck will be a rope of palm-fibre."
+    ]
+  ]
+}

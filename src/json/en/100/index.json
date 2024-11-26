@@ -1,0 +1,100 @@
+{
+  "id": 100,
+  "name": "The Courser",
+  "numberOfAyah": 11,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-adiyat",
+  "translitName": "Al-'Adiyat",
+  "durations": [
+    [
+      1,
+      3.32
+    ],
+    [
+      2,
+      3.29
+    ],
+    [
+      3,
+      3.11
+    ],
+    [
+      4,
+      3.11
+    ],
+    [
+      5,
+      3.34
+    ],
+    [
+      6,
+      7.71
+    ],
+    [
+      7,
+      6.79
+    ],
+    [
+      8,
+      7.13
+    ],
+    [
+      9,
+      7.13
+    ],
+    [
+      10,
+      4.91
+    ],
+    [
+      11,
+      10.58
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "’ By the galloping, panting horses,"
+    ],
+    [
+      2,
+      "striking sparks of fire ˹with their hoofs˺,"
+    ],
+    [
+      3,
+      "launching raids at dawn,"
+    ],
+    [
+      4,
+      "stirring up ˹clouds of˺ dust,"
+    ],
+    [
+      5,
+      "and penetrating into the heart of enemy lines!"
+    ],
+    [
+      6,
+      "Surely humankind is ungrateful to their Lord—"
+    ],
+    [
+      7,
+      "and they certainly attest to this—"
+    ],
+    [
+      8,
+      "and they are truly extreme in their love of ˹worldly˺ gains."
+    ],
+    [
+      9,
+      "Do they not know that when the contents of the graves will be spilled out,"
+    ],
+    [
+      10,
+      "and the secrets of the hearts will be laid bare—"
+    ],
+    [
+      11,
+      "surely their Lord is All-Aware of them on that Day."
+    ]
+  ]
+}

@@ -2,11 +2,11 @@ import postman, { item } from "postman";
 import { formatNumber } from "~/lib/t";
 
 (async function () {
-  const docel = document.documentElement;
-  const main = docel.querySelector(".postman.main")!;
-  const css = docel.querySelector(".postman.css")!;
-  const { surahId } = docel.querySelector<HTMLElement>(".app.mount")!.dataset;
-  const rev = docel
+  const doc = document.documentElement;
+  const main = doc.querySelector(".postman.main")!;
+  const css = doc.querySelector(".postman.css")!;
+  const { surahId } = doc.querySelector<HTMLElement>(".app.mount")!.dataset;
+  const rev = doc
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
   const fonts = (() => {
@@ -14,7 +14,7 @@ import { formatNumber } from "~/lib/t";
       item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
       item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
     ];
-    if (docel.dir === "rtl") {
+    if (doc.dir === "rtl") {
       f.push(item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"));
       f.push(item.font("Amiri Regular", "url(/fonts/amiri-regular.ttf)"));
     }
@@ -25,16 +25,14 @@ import { formatNumber } from "~/lib/t";
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-stream.js?v=${rev}`, { id: "1" }),
     ...fonts,
-    /* eslint-disable */
-    item.json(`/json/${docel.lang}/${surahId}/info.json?v=${rev}`, { className: "json surahinfo" }),
-    item.json(`/json/${docel.lang}/${surahId}/surah.json?v=${rev}`, { className: "json surah" }),
-    item.json(`/json/durations/${surahId}.json?v=${rev}`, { className: "json durations" }),
-    /* eslint-enable */
+    item.json(`/json/${doc.lang}/${surahId}/index.json?v=${rev}`, {
+      className: "json surah",
+    }),
     item.progress((percent: number) => {
       const bar = main.querySelector("progress")!;
       const num: HTMLSpanElement = main.querySelector(".percentage")!;
       bar.value = percent;
-      num.innerText = formatNumber(docel.lang, Number(percent.toFixed(0)));
+      num.innerText = formatNumber(doc.lang, Number(percent.toFixed(0)));
     }),
   ).deliver();
   [main, css].forEach((el) => el.remove());

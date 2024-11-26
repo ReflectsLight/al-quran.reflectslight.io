@@ -1,0 +1,60 @@
+{
+  "id": 109,
+  "name": "The Disbelievers",
+  "numberOfAyah": 6,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "al-kafirun",
+  "translitName": "Al-Kafirun",
+  "durations": [
+    [
+      1,
+      7.55
+    ],
+    [
+      2,
+      7.47
+    ],
+    [
+      3,
+      8.25
+    ],
+    [
+      4,
+      6.69
+    ],
+    [
+      5,
+      8.46
+    ],
+    [
+      6,
+      6.27
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "Say, ˹O Prophet,˺ “O you disbelievers!"
+    ],
+    [
+      2,
+      "I do not worship what you worship,"
+    ],
+    [
+      3,
+      "nor do you worship what I worship."
+    ],
+    [
+      4,
+      "I will never worship what you worship,"
+    ],
+    [
+      5,
+      "nor will you ever worship what I worship."
+    ],
+    [
+      6,
+      "You have your way, and I have my Way.”"
+    ]
+  ]
+}

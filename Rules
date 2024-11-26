@@ -49,7 +49,6 @@ end
 
 ##
 # Rules
-passthrough "/json/durations/*.json"
 require_rules "nanoc/rules/assets", globals
 require_rules "nanoc/rules/redirect", globals
 require_rules "nanoc/rules/random", globals

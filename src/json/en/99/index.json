@@ -1,0 +1,76 @@
+{
+  "id": 99,
+  "name": "The Earthquake",
+  "numberOfAyah": 8,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "az-zalzalah",
+  "translitName": "Az-Zalzalah",
+  "durations": [
+    [
+      1,
+      4.81
+    ],
+    [
+      2,
+      4.52
+    ],
+    [
+      3,
+      5.09
+    ],
+    [
+      4,
+      5.43
+    ],
+    [
+      5,
+      4.88
+    ],
+    [
+      6,
+      8.7
+    ],
+    [
+      7,
+      7.13
+    ],
+    [
+      8,
+      9.56
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "When the earth is shaken ˹in˺ its ultimate quaking,"
+    ],
+    [
+      2,
+      "and when the earth throws out ˹all˺ its contents,"
+    ],
+    [
+      3,
+      "and humanity cries, “What is wrong with it?”—"
+    ],
+    [
+      4,
+      "on that Day the earth will recount everything,"
+    ],
+    [
+      5,
+      "having been inspired by your Lord ˹to do so˺."
+    ],
+    [
+      6,
+      "On that Day people will proceed in separate groups to be shown ˹the consequences of˺ their deeds."
+    ],
+    [
+      7,
+      "So whoever does an atom’s weight of good will see it."
+    ],
+    [
+      8,
+      "And whoever does an atom’s weight of evil will see it."
+    ]
+  ]
+}

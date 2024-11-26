@@ -1,0 +1,100 @@
+{
+  "id": 93,
+  "name": "The Morning Hours",
+  "numberOfAyah": 11,
+  "translatedBy": "Dr. Mustafa Khattab",
+  "urlName": "ad-duhaa",
+  "translitName": "Ad-Duhaa",
+  "durations": [
+    [
+      1,
+      1.88
+    ],
+    [
+      2,
+      3.06
+    ],
+    [
+      3,
+      4.44
+    ],
+    [
+      4,
+      5.2
+    ],
+    [
+      5,
+      5.04
+    ],
+    [
+      6,
+      5.25
+    ],
+    [
+      7,
+      7.13
+    ],
+    [
+      8,
+      6.14
+    ],
+    [
+      9,
+      4.94
+    ],
+    [
+      10,
+      6.27
+    ],
+    [
+      11,
+      5.9
+    ]
+  ],
+  "ayat": [
+    [
+      1,
+      "By the morning sunlight,"
+    ],
+    [
+      2,
+      "and the night when it falls still!"
+    ],
+    [
+      3,
+      "Your Lord ˹O Prophet˺ has not abandoned you, nor has He become hateful ˹of you˺."
+    ],
+    [
+      4,
+      "And the next life is certainly far better for you than this one."
+    ],
+    [
+      5,
+      "And ˹surely˺ your Lord will give so much to you that you will be pleased."
+    ],
+    [
+      6,
+      "Did He not find you as an orphan then sheltered you?"
+    ],
+    [
+      7,
+      "Did He not find you unguided then guided you?"
+    ],
+    [
+      8,
+      "And did He not find you needy then satisfied your needs?"
+    ],
+    [
+      9,
+      "So do not oppress the orphan,"
+    ],
+    [
+      10,
+      "nor repulse the beggar."
+    ],
+    [
+      11,
+      "And proclaim the blessings of your Lord."
+    ]
+  ]
+}
