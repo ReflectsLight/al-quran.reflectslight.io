@@ -39,7 +39,7 @@ compile "/js/main/surah-stream.tsx" do
   write "/js/main/surah-stream.js"
 end
 
-compile "/js/loaders/SurahStreamLoader.ts" do
+compile "/js/loaders/surah-stream-loader.ts" do
   filter :webpack,
          argv: %W[--config etc/webpack.#{buildenv}.js]
   write "/js/loaders/surah-stream-loader.js"
