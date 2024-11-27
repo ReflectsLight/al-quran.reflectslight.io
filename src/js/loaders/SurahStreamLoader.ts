@@ -9,22 +9,20 @@ import { formatNumber } from "~/lib/t";
   const rev = doc
     .querySelector("meta[name='revision']")!
     .getAttribute("content")!;
-  const fonts = (() => {
-    const f = [
+
+  function getFonts() {
+    return [
       item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
       item.font("Kanit Regular", "url(/fonts/kanit-regular.ttf)"),
-    ];
-    if (doc.dir === "rtl") {
-      f.push(item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)"));
-      f.push(item.font("Amiri Regular", "url(/fonts/amiri-regular.ttf)"));
-    }
-    return f;
-  })();
+      doc.dir === "rtl" ? item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)") : null,
+      doc.dir === "rtl" ? item.font("Amiri Regular", "url(/fonts/amiri-regular.ttf)") : null,
+    ].filter((i) => !!i);
+  }
 
   const parcel = await postman(
     item.script(`/js/main/vendor.js?v=${rev}`, { id: "0" }),
     item.script(`/js/main/surah-stream.js?v=${rev}`, { id: "1" }),
-    ...fonts,
+    ...getFonts(),
     item.json(`/json/${doc.lang}/${surahId}/index.json?v=${rev}`, {
       className: "json surah",
     }),
