@@ -17,11 +17,7 @@ export function T(phrases: PhraseMap<string>): TFunction {
   };
 }
 
-export function formatNumber(
-  locale: TLocale | string,
-  num: number,
-  options = {},
-): string {
+export function formatNumber(locale: TLocale | string, num: number, options = {}): string {
   const name = (() => {
     if (typeof locale === "string") {
       return locale;

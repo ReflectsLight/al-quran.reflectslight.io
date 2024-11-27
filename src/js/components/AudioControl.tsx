@@ -34,17 +34,13 @@ export function AudioControl({
       return;
     }
     if (enabled) {
-      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3?v=${commitId}`].join(
-        "/",
-      );
+      audio.src = [audioBaseUrl, surah.id, `${ayah.id}.mp3?v=${commitId}`].join("/");
       play(audio);
     }
   }, [hidden, enabled, ayah?.id, audioBaseUrl]);
 
   useEffect(() => {
-    const el: HTMLDivElement | null = document.querySelector(
-      "[data-audio-base-url]",
-    );
+    const el: HTMLDivElement | null = document.querySelector("[data-audio-base-url]");
     const url = el?.dataset?.audioBaseUrl;
     const commit = el?.dataset?.commitId;
     if (url?.length) {
@@ -81,10 +77,7 @@ export function AudioControl({
 
   useEffect(() => {
     if (audioStatus) {
-      onStatusChange(audioStatus, [
-        () => setEnabled(true),
-        () => setEnabled(false),
-      ]);
+      onStatusChange(audioStatus, [() => setEnabled(true), () => setEnabled(false)]);
     }
   }, [audioStatus]);
 
@@ -95,16 +88,10 @@ export function AudioControl({
   return (
     <>
       {enabled && (
-        <SoundOnIcon
-          className={className}
-          onClick={() => [setEnabled(false), pause(audio)]}
-        />
+        <SoundOnIcon className={className} onClick={() => [setEnabled(false), pause(audio)]} />
       )}
       {!enabled && (
-        <SoundOffIcon
-          className={className}
-          onClick={() => [setEnabled(true), play(audio)]}
-        />
+        <SoundOffIcon className={className} onClick={() => [setEnabled(true), play(audio)]} />
       )}
     </>
   );

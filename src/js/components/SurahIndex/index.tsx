@@ -68,8 +68,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
                       {surah.translitName}
                     </span>
                     <span className="ayat flex justify-end text-sm">
-                      {formatNumber(locale, surah.numberOfAyah)}{" "}
-                      {t(locale, "ayat")}
+                      {formatNumber(locale, surah.numberOfAyah)} {t(locale, "ayat")}
                     </span>
                   </div>
                 </div>

@@ -24,12 +24,7 @@ function Select({ value, children: options, className }: Props) {
   }, [value]);
 
   return (
-    <div
-      className={classNames(
-        "react-select flex flex-col h-full relative z-10",
-        className,
-      )}
-    >
+    <div className={classNames("react-select flex flex-col h-full relative z-10", className)}>
       <ul className="m-0 p-0 list-none text-base h-full mb-5">
         {sortedOptions.map((n: JSX.Element, key: number) => {
           const isHidden = !isOpen && option?.props.value !== n.props.value;

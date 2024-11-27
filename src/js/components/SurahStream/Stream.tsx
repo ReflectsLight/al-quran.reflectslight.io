@@ -12,14 +12,7 @@ type Props = {
   t: TFunction;
 };
 
-export function Stream({
-  locale,
-  surah,
-  stream,
-  endOfStream,
-  isPaused,
-  t,
-}: Props) {
+export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const isRTL = locale.direction === "rtl";
   const ref = useRef<HTMLUListElement>(null);
@@ -57,9 +50,8 @@ export function Stream({
                 />
                 <span className="color-primary font-extrabold">
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
-                  {t(locale, "comma")} {t(locale, "ayah")}{" "}
-                  {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
-                  {formatNumber(locale, surah.ayat.length)}
+                  {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)}{" "}
+                  {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
               <p

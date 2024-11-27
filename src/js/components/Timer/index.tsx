@@ -26,8 +26,7 @@ export function Timer({
   const isStalled = audioStatus === "wait";
 
   function getMs() {
-    const fallback =
-      audioStatus === null || audioStatus === "pause" || isNaN(audio.duration);
+    const fallback = audioStatus === null || audioStatus === "pause" || isNaN(audio.duration);
     if (fallback) {
       console.info("timer: length determined by ayah.ms");
       return ayah?.ms || 0;

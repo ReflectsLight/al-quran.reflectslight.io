@@ -10,9 +10,7 @@ import { SurahIndex } from "~/components/SurahIndex";
   const locale = (() => {
     return Quran.locales.find((ll) => ll.name === doc.lang);
   })()!;
-  const surahs: Surah[] = byLocale[locale.name].map(
-    (e: TSurah) => new Surah(e),
-  );
+  const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e));
 
   render(<SurahIndex locale={locale} surahs={surahs} t={t} />, root);
 })();
