@@ -37,7 +37,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
             >
               <span className="flex h-8 items-center color-primary">
                 <AudioControl
-                  className="mr-2"
+                  className={classNames({ "mr-2": !isRTL, "ml-2": isRTL })}
                   hidden={!(isPaused || endOfStream)}
                   audio={new Audio()}
                   surah={surah}
