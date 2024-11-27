@@ -13,7 +13,7 @@ the duration of each ayah
 ** Consolidate ~{info,surah,duration}.json~ into index.json
 The ~{info,surah,duration}.json~ files have been consolidated into
 a single file: index.json. This change reduces the number of requests
-mad by the surah-stream.html.erb page
+made by the ~surah-stream.html.erb~ page
 
 ** Set custom zoom (0.8) on low resolution laptops
 The website is now zoomed out by default on low resolution laptops.
