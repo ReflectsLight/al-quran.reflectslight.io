@@ -82,14 +82,14 @@ export function SoundOnIcon({ onClick, className }: Props) {
         <path
           fill="none"
           stroke="#000000"
-          strokeWidth="1"
+          strokeWidth="2"
           strokeMiterlimit="10"
           d="M41,42c5.522,0,10-4.478,10-10s-4.478-10-10-10"
         />
         <path
           fill="none"
           stroke="#000000"
-          strokeWidth="1"
+          strokeWidth="2"
           strokeMiterlimit="10"
           d="M41,12c11.046,0,20,8.954,20,20s-8.954,20-20,20"
         />
