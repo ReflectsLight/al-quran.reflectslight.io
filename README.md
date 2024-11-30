@@ -120,7 +120,7 @@ instead.
 
 ## See also
 
-* [al-quran.KaiOS](https://github.com/ReflectsLight/al-quran.KaiOS#readme)
+* [EasyQuran](https://github.com/ReflectsLight/EasyQuran#readme)
 
 ## Sources
 
