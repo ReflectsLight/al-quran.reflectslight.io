@@ -16,6 +16,8 @@ body {
 }
 
 .postman.main {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.75rem;
   height: 100%;
 }
 
@@ -33,7 +35,6 @@ body {
 }
 
 .postman.main .percentage {
-  font-family: monospace;
   text-align: center;
   width: 100%;
 }
