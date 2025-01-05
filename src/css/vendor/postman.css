@@ -1,10 +1,18 @@
 html {
   height: 100%;
-  @media (width <= 1366px) and
-         (height <= 768px) and
-         (resolution <= 1dppx) {
+  @media (height >= 600px) and
+         (resolution <= 1dppx) and
+         (hover: hover) {
     body {
       zoom: 0.8;
+    }
+  }
+
+  @media (height >= 767px) and
+         (resolution <= 2dppx) and
+         (hover: hover) {
+    body {
+      zoom: 0.9;
     }
   }
 }
