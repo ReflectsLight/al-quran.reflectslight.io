@@ -52,7 +52,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span className="background-primary color-secondary ml-2 mr-3 font-extrabold w-10 text-center">
+                <span className="background-primary color-secondary ml-2 mr-3 font-semibold w-10 text-center">
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (
