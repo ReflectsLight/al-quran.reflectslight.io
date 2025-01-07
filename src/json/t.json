@@ -11,9 +11,15 @@
     "filter": "Filter",
     "loading": "Loading",
     "meta": {
-      "index": { "description": "Explore the chapters of The Noble Quran" },
-      "stream": { "description": "Read and listen to The Noble Quran" },
-      "random": { "description": "Read and listen to a randomly selected chapter from The Noble Quran" }
+      "index": {
+        "description": "Explore The Noble Quran online with translations in English, Arabic, and Farsi. Browse all 114 chapters (Surahs) of the Quran in an easy-to-read format. Start your journey of reflection and understanding today."
+      },
+      "stream": {
+        "description": "Read Surah %{surah_name} (Chapter %{surah_number}) of The Noble Quran online with translations in English, Arabic, and Farsi. Listen and reflect on its verses for spiritual guidance."
+      },
+      "random": {
+        "description": "Read and listen to a randomly selected chapter from The Noble Quran"
+      }
     },
     "surahs": {
       "names": [
@@ -146,9 +152,15 @@
     "filter": "تصفية",
     "loading": "جارٍ التحميل",
     "meta": {
-      "index": { "description": "استكشاف سور القرآن الكريم" },
-      "stream": { "description": "قراءة والاستماع إلى القرآن الكريم" },
-      "random": { "description": "قراءة والاستماع إلى سورة مختارة عشوائيًا من القرآن الكريم" }
+      "index": {
+        "description": "استكشف القرآن الكريم عبر الإنترنت مع ترجمات باللغات الإنجليزية والعربية والفارسية. تصفح جميع سور القرآن الكريم بسهولة وابدأ رحلتك للتأمل والفهم اليوم."
+      },
+      "stream": {
+        "description": "اقرأ سورة %{surah_name} من القرآن الكريم عبر الإنترنت مع ترجمات باللغات الإنجليزية والعربية والفارسية. استمع إلى آياتها وتأمل فيها للحصول على الإرشاد الروحي."
+      },
+      "random": {
+        "description": "قراءة والاستماع إلى سورة مختارة عشوائيًا من القرآن الكريم"
+      }
     },
     "surahs": {
       "names": [
@@ -281,9 +293,15 @@
     "filter": "فیلتر",
     "loading": "در حال بارگذاری",
     "meta": {
-      "index": { "description": "کاوش در سوره‌های قرآن کریم" },
-      "stream": { "description": "قرائت و استماع به قرآن کریم" },
-      "random": { "description": "قرائت و استماع به یک سوره تصادفی از قرآن کریم" }
+      "index": {
+        "description": "قرآن کریم را آنلاین با ترجمه‌های انگلیسی، عربی و فارسی بخوانید. همه ۱۱۴ سوره قرآن را در قالبی ساده و قابل خواندن مرور کنید. سفر خود برای تفکر و درک قرآن را امروز آغاز کنید."
+      },
+      "stream": {
+        "description": "سوره %{surah_name} از قرآن کریم را با ترجمه‌های انگلیسی، عربی و فارسی آنلاین بخوانید. به آیات آن گوش دهید و در آنها تأمل کنید برای هدایت روحانی."
+      },
+      "random": {
+        "description": "قرائت و استماع به یک سوره تصادفی از قرآن کریم"
+      }
     },
     "surahs": {
       "names": [

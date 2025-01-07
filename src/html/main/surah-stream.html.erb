@@ -5,7 +5,14 @@
     <%= inline_css('/css/vendor/postman.css') %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="<%= t(context.locale, 'meta.stream.description') %>">
+    <meta
+      name="description"
+      content="<%= t(
+        context.locale,
+        'meta.stream.description',
+        {surah_name: context.locale == 'en' ? context.surah.translitName : context.surah.name, surah_number: context.surah.id}
+      ) %>"
+    >
     <%= erb("_version.html.erb") %>
     <%= erb("_opengraph.html.erb", {file: "surah-stream.html.erb", context:}) %>
     <link

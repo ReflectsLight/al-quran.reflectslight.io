@@ -2,6 +2,11 @@
 
 * vNEXT
 
+** Optimize for search engines
+Rewrite meta descriptions to be more descriptive and include more
+text, as it appears Google have de-indexed the website since adopting
+short meta descriptions
+
 ** Remove unneccessary gzip compression
 The builtin gzip compression provided by nanoc-gzip.rb is no longer
 neccessary thanks to the compression provided by bunny.net
