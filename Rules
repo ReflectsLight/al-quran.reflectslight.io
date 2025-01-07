@@ -8,6 +8,7 @@ require "ryo/json"
 require "ryo/yaml"
 require "nanoc-webpack"
 require "nanoc-tidy"
+require "nanoc-external"
 
 ##
 # Extensions
@@ -33,7 +34,8 @@ Nanoc::Tidy
 
 ##
 # See packages/typescript/postman
-compile "/css/vendor/postman.css" do
+compile "/css/vendor/postman.scss" do
+  filter(:external, exec: "npx", options: %w[sass -I src/css/ src/css/vendor/postman.scss])
   filter(:rainpress)
   write("/css/vendor/postman.css")
 end

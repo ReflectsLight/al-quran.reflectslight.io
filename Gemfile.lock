@@ -59,6 +59,8 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
+    nanoc-external (1.0.5)
+      nanoc-core (~> 4.11, >= 4.11.14)
     nanoc-tidy.rb (0.8.5)
       ryo.rb (~> 0.5)
       test-cmd.rb (~> 0.12.4)
@@ -143,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   listen (~> 3.0)
   nanoc (~> 4.12)
+  nanoc-external (~> 1.0)
   nanoc-tidy.rb (~> 0.8.4)
   nanoc-webpack.rb (~> 0.10)
   paint (~> 2.3)

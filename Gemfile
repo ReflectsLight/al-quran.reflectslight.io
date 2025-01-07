@@ -9,6 +9,7 @@ gem "nanoc", "~> 4.12"
 # filters
 gem "nanoc-webpack.rb", "~> 0.10"
 gem "nanoc-tidy.rb", "~> 0.8.4"
+gem "nanoc-external", "~> 1.0"
 gem "rainpress"
 
 ##
