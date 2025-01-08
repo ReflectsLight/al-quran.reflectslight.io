@@ -1,17 +1,17 @@
-@media (min-height: 600px) and
-       (max-height: 766px) and
-       (resolution <= 1dppx) and
+@media (min-device-height: 768px) and
+       (max-device-height: 1024px) and
+       (max-resolution: 1dppx) and
        (hover: hover) {
   body {
     zoom: 0.8;
   }
 }
 
-@media (min-height: 767px) and
-       (max-height: 892px) and
-       (resolution <= 2dppx) and
+@media (min-device-height: 768px) and
+       (max-device-height: 1024px) and
+       (min-resolution: 2dppx) and
        (hover: hover) {
   body {
-    zoom: 0.9;
+    transform: scale(0.9);
   }
 }
