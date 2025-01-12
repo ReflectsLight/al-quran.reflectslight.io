@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /audio/
+Disallow: /images/opengraph/
+Disallow: /alafasy/
