@@ -6,7 +6,7 @@
 # to the surah index for a given locale (eg / -> /en/)
 
 compile "/html/main/redirect.html.erb" do
-  filter(:erb, locals: {context: Ryo(locale: "en"), locales:})
+  filter(:erb, locals: {context: Ryo(locale: "en"), locales:, nanoc:})
   filter(:tidy, exe: tidy)
   write("/index.html")
 end

@@ -2,6 +2,10 @@
 
 * vNEXT
 
+**** Add Bing verification
+Add a verification meta tag to the root page. This change
+will hopefully see Bing index ~al-quran.reflectslight.io~
+
 **** Add robots.txt
 Primarily for search engines (Google in particular)
 
