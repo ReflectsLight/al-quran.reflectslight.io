@@ -2,6 +2,10 @@
 
 * vNEXT
 
+Nothing so far
+
+* v0.10.2
+
 **** Improve OpenGraph image
 The OpenGraph image (~src/images/og/0.png~) has been regenerated
 and it is based on ~src/images/favicon.svg~
