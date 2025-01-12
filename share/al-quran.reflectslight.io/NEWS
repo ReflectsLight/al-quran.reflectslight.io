@@ -2,70 +2,74 @@
 
 * vNEXT
 
-** Optimize for search engines
+**** Improve OpenGraph image
+The OpenGraph image (~src/images/og/0.png~) has been regenerated
+and it is based on ~src/images/favicon.svg~
+
+**** Search engine optimization
 Rewrite meta descriptions to be more descriptive and include more
 text, as it appears Google have de-indexed the website since adopting
 short meta descriptions
 
-** Remove unneccessary gzip compression
+**** Remove unneccessary gzip compression
 The builtin gzip compression provided by nanoc-gzip.rb is no longer
 neccessary thanks to the compression provided by bunny.net
 
-** Remove ~/src/json/durations/*.json~
+**** Remove ~/src/json/durations/*.json~
 Related to the previous commit, the ~index.json~ file now contains
 the duration of each ayah
 
-** Consolidate ~{info,surah,duration}.json~ into index.json
+**** Consolidate ~{info,surah,duration}.json~ into index.json
 The ~{info,surah,duration}.json~ files have been consolidated into
 a single file: index.json. This change reduces the number of requests
 made by the ~surah-stream.html.erb~ page
 
-** Set custom zoom (0.8) on low resolution laptops
+**** Set custom zoom (0.8) on low resolution laptops
 The website is now zoomed out by default on low resolution laptops.
 My primary laptop has a resolution of 1366x768, and it was the driving
 force behind this change
 
-** Add new icons
+**** Add new icons
 The play & pause icons from the native KaiOS application replace the
 previous set of icons
 
 * v0.10.1
 
-** Deliver audio via bunny.net
+**** Deliver audio via bunny.net
 The audio content is now delivered via bunny.net, a CDN and
 storage provider
 
-** Match the look and feel of a book
+**** Match the look and feel of a book
 The look and feel of the website has changed to be more like
 a book that could fit in the palm of your hand
 
-** Fix font bug for iOS users
+**** Fix font bug for iOS users
 On modern versions of iOS the "Amiri Quran Regular" font rendered
 as invisible text. This change reverts to the "Amiri Regular" font
 instead, which appears to render without any issues
 
-** Improve UX on large screens
+**** Improve UX on large screens
 On large screens - the content now has a maximum height
 of ~$breakpoint-md~, and the content is both vertically
 and horiztonally centered. At 2560x1080 the appearance is
 similar to a book on a large blank space
 
-** Improve UX on touch screens
+**** Improve UX on touch screens
 On touch screens it is now easier to change themes thanks to
 a container that has a larger height and width than the theme
 icon it contains. Along with this change, the theme icons have
 become larger and less circular
 
-** Refactor themes
+**** Refactor themes
 The theme implementation has been reduced to a set of colors
 that are applied when the theme is active, and in the process
 the creation of new themes has been made easier
 
-** Improve ~LanguageSelect.tsx~
+**** Improve ~LanguageSelect.tsx~
 RTL languages have ~Cairo Regular~ applied.
 LTR languages have ~Kanit Regular~ applied
 
-** Add ~favicon.rake~
+**** Add ~favicon.rake~
 The new rake task ~favicon~ can generate the favicon set
 from ~favicon.svg~ in a way that's reproducible and automated.
 
@@ -73,118 +77,118 @@ In the process the favicons have been regenerated, and
 the book misalignment that was present in ~favicon.svg~
 and the other favicons has been fixed
 
-** Apply Amiri font for Farsi
+**** Apply Amiri font for Farsi
 Same as Arabic
 
-** Optimize inline of ~postman.css~
+**** Optimize inline of ~postman.css~
 The inlined CSS is minified before being inserted into HTML documents
 
-** Remove KaiOS breakpoints
+**** Remove KaiOS breakpoints
 There is a separate repository for KaiOS
 
 * v0.10.0
 
-** Add Cairo fonts
+**** Add Cairo fonts
 Two new fonts for RTL languages: Cairo Regular, Cairo Bold
 
-** Render three columns on ~SurahIndex.tsx~
+**** Render three columns on ~SurahIndex.tsx~
 The ~SurahIndex.tsx~ component renders three columns for RTL
 languages (compared with two columns before)
 
-** Revisit color scheme
+**** Revisit color scheme
 Redo the website color scheme with a focus on improving the
 Arabic / Farsi variants
 
-** Revisit ~SurahStream.tsx~ for RTL languages
+**** Revisit ~SurahStream.tsx~ for RTL languages
 The appearance of the ~SurahStream.tsx~ component was revisted
 for RTL languages, especially Arabic
 
-** Add "Amiri Quran Regular" to ~SurahIndex.tsx~
+**** Add "Amiri Quran Regular" to ~SurahIndex.tsx~
 The name of each surah is rendered in the Amiri Quran Regular
 font in the Arabic locale / language
 
-** Add "Amiri Quran Regular" font
+**** Add "Amiri Quran Regular" font
 This new font is used specifically for the contents of a surah
 in the Arabic locale / language
 
-** Replace custom z-index rule
+**** Replace custom z-index rule
 Replace custom z-index rule with the CSS class ~.z-10~
 
-** Update tail.css
+**** Update tail.css
 The vendored copy of ~tail.css~ has been updated
 
-** Add ~rake format:apply~
+**** Add ~rake format:apply~
 This new rake task tries to auto-correct typescript and
 ruby lint errors
 
-** Apply larger font size in ~Head.tsx~
+**** Apply larger font size in ~Head.tsx~
 The text "The Noble Quran" has a larger size (~.text-2xl~)
 
-** Remove ~/robots.txt~
+**** Remove ~/robots.txt~
 We don't need this file anymore. It was used to block crawlers
 indexing audio content at /audio but audio content is now served
 on a separate domain
 
-** Add file mode option to ~nanoc.yaml~
+**** Add file mode option to ~nanoc.yaml~
 The file mode option can be set on the server's unix socket.
 Default: ~ug=rw,o=~
 
 
 * v0.9.1
 
-** Fix ~_opengraph.html.erb~ typos
+**** Fix ~_opengraph.html.erb~ typos
 Fix multiple issues with the render of ~_opengraph.html.erb~
 
-** Replace font-size rules with tail.css classes
+**** Replace font-size rules with tail.css classes
 Replace custom 'font-size' rules with standard tail.css
 classes (eg text-lg)
 
-** Remove ~mada-regular.ttf~
+**** Remove ~mada-regular.ttf~
 The Arabic font is now based on standard web fonts rather than
 a custom fonts.google.com font
 
-** Add ~src/js/main/vendor.ts~
+**** Add ~src/js/main/vendor.ts~
 The new vendor entry point bundles preact, and other
 third party dependencies in a single file. This change
 is an improvement imported from the ~kaios/main~ branch
 
-** Replace React with preact
+**** Replace React with preact
 The preact library is a lightweight alternative to React,
 with a smaller footprint. This change is an improvement
 imported from the ~kaios/main~ branch
 
-** Change default ~audio.base_url~
+**** Change default ~audio.base_url~
 Set the default audio URL to
 https://audio.al-quran.reflectslight.io/rifai
 
-**** Improve KaiOS support
+******** Improve KaiOS support
 Optimize the layout for KaiOS devices through specialized
 media queries. A new branch (~kaios/main~) will focus on
 KaiOS support
 
-**** Add ~etc/~
+******** Add ~etc/~
 Move a large portion of the website's configuration files to
 the ~/etc~ directory
 
 
 * v0.9.0
 
-** Add ~share/al-quran.reflectslight.io/documentation/~
+**** Add ~share/al-quran.reflectslight.io/documentation/~
 Replace ~share/doc/al-quran.reflectslight.io~
 
-** Add new recitation
+**** Add new recitation
 Add a new recitation by Hani ar-Rifai
 
-** Replace ~opengraph.rb~ with ~_opengraph.html.erb~
+**** Replace ~opengraph.rb~ with ~_opengraph.html.erb~
 Simplify how we render opengraph meta tags
 
-** Move to nodejs for scss compiler
+**** Move to nodejs for scss compiler
 Replace the deprecated Ruby scss compiler with the nodejs compiler
-** Add ~audio.base_url~ to nanoc.yaml
+**** Add ~audio.base_url~ to nanoc.yaml
 Provide extra flexibility for audio content
 
-** Rename packages/typescript/Quran/ properties
+**** Rename packages/typescript/Quran/ properties
 Introduce urlName, translitName to Surah objects
 
-** Upgrade eslint
+**** Upgrade eslint
 Upgrade to the most recent version of eslint (^9.8)
