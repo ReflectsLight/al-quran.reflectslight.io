@@ -1,17 +1,14 @@
-@media (min-device-height: 768px) and
-       (max-device-height: 1024px) and
-       (max-resolution: 1dppx) and
-       (hover: hover) {
-  body {
-    zoom: 0.8;
-  }
-}
+body {
+  @media (min-device-height: 768px)  and
+         (max-device-height: 1024px) and
+         (max-resolution: 1dppx)     and
+         (hover: hover) { zoom: 0.8; }
 
-@media (min-device-height: 768px) and
-       (max-device-height: 1024px) and
-       (min-resolution: 2dppx) and
-       (hover: hover) {
-  body {
-    transform: scale(0.9);
-  }
+  @media (min-device-height: 1025px) and
+         (max-resolution: 1dppx)     and
+         (hover: hover) { zoom: 0.9; }
+
+  @media (min-device-height: 768px) and
+         (min-resolution: 2dppx)    and
+         (hover: hover) { transform: scale(0.9); }
 }

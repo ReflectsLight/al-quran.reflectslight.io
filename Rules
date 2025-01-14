@@ -25,7 +25,7 @@ surahs     = Ryo.from_json(path: File.join(dirs.content, "json", "surahs.json"))
 tidy       = `which tidy || which tidy5`.chomp
 buildenv   = ENV["buildenv"] || "development"
 nanoc      = Ryo.from_yaml(path: File.join(dirs.root, "nanoc.yaml"))
-globals = {buildenv:, locales:, tidy:, tdata:, surahs:, name_by_id:, nanoc:}
+globals    = {buildenv:, locales:, tidy:, tdata:, surahs:, name_by_id:, nanoc:}
 
 ##
 # Filters
