@@ -2,6 +2,9 @@
 
 * vNEXT
 
+**** Update ryo.rb
+Bump ryo.rb from 0.5.6 to 0.5.7
+
 **** Add Bing verification
 Add a verification meta tag to the root page. This change
 will hopefully see Bing index ~al-quran.reflectslight.io~

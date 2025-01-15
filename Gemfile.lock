@@ -108,7 +108,7 @@ GEM
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
-    ryo.rb (0.5.6)
+    ryo.rb (0.5.7)
     server.rb (0.4.0)
       puma (~> 6.3)
       rack (~> 3.0)
