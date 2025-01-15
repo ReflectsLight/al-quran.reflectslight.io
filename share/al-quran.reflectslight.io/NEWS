@@ -2,6 +2,10 @@
 
 * vNEXT
 
+**** Add zoom for large screens
+Apply zoom of 0.9 for devices with a height larger than
+~$breakpoint-lg~, plus other ~_zoom.scss~ improvements
+
 **** Update ryo.rb
 Bump ryo.rb from 0.5.6 to 0.5.7
 
