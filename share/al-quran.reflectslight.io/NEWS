@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Add h1 header
+The header contains an anchor, and the anchor now wraps its
+text within a h1 tag. This change implements a recommendation
+from the Bing search engine
+
 **** Add zoom for large screens
 Apply zoom of 0.9 for devices with a height larger than
 ~$breakpoint-lg~, plus other ~_zoom.scss~ improvements

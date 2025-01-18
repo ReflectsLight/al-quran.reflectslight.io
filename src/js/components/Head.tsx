@@ -26,7 +26,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
             href={`/${locale.name}/`}
             className="flex rounded justify-center p-3 m-0 mb-4 w-full no-underline font-semibold color-secondary text-2xl"
           >
-            {children}
+            <h1>{children}</h1>
           </a>
         </div>
         <nav className="flex flex-row justify-between text-lg">
