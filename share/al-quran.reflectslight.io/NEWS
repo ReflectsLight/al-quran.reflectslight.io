@@ -2,6 +2,12 @@
 
 * vNEXT
 
+**** Extend length of <title> tag
+The <title> tag now includes the "The Noble Quran" as text in
+addition to the name of the surah. This change was recommended
+by the Bing search engine. The previous title was flagged as
+too short
+
 **** Add h1 header
 The header contains an anchor, and the anchor now wraps its
 text within a h1 tag. This change implements a recommendation
