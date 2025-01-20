@@ -6,8 +6,8 @@ body {
          (max-resolution: 1dppx)              and
          (hover: hover) { zoom: 0.8; }
 
-  @media (min-device-height: calc($breakpoint-lg + 1px)) and
-         (max-resolution: 1dppx)                         and
+  @media (min-device-width: calc($breakpoint-xlx2 + 1px)) and
+         (max-resolution: 1dppx)                          and
          (hover: hover) { zoom: 0.9; }
 
   @media (min-device-height: $breakpoint-md) and
