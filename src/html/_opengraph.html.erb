@@ -2,22 +2,22 @@
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="<%= t(context.locale, 'TheNobleQuran') %>"/>
   <meta property="og:description" content="<%= t(context.locale, 'meta.index.description') %>"/>
-  <meta property="og:url" content="<%= base_url %>/<%= context.locale %>/"/>
-  <meta property="og:image" content="<%= base_url %>/images/og/0.png?v=<%= commit %>"/>
+  <meta property="og:url" content="<%= root_url %>/<%= context.locale %>/"/>
+  <meta property="og:image" content="<%= root_url %>/images/og/0.png?v=<%= commit %>"/>
   <meta property="og:image:type" content="image/png"/>
 <% elsif file == "surah-stream.html.erb" %>
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="<%= t(context.locale, 'TheNobleQuran') %>"/>
   <meta property="og:description" content="<%= context.surah.name %>"/>
-  <meta property="og:url" content="<%= base_url %>/<%= context.locale %>/<%= context.surah.urlName %>/"/>
-  <meta property="og:image" content="<%= base_url %>/images/og/<%= context.surah.id %>.png?v=<%= commit %>"/>
+  <meta property="og:url" content="<%= root_url %>/<%= context.locale %>/<%= context.surah.urlName %>/"/>
+  <meta property="og:image" content="<%= root_url %>/images/og/<%= context.surah.id %>.png?v=<%= commit %>"/>
   <meta property="og:image:type" content="image/png"/>
 <% elsif file == "random.html.erb" %>
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="<%= t(context.locale, 'TheNobleQuran') %>"/>
   <meta property="og:description" content="<%= t(context.locale, 'meta.random.description') %>"/>
-  <meta property="og:url" content="<%= base_url %>/<%= context.locale %>/random/"/>
-  <meta property="og:image" content="<%= base_url %>/images/og/0.png?v=<%= commit %>"/>
+  <meta property="og:url" content="<%= root_url %>/<%= context.locale %>/random/"/>
+  <meta property="og:image" content="<%= root_url %>/images/og/0.png?v=<%= commit %>"/>
   <meta property="og:image:type" content="image/png"/>
 <% else %>
   <% error! "unknown file: #{file}" %>

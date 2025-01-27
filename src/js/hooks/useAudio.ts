@@ -9,16 +9,10 @@ enum AudioState {
 
 type AudioStateKey = keyof typeof AudioState;
 
-type TData = {
-  commitId: string;
-  audioUrl: string;
-};
-
 export function useAudio() {
   const el = useMemo(() => new Audio(), []);
   const [enabled, setEnabled] = useState<boolean>(false);
   const [state, setState] = useState<AudioStateKey>(AudioState.Waiting);
-  const [data, setData] = useState<TData | null>(null);
 
   const showStalledIcon = useMemo(() => {
     if (state === AudioState.Waiting) {
@@ -51,15 +45,6 @@ export function useAudio() {
     };
   }, [el.src]);
 
-  useEffect(() => {
-    const el: HTMLDivElement = document.querySelector(".app")!;
-    const set = el.dataset;
-    setData({
-      audioUrl: set.audioUrl,
-      commitId: set.commitId,
-    });
-  }, []);
-
   return {
     el,
     isEnabled: enabled,
@@ -83,7 +68,7 @@ export function useAudio() {
       el.play();
     },
     setSrc({ path }: { path: string }) {
-      el.src = [data.audioUrl, path, `?v=${data.commitId}`].join("");
+      el.src = [audioUrl, path, `?v=${commitId}`].join("");
     },
   };
 }

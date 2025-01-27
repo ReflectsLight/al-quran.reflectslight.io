@@ -29,6 +29,8 @@ namespace :nanoc do
 
   task :setenv, %i[buildenv] do |t, args|
     ENV["SASS_PATH"] = File.join(dirs.content, "css")
+    ENV["audio_url"] = Utils.audio_url
+    ENV["commit_id"] = Utils.commit
     ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
   end
 end

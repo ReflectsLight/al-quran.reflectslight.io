@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   resolve: {
@@ -44,5 +45,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      "buildenv": JSON.stringify(process.env.buildenv),
+      "audioUrl": JSON.stringify(process.env.audio_url),
+      "commitId": JSON.stringify(process.env.commit_id)
+    }),
+  ],
 };

@@ -5,14 +5,14 @@
     <meta name="description" content="<%= t('en', 'meta.index.description') %>">
     <%= erb("_version.html.erb") %>
     <%= erb("_opengraph.html.erb", {file: "redirect.html.erb", context:}) %>
-    <% if nanoc.server.base_url == "https://al-quran.reflectslight.io" %>
+    <% if nanoc.server.root_url == "https://al-quran.reflectslight.io" %>
       <meta name="msvalidate.01" content="4459582FB69145E47726C07F773450A9">
     <% end %>
-    <link rel="canonical" href="<%= base_url %>/en/" />
+    <link rel="canonical" href="<%= root_url %>/en/" />
     <% locales.each do |locale| %>
     <link
       rel="alternate"
-      href="<%= base_url %>/<%= locale %>/"
+      href="<%= root_url %>/<%= locale %>/"
       hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
