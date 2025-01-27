@@ -1,4 +1,5 @@
 import type { Surah, Ayah, TAyat, TLocale } from "Quran";
+import { useAudio } from "~/hooks/useAudio";
 import { AudioControl } from "~/components/AudioControl";
 import { formatNumber, TFunction } from "~/lib/t";
 import classNames from "classnames";
@@ -16,6 +17,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
   const isRTL = locale.direction === "rtl";
   const ref = useRef<HTMLUListElement>(null);
+  const audio = useAudio();
   const ul = useMemo<JSX.Element>(() => {
     return (
       <ul
@@ -39,14 +41,9 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 <AudioControl
                   className={classNames({ "mr-2": !isRTL, "ml-2": isRTL })}
                   hidden={!(isPaused || endOfStream)}
-                  audio={new Audio()}
+                  audio={audio}
                   surah={surah}
                   ayah={ayah}
-                  onStatusChange={(status, [, disable]) => {
-                    if (status === "end") {
-                      disable();
-                    }
-                  }}
                 />
                 <span className="color-primary font-semibold">
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
@@ -66,7 +63,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
         })}
       </ul>
     );
-  }, [stream.length, isPaused, endOfStream]);
+  }, [stream.length, audio.isEnabled, isPaused, endOfStream]);
 
   useEffect(() => {
     const el = ref.current;
@@ -75,6 +72,12 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
       el.scrollTo({ behavior: "smooth", top });
     }
   }, [stream.length]);
+
+  useEffect(() => {
+    if (audio.isEnded) {
+      audio.disable();
+    }
+  }, [audio.isEnded]);
 
   return ul;
 }

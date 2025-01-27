@@ -9,60 +9,50 @@ type Props = {
   ayah: Maybe<Ayah>;
   isPaused: boolean;
   audio: HTMLAudioElement;
-  audioStatus: Maybe<string>;
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
-export function Timer({
-  locale,
-  surah,
-  ayah,
-  isPaused,
-  audio,
-  audioStatus,
-  onComplete,
-}: Props) {
+export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Props) {
   const [ms, setMs] = useState<number | null>(null);
-  const isStalled = audioStatus === "wait";
 
-  function getMs() {
-    const fallback = audioStatus === null || audioStatus === "pause" || isNaN(audio.duration);
-    if (fallback) {
-      console.info("timer: length determined by ayah.ms");
-      return ayah?.ms || 0;
-    } else {
-      console.info("timer: length determined by HTMLAudioElement");
-      return audio.duration * 1000;
-    }
-  }
-
-  useEffect(() => {
-    if (ayah) {
-      setMs(getMs());
-    }
-  }, [ayah?.id]);
-
-  useEffect(() => {
-    if (audioStatus === "play") {
-      setMs(getMs());
-    }
-  }, [audioStatus]);
-
-  useEffect(() => {
-    const noop = !ayah || typeof ms !== "number" || isStalled || isPaused;
-    if (noop) {
-      return;
-    } else if (ms <= 0) {
-      onComplete(surah, ayah);
-    } else {
-      const tid = setTimeout(() => setMs(ms - 100), 100);
-      return () => clearTimeout(tid);
-    }
-  }, [isStalled, isPaused, ms]);
-
-  if (isStalled) {
+  if (!ayah) {
     return null;
   }
+
+  function getMs() {
+    if (audio.isEnabled) {
+      console.info("Timer.tsx", "getMS", "HTMLAudioElement provides duration");
+      return audio.el.duration * 1000;
+    } else {
+      console.info("Timer.tsx", "getMS", "ayah.ms provides duration");
+      return ayah.ms;
+    }
+  }
+
+  useEffect(() => {
+    setMs(getMs());
+  }, [ayah.id]);
+
+  useEffect(() => {
+    if (audio.isEnabled) {
+      setMs(getMs());
+    }
+  }, [audio.isEnabled, audio.el.duration]);
+
+  useEffect(() => {
+    if (isPaused || ms === null) {
+      return;
+    } else {
+      const tid = setTimeout(() => {
+        if (ms > 0) {
+          setMs(ms - 250);
+        } else {
+          onComplete(surah, ayah);
+        }
+      }, 250);
+      return () => clearTimeout(tid);
+    }
+  }, [ms, isPaused]);
 
   return (
     <div className="timer font-extrabold text-base w-10 flex justify-end color-primary">

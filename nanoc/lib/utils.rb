@@ -72,9 +72,9 @@ module Utils
   #
   # @return [String]
   #  Returns the base url for audio requests.
-  #  The default (https://al-quran.reflectslight.io/audio/alafasy)
+  #  The default (https://al-quran-audio.reflectslight.io/rifai)
   #  works out of the box.
-  def audio_base_url
+  def audio_url
     nanoc.audio.base_url
   end
 
