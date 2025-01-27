@@ -1,4 +1,5 @@
 import type { Surah, Ayah, TLocale } from "Quran";
+import type { TAudio } from "~/hooks/useAudio";
 import { formatNumber } from "~/lib/t";
 
 type Maybe<T> = T | null | undefined;
@@ -8,7 +9,7 @@ type Props = {
   surah: Surah;
   ayah: Maybe<Ayah>;
   isPaused: boolean;
-  audio: HTMLAudioElement;
+  audio: TAudio;
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
@@ -25,7 +26,7 @@ export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Prop
       return audio.el.duration * 1000;
     } else {
       console.info("Timer.tsx", "getMS", "ayah.ms provides duration");
-      return ayah.ms;
+      return ayah?.ms || 0;
     }
   }
 

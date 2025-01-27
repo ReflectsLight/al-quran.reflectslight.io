@@ -1,3 +1,20 @@
+export type TAudio = {
+  el: HTMLAudioElement;
+  isEnabled: boolean;
+  isPlaying: boolean;
+  isPaused: boolean;
+  isWaiting: boolean;
+  isStalled: boolean;
+  isEnded: boolean;
+  hasError: boolean;
+  showStalledIcon: boolean;
+  enable: () => void;
+  disable: () => void;
+  pause: () => void;
+  play: () => void;
+  setSrc: ({ path }: { path: string }) => void;
+};
+
 enum AudioState {
   Playing = "Playing",
   Paused = "Paused",
@@ -9,7 +26,7 @@ enum AudioState {
 
 type AudioStateKey = keyof typeof AudioState;
 
-export function useAudio() {
+export function useAudio(): TAudio {
   const el = useMemo(() => new Audio(), []);
   const [enabled, setEnabled] = useState<boolean>(false);
   const [state, setState] = useState<AudioStateKey>(AudioState.Waiting);

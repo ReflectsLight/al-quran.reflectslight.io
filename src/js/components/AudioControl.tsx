@@ -1,10 +1,11 @@
 import type { Surah, Ayah } from "Quran";
+import type { TAudio } from "~/hooks/useAudio";
 import { SoundOnIcon, SoundOffIcon } from "~/components/Icon";
 
 type Maybe<T> = T | null;
 
 type Props = {
-  audio: HTMLAudioElement;
+  audio: TAudio;
   surah: Surah;
   ayah: Maybe<Ayah>;
   hidden: boolean;
