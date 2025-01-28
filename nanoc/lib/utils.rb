@@ -6,6 +6,8 @@
 # and Rakefile.rb all have access to the methods of this
 # module
 module Utils
+  extend self
+
   require "test-cmd"
   require_relative "utils/t"
   require_relative "utils/inline"
@@ -67,24 +69,24 @@ module Utils
 
   ##
   # The URL for an audio file is resolved
-  # by joining `nanoc.audio.base_url` and
-  # `/<surahid>/<ayahid>.mp3`.
+  # by joining `nanoc.audio.root_url` and
+  # `/<surahid>/<ayahid>.mp3`
   #
   # @return [String]
-  #  Returns the base url for audio requests.
-  #  The default (https://al-quran.reflectslight.io/audio/alafasy)
-  #  works out of the box.
-  def audio_base_url
-    nanoc.audio.base_url
+  #  Returns the root url for audio requests.
+  #  The default (https://al-quran-audio.reflectslight.io/rifai)
+  #  works out of the box
+  def audio_url
+    nanoc.audio.root_url
   end
 
   ##
   # @return [String]
-  #  Returns the base URL for use with opengraph,
+  #  Returns the root URL for use with opengraph,
   #  <link> tags, /sitemap.xml, etc. The default is
-  #  https://al-quran.reflectslight.io.
-  def base_url
-    nanoc.server.base_url
+  #  https://al-quran.reflectslight.io
+  def root_url
+    nanoc.server.root_url
   end
 
   include T

@@ -2,6 +2,20 @@
 
 * vNEXT
 
+**** Synchronize play|pause of stream with audio playback
+The play and pause buttons on the stream page were previously
+disconnected from the audio stream. That meant you could pause
+the stream, and still hear the audio. This change synchronizes
+the play and pause buttons with audio playback so that when the
+stream is paused, so is the audio
+
+**** Pull audio duration from MP3 file
+There was a bug in audio playback where the duration of an
+audio file was always pulled from ~durations.json~ instead
+of being pulled from the MP3 file. The fix for this bug saw
+an overhaul of the audio implementation with significant
+improvements to the audio player. Reported by [[https://github.com/farooqkz][@farooqkz]]
+
 **** Extend length of <title> tag
 The <title> tag now includes the "The Noble Quran" as text in
 addition to the name of the surah. This change was recommended

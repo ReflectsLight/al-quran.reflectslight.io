@@ -17,11 +17,11 @@
     <%= erb("_opengraph.html.erb", {file: "surah-stream.html.erb", context:}) %>
     <link
       rel="canonical"
-      href="<%= base_url %>/<%= context.locale %>/<%= context.surah.urlName %>/"
+      href="<%= root_url %>/<%= context.locale %>/<%= context.surah.urlName %>/"
     />
     <% context.locales.each do |locale| %>
     <link rel="alternate"
-          href="<%= base_url %>/<%= locale %>/<%= context.surah.urlName %>/"
+          href="<%= root_url %>/<%= locale %>/<%= context.surah.urlName %>/"
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
@@ -29,9 +29,7 @@
   <body>
     <%= erb("_postman.html.erb", {locale: context.locale, dir: context.dir}) %>
     <div class="app mount root w-full h-full"
-         data-surah-id="<%= context.surah.id %>"
-         data-audio-base-url="<%= audio_base_url %>"
-         data-commit-id="<%= commit %>">
+         data-surah-id="<%= context.surah.id %>">
     </div>
     <script src="/js/loaders/surah-stream-loader.js?v=<%= commit %>"></script>
   </body>

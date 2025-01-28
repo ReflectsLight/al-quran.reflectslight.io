@@ -10,4 +10,6 @@ declare global {
   const useMemo: typeof hooks.useMemo;
   const createRef: typeof preact.createRef;
   const classNames: typeof classn;
+  const audioUrl: string;
+  const commitId: string;
 }

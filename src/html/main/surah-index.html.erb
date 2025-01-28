@@ -10,11 +10,11 @@
     <%= erb("_opengraph.html.erb", {file: "surah-index.html.erb", context:}) %>
     <link
       rel="canonical"
-      href="<%= base_url %>/<%= context.locale %>/"
+      href="<%= root_url %>/<%= context.locale %>/"
     />
     <% context.locales.each do |locale| %>
     <link rel="alternate"
-          href="<%= base_url %>/<%= locale %>/"
+          href="<%= root_url %>/<%= locale %>/"
           hreflang="<%= locale %>" />
     <% end %>
     <%= erb("_favicon.html.erb") %>
