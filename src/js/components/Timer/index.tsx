@@ -19,7 +19,7 @@ export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Prop
   function getMs() {
     if (audio.isEnabled) {
       if (audio.isPlaying) {
-        return (ms || audio.el.duration * 1000);
+        return ms || audio.el.duration * 1000;
       } else if (audio.isPaused) {
         return ms;
       } else {
@@ -55,8 +55,9 @@ export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Prop
       return;
     } else {
       const tid = setTimeout(() => {
-        if (ms > 0) {
-          setMs(ms - 250);
+        const nms = Number(ms);
+        if (nms > 0) {
+          setMs(nms - 250);
         } else if (ayah) {
           onComplete(surah, ayah);
         }
