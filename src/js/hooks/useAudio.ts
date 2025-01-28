@@ -32,12 +32,18 @@ export function useAudio(): TAudio {
   const [state, setState] = useState<AudioStateKey>(AudioState.Waiting);
 
   const showStalledIcon = useMemo(() => {
-    if (state === AudioState.Waiting) {
-      return el.currentTime > 0;
+    if (enabled) {
+      if (el.readyState < 2) {
+        return true;
+      } else if (state === AudioState.Waiting) {
+        return el.currentTime > 0;
+      } else {
+        return state === AudioState.Stalled;
+      }
     } else {
-      return state === AudioState.Stalled;
+      return false;
     }
-  }, [state]);
+  }, [enabled, el.readyState, state]);
 
   useEffect(() => {
     const onPause = () => setState(AudioState.Paused);
