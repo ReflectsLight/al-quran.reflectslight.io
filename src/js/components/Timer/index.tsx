@@ -16,44 +16,54 @@ type Props = {
 export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Props) {
   const [ms, setMs] = useState<number | null>(null);
 
-  if (!ayah) {
-    return null;
-  }
-
   function getMs() {
     if (audio.isEnabled) {
-      console.info("Timer.tsx", "getMS", "HTMLAudioElement provides duration");
-      return audio.el.duration * 1000;
+      if (audio.isPlaying) {
+        return (ms || audio.el.duration * 1000);
+      } else if (audio.isPaused) {
+        return ms;
+      } else {
+        return null;
+      }
     } else {
-      console.info("Timer.tsx", "getMS", "ayah.ms provides duration");
-      return ayah?.ms || 0;
+      return ayah?.ms || null;
     }
   }
 
   useEffect(() => {
-    setMs(getMs());
-  }, [ayah.id]);
+    if (ayah) {
+      setMs(getMs());
+    }
+  }, [ayah?.id, audio.isPlaying, audio.isPaused, audio.isEnabled]);
 
   useEffect(() => {
     if (audio.isEnabled) {
-      setMs(getMs());
+      if (isPaused) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
     }
-  }, [audio.isEnabled, audio.el.duration]);
+  }, [isPaused]);
 
   useEffect(() => {
-    if (isPaused || ms === null) {
+    const noop =
+      isPaused ||
+      (audio.isEnabled &&
+        (audio.showStalledIcon || audio.isPaused || isNaN(audio.el.duration)));
+    if (noop) {
       return;
     } else {
       const tid = setTimeout(() => {
         if (ms > 0) {
           setMs(ms - 250);
-        } else {
+        } else if (ayah) {
           onComplete(surah, ayah);
         }
       }, 250);
       return () => clearTimeout(tid);
     }
-  }, [ms, isPaused]);
+  }, [isPaused, ms, audio.isEnabled, audio.showStalledIcon, audio.isPaused]);
 
   return (
     <div className="timer font-extrabold text-base w-10 flex justify-end color-primary">

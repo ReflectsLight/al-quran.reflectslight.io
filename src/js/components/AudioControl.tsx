@@ -20,11 +20,6 @@ export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
   useEffect(() => {
     if (audio.isEnabled) {
       audio.setSrc({ path: `/${surah.id}/${ayah.id}.mp3` });
-    }
-  }, [ayah.id, audio.isEnabled]);
-
-  useEffect(() => {
-    if (audio.isEnabled) {
       audio.play();
     } else {
       audio.pause();
