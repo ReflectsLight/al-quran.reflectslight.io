@@ -2,6 +2,13 @@
 
 * vNEXT
 
+**** Fix bug in the ~LanguageSelect.tsx~ component
+The ~LanguageSelect.tsx~ component rendered a list of languages
+with links all pointing to the same language. We arrived at this
+situation because historically a trailing slash was always present.
+That's no longer the case since moving to bunny.net and it should
+not have been assumed in the first place
+
 **** Fix glitches when switching between RTL and LTR languages
 This change focuses on switching the direction of website content,
 but not necessarily the direction and placement of UI elements.
