@@ -70,25 +70,24 @@ export function SurahStream({ surah, locale, t }: Props) {
           "flex-row": isLTR,
         })}
       >
-        {!endOfStream && (
-          <Timer
-            locale={locale}
-            surah={surah}
-            ayah={ayah}
-            isPaused={isPaused}
-            audio={audio}
-            onComplete={(surah, ayah) => {
-              const layah = surah.ayat[surah.ayat.length - 1];
-              if (!layah || !ayah) {
-                return;
-              } else if (layah.id === ayah.id) {
-                setEndOfStream(true);
-              } else {
-                setStream([...stream, surah.ayat[ayah.id]]);
-              }
-            }}
-          />
-        )}
+        <Timer
+          hidden={endOfStream}
+          locale={locale}
+          surah={surah}
+          ayah={ayah}
+          isPaused={isPaused}
+          audio={audio}
+          onComplete={(surah, ayah) => {
+            const layah = surah.ayat[surah.ayat.length - 1];
+            if (!layah || !ayah) {
+              return;
+            } else if (layah.id === ayah.id) {
+              setEndOfStream(true);
+            } else {
+              setStream([...stream, surah.ayat[ayah.id]]);
+            }
+          }}
+        />
         <AudioControl audio={audio} surah={surah} ayah={ayah} hidden={endOfStream} />
         <span
           className={classNames({

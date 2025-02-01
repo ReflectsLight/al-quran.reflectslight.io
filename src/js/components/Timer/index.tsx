@@ -5,6 +5,7 @@ import { formatNumber } from "~/lib/t";
 type Maybe<T> = T | null | undefined;
 
 type Props = {
+  hidden: boolean;
   locale: TLocale;
   surah: Surah;
   ayah: Maybe<Ayah>;
@@ -13,10 +14,14 @@ type Props = {
   onComplete: (surah: Surah, ayah: Ayah) => void;
 };
 
-export function Timer({ locale, surah, ayah, isPaused, audio, onComplete }: Props) {
+export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete }: Props) {
   const [ms, setMs] = useState<number | null>(null);
   const isRTL = locale.direction === "rtl";
   const isLTR = locale.direction === "ltr";
+
+  if (hidden) {
+    return null;
+  }
 
   function getMs() {
     if (audio.isEnabled) {
