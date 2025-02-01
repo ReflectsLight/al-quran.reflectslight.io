@@ -40,13 +40,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6 text-lg"
       >
         {index.map((surah, key) => (
-          <li
-            className={classNames("flex justify-center surah", {
-              "w-full": locale.direction === "ltr",
-              "w-1/2": locale.direction === "rtl",
-            })}
-            key={key}
-          >
+          <li className="flex justify-center surah w-full" key={key}>
             <a
               className="flex items-center color-primary no-underline rounded w-11/12 h-14"
               href={`/${locale.name}/${surah.urlName}/`}

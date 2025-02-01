@@ -2,18 +2,22 @@
 
 * vNEXT
 
+**** Always render ~SurahIndex.tsx~ with a single column
+The ~SurahIndex.tsx~ component now renders one column instead of two
+for RTL languages. The change was made to be consistent across all
+languages, regardless of their direction
+
 **** Fix bug in the ~LanguageSelect.tsx~ component
-The ~LanguageSelect.tsx~ component rendered a list of languages
+The ~LanguageSelect.tsx~ component could render a list of languages
 with links all pointing to the same language. We arrived at this
 situation because historically a trailing slash was always present.
 That's no longer the case since moving to bunny.net and it should
-not have been assumed in the first place
+never have been assumed to be the case
 
-**** Fix glitches when switching between RTL and LTR languages
+**** Fix bug when changing between RTL and LTR languages
 This change focuses on switching the direction of website content,
-but not necessarily the direction and placement of UI elements.
-The change fixes misalignment and other UI glitches that could
-occur when switching between languages
+but not the placement of UI elements. Beforehand the UI could jump
+around in unexpected and strange ways
 
 **** Synchronize play|pause of stream with audio playback
 The play and pause buttons on the stream page were previously
