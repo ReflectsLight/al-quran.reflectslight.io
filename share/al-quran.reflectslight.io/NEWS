@@ -2,6 +2,12 @@
 
 * vNEXT
 
+**** Fix glitches when switching between RTL and LTR languages
+This change focuses on switching the direction of website content,
+but not necessarily the direction and placement of UI elements.
+The change fixes misalignment and other UI glitches that could
+occur when switching between languages
+
 **** Synchronize play|pause of stream with audio playback
 The play and pause buttons on the stream page were previously
 disconnected from the audio stream. That meant you could pause

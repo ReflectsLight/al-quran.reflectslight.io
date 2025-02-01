@@ -12,6 +12,7 @@ type Props = {
 };
 
 export function Head({ locale, theme, setTheme, children }: Props) {
+  const isRTL = locale.direction === "rtl";
   return (
     <header
       className={classNames("flex flex-col h-20 mt-4", {
@@ -29,9 +30,13 @@ export function Head({ locale, theme, setTheme, children }: Props) {
             <h1>{children}</h1>
           </a>
         </div>
-        <nav className="flex flex-row justify-between text-lg">
+        <nav
+          className={classNames("flex flex-row justify-between text-lg", {
+            "flex-row-reverse": isRTL,
+          })}
+        >
           <LanguageSelect locale={locale} />
-          <ThemeSelect theme={theme} setTheme={setTheme} />
+          <ThemeSelect locale={locale} theme={theme} setTheme={setTheme} />
         </nav>
       </div>
     </header>

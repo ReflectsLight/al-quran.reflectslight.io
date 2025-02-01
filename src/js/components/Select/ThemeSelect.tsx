@@ -1,13 +1,17 @@
 import { Select } from "~/components/Select";
 import type { Theme } from "~/hooks/useTheme";
+import type { TLocale } from "Quran";
 
 type Props = {
+  locale: TLocale;
   theme: string;
   setTheme: (theme: Theme) => void;
 };
 
-export function ThemeSelect({ theme, setTheme }: Props) {
+export function ThemeSelect({ locale, theme, setTheme }: Props) {
   const themes: Theme[] = ["blue", "green"];
+  const isRTL = locale.direction === "rtl";
+  const isLTR = locale.direction === "ltr";
   return (
     <Select value={theme} className="theme-select">
       {themes.map((t, i) => {
@@ -15,7 +19,10 @@ export function ThemeSelect({ theme, setTheme }: Props) {
           <Select.Option
             key={i}
             onClick={() => setTheme(t)}
-            className="flex justify-end w-10 h-6"
+            className={classNames("flex w-10 h-6", {
+              "justify-start": isRTL,
+              "justify-end": isLTR,
+            })}
             value={t}
           >
             <span className={classNames("rounded w-5 h-5", t)} />

@@ -18,11 +18,27 @@ body .root .content.theme {
   }
 }
 
+body .root .content.theme.ltr {
+  footer {
+    .sound-on.icon, .sound-off.icon {
+      position: relative;
+      right: 10px;
+    }
+  }
+}
+
 body .root .content.theme.rtl {
   ul.body.stream {
     li.ayah p {
       width: 100%;
       @extend .font-amiri;
+    }
+  }
+
+  footer {
+    .sound-on.icon, .sound-off.icon {
+      position: relative;
+      right: 10px;
     }
   }
 }

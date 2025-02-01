@@ -26,6 +26,8 @@ export function SurahStream({ surah, locale, t }: Props) {
   const articleRef = useRef<HTMLElement>(null);
   const readyToRender = stream.length > 0;
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
+  const isRTL = locale.direction === "rtl";
+  const isLTR = locale.direction === "ltr";
 
   useEffect(() => {
     const el = articleRef.current;
@@ -62,32 +64,37 @@ export function SurahStream({ surah, locale, t }: Props) {
         isPaused={isPaused}
         t={t}
       />
-      <footer className="flex justify-between items-center h-16 text-lg">
-        {!endOfStream && isPaused && <PlayIcon onClick={() => setIsPaused(false)} />}
-        {!endOfStream && !isPaused && <PauseIcon onClick={() => setIsPaused(true)} />}
+      <footer
+        className={classNames("flex justify-between items-center h-16 text-lg", {
+          "flex-row-reverse": isRTL,
+          "flex-row": isLTR,
+        })}
+      >
+        <Timer
+          locale={locale}
+          surah={surah}
+          ayah={ayah}
+          isPaused={isPaused}
+          audio={audio}
+          onComplete={(surah, ayah) => {
+            const layah = surah.ayat[surah.ayat.length - 1];
+            if (!layah || !ayah) {
+              return;
+            } else if (layah.id === ayah.id) {
+              setEndOfStream(true);
+            } else {
+              setStream([...stream, surah.ayat[ayah.id]]);
+            }
+          }}
+        />
         <AudioControl audio={audio} surah={surah} ayah={ayah} hidden={endOfStream} />
         <span
           className={classNames({
             hidden: endOfStream || audio.showStalledIcon,
           })}
         >
-          <Timer
-            locale={locale}
-            surah={surah}
-            ayah={ayah}
-            isPaused={isPaused}
-            audio={audio}
-            onComplete={(surah, ayah) => {
-              const layah = surah.ayat[surah.ayat.length - 1];
-              if (!layah || !ayah) {
-                return;
-              } else if (layah.id === ayah.id) {
-                setEndOfStream(true);
-              } else {
-                setStream([...stream, surah.ayat[ayah.id]]);
-              }
-            }}
-          />
+          {!endOfStream && isPaused && <PlayIcon onClick={() => setIsPaused(false)} />}
+          {!endOfStream && !isPaused && <PauseIcon onClick={() => setIsPaused(true)} />}
         </span>
         {audio.showStalledIcon && <StalledIcon />}
         <span className={classNames({ hidden: !endOfStream })}>
