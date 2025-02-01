@@ -85,8 +85,6 @@ provides the following recitations:
 
 - Mishari bin Rashed Alafasy <br>
 	https://al-quran-audio.reflectslight.io/alafasy
-- Ahmad bin Ali Al-Ajmi <br>
-	https://al-quran-audio.reflectslight.io/alajmi
 - Sahl Yassin <br>
 	https://al-quran-audio.reflectslight.io/yassin
 - Hani ar-Rifai <br>
