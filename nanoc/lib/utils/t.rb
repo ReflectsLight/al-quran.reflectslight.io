@@ -42,7 +42,7 @@ module Utils::T
   #  Returns the correct pluralization of "ayah" or "ayat"
   def ayat(locale, n)
     if locale == "ar"
-      n >= 11 ? t(locale, "ayah") : t(locale, "ayat")
+      (n >= 11) ? t(locale, "ayah") : t(locale, "ayat")
     elsif locale == "fa"
       t(locale, "ayah")
     else
