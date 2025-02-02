@@ -10,7 +10,9 @@
       content="<%= t(
         context.locale,
         'meta.stream.description',
-        {surah_name: context.locale == 'en' ? context.surah.translitName : context.surah.name, surah_number: context.surah.id}
+        {surah_name: (context.locale == 'en' ? context.surah.translitName : context.surah.name),
+         surah_number: n(context.locale, context.surah.id),
+         ayat_count: n(context.locale, context.surah.numberOfAyah)}
       ) %>"
     >
     <%= erb("_version.html.erb") %>

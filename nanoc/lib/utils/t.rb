@@ -6,6 +6,21 @@
 # locales / languages
 module Utils::T
   ##
+  # @param [#to_s] num
+  #  A western numeral
+  # @return [String]
+  #  The numeral as an Eastern Arabic numeral
+  def n(locale, num)
+    if ["ar", "fa"].include?(locale)
+      num.to_s.each_char.map do |c|
+        eastern_numerals.fetch(c)
+      end.join
+    else
+      num.to_s
+    end
+  end
+
+  ##
   # @param [String] locale
   #  Locale (eg "en")
   # @param [String] key
@@ -22,5 +37,12 @@ module Utils::T
 
   def tdata
     @tdata ||= Ryo.from_json(path: File.join(dirs.content, "json", "t.json"))
+  end
+
+  def eastern_numerals
+    @eastern_numerals ||= {
+      '0' => '٠', '1' => '١', '2' => '٢', '3' => '٣', '4' => '٤',
+      '5' => '٥', '6' => '٦', '7' => '٧', '8' => '٨', '9' => '٩'
+    }
   end
 end
