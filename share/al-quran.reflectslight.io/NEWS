@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Replace previous green with a more vibrant green
+The previous green theme was too dark, especially on mobile devices.
+The new green color is more vibrant, and looks good on both my laptop
+and my phone
+
 **** Always render ~SurahIndex.tsx~ with a single column
 The ~SurahIndex.tsx~ component now renders one column instead of two
 for RTL languages. The change was made to be consistent across all

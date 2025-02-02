@@ -1,5 +1,15 @@
+:root {
+  --theme-green: rgb(90, 180, 120);
+}
+
 .root .content.theme.green {
-  --primary-color: #6d765b;
+  --primary-color: var(--theme-green);
   --secondary-color: #FFF;
   --accent-color: #444;
+}
+
+.root .content.theme {
+  .green {
+    background: var(--theme-green) !important;
+  }
 }

@@ -1,5 +1,15 @@
+:root {
+  --theme-blue: rgb(51, 131, 195);
+}
+
 .root .content.theme.blue {
-  --primary-color: #3383C3;
+  --primary-color: var(--theme-blue);
   --secondary-color: #FFF;
   --accent-color: #444;
+}
+
+.root .content.theme {
+  .blue {
+    background: var(--theme-blue) !important;
+  }
 }
