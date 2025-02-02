@@ -2,6 +2,16 @@
 
 * vNEXT
 
+**** Add SEO improvements
+The meta descriptions for all pages were revisited once again, with
+an eye to increase uniqueness and quality - particularly for the
+surah-stream.html.erb pages
+
+**** Add method to translate western numerals to eastern numerals
+A new Ruby method has been added to the ~T~ module. It can translate
+a western numeral to an eastern numeral, and it is used during the
+generation of meta descriptions
+
 **** Replace previous green with a more vibrant green
 The previous green theme was too dark, especially on mobile devices.
 The new green color is more vibrant, and looks good on both my laptop
