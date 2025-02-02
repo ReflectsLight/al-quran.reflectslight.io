@@ -15,7 +15,7 @@
         "description": "Read and listen to The Noble Quran in Arabic, with English & Farsi translations. Browse all 114 surahs in a unique and easy-to-read format."
       },
       "stream": {
-        "description": "Read and listen to “%{surah_name}” from The Noble Quran (Surah %{surah_number}, %{ayat_count} ayat). Read and listen in Arabic, with English & Farsi translations."
+        "description": "Read and listen to “%{surahName}” from The Noble Quran (surah %{surahId} with %{numberOfAyah} %{ayat}). Read and listen in Arabic, with English & Farsi translations."
       },
       "random": {
         "description": "Read and listen to a random surah from The Noble Quran in Arabic, with English & Farsi translations."
@@ -156,7 +156,7 @@
         "description": "اقرأ واستمع إلى القرآن الكريم باللغة العربية، مع ترجمات بالإنجليزية والفارسية. تصفح جميع السور الـ ١١٤ بسهولة وبأسلوب فريد وسهل القراءة."
       },
       "stream": {
-        "description": "اقرأ واستمع إلى «%{surah_name}» من القرآن الكريم (سورة %{surah_number}، %{ayat_count} آية). استمتع بتلاوتها بالعربية، مع ترجمات بالإنجليزية والفارسية."
+        "description": "اقرأ واستمع إلى «%{surahName}» من القرآن الكريم (سورة %{surahId} مع %{numberOfAyah} %{ayat}). استمتع بتلاوتها بالعربية، مع ترجمات بالإنجليزية والفارسية."
       },
       "random": {
         "description": "اقرأ واستمع إلى سورة عشوائية من القرآن الكريم باللغة العربية، مع ترجمات بالإنجليزية والفارسية."
@@ -297,7 +297,7 @@
         "description": "قرآن کریم را به زبان عربی، با ترجمه‌های انگلیسی و فارسی بخوانید و بشنوید. همه ۱۱۴ سوره را به آسانی و در قالبی منحصر‌به‌فرد مرور کنید."
       },
       "stream": {
-        "description": "سوره «%{surah_name}» از قرآن کریم (سوره %{surah_number}، %{ayat_count} آیه) را بخوانید و بشنوید. آن را به عربی بخوانید و بشنوید، با ترجمه‌های انگلیسی و فارسی."
+        "description": "سوره «%{surahName}» از قرآن کریم (سوره %{surahId} با %{numberOfAyah} %{ayat}). آن را به عربی بخوانید و بشنوید، با ترجمه‌های انگلیسی و فارسی."
       },
       "random": {
         "description": "یک سوره تصادفی از قرآن کریم را به زبان عربی، با ترجمه‌های انگلیسی و فارسی بخوانید و بشنوید."

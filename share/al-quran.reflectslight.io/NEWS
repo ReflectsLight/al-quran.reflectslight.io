@@ -2,15 +2,33 @@
 
 * vNEXT
 
-**** Add SEO improvements
+**** Revise meta descriptions
 The meta descriptions for all pages were revisited once again, with
 an eye to increase uniqueness and quality - particularly for the
 surah-stream.html.erb pages
 
-**** Add method to translate western numerals to eastern numerals
+**** Add plurization method to ~T~
+A new Ruby method has been added to the ~T~ module. It can determine
+what word to use when describing the number of ayahs in a surah. The
+Arabic locale is the most nuanced, with different words used depending
+on the number of ayah. This method is used during the generation of
+meta descriptions
+
+**** Add western numeral => eastern numeral translation method
 A new Ruby method has been added to the ~T~ module. It can translate
 a western numeral to an eastern numeral, and it is used during the
 generation of meta descriptions
+
+**** Extend length of <title> tag
+The <title> tag now includes the "The Noble Quran" as text in
+addition to the name of the surah. This change was recommended
+by the Bing search engine. The previous title was flagged as
+too short
+
+**** Add h1 header
+The header contains an anchor, and the anchor now wraps its
+text within a h1 tag. This change implements a recommendation
+from the Bing search engine
 
 **** Replace previous green with a more vibrant green
 The previous green theme was too dark, especially on mobile devices.
@@ -47,17 +65,6 @@ audio file was always pulled from ~durations.json~ instead
 of being pulled from the MP3 file. The fix for this bug saw
 an overhaul of the audio implementation with significant
 improvements to the audio player. Reported by [[https://github.com/farooqkz][@farooqkz]]
-
-**** Extend length of <title> tag
-The <title> tag now includes the "The Noble Quran" as text in
-addition to the name of the surah. This change was recommended
-by the Bing search engine. The previous title was flagged as
-too short
-
-**** Add h1 header
-The header contains an anchor, and the anchor now wraps its
-text within a h1 tag. This change implements a recommendation
-from the Bing search engine
 
 **** Add zoom for large screens
 Apply zoom of 0.9 for devices with a height larger than

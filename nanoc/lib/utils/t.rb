@@ -33,6 +33,23 @@ module Utils::T
     format(str, local_assigns)
   end
 
+  ##
+  # @param [String] locale
+  #  Locale (eg "en")
+  # @param [Integer] n
+  #  Number of ayah
+  # @return [String]
+  #  Returns the correct pluralization of "ayah" or "ayat"
+  def ayat(locale, n)
+    if locale == "ar"
+      n >= 11 ? t(locale, "ayah") : t(locale, "ayat")
+    elsif locale == "fa"
+      t(locale, "ayah")
+    else
+      t(locale, "ayat")
+    end
+  end
+
   private
 
   def tdata
