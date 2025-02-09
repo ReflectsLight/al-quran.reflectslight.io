@@ -12,6 +12,7 @@
 
 .root .content.theme {
   .green {
-    background: var(--theme-green-primary) !important;
+    background: var(--theme-green-primary);
+    border: 1px var(--theme-green-secondary) solid;
   }
 }

@@ -19,7 +19,7 @@ export function ThemeSelect({ locale, theme, setTheme }: Props) {
           <Select.Option
             key={i}
             onClick={() => setTheme(t)}
-            className={classNames("flex w-10 h-6", {
+            className={classNames("flex w-10 h-6 mb-1", {
               "justify-start": isRTL,
               "justify-end": isLTR,
             })}
