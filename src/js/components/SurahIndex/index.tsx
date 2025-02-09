@@ -46,17 +46,17 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span className="background-primary color-secondary ml-2 mr-3 font-semibold w-10 text-center">
+                <span className="background-primary color-white ml-2 mr-3 font-semibold w-10 text-center">
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (
-                <span className="flex items-center font-extrabold justify-center color-secondary background-primary w-8 h-8 p-1 ml-5 rounded">
+                <span className="background-primary color-white flex items-center font-extrabold justify-center w-8 h-8 p-1 ml-5 rounded">
                   {formatNumber(locale, surah.id)}
                 </span>
               )}
-              <span>{surah.name}</span>
+              <span className="color-secondary">{surah.name}</span>
               {locale.direction === "ltr" && (
-                <div className="flex justify-end grow pr-3">
+                <div className="flex color-secondary justify-end grow pr-3">
                   <div className="flex flex-col">
                     <span className="transliterated" lang="en">
                       {surah.translitName}

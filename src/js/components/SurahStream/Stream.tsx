@@ -58,7 +58,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 </span>
               </span>
               <p
-                className={classNames("m-0 color-accent", {
+                className={classNames("m-0 color-secondary", {
                   "font-kanit": isLTR,
                   "font-amiri text-2xl mt-5": isRTL,
                 })}

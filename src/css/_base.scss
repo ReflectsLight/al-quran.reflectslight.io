@@ -79,7 +79,7 @@ body .root .content.theme {
   header {
     a[data-testid="h1"] {
       background: var(--primary-color);
-      color: var(--secondary-color);
+      color: #FFF;
 
       h1 {
         font-size: 1em;
@@ -89,7 +89,7 @@ body .root .content.theme {
   }
 
   ul.body {
-    scrollbar-color: var(--primary-color) var(--secondary-color);
+    scrollbar-color: var(--primary-color) #FFF;
   }
 
   .color-primary {
@@ -97,11 +97,15 @@ body .root .content.theme {
   }
 
   .color-secondary {
-    color: var(--secondary-color) !important;
+    color: var(--secondary-color);
   }
 
   .color-accent {
     color: var(--accent-color);
+  }
+
+  .color-white {
+    color: #FFF;
   }
 
   .background-primary {
@@ -109,7 +113,7 @@ body .root .content.theme {
   }
 
   .background-secondary {
-    background: var(--secondary-color);
+    background: #FFF;
   }
 
   .background-accent {

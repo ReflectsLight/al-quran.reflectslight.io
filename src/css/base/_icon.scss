@@ -130,14 +130,14 @@
   ul.body.stream li, footer {
     .play.icon {
       fill: var(--primary-color);
-      stroke: var(--secondary-color);
+      stroke: #FFF;
       stroke-width: 2px;
     }
 
     .pause.icon {
       rect {
         fill: var(--primary-color);
-        stroke: var(--secondary-color);
+        stroke: #FFF;
         stroke-width: 1px;
       }
     }
@@ -155,12 +155,12 @@
     .right-arrow.icon,
     .left-arrow.icon {
       g {
-        fill: var(--secondary--color);
+        fill: #FFF;
       }
     }
   }
 
   .stalled.icon {
-    div { background: var(--secondary-color); }
+    div { background: #FFF; }
   }
 }

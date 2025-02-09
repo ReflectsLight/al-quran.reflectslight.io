@@ -18,9 +18,9 @@
   .react-select.language-select {
     li a {
       background: var(--primary-color);
-      color: var(--secondary-color);
+      color: #FFF;
       &:active, &:visited, &:link {
-        color: var(--secondary-color);
+        color: #FFF;
       }
     }
   }

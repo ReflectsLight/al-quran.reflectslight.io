@@ -32,20 +32,12 @@ body .root .content.theme {
 
   footer {
     a {
-      color: var(--accent-color);
+      color: var(--secondary-color);
       &:active, &:link, &:visited {
-        color: var(--accent-color);
+        color: var(--secondary-color);
       }
       &:hover {
         font-weight: bold;
-      }
-    }
-
-    input {
-      color: var(--accent-color);
-      border: 1px solid var(--primary-color);
-      &:focus {
-        outline-color: var(--primary-color);
       }
     }
 
