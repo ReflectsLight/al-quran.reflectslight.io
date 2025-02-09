@@ -2,6 +2,13 @@
 
 * vNEXT
 
+**** Optimize ~SurahStream.tsx~ for search engine bots
+The ~SurahStream.tsx~ component is now rendered immediately for search
+engine bots to improve the chances of individual surahs being indexed.
+This change is based on the assumption that search engine bots may not
+recognize that content is being streamed ayah by ayah, even with
+JavaScript enabled
+
 **** Revise meta descriptions
 The meta descriptions for all pages were revisited once again, with
 an eye to increase uniqueness and quality - particularly for the

@@ -28,6 +28,10 @@ export function SurahStream({ surah, locale, t }: Props) {
   const ayah: Maybe<Ayah> = stream[stream.length - 1];
   const isRTL = locale.direction === "rtl";
   const isLTR = locale.direction === "ltr";
+  const isSearchEngineBot = useMemo(() => {
+    const robots = [/Googlebot/i, /Bingbot/i, /BaiduSpider/i, /YandexBot/i, /DuckDuckBot/i];
+    return robots.some((robot) => robot.test(navigator.userAgent));
+  }, []);
 
   useEffect(() => {
     const el = articleRef.current;
@@ -41,6 +45,12 @@ export function SurahStream({ surah, locale, t }: Props) {
       setStream([surah.ayat[0]]);
     }
   }, [endOfStream]);
+
+  useEffect(() => {
+    if (isSearchEngineBot) {
+      setStream([...surah.ayat]);
+    }
+  }, []);
 
   return (
     <article
