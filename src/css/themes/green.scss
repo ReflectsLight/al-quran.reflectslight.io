@@ -1,15 +1,17 @@
 :root {
-  --theme-green: rgb(0, 168, 107);
+  --theme-green-primary: rgb(0, 168, 107);
+  --theme-green-secondary: rgb(0, 120, 77);
+  --theme-green-accent: #444;
 }
 
 .root .content.theme.green {
-  --primary-color: var(--theme-green);
-  --secondary-color: #444;
-  --accent-color: rgb(0, 120, 77);
+  --primary-color: var(--theme-green-primary);
+  --secondary-color: var(--theme-green-secondary);
+  --accent-color: var(--theme-green-accent);
 }
 
 .root .content.theme {
   .green {
-    background: var(--theme-green) !important;
+    background: var(--theme-green-primary) !important;
   }
 }

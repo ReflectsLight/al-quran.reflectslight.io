@@ -12,6 +12,10 @@ body .root .content.theme {
     }
 
     li.surah a {
+      span[data-surahid] {
+        background: var(--primary-color);
+        color: #FFF;
+      }
       &:visited, &:active, &:link {
         text-decoration: none;
       }
@@ -32,9 +36,9 @@ body .root .content.theme {
 
   footer {
     a {
-      color: var(--secondary-color);
+      color: var(--accent-color);
       &:active, &:link, &:visited {
-        color: var(--secondary-color);
+        color: var(--accent-color);
       }
       &:hover {
         font-weight: bold;

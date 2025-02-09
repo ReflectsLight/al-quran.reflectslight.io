@@ -1,15 +1,20 @@
 :root {
-  --theme-blue: rgb(51, 131, 195);
+  --theme-blue-primary: rgb(51, 131, 195);
+  --theme-blue-secondary: rgb(0, 86, 164);
+  --theme-blue-accent: #444;
+
 }
 
 .root .content.theme.blue {
-  --primary-color: var(--theme-blue);
-  --secondary-color: #444;
-  --accent-color: rgb(0, 86, 164);
+  --primary-color: var(--theme-blue-primary);
+  --secondary-color: var(--theme-blue-secondary);
+  --accent-color: var(--theme-blue-accent);
 }
 
 .root .content.theme {
-  .blue {
-    background: var(--theme-blue) !important;
+  .theme-select {
+    .blue {
+      background: var(--theme-blue-primary);
+    }
   }
 }

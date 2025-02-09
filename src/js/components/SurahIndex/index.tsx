@@ -42,21 +42,21 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         {index.map((surah, key) => (
           <li className="flex justify-center surah w-full" key={key}>
             <a
-              className="flex items-center color-primary no-underline rounded w-11/12 h-14"
+              className="flex items-center no-underline rounded w-11/12 h-14"
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span className="background-primary color-white ml-2 mr-3 font-semibold w-10 text-center">
+                <span data-surahid={surah.id} className="ml-2 mr-3 font-semibold w-10 text-center">
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (
-                <span className="background-primary color-white flex items-center font-extrabold justify-center w-8 h-8 p-1 ml-5 rounded">
+                <span data-surahid={surah.id} className="flex items-center font-extrabold justify-center w-8 h-8 p-1 ml-5 rounded">
                   {formatNumber(locale, surah.id)}
                 </span>
               )}
-              <span className="color-secondary">{surah.name}</span>
+              <span>{surah.name}</span>
               {locale.direction === "ltr" && (
-                <div className="flex color-secondary justify-end grow pr-3">
+                <div className="flex justify-end grow pr-3">
                   <div className="flex flex-col">
                     <span className="transliterated" lang="en">
                       {surah.translitName}
@@ -73,7 +73,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       </ul>
       <footer className="flex flex-row justify-center mb-5 h-12 text-lg">
         <a
-          className="flex flex-row items-center color-black no-underline"
+          className="flex flex-row items-center no-underline"
           href={`/${locale.name}/random/`}
         >
           {t(locale, "ChooseRandomChapter")}
