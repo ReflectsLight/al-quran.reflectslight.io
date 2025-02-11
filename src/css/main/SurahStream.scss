@@ -15,6 +15,9 @@ body .root .content.theme {
       }
       animation: FadeIn 1s;
     }
+    li.ayah p {
+      color: var(--accent-color);
+    }
   }
 }
 
