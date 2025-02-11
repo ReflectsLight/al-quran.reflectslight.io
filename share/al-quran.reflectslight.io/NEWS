@@ -4,10 +4,10 @@
 
 **** Replace opengraph images with new set of images
 The old set of images have been replaced by a new set of images
-imported via the [[https://github.com/ReflectsLight/surah-name-glyphs][surah-name-glyphs]] project. The primary difference
-is the color scheme, which is now more vibrant and matches the
-default "blue" theme used by the https://al-quran.reflectslight.io
-website
+imported via the [[https://github.com/ReflectsLight/surah-name-glyphs][surah-name-glyphs]] project.
+The primary difference is the color scheme, which is now more
+vibrant and matches the default "blue" theme used by the
+https://al-quran.reflectslight.io website
 
 **** Optimize ~SurahStream.tsx~ for search engine bots
 The ~SurahStream.tsx~ component is now rendered immediately for search
