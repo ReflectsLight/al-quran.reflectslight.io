@@ -87,8 +87,7 @@ body .root .content.theme.rtl {
     footer {
       a {
         &:hover {
-          font-weight: normal;
-          font-family: "Cairo Bold";
+          font-variation-settings: 'wght' 700;
         }
       }
     }

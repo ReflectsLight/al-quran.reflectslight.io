@@ -7,9 +7,8 @@ import { formatNumber } from "~/lib/t";
 
   function getFonts() {
     return [
-      item.font("Cairo Regular", "url(/fonts/cairo-regular.ttf)"),
-      item.font("Noto Sans", "url(/fonts/NotoSans-VariableFont_wdth,wght.ttf)"),
-      doc.dir === "rtl" ? item.font("Cairo Bold", "url(/fonts/cairo-bold.ttf)") : null,
+      item.font("Cairo", "url(/fonts/Cairo-VariableFont_slnt,wght.ttf)"),
+      item.font("Noto Sans", "url(/fonts/NotoSans-VariableFont_wdth,wght.ttf)")
     ].filter((i) => !!i);
   }
 

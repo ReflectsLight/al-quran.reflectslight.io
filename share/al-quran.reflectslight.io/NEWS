@@ -2,7 +2,13 @@
 
 * vNEXT
 
-**** Replace "Kanit Regular" with variable variant of "Noto Sans" font
+**** Replace "Cairo (Regular|Bold)" with variable "Cairo" font
+The "Cairo Regular" and "Cairo Bold" fonts have been replaced with a
+variable variant of the "Cairo" font. This change reduces the number
+of font requests by one, and gives us more control over the font's
+weight and style
+
+**** Replace "Kanit Regular" with variable "Noto Sans" font
 The "Kanit Regular" font has been replaced with a variable variant
 of the "Noto Sans" font. This change gives us more control over the
 font weight, which could appear excessively bold on some devices
