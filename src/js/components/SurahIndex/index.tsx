@@ -46,11 +46,17 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span data-surahid={surah.id} className="ml-2 mr-3 font-semibold w-10 text-center">
+                <span
+                  data-surahid={surah.id}
+                  className="ml-2 mr-3 font-semibold w-10 text-center border-secondary"
+                >
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (
-                <span data-surahid={surah.id} className="flex items-center font-extrabold justify-center w-8 h-8 p-1 ml-5 rounded">
+                <span
+                  data-surahid={surah.id}
+                  className="flex items-center font-extrabold justify-center w-8 h-8 p-1 ml-5 rounded border-secondary"
+                >
                   {formatNumber(locale, surah.id)}
                 </span>
               )}
