@@ -18,7 +18,7 @@ export function LanguageSelect({ locale }: Props) {
             <Select.Option
               key={i}
               className={classNames(
-                "flex flex-col h-6 w-full items-center justify-center no-underline mb-1 rounded border-secondary",
+                "flex flex-col h-6 w-full items-center justify-center no-underline mb-1 rounded border-secondary text-sm",
                 l.direction === "rtl" ? "font-cairo" : "font-manrope",
                 l.direction,
                 l.name === locale.name ? "active" : undefined,
