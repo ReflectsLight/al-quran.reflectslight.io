@@ -49,7 +49,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 <span
                   className={classNames("color-primary", {
                     "font-cairo-bold": isRTL,
-                    "font-semibold font-kanit": isLTR,
+                    "font-bold": isLTR,
                   })}
                 >
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
@@ -59,7 +59,6 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
               </span>
               <p
                 className={classNames("m-0", {
-                  "font-kanit": isLTR,
                   "font-amiri text-2xl mt-5": isRTL,
                 })}
               >

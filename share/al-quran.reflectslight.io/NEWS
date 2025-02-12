@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Replace "Kanit Regular" with variable variant of "Manrope" font
+The "Kanit Regular" font has been replaced with a variable variant
+of the "Manrope" font. This change gives us more control over the
+font weight, which could appear excessively bold on some devices
+
 **** Replace opengraph images with new set of images
 The old set of images have been replaced by a new set of images
 imported via the [[https://github.com/ReflectsLight/surah-name-glyphs][surah-name-glyphs]] project.

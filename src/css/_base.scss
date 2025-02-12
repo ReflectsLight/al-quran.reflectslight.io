@@ -27,7 +27,8 @@ html {
     }
 
     .ltr {
-      font-family: "Kanit Regular";
+      font-family: "Manrope";
+      font-variation-settings: "wght" 500;
       direction: ltr;
     }
 
@@ -48,8 +49,8 @@ html {
       overflow-y: auto;
     }
 
-    .font-kanit {
-      font-family: "Kanit Regular";
+    .font-manrope {
+      font-family: "Manrope";
     }
 
     .font-cairo {
