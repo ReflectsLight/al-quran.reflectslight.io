@@ -2,9 +2,9 @@
 
 * vNEXT
 
-**** Replace "Kanit Regular" with variable variant of "Manrope" font
+**** Replace "Kanit Regular" with variable variant of "Noto Sans" font
 The "Kanit Regular" font has been replaced with a variable variant
-of the "Manrope" font. This change gives us more control over the
+of the "Noto Sans" font. This change gives us more control over the
 font weight, which could appear excessively bold on some devices
 
 **** Replace opengraph images with new set of images

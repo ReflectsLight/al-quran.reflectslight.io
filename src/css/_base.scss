@@ -23,11 +23,12 @@ html {
     margin: 0;
 
     .root {
+      @extend .text-base;
       height: 100%;
     }
 
     .ltr {
-      font-family: "Manrope";
+      font-family: "Noto Sans";
       font-variation-settings: "wght" 500;
       direction: ltr;
     }
@@ -49,8 +50,8 @@ html {
       overflow-y: auto;
     }
 
-    .font-manrope {
-      font-family: "Manrope";
+    .font-notosans {
+      font-family: "Noto Sans";
     }
 
     .font-cairo {

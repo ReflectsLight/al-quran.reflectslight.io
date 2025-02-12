@@ -75,7 +75,7 @@ export function SurahStream({ surah, locale, t }: Props) {
         t={t}
       />
       <footer
-        className={classNames("flex justify-between items-center h-16 text-lg", {
+        className={classNames("flex justify-between items-center h-16", {
           "flex-row-reverse": isRTL,
           "flex-row": isLTR,
         })}

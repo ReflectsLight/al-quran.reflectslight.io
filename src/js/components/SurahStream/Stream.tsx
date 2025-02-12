@@ -24,7 +24,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
       <ul
         lang={locale.name}
         className={classNames(
-          "body stream scroll-y text-lg list-none p-0 m-0 h-5/6 mt-4",
+          "body stream scroll-y list-none p-0 m-0 h-5/6 mt-4",
           ...className,
         )}
         ref={ref}

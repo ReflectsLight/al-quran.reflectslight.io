@@ -37,7 +37,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       </Head>
       <ul
         lang={locale.name}
-        className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6 text-lg"
+        className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6"
       >
         {index.map((surah, key) => (
           <li className="flex justify-center surah w-full" key={key}>
@@ -77,7 +77,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
           </li>
         ))}
       </ul>
-      <footer className="flex flex-row justify-center mb-5 h-12 text-lg">
+      <footer className="flex flex-row justify-center mb-5 h-12">
         <a
           className="flex flex-row items-center no-underline"
           href={`/${locale.name}/random/`}
