@@ -10,7 +10,9 @@ import { formatNumber } from "~/lib/t";
     return [
       item.font("Cairo", "url(/fonts/Cairo-VariableFont_slnt,wght.ttf)"),
       item.font("Noto Sans", "url(/fonts/NotoSans-VariableFont_wdth,wght.ttf)"),
-      doc.dir === "rtl" ? item.font("Amiri Regular", "url(/fonts/amiri-regular.ttf)") : null,
+      doc.dir === "rtl"
+        ? item.font("Noto Naskh Arabic", "url(/fonts/NotoNaskhArabic-VariableFont_wght.ttf)")
+        : null,
     ].filter((i) => !!i);
   }
 
