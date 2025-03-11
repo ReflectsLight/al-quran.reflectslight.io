@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Bump height of "refresh" icon
+The ~refresh.icon~ was not rendering correctly on my laptop -- with a
+part of the icon being cut off. This change fixes the issue by bumping
+the height of the icon
+
 **** Replace "Amiri Quran Regular" with variable "Noto Naskh Arabic" font
 The "Amiri Quran Regular" font has been replaced with a variable variant
 of the "Noto Naskh Arabic" font
@@ -270,7 +275,7 @@ imported from the ~kaios/main~ branch
 Set the default audio URL to
 https://audio.al-quran.reflectslight.io/rifai
 
-******** Improve KaiOS support
+**** Improve KaiOS support
 Optimize the layout for KaiOS devices through specialized
 media queries. A new branch (~kaios/main~) will focus on
 KaiOS support

@@ -45,39 +45,6 @@
     cursor: pointer;
   }
 
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1.25rem;
-    width: 1.25rem;
-
-    .play.icon {
-      height: 1rem;
-      width: 1rem;
-    }
-
-    .pause.icon {
-      height: 1.25rem;
-      width: 1.25rem;
-      g {
-        fill: var(--primary-color);
-      }
-    }
-  }
-
-  .refresh.icon,
-  .right-arrow.icon,
-  .left-arrow.icon {
-    fill: var(--primary-color);
-    height: 1rem;
-    width: 1rem;
-  }
-  .left-arrow.icon {
-    transform: rotate(180deg);
-  }
-
-
   ul.body.stream span {
     .sound-on.icon,
     .sound-off.icon {
@@ -87,6 +54,31 @@
   }
 
   footer {
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.25rem;
+      width: 1.25rem;
+
+      .play.icon {
+        height: 1rem;
+        width: 1rem;
+      }
+
+      .pause.icon {
+        height: 1.25rem;
+        width: 1.25rem;
+        g {
+          fill: var(--primary-color);
+        }
+      }
+    }
+
+    .refresh.icon {
+      height: 1.10rem;
+      width: 1.10rem;
+    }
     .sound-on.icon,
     .sound-off.icon {
       width: 1.10rem;
