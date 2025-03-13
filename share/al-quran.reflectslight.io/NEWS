@@ -2,6 +2,10 @@
 
 * vNEXT
 
+**** Apply 90% width to surah content
+The width of the surah content is now 90% the width of its container.
+This change only applies to RTL languages (Arabic, Farsi)
+
 **** Bump height of "refresh" icon
 The ~refresh.icon~ was not rendering correctly on my laptop -- with a
 part of the icon being cut off. This change fixes the issue by bumping
