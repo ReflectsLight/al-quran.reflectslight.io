@@ -19,8 +19,8 @@ export function LanguageSelect({ locale }: Props) {
               key={i}
               className={classNames(
                 "flex flex-col h-6 w-full items-center justify-center no-underline mb-1 rounded border-secondary text-sm",
-                l.direction === "rtl" ? "font-cairo" : "font-notosans",
                 l.direction,
+                l.direction === "rtl" ? "font-noto-sans-arabic" : "font-noto-sans",
                 l.name === locale.name ? "active" : undefined,
               )}
               value={l.name}

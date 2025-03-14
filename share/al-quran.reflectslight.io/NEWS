@@ -11,15 +11,27 @@ The ~refresh.icon~ was not rendering correctly on my laptop -- with a
 part of the icon being cut off. This change fixes the issue by bumping
 the height of the icon
 
+**** Remove font-weight classes from ~tail.css~
+The font-weight classes have been removed from ~tail.css~ and replaced
+by those in ~src/css/base/_typography.scss~. This change was made to
+avoid conflicts with the font-weight classes in ~src/css/base/_typography.scss~ --
+otherwise the font-weight could be applied incorrectly
+
+**** Add ~src/css/base/_typography.scss~
+This new file contains the typography rules for fonts that include
+font-family and font-weight convenience classes that target the
+variable fonts "Noto Sans", "Noto Sans Arabic", and "Noto Naskh Arabic"
+
 **** Replace "Amiri Quran Regular" with variable "Noto Naskh Arabic" font
 The "Amiri Quran Regular" font has been replaced with a variable variant
-of the "Noto Naskh Arabic" font
+of the "Noto Naskh Arabic" font. The Arabic version of the website uses
+this font to display surah content while other content uses the
+"Noto Sans Arabic" font
 
-**** Replace "Cairo (Regular|Bold)" with variable "Cairo" font
-The "Cairo Regular" and "Cairo Bold" fonts have been replaced with a
-variable variant of the "Cairo" font. This change reduces the number
-of font requests by one, and gives us more control over the font's
-weight and style
+**** Replace "Cairo" with variable "Noto Sans Arabic" font
+The "Cairo" font has been replaced with the "Noto Sans Arabic" font.
+The Farsi version of the website now uses the "Noto Sans Arabic" font
+exclusively, including for surah content
 
 **** Replace "Kanit Regular" with variable "Noto Sans" font
 The "Kanit Regular" font has been replaced with a variable variant

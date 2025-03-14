@@ -15,8 +15,8 @@ type Props = {
 
 export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Props) {
   const className = endOfStream || isPaused ? ["scroll-y"] : [];
+  const isArabic = locale.name === "ar";
   const isRTL = locale.direction === "rtl";
-  const isLTR = locale.direction === "ltr";
   const ref = useRef<HTMLUListElement>(null);
   const audio = useAudio();
   const ul = useMemo<JSX.Element>(() => {
@@ -40,12 +40,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                   surah={surah}
                   ayah={ayah}
                 />
-                <span
-                  className={classNames("color-primary", {
-                    "font-cairo-bold": isRTL,
-                    "font-bold": isLTR,
-                  })}
-                >
+                <span className={classNames("color-primary font-bold")}>
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)}{" "}
                   {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
@@ -53,7 +48,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
               </span>
               <p
                 className={classNames("m-0", {
-                  "font-noto-naskh text-xl mt-3": isRTL,
+                  "text-xl mt-3": isArabic,
                 })}
               >
                 {ayah.body}

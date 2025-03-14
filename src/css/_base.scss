@@ -1,6 +1,7 @@
 @import "base/breakpoints";
 @import "base/icon";
 @import "base/select";
+@import "base/typography";
 @import "vendor/tail";
 
 html {
@@ -34,8 +35,8 @@ html {
     }
 
     .rtl {
-      font-family: "Cairo", "Arial", "Tahoma", sans-serif;
-      font-variation-settings: "wght" 500, "slnt" 0;
+      font-family: "Noto Sans Arabic";
+      font-variation-settings: "wght" 500;
       direction: rtl;
     }
 
@@ -49,24 +50,6 @@ html {
 
     .scroll-y {
       overflow-y: auto;
-    }
-
-    .font-notosans {
-      font-family: "Noto Sans";
-    }
-
-    .font-cairo {
-      font-family: "Cairo";
-      font-variation-settings: "wght" 500, "slnt" 0;
-    }
-
-    .font-cairo-bold {
-      font-family: "Cairo";
-      font-variation-settings: "wght" 700, "slnt" 0;
-    }
-
-    .font-noto-naskh {
-      font-family: "Noto Naskh Arabic";
     }
   }
 }
@@ -142,16 +125,5 @@ body .root .content.theme.ltr {
 /**
  * RTL languages
  */
-body .root .content.theme.rtl {
-  direction: rtl;
-  header a[data-testid="h1"] {
-    @extend .font-cairo-bold;
-  }
-}
-
-html[dir="rtl"] {
-  .font-extrabold {
-    font-family: "Cairo";
-    font-variation-settings: "wght" 800, "slnt" 0;
-  }
+body .root .content.theme {
 }

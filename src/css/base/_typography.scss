@@ -1,0 +1,45 @@
+/**
+ * font-family
+ */
+body .root .content.theme {
+  .font-noto-sans {
+    font-family: "Noto Sans";
+  }
+  .font-noto-sans-arabic {
+    font-family: "Noto Sans Arabic";
+  }
+}
+
+/**
+ * font-weight
+ */
+body .root .content.theme {
+  h1,h2,h3,h4,h5,h6,h7 {
+    font-weight: unset;
+  }
+
+  .font-thin {
+    font-variation-settings: "wght" 100, "slnt" 0;
+  }
+  .font-extralight {
+    font-variation-settings: "wght" 200, "slnt" 0;
+  }
+  .font-light {
+    font-variation-settings: "wght" 300, "slnt" 0;
+  }
+  .font-normal {
+    font-variation-settings: "wght" 400, "slnt" 0;
+  }
+  .font-medium {
+    font-variation-settings: "wght" 500, "slnt" 0;
+  }
+  .font-semibold {
+    font-variation-settings: "wght" 600, "slnt" 0;
+  }
+  .font-bold {
+    font-variation-settings: "wght" 700, "slnt" 0;
+  }
+  .font-extrabold {
+    font-variation-settings: "wght" 800, "slnt" 0;
+  }
+}
