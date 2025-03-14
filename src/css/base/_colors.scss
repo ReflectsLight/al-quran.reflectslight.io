@@ -1,0 +1,33 @@
+body .root .content.theme {
+  .color-primary {
+    color: var(--primary-color);
+  }
+
+  .color-secondary {
+    color: var(--secondary-color);
+  }
+
+  .color-accent {
+    color: var(--accent-color);
+  }
+
+  .color-white {
+    color: #FFF;
+  }
+
+  .background-primary {
+    background: var(--primary-color);
+  }
+
+  .background-secondary {
+    background: #FFF;
+  }
+
+  .background-accent {
+    background: var(--accent-color);
+  }
+
+  .border-secondary {
+    border: 0.1rem solid var(--secondary-color);
+  }
+}

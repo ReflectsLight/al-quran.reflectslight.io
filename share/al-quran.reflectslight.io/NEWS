@@ -17,6 +17,10 @@ by those in ~src/css/base/_typography.scss~. This change was made to
 avoid conflicts with the font-weight classes in ~src/css/base/_typography.scss~ --
 otherwise the font-weight could be applied incorrectly
 
+**** Add ~src/css/base/_colors.scss~
+This new file contains convenience classes for text, background and
+border colors that previously lived in ~_base.scss~
+
 **** Add ~src/css/base/_typography.scss~
 This new file contains the typography rules for fonts that include
 font-family and font-weight convenience classes that target the
@@ -29,9 +33,9 @@ this font to display surah content while other content uses the
 "Noto Sans Arabic" font
 
 **** Replace "Cairo" with variable "Noto Sans Arabic" font
-The "Cairo" font has been replaced with the "Noto Sans Arabic" font.
-The Farsi version of the website now uses the "Noto Sans Arabic" font
-exclusively, including for surah content
+The "Cairo" font has been replaced with the variable variant of the
+"Noto Sans Arabic" font. The Farsi version of the website now uses
+the "Noto Sans Arabic" font exclusively, including for surah content
 
 **** Replace "Kanit Regular" with variable "Noto Sans" font
 The "Kanit Regular" font has been replaced with a variable variant

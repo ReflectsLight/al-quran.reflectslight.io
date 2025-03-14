@@ -1,12 +1,14 @@
+@import "vendor/tail";
 @import "base/breakpoints";
 @import "base/icon";
 @import "base/select";
 @import "base/typography";
-@import "vendor/tail";
+@import "base/colors";
+@import "base/zoom";
 
 html {
   height: 100%;
-  @import "base/zoom";
+
   @media (height >= $breakpoint-md) {
     body {
       display: flex;
@@ -79,38 +81,6 @@ body .root .content.theme {
   ul.body {
     scrollbar-color: var(--primary-color) #FFF;
   }
-
-  .color-primary {
-    color: var(--primary-color);
-  }
-
-  .color-secondary {
-    color: var(--secondary-color);
-  }
-
-  .color-accent {
-    color: var(--accent-color);
-  }
-
-  .color-white {
-    color: #FFF;
-  }
-
-  .background-primary {
-    background: var(--primary-color);
-  }
-
-  .background-secondary {
-    background: #FFF;
-  }
-
-  .background-accent {
-    background: var(--accent-color);
-  }
-
-  .border-secondary {
-    border: 0.1rem solid var(--secondary-color);
-  }
 }
 
 /**
@@ -120,10 +90,4 @@ body .root .content.theme.ltr {
   header a[data-testid="h1"] {
     font-size: 1.35rem;
   }
-}
-
-/**
- * RTL languages
- */
-body .root .content.theme {
 }

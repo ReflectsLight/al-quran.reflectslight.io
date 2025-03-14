@@ -1,4 +1,4 @@
-body {
+html body {
   @import "breakpoints";
 
   @media (min-device-height: $breakpoint-md)  and
