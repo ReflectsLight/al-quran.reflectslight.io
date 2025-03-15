@@ -12,10 +12,6 @@ begin
 rescue LoadError => ex
   warn "[warn] #{ex.class}: #{ex.message}"
 end
-load "rake/tasks/format.rake"
-load "rake/tasks/nanoc.rake"
-load "rake/tasks/t.rake"
-load "rake/tasks/ci.rake"
-load "rake/tasks/server.rake"
-load "rake/tasks/favicon.rake"
+tasks = Dir["rake/tasks/*.rake"]
+tasks.each { load(_1) }
 task default: "nanoc:build"

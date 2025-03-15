@@ -1,0 +1,3 @@
+[submodule "packages/css/tail.css"]
+	path = packages/css/tail.css
+	url = https://github.com/0x1eef/tail.css

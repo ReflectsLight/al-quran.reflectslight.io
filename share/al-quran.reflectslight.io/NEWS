@@ -2,6 +2,12 @@
 
 * vNEXT
 
+**** Add ~tail.rake~
+The ~tail:build~ and ~tail:install~ rake tasks can build and install
+~tail.css~ from the git submodule available in ~/packages/css/tail.css~.
+This change makes it easier to maintain and modify the ~tail.css~ build
+process
+
 **** Apply 90% width to surah content
 The width of the surah content is now 90% the width of its container.
 This change only applies to RTL languages (Arabic, Farsi)
