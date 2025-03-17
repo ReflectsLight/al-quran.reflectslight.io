@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :tail do
   desc "Build tail.css"
   task :build do
