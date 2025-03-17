@@ -1,3 +1,4 @@
 [submodule "packages/css/tail.css"]
 	path = packages/css/tail.css
+	branch = package/al-quran.reflectslight.io
 	url = https://github.com/0x1eef/tail.css
