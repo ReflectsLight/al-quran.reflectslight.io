@@ -5,9 +5,7 @@ const DEFAULT_THEME = "blue"
 
 export function useTheme(): Result {
   const cookies = Object.fromEntries(document.cookie.split(";").map((e) => e.split("=")))
-  const [theme, setTheme] = useState<Theme>(
-    THEMES.find((t) => t === cookies.theme) || DEFAULT_THEME,
-  )
+  const [theme, setTheme] = useState<Theme>(THEMES.find((t) => t === cookies.theme) || DEFAULT_THEME)
   const set = (t: Theme) => {
     if (THEMES.includes(t)) {
       const maxAge = 3600 * 24 * 90

@@ -55,25 +55,14 @@ export function SurahStream({ surah, locale, t }: Props) {
   return (
     <article
       ref={articleRef}
-      className={classNames(
-        "flex flex-col invisible h-full content theme",
-        locale.name,
-        locale.direction,
-        theme,
-        { hidden: !readyToRender },
-      )}
+      className={classNames("flex flex-col invisible h-full content theme", locale.name, locale.direction, theme, {
+        hidden: !readyToRender,
+      })}
     >
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <Stream
-        surah={surah}
-        stream={stream}
-        locale={locale}
-        endOfStream={endOfStream}
-        isPaused={isPaused}
-        t={t}
-      />
+      <Stream surah={surah} stream={stream} locale={locale} endOfStream={endOfStream} isPaused={isPaused} t={t} />
       <footer
         className={classNames("flex justify-between items-center h-16", {
           "flex-row-reverse": isRTL,

@@ -14,18 +14,14 @@ function getFonts(locale) {
   return [
     item.font("Noto Sans", "/fonts/NotoSans-VariableFont_wdth,wght.ttf"),
     item.font("Noto Sans Arabic", "/fonts/NotoSansArabic-VariableFont_wdth,wght.ttf"),
-    locale === "ar"
-      ? item.font("Noto Naskh Arabic", "/fonts/NotoNaskhArabic-VariableFont_wght.ttf")
-      : null,
+    locale === "ar" ? item.font("Noto Naskh Arabic", "/fonts/NotoNaskhArabic-VariableFont_wght.ttf") : null,
   ].filter((i) => !!i)
 }
 
 function getItems(locale, surahId, rev) {
   return [
     ...getFonts(locale),
-    item.json(`/json/${locale}/${surahId}/index.json?v=${rev}`, {
-      className: "json surah",
-    }),
+    item.json(`/json/${locale}/${surahId}/index.json?v=${rev}`, { className: "json surah" }),
     item.script(`/js/main/vendor.js?v=${rev}`),
     item.script(`/js/main/surah-stream.js?v=${rev}`),
   ]

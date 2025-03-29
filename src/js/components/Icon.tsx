@@ -47,13 +47,7 @@ export function PlayIcon({ onClick }: Props) {
 export function PauseIcon({ onClick }: Props) {
   return (
     <span onClick={onClick} className="controls">
-      <svg
-        height="512"
-        className="pause icon"
-        viewBox="0 0 32 32"
-        width="512"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg height="512" className="pause icon" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg">
         <g id="Layer_33" data-name="Layer 33">
           <path d="m14 5v22a3 3 0 0 1 -3 3h-3a3 3 0 0 1 -3-3v-22a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3zm10-3h-3a3 3 0 0 0 -3 3v22a3 3 0 0 0 3 3h3a3 3 0 0 0 3-3v-22a3 3 0 0 0 -3-3z" />
         </g>
@@ -115,26 +109,8 @@ export function SoundOffIcon({ onClick, className }: Props) {
           strokeMiterlimit="10"
           points="4,32 4,20 16,20 34,2 34,32 34,62 16,44 4,44"
         />
-        <line
-          fill="none"
-          stroke="#000000"
-          strokeWidth="2"
-          strokeMiterlimit="10"
-          x1="42"
-          y1="23"
-          x2="60"
-          y2="41"
-        />
-        <line
-          fill="none"
-          stroke="#000000"
-          strokeWidth="2"
-          strokeMiterlimit="10"
-          x1="42"
-          y1="41"
-          x2="60"
-          y2="23"
-        />
+        <line fill="none" stroke="#000000" strokeWidth="2" strokeMiterlimit="10" x1="42" y1="23" x2="60" y2="41" />
+        <line fill="none" stroke="#000000" strokeWidth="2" strokeMiterlimit="10" x1="42" y1="41" x2="60" y2="23" />
       </g>
     </svg>
   )

@@ -28,12 +28,8 @@ export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
 
   return (
     <>
-      {audio.isEnabled && (
-        <SoundOnIcon className={className} onClick={() => audio.disable()} />
-      )}
-      {!audio.isEnabled && (
-        <SoundOffIcon className={className} onClick={() => audio.enable()} />
-      )}
+      {audio.isEnabled && <SoundOnIcon className={className} onClick={() => audio.disable()} />}
+      {!audio.isEnabled && <SoundOffIcon className={className} onClick={() => audio.enable()} />}
     </>
   )
 }

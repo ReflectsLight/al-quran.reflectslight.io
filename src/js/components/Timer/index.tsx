@@ -54,10 +54,7 @@ export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete
   }, [isPaused])
 
   useEffect(() => {
-    const noop =
-      isPaused ||
-      (audio.isEnabled &&
-        (audio.showStalledIcon || audio.isPaused || isNaN(audio.el.duration)))
+    const noop = isPaused || (audio.isEnabled && (audio.showStalledIcon || audio.isPaused || isNaN(audio.el.duration)))
     if (noop) {
       return
     } else {
@@ -80,9 +77,7 @@ export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete
         "justify-end": isRTL,
       })}
     >
-      {!ms || ms / 1000 <= 0
-        ? formatNumber(locale, 0)
-        : formatNumber(locale, ms / 1000, { maximumFractionDigits: 0 })}
+      {!ms || ms / 1000 <= 0 ? formatNumber(locale, 0) : formatNumber(locale, ms / 1000, { maximumFractionDigits: 0 })}
     </div>
   )
 }

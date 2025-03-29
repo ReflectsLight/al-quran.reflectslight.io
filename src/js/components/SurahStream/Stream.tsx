@@ -23,10 +23,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
     return (
       <ul
         lang={locale.name}
-        className={classNames(
-          "body stream scroll-y list-none p-0 m-0 h-5/6 mt-4",
-          ...className,
-        )}
+        className={classNames("body stream scroll-y list-none p-0 m-0 h-5/6 mt-4", ...className)}
         ref={ref}
       >
         {stream.map((ayah: Ayah) => {
@@ -42,8 +39,8 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 />
                 <span className={classNames("color-primary font-bold")}>
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
-                  {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)}{" "}
-                  {t(locale, "of")} {formatNumber(locale, surah.ayat.length)}
+                  {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
+                  {formatNumber(locale, surah.ayat.length)}
                 </span>
               </span>
               <p

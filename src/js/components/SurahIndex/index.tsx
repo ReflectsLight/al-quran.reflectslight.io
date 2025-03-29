@@ -35,10 +35,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
       <Head locale={locale} theme={theme} setTheme={setTheme}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      <ul
-        lang={locale.name}
-        className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6"
-      >
+      <ul lang={locale.name} className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6">
         {index.map((surah, key) => (
           <li className="flex justify-center surah w-full" key={key}>
             <a
@@ -46,10 +43,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
               href={`/${locale.name}/${surah.urlName}/`}
             >
               {locale.direction === "ltr" ? (
-                <span
-                  data-surahid={surah.id}
-                  className="ml-2 mr-3 font-semibold w-10 text-center border-secondary"
-                >
+                <span data-surahid={surah.id} className="ml-2 mr-3 font-semibold w-10 text-center border-secondary">
                   {formatNumber(locale, surah.id)}
                 </span>
               ) : (
@@ -78,10 +72,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         ))}
       </ul>
       <footer className="flex flex-row justify-center mb-5 h-12">
-        <a
-          className="flex flex-row items-center no-underline"
-          href={`/${locale.name}/random/`}
-        >
+        <a className="flex flex-row items-center no-underline" href={`/${locale.name}/random/`}>
           {t(locale, "ChooseRandomChapter")}
         </a>
       </footer>
