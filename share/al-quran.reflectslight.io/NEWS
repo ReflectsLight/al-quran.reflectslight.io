@@ -2,6 +2,12 @@
 
 * vNEXT
 
+**** Replace ~packages/typescript/postman~ with ~@0x1eef/postman~
+The ~packages/typescript/postman~ package has been replaced by
+~@0x1eef/postman~. The NPM package ~@0x1eef/postman~ includes a
+number of improvements over the previous package, including a
+more robust and flexible API
+
 **** Add ~tail.rake~
 The ~tail:build~ and ~tail:install~ rake tasks can build and install
 ~tail.css~ from the git submodule available in ~/packages/css/tail.css~.
