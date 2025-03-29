@@ -11,6 +11,7 @@
   "dependencies": {
     "classnames": "^2.3",
     "preact": "^10.23.2",
+    "@0x1eef/postman": "^0.2.0",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-jsxruntime": "npm:@preact/compat"

@@ -11,5 +11,13 @@ export default tseslint.config(
       '@typescript-eslint/no-require-imports': 0,
        'prettier/prettier': ['error', { printWidth: 95 }]
     },
+    languageOptions: {
+      globals: {
+	document: 'readonly',
+	window: 'readonly',
+	console: 'readonly',
+	setTimeout: 'readonly',
+      }
+    }
   }
 )

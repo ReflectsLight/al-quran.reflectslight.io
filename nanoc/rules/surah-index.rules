@@ -26,7 +26,7 @@ compile "/js/main/surah-index.tsx" do
   write "/js/main/surah-index.js"
 end
 
-compile "/js/loaders/surah-index-loader.ts" do
+compile "/js/loaders/surah-index-loader.js" do
   filter :webpack,
          argv: %W[--config etc/webpack.#{buildenv}.js]
   write "/js/loaders/surah-index-loader.js"

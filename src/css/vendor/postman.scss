@@ -16,17 +16,23 @@ body {
   height: 100%;
 }
 
-.postman.main div:first-child {
-  width: 200px;
-  margin: 0 auto;
+.postman.main  {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  max-width: 576px;
+  width: 95%;
+
   position: relative;
-  top: 250px;
+  top: 35%;
 }
 
 .postman.main progress {
-  width: 100%;
+  display: flex;
+  width: 50%;
+  margin-bottom: 8px;
 }
 
 .postman.main .percentage {
