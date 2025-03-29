@@ -1,19 +1,19 @@
-import { Quran } from "Quran";
-import type { TLocale } from "Quran";
-import { Select } from "~/components/Select";
-import classNames from "classnames";
+import { Quran } from "Quran"
+import type { TLocale } from "Quran"
+import { Select } from "~/components/Select"
+import classNames from "classnames"
 
 type Props = {
-  locale: TLocale;
-};
+  locale: TLocale
+}
 
 export function LanguageSelect({ locale }: Props) {
   const memo = useMemo(() => {
     return (
       <Select value={locale.name} className="language-select w-20">
         {Quran.locales.map((l: TLocale, i: number) => {
-          const path = location.pathname;
-          const href = path.replace(`/${locale.name}`, `/${l.name}`);
+          const path = location.pathname
+          const href = path.replace(`/${locale.name}`, `/${l.name}`)
           return (
             <Select.Option
               key={i}
@@ -28,10 +28,10 @@ export function LanguageSelect({ locale }: Props) {
             >
               {l.displayName}
             </Select.Option>
-          );
+          )
         })}
       </Select>
-    );
-  }, [locale.name, Quran.locales.map((l) => l.name)]);
-  return memo;
+    )
+  }, [locale.name, Quran.locales.map((l) => l.name)])
+  return memo
 }

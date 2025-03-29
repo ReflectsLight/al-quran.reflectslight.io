@@ -1,18 +1,18 @@
-import type { ReactNode } from "react";
-import { LanguageSelect, ThemeSelect } from "~/components/Select";
-import type { TLocale } from "Quran";
-import { Theme } from "~/hooks/useTheme";
-import classNames from "classnames";
+import type { ReactNode } from "react"
+import { LanguageSelect, ThemeSelect } from "~/components/Select"
+import type { TLocale } from "Quran"
+import { Theme } from "~/hooks/useTheme"
+import classNames from "classnames"
 
 type Props = {
-  locale: TLocale;
-  theme: string;
-  setTheme: (t: Theme) => void;
-  children: ReactNode;
-};
+  locale: TLocale
+  theme: string
+  setTheme: (t: Theme) => void
+  children: ReactNode
+}
 
 export function Head({ locale, theme, setTheme, children }: Props) {
-  const isRTL = locale.direction === "rtl";
+  const isRTL = locale.direction === "rtl"
   return (
     <header
       className={classNames("flex flex-col h-20 mt-4", {
@@ -40,5 +40,5 @@ export function Head({ locale, theme, setTheme, children }: Props) {
         </nav>
       </div>
     </header>
-  );
+  )
 }

@@ -1,24 +1,24 @@
-import type { Surah, Ayah, TAyat, TLocale } from "Quran";
-import { useAudio } from "~/hooks/useAudio";
-import { AudioControl } from "~/components/AudioControl";
-import { formatNumber, TFunction } from "~/lib/t";
-import classNames from "classnames";
+import type { Surah, Ayah, TAyat, TLocale } from "Quran"
+import { useAudio } from "~/hooks/useAudio"
+import { AudioControl } from "~/components/AudioControl"
+import { formatNumber, TFunction } from "~/lib/t"
+import classNames from "classnames"
 
 type Props = {
-  locale: TLocale;
-  surah: Surah;
-  stream: TAyat;
-  endOfStream: boolean;
-  isPaused: boolean;
-  t: TFunction;
-};
+  locale: TLocale
+  surah: Surah
+  stream: TAyat
+  endOfStream: boolean
+  isPaused: boolean
+  t: TFunction
+}
 
 export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Props) {
-  const className = endOfStream || isPaused ? ["scroll-y"] : [];
-  const isArabic = locale.name === "ar";
-  const isRTL = locale.direction === "rtl";
-  const ref = useRef<HTMLUListElement>(null);
-  const audio = useAudio();
+  const className = endOfStream || isPaused ? ["scroll-y"] : []
+  const isArabic = locale.name === "ar"
+  const isRTL = locale.direction === "rtl"
+  const ref = useRef<HTMLUListElement>(null)
+  const audio = useAudio()
   const ul = useMemo<JSX.Element>(() => {
     return (
       <ul
@@ -54,25 +54,25 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 {ayah.body}
               </p>
             </li>
-          );
+          )
         })}
       </ul>
-    );
-  }, [stream.length, audio.isEnabled, isPaused, endOfStream]);
+    )
+  }, [stream.length, audio.isEnabled, isPaused, endOfStream])
 
   useEffect(() => {
-    const el = ref.current;
+    const el = ref.current
     if (el) {
-      const top = el.scrollHeight;
-      el.scrollTo({ behavior: "smooth", top });
+      const top = el.scrollHeight
+      el.scrollTo({ behavior: "smooth", top })
     }
-  }, [stream.length]);
+  }, [stream.length])
 
   useEffect(() => {
     if (audio.isEnded) {
-      audio.disable();
+      audio.disable()
     }
-  }, [audio.isEnded]);
+  }, [audio.isEnded])
 
-  return ul;
+  return ul
 }

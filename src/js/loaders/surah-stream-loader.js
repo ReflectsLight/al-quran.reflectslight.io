@@ -1,7 +1,6 @@
-import { Postman, item } from "@0x1eef/postman";
-
-(function () {
-  const { rev, locale, surahId, progressBar, progressFile } = getPageState();
+import { Postman, item } from "@0x1eef/postman"
+;(function () {
+  const { rev, locale, surahId, progressBar, progressFile } = getPageState()
   const postman = Postman(
     ...getFonts(locale),
     item.json(`/json/${locale}/${surahId}/index.json?v=${rev}`, {
@@ -9,16 +8,16 @@ import { Postman, item } from "@0x1eef/postman";
     }),
     item.script(`/js/main/vendor.js?v=${rev}`),
     item.script(`/js/main/surah-stream.js?v=${rev}`),
-  );
+  )
 
   postman.addEventListener("error", (e) => {
     const {
       controller,
       item: { href },
-    } = e.detail;
-    console.error("error", href);
-    controller.abort();
-  });
+    } = e.detail
+    console.error("error", href)
+    controller.abort()
+  })
 
   postman.addEventListener("progress", (e) => {
     const {
@@ -26,18 +25,18 @@ import { Postman, item } from "@0x1eef/postman";
       item: { href },
       controller,
       progress,
-    } = e.detail;
+    } = e.detail
     if (controller.signal.aborted) {
-      return;
+      return
     } else {
-      progressBar.value = progress;
-      progressFile.innerText = href.split("/").pop().replace(/\?.*/, "");
-      if (progress === 100) setTimeout(() => append(parcel), 50);
+      progressBar.value = progress
+      progressFile.innerText = href.split("/").pop().replace(/\?.*/, "")
+      if (progress === 100) setTimeout(() => append(parcel), 50)
     }
-  });
+  })
 
-  postman.deliver();
-})();
+  postman.deliver()
+})()
 
 function getPageState() {
   return {
@@ -46,7 +45,7 @@ function getPageState() {
     surahId: document.querySelector(".app.mount").dataset.surahId,
     progressBar: document.querySelector(".postman.main progress"),
     progressFile: document.querySelector(".postman.main .percentage"),
-  };
+  }
 }
 
 function getFonts(locale) {
@@ -56,12 +55,12 @@ function getFonts(locale) {
     locale === "ar"
       ? item.font("Noto Naskh Arabic", "/fonts/NotoNaskhArabic-VariableFont_wght.ttf")
       : null,
-  ].filter((i) => !!i);
+  ].filter((i) => !!i)
 }
 
 function append(parcel) {
-  document.querySelectorAll(".postman").forEach((el) => el.remove());
-  parcel.json.forEach((json) => document.body.appendChild(json));
-  parcel.fonts.forEach((font) => document.fonts.add(font));
-  parcel.scripts.forEach((script) => document.body.appendChild(script));
+  document.querySelectorAll(".postman").forEach((el) => el.remove())
+  parcel.json.forEach((json) => document.body.appendChild(json))
+  parcel.fonts.forEach((font) => document.fonts.add(font))
+  parcel.scripts.forEach((script) => document.body.appendChild(script))
 }

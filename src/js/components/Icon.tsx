@@ -1,7 +1,7 @@
 type Props = {
-  onClick: () => void;
-  className?: string;
-};
+  onClick: () => void
+  className?: string
+}
 
 export function PlayIcon({ onClick }: Props) {
   return (
@@ -41,7 +41,7 @@ export function PlayIcon({ onClick }: Props) {
         <g></g>
       </svg>
     </span>
-  );
+  )
 }
 
 export function PauseIcon({ onClick }: Props) {
@@ -59,7 +59,7 @@ export function PauseIcon({ onClick }: Props) {
         </g>
       </svg>
     </span>
-  );
+  )
 }
 
 export function SoundOnIcon({ onClick, className }: Props) {
@@ -95,7 +95,7 @@ export function SoundOnIcon({ onClick, className }: Props) {
         />
       </g>
     </svg>
-  );
+  )
 }
 
 export function SoundOffIcon({ onClick, className }: Props) {
@@ -137,7 +137,7 @@ export function SoundOffIcon({ onClick, className }: Props) {
         />
       </g>
     </svg>
-  );
+  )
 }
 
 export function RefreshIcon({ onClick }: Props) {
@@ -183,7 +183,7 @@ export function RefreshIcon({ onClick }: Props) {
       <g />
       <g />
     </svg>
-  );
+  )
 }
 
 export function StalledIcon() {
@@ -193,5 +193,5 @@ export function StalledIcon() {
       <div className="background-primary" />
       <div className="background-primary" />
     </div>
-  );
+  )
 }

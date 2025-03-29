@@ -9,7 +9,7 @@ export default tseslint.config(
   {
     rules: {
       '@typescript-eslint/no-require-imports': 0,
-       'prettier/prettier': ['error', { printWidth: 95 }]
+      'prettier/prettier': ['error', { printWidth: 95, semi: false }]
     },
     languageOptions: {
       globals: {

@@ -1,26 +1,26 @@
-import type { Surah, TLocale } from "Quran";
-import { useTheme } from "~/hooks/useTheme";
-import { formatNumber, TFunction } from "~/lib/t";
-import { Head } from "~/components/Head";
-import "@css/main/SurahIndex.scss";
+import type { Surah, TLocale } from "Quran"
+import { useTheme } from "~/hooks/useTheme"
+import { formatNumber, TFunction } from "~/lib/t"
+import { Head } from "~/components/Head"
+import "@css/main/SurahIndex.scss"
 
 type Props = {
-  locale: TLocale;
-  surahs: Surah[];
-  t: TFunction;
-};
+  locale: TLocale
+  surahs: Surah[]
+  t: TFunction
+}
 
 export function SurahIndex({ locale, surahs, t }: Props) {
-  const [theme, setTheme] = useTheme();
-  const index = useMemo<Surah[]>(() => surahs, [surahs.length]);
-  const ref = useRef<HTMLDivElement>(null);
+  const [theme, setTheme] = useTheme()
+  const index = useMemo<Surah[]>(() => surahs, [surahs.length])
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const div = ref.current;
+    const div = ref.current
     if (div) {
-      div.classList.remove("invisible");
+      div.classList.remove("invisible")
     }
-  }, [ref.current, theme]);
+  }, [ref.current, theme])
 
   return (
     <div
@@ -86,5 +86,5 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         </a>
       </footer>
     </div>
-  );
+  )
 }
