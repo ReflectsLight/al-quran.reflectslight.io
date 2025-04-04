@@ -1,5 +1,11 @@
 # -*- mode: org -*-
 
+* vNEXT
+
+**** Choose a darker secondary color for "cyan" theme
+Similar to the green and blue themes, the cyan theme now has a
+darker secondary color
+
 * v0.11.0
 
 **** Add "cyan" theme
