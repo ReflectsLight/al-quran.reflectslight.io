@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Add "cyan" theme
+A new theme has been added to the website. The theme is based on
+the cyan color scheme, and it is available via the ~ThemeSelect.tsx~
+component
+
 **** Replace ~packages/typescript/postman~ with ~@0x1eef/postman~
 The ~packages/typescript/postman~ package has been replaced by
 ~@0x1eef/postman~. The NPM package ~@0x1eef/postman~ includes a
