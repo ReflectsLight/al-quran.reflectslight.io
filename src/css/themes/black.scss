@@ -1,0 +1,20 @@
+:root {
+  --theme-black-primary: rgb(40, 40, 40);
+  --theme-black-secondary: rgb(25, 25, 25);
+  --theme-black-accent: #444;
+}
+
+.root .content.theme.black {
+  --primary-color: var(--theme-black-primary);
+  --secondary-color: var(--theme-black-secondary);
+  --accent-color: var(--theme-black-accent);
+}
+
+.root .content.theme {
+  .theme-select {
+    .black {
+      background: var(--theme-black-primary);
+      border: 0.1rem var(--theme-black-secondary) solid;
+    }
+  }
+}

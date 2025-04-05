@@ -9,7 +9,7 @@ type Props = {
 }
 
 export function ThemeSelect({ locale, theme, setTheme }: Props) {
-  const themes: Theme[] = ["blue", "green", "cyan"]
+  const themes: Theme[] = ["blue", "green", "cyan", "purple", "black"]
   const isRTL = locale.direction === "rtl"
   const isLTR = locale.direction === "ltr"
   return (

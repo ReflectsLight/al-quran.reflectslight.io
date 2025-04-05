@@ -1,6 +1,6 @@
-export type Theme = "blue" | "green" | "cyan"
+export type Theme = "blue" | "green" | "cyan" | "purple" | "black"
 type Result = [Theme, (t: Theme) => void]
-const THEMES: Theme[] = ["blue", "green", "cyan"]
+const THEMES: Theme[] = ["blue", "green", "cyan", "purple", "black"]
 const DEFAULT_THEME = "blue"
 
 export function useTheme(): Result {
