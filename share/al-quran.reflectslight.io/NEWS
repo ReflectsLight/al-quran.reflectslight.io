@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Stabilize ~Select~ component sort
+Previously the elements could jump around when the select was open,
+and the next ayah started to play. This change stabilizes the sort
+so that doesn't happen anymore
+
 **** Add new themes
 The website now includes a black and purple theme, and this brings
 the total number of themes to five
