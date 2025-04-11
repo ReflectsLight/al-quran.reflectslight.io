@@ -1,5 +1,5 @@
+import { AppContext } from "~/components/App"
 import type { Surah, TLocale } from "Quran"
-import { useTheme } from "~/hooks/useTheme"
 import { formatNumber, TFunction } from "~/lib/t"
 import { Head } from "~/components/Head"
 import "@css/main/SurahIndex.scss"
@@ -11,7 +11,7 @@ type Props = {
 }
 
 export function SurahIndex({ locale, surahs, t }: Props) {
-  const [theme, setTheme] = useTheme()
+  const { theme } = useContext(AppContext)
   const index = useMemo<Surah[]>(() => surahs, [surahs.length])
   const ref = useRef<HTMLDivElement>(null)
 
@@ -32,9 +32,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         locale.direction,
       )}
     >
-      <Head locale={locale} theme={theme} setTheme={setTheme}>
-        {t(locale, "TheNobleQuran")}
-      </Head>
+      <Head locale={locale}>{t(locale, "TheNobleQuran")}</Head>
       <ul lang={locale.name} className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6">
         {index.map((surah, key) => (
           <li className="flex justify-center surah w-full" key={key}>

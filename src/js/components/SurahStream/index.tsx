@@ -1,5 +1,5 @@
+import { AppContext } from "~/components/App"
 import type { Surah, Ayah, TAyat, TLocale } from "Quran"
-import { useTheme } from "~/hooks/useTheme"
 import { useAudio } from "~/hooks/useAudio"
 import { AudioControl } from "~/components/AudioControl"
 import { Head } from "~/components/Head"
@@ -18,10 +18,10 @@ type Props = {
 }
 
 export function SurahStream({ surah, locale, t }: Props) {
+  const { theme } = useContext(AppContext)
   const [stream, setStream] = useState<TAyat>([])
   const [isPaused, setIsPaused] = useState<boolean>(false)
   const [endOfStream, setEndOfStream] = useState<boolean>(false)
-  const [theme, setTheme] = useTheme()
   const audio = useAudio()
   const articleRef = useRef<HTMLElement>(null)
   const readyToRender = stream.length > 0
@@ -59,9 +59,7 @@ export function SurahStream({ surah, locale, t }: Props) {
         hidden: !readyToRender,
       })}
     >
-      <Head locale={locale} theme={theme} setTheme={setTheme}>
-        {t(locale, "TheNobleQuran")}
-      </Head>
+      <Head locale={locale}>{t(locale, "TheNobleQuran")}</Head>
       <Stream surah={surah} stream={stream} locale={locale} endOfStream={endOfStream} isPaused={isPaused} t={t} />
       <footer
         className={classNames("flex justify-between items-center h-16", {

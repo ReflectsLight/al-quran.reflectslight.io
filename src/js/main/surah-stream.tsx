@@ -1,5 +1,6 @@
 import { Quran, Surah, TSurah } from "Quran"
 import { T } from "~/lib/t"
+import { App } from "~/components/App"
 import { SurahStream } from "~/components/SurahStream"
 ;(function () {
   const doc = document.documentElement
@@ -15,5 +16,14 @@ import { SurahStream } from "~/components/SurahStream"
   const el: HTMLScriptElement = doc.querySelector(".json.surah")!
   const json: TSurah = JSON.parse(el.innerText)!
   const surah = new Surah(json)
-  render(<SurahStream surah={surah} locale={locale} t={t} />, root)
+
+  /*
+   * Render an instance of App
+   */
+  const AppComponent = (
+    <App>
+      <SurahStream surah={surah} locale={locale} t={t} />
+    </App>
+  )
+  render(AppComponent, root)
 })()

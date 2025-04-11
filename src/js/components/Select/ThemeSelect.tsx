@@ -1,14 +1,14 @@
+import { AppContext } from "~/components/App"
 import { Select } from "~/components/Select"
 import type { Theme } from "~/hooks/useTheme"
 import type { TLocale } from "Quran"
 
 type Props = {
   locale: TLocale
-  theme: string
-  setTheme: (theme: Theme) => void
 }
 
-export function ThemeSelect({ locale, theme, setTheme }: Props) {
+export function ThemeSelect({ locale }: Props) {
+  const { theme, setTheme } = useContext(AppContext)
   const themes: Theme[] = ["blue", "green", "cyan", "purple", "black"]
   const isRTL = locale.direction === "rtl"
   const isLTR = locale.direction === "ltr"

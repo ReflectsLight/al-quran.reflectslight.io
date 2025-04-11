@@ -1,3 +1,4 @@
+import { App } from "~/components/App"
 import { Surah, TSurah, Quran } from "Quran"
 import { T } from "~/lib/t"
 import { SurahIndex } from "~/components/SurahIndex"
@@ -11,5 +12,13 @@ import { SurahIndex } from "~/components/SurahIndex"
   })()!
   const surahs: Surah[] = byLocale[locale.name].map((e: TSurah) => new Surah(e))
 
-  render(<SurahIndex locale={locale} surahs={surahs} t={t} />, root)
+  /*
+   * Render an instance of App
+   */
+  const AppComponent = (
+    <App>
+      <SurahIndex locale={locale} surahs={surahs} t={t} />
+    </App>
+  )
+  render(AppComponent, root)
 })()

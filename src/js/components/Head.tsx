@@ -1,17 +1,14 @@
 import type { ReactNode } from "react"
 import { LanguageSelect, ThemeSelect } from "~/components/Select"
 import type { TLocale } from "Quran"
-import { Theme } from "~/hooks/useTheme"
 import classNames from "classnames"
 
 type Props = {
   locale: TLocale
-  theme: string
-  setTheme: (t: Theme) => void
   children: ReactNode
 }
 
-export function Head({ locale, theme, setTheme, children }: Props) {
+export function Head({ locale, children }: Props) {
   const isRTL = locale.direction === "rtl"
   return (
     <header
@@ -36,7 +33,7 @@ export function Head({ locale, theme, setTheme, children }: Props) {
           })}
         >
           <LanguageSelect locale={locale} />
-          <ThemeSelect locale={locale} theme={theme} setTheme={setTheme} />
+          <ThemeSelect locale={locale} />
         </nav>
       </div>
     </header>

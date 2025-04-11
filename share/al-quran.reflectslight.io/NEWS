@@ -2,6 +2,11 @@
 
 * vNEXT
 
+**** Add ~App~ component
+The ~App~ component is the parent component of all other components.
+It also provides AppContext,. The context is used to manage global
+application state (such as themes) and helps us avoid prop drilling
+
 **** Stabilize ~Select~ component sort
 Previously the elements could jump around when the select was open,
 and the next ayah started to play. This change stabilizes the sort
