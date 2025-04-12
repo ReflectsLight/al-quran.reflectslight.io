@@ -3,6 +3,8 @@ type Props = {
   className?: string
 }
 
+export { SettingsIcon } from "./SettingsIcon"
+
 export function PlayIcon({ onClick }: Props) {
   return (
     <span onClick={onClick} className="controls">

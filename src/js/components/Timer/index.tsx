@@ -1,4 +1,5 @@
-import type { Surah, Ayah, TLocale } from "Quran"
+import type { Ayah, Surah, TLocale } from "Quran"
+
 import type { TAudio } from "~/hooks/useAudio"
 import { formatNumber } from "~/lib/t"
 

@@ -1,4 +1,4 @@
-import { Postman, item } from "@0x1eef/postman"
+import { item, Postman } from "@0x1eef/postman"
 
 function getContext() {
   return {

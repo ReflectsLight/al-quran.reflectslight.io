@@ -1,13 +1,17 @@
-import { AppContext } from "~/components/App"
-import type { Surah, Ayah, TAyat, TLocale } from "Quran"
-import { useAudio } from "~/hooks/useAudio"
-import { AudioControl } from "~/components/AudioControl"
-import { Head } from "~/components/Head"
-import { PlayIcon, PauseIcon, RefreshIcon, StalledIcon } from "~/components/Icon"
-import { Timer } from "~/components/Timer"
-import { TFunction } from "~/lib/t"
-import { Stream } from "./Stream"
 import "@css/main/SurahStream.scss"
+
+import type { Ayah, Surah, TAyat, TLocale } from "Quran"
+
+import { AppContext } from "~/components/App"
+import { AudioControl } from "~/components/AudioControl"
+import { EditSettings } from "~/components/EditSettings"
+import { Head } from "~/components/Head"
+import { PauseIcon, PlayIcon, RefreshIcon, StalledIcon } from "~/components/Icon"
+import { Timer } from "~/components/Timer"
+import { useAudio } from "~/hooks/useAudio"
+import { TFunction } from "~/lib/t"
+
+import { Stream } from "./Stream"
 
 type Maybe<T> = T | null | undefined
 
@@ -18,7 +22,7 @@ type Props = {
 }
 
 export function SurahStream({ surah, locale, t }: Props) {
-  const { theme } = useContext(AppContext)
+  const { theme, editSettings } = useContext(AppContext)
   const [stream, setStream] = useState<TAyat>([])
   const [isPaused, setIsPaused] = useState<boolean>(false)
   const [endOfStream, setEndOfStream] = useState<boolean>(false)
@@ -38,7 +42,7 @@ export function SurahStream({ surah, locale, t }: Props) {
     if (el) {
       el.classList.remove("invisible")
     }
-  }, [articleRef.current, theme])
+  }, [articleRef.current, theme, editSettings])
 
   useEffect(() => {
     if (!endOfStream) {
@@ -59,7 +63,10 @@ export function SurahStream({ surah, locale, t }: Props) {
         hidden: !readyToRender,
       })}
     >
-      <Head locale={locale}>{t(locale, "TheNobleQuran")}</Head>
+      <Head title={surah.name} locale={locale}>
+        {t(locale, "TheNobleQuran")}
+      </Head>
+      {editSettings && <EditSettings t={t} locale={locale} />}
       <Stream surah={surah} stream={stream} locale={locale} endOfStream={endOfStream} isPaused={isPaused} t={t} />
       <footer
         className={classNames("flex justify-between items-center h-16", {

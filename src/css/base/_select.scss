@@ -6,6 +6,11 @@
   }
 
   .react-select.theme-select {
+    ul {
+      display: flex;
+      width: 100%;
+      justify-content: end;
+    }
     ul li,
     ul li a {
       -webkit-tap-highlight-color: transparent;
@@ -15,7 +20,8 @@
     }
   }
 
-  .react-select.language-select {
+  .react-select.language-select,
+  .react-select.recitation-select {
     li a {
       background: var(--primary-color);
       color: #FFF;

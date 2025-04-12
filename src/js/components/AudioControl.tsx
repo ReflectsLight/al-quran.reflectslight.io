@@ -1,6 +1,8 @@
-import type { Surah, Ayah } from "Quran"
+import type { Ayah, Surah } from "Quran"
+
+import { AppContext } from "~/components/App"
+import { SoundOffIcon, SoundOnIcon } from "~/components/Icon"
 import type { TAudio } from "~/hooks/useAudio"
-import { SoundOnIcon, SoundOffIcon } from "~/components/Icon"
 
 type Maybe<T> = T | null
 
@@ -13,18 +15,20 @@ type Props = {
 }
 
 export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
+  const { recitation } = useContext(AppContext)
+
   if (!ayah || !audio.el || hidden) {
     return null
   }
 
   useEffect(() => {
     if (audio.isEnabled) {
-      audio.setSrc({ path: `/${surah.id}/${ayah.id}.mp3` })
+      audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah.id}.mp3` })
       audio.play()
     } else {
       audio.pause()
     }
-  }, [ayah.id, audio.isEnabled])
+  }, [ayah.id, recitation, audio.isEnabled])
 
   return (
     <>

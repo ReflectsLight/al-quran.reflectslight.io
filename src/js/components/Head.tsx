@@ -1,15 +1,19 @@
-import type { ReactNode } from "react"
-import { LanguageSelect, ThemeSelect } from "~/components/Select"
-import type { TLocale } from "Quran"
 import classNames from "classnames"
+import type { TLocale } from "Quran"
+import type { ReactNode } from "react"
+
+import { AppContext } from "~/components/App"
+import { SettingsIcon } from "~/components/Icon"
 
 type Props = {
   locale: TLocale
+  title: string
   children: ReactNode
 }
 
-export function Head({ locale, children }: Props) {
-  const isRTL = locale.direction === "rtl"
+export function Head({ locale, title, children }: Props) {
+  const { editSettings, setEditSettings } = useContext(AppContext)
+  const isLTR = locale.direction === "ltr"
   return (
     <header
       className={classNames("flex flex-col h-20 mt-4", {
@@ -27,13 +31,13 @@ export function Head({ locale, children }: Props) {
             <h1 className="font-bold">{children}</h1>
           </a>
         </div>
-        <nav
-          className={classNames("flex flex-row justify-between text-lg", {
-            "flex-row-reverse": isRTL,
-          })}
-        >
-          <LanguageSelect locale={locale} />
-          <ThemeSelect locale={locale} />
+        <nav className={classNames("flex flex-row space-between text-lg")}>
+          <span
+            className={classNames("font-bold text-base color-primary w-full", { "flex flex-col justify-end": isLTR })}
+          >
+            {title}
+          </span>
+          <SettingsIcon onClick={() => setEditSettings(!editSettings)} />
         </nav>
       </div>
     </header>
