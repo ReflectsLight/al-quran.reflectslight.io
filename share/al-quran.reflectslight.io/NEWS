@@ -2,9 +2,15 @@
 
 * vNEXT
 
+**** Add ~EditSettings~ component
+The ~EditSettings~ components lets a user choose between theme, language
+and recitation settings. It includes a different UI that has moved different
+settings into a centralized location that is controlled by a settings cog.
+It may be the most substantial change to the website in a quite a while
+
 **** Add ~App~ component
 The ~App~ component is the parent component of all other components.
-It also provides AppContext,. The context is used to manage global
+It also provides SettingsContext,. The context is used to manage global
 application state (such as themes) and helps us avoid prop drilling
 
 **** Stabilize ~Select~ component sort
