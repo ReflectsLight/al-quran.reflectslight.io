@@ -1,7 +1,10 @@
-import { Option } from "./Option"
-import { ThemeSelect } from "./ThemeSelect"
-import { LanguageSelect } from "./LanguageSelect"
 import { uniqBy } from "lodash"
+
+import { Option } from "./Option"
+
+export { LanguageSelect } from "./LanguageSelect"
+export { RecitationSelect } from "./RecitationSelect"
+export { ThemeSelect } from "./ThemeSelect"
 
 type Props = {
   value: string
@@ -32,7 +35,7 @@ function Select({ value, children: options, className }: Props) {
   }, [value])
 
   return (
-    <div className={classNames("react-select flex flex-col h-full z-10", className)}>
+    <div className={classNames("react-select flex flex-col h-full", className)}>
       <ul className="m-0 p-0 list-none text-base h-full">
         {sorted.map((n: JSX.Element, key: number) => {
           const isHidden = !isOpen && option?.props.value !== n.props.value
@@ -58,4 +61,4 @@ function Select({ value, children: options, className }: Props) {
 
 Select.Option = Option
 
-export { Select, LanguageSelect, ThemeSelect }
+export { Select }

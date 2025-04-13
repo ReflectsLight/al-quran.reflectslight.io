@@ -1,7 +1,8 @@
-import { Quran } from "Quran"
-import type { TLocale } from "Quran"
-import { Select } from "~/components/Select"
 import classNames from "classnames"
+import type { TLocale } from "Quran"
+import { Quran } from "Quran"
+
+import { Select } from "~/components/Select"
 
 type Props = {
   locale: TLocale
@@ -10,7 +11,7 @@ type Props = {
 export function LanguageSelect({ locale }: Props) {
   const memo = useMemo(() => {
     return (
-      <Select value={locale.name} className="language-select w-20">
+      <Select value={locale.name} className="language-select w-full z-10">
         {Quran.locales.map((l: TLocale, i: number) => {
           const path = location.pathname
           const href = path.replace(`/${locale.name}`, `/${l.name}`)

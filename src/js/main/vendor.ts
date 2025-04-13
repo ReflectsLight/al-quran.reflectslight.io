@@ -1,7 +1,7 @@
-import { render, createContext, createRef } from "preact"
-import { useState, useEffect, useMemo, useContext, useRef } from "preact/hooks"
-import * as React from "preact/compat"
 import classNames from "classnames"
+import { createContext, createRef, render } from "preact"
+import * as React from "preact/compat"
+import { useContext, useEffect, useMemo, useRef, useState } from "preact/hooks"
 
 const exports = {
   React,

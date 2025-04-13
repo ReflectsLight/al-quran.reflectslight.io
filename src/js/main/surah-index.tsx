@@ -1,7 +1,8 @@
+import { Quran, Surah, TSurah } from "Quran"
+
 import { App } from "~/components/App"
-import { Surah, TSurah, Quran } from "Quran"
-import { T } from "~/lib/t"
 import { SurahIndex } from "~/components/SurahIndex"
+import { T } from "~/lib/t"
 ;(function () {
   const doc = document.documentElement
   const root = doc.querySelector(".root")!

@@ -1,8 +1,9 @@
-import type { Surah, Ayah, TAyat, TLocale } from "Quran"
-import { useAudio } from "~/hooks/useAudio"
-import { AudioControl } from "~/components/AudioControl"
-import { formatNumber, TFunction } from "~/lib/t"
 import classNames from "classnames"
+import type { Ayah, Surah, TAyat, TLocale } from "Quran"
+
+import { AudioControl } from "~/components/AudioControl"
+import { useAudio } from "~/hooks/useAudio"
+import { formatNumber, TFunction } from "~/lib/t"
 
 type Props = {
   locale: TLocale

@@ -1,31 +1,32 @@
-import { AppContext } from "~/components/App"
-import { Select } from "~/components/Select"
-import type { Theme } from "~/hooks/useTheme"
 import type { TLocale } from "Quran"
+
+import { Select } from "~/components/Select"
+import { useSettingsContext } from "~/contexts/SettingsContext"
+import type { Theme } from "~/hooks/useTheme"
 
 type Props = {
   locale: TLocale
 }
 
 export function ThemeSelect({ locale }: Props) {
-  const { theme, setTheme } = useContext(AppContext)
+  const { theme, setTheme } = useSettingsContext()
   const themes: Theme[] = ["blue", "green", "cyan", "purple", "black"]
   const isRTL = locale.direction === "rtl"
   const isLTR = locale.direction === "ltr"
   return (
-    <Select value={theme} className="theme-select">
+    <Select value={theme} className="theme-select w-full flex justify-end">
       {themes.map((t, i) => {
         return (
           <Select.Option
             key={i}
             onClick={() => setTheme(t)}
-            className={classNames("flex w-10 h-6 mb-1", {
+            className={classNames("flex h-6 mb-1", {
               "justify-start": isRTL,
               "justify-end": isLTR,
             })}
             value={t}
           >
-            <span className={classNames("rounded w-5 h-5", t)} />
+            <span className={classNames("rounded w-5 h-5", t, { "mr-2": isRTL, "ml-2": isLTR })} />
           </Select.Option>
         )
       })}

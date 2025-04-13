@@ -59,8 +59,8 @@ html {
 body .root .content.theme {
   margin: 0 auto;
   max-width: $breakpoint-sm;
+  color: var(--accent-color);
   width: 100%;
-  color: var(--color-accent);
 
   @media (width <= $breakpoint-sm) {
     width: 85%;
@@ -75,6 +75,13 @@ body .root .content.theme {
         font-size: 1em;
         margin: 0;
       }
+    }
+  }
+
+  .edit-settings {
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      div { width: 100%; }
     }
   }
 

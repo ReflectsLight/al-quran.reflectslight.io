@@ -45,6 +45,13 @@
     cursor: pointer;
   }
 
+  header {
+    .settings.icon {
+      height: 1.10rem;
+      width: 1.10rem;
+    }
+  }
+
   ul.body.stream span {
     .sound-on.icon,
     .sound-off.icon {
@@ -119,6 +126,14 @@
 }
 
 .content.theme {
+  header {
+    .settings.icon path {
+      fill: var(--primary-color) !important;
+      stroke: #FFF !important;
+      stroke-width: 2px !important;
+    }
+  }
+
   ul.body.stream li, footer {
     .play.icon {
       fill: var(--primary-color);

@@ -26,6 +26,7 @@
     "eslint": "^9.8",
     "eslint-config-prettier": "^9.1",
     "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
     "postcss-media-minmax": "^5.0.0",

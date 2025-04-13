@@ -1,8 +1,11 @@
-import { AppContext } from "~/components/App"
-import type { Surah, TLocale } from "Quran"
-import { formatNumber, TFunction } from "~/lib/t"
-import { Head } from "~/components/Head"
 import "@css/main/SurahIndex.scss"
+
+import type { Surah, TLocale } from "Quran"
+
+import { EditSettings } from "~/components/EditSettings"
+import { Head } from "~/components/Head"
+import { useSettingsContext } from "~/contexts/SettingsContext"
+import { formatNumber, TFunction } from "~/lib/t"
 
 type Props = {
   locale: TLocale
@@ -11,7 +14,7 @@ type Props = {
 }
 
 export function SurahIndex({ locale, surahs, t }: Props) {
-  const { theme } = useContext(AppContext)
+  const { theme, editSettings } = useSettingsContext()
   const index = useMemo<Surah[]>(() => surahs, [surahs.length])
   const ref = useRef<HTMLDivElement>(null)
 
@@ -20,7 +23,7 @@ export function SurahIndex({ locale, surahs, t }: Props) {
     if (div) {
       div.classList.remove("invisible")
     }
-  }, [ref.current, theme])
+  }, [ref.current, theme, editSettings])
 
   return (
     <div
@@ -32,7 +35,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
         locale.direction,
       )}
     >
-      <Head locale={locale}>{t(locale, "TheNobleQuran")}</Head>
+      <Head title={t(locale, "chapters")} locale={locale}>
+        {t(locale, "TheNobleQuran")}
+      </Head>
+      {editSettings && <EditSettings t={t} locale={locale} />}
       <ul lang={locale.name} className="flex flex-wrap body index scroll-y list-none m-0 p-0 pt-4 m-auto w-full h-5/6">
         {index.map((surah, key) => (
           <li className="flex justify-center surah w-full" key={key}>
