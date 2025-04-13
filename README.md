@@ -73,12 +73,10 @@ before running `bundle exec rake nanoc:build`.
 **audio.root_url** <br>
 `audio.root_url` controls what web server serves
 audio content.
-[The default](https://al-quran-audio.reflectslight.io/rifai)
+[The default](https://al-quran-audio.reflectslight.io)
 works out of the box. The URL for an audio file is
 resolved by joining `audio.root_url` and
-`/<surahid>/<ayahid>.mp3`. The `audio.root_url` option
-makes it relatively easy to change the reciter
-at build time, before deploying the website.
+`/<surahid>/<ayahid>.mp3`.
 
 The https://al-quran-audio.reflectslight.io endpoint
 provides the following recitations:
@@ -89,6 +87,8 @@ provides the following recitations:
 	https://al-quran-audio.reflectslight.io/yassin
 - Hani ar-Rifai <br>
 	https://al-quran-audio.reflectslight.io/rifai
+- Ali As-Suwaisy <br>
+    https://al-quran-audio.reflectslight.io/alsuesy
 
 Due to their overall size the audio files are the only
 files **not** kept in this repository. The audio files
