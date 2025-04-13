@@ -2,8 +2,8 @@ import classNames from "classnames"
 import type { TLocale } from "Quran"
 import type { ReactNode } from "react"
 
-import { AppContext } from "~/components/App"
 import { SettingsIcon } from "~/components/Icon"
+import { useSettingsContext } from "~/contexts/SettingsContext"
 
 type Props = {
   locale: TLocale
@@ -12,7 +12,7 @@ type Props = {
 }
 
 export function Head({ locale, title, children }: Props) {
-  const { editSettings, setEditSettings } = useContext(AppContext)
+  const { editSettings, setEditSettings } = useSettingsContext()
   const isLTR = locale.direction === "ltr"
   return (
     <header

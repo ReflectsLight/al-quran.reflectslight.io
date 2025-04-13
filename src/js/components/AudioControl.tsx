@@ -1,7 +1,7 @@
 import type { Ayah, Surah } from "Quran"
 
-import { AppContext } from "~/components/App"
 import { SoundOffIcon, SoundOnIcon } from "~/components/Icon"
+import { useSettingsContext } from "~/contexts/SettingsContext"
 import type { TAudio } from "~/hooks/useAudio"
 
 type Maybe<T> = T | null
@@ -15,7 +15,7 @@ type Props = {
 }
 
 export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
-  const { recitation } = useContext(AppContext)
+  const { recitation } = useSettingsContext()
 
   if (!ayah || !audio.el || hidden) {
     return null

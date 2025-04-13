@@ -2,12 +2,12 @@ import "@css/main/SurahStream.scss"
 
 import type { Ayah, Surah, TAyat, TLocale } from "Quran"
 
-import { AppContext } from "~/components/App"
 import { AudioControl } from "~/components/AudioControl"
 import { EditSettings } from "~/components/EditSettings"
 import { Head } from "~/components/Head"
 import { PauseIcon, PlayIcon, RefreshIcon, StalledIcon } from "~/components/Icon"
 import { Timer } from "~/components/Timer"
+import { useSettingsContext } from "~/contexts/SettingsContext"
 import { useAudio } from "~/hooks/useAudio"
 import { TFunction } from "~/lib/t"
 
@@ -22,7 +22,7 @@ type Props = {
 }
 
 export function SurahStream({ surah, locale, t }: Props) {
-  const { theme, editSettings } = useContext(AppContext)
+  const { theme, editSettings } = useSettingsContext()
   const [stream, setStream] = useState<TAyat>([])
   const [isPaused, setIsPaused] = useState<boolean>(false)
   const [endOfStream, setEndOfStream] = useState<boolean>(false)

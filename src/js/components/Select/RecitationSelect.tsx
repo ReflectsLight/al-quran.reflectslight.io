@@ -1,8 +1,8 @@
 import classNames from "classnames"
 import type { TLocale } from "Quran"
 
-import { AppContext } from "~/components/App"
 import { Select } from "~/components/Select"
+import { useSettingsContext } from "~/contexts/SettingsContext"
 import type { Recitation } from "~/hooks/useRecitation"
 import { RECITATIONS } from "~/hooks/useRecitation"
 
@@ -11,7 +11,7 @@ type Props = {
 }
 
 export function RecitationSelect({ locale }: Props) {
-  const { recitation, setRecitation } = useContext(AppContext)
+  const { recitation, setRecitation } = useSettingsContext()
   const memo = useMemo(() => {
     return (
       <Select value={recitation} className="recitation-select w-full z-20">

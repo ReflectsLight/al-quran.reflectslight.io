@@ -2,9 +2,9 @@ import "@css/main/SurahIndex.scss"
 
 import type { Surah, TLocale } from "Quran"
 
-import { AppContext } from "~/components/App"
 import { EditSettings } from "~/components/EditSettings"
 import { Head } from "~/components/Head"
+import { useSettingsContext } from "~/contexts/SettingsContext"
 import { formatNumber, TFunction } from "~/lib/t"
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 }
 
 export function SurahIndex({ locale, surahs, t }: Props) {
-  const { theme, editSettings } = useContext(AppContext)
+  const { theme, editSettings } = useSettingsContext()
   const index = useMemo<Surah[]>(() => surahs, [surahs.length])
   const ref = useRef<HTMLDivElement>(null)
 
