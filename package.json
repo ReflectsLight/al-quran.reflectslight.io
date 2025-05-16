@@ -9,7 +9,7 @@
     "eslint:apply": "npx eslint --config etc/eslint.config.mjs --fix src/js/"
   },
   "dependencies": {
-    "@0x1eef/postman": "^0.2.0",
+    "@0x1eef/postman": "^0.3.0",
     "classnames": "^2.3",
     "lodash": "^4.17.21",
     "preact": "^10.23.2",

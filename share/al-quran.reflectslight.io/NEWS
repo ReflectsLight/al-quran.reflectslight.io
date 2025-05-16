@@ -2,6 +2,10 @@
 
 * vNEXT
 
+**** Update ~@0x1eef/postman~ to v0.3.0
+This new version can download assets in parallel, and it will hopefully
+improve performance for at least some clients
+
 **** Add ~EditSettings~ component
 The ~EditSettings~ components lets a user choose between theme, language
 and recitation settings. It includes a different UI that has moved different
