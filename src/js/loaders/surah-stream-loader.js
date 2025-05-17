@@ -22,9 +22,18 @@ function getItems(locale, surahId, rev) {
   return [
     ...getFonts(locale),
     item.json(`/json/${locale}/${surahId}/index.json?v=${rev}`, { className: "json surah" }),
-    item.script(`/js/main/vendor.js?v=${rev}`),
-    item.script(`/js/main/surah-stream.js?v=${rev}`),
+    item.script(`/js/main/vendor.js?v=${rev}`, { dataset: { id: "1" } }),
+    item.script(`/js/main/surah-stream.js?v=${rev}`, { dataset: { id: "2" } }),
   ]
+}
+
+function sortById(scripts) {
+  return scripts.sort((a, b) => {
+    const [x, y] = [parseInt(a.dataset.id), parseInt(b.dataset.id)]
+    if (x > y) return 1
+    else if (x === y) return 0
+    else return -1
+  })
 }
 
 ;(function () {
@@ -32,12 +41,9 @@ function getItems(locale, surahId, rev) {
   const postman = Postman(...getItems(locale, surahId, rev))
 
   postman.addEventListener("error", (e) => {
-    const {
-      controller,
-      item: { href },
-    } = e.detail
-    console.error("error", href)
+    const { controller, error } = e.detail
     controller.abort()
+    console.error(error)
   })
 
   postman.addEventListener("progress", (e) => {
@@ -57,7 +63,7 @@ function getItems(locale, surahId, rev) {
           document.querySelectorAll(".postman").forEach((el) => el.remove())
           parcel.json.forEach((json) => document.body.appendChild(json))
           parcel.fonts.forEach((font) => document.fonts.add(font))
-          parcel.scripts.forEach((script) => document.body.appendChild(script))
+          sortById(parcel.scripts).forEach((script) => document.body.appendChild(script))
         }, 50)
     }
   })

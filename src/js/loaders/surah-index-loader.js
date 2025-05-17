@@ -12,9 +12,18 @@ function getItems(rev) {
   return [
     item.font("Noto Sans", "/fonts/NotoSans-VariableFont_wdth,wght.ttf"),
     item.font("Noto Sans Arabic", "/fonts/NotoSansArabic-VariableFont_wdth,wght.ttf"),
-    item.script(`/js/main/vendor.js?v=${rev}`),
-    item.script(`/js/main/surah-index.js?v=${rev}`),
+    item.script(`/js/main/vendor.js?v=${rev}`, { dataset: { id: "1" } }),
+    item.script(`/js/main/surah-index.js?v=${rev}`, { dataset: { id: "2" } }),
   ]
+}
+
+function sortById(scripts) {
+  return scripts.sort((a, b) => {
+    const [x, y] = [parseInt(a.dataset.id), parseInt(b.dataset.id)]
+    if (x > y) return 1
+    else if (x === y) return 0
+    else return -1
+  })
 }
 
 ;(function () {
@@ -22,8 +31,9 @@ function getItems(rev) {
   const postman = Postman(...getItems(rev))
 
   postman.addEventListener("error", (e) => {
-    const { controller } = e.detail
+    const { controller, error } = e.detail
     controller.abort()
+    console.error(error)
   })
 
   postman.addEventListener("progress", (e) => {
@@ -42,7 +52,7 @@ function getItems(rev) {
         setTimeout(() => {
           document.querySelectorAll(".postman").forEach((el) => el.remove())
           parcel.fonts.forEach((font) => document.fonts.add(font))
-          parcel.scripts.forEach((script) => document.body.appendChild(script))
+          sortById(parcel.scripts).forEach((script) => document.body.appendChild(script))
         }, 50)
     }
   })
