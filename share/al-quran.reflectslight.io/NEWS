@@ -2,6 +2,13 @@
 
 * vNEXT
 
+**** Remove ~redirect.html.erb~
+The ~redirect.html.erb~ file has been removed. It was used to redirect to
+a locale-specific surah index (via javascript) but it turns out -- search
+engines don't like that. The root path now renders the contents of ~/en~
+instead (with a link to ~/en~ as the canonical URL). This change was
+(primarily) made to improve search engine discovery
+
 **** Update ~@0x1eef/postman~ to v0.4.0
 This new version can download assets in parallel, and it will hopefully
 improve performance for at least some clients

@@ -14,7 +14,8 @@ export function LanguageSelect({ locale }: Props) {
       <Select value={locale.name} className="language-select w-full z-10">
         {Quran.locales.map((l: TLocale, i: number) => {
           const path = location.pathname
-          const href = path.replace(`/${locale.name}`, `/${l.name}`)
+          const pattern = new RegExp(`^(/${locale.name}|/)`)
+          const href = path.replace(pattern, `/${l.name}`)
           return (
             <Select.Option
               key={i}

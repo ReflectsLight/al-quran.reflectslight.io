@@ -58,7 +58,6 @@ end
 ##
 # Rules
 require_rules "nanoc/rules/assets", globals
-require_rules "nanoc/rules/redirect", globals
 require_rules "nanoc/rules/random", globals
 require_rules "nanoc/rules/surah-stream", globals
 require_rules "nanoc/rules/surah-index", globals

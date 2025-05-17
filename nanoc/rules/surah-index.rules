@@ -3,7 +3,7 @@
 
 ##
 # Contains rules for the surah index available
-# at /<locale>/
+# at the root path and /<locale>/
 
 locales.each do |locale|
   compile "/html/main/surah-index.html.erb", rep: "/#{locale}/surah/index" do
@@ -12,6 +12,14 @@ locales.each do |locale|
     filter(:tidy, exe: tidy)
     write "/#{locale}/index.html"
   end
+end
+
+compile "/html/main/surah-index.html.erb", rep: "/index" do
+  locale = "en"
+  context = Ryo.from(dir: tdata[locale].dir, locale:, locales:)
+  filter(:erb, {locals: {context:}})
+  filter(:tidy, exe: tidy)
+  write "/index.html"
 end
 
 compile "/js/main/surah-index.tsx" do
