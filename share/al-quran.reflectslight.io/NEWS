@@ -2,7 +2,7 @@
 
 * vNEXT
 
-**** Update ~@0x1eef/postman~ to v0.3.0
+**** Update ~@0x1eef/postman~ to v0.4.0
 This new version can download assets in parallel, and it will hopefully
 improve performance for at least some clients
 
