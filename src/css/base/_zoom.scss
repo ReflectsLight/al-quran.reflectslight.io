@@ -1,22 +1,22 @@
 html {
   @import "breakpoints";
 
-  @media (min-device-height: $breakpoint-md)  and
-         (max-device-height: $breakpoint-lg)  and
-         (max-resolution: 1dppx)              and
+  @media (min-device-height: $breakpoint-md) and
+         (min-resolution: 2dppx)             and
          (hover: hover) {
-    .zoom-out { zoom: 0.8; }
+    .zoom-out { transform: scale(0.9); }
   }
 
-  @media (min-device-width: calc($breakpoint-xlx2 + 1px)) and
-         (max-resolution: 1dppx)                          and
+  @media (min-device-height: $breakpoint-xlx1) and
+         (max-resolution: 1dppx)               and
          (hover: hover) {
     .zoom-out { zoom: 0.9; }
   }
 
   @media (min-device-height: $breakpoint-md) and
-         (min-resolution: 2dppx)             and
+         (max-device-height: $breakpoint-lg) and
+         (max-resolution: 1dppx)             and
          (hover: hover) {
-    .zoom-out { transform: scale(0.9); }
+    .zoom-out { zoom: 0.8; }
   }
 }
