@@ -40,8 +40,7 @@ function sortById(scripts) {
   const { rev, locale, surahId, progressBar, progressFile } = getContext()
   const postman = Postman(...getItems(locale, surahId, rev))
 
-  if (window.devicePixelRatio >= 1)
-    document.body.classList.add("zoom-out")
+  if (window.devicePixelRatio >= 1) document.body.classList.add("zoom-out")
 
   postman.addEventListener("error", (e) => {
     const { controller, error } = e.detail
