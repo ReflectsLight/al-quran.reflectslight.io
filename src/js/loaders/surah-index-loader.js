@@ -30,6 +30,9 @@ function sortById(scripts) {
   const { rev, progressBar, progressFile } = getContext()
   const postman = Postman(...getItems(rev))
 
+  if (window.devicePixelRatio >= 1)
+    document.body.classList.add("zoom-out")
+
   postman.addEventListener("error", (e) => {
     const { controller, error } = e.detail
     controller.abort()
