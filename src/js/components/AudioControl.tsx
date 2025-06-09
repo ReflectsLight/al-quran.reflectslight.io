@@ -11,10 +11,11 @@ type Props = {
   surah: Surah
   ayah: Maybe<Ayah>
   hidden: boolean
+  autoPlay?: boolean
   className?: string
 }
 
-export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
+export function AudioControl({ audio, surah, ayah, hidden, autoPlay = true, className }: Props) {
   const { recitation } = useSettingsContext()
 
   if (!ayah || !audio.el || hidden) {
@@ -23,17 +24,27 @@ export function AudioControl({ audio, surah, ayah, hidden, className }: Props) {
 
   useEffect(() => {
     if (audio.isEnabled) {
-      audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah.id}.mp3` })
+      if (autoPlay) {
+        audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
+      }
       audio.play()
     } else {
       audio.pause()
     }
-  }, [ayah.id, recitation, audio.isEnabled])
+  }, [ayah.id, recitation, audio.isEnabled, autoPlay])
 
   return (
     <>
       {audio.isEnabled && <SoundOnIcon className={className} onClick={() => audio.disable()} />}
-      {!audio.isEnabled && <SoundOffIcon className={className} onClick={() => audio.enable()} />}
+      {!audio.isEnabled && (
+        <SoundOffIcon
+          className={className}
+          onClick={() => {
+            audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
+            audio.enable()
+          }}
+        />
+      )}
     </>
   )
 }

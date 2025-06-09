@@ -34,6 +34,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 <AudioControl
                   className={classNames({ "mr-2": !isRTL, "ml-2": isRTL })}
                   hidden={!(isPaused || endOfStream)}
+                  autoPlay={false}
                   audio={audio}
                   surah={surah}
                   ayah={ayah}
