@@ -23,15 +23,18 @@ export function AudioControl({ audio, surah, ayah, hidden, autoPlay = true, clas
   }
 
   useEffect(() => {
+    if (autoPlay) {
+      audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
+    }
+  }, [autoPlay, recitation, ayah.id])
+
+  useEffect(() => {
     if (audio.isEnabled) {
-      if (autoPlay) {
-        audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
-      }
       audio.play()
     } else {
       audio.pause()
     }
-  }, [ayah.id, recitation, audio.isEnabled, autoPlay])
+  }, [autoPlay, recitation, ayah.id, audio.isEnabled])
 
   return (
     <>
