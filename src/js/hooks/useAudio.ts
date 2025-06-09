@@ -12,7 +12,7 @@ export type TAudio = {
   disable: () => void
   pause: () => void
   play: () => void
-  setSrc: ({ path }: { path: string }) => void
+  setSource: ({ path }: { path: string }) => void
 }
 
 enum AudioState {
@@ -90,7 +90,7 @@ export function useAudio(): TAudio {
     play() {
       el.play()
     },
-    setSrc({ path }: { path: string }) {
+    setSource({ path }: { path: string }) {
       el.src = [audioUrl, path, `?v=${commitId}`].join("")
     },
   }

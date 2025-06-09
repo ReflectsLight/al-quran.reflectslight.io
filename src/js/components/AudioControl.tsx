@@ -24,7 +24,7 @@ export function AudioControl({ audio, surah, ayah, hidden, autoPlay = true, clas
 
   useEffect(() => {
     if (autoPlay) {
-      audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
+      audio.setSource({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
     }
   }, [autoPlay, recitation, ayah.id])
 
@@ -43,7 +43,7 @@ export function AudioControl({ audio, surah, ayah, hidden, autoPlay = true, clas
         <SoundOffIcon
           className={className}
           onClick={() => {
-            audio.setSrc({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
+            audio.setSource({ path: `/${recitation}/${surah.id}/${ayah?.id}.mp3` })
             audio.enable()
           }}
         />
