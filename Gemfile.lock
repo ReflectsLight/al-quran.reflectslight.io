@@ -87,7 +87,7 @@ GEM
     puma (6.4.3)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.15)
+    rack (3.1.16)
     rainbow (3.1.1)
     rainpress (1.0.1)
     rake (13.2.1)
