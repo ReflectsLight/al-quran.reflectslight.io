@@ -57,7 +57,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
         })}
       </ul>
     )
-  }, [stream.length, audio.isEnabled, isPaused, endOfStream])
+  }, [stream.length, audio.isEnabled, audio.source, isPaused, endOfStream])
 
   useEffect(() => {
     const el = ref.current

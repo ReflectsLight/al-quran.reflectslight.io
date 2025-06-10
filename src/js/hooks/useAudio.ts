@@ -8,6 +8,7 @@ export type TAudio = {
   isEnded: boolean
   hasError: boolean
   showStalledIcon: boolean
+  source: string
   enable: () => void
   disable: () => void
   pause: () => void
@@ -30,6 +31,7 @@ export function useAudio(): TAudio {
   const el = useMemo(() => new Audio(), [])
   const [enabled, setEnabled] = useState<boolean>(false)
   const [state, setState] = useState<AudioStateKey>(AudioState.Waiting)
+  const [source, setSource] = useState<string>(el.src)
 
   const showStalledIcon = useMemo(() => {
     if (enabled) {
@@ -66,7 +68,7 @@ export function useAudio(): TAudio {
       el.removeEventListener("ended", onEnded)
       el.removeEventListener("error", onError)
     }
-  }, [el.src])
+  }, [source])
 
   return {
     el,
@@ -78,6 +80,7 @@ export function useAudio(): TAudio {
     isEnded: state === AudioState.Ended,
     hasError: state === AudioState.Error,
     showStalledIcon,
+    source,
     enable() {
       setEnabled(true)
     },
@@ -92,6 +95,7 @@ export function useAudio(): TAudio {
     },
     setSource({ path }: { path: string }) {
       el.src = [audioUrl, path, `?v=${commitId}`].join("")
+      setSource(el.src)
     },
   }
 }
