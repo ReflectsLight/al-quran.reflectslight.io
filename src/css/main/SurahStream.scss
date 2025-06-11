@@ -20,6 +20,9 @@ body .root .content.theme {
     }
     li.ayah p {
       color: var(--accent-color);
+      @media (device-width >= $breakpoint-md) {
+        width: 95%;
+      }
     }
   }
 }
