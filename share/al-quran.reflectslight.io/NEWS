@@ -2,6 +2,16 @@
 
 * vNEXT
 
+**** Add buffer between content and scrollbar
+The maximum width of an ayah is 95% on large screens, and the remaining
+5% provides a buffer between the content and the scrollbar
+
+**** Improve playback of individual audio files
+When a stream is paused or ends, it is possible to play an individual
+ayah but the implementation was not the best. It included a bug, and
+the user experience wasn't quite as expected. This change fixes a bug,
+improves the implementation and improves the user experience
+
 **** Remove ~redirect.html.erb~
 The ~redirect.html.erb~ file has been removed. It was used to redirect to
 a locale-specific surah index (via javascript) but it turns out -- search
