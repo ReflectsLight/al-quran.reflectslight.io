@@ -66,7 +66,7 @@ export function SurahStream({ surah, locale, t }: Props) {
       <Head title={surah.name} locale={locale}>
         {t(locale, "TheNobleQuran")}
       </Head>
-      {editSettings && <EditSettings t={t} locale={locale} />}
+      <EditSettings t={t} locale={locale} hidden={!editSettings} />
       <Stream surah={surah} stream={stream} locale={locale} endOfStream={endOfStream} isPaused={isPaused} t={t} />
       <footer
         className={classNames("flex justify-between items-center h-16", {

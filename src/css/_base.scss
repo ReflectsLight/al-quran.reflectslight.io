@@ -1,3 +1,4 @@
+@import "vendor/animate";
 @import "vendor/tail";
 @import "base/breakpoints";
 @import "base/icon";
@@ -83,6 +84,18 @@ body .root .content.theme {
       width: 100%;
       div { width: 100%; }
     }
+  }
+
+  .edit-settings.enter-animation {
+    @extend .animate__animated;
+    animation: fadeIn;
+    animation-duration: 0.5s;
+  }
+
+  .edit-settings.exit-animation {
+    @extend .animate__animated;
+    animation: fadeOut;
+    animation-duration: 0.5s;
   }
 
   ul.body {
