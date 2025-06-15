@@ -39,7 +39,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                   surah={surah}
                   ayah={ayah}
                 />
-                <span className={classNames("color-primary font-bold")}>
+                <span className="color-primary font-bold">
                   {t(locale, "surah")} {formatNumber(locale, surah.id)}
                   {t(locale, "comma")} {t(locale, "ayah")} {formatNumber(locale, ayah.id)} {t(locale, "of")}{" "}
                   {formatNumber(locale, surah.ayat.length)}
