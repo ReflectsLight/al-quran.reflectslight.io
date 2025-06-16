@@ -62,11 +62,11 @@ export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete
       const tid = setTimeout(() => {
         const nms = Number(ms)
         if (nms > 0) {
-          setMs(nms - 250)
+          setMs(nms - 100)
         } else if (ayah) {
           onComplete(surah, ayah)
         }
-      }, 250)
+      }, 100)
       return () => clearTimeout(tid)
     }
   }, [isPaused, ms, audio.isEnabled, audio.showStalledIcon, audio.isPaused])
