@@ -17,8 +17,6 @@ type Props = {
 
 export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete }: Props) {
   const [ms, setMs] = useState<number | null>(null)
-  const isRTL = locale.direction === "rtl"
-  const isLTR = locale.direction === "ltr"
 
   if (hidden) {
     return null
@@ -72,12 +70,7 @@ export function Timer({ hidden, locale, surah, ayah, isPaused, audio, onComplete
   }, [isPaused, ms, audio.isEnabled, audio.showStalledIcon, audio.isPaused])
 
   return (
-    <div
-      className={classNames("timer font-extrabold text-base w-10 flex color-primary", {
-        "justify-start": isLTR,
-        "justify-end": isRTL,
-      })}
-    >
+    <div className="timer font-extrabold text-base w-10 flex color-primary justify-end">
       {!ms || ms / 1000 <= 0 ? formatNumber(locale, 0) : formatNumber(locale, ms / 1000, { maximumFractionDigits: 0 })}
     </div>
   )
