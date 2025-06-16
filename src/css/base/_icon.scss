@@ -113,18 +113,6 @@
   }
 }
 
-.root .content.theme.ltr {
-    footer {
-    .sound-on.icon,
-    .sound-off.icon {
-      transform: rotate(180deg);
-    }
-    .play.icon {
-      transform: rotate(180deg);
-    }
-  }
-}
-
 .content.theme {
   header {
     .settings.icon path {

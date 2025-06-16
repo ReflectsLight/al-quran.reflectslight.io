@@ -30,8 +30,6 @@ export function SurahStream({ surah, locale, t }: Props) {
   const articleRef = useRef<HTMLElement>(null)
   const readyToRender = stream.length > 0
   const ayah: Maybe<Ayah> = stream[stream.length - 1]
-  const isRTL = locale.direction === "rtl"
-  const isLTR = locale.direction === "ltr"
   const isSearchEngineBot = useMemo(() => {
     const robots = [/Googlebot/i, /Bingbot/i, /BaiduSpider/i, /YandexBot/i, /DuckDuckBot/i]
     return robots.some((robot) => robot.test(navigator.userAgent))
@@ -68,12 +66,20 @@ export function SurahStream({ surah, locale, t }: Props) {
       </Head>
       <EditSettings t={t} locale={locale} hidden={!editSettings} />
       <Stream surah={surah} stream={stream} locale={locale} endOfStream={endOfStream} isPaused={isPaused} t={t} />
-      <footer
-        className={classNames("flex justify-between items-center h-16", {
-          "flex-row-reverse": isRTL,
-          "flex-row": isLTR,
-        })}
-      >
+      <footer className="flex justify-between items-center h-16 flex-row">
+        <span
+          className={classNames({
+            hidden: endOfStream || audio.showStalledIcon,
+          })}
+        >
+          {!endOfStream && isPaused && <PlayIcon onClick={() => setIsPaused(false)} />}
+          {!endOfStream && !isPaused && <PauseIcon onClick={() => setIsPaused(true)} />}
+        </span>
+        {audio.showStalledIcon && <StalledIcon />}
+        <span className={classNames({ hidden: !endOfStream })}>
+          <RefreshIcon onClick={() => [setEndOfStream(false)]} />
+        </span>
+        <AudioControl audio={audio} surah={surah} ayah={ayah} hidden={endOfStream} />
         <Timer
           hidden={endOfStream}
           locale={locale}
@@ -92,19 +98,6 @@ export function SurahStream({ surah, locale, t }: Props) {
             }
           }}
         />
-        <AudioControl audio={audio} surah={surah} ayah={ayah} hidden={endOfStream} />
-        <span
-          className={classNames({
-            hidden: endOfStream || audio.showStalledIcon,
-          })}
-        >
-          {!endOfStream && isPaused && <PlayIcon onClick={() => setIsPaused(false)} />}
-          {!endOfStream && !isPaused && <PauseIcon onClick={() => setIsPaused(true)} />}
-        </span>
-        {audio.showStalledIcon && <StalledIcon />}
-        <span className={classNames({ hidden: !endOfStream })}>
-          <RefreshIcon onClick={() => [setEndOfStream(false)]} />
-        </span>
       </footer>
     </article>
   )
