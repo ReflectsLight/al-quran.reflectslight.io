@@ -2,6 +2,15 @@
 
 * vNEXT
 
+**** Adjust icon layout for RTL|LTR languages
+The icon layout has been improved and optimized for RTL (Arabic, Farsi)
+and LTR languages (English)
+
+**** Smooth transitions
+Don't set the "invisible" class on page load
+It does not seem to be neccessary anymore
+And the page is smoother without it (eg when changing themes)
+
 **** Add buffer between content and scrollbar
 The maximum width of an ayah is 95% on large screens, and the remaining
 5% provides a buffer between the content and the scrollbar
