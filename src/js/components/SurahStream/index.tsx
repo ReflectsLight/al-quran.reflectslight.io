@@ -36,13 +36,6 @@ export function SurahStream({ surah, locale, t }: Props) {
   }, [])
 
   useEffect(() => {
-    const el = articleRef.current
-    if (el) {
-      el.classList.remove("invisible")
-    }
-  }, [articleRef.current, theme, editSettings])
-
-  useEffect(() => {
     if (!endOfStream) {
       setStream([surah.ayat[0]])
     }
@@ -57,7 +50,7 @@ export function SurahStream({ surah, locale, t }: Props) {
   return (
     <article
       ref={articleRef}
-      className={classNames("flex flex-col invisible h-full content theme", locale.name, locale.direction, theme, {
+      className={classNames("flex flex-col h-full content theme", locale.name, locale.direction, theme, {
         hidden: !readyToRender,
       })}
     >

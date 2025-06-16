@@ -18,22 +18,10 @@ export function SurahIndex({ locale, surahs, t }: Props) {
   const index = useMemo<Surah[]>(() => surahs, [surahs.length])
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const div = ref.current
-    if (div) {
-      div.classList.remove("invisible")
-    }
-  }, [ref.current, theme, editSettings])
-
   return (
     <div
       ref={ref}
-      className={classNames(
-        "flex flex-col invisible h-full content surah-index theme",
-        theme,
-        locale.name,
-        locale.direction,
-      )}
+      className={classNames("flex flex-col h-full content surah-index theme", theme, locale.name, locale.direction)}
     >
       <Head title={t(locale, "chapters")} locale={locale}>
         {t(locale, "TheNobleQuran")}
