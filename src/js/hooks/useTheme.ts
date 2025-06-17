@@ -2,7 +2,6 @@ export type Theme = "blue" | "green" | "cyan"
 type Result = [Theme, (t: Theme) => void]
 
 export const THEMES: Theme[] = ["blue", "green", "cyan"]
-export const RETIRED_THEMES: string[] = ["purple", "black"]
 export const DEFAULT_THEME = "blue"
 
 export function useTheme(): Result {
@@ -17,7 +16,7 @@ export function useTheme(): Result {
   }
 
   useEffect(() => {
-    if (RETIRED_THEMES.includes(theme)) {
+    if (!THEMES.includes(theme)) {
       setTheme(DEFAULT_THEME)
     }
   }, [])
