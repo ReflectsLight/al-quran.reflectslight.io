@@ -17,6 +17,7 @@ export function EditSettings({ locale, t, hidden }: { locale: TLocale; t: TFunct
       } else {
         el.classList.remove("exit-animation")
         el.classList.remove("hidden")
+        el.classList.add("z-10")
         el.classList.add("enter-animation")
         setTimeout(() => el.classList.remove("enter-animation"), 450)
       }
