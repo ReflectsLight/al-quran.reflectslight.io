@@ -13,9 +13,6 @@ body .root .content.theme {
     }
     li.ayah p {
       color: var(--accent-color);
-      @media (device-width >= $breakpoint-md) {
-        width: 95%;
-      }
     }
   }
 }
@@ -30,14 +27,6 @@ body .root .content.theme.ltr {
 }
 
 body .root .content.theme.rtl {
-  @media (device-width >= $breakpoint-md) {
-    ul.body.stream {
-      margin: 0 auto;
-      margin-top: 1rem; /* mt-4 = 1rem */
-      width: 90%;
-    }
-  }
-
   footer {
     .sound-on.icon, .sound-off.icon {
       position: relative;

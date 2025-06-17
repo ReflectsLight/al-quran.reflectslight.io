@@ -29,8 +29,8 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
       >
         {stream.map((ayah: Ayah) => {
           return (
-            <li key={ayah.id} className="ayah fade mb-5">
-              <span className="flex h-8 items-center color-primary">
+            <li key={ayah.id} className="flex flex-col items-center ayah fade mb-5">
+              <span className="flex h-8 items-center color-primary w-11/12">
                 <AudioControl
                   className={classNames({ "mr-2": !isRTL, "ml-2": isRTL })}
                   hidden={!(isPaused || endOfStream)}
@@ -46,7 +46,7 @@ export function Stream({ locale, surah, stream, endOfStream, isPaused, t }: Prop
                 </span>
               </span>
               <p
-                className={classNames("m-0", {
+                className={classNames("m-0 w-11/12", {
                   "text-xl mt-3": isArabic,
                 })}
               >
