@@ -1,7 +1,9 @@
-export type Theme = "blue" | "green" | "cyan" | "purple" | "black"
+export type Theme = "blue" | "green" | "cyan"
 type Result = [Theme, (t: Theme) => void]
-const THEMES: Theme[] = ["blue", "green", "cyan", "purple", "black"]
-const DEFAULT_THEME = "blue"
+
+export const THEMES: Theme[] = ["blue", "green", "cyan"]
+export const RETIRED_THEMES: string[] = ["purple", "black"]
+export const DEFAULT_THEME = "blue"
 
 export function useTheme(): Result {
   const cookies = Object.fromEntries(document.cookie.split(/;\s*/).map((e) => e.split("=")))
@@ -13,5 +15,12 @@ export function useTheme(): Result {
       setTheme(t)
     }
   }
+
+  useEffect(() => {
+    if (RETIRED_THEMES.includes(theme)) {
+      setTheme(DEFAULT_THEME)
+    }
+  }, [])
+
   return [theme, set]
 }

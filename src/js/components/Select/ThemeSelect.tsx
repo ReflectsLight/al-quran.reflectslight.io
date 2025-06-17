@@ -2,7 +2,7 @@ import type { TLocale } from "Quran"
 
 import { Select } from "~/components/Select"
 import { useSettingsContext } from "~/contexts/SettingsContext"
-import type { Theme } from "~/hooks/useTheme"
+import { THEMES } from "~/hooks/useTheme"
 
 type Props = {
   locale: TLocale
@@ -10,12 +10,11 @@ type Props = {
 
 export function ThemeSelect({ locale }: Props) {
   const { theme, setTheme } = useSettingsContext()
-  const themes: Theme[] = ["blue", "green", "cyan", "purple", "black"]
   const isRTL = locale.direction === "rtl"
   const isLTR = locale.direction === "ltr"
   return (
     <Select value={theme} className="theme-select w-full flex justify-end">
-      {themes.map((t, i) => {
+      {THEMES.map((t, i) => {
         return (
           <Select.Option
             key={i}
