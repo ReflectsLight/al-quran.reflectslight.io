@@ -25,7 +25,7 @@ export function EditSettings({ locale, t, hidden }: { locale: TLocale; t: TFunct
 
   return (
     <div ref={ref} className="flex flex-col items-center w-full hidden edit-settings relative">
-      <div className="flex flex-col w-11/12 max-h-24 h-24 w-full absolute background-secondary top-10px">
+      <div className="flex flex-col w-11/12 max-h-24 h-24 w-full absolute background-secondary pt-3">
         <div className="flex flex-row space-between h-8">
           <div className="w-full">{t(locale, "theme")}</div>
           <ThemeSelect locale={locale} />
