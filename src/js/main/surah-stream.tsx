@@ -21,10 +21,10 @@ import { T } from "~/lib/t"
   /*
    * Render an instance of App
    */
-  const AppComponent = (
+  const app = (
     <App>
       <SurahStream surah={surah} locale={locale} t={t} />
     </App>
   )
-  render(AppComponent, root)
+  render(app, root)
 })()

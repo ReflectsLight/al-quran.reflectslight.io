@@ -16,10 +16,10 @@ import { T } from "~/lib/t"
   /*
    * Render an instance of App
    */
-  const AppComponent = (
+  const app = (
     <App>
       <SurahIndex locale={locale} surahs={surahs} t={t} />
     </App>
   )
-  render(AppComponent, root)
+  render(app, root)
 })()
